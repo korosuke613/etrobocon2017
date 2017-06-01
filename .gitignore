@@ -1,0 +1,5 @@
+*.o
+*.gch
+*.out
+*.exe
+googletest
