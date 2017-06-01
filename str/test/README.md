@@ -27,13 +27,17 @@
 これからgit cloneするわけですが、カレントディレクトリ直下に配置するので（もちろん、gitのコマンドでカレントディレクトリ以外に置くこともできますが）、どこに置いておきたいかを考えてください。
 ちなみに、テスト用ツールをコンパイルする際に、このディレクトリを参照するので、あまり遠くに置かないほうがいいと思います。
 
+```
 $ git clone https://github.com/google/googletest.git
+```
 
 これで、カレントディレクトリ直下に配置されます。
 疑っているのなら、lsでもしてみましょう。
 
+```
 $ ls
 googletest そのほかのファイルやディレクトリ
+```
 
 もしかしたらgoogleさんがgoogletestリポジトリから移動させちゃったりしているかもしれませんが、その時は探してください、きっと見つかりますよ。
 
@@ -43,10 +47,12 @@ googletest そのほかのファイルやディレクトリ
 * gtest-all.cc
 2つとも同じ場所にありますから、まずはその場所まで移動しましょう。
 
+```
 $ cd googletest/googletest/src
 $ ls
 gtest.cc       gtest-all.cc         gtest-filepath.cc     gtest-port.cc      gtest-test-part.cc
-gtest\_main.cc  gtest-death-test.cc  gtest-internal-inl.h  gtest-printers.cc  gtest-typed-test.cc
+gtest_main.cc  gtest-death-test.cc  gtest-internal-inl.h  gtest-printers.cc  gtest-typed-test.cc
+```
 
 どうですか？
 ちゃんとgtest\_main.ccとgtest-all.ccが見つかったでしょうか？
@@ -55,14 +61,18 @@ gtest\_main.cc  gtest-death-test.cc  gtest-internal-inl.h  gtest-printers.cc  gt
 Makefileとかcmakeとかは知りません、ごり押しです。
 まずはgtest\_main.ccからです。
 
-$ g++ -I. -I../include -c gtest\_main.cc
+```
+$ g++ -I. -I../include -c gtest_main.cc
+```
 
 やけにすんなり通ってくれましたね。
 lsをすればgtest\_main.oがカレントディレクトリに入っていると思います。
 
 次はgtest-all.ccです。
 
+```
 $ g++ -I. -I.. -I/include -c gtest-all.cc
+```
 
 オプションとして-I..が追加されていることに注意してください。
 これで、gtest-all.oもできているはずです。
@@ -82,7 +92,9 @@ $ g++ -I. -I.. -I/include -c gtest-all.cc
 2. できたgtest\_main.oとgtest-all.oファイルをテストコードがあるディレクトリにコピー
 これはそんなに難しくないよね。
 
+```
 $ cp \*.o 置きたいディレクトリ
+```
 
 とすれば移動します。
 ETロボコンでは、次のディレクトリに置きました。
@@ -151,13 +163,17 @@ TEST( AddTest, get3add1and2 )
 
 まずはテストコードのコンパイルです。
 
+```
 $ pwd
 ~/ev3rt-beta7-release/hrp2/sdk/etrobocon2017/str/test
+```
 
+```
 $ ls
-AddTest.cpp gtest\_main.o gtest-all.o
+AddTest.cpp gtest_main.o gtest-all.o
 
-$ g++ AddTest.cpp gtest\_main.o gtest-all.o -I../googletest/googletest/include
+$ g++ AddTest.cpp gtest_main.o gtest-all.o -I../googletest/googletest/include
+```
 
 これでコンパイルが成功すると、a.exeがカレントディレクトリに出現します。
 こいつを実行すれば、いい感じに色も付いたきれいなテスト結果が表示されます。
@@ -233,7 +249,9 @@ private:
 
 一気にそれっぽいものができましたね、ではコンパイルです。
 
-$ g++ ../app/SonarAlert.h ../app/SonarAlert.cpp SonarAlertTest.cpp gtest\_main.o gtest-all.o -I.. -I../googletest/googletest/include
+```
+$ g++ ../app/SonarAlert.h ../app/SonarAlert.cpp SonarAlertTest.cpp gtest_main.o gtest-all.o -I.. -I../googletest/googletest/include
+```
 
 成功しましたか？
 成功した -> おめでとうございます！
