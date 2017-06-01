@@ -73,7 +73,7 @@ lsをすればgtest\_main.oがカレントディレクトリに入っている�
 次はgtest-all.ccです。
 
 ```
-$ g++ -I. -I.. -I/include -c gtest-all.cc
+$ g++ -I. -I.. -I../include -c gtest-all.cc
 ```
 
 オプションとして-I..が追加されていることに注意してください。
@@ -96,6 +96,27 @@ __注意__
 g++でコンパイルに失敗する人が多数いるそうです！
 自分がどうしてうまくいったのか調べたところ、Straberry Perl（WindowsでPerlを使えるようにするツール群）をインストールした際に、一緒に入っていたg++プログラムを呼び出してコンパイルしていました。
 ただし、これが正しいとはとても思えないので、もっといい方法が見つかったら教えてください。
+
+32bit版Cygwinにおいて、コンパイルに失敗する原因は、stddef.hを見つけられないというエラーでした。
+そこでfindコマンドで検索してみたところ、次のディレクトリが見つかりました。
+
+```
+$ find / -name stddef.h
+/home/katlabPC/ev3rt-beta7-release/hrp2/hrp2/target/ev3_gcc/drivers/common/virtual-linux-kernel/include/linux/stddef.h
+/home/katlabPC/ev3rt-beta7-release/hrp2/target/ev3_gcc/drivers/common/virtual-linux-kernel/include/linux/stddef.h
+/lib/gcc/i686-pc-cygwin/6.3.0/include/stddef.h
+/usr/lib/gcc/i686-pc-cygwin/6.3.0/include/stddef.h
+```
+
+よって、次のコマンドで無事コンパイルが確認できました。
+
+```
+$ g++ -I. -I../include -I/lib/gcc/i686-pc-cygwin/6.3.0/include -c gtest_main.cc
+$ g++ -I. -I.. -I../include -I/lib/gcc/i686-pc-cygwin/6.3.0/include -c gtest-all.cc
+```
+
+また、64bit版Cygwinでは、コンパイルの失敗は確認できませんでしたが、テストファイル./a.exe実行時に何も表示されないというバグが発生しているようです。
+
 
 
 2. できたgtest\_main.oとgtest-all.oファイルをテストコードがあるディレクトリにコピー
