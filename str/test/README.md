@@ -1,9 +1,9 @@
-# Google Testの使い方
-ここではCygwinでのGoogle Testの使い方について説明します。
+# Google C++ Testing Frameworkの使い方
+ここではCygwinにおけるGoogle C++ Testing Frameworkの使い方について説明します。
 わかってしまえばそんなに難しくないですが、ちょっと手間取りますから気を付けてください。
 
 ## 長い前置き
-その前に簡単にGoogle Testとは何ぞやという説明だけさらっとしておきます。
+その前に簡単にGoogle C++ Testing Framework、通称Google Testとは何ぞやという説明だけさらっとしておきます。
 簡単に言えばC++のJUnitバージョンです。
 最初はCppUnitっていうのがC++でのデファクトスタンダートだったらしいですが、余りにも機能がシンプルすぎて使いづらいという話がちらほら出ていたそうです。
 そこで、Googleが「俺の考えた最強のC++単体テストツール」を作ったみたいです。
@@ -16,13 +16,31 @@
 これであなたもGoogle Testプロになれます、かねぇ？
 
 
+## Google Mockの説明がないんですが
+実は、少し命名が悪いのか、混乱のもとになるかもしれませんので、ここで言っておきます。
+上記の前置きで言っているGoogle Testというのは、Googleが開発しているC++用の単体テストツールのフレームワークのことです。
+で、その中に次の2つが入っています。
+
+* Google Test : 単体テストを作ってくれるライブラリ
+* Google Mock : モックオブジェクトを作ってくれるライブラリ
+
+ということは、厳密にはGoogle Testというのはモックオブジェクトを作らない単体テストを行う時に使えるものであって、決してGoogle Test = Google C++ Testing Frameworkではありません。
+
+ですが、Google C++ Testing Framework = Google Test = JUnitと考えている方が何人かいるようで、混乱のもとになってるような気がします。
+そのうちの一人は僕だったんですけどね。
+ちなみに、Google Test = JUnitの式は成り立つことに気を付けてください。
+Google Mock = jMockみたいなものです。
+
+そして、単体テストツールといえば、その2つを組み合わせたもの、つまりGoogle C++ Testing Framework = Google Test + Google Mockだと僕は考えています。
+
+
 ## コンパイルしよう
 自分は最近までJavaやPerlばっかりの生活だったせいで、コンパイルをするという動作を完全に忘れてしまってました。
 そのせいで悪戦苦闘したので、まずはコンパイルをどうするかを丁寧に説明しようと思います。
 くどいかもしれませんが、ご了承ください。
 
 
-1. GitHubに上がっているGoogle Testを取ってくる。
+### GitHubに上がっているGoogle Testを取ってくる。
 
 大事ですね、でもここから説明しておきます。
 その前に、カレントディレクトリを移動しておきましょう。
@@ -129,9 +147,9 @@ $ g++ --version
 
 
 
-2. できたgtest\_main.oとgtest-all.oファイルをテストコードがあるディレクトリにコピー
+### できたgtest\_main.oとgtest-all.oファイルをテストコードがあるディレクトリにコピー
 
-これはそんなに難しくないよね。
+これはそんなに難しくないですよね。
 
 ```
 $ cp \*.o 置きたいディレクトリ
@@ -142,7 +160,7 @@ ETロボコンでは、次のディレクトリに置きました。
 
 ~/ev3rt-beta7-release/hrp2/sdk/etrobocon2017/str/test
 
-結局この辺りが無難ですよね。
+結局この辺りが無難です。
 ちなみに、etrobocon2017ディレクトリ内は次の通りです。
 
 ```
@@ -169,7 +187,7 @@ etrobocon2017
         |-- テストコード置き場
 ```
 
-3. テストコードを書いてコンパイルしよう
+### テストコードを書いてコンパイルしよう
 
 テストコードの書き方は具体例のほうがわかりやすいと思うので、ここのファイルをどれか適当に選んでください。
 
@@ -191,7 +209,7 @@ int add( int x, int y )
 }
 
 // テストケース名とテスト内容を記述する。
-// テストケース名はこのテストクラス名、テスト内容は具体的なテストメソッド名を入れるといいかも。
+// テストケース名はこのテストクラス名、テスト内容は具体的なテストメンバ関数名を入れるといいかも。
 TEST( AddTest, get3add1and2 )
 {
     // みんな大好きassertEqual文
@@ -223,11 +241,11 @@ $ g++ AddTest.cpp gtest_main.o gtest-all.o -I../googletest/googletest/include
 これであなたもGoogle Testプロです。
 
 
-4. せめて普通のクラスを単体テストしましょう
+### せめて普通のクラスを単体テストしましょう
 
 これで終われるはずはないわけです。
 普通に考えれば、テストコードにテストしたい内容を埋め込むなんてことはあり得ません。
-では、別のメソッドを呼び出しましょう。
+では、別のメンバ関数を呼び出しましょう。
 
 その時のテストファイルはこちらです。
 
@@ -297,7 +315,9 @@ $ g++ ../app/SonarAlert.h ../app/SonarAlert.cpp SonarAlertTest.cpp gtest_main.o 
 ```
 
 成功しましたか？
+
 成功した -> おめでとうございます！
+
 成功しなかった -> いくつか落とし穴があります、気を付けてみてください。
 * SonarAlert.cppとSonarAlert.hはstr/appに入ってますか？
 * コンパイル引数の順番は合ってますか？
@@ -305,6 +325,129 @@ $ g++ ../app/SonarAlert.h ../app/SonarAlert.cpp SonarAlertTest.cpp gtest_main.o 
 
 これで一通りのことはできると思います。
 今度こそGoogle Testプロです！
+
+
+## Google Mockを使ってみよう
+それでは、前置きあたりでちらっと言ったGoogle Mockについても少し説明します。
+
+Google Mockというのは、モックオブジェクトを作ってくれるライブラリであるということは先ほど言いました。
+じゃあモックオブジェクトってなんだよということなんですが、これは簡単に言ってしまえば、オブジェクトを仮実装してくれるツールです。
+
+例えば、クラスAがクラスBのメンバ関数setItem(int)を使っているメンバ関数isSettedItem()をテストしたいとします。
+
+```
+/*
+ * A.cpp
+ */
+class A
+{
+public:
+    A() {}
+    ~A() {}
+    bool isSettedItem();
+};
+
+bool A:isSettedItem(B *b)
+{
+    b.setItem(1);
+    return true;
+}
+
+
+/*
+ * B.h
+ */
+class B
+{
+public:
+    virtual void setItem(int) = 0;
+};
+```
+
+しかし、クラスBのsetItem(int)メンバ関数はまだ実装されていません。
+あるいは、実装されているかもしれませんが、データベース処理などによる重い処理だとしたら、あまり時間をかけたくない場合もあります。
+そのようなときに、仮実装するメンバ関数を一から作るのは面倒です。
+そこで、そのメンバ関数を使ったように見せかけるメンバ関数を作ってくれると助かるよねという考えから作られたのがモックオブジェクトというものです。
+
+```
+/*
+ * MockB.cpp
+ */
+class MockB : public B
+{
+public:
+    MOCK_METHOD1(setItem, void(int item));
+};
+```
+
+このとき、必要事項は次の5つです。
+
+* モックを実装したいクラスを継承する。
+* モックを実装したいクラスの仮想引数を調べる。
+* モッククラスのpublicセクションにMOCK\_METHODn();（constメンバ関数の場合はMOCK\_CONST\_METHODn();を書く。このとき、nには引数の数が入る。
+* 関数名をマクロの1番目の引数に、メンバ関数の型を2番目の引数に入れる。また、メンバ関数の型のカッコの中には、そのメンバ関数の引数を入れる。
+* これを、モック化したい仮想関数全てに対して繰り返す。
+
+非仮想関数もモック化可能みたいですが、そこまでは調べてません。
+
+ではその前に、Google Testと同様に、Google Mockを作ってくれる実行ファイルを作りましょう。
+
+googletest/googlemock/strに入ってください。
+そこで、次のコマンドを入力します。
+
+```
+$ g++ -I../include -I../../googletest/include -c gmock_main.cc
+$ g++ -I.. -I../include -I../../googletest/include -c gmock-all.cc
+```
+
+カレントディレクトリにgmock\_main.oとgmock-all.oが生成されていたら成功です。
+では、この2つをtestディレクトリに入れましょう。
+入れ方はもうわかりますよね？
+
+それでは、テストクラスを書きましょう。
+ゴリゴリ書きます。
+
+```
+/*
+ * ATest.cpp
+ */
+#include "MockB.h"
+#include "A.cpp"
+#include "gmock/gmock.h"
+#include "gtest/gtest.h"
+using ::testing::AtLeast;
+
+TEST( ATest, CanUseB )
+{
+    MockB b;
+    EXPECT_CALL( b, setItem(1)).Times(AtLeast(1));
+
+    A a;
+
+    ASSERT_TRUE( a.isSettedItem( b ) );
+}
+```
+
+そして、カレントディレクトリを移動した現在の状況が次のようになっているとします。
+
+```
+$ ls
+A.cpp ATest.cpp B.h MockB.cpp gtest_main.o gtest-all.o gmock_main.o gmock-all.o
+```
+
+そしたら、次のようなコマンドを入力すればいいかと思います。
+
+```
+$ g++ A.cpp B.cpp BTest.cpp gtest-all.o gmock_main.o gmock-all.o -I../googletest/googlemock/include -I../googletest/googletest/include
+```
+
+これでa.exeがカレントディレクトリに生成されて、実行できたら成功です。
+気を付けて欲しいのは、gtest-all.oをコンパイルしている点と、../googletest/googletest/includeをパスに通している点です。
+逆に、gtest\_main.oはコンパイルしていません。
+
+この節のテストクラスは抽象的すぎるので、テストコードのコンパイルあたりはやらないでください。
+コンパイルが通るかの保証も何もしていませんので、この辺は考え方を教えているだけだと思ってください。
+もう少しいい例が見つかればいいのですが、それまではこのような体たらくで我慢してください。
 
 
 ## makeファイルくらい作ろう
