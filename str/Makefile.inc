@@ -1,6 +1,7 @@
 mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 
 APPL_CXXOBJS += \
+util.o \
 SonarAlert.o \
 EtRobocon2017.o
 
