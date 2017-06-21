@@ -1,6 +1,6 @@
-#include "Course.h"
+#include "EtRobocon2017.h"
 
-void Course::start( int bluetooth_command )
+void EtRobocon2017::start( int bluetooth_command )
 {
     SonarAlert sonarAlert( 10, 4 );
     signed char forward;      /* 前後進命令 */

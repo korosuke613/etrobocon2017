@@ -2,7 +2,7 @@ mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 
 APPL_CXXOBJS += \
 SonarAlert.o \
-Course.o
+EtRobocon2017.o
 
 SRCLANG := c++
 

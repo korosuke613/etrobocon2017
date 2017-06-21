@@ -1,5 +1,5 @@
-#ifndef __COURSE__
-#define __COURSE__
+#ifndef __ETROBOCON2017__
+#define __ETROBOCON2017__
 
 #include "ev3api.h"
 #include "app/SonarAlert.h"
@@ -26,7 +26,7 @@
 #define CALIB_FONT_WIDTH (6/*TODO: magic number*/)
 #define CALIB_FONT_HEIGHT (8/*TODO: magic number*/)
 
-class Course {
+class EtRobocon2017 {
 public:
     void start( int );
 
