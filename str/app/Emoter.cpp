@@ -1,7 +1,7 @@
 #include "Emoter.h"
 
 Emoter::Emoter():
-    tailHand(PORT_D) {
+    tailHand(PORT_D, true, MEDIUM_MOTOR) {
 }
 
 void Emoter::init() {
