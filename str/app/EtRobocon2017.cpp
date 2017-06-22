@@ -1,5 +1,18 @@
 #include "EtRobocon2017.h"
 
+/*
+ * touch_sensor = EV3_PORT_4;
+ * sonar_sensor = EV3_PORT_3;
+ * color_sensor = EV3_PORT_2;
+ * gyro_sensor  = EV3_PORT_1;
+ *
+ * left_motor   = EV3_PORT_C;
+ * right_motor  = EV3_PORT_B;
+ * lift_motor   = EV3_PORT_A;
+ * tail_motor   = EV3_PORT_D;
+ */
+
+
 EtRobocon2017::EtRobocon2017():
     touchSensor( PORT_4 ), colorSensor( PORT_2 )
 {
@@ -9,18 +22,22 @@ EtRobocon2017::EtRobocon2017():
 
 void EtRobocon2017::start( int bluetooth_command )
 {
-    SonarAlert sonarAlert( 4 );
-    int8_t forward = 0;      /* 前後進命令 */
-    int8_t turn = 0;         /* 旋回命令 */
-
-
     waitStarter( bluetooth_command );
 
     ev3_led_set_color(LED_GREEN); /* スタート通知 */
 
+    loop();
+}
+
+void EtRobocon2017::loop()
+{
+    SonarAlert sonarAlert( 4 );
     Walker walker;
     Lifter lifter;
     Emoter emoter;
+    int8_t forward = 0;      /* 前後進命令 */
+    int8_t turn = 0;         /* 旋回命令 */
+
     // bool isUpped = false;
 
     /**
