@@ -33,8 +33,8 @@ void Walker::run(int8_t pwm, int8_t turn) {
 
     /* left = p-t, right = p+t -> 右 */
     /* left = p+t, right = p-t -> 左 */
-    leftWheel.setPWM(pwm - turn * leftRight);
-    rightWheel.setPWM(pwm + turn * leftRight);
+    leftWheel.setPWM(pwm - turn);
+    rightWheel.setPWM(pwm + turn);
 }
 
 int32_t Walker::get_count_L() {
@@ -136,4 +136,3 @@ void Walker::angleChange(int angle, int rotation) {
     }
     stop();
 }
-

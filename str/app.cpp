@@ -40,7 +40,7 @@ void main_task( intptr_t unused )
 
 
     msg_f("ET-Robocon2017 Hirakobasample", 1);
-    msg_f(" create from github.com/korosuke613/etrobocon2017", 2);
+    msg_f("a create from github.com/korosuke613/etrobocon2017", 2);
 
     EtRobocon2017 etrobocon;
     etrobocon.start( g_bluetooth_command );

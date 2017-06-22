@@ -1,8 +1,8 @@
 #include "Pid.h"
 
 //Constructor
-Pid::Pid(double p_gain,double i_gain,double d_gain,double target){
-    wrapper_of_constructor(p_gain,i_gain,d_gain,0,0,target,0);
+Pid::Pid(double _p_gain,double _i_gain,double _d_gain,double _target){
+    wrapper_of_constructor(_p_gain,_i_gain,_d_gain,0,0,_target,0);
 }
 
 //wrapper
@@ -16,17 +16,25 @@ void Pid::wrapper_of_constructor(double _p_gain,double _i_gain,double _d_gain,
     integral = _integral;
     target = _target;
     output = _output;
-    del = 1;
+    del = 1.0;
 }
 void Pid::calculate(double light_value){
     double p,i,d;
     double diff = light_value - target;
+    FILE *fp;
+    if ((fp = fopen("test.csv", "a")) == NULL) {
+            printf("file open error!!\n");
+            return;
+    }
     integral += (old_diff + diff)/2 * del;
     p =  p_gain * diff;
     i = i_gain * integral;
     d = d_gain * (diff - old_diff)/del;
     old_diff = diff;
     output = p + i + d;
+    fprintf(fp, "light_value=%lf, integral=%lf, pg=%lf, ig=%lf, dg=%lf, p=%lf, i=%lf, d=%lf, diff=%lf, old_diff=%lf, output=%lf\n",
+    light_value, integral, p_gain, i_gain, d_gain, p, i, d, diff, old_diff, output);
+    fclose(fp);
 }
 double Pid::get_output(){
     return output;
