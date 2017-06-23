@@ -1,7 +1,8 @@
 #include "LineTracer.h"
 
 LineTracer::LineTracer():
-    pid(2.0, 0.0, 0.3, 30.0), colorSensor( PORT_3 ){
+    //pid(0.36, 1.2, 0.027, 30.0), colorSensor( PORT_3 ){
+    pid(0.8, 1.2, 0.012, 30.0), colorSensor( PORT_3 ){
 }
 
 void LineTracer::runLine(){
@@ -24,7 +25,9 @@ void LineTracer::runLine(){
 int8_t LineTracer::calculateTurnForPid( int8_t forward ) {
     double light_value = colorSensor.getBrightness();
     pid.calculate(light_value);
-    double output = static_cast<int8_t>(pid.get_output());
+    double pid_value = pid.get_output();
+    double forward_percent = (double)forward / 100;
+    int8_t output = (int8_t)(pid_value * forward_percent);
 
     return output;
 }

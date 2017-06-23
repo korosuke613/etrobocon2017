@@ -3,6 +3,14 @@
 //Constructor
 Pid::Pid(double _p_gain,double _i_gain,double _d_gain,double _target){
     wrapper_of_constructor(_p_gain,_i_gain,_d_gain,0,0,_target,0);
+    FILE *fp;
+
+    if ((fp = fopen("test.csv", "w")) == NULL) {
+            printf("file open error!!\n");
+            return;
+    }
+    fprintf(fp, "light_value, integral, pg, ig, dg, p, i, d, diff, old_diff, output\n");
+    fclose(fp);
 }
 
 //wrapper
@@ -16,7 +24,7 @@ void Pid::wrapper_of_constructor(double _p_gain,double _i_gain,double _d_gain,
     integral = _integral;
     target = _target;
     output = _output;
-    del = 1.0;
+    del = 0.004;
 }
 void Pid::calculate(double light_value){
     double p,i,d;
@@ -32,7 +40,7 @@ void Pid::calculate(double light_value){
     d = d_gain * (diff - old_diff)/del;
     old_diff = diff;
     output = p + i + d;
-    fprintf(fp, "light_value=%lf, integral=%lf, pg=%lf, ig=%lf, dg=%lf, p=%lf, i=%lf, d=%lf, diff=%lf, old_diff=%lf, output=%lf\n",
+    fprintf(fp, "%lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf\n",
     light_value, integral, p_gain, i_gain, d_gain, p, i, d, diff, old_diff, output);
     fclose(fp);
 }

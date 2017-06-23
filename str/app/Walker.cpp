@@ -33,6 +33,7 @@ void Walker::run(int8_t pwm, int8_t turn) {
 
     /* left = p-t, right = p+t -> 右 */
     /* left = p+t, right = p-t -> 左 */
+    // pwmは int型の -100 ~ 100
     leftWheel.setPWM(pwm - turn);
     rightWheel.setPWM(pwm + turn);
 }
