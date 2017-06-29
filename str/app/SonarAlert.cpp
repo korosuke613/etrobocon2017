@@ -1,7 +1,7 @@
 #include "SonarAlert.h"
 
-SonarAlert::SonarAlert( int distanceBorder, int secPerCycle ):
-    SONAR_ALERT_DISTANCE( distanceBorder )
+SonarAlert::SonarAlert( int secPerCycle ):
+    sonarSensor( PORT_3 )
 {
     timeCounter = 0;
     this->secPerCycle = secPerCycle;
@@ -20,7 +20,7 @@ int SonarAlert::detectBarrier( int sensorDistance )
 
     if( timeCounter == 40/secPerCycle )
     {
-        if( sensorDistance <= SONAR_ALERT_DISTANCE && 0 <= sensorDistance)
+        if( sonarSensor.getDistance() <= sensorDistance && 0 <= sonarSensor.getDistance() )
         {
             alert = 1;
         }
@@ -32,9 +32,4 @@ int SonarAlert::detectBarrier( int sensorDistance )
     }
 
     return alert;
-}
-
-int SonarAlert::getDistanceBorder()
-{
-    return SONAR_ALERT_DISTANCE;
 }
