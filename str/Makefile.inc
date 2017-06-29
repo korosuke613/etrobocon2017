@@ -12,6 +12,8 @@ APPL_CXXOBJS += \
 util.o \
 EtRobocon2017.o \
 SonarAlert.o \
+LineTracer.o \
+pid.o \
 Walker.o \
 Lifter.o \
 Emoter.o
@@ -26,7 +28,7 @@ INCLUDES += \
     -I$(mkfile_path)app
 =======
 -I$(mkfile_path)app
- 
+
 
 ifdef CONFIG_EV3RT_APPLICATION
 

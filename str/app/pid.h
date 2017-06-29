@@ -1,6 +1,8 @@
 #ifndef __PID__
 #define __PID__
 
+#include <stdio.h>
+
 class Pid{
   //menber variables
 private:
@@ -16,7 +18,7 @@ private:
   //member methods
 public:
   //Constructor
-  Pid(double p_gain,double i_gain,double d_gain,double target);
+  Pid(double _p_gain,double _i_gain,double _d_gain,double _target);
   void setPid(double _p_gain,double _i_gain,double _d_gain,double _target);
   void setTarget(double _target);
   void calculate(double light_value);
