@@ -1,14 +1,17 @@
 #ifndef __SONARALERT__
 #define __SONARALERT__
 
+#include <SonarSensor.h>
+
+using namespace ev3api;
+
 class SonarAlert {
 public:
-    SonarAlert( int, int );
+    SonarAlert( int );
     int detectBarrier( int );
-    int getDistanceBorder();
 
 private:
-    const signed int SONAR_ALERT_DISTANCE;
+    SonarSensor sonarSensor;
     unsigned int timeCounter;
     unsigned int secPerCycle;
 };
