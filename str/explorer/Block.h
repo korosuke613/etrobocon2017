@@ -9,16 +9,15 @@ using namespace std;
 class Block{
 private:
 	int position;
-	char blockColor[8];
 
 public:
+	enum Color{Black, Red, Yellow, Blue, Green};
 	Block(int nodeNum);
 	void setPosition(int nodeNum);
 	void setColor(char color[8]);
 	int getPosition();
 	char* getBlockColor();
 	~Block();
-
 };
 
 #endif //INC_BLOCK

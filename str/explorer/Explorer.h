@@ -27,7 +27,7 @@ public:
 	void setBlocks(int p1, int p2, int p3, int p4);
 	bool contains(int num);
 	int goalExplore(int nowNodeNum, char* color);
-	~Explorer();
+	‾Explorer();
 
 };
 #endif //INC_EXPLORER

@@ -1,7 +1,7 @@
 
 #include"Explorer.h"
 
-//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 Explorer::Explorer(){
 	//memset(field, '*', sizeof(field));
 	for(int i=0; i<16; i++){
@@ -9,10 +9,10 @@ Explorer::Explorer(){
 	nodeList[i]->setEdge(i);
 	}
 }
-//ƒfƒXƒgƒ‰ƒNƒ^
-Explorer::~Explorer(){}
+//ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+Explorer::â€¾Explorer(){}
 
-//ƒXƒ^[ƒg•ƒS[ƒ‹ˆÊ’uİ’è
+//ã‚¹ã‚¿ãƒ¼ãƒˆï¼†ã‚´ãƒ¼ãƒ«ä½ç½®è¨­å®š
 void Explorer::set(int start, int goal){
 	nodeList[start]->setState('s');
 	nodeList[goal]->setState('g');
@@ -27,12 +27,12 @@ void Explorer::set(int start, int goal){
 	return;
 }
 
-//ƒtƒB[ƒ‹ƒho—Í
+//ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰å‡ºåŠ›
 void Explorer::print(){
 	for(int i=0; i<16; i++){
 		cout << nodeList[i]->getState();
 		if(i != 0 && i%4 == 3){
-			cout << '\n';
+			cout << 'Â¥n';
 		}
 	}
 	return;
@@ -84,7 +84,7 @@ bool Explorer::contains(int num){
 	return false;
 }
 
-//ƒXƒ^[ƒg’n“_‚©‚çˆê”Ô‹ß‚¢w’è‚ÌF‚Ìƒm[ƒh‚ğ’T‚·
+//ã‚¹ã‚¿ãƒ¼ãƒˆåœ°ç‚¹ã‹ã‚‰ä¸€ç•ªè¿‘ã„æŒ‡å®šã®è‰²ã®ãƒãƒ¼ãƒ‰ã‚’æ¢ã™
 int Explorer::goalExplore(int nowNodeNum, char* color){
 	int goalCost=100;
 	Node* target;
