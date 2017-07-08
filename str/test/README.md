@@ -1,22 +1,31 @@
 # Google C++ Testing Frameworkの使い方
+
 ここではCygwinにおけるGoogle C++ Testing Frameworkの使い方について説明します。
 わかってしまえばそんなに難しくないですが、ちょっと手間取りますから気を付けてください。
 
+
+
 ## 長い前置き
+
 その前に簡単にGoogle C++ Testing Framework、通称Google Testとは何ぞやという説明だけさらっとしておきます。
-簡単に言えばC++のJUnitバージョンです。
+簡単に言えばJUnitのC++バージョンです。
 最初はCppUnitっていうのがC++でのデファクトスタンダートだったらしいですが、余りにも機能がシンプルすぎて使いづらいという話がちらほら出ていたそうです。
 そこで、Googleが「俺の考えた最強のC++単体テストツール」を作ったみたいです。
 そしてこれがなかなか便利なものでして、次の2点が有用な点として挙げられます。
-* 使いやすく、ドキュメントも豊富 -> 他の単体テストツールでは使いづらかったり、ドキュメントが乏しかったりするらしい
+
+* 使いやすくドキュメントも豊富 -> 他の単体テストツールでは使いづらかったり、ドキュメントが乏しかったりするらしい
 * Mockが使える -> ちょっと調べた感じでは、C++でモックオブジェクトを作るのは難しいらしく、ほとんどないが、Google Testではデフォルトでモックを作ってくれるツールもセット、お得だね！
-ってな感じなので、使ってみましたよってことです。
+
+ってな感じなので、使ってみました。
 
 ただ、インターネット情報では2年前くらいのバージョン1.xシリーズの説明しかなく、現在のバージョン2.x系列のコンパイルや使い方の日本語での説明がほぼほぼなかったため、頑張って使い方を調べました。
+
 これであなたもGoogle Testプロになれます、かねぇ？
 
 
+
 ## Google Mockの説明がないんですが
+
 実は、少し命名が悪いのか、混乱のもとになるかもしれませんので、ここで言っておきます。
 上記の前置きで言っているGoogle Testというのは、Googleが開発しているC++用の単体テストツールのフレームワークのことです。
 で、その中に次の2つが入っています。
@@ -26,16 +35,18 @@
 
 ということは、厳密にはGoogle Testというのはモックオブジェクトを作らない単体テストを行う時に使えるものであって、決してGoogle Test = Google C++ Testing Frameworkではありません。
 
-ですが、Google C++ Testing Framework = Google Test = JUnitと考えている方が何人かいるようで、混乱のもとになってるような気がします。
-そのうちの一人は僕だったんですけどね。
-ちなみに、Google Test = JUnitの式は成り立つことに気を付けてください。
-Google Mock = jMockみたいなものです。
+ですが、 Google C++ Testing Framework = Google Test = JUnitのC++版 と考えている方が何人かいるようで、混乱のもとになってるような気がします。
+そのうちの一人は自分だったんですけどね。
+ちなみに、 Google Test = JUnitのC++版 の式は成り立つことに気を付けてください。
+Google Mock = jMockのC++版 みたいなものです。
 
-そして、単体テストツールといえば、その2つを組み合わせたもの、つまりGoogle C++ Testing Framework = Google Test + Google Mockだと僕は考えています。
+そして、単体テストツールといえば、その2つを組み合わせたもの、つまりGoogle C++ Testing Framework = Google Test + Google Mockだと自分は考えています。
 
 
-## コンパイルしよう
-自分は最近までJavaやPerlばっかりの生活だったせいで、コンパイルをするという動作を完全に忘れてしまってました。
+
+## Google Testをコンパイルしよう
+
+自分は最近まで統合開発環境でのJavaやスクリプト言語のPerlしか使わない生活だったせいで、コンパイルをするという動作を完全に忘れてしまってました。
 そのせいで悪戦苦闘したので、まずはコンパイルをどうするかを丁寧に説明しようと思います。
 くどいかもしれませんが、ご了承ください。
 
@@ -59,16 +70,19 @@ $ ls
 googletest そのほかのファイルやディレクトリ
 ```
 
-もしかしたらgoogleさんがgoogletestリポジトリから移動させちゃったりしているかもしれませんが、その時は探してください、きっと見つかりますよ。
+もしかしたらGoogleさんがgoogletestリポジトリから移動させちゃったりしているかもしれませんが、その時は探してください、きっと見つかりますよ。
 
 さて、苦労して入手できたら、いよいよコンパイルです。
 コンパイルしなければならないのは2つです。
+
 * gtest\_main.cc
 * gtest-all.cc
+
 2つとも同じ場所にありますから、まずはその場所まで移動しましょう。
 
 ```
 $ cd googletest/googletest/src
+
 $ ls
 gtest.cc       gtest-all.cc         gtest-filepath.cc     gtest-port.cc      gtest-test-part.cc
 gtest_main.cc  gtest-death-test.cc  gtest-internal-inl.h  gtest-printers.cc  gtest-typed-test.cc
@@ -96,17 +110,6 @@ $ g++ -I. -I.. -I../include -c gtest-all.cc
 
 オプションとして-I..が追加されていることに注意してください。
 これで、gtest-all.oもできているはずです。
-
-さて、実はgtest-all.ccのコンパイルを最初はしていませんでした！
-なぜかというと、僕はこの-I..を付けていないがために、エラーをボカボカ出しました。
-それでの解決策として、ソースコードを直接いじるという愚行を犯してしまいました。
-とはいえそんなに難しくはありません。
-
-\#include "src/hogehoge.cc"がエラーだよ
-
-との説明を受けたので、じゃあsrc/を消せばいいじゃんと考えました、はい。
-そんなことを4ファイルくらいしてコンパイルを通しました。
-皆さんはやらないほうがいいと思います。
 
 
 __注意__
@@ -144,6 +147,19 @@ $ gcc --version
 $ g++ --version
 6.3.0
 ```
+
+#### ティーブレイク
+
+さて、実はgtest-all.ccのコンパイルを最初はしていませんでした！
+なぜかというと、自分はこの-I..を付けていないがために、エラーをボカボカ出しました。
+それでの解決策として、ソースコードを直接いじるという愚行を犯してしまいました。
+とはいえそんなに難しくはありません。
+
+\#include "src/hogehoge.cc"がエラーだよ
+
+との説明を受けたので、じゃあsrc/を消せばいいじゃんと考えました、はい。
+そんなことを4ファイルくらいに適応してコンパイルを通しました。
+皆さんはやらないほうがいいと思います。
 
 
 
@@ -187,13 +203,14 @@ etrobocon2017
         |-- テストコード置き場
 ```
 
+
 ### テストコードを書いてコンパイルしよう
 
 テストコードの書き方は具体例のほうがわかりやすいと思うので、ここのファイルをどれか適当に選んでください。
 
 最低限書かなければならないのは次の文です。
 
-```
+``` cpp:AddTest.cpp
 /**
  * AddTest.cpp
  * ヘッダファイルは書かなくてもいいらしい
@@ -237,6 +254,7 @@ $ g++ AddTest.cpp gtest_main.o gtest-all.o -I../googletest/googletest/include
 
 これでコンパイルが成功すると、a.exeがカレントディレクトリに出現します。
 こいつを実行すれば、いい感じに色も付いたきれいなテスト結果が表示されます。
+
 おめでとうございます！
 これであなたもGoogle Testプロです。
 
@@ -245,11 +263,11 @@ $ g++ AddTest.cpp gtest_main.o gtest-all.o -I../googletest/googletest/include
 
 これで終われるはずはないわけです。
 普通に考えれば、テストコードにテストしたい内容を埋め込むなんてことはあり得ません。
-では、別のメンバ関数を呼び出しましょう。
+では、別のファイルに存在するメンバ関数を呼び出しましょう。
 
 その時のテストファイルはこちらです。
 
-```
+``` cpp:SonarAlertTest.cpp
 /**
  * SonarAlertTest.cpp
  */
@@ -267,7 +285,7 @@ TEST( detectBarrierTest, return30WhenSetAlertDistance30 )
 }
 ```
 
-```
+``` cpp:SonarAlert.cpp
 /**
  * SonarAlert.cpp
  */
@@ -289,7 +307,7 @@ int SonarAlert::getDistanceBorder()
 }
 ```
 
-```
+``` cpp:SonarAlert.h
 /**
  * SonarAlert.h
  */
@@ -319,6 +337,7 @@ $ g++ ../app/SonarAlert.h ../app/SonarAlert.cpp SonarAlertTest.cpp gtest_main.o 
 成功した -> おめでとうございます！
 
 成功しなかった -> いくつか落とし穴があります、気を付けてみてください。
+
 * SonarAlert.cppとSonarAlert.hはstr/appに入ってますか？
 * コンパイル引数の順番は合ってますか？
 * -I引数を間違えてませんか？
@@ -327,16 +346,27 @@ $ g++ ../app/SonarAlert.h ../app/SonarAlert.cpp SonarAlertTest.cpp gtest_main.o 
 今度こそGoogle Testプロです！
 
 
-## Google Mockについて知ってみよう
 
-それでは、前置きあたりでちらっと言ったGoogle Mockについても少し説明します。
+## Google Mockをコンパイルしよう
+
+今度はGoogle Mockを使ったテストをしてみましょう。
+
+前置きでも言ったように、Google Test = ( JUnit + jMock )のC++版 という間違った構造が定着しているようなので、真のGoogle TestプロはGoogle Mockも使えないといけないのかもしれません。
+それだけでなく、テストコードでモックが使えるようになるとかなり便利であり、テストコードを書けるといえばモックも使えると言っても過言ではありません。
+
+Google MockはC++特有の問題を根本的に解決してくれない部分もいくつか存在しますが、そんなことはあんまり気にせずに、できそうなところだけ頑張ってみましょう。
+
+
+### でもGoogle Mockってなんですか？
+
+それでは、前置きあたりでちらっと言ったGoogle Mockについて、もう少し説明します。
 
 Google Mockというのは、モックオブジェクトを作ってくれるライブラリであるということは先ほど言いました。
 じゃあモックオブジェクトってなんだよということなんですが、これは簡単に言ってしまえば、オブジェクトを仮実装してくれるツールです。
 
-例えば、クラスAがクラスBのメンバ関数setItem(int)を使っているメンバ関数isSettedItem()をテストしたいとします。
+例えば、クラスAがクラスBのメンバ関数 `setItem(int)` を使っているメンバ関数 `isSettedItem()` をテストしたいとします。
 
-```
+``` cpp
 /*
  * A.cpp
  */
@@ -365,12 +395,12 @@ public:
 };
 ```
 
-しかし、クラスBのsetItem(int)メンバ関数はまだ実装されていません。
+しかし、クラスBの `setItem(int)` メンバ関数はまだ実装されていません。
 あるいは、実装されているかもしれませんが、データベース処理などによる重い処理だとしたら、あまり時間をかけたくない場合もあります。
 そのようなときに、仮実装するメンバ関数を一から作る、あるいは使うのは面倒だし時間がかかります。
 そこで、そのメンバ関数を使ったように見せかけるメンバ関数を作ってくれると助かるよねという考えから作られたのがモックオブジェクトというものです。
 
-```
+``` cpp
 /*
  * MockB.cpp
  */
@@ -392,15 +422,14 @@ public:
 非仮想関数もモック化可能みたいですが、うまくいかなかったので、今回は仮想関数のみの説明です。
 
 
-
-## Google Mockを使ってみよう
+### Google Mockを使ってみよう
 
 では早速、先ほど説明したGoogle Mockを使ったテストをやってみましょう。
 先ほども言ったように、モックオブジェクトというのは、実際に使うことに必要性はないが、使わないとテストができなようなクラスをテストする際に、仮想的なオブジェクトを読み込ませようという考え方で作られました。
 
 組込み関数や組込みクラスでは、これは結構役に立つのではないかと思います。
-例えば、SonarSensorクラスのgetDistance()メソッドを使っているSonarAlertクラスをテストしたい場合、SonarSensor.getDistance()はローカル上で使うことはできません。
-SonarSensorをモックオブジェクト化して、getDistance()の戻り値を一意に決めてしまえば、わざわざ組込みマシンに入れなくてもテストできます。
+例えば、 `SonarSensor` クラスの `getDistance()` メンバ関数を使っている `SonarAlert` クラスをテストしたい場合、 `SonarSensor.getDistance()` はローカル上で使うことはできません。
+`SonarSensor` をモックオブジェクト化して、 `getDistance()` の戻り値を一意に決めてしまえば、わざわざ組込みマシンに入れなくてもテストできます。
 便利ではないでしょうか！？
 
 その前に、Google Testと同様に、Google Mockを作ってくれる実行ファイルを作りましょう。
@@ -418,8 +447,8 @@ $ g++ -I.. -I../include -I../../googletest/include -c gmock-all.cc
 入れ方はもうわかりますよね？
 
 それでは、テストクラスを書きましょう。
-本格的なテストの一部を取り出しているため、テスト対象コード（SonarAlert.cpp）が長くなっていますが、気にしないでください。
 必要なコードは、次の5つです。
+
 * SonarAlert.h（テスト対象コードのヘッダファイル）
 * SonarAlert.cpp（テスト対象コードの実装が書かれたクラスファイル）
 * SonarSensor.h（組込みクラスの仮想クラス）
@@ -428,9 +457,11 @@ $ g++ -I.. -I../include -I../../googletest/include -c gmock-all.cc
 
 SonarSensor.hは、テストコードが存在するディレクトリに、新しく自分で作って置いちゃってください。
 なぜかといえば、EV3APIが提供する組込みSonarSensor.hを読み込もうとすると、PATHが膨大になってしまい、本来の目的であるモックオブジェクトを作るという趣旨から離れてしまうからです。
-また、EV3APIが提供する組込みSonarSensor.hのgetDistance()メソッドは非仮想関数であり、モックを作ることが一段と手間なので、さっさと仮想関数が入ったヘッダファイルを作っちゃったほうが早いと考えたためです。
+また、EV3APIが提供する組込みSonarSensor.hのgetDistance()メンバ関数は非仮想関数であり、モックを作ることが一段と手間なので、さっさと仮想関数が入ったヘッダファイルを作っちゃったほうが早いと考えたためです。
 
-```
+本格的なテストの一部を取り出しているため、テスト対象コード（SonarAlert.cpp）が長くなっていますが、気にしないでください。
+
+``` cpp:SonarAlert.h
 /*
  * SonarAlert.h
  */
@@ -441,7 +472,7 @@ public:
     SonarAlert( int, int );
     SonarAlert( int, int, SonarSensor& ); // テスト用コンストラクタ
     ~SonarAlert();
-    int detectBarrier(); // テスト対象メソッド
+    int detectBarrier(); // テスト対象メンバ関数
 
 private:
     const signed int SONAR_ALERT_DISTANCE;
@@ -451,7 +482,7 @@ private:
 };
 ```
 
-```
+``` cpp:SonarAlert.cpp
 /*
  * SonarAlert.cpp
  */
@@ -503,7 +534,7 @@ int SonarAlert::detectBarrier()
 }
 ```
 
-```
+``` cpp:SonarSensor.h
 /*
  * SonarSensor.h
  */
@@ -516,7 +547,7 @@ public:
 };
 ```
 
-```
+``` cpp:MockSonarSensor.h
 /*
  * MockSonarSensor.h
  */
@@ -529,7 +560,7 @@ public:
 };
 ```
 
-```
+``` cpp:SonarAlertTest.cpp
 /*
  * SonarAlertTest.cpp
  */
@@ -586,7 +617,37 @@ $ g++ SonarAlert.cpp SonarAlertTest.cpp gtest-all.o gmock_main.o gmock-all.o -I.
 * http://opencv.jp/googletestdocs/index.html
 * http://opencv.jp/googlemockdocs/index.html
 
-## makeファイルくらい作ろう
 
-まだできてません、頑張りますからもう少しお待ちください。
 
+## ~~makeファイルを作ろう~~
+## makeファイルっぽいスクリプトを作ろう
+
+makeファイル？よくわかんないや！
+
+ということで、皆さんおなじみ、Perlスクリプトでコマンドを作ってみました。
+
+使い方は次の通りです。
+
+```
+$ perl test.pl オプション テスト用コード
+```
+
+オプションには次のどっちかの文字が入ります。
+
+* test
+* mock
+
+また、テスト用コードというのはテスト対象コードをテストするためのテスト用コードです。
+\"\~Test.cpp\"というファイルなら何でもいいです。
+
+オプションは、テスト用コードがモックを使っていないならtestを、使っているならmockを選んでください。
+
+また、このスクリプトでは自動的にテストも実行してくれます。
+
+
+__注意事項__
+
+* このスクリプトでは、ファイルの存在有無は確認していません。
+  gtest\_main.o、gtest-all.o、gmock\_main.o、gmock-all.oは予め作っておいてください。
+* 最後に自動実行するテストは、単純に作ったa.exeを実行するだけですが、もし最初に何らかのエラーで作れなかったとしても、カレントディレクトリにa.exeが存在した場合はそれを実行します。
+  気になる人は実行前にa.exeを消すといいかもしれません。
