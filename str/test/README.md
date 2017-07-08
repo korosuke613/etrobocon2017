@@ -327,7 +327,8 @@ $ g++ ../app/SonarAlert.h ../app/SonarAlert.cpp SonarAlertTest.cpp gtest_main.o 
 今度こそGoogle Testプロです！
 
 
-## Google Mockを使ってみよう
+## Google Mockについて知ってみよう
+
 それでは、前置きあたりでちらっと言ったGoogle Mockについても少し説明します。
 
 Google Mockというのは、モックオブジェクトを作ってくれるライブラリであるということは先ほど言いました。
@@ -347,7 +348,7 @@ public:
     bool isSettedItem();
 };
 
-bool A:isSettedItem(B *b)
+bool A::isSettedItem(B *b)
 {
     b.setItem(1);
     return true;
@@ -366,7 +367,7 @@ public:
 
 しかし、クラスBのsetItem(int)メンバ関数はまだ実装されていません。
 あるいは、実装されているかもしれませんが、データベース処理などによる重い処理だとしたら、あまり時間をかけたくない場合もあります。
-そのようなときに、仮実装するメンバ関数を一から作るのは面倒です。
+そのようなときに、仮実装するメンバ関数を一から作る、あるいは使うのは面倒だし時間がかかります。
 そこで、そのメンバ関数を使ったように見せかけるメンバ関数を作ってくれると助かるよねという考えから作られたのがモックオブジェクトというものです。
 
 ```
@@ -388,11 +389,23 @@ public:
 * 関数名をマクロの1番目の引数に、メンバ関数の型を2番目の引数に入れる。また、メンバ関数の型のカッコの中には、そのメンバ関数の引数を入れる。
 * これを、モック化したい仮想関数全てに対して繰り返す。
 
-非仮想関数もモック化可能みたいですが、そこまでは調べてません。
+非仮想関数もモック化可能みたいですが、うまくいかなかったので、今回は仮想関数のみの説明です。
 
-ではその前に、Google Testと同様に、Google Mockを作ってくれる実行ファイルを作りましょう。
 
-googletest/googlemock/strに入ってください。
+
+## Google Mockを使ってみよう
+
+では早速、先ほど説明したGoogle Mockを使ったテストをやってみましょう。
+先ほども言ったように、モックオブジェクトというのは、実際に使うことに必要性はないが、使わないとテストができなようなクラスをテストする際に、仮想的なオブジェクトを読み込ませようという考え方で作られました。
+
+組込み関数や組込みクラスでは、これは結構役に立つのではないかと思います。
+例えば、SonarSensorクラスのgetDistance()メソッドを使っているSonarAlertクラスをテストしたい場合、SonarSensor.getDistance()はローカル上で使うことはできません。
+SonarSensorをモックオブジェクト化して、getDistance()の戻り値を一意に決めてしまえば、わざわざ組込みマシンに入れなくてもテストできます。
+便利ではないでしょうか！？
+
+その前に、Google Testと同様に、Google Mockを作ってくれる実行ファイルを作りましょう。
+
+`googletest/googlemock/str` に入ってください。
 そこで、次のコマンドを入力します。
 
 ```
@@ -405,26 +418,144 @@ $ g++ -I.. -I../include -I../../googletest/include -c gmock-all.cc
 入れ方はもうわかりますよね？
 
 それでは、テストクラスを書きましょう。
-ゴリゴリ書きます。
+本格的なテストの一部を取り出しているため、テスト対象コード（SonarAlert.cpp）が長くなっていますが、気にしないでください。
+必要なコードは、次の5つです。
+* SonarAlert.h（テスト対象コードのヘッダファイル）
+* SonarAlert.cpp（テスト対象コードの実装が書かれたクラスファイル）
+* SonarSensor.h（組込みクラスの仮想クラス）
+* MockSonarSensor.h（SonarSensor.hのモッククラス）
+* SonarAlertTest.cpp（テストコード）
+
+SonarSensor.hは、テストコードが存在するディレクトリに、新しく自分で作って置いちゃってください。
+なぜかといえば、EV3APIが提供する組込みSonarSensor.hを読み込もうとすると、PATHが膨大になってしまい、本来の目的であるモックオブジェクトを作るという趣旨から離れてしまうからです。
+また、EV3APIが提供する組込みSonarSensor.hのgetDistance()メソッドは非仮想関数であり、モックを作ることが一段と手間なので、さっさと仮想関数が入ったヘッダファイルを作っちゃったほうが早いと考えたためです。
 
 ```
 /*
- * ATest.cpp
+ * SonarAlert.h
  */
-#include "MockB.h"
-#include "A.cpp"
-#include "gmock/gmock.h"
-#include "gtest/gtest.h"
-using ::testing::AtLeast;
+#include <SonarSensor.h>
 
-TEST( ATest, CanUseB )
+class SonarAlert {
+public:
+    SonarAlert( int, int );
+    SonarAlert( int, int, SonarSensor& ); // テスト用コンストラクタ
+    ~SonarAlert();
+    int detectBarrier(); // テスト対象メソッド
+
+private:
+    const signed int SONAR_ALERT_DISTANCE;
+    SonarSensor* sonarSensor;
+    unsigned int timeCounter;
+    unsigned int secPerCycle;
+};
+```
+
+```
+/*
+ * SonarAlert.cpp
+ */
+#include "SonarAlert.h"
+
+SonarAlert::SonarAlert( int distanceBorder, int secPerCycle ):
+    SONAR_ALERT_DISTANCE( distanceBorder )
 {
-    MockB b;
-    EXPECT_CALL( b, setItem(1)).Times(AtLeast(1));
+    timeCounter = 0;
+    // sonarSensor = new SonarSensor( PORT_3 ); // テスト中はコメントアウト
+    this->secPerCycle = secPerCycle;
+}
 
-    A a;
+// テスト用コンストラクタ
+SonarAlert::SonarAlert( int distanceBorder, int secPerCycle, SonarSensor& sensor):
+    SONAR_ALERT_DISTANCE( distanceBorder )
+{
+    timeCounter = 0;
+    sonarSensor = &sensor;
+    this->secPerCycle = secPerCycle;
+}
 
-    ASSERT_TRUE( a.isSettedItem( b ) );
+SonarAlert::~SonarAlert()
+{
+    // delete sonarSensor; // テスト中はコメントアウト
+}
+
+// テスト対象コード
+int SonarAlert::detectBarrier()
+{
+    timeCounter++;
+    int alert = 0;
+
+    if( timeCounter == 40/secPerCycle ) // 4msループなら10回に1回検知
+    {
+        if( sonarSensor->getDistance() <= SONAR_ALERT_DISTANCE
+                && 0 <= sonarSensor->getDistance() )
+        {
+            alert = 1;
+        }
+        else
+        {
+            alert = 0;
+        }
+        timeCounter = 0;
+    }
+
+    return alert;
+}
+```
+
+```
+/*
+ * SonarSensor.h
+ */
+
+// このヘッダファイルはテスト用です
+class SonarSensor {
+public:
+    SonarSensor() {}
+    virtual int getDistance() = 0; // 仮想関数
+};
+```
+
+```
+/*
+ * MockSonarSensor.h
+ */
+#include "gmock/gmock.h"
+#include "SonarSensor.h"
+
+class MockSonarSensor : public SonarSensor {
+public:
+    MOCK_METHOD0(getDistance, int());
+};
+```
+
+```
+/*
+ * SonarAlertTest.cpp
+ */
+#include <gtest/gtest.h>
+#include <gmock/gmock.h>
+#include <app/SonarAlert.h>
+#include "MockSonarSensor.h"
+using ::testing::AtLeast;
+using ::testing::Return;
+
+// アラート距離30以内（20）に入っていて10回目の観測では障害物を特定する
+TEST( detectBarrierTest, detectBarrierCheckTenTimesOnlyWhenSetAlertDistance30 )
+{
+    // モックを作ります
+    MockSonarSensor sonarSensor;
+    // モック内のメンバ関数を定義します
+    EXPECT_CALL( sonarSensor, getDistance() )
+        .Times(2) // 何回呼ばれるか
+        .WillRepeatedly( Return(20) ); // 戻り値は何か
+    // 作ったモックを埋め込みます
+    SonarAlert sonarAlert( 30, 4, sonarSensor );
+
+    for( int i = 0; i < 9; i++ )
+        sonarAlert.detectBarrier();
+
+    ASSERT_EQ( sonarAlert.detectBarrier(), 1 );
 }
 ```
 
@@ -432,23 +563,28 @@ TEST( ATest, CanUseB )
 
 ```
 $ ls
-A.cpp ATest.cpp B.h MockB.cpp gtest_main.o gtest-all.o gmock_main.o gmock-all.o
+SonarAlert.h SonarAlert.cpp SonarAlertTest.cpp SonarSensor.h MockSonarSensor.cpp gtest_main.o gtest-all.o gmock_main.o gmock-all.o
 ```
 
 そしたら、次のようなコマンドを入力すればいいかと思います。
 
 ```
-$ g++ A.cpp B.cpp BTest.cpp gtest-all.o gmock_main.o gmock-all.o -I../googletest/googlemock/include -I../googletest/googletest/include
+$ g++ SonarAlert.cpp SonarAlertTest.cpp gtest-all.o gmock_main.o gmock-all.o -I../googletest/googlemock/include -I../googletest/googletest/include
 ```
 
 これでa.exeがカレントディレクトリに生成されて、実行できたら成功です。
+
 気を付けて欲しいのは、gtest-all.oをコンパイルしている点と、../googletest/googletest/includeをパスに通している点です。
 逆に、gtest\_main.oはコンパイルしていません。
 
-この節のテストクラスは抽象的すぎるので、テストコードのコンパイルあたりはやらないでください。
-コンパイルが通るかの保証も何もしていませんので、この辺は考え方を教えているだけだと思ってください。
-もう少しいい例が見つかればいいのですが、それまではこのような体たらくで我慢してください。
+ここまでくれば、一般的なETロボコンのテストコードはほとんど書けると思います。
+ここでついにあなたはGoogle Testプロになれました。
+誇りましょう。
 
+詳しいGoogle TestとGoogle Mockの使い方は次のURLを見てください。
+
+* http://opencv.jp/googletestdocs/index.html
+* http://opencv.jp/googlemockdocs/index.html
 
 ## makeファイルくらい作ろう
 
