@@ -5,6 +5,7 @@ util.o \
 EtRobocon2017.o \
 SonarAlert.o \
 LineTracer.o \
+NormalCourse.o\
 pid.o \
 Walker.o \
 Lifter.o \

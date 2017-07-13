@@ -10,15 +10,15 @@ void LineTracer::runLine(){
     int8_t forward = 30;
 
 
-    while(1)
-    {
-        if (ev3_button_is_pressed(BACK_BUTTON)) break;
+    //while(1)
+    //{
+    //    if (ev3_button_is_pressed(BACK_BUTTON)) break;
         turn = calculateTurnForPid( forward );
 
         walker.run( forward, turn );
 
         tslp_tsk(4); // 4msec周期起動
-    }
+    //}
 
 }
 
@@ -30,4 +30,8 @@ int8_t LineTracer::calculateTurnForPid( int8_t forward ) {
     int8_t output = (int8_t)(pid_value * forward_percent);
 
     return output;
+}
+
+void LineTracer::changePidGain ( double p_gain, double i_gain, double d_gain, double target ) {
+	pid.setPid( p_gain, i_gain, d_gain, target );
 }

@@ -7,6 +7,7 @@
 #include "Lifter.h"
 #include "Emoter.h"
 #include "lineTracer.h"
+#include "NormalCourse.h"
 
 using namespace ev3api;
 
