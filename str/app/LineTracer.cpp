@@ -8,8 +8,6 @@ LineTracer::LineTracer():
 void LineTracer::runLine(){
     int8_t turn;
 
-
-
     while(1)
     {
         if (ev3_button_is_pressed(BACK_BUTTON)) break;
