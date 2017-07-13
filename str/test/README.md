@@ -1,5 +1,5 @@
 # Google Testの使い方
-ここではGoogle Testの使い方について説明します。
+ここではCygwinでのGoogle Testの使い方について説明します。
 わかってしまえばそんなに難しくないですが、ちょっと手間取りますから気を付けてください。
 
 ## 長い前置き
@@ -21,7 +21,9 @@
 そのせいで悪戦苦闘したので、まずはコンパイルをどうするかを丁寧に説明しようと思います。
 くどいかもしれませんが、ご了承ください。
 
+
 1. GitHubに上がっているGoogle Testを取ってくる。
+
 大事ですね、でもここから説明しておきます。
 その前に、カレントディレクトリを移動しておきましょう。
 これからgit cloneするわけですが、カレントディレクトリ直下に配置するので（もちろん、gitのコマンドでカレントディレクトリ以外に置くこともできますが）、どこに置いておきたいかを考えてください。
@@ -71,7 +73,7 @@ lsをすればgtest\_main.oがカレントディレクトリに入っている�
 次はgtest-all.ccです。
 
 ```
-$ g++ -I. -I.. -I/include -c gtest-all.cc
+$ g++ -I. -I.. -I../include -c gtest-all.cc
 ```
 
 オプションとして-I..が追加されていることに注意してください。
@@ -89,7 +91,46 @@ $ g++ -I. -I.. -I/include -c gtest-all.cc
 皆さんはやらないほうがいいと思います。
 
 
+__注意__
+
+g++でコンパイルに失敗する人が多数いるそうです！
+自分がどうしてうまくいったのか調べたところ、Straberry Perl（WindowsでPerlを使えるようにするツール群）をインストールした際に、一緒に入っていたg++プログラムを呼び出してコンパイルしていました。
+ただし、これが正しいとはとても思えないので、もっといい方法が見つかったら教えてください。
+
+32bit版Cygwinにおいて、コンパイルに失敗する原因は、stddef.hを見つけられないというエラーでした。
+そこでfindコマンドで検索してみたところ、次のディレクトリが見つかりました。
+
+```
+$ find / -name stddef.h
+/home/katlabPC/ev3rt-beta7-release/hrp2/hrp2/target/ev3_gcc/drivers/common/virtual-linux-kernel/include/linux/stddef.h
+/home/katlabPC/ev3rt-beta7-release/hrp2/target/ev3_gcc/drivers/common/virtual-linux-kernel/include/linux/stddef.h
+/lib/gcc/i686-pc-cygwin/6.3.0/include/stddef.h
+/usr/lib/gcc/i686-pc-cygwin/6.3.0/include/stddef.h
+```
+
+よって、次のコマンドで無事コンパイルが確認できました。
+
+```
+$ g++ -I. -I../include -I/lib/gcc/i686-pc-cygwin/6.3.0/include -c gtest_main.cc
+$ g++ -I. -I.. -I../include -I/lib/gcc/i686-pc-cygwin/6.3.0/include -c gtest-all.cc
+```
+
+また、コンパイルの失敗は確認できませんでしたが、テストファイル./a.exe実行時に何も表示されないというバグが発生しているようです。
+g++とgccのバージョンを同じものにすると動くという情報があります。
+例えば、次のような時にはうまく動作してくれました。
+
+```
+$ gcc --version
+6.3.0
+
+$ g++ --version
+6.3.0
+```
+
+
+
 2. できたgtest\_main.oとgtest-all.oファイルをテストコードがあるディレクトリにコピー
+
 これはそんなに難しくないよね。
 
 ```
@@ -129,6 +170,7 @@ etrobocon2017
 ```
 
 3. テストコードを書いてコンパイルしよう
+
 テストコードの書き方は具体例のほうがわかりやすいと思うので、ここのファイルをどれか適当に選んでください。
 
 最低限書かなければならないのは次の文です。
@@ -182,6 +224,7 @@ $ g++ AddTest.cpp gtest_main.o gtest-all.o -I../googletest/googletest/include
 
 
 4. せめて普通のクラスを単体テストしましょう
+
 これで終われるはずはないわけです。
 普通に考えれば、テストコードにテストしたい内容を埋め込むなんてことはあり得ません。
 では、別のメソッドを呼び出しましょう。

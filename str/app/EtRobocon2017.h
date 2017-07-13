@@ -3,11 +3,10 @@
 
 #include "ev3api.h"
 #include "TouchSensor.h"
-#include "ColorSensor.h"
 #include "SonarAlert.h"
-#include "Walker.h"
 #include "Lifter.h"
 #include "Emoter.h"
+#include "LineTracer.h"
 
 using namespace ev3api;
 
@@ -20,11 +19,9 @@ public:
 
 private:
     TouchSensor touchSensor;
-    ColorSensor colorSensor;
     int8_t light_white;
     int8_t light_black;
 
 };
 
 #endif
-
