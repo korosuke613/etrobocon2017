@@ -2,12 +2,12 @@
 
 LineTracer::LineTracer():
     //pid(0.36, 1.2, 0.027, 30.0), colorSensor( PORT_3 ){
-    pid(0.8, 1.2, 0.012, 30.0), colorSensor( PORT_3 ){
+    pid(0.8, 1.2, 0.012, 30.0), colorSensor( PORT_3 ), forward(30){
 }
 
 void LineTracer::runLine(){
     int8_t turn;
-    int8_t forward = 30;
+
 
 
     while(1)
@@ -20,6 +20,10 @@ void LineTracer::runLine(){
         tslp_tsk(4); // 4msec周期起動
     }
 
+}
+
+void LineTracer::setForward(int8_t setValue){
+    forward = setValue;
 }
 
 int8_t LineTracer::calculateTurnForPid( int8_t forward ) {

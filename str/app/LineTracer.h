@@ -12,11 +12,13 @@ public:
     LineTracer();
     void runLine();
     int8_t calculateTurnForPid( int8_t forward );
+    void setForward(int8_t setValue);
 
 private:
     Pid pid;
     ColorSensor colorSensor;
     Walker walker;
+    int8_t forward;
 };
 
 
