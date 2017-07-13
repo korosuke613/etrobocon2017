@@ -4,3 +4,4 @@
 *.exe
 .clang_complete
 googletest
+.vscode
