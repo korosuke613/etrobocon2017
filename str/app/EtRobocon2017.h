@@ -6,7 +6,7 @@
 #include "SonarAlert.h"
 #include "Lifter.h"
 #include "Emoter.h"
-#include "lineTracer.h"
+#include "LineTracer.h"
 
 using namespace ev3api;
 
