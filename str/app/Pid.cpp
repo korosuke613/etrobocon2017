@@ -1,10 +1,6 @@
 #include "Pid.h"
 
 //Constructor
-<<<<<<< HEAD:str/app/pid.cpp
-Pid::Pid(double p_gain, double i_gain, double d_gain, double target) {
-    wrapper_of_constructor(p_gain,i_gain,d_gain,0,0,target,0);
-=======
 Pid::Pid(double _p_gain,double _i_gain,double _d_gain,double _target){
     wrapper_of_constructor(_p_gain,_i_gain,_d_gain,0,0,_target,0);
     FILE *fp;
@@ -15,7 +11,6 @@ Pid::Pid(double _p_gain,double _i_gain,double _d_gain,double _target){
     }
     fprintf(fp, "light_value, integral, pg, ig, dg, p, i, d, diff, old_diff, output\n");
     fclose(fp);
->>>>>>> dev_PidRun:str/app/Pid.cpp
 }
 
 //wrapper
@@ -26,15 +21,10 @@ void Pid::wrapper_of_constructor(double _p_gain, double _i_gain, double _d_gain,
     d_gain   = _d_gain;
     old_diff = _diff;
     integral = _integral;
-<<<<<<< HEAD:str/app/pid.cpp
     target   = _target;
     output   = _output;
-    del      = 1;
-=======
-    target = _target;
-    output = _output;
-    del = 0.004;
->>>>>>> dev_PidRun:str/app/Pid.cpp
+    del      = 0.004;
+
 }
 void Pid::calculate(double light_value) {
     double p,i,d;
