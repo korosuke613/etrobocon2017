@@ -3,15 +3,17 @@
 
 #include <SonarSensor.h>
 
-using namespace ev3api;
-
 class SonarAlert {
 public:
-    SonarAlert( int );
-    int detectBarrier( int );
+    SonarAlert( int, int );
+    SonarAlert( int, int, SonarSensor& );
+    ~SonarAlert();
+    int detectBarrier();
+    int getDistanceBorder();
 
 private:
-    SonarSensor sonarSensor;
+    const signed int SONAR_ALERT_DISTANCE;
+    SonarSensor* sonarSensor;
     unsigned int timeCounter;
     unsigned int secPerCycle;
 };
