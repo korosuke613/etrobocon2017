@@ -1,8 +1,8 @@
 ﻿#include "NormalCourse.h"
 
 void NormalCourse::runNormalCourse ( void ) {
-	int8_t turn = 0 ;
 	int8_t forward = 100 ;
+	lineTracer.setForward(forward);
 	while ( 1 ) {
 		if ( getDistanceTotal() >3240 ) {
 			lineTracer.changePidGain ( 0.5, 0.5, 0.012, 45.0 ) ;
