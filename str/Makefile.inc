@@ -5,12 +5,8 @@ util.o \
 EtRobocon2017.o \
 SonarAlert.o \
 LineTracer.o \
-<<<<<<< HEAD
 Pid.o \
-=======
 NormalCourse.o\
-pid.o \
->>>>>>> dev_PidRun_NormalCourse
 Walker.o \
 Lifter.o \
 Emoter.o

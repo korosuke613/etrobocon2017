@@ -12,11 +12,8 @@ public:
     LineTracer();
     void runLine();
     int8_t calculateTurnForPid( int8_t forward );
-<<<<<<< HEAD
     void setForward(int8_t setValue);
-=======
 	void changePidGain ( double p_gain, double i_gain, double d_gain, double target ) ;
->>>>>>> dev_PidRun_NormalCourse
 
 private:
     Pid pid;
