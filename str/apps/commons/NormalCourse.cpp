@@ -4,48 +4,31 @@ void NormalCourse::runNormalCourse ( void ) {
 	int8_t turn = 0 ;
 	int8_t forward = 100 ;
 	while ( 1 ) {
-		// 自己位置を取得
-		leftMotorDeg = walker.get_count_L () ;
-		rightMotorDeg = walker.get_count_R () ;
-		if ( checkCurveLine ( leftMotorDeg, rightMotorDeg ) ) {
-			lineTracer.runLine () ;
+		if ( getDistanceTotal() >3240 ) {
+			lineTracer.changePidGain ( 0.5, 0.5, 0.012, 45.0 ) ;
 		} else {
-			lineTracer.runLine () ;
-			//walker.run ( forward, turn ) ;
+			lineTracer.changePidGain ( 0.5, 0.6, 0.2, 45.0 ) ;
 		}
+		lineTracer.runLine();
 		if (ev3_button_is_pressed(BACK_BUTTON)) break;
 	}
 }
 
-int NormalCourse::checkCurveLine ( int32_t leftMotorDeg, int32_t rightMotorDeg ) {
-	if ( leftMotorDeg > 3240 && rightMotorDeg > 3240 ) {
-		lineTracer.changePidGain ( 0.5, 0.5, 0.012, 45.0 ) ;
-		return 1 ;
-	} else {
-		lineTracer.changePidGain ( 0.5, 0.6, 0.2, 45.0 ) ;
-		return 0 ;
-	}
+int32_t NormalCourse::getDistanceTotal(){
+	leftMotorDegTotal = walker.get_count_L () ;
+	rightMotorDegTotal = walker.get_count_R () ;
+	return (leftMotorDegTotal + rightMotorDegTotal) / 2;
 }
 
-/*
-void NormalCourse::runNormalCourse ( void ) {
-	int8_t turn = 0 ;
-	int8_t forward = 100 ;
-	
-	while ( 1 ) {
-		leftMotorDeg = walker.get_count_L () ;
-		rightMotorDeg = walker.get_count_R () ;
-		checkCurveLine ( leftMotorDeg, rightMotorDeg, turn ) ;
-		walker.run ( forward, turn ) ;
-		if (ev3_button_is_pressed(BACK_BUTTON)) break;
-	}
+int32_t NormalCourse::getDistanceCurrent(){
+	leftMotorDeg = walker.get_count_L () - leftMotorDegOld;
+	rightMotorDeg = walker.get_count_R () - rightMotorDegOld;
+
+	return (leftMotorDeg + rightMotorDeg) / 2;
 }
 
-int NormalCourse::checkCurveLine ( int32_t leftMotorDeg, int32_t rightMotorDeg, int8_t turn ) {
-	if ( leftMotorDeg > 3600 && rightMotorDeg > 3600 ) {
-		turn = 60 ;
-		return 0 ;
-	}
-	return 0 ;
+void NormalCourse::resetDistance(){
+	getDistanceTotal();
+	leftMotorDegOld = leftMotorDegTotal;
+	rightMotorDegOld = rightMotorDegTotal;
 }
-*/
