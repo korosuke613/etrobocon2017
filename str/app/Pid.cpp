@@ -54,6 +54,7 @@ void Pid::change_del(double next_del) {
 /*
  * PID値を入力する
  */
+<<<<<<< HEAD:str/app/Pid.cpp
 void Pid::setPid(double _p_gain, double _i_gain, double _d_gain, double _target) {
     p_gain = _p_gain;
     i_gain = _i_gain;
@@ -66,4 +67,12 @@ void Pid::setPid(double _p_gain, double _i_gain, double _d_gain, double _target)
  */
 void Pid::setTarget(double _target) {
     wrapper_of_constructor(p_gain, i_gain, d_gain, 0, 0, _target, 0);
+=======
+void Pid::setPid(double _p_gain,double _i_gain,double _d_gain,double _target){
+    //wrapper_of_constructor(_p_gain, _i_gain, _d_gain, 0, 0, _target, 0);
+	p_gain = _p_gain ;
+	i_gain = _i_gain ;
+	d_gain = _d_gain ;
+	target = _target ;
+>>>>>>> dev_PidRun_NormalCourse:str/app/pid.cpp
 }

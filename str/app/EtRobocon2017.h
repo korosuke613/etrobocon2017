@@ -6,7 +6,12 @@
 #include "SonarAlert.h"
 #include "Lifter.h"
 #include "Emoter.h"
+<<<<<<< HEAD
 #include "LineTracer.h"
+=======
+#include "lineTracer.h"
+#include "NormalCourse.h"
+>>>>>>> dev_PidRun_NormalCourse
 
 using namespace ev3api;
 
