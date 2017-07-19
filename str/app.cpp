@@ -8,8 +8,8 @@
 
 #include "ev3api.h"
 #include "app.h"
-#include "app/util.h"
-#include "app/EtRobocon2017.h" // ETロボコン2017
+#include "apps/util.h"
+#include "apps/EtRobocon2017.h" // ETロボコン2017
 
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"

@@ -15,10 +15,10 @@ Emoter.o
 
 SRCLANG := c++
 
-APPL_DIR += $(mkfile_path)app
+APPL_DIR += $(mkfile_path)apps
 
 INCLUDES += \
--I$(mkfile_path)app
+-I$(mkfile_path)apps
 
 
 ifdef CONFIG_EV3RT_APPLICATION
