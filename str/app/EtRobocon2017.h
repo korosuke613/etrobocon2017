@@ -8,6 +8,8 @@
 #include "Emoter.h"
 #include "LineTracer.h"
 #include "NormalCourse.h"
+#include "LeftNormalCourse.h"
+#include "RightNormalCourse.h"
 
 using namespace ev3api;
 

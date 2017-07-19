@@ -33,11 +33,12 @@ void EtRobocon2017::loop()
 {
     SonarAlert sonarAlert( 4 );
     //LineTracer lineTracer;
-	NormalCourse normalCourse ;
+    LeftNormalCourse leftNormalCourse;
+    RightNormalCourse rightNormalCourse;
     Lifter lifter;
     Emoter emoter;
 
-	normalCourse.runNormalCourse () ;
+    leftNormalCourse.runNormalCourse();
     //lineTracer.runLine();
 }
 
