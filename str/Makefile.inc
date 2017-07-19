@@ -16,9 +16,13 @@ Emoter.o
 SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
+APPL_DIR += $(mkfile_path)apps/commons
 
 INCLUDES += \
 -I$(mkfile_path)apps
+
+INCLUDES += \
+-I$(mkfile_path)apps/commons
 
 
 ifdef CONFIG_EV3RT_APPLICATION
