@@ -1,10 +1,9 @@
 #include "SonarAlert.h"
 
-SonarAlert::SonarAlert( int secPerCycle ):
-    sonarSensor( PORT_3 )
+SonarAlert::SonarAlert( int secPerCycle )
 {
     timeCounter = 0;
-    // sonarSensor = new SonarSensor( PORT_3 );
+    sonarSensor = new SonarSensor( PORT_3 );
     this->secPerCycle = secPerCycle;
 }
 
