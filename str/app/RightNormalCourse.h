@@ -8,4 +8,6 @@ using namespace ev3api;
 class RightNormalCourse : public NormalCourse
 {
     
-}
+};
+
+#endif
