@@ -1,22 +1,22 @@
 /**
  * AddTest.cpp
- * ヘッダファイルは書かなくてもいいらしい
+ * �w�b�_�t�@�C���͏����Ȃ��Ă������炵��
  */
 
-// googletest/googletest/include内のディレクトリおよびファイルをインクルードする。
+// googletest/googletest/include���̃f�B���N�g������уt�@�C�����C���N���[�h����B
 #include <gtest/gtest.h>
 
-// なんかのテストコード
+// �Ȃ񂩂̃e�X�g�R�[�h
 int add( int x, int y )
 {
     return x + y;
 }
 
-// テストケース名とテスト内容を記述する。
-// テストケース名はこのテストクラス名、テスト内容は具体的なテストメソッド名を入れるといいかも。
+// �e�X�g�P�[�X���ƃe�X�g���e���L�q����B
+// �e�X�g�P�[�X���͂��̃e�X�g�N���X���A�e�X�g���e�͋�̓I�ȃe�X�g���\�b�h��������Ƃ��������B
 TEST( AddTest, get3add1and2 )
 {
-    // みんな大好きassertEqual文
-    // assertThat文に相当するものはないっぽいけど、ASSERT_EQ文でエラーが発生した時には、引数をコンソール上に表示してくれる完全上位互換
+    // �݂�ȑ�D��assertEqual��
+    // assertThat���ɑ���������̂͂Ȃ����ۂ����ǁAASSERT_EQ���ŃG���[�������������ɂ́A�������R���\�[����ɕ\�����Ă���銮�S��ʌ݊�
     ASSERT_EQ( add( 1, 2 ), 3 );
 }

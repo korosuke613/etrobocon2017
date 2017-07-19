@@ -2,5 +2,4 @@
 *.gch
 *.out
 *.exe
-.clang_complete
 googletest
