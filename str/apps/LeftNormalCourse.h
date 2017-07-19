@@ -5,8 +5,9 @@
 
 using namespace ev3api;
 
-class LeftNormalCourse : public NormalCourse
-{
+class LeftNormalCourse : public NormalCourse{
+public:
+   	void runNormalCourse ( void ) ;
     
 };
 
