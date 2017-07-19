@@ -7,6 +7,8 @@ SonarAlert.o \
 LineTracer.o \
 Pid.o \
 NormalCourse.o\
+LeftNormalCourse.o\
+RightNormalCourse.o\
 Walker.o \
 Lifter.o \
 Emoter.o
