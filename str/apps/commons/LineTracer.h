@@ -1,7 +1,7 @@
 #ifndef __LINETRACER__
 #define __LINETRACER__
 
-#include "pid.h"
+#include "Pid.h"
 #include "ColorSensor.h"
 #include "Walker.h"
 

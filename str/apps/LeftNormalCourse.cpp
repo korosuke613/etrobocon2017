@@ -38,7 +38,10 @@ void LeftNormalCourse::goCurveRight(int8_t forward_value){
 }
 
 void LeftNormalCourse::displayStatus(){
+        char msg[32];
         sprintf(distanse_message, "Distanse: %ld", distanse_total); 
         msg_f(distanse_message, 3);
         msg_f(status_message, 4);
+        sprintf(msg, "Distanse: %d", speedControl.getDistance4ms()); 
+        msg_f(msg, 5);
 }

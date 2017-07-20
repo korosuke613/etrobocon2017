@@ -2,6 +2,7 @@
 #define __LEFTNORMALCOURSE__
 
 #include "NormalCourse.h"
+#include "SpeedControl.h"
 
 using namespace ev3api;
 
@@ -21,6 +22,7 @@ private:
     void goCurveRight(int8_t forward_value);
     void statusCheck();
     void displayStatus();
+    SpeedControl speedControl;
     Status status;
     char status_message[32];
     char distanse_message[32];
