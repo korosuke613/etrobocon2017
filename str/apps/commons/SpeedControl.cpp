@@ -17,6 +17,8 @@ int32_t SpeedControl::calculateSpeedForPid() {
     //changePidGain(0.8, 1.2, 0.012, speed_value);
     pid.calculate(speed_value);
     double pid_value = - pid.get_output();
+    if(pid_value > 100.0) pid_value = 100.0;
+    if(pid_value < -100.0) pid_value = -100.0;
     return (int)pid_value;
 }
 
