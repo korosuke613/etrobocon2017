@@ -8,7 +8,7 @@ void LeftNormalCourse::runNormalCourse(void){
         statusCheck();
 		switch(status){
             case STRAIGHT: goStraight(50); break;
-            case CURVE_RIGHT: goCurveRight(20); break;
+            case CURVE_RIGHT: goCurveRight(30); break;
 
             default: goStraight(0);
         }
