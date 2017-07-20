@@ -5,10 +5,11 @@ LeftNormalCourse::LeftNormalCourse(){
 
 void LeftNormalCourse::runNormalCourse(void){
 	while ( 1 ) {
+        current_speed = speedControl.calculateSpeedForPid();
         statusCheck();
 		switch(status){
-            case STRAIGHT: goStraight(50); break;
-            case CURVE_RIGHT: goCurveRight(30); break;
+            case STRAIGHT: goStraight(current_speed); break;
+            case CURVE_RIGHT: goCurveRight(current_speed); break;
 
             default: goStraight(0);
         }
@@ -42,6 +43,8 @@ void LeftNormalCourse::displayStatus(){
         sprintf(distanse_message, "Distanse: %ld", distanse_total); 
         msg_f(distanse_message, 3);
         msg_f(status_message, 4);
-        sprintf(msg, "Distanse: %d", speedControl.getDistance4ms()); 
+        sprintf(msg, "Speed_cm/s: %d", speedControl.distance4ms * 15 / 10); 
         msg_f(msg, 5);
+        sprintf(msg, "Speed: %ld", current_speed); 
+        msg_f(msg, 6);
 }

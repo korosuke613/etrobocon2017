@@ -27,6 +27,7 @@ private:
     char status_message[32];
     char distanse_message[32];
     int32_t distanse_total;
+    int32_t current_speed;
 };
 
 #endif
