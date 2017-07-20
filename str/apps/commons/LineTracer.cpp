@@ -12,9 +12,11 @@ void LineTracer::runLine(){
     //{
     //    if (ev3_button_is_pressed(BACK_BUTTON)) break;
         turn = calculateTurnForPid( forward );
-
-        walker.run( forward, turn );
-
+        if(forward < 0){
+            walker.run(0, 0);
+        }else{
+            walker.run( forward, turn );
+        }
         tslp_tsk(4); // 4msec周期起動
     //}
 

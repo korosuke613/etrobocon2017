@@ -18,8 +18,8 @@ private:
         STRAIGHT,
         CURVE_RIGHT
     };
-    void goStraight(int8_t forward_value);
-    void goCurveRight(int8_t forward_value);
+    void goStraight(int32_t forward_value);
+    void goCurveRight(int32_t forward_value);
     void statusCheck();
     void displayStatus();
     SpeedControl speedControl;

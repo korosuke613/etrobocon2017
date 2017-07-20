@@ -26,13 +26,13 @@ void LeftNormalCourse::statusCheck(){
     else status = STRAIGHT;
 }
 
-void LeftNormalCourse::goStraight(int8_t forward_value){
+void LeftNormalCourse::goStraight(int32_t forward_value){
     lineTracer.setForward(forward_value);
     sprintf(status_message, "Status: %s", "STRAIGHT"); 
     lineTracer.changePidGain ( 0.5, 0.5, 0.012, 45.0 );
 }
 
-void LeftNormalCourse::goCurveRight(int8_t forward_value){
+void LeftNormalCourse::goCurveRight(int32_t forward_value){
     lineTracer.setForward(forward_value);
     sprintf(status_message, "Status: %s", "CURVE_RIGHT"); 
     lineTracer.changePidGain ( 0.8, 1.2, 0.012, 30.0 );

@@ -2,7 +2,9 @@
 
 SpeedControl::SpeedControl():
     //pid(0.36, 1.2, 0.027, 30.0), colorSensor( PORT_3 ){
-    pid(0.2, 0.5, 0.0, 50.0), forward(30){
+    pid(0.2, 0.5, 0.0, 30.0), forward(30){
+    
+    //150のときいい感じ pid(0.8, 1.2, 0.0, 30.0), forward(30){
 }
 
 void SpeedControl::setForward(int8_t setValue){
@@ -15,7 +17,6 @@ int32_t SpeedControl::calculateSpeedForPid() {
     //changePidGain(0.8, 1.2, 0.012, speed_value);
     pid.calculate(speed_value);
     double pid_value = - pid.get_output();
-
     return (int)pid_value;
 }
 
