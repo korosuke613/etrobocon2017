@@ -11,8 +11,6 @@ public:
     void setForward(int8_t setValue);
 	void changePidGain ( double p_gain, double i_gain, double d_gain, double target ) ;
     int8_t getDistance4ms();
-    int32_t getDistance60ms();
-    double getSpeed();
     int8_t distance4ms;
 
 private:
