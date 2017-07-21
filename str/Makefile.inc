@@ -10,6 +10,7 @@ NormalCourse.o \
 LeftNormalCourse.o \
 RightNormalCourse.o \
 SpeedControl.o \
+TurnControl.o \
 Walker.o \
 Lifter.o \
 Emoter.o
