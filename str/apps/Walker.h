@@ -21,7 +21,6 @@ public:
   void terminate();
   void reset();
   void setBrakeMotor(bool brake);
-  void free();
 
 private:
   Motor leftWheel;
