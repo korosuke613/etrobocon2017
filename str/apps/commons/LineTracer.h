@@ -2,6 +2,7 @@
 #define __LINETRACER__
 
 #include "TurnControl.h"
+#include "SpeedControl.h"
 #include "Walker.h"
 
 using namespace ev3api;
@@ -14,6 +15,7 @@ public:
     int32_t getCountL();
     int32_t getCountR();
     TurnControl turnControl;
+    SpeedControl speedControl;
     
 private:
     Walker walker;

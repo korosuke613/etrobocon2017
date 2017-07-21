@@ -5,7 +5,7 @@ LeftNormalCourse::LeftNormalCourse(){
 
 void LeftNormalCourse::runNormalCourse(void){
 	while ( 1 ) {
-        current_speed = speedControl.calculateSpeedForPid();
+        current_speed = lineTracer.speedControl.calculateSpeedForPid();
         statusCheck();
 		switch(status){
             case Status::STRAIGHT: goStraight(current_speed); break;
@@ -43,7 +43,7 @@ void LeftNormalCourse::displayStatus(){
         sprintf(distanse_message, "Distanse: %ld", distanse_total); 
         msg_f(distanse_message, 3);
         msg_f(status_message, 4);
-        sprintf(msg, "Speed_cm/s: %d", speedControl.distance4ms * 15 / 10); 
+        sprintf(msg, "Speed_cm/s: %d", lineTracer.speedControl.distance4ms * 15 / 10); 
         msg_f(msg, 5);
         sprintf(msg, "Speed: %ld", current_speed); 
         msg_f(msg, 6);
