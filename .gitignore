@@ -5,3 +5,6 @@
 googletest
 .vscode
 app
+.cproject
+.project
+*.csv
