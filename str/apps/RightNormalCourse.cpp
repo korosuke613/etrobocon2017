@@ -29,10 +29,10 @@ void RightNormalCourse::statusCheck(){
 
 void RightNormalCourse::goStraight(int8_t forward_value){
     lineTracer.setForward(forward_value);
-    lineTracer.turnControl.changePidGain ( 0.5, 0.5, 0.012, 45.0 );
+    lineTracer.turnControl.setPid ( 0.5, 0.5, 0.012, 45.0 );
 }
 
 void RightNormalCourse::goCurveRight(int8_t forward_value){
     lineTracer.setForward(forward_value);
-    lineTracer.turnControl.changePidGain ( 0.8, 1.2, 0.012, 30.0 );
+    lineTracer.turnControl.setPid ( 0.8, 1.2, 0.012, 30.0 );
 }

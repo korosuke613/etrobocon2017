@@ -4,17 +4,15 @@
 #include "Walker.h"
 #include "Pid.h"
 
-class SpeedControl {
+class SpeedControl: public Pid {
 public:
     SpeedControl();
     int32_t calculateSpeedForPid();
     void setForward(int8_t setValue);
-	void changePidGain ( double p_gain, double i_gain, double d_gain, double target ) ;
     int8_t getDistance4ms();
     int8_t distance4ms;
 
 private:
-    Pid pid;
     int32_t forward;
     int32_t preAngleL;
     int32_t preAngleR;
