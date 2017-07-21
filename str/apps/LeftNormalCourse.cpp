@@ -20,7 +20,7 @@ void LeftNormalCourse::runNormalCourse(void){
 }
 
 void LeftNormalCourse::statusCheck(){
-    distanse_total = getDistanceTotal();
+    distanse_total = distance.getDistanceTotal();
     if(distanse_total < 3240)status = Status::STRAIGHT;
     else if(distanse_total < 12000)status = Status::CURVE_RIGHT;
     else status = Status::STRAIGHT;
