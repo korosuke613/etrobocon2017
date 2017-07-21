@@ -2,7 +2,7 @@
 
 SpeedControl::SpeedControl():
     //pid(0.36, 1.2, 0.027, 30.0), colorSensor( PORT_3 ){
-    pid(0.2, 0.5, 0.0, 30.0), forward(30){
+    pid(0.2, 0.5, 0.0, 30.0), forward(30), preAngleL(0), preAngleR(0){
     
     //150のときいい感じ pid(0.8, 1.2, 0.0, 30.0), forward(30){
 }
@@ -45,13 +45,4 @@ int8_t SpeedControl::getDistance4ms(){
     distance4ms = (int)distance4msFloat;
     // 単位はmm
     return distance4ms;
-}
-
-int32_t SpeedControl::getDistance60ms(){
-    // 単位はmm
-    return distance4ms * 15;
-}
-
-double SpeedControl::getSpeed(){
-    return distance4ms / 4.0 * 1000;
 }
