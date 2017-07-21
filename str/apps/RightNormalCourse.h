@@ -17,8 +17,8 @@ public:
    	void runNormalCourse ( void ) ;
 
 private:
-    void goStraight(int32_t forward_value);
-    void goCurveRight(int32_t forward_value);
+    void goStraight(int8_t forward_value);
+    void goCurveRight(int8_t forward_value);
     void statusCheck();
     RightStatus status;
 };

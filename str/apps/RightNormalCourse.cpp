@@ -27,12 +27,12 @@ void RightNormalCourse::statusCheck(){
     else status = RightStatus::STRAIGHT;
 }
 
-void RightNormalCourse::goStraight(int32_t forward_value){
+void RightNormalCourse::goStraight(int8_t forward_value){
     lineTracer.setForward(forward_value);
     lineTracer.turnControl.changePidGain ( 0.5, 0.5, 0.012, 45.0 );
 }
 
-void RightNormalCourse::goCurveRight(int32_t forward_value){
+void RightNormalCourse::goCurveRight(int8_t forward_value){
     lineTracer.setForward(forward_value);
     lineTracer.turnControl.changePidGain ( 0.8, 1.2, 0.012, 30.0 );
 }
