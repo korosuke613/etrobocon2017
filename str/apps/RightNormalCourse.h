@@ -21,8 +21,6 @@ private:
     void goCurveRight(int32_t forward_value);
     void statusCheck();
     RightStatus status;
-    int32_t current_speed;
-    int32_t distanse_total;
 };
 
 #endif

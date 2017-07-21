@@ -13,6 +13,8 @@ public:
 protected:
 	LineTracer lineTracer;
 	Distance distance;
+	int8_t forward;
+    int32_t distanse_total;
 } ;
 
 #endif

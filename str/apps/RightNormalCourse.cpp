@@ -6,11 +6,11 @@ RightNormalCourse::RightNormalCourse(){
 
 void RightNormalCourse::runNormalCourse(void){
 	while ( 1 ) {
-        current_speed = lineTracer.speedControl.calculateSpeedForPid();
+        forward = lineTracer.speedControl.calculateSpeedForPid();
         statusCheck();
 		switch(status){
-            case RightStatus::STRAIGHT: goStraight(current_speed); break;
-            case RightStatus::CURVE_RIGHT: goCurveRight(current_speed); break;
+            case RightStatus::STRAIGHT: goStraight(forward); break;
+            case RightStatus::CURVE_RIGHT: goCurveRight(forward); break;
 
             default: goStraight(0);
         }
