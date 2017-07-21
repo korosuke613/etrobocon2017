@@ -14,7 +14,7 @@ public:
    	void runNormalCourse ( void ) ;
 
 private:
-    enum Status {
+    enum struct Status {
         STRAIGHT,
         CURVE_RIGHT
     };

@@ -8,8 +8,8 @@ void LeftNormalCourse::runNormalCourse(void){
         current_speed = speedControl.calculateSpeedForPid();
         statusCheck();
 		switch(status){
-            case STRAIGHT: goStraight(current_speed); break;
-            case CURVE_RIGHT: goCurveRight(current_speed); break;
+            case Status::STRAIGHT: goStraight(current_speed); break;
+            case Status::CURVE_RIGHT: goCurveRight(current_speed); break;
 
             default: goStraight(0);
         }
@@ -21,9 +21,9 @@ void LeftNormalCourse::runNormalCourse(void){
 
 void LeftNormalCourse::statusCheck(){
     distanse_total = getDistanceTotal();
-    if(distanse_total < 3240)status = STRAIGHT;
-    else if(distanse_total < 12000)status = CURVE_RIGHT;
-    else status = STRAIGHT;
+    if(distanse_total < 3240)status = Status::STRAIGHT;
+    else if(distanse_total < 12000)status = Status::CURVE_RIGHT;
+    else status = Status::STRAIGHT;
 }
 
 void LeftNormalCourse::goStraight(int32_t forward_value){
