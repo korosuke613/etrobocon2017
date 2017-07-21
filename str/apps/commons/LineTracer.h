@@ -14,7 +14,9 @@ public:
     int8_t calculateTurnForPid( int8_t forward );
     void setForward(int8_t setValue);
 	void changePidGain ( double p_gain, double i_gain, double d_gain, double target ) ;
-
+    int32_t getCountL();
+    int32_t getCountR();
+    
 private:
     Pid pid;
     ColorSensor colorSensor;
