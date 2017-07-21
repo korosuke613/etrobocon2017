@@ -2,7 +2,7 @@
 
 SpeedControl::SpeedControl():
     //pid(0.36, 1.2, 0.027, 30.0), colorSensor( PORT_3 ){
-    pid(0.2, 0.5, 0.0, 30.0), forward(30)、preAngleL(0), preAngleR(0){
+    pid(0.2, 0.5, 0.0, 30.0), forward(30), preAngleL(0), preAngleR(0){
     
     //150のときいい感じ pid(0.8, 1.2, 0.0, 30.0), forward(30){
 }
