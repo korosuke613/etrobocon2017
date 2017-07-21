@@ -5,7 +5,7 @@
 
 using namespace ev3api;
 
-enum struct Status {
+enum struct LeftStatus {
     STRAIGHT,
     CURVE_RIGHT,
     STOP
@@ -20,7 +20,7 @@ private:
     void goStraight(int32_t forward_value);
     void goCurveRight(int32_t forward_value);
     void statusCheck();
-    Status status;
+    LeftStatus status;
     int32_t current_speed;
     int32_t distanse_total;
 };

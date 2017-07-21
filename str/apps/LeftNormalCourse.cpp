@@ -1,7 +1,7 @@
 #include "LeftNormalCourse.h"
 
 LeftNormalCourse::LeftNormalCourse(){
-    lineTracer.isLeftsideLine(false);
+    lineTracer.isLeftsideLine(true);
 }
 
 void LeftNormalCourse::runNormalCourse(void){
@@ -9,8 +9,8 @@ void LeftNormalCourse::runNormalCourse(void){
         current_speed = lineTracer.speedControl.calculateSpeedForPid();
         statusCheck();
 		switch(status){
-            case Status::STRAIGHT: goStraight(current_speed); break;
-            case Status::CURVE_RIGHT: goCurveRight(current_speed); break;
+            case LeftStatus::STRAIGHT: goStraight(current_speed); break;
+            case LeftStatus::CURVE_RIGHT: goCurveRight(current_speed); break;
 
             default: goStraight(0);
         }
@@ -21,10 +21,10 @@ void LeftNormalCourse::runNormalCourse(void){
 
 void LeftNormalCourse::statusCheck(){
     distanse_total = distance.getDistanceTotal();
-    if(distanse_total < 3240)status = Status::STRAIGHT;
-    else if(distanse_total < 10000)status = Status::CURVE_RIGHT;
-    else if(distanse_total < 12000)status = Status::STRAIGHT;
-    else status = Status::STRAIGHT;
+    if(distanse_total < 3240)status = LeftStatus::STRAIGHT;
+    else if(distanse_total < 10000)status = LeftStatus::CURVE_RIGHT;
+    else if(distanse_total < 12000)status = LeftStatus::STRAIGHT;
+    else status = LeftStatus::STRAIGHT;
 }
 
 void LeftNormalCourse::goStraight(int32_t forward_value){
