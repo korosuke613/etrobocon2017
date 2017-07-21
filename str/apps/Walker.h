@@ -20,6 +20,7 @@ public:
   void init();
   void terminate();
   void reset();
+  void setBrakeMotor(bool brake);
 
 private:
   Motor leftWheel;

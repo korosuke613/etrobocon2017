@@ -30,12 +30,19 @@ void Walker::stop() {
 
 void Walker::run(int8_t pwm, int8_t turn) {
     msg_f("running...", 1);
-
+    setBrakeMotor(false);
     /* left = p-t, right = p+t -> 右 */
     /* left = p+t, right = p-t -> 左 */
     // pwmは int型の -100 ~ 100
     leftWheel.setPWM(pwm - turn);
     rightWheel.setPWM(pwm + turn);
+}
+
+void Walker::setBrakeMotor(bool brake){
+    //0でフロート
+    //1でブレーク
+    leftWheel.setBrake(brake);
+    rightWheel.setBrake(brake);
 }
 
 int32_t Walker::get_count_L() {

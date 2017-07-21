@@ -38,8 +38,11 @@ void EtRobocon2017::loop()
     Lifter lifter;
     Emoter emoter;
 
+    // 左レーン時
     leftNormalCourse.runNormalCourse();
-    //lineTracer.runLine();
+    
+    // 右レーン時
+    //rightNormalCourse.runNormalCourse();
 }
 
 void EtRobocon2017::waitStarter( int bluetooth_command )
