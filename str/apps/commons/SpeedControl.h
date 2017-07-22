@@ -8,18 +8,18 @@ class SpeedControl: public Pid {
 public:
     SpeedControl();
     int32_t calculateSpeedForPid();
-    void setForward(int8_t setValue);
     int8_t getDistance4ms();
     int8_t distance4ms;
-    int16_t speed_value4_5;
+    int16_t speed_value_all;
 
 private:
-    int32_t forward;
+    double forward;
     int32_t preAngleL;
     int32_t preAngleR;
 	Walker walker;
-    int16_t speed_value[5];
+    int16_t speed_value[25];
     uint8_t speedCount;
+    double pid_value_old;
 };
 
 

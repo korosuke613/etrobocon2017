@@ -32,11 +32,12 @@ void RightNormalCourse::runNormalCourse(void){
 		lineTracer.runLine();
 		if (ev3_button_is_pressed(BACK_BUTTON)) break;
         if (status == RightStatus::STOP) break;
-        fprintf(fp, "%d, %d, %d, %d\n",
+        fprintf(fp, "%d, %d, %d, %d, %d\n",
         lineTracer.turnControl.getBrightness(),
-        lineTracer.speedControl.speed_value4_5, 
+        lineTracer.speedControl.speed_value_all, 
         forward,
-        lineTracer.turn
+        lineTracer.turn,
+        (int)lineTracer.speedControl.get_output()
         );
 	}
 
@@ -53,10 +54,10 @@ void RightNormalCourse::statusCheck(){
 
 void RightNormalCourse::goStraight(int8_t forward_value){
     lineTracer.setForward(forward_value);
-    lineTracer.speedControl.setPid ( 5.0, 0.5, 0.024, 30.0 );
+    lineTracer.speedControl.setPid ( 2.0, 4.8, 0.024, 150.0 );
     lineTracer.turnControl.setPid ( 2.0, 0.5, 0.024, 40.0 );
     char msg[32];
-    sprintf(msg, "Speed_cm/s: %d", lineTracer.speedControl.speed_value4_5); 
+    sprintf(msg, "Speed_cm/s: %d", lineTracer.speedControl.speed_value_all); 
     msg_f(msg, 4);
 }
 
@@ -65,7 +66,7 @@ void RightNormalCourse::goCurveRight(int8_t forward_value){
     lineTracer.speedControl.setPid ( 5.0, 0.5, 0.0, 150.0 );
     lineTracer.turnControl.setPid ( 2.0, 0.5, 0.024, 40.0 );
     char msg[32];
-    sprintf(msg, "Speed_cm/s: %d", lineTracer.speedControl.speed_value4_5); 
+    sprintf(msg, "Speed_cm/s: %d", lineTracer.speedControl.speed_value_all); 
     msg_f(msg, 4);
 }
 
