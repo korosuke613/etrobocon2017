@@ -13,6 +13,8 @@ public:
     int8_t getBrightness();
 private:
     ColorSensor colorSensor;
+    double turn;
+    double pid_value_old;
 };
 
 #endif
