@@ -1,8 +1,8 @@
 #ifndef __LINETRACER__
 #define __LINETRACER__
 
-#include "Pid.h"
-#include "ColorSensor.h"
+#include "TurnControl.h"
+#include "SpeedControl.h"
 #include "Walker.h"
 
 using namespace ev3api;
@@ -11,15 +11,18 @@ class LineTracer {
 public:
     LineTracer();
     void runLine();
-    int8_t calculateTurnForPid( int8_t forward );
     void setForward(int8_t setValue);
-	void changePidGain ( double p_gain, double i_gain, double d_gain, double target ) ;
-
+    int32_t getCountL();
+    int32_t getCountR();
+    void isLeftsideLine(bool b);
+    TurnControl turnControl;
+    SpeedControl speedControl;
+    int8_t turn;
+    
 private:
-    Pid pid;
-    ColorSensor colorSensor;
     Walker walker;
     int8_t forward;
+    int8_t minus;
 };
 
 

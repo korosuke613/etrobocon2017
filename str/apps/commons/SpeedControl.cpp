@@ -2,26 +2,25 @@
 
 SpeedControl::SpeedControl():
     //pid(0.36, 1.2, 0.027, 30.0), colorSensor( PORT_3 ){
-    pid(0.2, 0.5, 0.0, 30.0), forward(30){
-    
+    Pid(0.2, 0.5, 0.0, 30.0), forward(0), preAngleL(0), preAngleR(0){
+    for(int i=0; i<25; i++)speed_value[i] = 0;
+    speedCount = 0;
+    speed_value_all = 0;
+    pid_value_old = 0.0;
     //150のときいい感じ pid(0.8, 1.2, 0.0, 30.0), forward(30){
 }
 
-void SpeedControl::setForward(int8_t setValue){
-    forward = setValue;
-}
-
 int32_t SpeedControl::calculateSpeedForPid() {
-    double speed_value = getDistance4ms();
-    speed_value = speed_value * 15.0 / 10.0;
-    //changePidGain(0.8, 1.2, 0.012, speed_value);
-    pid.calculate(speed_value);
-    double pid_value = - pid.get_output();
-    return (int)pid_value;
-}
-
-void SpeedControl::changePidGain ( double p_gain, double i_gain, double d_gain, double target ) {
-	pid.setPid( p_gain, i_gain, d_gain, target );
+    int8_t speed_value_thistime = getDistance4ms();
+    speed_value_all += (speed_value_thistime - speed_value[ speedCount ]);
+    speed_value[ speedCount ] = speed_value_thistime;
+    calculate((double)speed_value_all);
+    double pid_value = - get_output();
+    speedCount++;
+    if( speedCount >= 25 ) speedCount = 0;
+    forward += (pid_value - pid_value_old) / 10; 
+    pid_value_old = pid_value;
+    return (int)limitOutput(forward);
 }
 
 /* 距離更新（4ms間の移動距離を毎回加算している） */
@@ -43,13 +42,4 @@ int8_t SpeedControl::getDistance4ms(){
     distance4ms = (int)distance4msFloat;
     // 単位はmm
     return distance4ms;
-}
-
-int32_t SpeedControl::getDistance60ms(){
-    // 単位はmm
-    return distance4ms * 15;
-}
-
-double SpeedControl::getSpeed(){
-    return distance4ms / 4.0 * 1000;
 }
