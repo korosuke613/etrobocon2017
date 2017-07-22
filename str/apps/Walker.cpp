@@ -45,12 +45,6 @@ void Walker::setBrakeMotor(bool brake){
     rightWheel.setBrake(brake);
 }
 
-void Walker::free(){
-    setBrakeMotor(false);
-    leftWheel.setPWM(0);
-    rightWheel.setPWM(0);
-}
-
 int32_t Walker::get_count_L() {
     return leftWheel.getCount();
 }
