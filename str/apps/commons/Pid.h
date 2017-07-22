@@ -25,7 +25,7 @@ public:
   double get_output();
 
 protected:
-    double remitOutput(double pid_value);
+    double limitOutput(double pid_value);
 
 private:
   void wrapper_of_constructor(double _p_gain,double _i_gain,double _d_gain,

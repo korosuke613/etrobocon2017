@@ -68,7 +68,7 @@ void Pid::setTarget(double _target) {
     wrapper_of_constructor(p_gain, i_gain, d_gain, 0, 0, _target, 0);
 }
 
-double Pid::remitOutput(double pid_value){
+double Pid::limitOutput(double pid_value){
     if(pid_value > 100.0) return 100.0;
     if(pid_value < -100.0) return -100.0;
     return pid_value;
