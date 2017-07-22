@@ -9,6 +9,7 @@ enum struct RightStatus {
     STRAIGHT,
     CURVE_RIGHT,
     CURVE_LEFT,
+    CURVE_LEFT_SHORT,
     STOP
 };
 
@@ -21,6 +22,7 @@ private:
     void goStraight(int8_t forward_value);
     void goCurveRight(int8_t forward_value);
     void goCurveLeft(int8_t forward_value);
+    void goCurveLeftShort(int8_t forward_value);
     void stop();
     void statusCheck();
     RightStatus status;

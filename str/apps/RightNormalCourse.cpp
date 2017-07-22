@@ -25,6 +25,7 @@ void RightNormalCourse::runNormalCourse(void){
 		switch(status){
             case RightStatus::STRAIGHT: goStraight(forward); break;
             case RightStatus::CURVE_RIGHT: goCurveRight(forward); break;
+            case RightStatus::CURVE_LEFT_SHORT: goCurveLeftShort(forward); break;
             case RightStatus::CURVE_LEFT: goCurveLeft(forward); break;
             case RightStatus::STOP: stop(); break;
 
@@ -50,7 +51,8 @@ void RightNormalCourse::statusCheck(){
     distanse_total = distance.getDistanceTotal();
     if(distanse_total < 3240)status = RightStatus::STRAIGHT;
     else if(distanse_total < 7500)status = RightStatus::CURVE_RIGHT;
-    else if(distanse_total < 12000)status = RightStatus::CURVE_LEFT;
+    else if(distanse_total < 9200)status = RightStatus::CURVE_LEFT_SHORT;
+    else if(distanse_total < 12500)status = RightStatus::CURVE_LEFT;
     else if(distanse_total < 20000)status = RightStatus::STRAIGHT;
     else status = RightStatus::STOP;
 }
@@ -73,9 +75,18 @@ void RightNormalCourse::goCurveRight(int8_t forward_value){
     msg_f(msg, 4);
 }
 
+void RightNormalCourse::goCurveLeftShort(int8_t forward_value){
+    lineTracer.setForward(forward_value);
+    lineTracer.speedControl.setPid ( 4.0, 0.8, 0.1, 130.0 );
+    lineTracer.turnControl.setPid ( 2.0, 0.5, 0.048, 35.0 );
+    char msg[32];
+    sprintf(msg, "Speed_cm/s: %d", lineTracer.speedControl.speed_value_all); 
+    msg_f(msg, 4);
+}
+
 void RightNormalCourse::goCurveLeft(int8_t forward_value){
     lineTracer.setForward(forward_value);
-    lineTracer.speedControl.setPid ( 2.0, 4.8, 0.024, 70.0 );
+    lineTracer.speedControl.setPid ( 4.0, 0.8, 0.1, 100.0 );
     lineTracer.turnControl.setPid ( 4.0, 2.0, 0.096, 35.0 );
     char msg[32];
     sprintf(msg, "Speed_cm/s: %d", lineTracer.speedControl.speed_value_all); 
