@@ -16,7 +16,7 @@ int32_t SpeedControl::calculateSpeedForPid() {
     speed_value = speed_value * 15.0 / 10.0;
     //changePidGain(0.8, 1.2, 0.012, speed_value);
     calculate(speed_value);
-    double pid_value = - remitOutput(get_output());
+    double pid_value = - limitOutput(get_output());
     return (int)pid_value;
 }
 

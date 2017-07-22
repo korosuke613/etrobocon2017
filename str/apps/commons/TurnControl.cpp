@@ -8,7 +8,7 @@ TurnControl::TurnControl():
 int8_t TurnControl::calculateTurnForPid( int8_t forward ) {
     double light_value = colorSensor.getBrightness();
     calculate(light_value);
-    double pid_value = remitOutput(get_output());
+    double pid_value = limitOutput(get_output());
     double forward_percent = ((double)forward) / 100.0;
     int8_t output = (int8_t)(pid_value * forward_percent);
 
