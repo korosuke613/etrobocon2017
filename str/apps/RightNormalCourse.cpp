@@ -2,6 +2,8 @@
 
 RightNormalCourse::RightNormalCourse(){
     lineTracer.isLeftsideLine(false);
+    old_status = RightStatus::STRAIGHT;
+    ev3_speaker_set_volume(100);
     FILE *fp;
 
     if ((fp = fopen("test.csv", "w")) == NULL) {
@@ -52,9 +54,12 @@ void RightNormalCourse::statusCheck(){
     if(distanse_total < 3240)status = RightStatus::STRAIGHT;
     else if(distanse_total < 7500)status = RightStatus::CURVE_RIGHT;
     else if(distanse_total < 9200)status = RightStatus::CURVE_LEFT_SHORT;
-    else if(distanse_total < 12500)status = RightStatus::CURVE_LEFT;
-    else if(distanse_total < 20000)status = RightStatus::STRAIGHT;
+    else if(distanse_total < 10800)status = RightStatus::CURVE_LEFT;
+    else if(distanse_total < 12800)status = RightStatus::CURVE_RIGHT;
+    else if(distanse_total < 15000)status = RightStatus::STRAIGHT;
     else status = RightStatus::STOP;
+    if(old_status != status) ev3_speaker_play_tone (NOTE_FS6, 100);
+    old_status = status;
 }
 
 void RightNormalCourse::goStraight(int8_t forward_value){

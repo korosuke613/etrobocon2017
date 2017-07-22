@@ -26,6 +26,7 @@ private:
     void stop();
     void statusCheck();
     RightStatus status;
+    RightStatus old_status;
 };
 
 #endif
