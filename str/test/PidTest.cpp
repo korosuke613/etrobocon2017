@@ -3,7 +3,7 @@
  */
 
 /* コンパイル(平木場) 
-$ g++ -w ../apps/commons/Pid.cpp PidTest.cpp gtest_main.o gtest-all.o -I. -I.. -I../googletest/googletest/include
+$ g++-7 -w ../apps/commons/Pid.cpp PidTest.cpp gtest_main.o gtest-all.o -I. -I.. -I../googletest/googletest/include
 $ ./a.out
 */
 
