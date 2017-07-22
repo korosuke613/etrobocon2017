@@ -23,6 +23,10 @@ public:
   void setTarget(double _target);
   void calculate(double light_value);
   double get_output();
+
+protected:
+    double limitOutput(double pid_value);
+
 private:
   void wrapper_of_constructor(double _p_gain,double _i_gain,double _d_gain,
 			      double _diff, double _integral,
