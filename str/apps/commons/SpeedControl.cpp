@@ -2,7 +2,7 @@
 
 SpeedControl::SpeedControl():
     //pid(0.36, 1.2, 0.027, 30.0), colorSensor( PORT_3 ){
-    pid(0.2, 0.5, 0.0, 30.0), forward(30), preAngleL(0), preAngleR(0){
+    Pid(0.2, 0.5, 0.0, 30.0), forward(30), preAngleL(0), preAngleR(0){
     
     //150のときいい感じ pid(0.8, 1.2, 0.0, 30.0), forward(30){
 }
@@ -15,15 +15,11 @@ int32_t SpeedControl::calculateSpeedForPid() {
     double speed_value = getDistance4ms();
     speed_value = speed_value * 15.0 / 10.0;
     //changePidGain(0.8, 1.2, 0.012, speed_value);
-    pid.calculate(speed_value);
-    double pid_value = - pid.get_output();
+    calculate(speed_value);
+    double pid_value = - get_output();
     if(pid_value > 100.0) pid_value = 100.0;
     if(pid_value < -100.0) pid_value = -100.0;
     return (int)pid_value;
-}
-
-void SpeedControl::changePidGain ( double p_gain, double i_gain, double d_gain, double target ) {
-	pid.setPid( p_gain, i_gain, d_gain, target );
 }
 
 /* 距離更新（4ms間の移動距離を毎回加算している） */
