@@ -5,8 +5,6 @@ LineTracer::LineTracer():
 }
 
 void LineTracer::runLine(){
-    int8_t turn;
-
     turn = turnControl.calculateTurnForPid( forward );
     if(forward < 0){
         walker.run(0, 0);

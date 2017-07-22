@@ -10,7 +10,7 @@ class TurnControl: public Pid{
 public:
     TurnControl();
     int8_t calculateTurnForPid( int8_t forward );
-
+    int8_t getBrightness();
 private:
     ColorSensor colorSensor;
 };

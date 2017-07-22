@@ -3,7 +3,8 @@
 SpeedControl::SpeedControl():
     //pid(0.36, 1.2, 0.027, 30.0), colorSensor( PORT_3 ){
     Pid(0.2, 0.5, 0.0, 30.0), forward(30), preAngleL(0), preAngleR(0){
-    
+    for(int i=0; i<5; i++)speed_value[i] = 0;
+    speedCount = 0;
     //150のときいい感じ pid(0.8, 1.2, 0.0, 30.0), forward(30){
 }
 
@@ -12,11 +13,15 @@ void SpeedControl::setForward(int8_t setValue){
 }
 
 int32_t SpeedControl::calculateSpeedForPid() {
-    double speed_value = getDistance4ms();
-    speed_value = speed_value * 15.0 / 10.0;
-    //changePidGain(0.8, 1.2, 0.012, speed_value);
-    calculate(speed_value);
+    speed_value[ speedCount ] = getDistance4ms();
+    speed_value4_5 = 0;
+    for( int16_t value : speed_value ) {
+        speed_value4_5 += value;
+    }
+    calculate((double)speed_value4_5);
     double pid_value = - limitOutput(get_output());
+    speedCount++;
+    if( speedCount >= 5 ) speedCount = 0;
     return (int)pid_value;
 }
 

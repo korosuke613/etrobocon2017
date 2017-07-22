@@ -19,6 +19,7 @@ public:
 private:
     void goStraight(int8_t forward_value);
     void goCurveRight(int8_t forward_value);
+    void stop();
     void statusCheck();
     RightStatus status;
 };
