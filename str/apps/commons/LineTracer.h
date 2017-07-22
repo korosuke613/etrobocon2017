@@ -17,6 +17,7 @@ public:
     void isLeftsideLine(bool b);
     TurnControl turnControl;
     SpeedControl speedControl;
+    int8_t turn;
     
 private:
     Walker walker;
