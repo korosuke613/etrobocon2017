@@ -1,0 +1,26 @@
+var class_self_localization =
+[
+    [ "SelfLocalization", "d4/ddb/class_self_localization.html#ae98c39e95c6c75e4e9eb3eed63418baf", null ],
+    [ "approached_target_coordinates", "d4/ddb/class_self_localization.html#a5342ae84d0d93a09a4f755ba618789a6", null ],
+    [ "set_target_coordinates", "d4/ddb/class_self_localization.html#a975edb862d79e6372075e342d8b9bc7d", null ],
+    [ "update", "d4/ddb/class_self_localization.html#a6f876c3f65941a1e3cf33e20d2af49ad", null ],
+    [ "writing_current_coordinates", "d4/ddb/class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd", null ],
+    [ "between_wheels", "d4/ddb/class_self_localization.html#a4132e0abace4a3c3ba3b2b3b88555812", null ],
+    [ "current_angle", "d4/ddb/class_self_localization.html#a25ec9c5d68a71dbfe137e1301c4a0353", null ],
+    [ "current_x", "d4/ddb/class_self_localization.html#a91d80a11f62795a501b96e46f447bb08", null ],
+    [ "current_y", "d4/ddb/class_self_localization.html#afe2332c94b3839fd1e6b6c8a193ee2a2", null ],
+    [ "left_motor_current_angle", "d4/ddb/class_self_localization.html#a073a3bcd7bbbcfa5431e2c7383b50fb9", null ],
+    [ "left_motor_old_angle", "d4/ddb/class_self_localization.html#a6f960bd73aafee308d9cfed9b61d163f", null ],
+    [ "left_motor_rotation_angle", "d4/ddb/class_self_localization.html#aa040afaa7b8691d35ed442ba4cb564ef", null ],
+    [ "left_wheel_moving_distance", "d4/ddb/class_self_localization.html#a80cda5126d2d7133afe2525b12f73573", null ],
+    [ "moving_distance", "d4/ddb/class_self_localization.html#add0a0afbef89523eaed94c247d0f4d56", null ],
+    [ "old_angle", "d4/ddb/class_self_localization.html#af6bf5ef48fe3f0a0d9b3e1f274a2f69b", null ],
+    [ "old_x", "d4/ddb/class_self_localization.html#a2ab03129499ff500649c4071fa2c2cb0", null ],
+    [ "old_y", "d4/ddb/class_self_localization.html#ac8bad2b9cc1c8138a6585d13ae779434", null ],
+    [ "right_motor_current_angle", "d4/ddb/class_self_localization.html#ae2f69ed526e9f4185cf5ded506386410", null ],
+    [ "right_motor_old_angle", "d4/ddb/class_self_localization.html#a164df28911bf46e69e963745a7fbaf22", null ],
+    [ "right_motor_rotation_angle", "d4/ddb/class_self_localization.html#afd2f7f9198b2dc21fe212ef7372476e4", null ],
+    [ "right_wheel_moving_distance", "d4/ddb/class_self_localization.html#ae061b32ad42879677056a3a64b38b644", null ],
+    [ "turning_angle", "d4/ddb/class_self_localization.html#aa0be3199e2ad39a9e06292e63cdea5f7", null ],
+    [ "wheel_across", "d4/ddb/class_self_localization.html#a97fd4d363b59842437fbcb0987e6c4a8", null ]
+];

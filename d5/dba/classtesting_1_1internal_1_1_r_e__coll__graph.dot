@@ -1,0 +1,6 @@
+digraph "testing::internal::RE"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{testing::internal::RE\n|- pattern_\l- is_valid_\l- full_regex_\l- partial_regex_\l|+ RE()\l+ RE()\l+ RE()\l+ ~RE()\l+ pattern()\l+ FullMatch()\l+ PartialMatch()\l+ FullMatch()\l+ PartialMatch()\l- Init()\l- GTEST_DISALLOW_ASSIGN_()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

@@ -1,0 +1,11 @@
+digraph "クラス階層図"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node178 [label="TestCase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node178 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="gmock_leak_test.GMockLeakTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d3c/classgmock__leak__test_1_1_g_mock_leak_test.html"];
+  Node178 -> Node180 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node180 [label="gmock_output_test.GMockOutputTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d09/classgmock__output__test_1_1_g_mock_output_test.html"];
+}

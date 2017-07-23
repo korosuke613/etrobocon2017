@@ -1,0 +1,11 @@
+digraph "Painter::~Painter"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="Painter::~Painter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Painter::DrawCircle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d30/class_painter.html#a0dd74a75b47da1afe5cb55b8a6ebcdb0"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Turtle::PenDown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/de7/class_turtle.html#aac8729a51896a3d27149013d7be39108"];
+}

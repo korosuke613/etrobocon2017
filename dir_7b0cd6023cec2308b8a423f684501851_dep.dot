@@ -1,0 +1,14 @@
+digraph "str/googletest/googletest/include/gtest/internal" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_1830aa4b6f7ea385f9211a7226a92bb3 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="gtest" fontname="Helvetica", fontsize="10", URL="dir_1830aa4b6f7ea385f9211a7226a92bb3.html"]
+  subgraph clusterdir_7b0cd6023cec2308b8a423f684501851 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_7b0cd6023cec2308b8a423f684501851.html"];
+    dir_7b0cd6023cec2308b8a423f684501851 [shape=plaintext label="internal"];
+    dir_46cf801b385a80dca928b8db3cc4a6b2 [shape=box label="custom" color="black" fillcolor="white" style="filled" URL="dir_46cf801b385a80dca928b8db3cc4a6b2.html"];
+  }
+  }
+  dir_7b0cd6023cec2308b8a423f684501851->dir_46cf801b385a80dca928b8db3cc4a6b2 [headlabel="1", labeldistance=1.5 headhref="dir_000024_000025.html"];
+}

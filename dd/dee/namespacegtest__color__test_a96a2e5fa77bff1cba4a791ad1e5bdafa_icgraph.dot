@@ -1,0 +1,17 @@
+digraph "gtest_color_test.UsesColor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10 [label="gtest_color_test.UsesColor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="gtest_color_test.GTestColor\lTest.testNoEnvVarNoFlag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d26/classgtest__color__test_1_1_g_test_color_test.html#a22bf83ab416dc3ccd3c1b771ff74022c"];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="gtest_color_test.GTestColor\lTest.testFlagOnly",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d26/classgtest__color__test_1_1_g_test_color_test.html#abc4c056b8e703e83516f9e5aea8dd25d"];
+  Node10 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="gtest_color_test.GTestColor\lTest.testEnvVarOnly",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d26/classgtest__color__test_1_1_g_test_color_test.html#aedb7bbaa0d6acff3628d91a471f4ceb5"];
+  Node10 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="gtest_color_test.GTestColor\lTest.testEnvVarAndFlag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d26/classgtest__color__test_1_1_g_test_color_test.html#ae88e8ec526135ed1448e83fc4ec7cd15"];
+  Node10 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="gtest_color_test.GTestColor\lTest.testAliasesOfYesAndNo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d26/classgtest__color__test_1_1_g_test_color_test.html#aaf2110e359494dc711e87d29d351dc47"];
+}

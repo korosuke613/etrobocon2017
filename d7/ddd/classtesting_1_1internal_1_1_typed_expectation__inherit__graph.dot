@@ -1,0 +1,8 @@
+digraph "testing::internal::TypedExpectation&lt; F &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="{testing::internal::\lTypedExpectation\< F \>\n|- owner_\l- matchers_\l- extra_matcher_\l- repeated_action_\l|+ TypedExpectation()\l+ ~TypedExpectation()\l+ With()\l+ Times()\l+ Times()\l+ InSequence()\l+ InSequence()\l+ InSequence()\l+ InSequence()\l+ InSequence()\lほか 12 件…\l- GetHandle()\l- Matches()\l- ShouldHandleArguments()\l- ExplainMatchResultTo()\l- GetCurrentAction()\l- GetActionForArguments()\l- GTEST_DISALLOW_COPY\l_AND_ASSIGN_()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node1 [label="{testing::internal::\lExpectationBase\n|# file_\l# line_\l# source_text_\l# cardinality_specified_\l# cardinality_\l# immediate_prerequisites_\l# call_count_\l# retired_\l# untyped_actions_\l# extra_matcher_specified_\l# repeated_action_specified_\l# retires_on_saturation_\l# last_clause_\l# action_count_checked_\l# mutex_\l|+ ExpectationBase()\l+ ~ExpectationBase()\l+ file()\l+ line()\l+ source_text()\l+ cardinality()\l+ DescribeLocationTo()\l+ DescribeCallCountTo()\l+ MaybeDescribeExtraMatcherTo()\l# GetHandle()\l# AssertSpecProperty()\l# ExpectSpecProperty()\l# SpecifyCardinality()\l# cardinality_specified()\l# set_cardinality()\l# RetireAllPreRequisites()\l# is_retired()\l# Retire()\l# IsSatisfied()\lほか 9 件…\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html"];
+}

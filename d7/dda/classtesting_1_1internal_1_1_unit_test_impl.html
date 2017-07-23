@@ -1,0 +1,2521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017: testing::internal::UnitTestImpl クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../df/da2/classtesting_1_1internal_1_1_unit_test_impl-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">testing::internal::UnitTestImpl クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a>&gt;</code></p>
+<div class="dynheader">
+testing::internal::UnitTestImpl 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/dee/classtesting_1_1internal_1_1_unit_test_impl__coll__graph.png" border="0" usemap="#testing_1_1internal_1_1_unit_test_impl_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:acc5ffd3f9bc2e87bb3dba4218f58af43"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#acc5ffd3f9bc2e87bb3dba4218f58af43">ReactionToSharding</a> { <a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#acc5ffd3f9bc2e87bb3dba4218f58af43abec11f1c4bb8a3e2b99fa8328bccd58c">HONOR_SHARDING_PROTOCOL</a>, 
+<a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#acc5ffd3f9bc2e87bb3dba4218f58af43a68bd0b7e6a7bead14c93d1a42144095a">IGNORE_SHARDING_PROTOCOL</a>
+ }</td></tr>
+<tr class="separator:acc5ffd3f9bc2e87bb3dba4218f58af43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a5fb75faa88ee71f26e16473455b70839"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a5fb75faa88ee71f26e16473455b70839">UnitTestImpl</a> (<a class="el" href="../../d7/d47/classtesting_1_1_unit_test.html">UnitTest</a> *parent)</td></tr>
+<tr class="separator:a5fb75faa88ee71f26e16473455b70839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8bfe40adf9772237ea51299af113575"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ae8bfe40adf9772237ea51299af113575">~UnitTestImpl</a> ()</td></tr>
+<tr class="separator:ae8bfe40adf9772237ea51299af113575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd291fd6751654924362164735d4b49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a1cd291fd6751654924362164735d4b49">GetGlobalTestPartResultReporter</a> ()</td></tr>
+<tr class="separator:a1cd291fd6751654924362164735d4b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892b0e25b28af5e4400cf6fac336f2d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a892b0e25b28af5e4400cf6fac336f2d8">SetGlobalTestPartResultReporter</a> (<a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a> *reporter)</td></tr>
+<tr class="separator:a892b0e25b28af5e4400cf6fac336f2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb3dd8bc839e10b62eba07790704132"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a5fb3dd8bc839e10b62eba07790704132">GetTestPartResultReporterForCurrentThread</a> ()</td></tr>
+<tr class="separator:a5fb3dd8bc839e10b62eba07790704132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1403fc10aebcc64479c5ee980c9b4eb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a1403fc10aebcc64479c5ee980c9b4eb4">SetTestPartResultReporterForCurrentThread</a> (<a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a> *reporter)</td></tr>
+<tr class="separator:a1403fc10aebcc64479c5ee980c9b4eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2db3a2b3fed8065dbdd768ee407bf67e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a2db3a2b3fed8065dbdd768ee407bf67e">successful_test_case_count</a> () const</td></tr>
+<tr class="separator:a2db3a2b3fed8065dbdd768ee407bf67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af981a537231e1dad4c1f092c6fdec1ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#af981a537231e1dad4c1f092c6fdec1ff">failed_test_case_count</a> () const</td></tr>
+<tr class="separator:af981a537231e1dad4c1f092c6fdec1ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d81d6b146b2dbce460f9a0a57d4f9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ac1d81d6b146b2dbce460f9a0a57d4f9e">total_test_case_count</a> () const</td></tr>
+<tr class="separator:ac1d81d6b146b2dbce460f9a0a57d4f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff65061646c6b9857b37097423500bfe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#aff65061646c6b9857b37097423500bfe">test_case_to_run_count</a> () const</td></tr>
+<tr class="separator:aff65061646c6b9857b37097423500bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac363f681cbecf10fea5c04408b98e744"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ac363f681cbecf10fea5c04408b98e744">successful_test_count</a> () const</td></tr>
+<tr class="separator:ac363f681cbecf10fea5c04408b98e744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0abe95b66466268363d7fa407bac41b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ad0abe95b66466268363d7fa407bac41b">failed_test_count</a> () const</td></tr>
+<tr class="separator:ad0abe95b66466268363d7fa407bac41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04827d118a329af68a1de2d6b93eb4e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a04827d118a329af68a1de2d6b93eb4e5">reportable_disabled_test_count</a> () const</td></tr>
+<tr class="separator:a04827d118a329af68a1de2d6b93eb4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c18b2a9cb240722b1e38a3530aa2269"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a0c18b2a9cb240722b1e38a3530aa2269">disabled_test_count</a> () const</td></tr>
+<tr class="separator:a0c18b2a9cb240722b1e38a3530aa2269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb3896c4e0973bb5d2744fcb158afce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#addb3896c4e0973bb5d2744fcb158afce">reportable_test_count</a> () const</td></tr>
+<tr class="separator:addb3896c4e0973bb5d2744fcb158afce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e8531ee2ba3f0aadc27a95ac6149f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a89e8531ee2ba3f0aadc27a95ac6149f1">total_test_count</a> () const</td></tr>
+<tr class="separator:a89e8531ee2ba3f0aadc27a95ac6149f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f15365d1d1ce00eaeb6f8a1370113ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a0f15365d1d1ce00eaeb6f8a1370113ec">test_to_run_count</a> () const</td></tr>
+<tr class="separator:a0f15365d1d1ce00eaeb6f8a1370113ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb02dfd689760c6323acec725d9631d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/da7/namespacetesting_1_1internal.html#a66a845df404b38fe85c5e14a069f255a">TimeInMillis</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#abb02dfd689760c6323acec725d9631d5">start_timestamp</a> () const</td></tr>
+<tr class="separator:abb02dfd689760c6323acec725d9631d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4376881063f945dcc8ec4dbb38b5ecc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/da7/namespacetesting_1_1internal.html#a66a845df404b38fe85c5e14a069f255a">TimeInMillis</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a4376881063f945dcc8ec4dbb38b5ecc1">elapsed_time</a> () const</td></tr>
+<tr class="separator:a4376881063f945dcc8ec4dbb38b5ecc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e461369acfec902da382bc02297fe5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ae8e461369acfec902da382bc02297fe5">Passed</a> () const</td></tr>
+<tr class="separator:ae8e461369acfec902da382bc02297fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c95d1b56b5f33057afc516db05ac313"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a0c95d1b56b5f33057afc516db05ac313">Failed</a> () const</td></tr>
+<tr class="separator:a0c95d1b56b5f33057afc516db05ac313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6438e18ea4904d239a3db7b036a52229"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a6438e18ea4904d239a3db7b036a52229">GetTestCase</a> (int i) const</td></tr>
+<tr class="separator:a6438e18ea4904d239a3db7b036a52229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca71a08060037357fc7e1a406b89add"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a2ca71a08060037357fc7e1a406b89add">GetMutableTestCase</a> (int i)</td></tr>
+<tr class="separator:a2ca71a08060037357fc7e1a406b89add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67211f8475936f88d0e4d30f841c0da4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dab/classtesting_1_1_test_event_listeners.html">TestEventListeners</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a67211f8475936f88d0e4d30f841c0da4">listeners</a> ()</td></tr>
+<tr class="separator:a67211f8475936f88d0e4d30f841c0da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba3caef4ad23ce98be80250aeb0cc787"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d69/classtesting_1_1_test_result.html">TestResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#aba3caef4ad23ce98be80250aeb0cc787">current_test_result</a> ()</td></tr>
+<tr class="separator:aba3caef4ad23ce98be80250aeb0cc787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8be26dc90e0fac8f8be3552ffd98c69c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/d69/classtesting_1_1_test_result.html">TestResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a8be26dc90e0fac8f8be3552ffd98c69c">ad_hoc_test_result</a> () const</td></tr>
+<tr class="separator:a8be26dc90e0fac8f8be3552ffd98c69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3306f7d2b19bca54b841006e4a2e0260"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a3306f7d2b19bca54b841006e4a2e0260">set_os_stack_trace_getter</a> (<a class="el" href="../../d7/d10/classtesting_1_1internal_1_1_os_stack_trace_getter_interface.html">OsStackTraceGetterInterface</a> *getter)</td></tr>
+<tr class="separator:a3306f7d2b19bca54b841006e4a2e0260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71753679854f7fbba6c1568eb422fecb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d10/classtesting_1_1internal_1_1_os_stack_trace_getter_interface.html">OsStackTraceGetterInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a71753679854f7fbba6c1568eb422fecb">os_stack_trace_getter</a> ()</td></tr>
+<tr class="separator:a71753679854f7fbba6c1568eb422fecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c0a51ac4e57d9f884f646ca6dd2210"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a61c0a51ac4e57d9f884f646ca6dd2210">CurrentOsStackTraceExceptTop</a> (int skip_count) <a class="el" href="../../d3/dc9/gtest-port_8h.html#a9945cbd967fbccb15f8de711f58955c7">GTEST_NO_INLINE_</a></td></tr>
+<tr class="separator:a61c0a51ac4e57d9f884f646ca6dd2210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5684d824a59e963cb3274c79d0b6df3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ac5684d824a59e963cb3274c79d0b6df3">GetTestCase</a> (const char *test_case_name, const char *type_param, <a class="el" href="../../df/d69/classtesting_1_1_test.html#a5f2a051d1d99c9b784c666c586186cf9">Test::SetUpTestCaseFunc</a> set_up_tc, <a class="el" href="../../df/d69/classtesting_1_1_test.html#aa0f532e93b9f3500144c53f31466976c">Test::TearDownTestCaseFunc</a> tear_down_tc)</td></tr>
+<tr class="separator:ac5684d824a59e963cb3274c79d0b6df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc87dfc91377ebec4a3ff4192dfcba9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a1cc87dfc91377ebec4a3ff4192dfcba9">AddTestInfo</a> (<a class="el" href="../../df/d69/classtesting_1_1_test.html#a5f2a051d1d99c9b784c666c586186cf9">Test::SetUpTestCaseFunc</a> set_up_tc, <a class="el" href="../../df/d69/classtesting_1_1_test.html#aa0f532e93b9f3500144c53f31466976c">Test::TearDownTestCaseFunc</a> tear_down_tc, <a class="el" href="../../d1/d79/classtesting_1_1_test_info.html">TestInfo</a> *test_info)</td></tr>
+<tr class="separator:a1cc87dfc91377ebec4a3ff4192dfcba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0e79bdabd28819cc857e316a36a350"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a7f0e79bdabd28819cc857e316a36a350">set_current_test_case</a> (<a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a> *a_current_test_case)</td></tr>
+<tr class="separator:a7f0e79bdabd28819cc857e316a36a350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab72211c99ce4427dfb472d6ecea62989"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ab72211c99ce4427dfb472d6ecea62989">set_current_test_info</a> (<a class="el" href="../../d1/d79/classtesting_1_1_test_info.html">TestInfo</a> *a_current_test_info)</td></tr>
+<tr class="separator:ab72211c99ce4427dfb472d6ecea62989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84d2515f1a272a8783f00a3e8c0aff8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#af84d2515f1a272a8783f00a3e8c0aff8">RegisterParameterizedTests</a> ()</td></tr>
+<tr class="separator:af84d2515f1a272a8783f00a3e8c0aff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb6be9971f4768c4136a05aa9e7e375"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a1fb6be9971f4768c4136a05aa9e7e375">RunAllTests</a> ()</td></tr>
+<tr class="separator:a1fb6be9971f4768c4136a05aa9e7e375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c2a5b23541ef01020c402644563ba1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a96c2a5b23541ef01020c402644563ba1">ClearNonAdHocTestResult</a> ()</td></tr>
+<tr class="separator:a96c2a5b23541ef01020c402644563ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44629cc4fa12b788779d4aa76939510"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ac44629cc4fa12b788779d4aa76939510">ClearAdHocTestResult</a> ()</td></tr>
+<tr class="separator:ac44629cc4fa12b788779d4aa76939510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e4af4df167d2504decbc8fcc108a6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a15e4af4df167d2504decbc8fcc108a6f">RecordProperty</a> (const <a class="el" href="../../d0/d27/classtesting_1_1_test_property.html">TestProperty</a> &amp;test_property)</td></tr>
+<tr class="separator:a15e4af4df167d2504decbc8fcc108a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd47e447f0c2557ed528db0350671bed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#abd47e447f0c2557ed528db0350671bed">FilterTests</a> (<a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#acc5ffd3f9bc2e87bb3dba4218f58af43">ReactionToSharding</a> shard_tests)</td></tr>
+<tr class="separator:abd47e447f0c2557ed528db0350671bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2cfedef41d3d29aad23c2c64214e6f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ad2cfedef41d3d29aad23c2c64214e6f3">ListTestsMatchingFilter</a> ()</td></tr>
+<tr class="separator:ad2cfedef41d3d29aad23c2c64214e6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1f98925197cf344a23a7400deeee4dc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ae1f98925197cf344a23a7400deeee4dc">current_test_case</a> () const</td></tr>
+<tr class="separator:ae1f98925197cf344a23a7400deeee4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d303ebdcf5989e96d3ed96fb7255102"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d79/classtesting_1_1_test_info.html">TestInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a8d303ebdcf5989e96d3ed96fb7255102">current_test_info</a> ()</td></tr>
+<tr class="separator:a8d303ebdcf5989e96d3ed96fb7255102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e4cc3139e60371bd7898033c9b1c56d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/d79/classtesting_1_1_test_info.html">TestInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a5e4cc3139e60371bd7898033c9b1c56d">current_test_info</a> () const</td></tr>
+<tr class="separator:a5e4cc3139e60371bd7898033c9b1c56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1489e6a2378d64d68bc01963ea5db4a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d6/d91/classtesting_1_1_environment.html">Environment</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#aa1489e6a2378d64d68bc01963ea5db4a">environments</a> ()</td></tr>
+<tr class="separator:aa1489e6a2378d64d68bc01963ea5db4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c7c0a0c954e36d83e6e4690d3fb938"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d6/deb/structtesting_1_1internal_1_1_trace_info.html">TraceInfo</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#af8c7c0a0c954e36d83e6e4690d3fb938">gtest_trace_stack</a> ()</td></tr>
+<tr class="separator:af8c7c0a0c954e36d83e6e4690d3fb938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad82fed50f13f13f11867af9dad4a2cf6"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d6/deb/structtesting_1_1internal_1_1_trace_info.html">TraceInfo</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ad82fed50f13f13f11867af9dad4a2cf6">gtest_trace_stack</a> () const</td></tr>
+<tr class="separator:ad82fed50f13f13f11867af9dad4a2cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21cd7b2928de03a55b5252f29dd5ae6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a21cd7b2928de03a55b5252f29dd5ae6d">ConfigureXmlOutput</a> ()</td></tr>
+<tr class="separator:a21cd7b2928de03a55b5252f29dd5ae6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a772894193104b1b2516f16e6ff813168"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a772894193104b1b2516f16e6ff813168">PostFlagParsingInit</a> ()</td></tr>
+<tr class="separator:a772894193104b1b2516f16e6ff813168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a625b9fb6d17b008c44fc902255e6343c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a625b9fb6d17b008c44fc902255e6343c">random_seed</a> () const</td></tr>
+<tr class="separator:a625b9fb6d17b008c44fc902255e6343c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3b45b5eb4d583219a3602011ea44347"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da2/classtesting_1_1internal_1_1_random.html">internal::Random</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ab3b45b5eb4d583219a3602011ea44347">random</a> ()</td></tr>
+<tr class="separator:ab3b45b5eb4d583219a3602011ea44347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa38e6a4372e6bb9bbe3143a3a32b65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#aaaa38e6a4372e6bb9bbe3143a3a32b65">ShuffleTests</a> ()</td></tr>
+<tr class="separator:aaaa38e6a4372e6bb9bbe3143a3a32b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee7db3bf8284dd9dce4dc857564bce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a1ee7db3bf8284dd9dce4dc857564bce3">UnshuffleTests</a> ()</td></tr>
+<tr class="separator:a1ee7db3bf8284dd9dce4dc857564bce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa311b980783a9cfb547831f7b19e3f3a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#aa311b980783a9cfb547831f7b19e3f3a">catch_exceptions</a> () const</td></tr>
+<tr class="separator:aa311b980783a9cfb547831f7b19e3f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:aefec23506cd772c3abc536cda301d926"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#aefec23506cd772c3abc536cda301d926">set_catch_exceptions</a> (bool value)</td></tr>
+<tr class="separator:aefec23506cd772c3abc536cda301d926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c8a7b2571705040ead6a61645278e18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a9c8a7b2571705040ead6a61645278e18">GTEST_DISALLOW_COPY_AND_ASSIGN_</a> (<a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html">UnitTestImpl</a>)</td></tr>
+<tr class="separator:a9c8a7b2571705040ead6a61645278e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:adabbbc8985202ce655d50746bd383eae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d47/classtesting_1_1_unit_test.html">UnitTest</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#adabbbc8985202ce655d50746bd383eae">parent_</a></td></tr>
+<tr class="separator:adabbbc8985202ce655d50746bd383eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf1f1d4cbb2f681ded9bbf4c6075430c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d14/classtesting_1_1internal_1_1_file_path.html">internal::FilePath</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#aaf1f1d4cbb2f681ded9bbf4c6075430c">original_working_dir_</a></td></tr>
+<tr class="separator:aaf1f1d4cbb2f681ded9bbf4c6075430c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a645122eda4d8250f3e8139309510705e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d5b/classtesting_1_1internal_1_1_default_global_test_part_result_reporter.html">DefaultGlobalTestPartResultReporter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a645122eda4d8250f3e8139309510705e">default_global_test_part_result_reporter_</a></td></tr>
+<tr class="separator:a645122eda4d8250f3e8139309510705e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a261ddbea097ad3b43b8b510a4964f390"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d60/classtesting_1_1internal_1_1_default_per_thread_test_part_result_reporter.html">DefaultPerThreadTestPartResultReporter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a261ddbea097ad3b43b8b510a4964f390">default_per_thread_test_part_result_reporter_</a></td></tr>
+<tr class="separator:a261ddbea097ad3b43b8b510a4964f390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a275094df6adc7e16a92133a692c3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ab9a275094df6adc7e16a92133a692c3e">global_test_part_result_repoter_</a></td></tr>
+<tr class="separator:ab9a275094df6adc7e16a92133a692c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57153c5c8caa229f0a62f35ab99f0a56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d77/classtesting_1_1internal_1_1_mutex.html">internal::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a57153c5c8caa229f0a62f35ab99f0a56">global_test_part_result_reporter_mutex_</a></td></tr>
+<tr class="separator:a57153c5c8caa229f0a62f35ab99f0a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ebe35dfe19dcda8e7b17e81f2cb4bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d13/classtesting_1_1internal_1_1_thread_local.html">internal::ThreadLocal</a>&lt; <a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a23ebe35dfe19dcda8e7b17e81f2cb4bc">per_thread_test_part_result_reporter_</a></td></tr>
+<tr class="separator:a23ebe35dfe19dcda8e7b17e81f2cb4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2320ba1e4e1cad8d624bbb222501fb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d6/d91/classtesting_1_1_environment.html">Environment</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a1d2320ba1e4e1cad8d624bbb222501fb">environments_</a></td></tr>
+<tr class="separator:a1d2320ba1e4e1cad8d624bbb222501fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ec0f733ada2898efd1a7fbd8587fb3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a79ec0f733ada2898efd1a7fbd8587fb3">test_cases_</a></td></tr>
+<tr class="separator:a79ec0f733ada2898efd1a7fbd8587fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b30891f1a9d5b5c25de2bef0f0bb49a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a9b30891f1a9d5b5c25de2bef0f0bb49a">test_case_indices_</a></td></tr>
+<tr class="separator:a9b30891f1a9d5b5c25de2bef0f0bb49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd663a104bb0a6df2c5143454f78e305"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#afd663a104bb0a6df2c5143454f78e305">last_death_test_case_</a></td></tr>
+<tr class="separator:afd663a104bb0a6df2c5143454f78e305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b346729d3940f065e05c69c434ebb3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a3b346729d3940f065e05c69c434ebb3f">current_test_case_</a></td></tr>
+<tr class="separator:a3b346729d3940f065e05c69c434ebb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56128aac0fb5be45993715d1130b0610"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d79/classtesting_1_1_test_info.html">TestInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a56128aac0fb5be45993715d1130b0610">current_test_info_</a></td></tr>
+<tr class="separator:a56128aac0fb5be45993715d1130b0610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15355228a7140a08f9e2f333aa934ccd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d69/classtesting_1_1_test_result.html">TestResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a15355228a7140a08f9e2f333aa934ccd">ad_hoc_test_result_</a></td></tr>
+<tr class="separator:a15355228a7140a08f9e2f333aa934ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c3caa0bac1a8dce650649760de30d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dab/classtesting_1_1_test_event_listeners.html">TestEventListeners</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a16c3caa0bac1a8dce650649760de30d2">listeners_</a></td></tr>
+<tr class="separator:a16c3caa0bac1a8dce650649760de30d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b34d9194ca9552f581e472e9b18494"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d10/classtesting_1_1internal_1_1_os_stack_trace_getter_interface.html">OsStackTraceGetterInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a16b34d9194ca9552f581e472e9b18494">os_stack_trace_getter_</a></td></tr>
+<tr class="separator:a16b34d9194ca9552f581e472e9b18494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c7d8a9ff3edbd8a98f91c4afaf3bb8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ab4c7d8a9ff3edbd8a98f91c4afaf3bb8">post_flag_parse_init_performed_</a></td></tr>
+<tr class="separator:ab4c7d8a9ff3edbd8a98f91c4afaf3bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0afcc95308ebfacb8d0f53790e77e1ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a0afcc95308ebfacb8d0f53790e77e1ab">random_seed_</a></td></tr>
+<tr class="separator:a0afcc95308ebfacb8d0f53790e77e1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08551d7ff0ebb976ec82294ded8113ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da2/classtesting_1_1internal_1_1_random.html">internal::Random</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a08551d7ff0ebb976ec82294ded8113ea">random_</a></td></tr>
+<tr class="separator:a08551d7ff0ebb976ec82294ded8113ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2114799ed634ee849b9dcd9728f9b7b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/da7/namespacetesting_1_1internal.html#a66a845df404b38fe85c5e14a069f255a">TimeInMillis</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a2114799ed634ee849b9dcd9728f9b7b6">start_timestamp_</a></td></tr>
+<tr class="separator:a2114799ed634ee849b9dcd9728f9b7b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e0445298c6026bee71bb2bb7aae604"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/da7/namespacetesting_1_1internal.html#a66a845df404b38fe85c5e14a069f255a">TimeInMillis</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a06e0445298c6026bee71bb2bb7aae604">elapsed_time_</a></td></tr>
+<tr class="separator:a06e0445298c6026bee71bb2bb7aae604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73a797cf2b20129cb252b14c5fd9a0af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d13/classtesting_1_1internal_1_1_thread_local.html">internal::ThreadLocal</a>&lt; std::vector&lt; <a class="el" href="../../d6/deb/structtesting_1_1internal_1_1_trace_info.html">TraceInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a73a797cf2b20129cb252b14c5fd9a0af">gtest_trace_stack_</a></td></tr>
+<tr class="separator:a73a797cf2b20129cb252b14c5fd9a0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc0c6f466730b1d6e884738344b8e33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a2cc0c6f466730b1d6e884738344b8e33">catch_exceptions_</a></td></tr>
+<tr class="separator:a2cc0c6f466730b1d6e884738344b8e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a893404438388dec058dc5c02e8f9a014"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a893404438388dec058dc5c02e8f9a014">::testing::UnitTest</a></td></tr>
+<tr class="separator:a893404438388dec058dc5c02e8f9a014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00499">499</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="acc5ffd3f9bc2e87bb3dba4218f58af43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5ffd3f9bc2e87bb3dba4218f58af43">&#9670;&nbsp;</a></span>ReactionToSharding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#acc5ffd3f9bc2e87bb3dba4218f58af43">testing::internal::UnitTestImpl::ReactionToSharding</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="acc5ffd3f9bc2e87bb3dba4218f58af43abec11f1c4bb8a3e2b99fa8328bccd58c"></a>HONOR_SHARDING_PROTOCOL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acc5ffd3f9bc2e87bb3dba4218f58af43a68bd0b7e6a7bead14c93d1a42144095a"></a>IGNORE_SHARDING_PROTOCOL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00717">717</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a5fb75faa88ee71f26e16473455b70839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb75faa88ee71f26e16473455b70839">&#9670;&nbsp;</a></span>UnitTestImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">testing::internal::UnitTestImpl::UnitTestImpl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d47/classtesting_1_1_unit_test.html">UnitTest</a> *&#160;</td>
+          <td class="paramname"><em>parent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04324">4324</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a5fb75faa88ee71f26e16473455b70839_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a5fb75faa88ee71f26e16473455b70839_cgraph" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+<a id="ae8bfe40adf9772237ea51299af113575"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8bfe40adf9772237ea51299af113575">&#9670;&nbsp;</a></span>~UnitTestImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">testing::internal::UnitTestImpl::~UnitTestImpl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04356">4356</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ae8bfe40adf9772237ea51299af113575_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ae8bfe40adf9772237ea51299af113575_cgraph" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a8be26dc90e0fac8f8be3552ffd98c69c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8be26dc90e0fac8f8be3552ffd98c69c">&#9670;&nbsp;</a></span>ad_hoc_test_result()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d1/d69/classtesting_1_1_test_result.html">TestResult</a>* testing::internal::UnitTestImpl::ad_hoc_test_result </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00597">597</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1cc87dfc91377ebec4a3ff4192dfcba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cc87dfc91377ebec4a3ff4192dfcba9">&#9670;&nbsp;</a></span>AddTestInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::AddTestInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/d69/classtesting_1_1_test.html#a5f2a051d1d99c9b784c666c586186cf9">Test::SetUpTestCaseFunc</a>&#160;</td>
+          <td class="paramname"><em>set_up_tc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d69/classtesting_1_1_test.html#aa0f532e93b9f3500144c53f31466976c">Test::TearDownTestCaseFunc</a>&#160;</td>
+          <td class="paramname"><em>tear_down_tc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/classtesting_1_1_test_info.html">TestInfo</a> *&#160;</td>
+          <td class="paramname"><em>test_info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00645">645</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1cc87dfc91377ebec4a3ff4192dfcba9_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1cc87dfc91377ebec4a3ff4192dfcba9_cgraph" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1cc87dfc91377ebec4a3ff4192dfcba9_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1cc87dfc91377ebec4a3ff4192dfcba9_icgraph" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="aa311b980783a9cfb547831f7b19e3f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa311b980783a9cfb547831f7b19e3f3a">&#9670;&nbsp;</a></span>catch_exceptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool testing::internal::UnitTestImpl::catch_exceptions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00803">803</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_aa311b980783a9cfb547831f7b19e3f3a_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_aa311b980783a9cfb547831f7b19e3f3a_icgraph" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="ac44629cc4fa12b788779d4aa76939510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac44629cc4fa12b788779d4aa76939510">&#9670;&nbsp;</a></span>ClearAdHocTestResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::ClearAdHocTestResult </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00707">707</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a96c2a5b23541ef01020c402644563ba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c2a5b23541ef01020c402644563ba1">&#9670;&nbsp;</a></span>ClearNonAdHocTestResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::ClearNonAdHocTestResult </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00702">702</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a96c2a5b23541ef01020c402644563ba1_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a96c2a5b23541ef01020c402644563ba1_cgraph" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a96c2a5b23541ef01020c402644563ba1_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a96c2a5b23541ef01020c402644563ba1_icgraph" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a21cd7b2928de03a55b5252f29dd5ae6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21cd7b2928de03a55b5252f29dd5ae6d">&#9670;&nbsp;</a></span>ConfigureXmlOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::ConfigureXmlOutput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04399">4399</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a21cd7b2928de03a55b5252f29dd5ae6d_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a21cd7b2928de03a55b5252f29dd5ae6d_cgraph" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a21cd7b2928de03a55b5252f29dd5ae6d_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a21cd7b2928de03a55b5252f29dd5ae6d_icgraph" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="ae1f98925197cf344a23a7400deeee4dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1f98925197cf344a23a7400deeee4dc">&#9670;&nbsp;</a></span>current_test_case()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a>* testing::internal::UnitTestImpl::current_test_case </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00733">733</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ae1f98925197cf344a23a7400deeee4dc_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ae1f98925197cf344a23a7400deeee4dc_icgraph" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a8d303ebdcf5989e96d3ed96fb7255102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d303ebdcf5989e96d3ed96fb7255102">&#9670;&nbsp;</a></span>current_test_info() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d79/classtesting_1_1_test_info.html">TestInfo</a>* testing::internal::UnitTestImpl::current_test_info </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00734">734</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a8d303ebdcf5989e96d3ed96fb7255102_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a8d303ebdcf5989e96d3ed96fb7255102_icgraph" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="a5e4cc3139e60371bd7898033c9b1c56d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e4cc3139e60371bd7898033c9b1c56d">&#9670;&nbsp;</a></span>current_test_info() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d1/d79/classtesting_1_1_test_info.html">TestInfo</a>* testing::internal::UnitTestImpl::current_test_info </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00735">735</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aba3caef4ad23ce98be80250aeb0cc787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba3caef4ad23ce98be80250aeb0cc787">&#9670;&nbsp;</a></span>current_test_result()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d69/classtesting_1_1_test_result.html">TestResult</a> * testing::internal::UnitTestImpl::current_test_result </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04931">4931</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_aba3caef4ad23ce98be80250aeb0cc787_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_aba3caef4ad23ce98be80250aeb0cc787_icgraph" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+
+</div>
+</div>
+<a id="a61c0a51ac4e57d9f884f646ca6dd2210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c0a51ac4e57d9f884f646ca6dd2210">&#9670;&nbsp;</a></span>CurrentOsStackTraceExceptTop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string testing::internal::UnitTestImpl::CurrentOsStackTraceExceptTop </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>skip_count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00793">793</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a61c0a51ac4e57d9f884f646ca6dd2210_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a61c0a51ac4e57d9f884f646ca6dd2210_icgraph" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a0c18b2a9cb240722b1e38a3530aa2269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c18b2a9cb240722b1e38a3530aa2269">&#9670;&nbsp;</a></span>disabled_test_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::disabled_test_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00764">764</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a0c18b2a9cb240722b1e38a3530aa2269_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a0c18b2a9cb240722b1e38a3530aa2269_cgraph" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="a4376881063f945dcc8ec4dbb38b5ecc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4376881063f945dcc8ec4dbb38b5ecc1">&#9670;&nbsp;</a></span>elapsed_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/da7/namespacetesting_1_1internal.html#a66a845df404b38fe85c5e14a069f255a">TimeInMillis</a> testing::internal::UnitTestImpl::elapsed_time </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00564">564</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa1489e6a2378d64d68bc01963ea5db4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1489e6a2378d64d68bc01963ea5db4a">&#9670;&nbsp;</a></span>environments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d6/d91/classtesting_1_1_environment.html">Environment</a>*&gt;&amp; testing::internal::UnitTestImpl::environments </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00739">739</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0c95d1b56b5f33057afc516db05ac313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c95d1b56b5f33057afc516db05ac313">&#9670;&nbsp;</a></span>Failed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool testing::internal::UnitTestImpl::Failed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00571">571</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af981a537231e1dad4c1f092c6fdec1ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af981a537231e1dad4c1f092c6fdec1ff">&#9670;&nbsp;</a></span>failed_test_case_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::failed_test_case_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00732">732</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_af981a537231e1dad4c1f092c6fdec1ff_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_af981a537231e1dad4c1f092c6fdec1ff_cgraph" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="ad0abe95b66466268363d7fa407bac41b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0abe95b66466268363d7fa407bac41b">&#9670;&nbsp;</a></span>failed_test_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::failed_test_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00753">753</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ad0abe95b66466268363d7fa407bac41b_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ad0abe95b66466268363d7fa407bac41b_cgraph" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+
+</div>
+</div>
+<a id="abd47e447f0c2557ed528db0350671bed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd47e447f0c2557ed528db0350671bed">&#9670;&nbsp;</a></span>FilterTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::FilterTests </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#acc5ffd3f9bc2e87bb3dba4218f58af43">ReactionToSharding</a>&#160;</td>
+          <td class="paramname"><em>shard_tests</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04788">4788</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_abd47e447f0c2557ed528db0350671bed_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_abd47e447f0c2557ed528db0350671bed_cgraph" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_abd47e447f0c2557ed528db0350671bed_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_abd47e447f0c2557ed528db0350671bed_icgraph" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<a id="a1cd291fd6751654924362164735d4b49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cd291fd6751654924362164735d4b49">&#9670;&nbsp;</a></span>GetGlobalTestPartResultReporter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a> * testing::internal::UnitTestImpl::GetGlobalTestPartResultReporter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00702">702</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1cd291fd6751654924362164735d4b49_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1cd291fd6751654924362164735d4b49_icgraph" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="a2ca71a08060037357fc7e1a406b89add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca71a08060037357fc7e1a406b89add">&#9670;&nbsp;</a></span>GetMutableTestCase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a>* testing::internal::UnitTestImpl::GetMutableTestCase </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00584">584</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a2ca71a08060037357fc7e1a406b89add_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a2ca71a08060037357fc7e1a406b89add_cgraph" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a2ca71a08060037357fc7e1a406b89add_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a2ca71a08060037357fc7e1a406b89add_icgraph" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="a6438e18ea4904d239a3db7b036a52229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6438e18ea4904d239a3db7b036a52229">&#9670;&nbsp;</a></span>GetTestCase() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a>* testing::internal::UnitTestImpl::GetTestCase </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00577">577</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a6438e18ea4904d239a3db7b036a52229_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a6438e18ea4904d239a3db7b036a52229_cgraph" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+
+</div>
+</div>
+<a id="ac5684d824a59e963cb3274c79d0b6df3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5684d824a59e963cb3274c79d0b6df3">&#9670;&nbsp;</a></span>GetTestCase() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a> * testing::internal::UnitTestImpl::GetTestCase </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>test_case_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>type_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d69/classtesting_1_1_test.html#a5f2a051d1d99c9b784c666c586186cf9">Test::SetUpTestCaseFunc</a>&#160;</td>
+          <td class="paramname"><em>set_up_tc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d69/classtesting_1_1_test.html#aa0f532e93b9f3500144c53f31466976c">Test::TearDownTestCaseFunc</a>&#160;</td>
+          <td class="paramname"><em>tear_down_tc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04501">4501</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ac5684d824a59e963cb3274c79d0b6df3_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ac5684d824a59e963cb3274c79d0b6df3_cgraph" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="a5fb3dd8bc839e10b62eba07790704132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb3dd8bc839e10b62eba07790704132">&#9670;&nbsp;</a></span>GetTestPartResultReporterForCurrentThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a> * testing::internal::UnitTestImpl::GetTestPartResultReporterForCurrentThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00716">716</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a5fb3dd8bc839e10b62eba07790704132_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a5fb3dd8bc839e10b62eba07790704132_icgraph" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+
+</div>
+</div>
+<a id="a9c8a7b2571705040ead6a61645278e18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c8a7b2571705040ead6a61645278e18">&#9670;&nbsp;</a></span>GTEST_DISALLOW_COPY_AND_ASSIGN_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">testing::internal::UnitTestImpl::GTEST_DISALLOW_COPY_AND_ASSIGN_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html">UnitTestImpl</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8c7c0a0c954e36d83e6e4690d3fb938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c7c0a0c954e36d83e6e4690d3fb938">&#9670;&nbsp;</a></span>gtest_trace_stack() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d6/deb/structtesting_1_1internal_1_1_trace_info.html">TraceInfo</a>&gt;&amp; testing::internal::UnitTestImpl::gtest_trace_stack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00742">742</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad82fed50f13f13f11867af9dad4a2cf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad82fed50f13f13f11867af9dad4a2cf6">&#9670;&nbsp;</a></span>gtest_trace_stack() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="../../d6/deb/structtesting_1_1internal_1_1_trace_info.html">TraceInfo</a>&gt;&amp; testing::internal::UnitTestImpl::gtest_trace_stack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00745">745</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a67211f8475936f88d0e4d30f841c0da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67211f8475936f88d0e4d30f841c0da4">&#9670;&nbsp;</a></span>listeners()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dab/classtesting_1_1_test_event_listeners.html">TestEventListeners</a>* testing::internal::UnitTestImpl::listeners </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00590">590</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a67211f8475936f88d0e4d30f841c0da4_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a67211f8475936f88d0e4d30f841c0da4_icgraph" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="ad2cfedef41d3d29aad23c2c64214e6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2cfedef41d3d29aad23c2c64214e6f3">&#9670;&nbsp;</a></span>ListTestsMatchingFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::ListTestsMatchingFilter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04864">4864</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ad2cfedef41d3d29aad23c2c64214e6f3_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ad2cfedef41d3d29aad23c2c64214e6f3_cgraph" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ad2cfedef41d3d29aad23c2c64214e6f3_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ad2cfedef41d3d29aad23c2c64214e6f3_icgraph" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+
+</div>
+</div>
+<a id="a71753679854f7fbba6c1568eb422fecb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71753679854f7fbba6c1568eb422fecb">&#9670;&nbsp;</a></span>os_stack_trace_getter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d10/classtesting_1_1internal_1_1_os_stack_trace_getter_interface.html">OsStackTraceGetterInterface</a> * testing::internal::UnitTestImpl::os_stack_trace_getter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04917">4917</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a71753679854f7fbba6c1568eb422fecb_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a71753679854f7fbba6c1568eb422fecb_icgraph" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+
+</div>
+</div>
+<a id="ae8e461369acfec902da382bc02297fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8e461369acfec902da382bc02297fe5">&#9670;&nbsp;</a></span>Passed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool testing::internal::UnitTestImpl::Passed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00567">567</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ae8e461369acfec902da382bc02297fe5_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ae8e461369acfec902da382bc02297fe5_icgraph" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+
+</div>
+</div>
+<a id="a772894193104b1b2516f16e6ff813168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772894193104b1b2516f16e6ff813168">&#9670;&nbsp;</a></span>PostFlagParsingInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::PostFlagParsingInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04435">4435</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a772894193104b1b2516f16e6ff813168_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a772894193104b1b2516f16e6ff813168_cgraph" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a772894193104b1b2516f16e6ff813168_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a772894193104b1b2516f16e6ff813168_icgraph" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+
+</div>
+</div>
+<a id="ab3b45b5eb4d583219a3602011ea44347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3b45b5eb4d583219a3602011ea44347">&#9670;&nbsp;</a></span>random()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/da2/classtesting_1_1internal_1_1_random.html">internal::Random</a>* testing::internal::UnitTestImpl::random </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00792">792</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ab3b45b5eb4d583219a3602011ea44347_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ab3b45b5eb4d583219a3602011ea44347_icgraph" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+
+</div>
+</div>
+<a id="a625b9fb6d17b008c44fc902255e6343c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a625b9fb6d17b008c44fc902255e6343c">&#9670;&nbsp;</a></span>random_seed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::random_seed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00789">789</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a625b9fb6d17b008c44fc902255e6343c_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a625b9fb6d17b008c44fc902255e6343c_icgraph" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+
+</div>
+</div>
+<a id="a15e4af4df167d2504decbc8fcc108a6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15e4af4df167d2504decbc8fcc108a6f">&#9670;&nbsp;</a></span>RecordProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::RecordProperty </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d27/classtesting_1_1_test_property.html">TestProperty</a> &amp;&#160;</td>
+          <td class="paramname"><em>test_property</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04371">4371</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a15e4af4df167d2504decbc8fcc108a6f_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a15e4af4df167d2504decbc8fcc108a6f_cgraph" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+
+</div>
+</div>
+<a id="af84d2515f1a272a8783f00a3e8c0aff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af84d2515f1a272a8783f00a3e8c0aff8">&#9670;&nbsp;</a></span>RegisterParameterizedTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::RegisterParameterizedTests </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l02614">2614</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_af84d2515f1a272a8783f00a3e8c0aff8_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_af84d2515f1a272a8783f00a3e8c0aff8_icgraph" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+
+</div>
+</div>
+<a id="a04827d118a329af68a1de2d6b93eb4e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04827d118a329af68a1de2d6b93eb4e5">&#9670;&nbsp;</a></span>reportable_disabled_test_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::reportable_disabled_test_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00758">758</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a04827d118a329af68a1de2d6b93eb4e5_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a04827d118a329af68a1de2d6b93eb4e5_cgraph" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+
+</div>
+</div>
+<a id="addb3896c4e0973bb5d2744fcb158afce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb3896c4e0973bb5d2744fcb158afce">&#9670;&nbsp;</a></span>reportable_test_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::reportable_test_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00769">769</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_addb3896c4e0973bb5d2744fcb158afce_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_addb3896c4e0973bb5d2744fcb158afce_cgraph" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+
+</div>
+</div>
+<a id="a1fb6be9971f4768c4136a05aa9e7e375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb6be9971f4768c4136a05aa9e7e375">&#9670;&nbsp;</a></span>RunAllTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool testing::internal::UnitTestImpl::RunAllTests </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04550">4550</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1fb6be9971f4768c4136a05aa9e7e375_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1fb6be9971f4768c4136a05aa9e7e375_cgraph" alt=""/></div>
+<!-- MAP 38 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1fb6be9971f4768c4136a05aa9e7e375_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1fb6be9971f4768c4136a05aa9e7e375_icgraph" alt=""/></div>
+<!-- MAP 39 -->
+</div>
+
+</div>
+</div>
+<a id="aefec23506cd772c3abc536cda301d926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefec23506cd772c3abc536cda301d926">&#9670;&nbsp;</a></span>set_catch_exceptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::set_catch_exceptions </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00810">810</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7f0e79bdabd28819cc857e316a36a350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f0e79bdabd28819cc857e316a36a350">&#9670;&nbsp;</a></span>set_current_test_case()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::set_current_test_case </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a> *&#160;</td>
+          <td class="paramname"><em>a_current_test_case</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00676">676</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a7f0e79bdabd28819cc857e316a36a350_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a7f0e79bdabd28819cc857e316a36a350_icgraph" alt=""/></div>
+<!-- MAP 40 -->
+</div>
+
+</div>
+</div>
+<a id="ab72211c99ce4427dfb472d6ecea62989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab72211c99ce4427dfb472d6ecea62989">&#9670;&nbsp;</a></span>set_current_test_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::set_current_test_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/classtesting_1_1_test_info.html">TestInfo</a> *&#160;</td>
+          <td class="paramname"><em>a_current_test_info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00683">683</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ab72211c99ce4427dfb472d6ecea62989_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ab72211c99ce4427dfb472d6ecea62989_cgraph" alt=""/></div>
+<!-- MAP 41 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ab72211c99ce4427dfb472d6ecea62989_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ab72211c99ce4427dfb472d6ecea62989_icgraph" alt=""/></div>
+<!-- MAP 42 -->
+</div>
+
+</div>
+</div>
+<a id="a3306f7d2b19bca54b841006e4a2e0260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3306f7d2b19bca54b841006e4a2e0260">&#9670;&nbsp;</a></span>set_os_stack_trace_getter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::set_os_stack_trace_getter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d10/classtesting_1_1internal_1_1_os_stack_trace_getter_interface.html">OsStackTraceGetterInterface</a> *&#160;</td>
+          <td class="paramname"><em>getter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04906">4906</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a892b0e25b28af5e4400cf6fac336f2d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892b0e25b28af5e4400cf6fac336f2d8">&#9670;&nbsp;</a></span>SetGlobalTestPartResultReporter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::SetGlobalTestPartResultReporter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a> *&#160;</td>
+          <td class="paramname"><em>reporter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00708">708</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a892b0e25b28af5e4400cf6fac336f2d8_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a892b0e25b28af5e4400cf6fac336f2d8_icgraph" alt=""/></div>
+<!-- MAP 43 -->
+</div>
+
+</div>
+</div>
+<a id="a1403fc10aebcc64479c5ee980c9b4eb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1403fc10aebcc64479c5ee980c9b4eb4">&#9670;&nbsp;</a></span>SetTestPartResultReporterForCurrentThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::SetTestPartResultReporterForCurrentThread </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a> *&#160;</td>
+          <td class="paramname"><em>reporter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00721">721</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1403fc10aebcc64479c5ee980c9b4eb4_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1403fc10aebcc64479c5ee980c9b4eb4_icgraph" alt=""/></div>
+<!-- MAP 44 -->
+</div>
+
+</div>
+</div>
+<a id="aaaa38e6a4372e6bb9bbe3143a3a32b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa38e6a4372e6bb9bbe3143a3a32b65">&#9670;&nbsp;</a></span>ShuffleTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::ShuffleTests </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04938">4938</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_aaaa38e6a4372e6bb9bbe3143a3a32b65_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_aaaa38e6a4372e6bb9bbe3143a3a32b65_cgraph" alt=""/></div>
+<!-- MAP 45 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_aaaa38e6a4372e6bb9bbe3143a3a32b65_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_aaaa38e6a4372e6bb9bbe3143a3a32b65_icgraph" alt=""/></div>
+<!-- MAP 46 -->
+</div>
+
+</div>
+</div>
+<a id="abb02dfd689760c6323acec725d9631d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb02dfd689760c6323acec725d9631d5">&#9670;&nbsp;</a></span>start_timestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/da7/namespacetesting_1_1internal.html#a66a845df404b38fe85c5e14a069f255a">TimeInMillis</a> testing::internal::UnitTestImpl::start_timestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00561">561</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2db3a2b3fed8065dbdd768ee407bf67e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2db3a2b3fed8065dbdd768ee407bf67e">&#9670;&nbsp;</a></span>successful_test_case_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::successful_test_case_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00727">727</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a2db3a2b3fed8065dbdd768ee407bf67e_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a2db3a2b3fed8065dbdd768ee407bf67e_cgraph" alt=""/></div>
+<!-- MAP 47 -->
+</div>
+
+</div>
+</div>
+<a id="ac363f681cbecf10fea5c04408b98e744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac363f681cbecf10fea5c04408b98e744">&#9670;&nbsp;</a></span>successful_test_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::successful_test_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00748">748</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ac363f681cbecf10fea5c04408b98e744_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ac363f681cbecf10fea5c04408b98e744_cgraph" alt=""/></div>
+<!-- MAP 48 -->
+</div>
+
+</div>
+</div>
+<a id="aff65061646c6b9857b37097423500bfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff65061646c6b9857b37097423500bfe">&#9670;&nbsp;</a></span>test_case_to_run_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::test_case_to_run_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00743">743</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_aff65061646c6b9857b37097423500bfe_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_aff65061646c6b9857b37097423500bfe_cgraph" alt=""/></div>
+<!-- MAP 49 -->
+</div>
+
+</div>
+</div>
+<a id="a0f15365d1d1ce00eaeb6f8a1370113ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f15365d1d1ce00eaeb6f8a1370113ec">&#9670;&nbsp;</a></span>test_to_run_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::test_to_run_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00779">779</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a0f15365d1d1ce00eaeb6f8a1370113ec_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a0f15365d1d1ce00eaeb6f8a1370113ec_cgraph" alt=""/></div>
+<!-- MAP 50 -->
+</div>
+
+</div>
+</div>
+<a id="ac1d81d6b146b2dbce460f9a0a57d4f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d81d6b146b2dbce460f9a0a57d4f9e">&#9670;&nbsp;</a></span>total_test_case_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::total_test_case_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00737">737</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ac1d81d6b146b2dbce460f9a0a57d4f9e_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_ac1d81d6b146b2dbce460f9a0a57d4f9e_icgraph" alt=""/></div>
+<!-- MAP 51 -->
+</div>
+
+</div>
+</div>
+<a id="a89e8531ee2ba3f0aadc27a95ac6149f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e8531ee2ba3f0aadc27a95ac6149f1">&#9670;&nbsp;</a></span>total_test_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::total_test_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l00774">774</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a89e8531ee2ba3f0aadc27a95ac6149f1_cgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a89e8531ee2ba3f0aadc27a95ac6149f1_cgraph" alt=""/></div>
+<!-- MAP 52 -->
+</div>
+
+</div>
+</div>
+<a id="a1ee7db3bf8284dd9dce4dc857564bce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ee7db3bf8284dd9dce4dc857564bce3">&#9670;&nbsp;</a></span>UnshuffleTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::UnitTestImpl::UnshuffleTests </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a> の <a class="el" href="../../df/d5b/gtest_8cc_source.html#l04953">4953</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1ee7db3bf8284dd9dce4dc857564bce3_icgraph.png" border="0" usemap="#d7/dda/classtesting_1_1internal_1_1_unit_test_impl_a1ee7db3bf8284dd9dce4dc857564bce3_icgraph" alt=""/></div>
+<!-- MAP 53 -->
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="a893404438388dec058dc5c02e8f9a014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a893404438388dec058dc5c02e8f9a014">&#9670;&nbsp;</a></span>::testing::UnitTest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class ::<a class="el" href="../../d7/d47/classtesting_1_1_unit_test.html">testing::UnitTest</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00806">806</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a15355228a7140a08f9e2f333aa934ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15355228a7140a08f9e2f333aa934ccd">&#9670;&nbsp;</a></span>ad_hoc_test_result_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d69/classtesting_1_1_test_result.html">TestResult</a> testing::internal::UnitTestImpl::ad_hoc_test_result_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00880">880</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2cc0c6f466730b1d6e884738344b8e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc0c6f466730b1d6e884738344b8e33">&#9670;&nbsp;</a></span>catch_exceptions_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool testing::internal::UnitTestImpl::catch_exceptions_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00920">920</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3b346729d3940f065e05c69c434ebb3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b346729d3940f065e05c69c434ebb3f">&#9670;&nbsp;</a></span>current_test_case_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a>* testing::internal::UnitTestImpl::current_test_case_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00864">864</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a56128aac0fb5be45993715d1130b0610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56128aac0fb5be45993715d1130b0610">&#9670;&nbsp;</a></span>current_test_info_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d79/classtesting_1_1_test_info.html">TestInfo</a>* testing::internal::UnitTestImpl::current_test_info_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00870">870</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a645122eda4d8250f3e8139309510705e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a645122eda4d8250f3e8139309510705e">&#9670;&nbsp;</a></span>default_global_test_part_result_reporter_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d5b/classtesting_1_1internal_1_1_default_global_test_part_result_reporter.html">DefaultGlobalTestPartResultReporter</a> testing::internal::UnitTestImpl::default_global_test_part_result_reporter_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00820">820</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a261ddbea097ad3b43b8b510a4964f390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a261ddbea097ad3b43b8b510a4964f390">&#9670;&nbsp;</a></span>default_per_thread_test_part_result_reporter_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d60/classtesting_1_1internal_1_1_default_per_thread_test_part_result_reporter.html">DefaultPerThreadTestPartResultReporter</a> testing::internal::UnitTestImpl::default_per_thread_test_part_result_reporter_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00822">822</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a06e0445298c6026bee71bb2bb7aae604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e0445298c6026bee71bb2bb7aae604">&#9670;&nbsp;</a></span>elapsed_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/da7/namespacetesting_1_1internal.html#a66a845df404b38fe85c5e14a069f255a">TimeInMillis</a> testing::internal::UnitTestImpl::elapsed_time_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00906">906</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1d2320ba1e4e1cad8d624bbb222501fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2320ba1e4e1cad8d624bbb222501fb">&#9670;&nbsp;</a></span>environments_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d6/d91/classtesting_1_1_environment.html">Environment</a>*&gt; testing::internal::UnitTestImpl::environments_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00836">836</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a57153c5c8caa229f0a62f35ab99f0a56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57153c5c8caa229f0a62f35ab99f0a56">&#9670;&nbsp;</a></span>global_test_part_result_reporter_mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d77/classtesting_1_1internal_1_1_mutex.html">internal::Mutex</a> testing::internal::UnitTestImpl::global_test_part_result_reporter_mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00828">828</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab9a275094df6adc7e16a92133a692c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9a275094df6adc7e16a92133a692c3e">&#9670;&nbsp;</a></span>global_test_part_result_repoter_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a>* testing::internal::UnitTestImpl::global_test_part_result_repoter_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00825">825</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a73a797cf2b20129cb252b14c5fd9a0af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73a797cf2b20129cb252b14c5fd9a0af">&#9670;&nbsp;</a></span>gtest_trace_stack_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d13/classtesting_1_1internal_1_1_thread_local.html">internal::ThreadLocal</a>&lt;std::vector&lt;<a class="el" href="../../d6/deb/structtesting_1_1internal_1_1_trace_info.html">TraceInfo</a>&gt; &gt; testing::internal::UnitTestImpl::gtest_trace_stack_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00916">916</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afd663a104bb0a6df2c5143454f78e305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd663a104bb0a6df2c5143454f78e305">&#9670;&nbsp;</a></span>last_death_test_case_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::last_death_test_case_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00858">858</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a16c3caa0bac1a8dce650649760de30d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16c3caa0bac1a8dce650649760de30d2">&#9670;&nbsp;</a></span>listeners_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dab/classtesting_1_1_test_event_listeners.html">TestEventListeners</a> testing::internal::UnitTestImpl::listeners_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00884">884</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aaf1f1d4cbb2f681ded9bbf4c6075430c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf1f1d4cbb2f681ded9bbf4c6075430c">&#9670;&nbsp;</a></span>original_working_dir_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d14/classtesting_1_1internal_1_1_file_path.html">internal::FilePath</a> testing::internal::UnitTestImpl::original_working_dir_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00817">817</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a16b34d9194ca9552f581e472e9b18494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b34d9194ca9552f581e472e9b18494">&#9670;&nbsp;</a></span>os_stack_trace_getter_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d10/classtesting_1_1internal_1_1_os_stack_trace_getter_interface.html">OsStackTraceGetterInterface</a>* testing::internal::UnitTestImpl::os_stack_trace_getter_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00890">890</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adabbbc8985202ce655d50746bd383eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabbbc8985202ce655d50746bd383eae">&#9670;&nbsp;</a></span>parent_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d47/classtesting_1_1_unit_test.html">UnitTest</a>* const testing::internal::UnitTestImpl::parent_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00813">813</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a23ebe35dfe19dcda8e7b17e81f2cb4bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ebe35dfe19dcda8e7b17e81f2cb4bc">&#9670;&nbsp;</a></span>per_thread_test_part_result_reporter_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d13/classtesting_1_1internal_1_1_thread_local.html">internal::ThreadLocal</a>&lt;<a class="el" href="../../da/d6e/classtesting_1_1_test_part_result_reporter_interface.html">TestPartResultReporterInterface</a>*&gt; testing::internal::UnitTestImpl::per_thread_test_part_result_reporter_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00832">832</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab4c7d8a9ff3edbd8a98f91c4afaf3bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c7d8a9ff3edbd8a98f91c4afaf3bb8">&#9670;&nbsp;</a></span>post_flag_parse_init_performed_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool testing::internal::UnitTestImpl::post_flag_parse_init_performed_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00893">893</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a08551d7ff0ebb976ec82294ded8113ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08551d7ff0ebb976ec82294ded8113ea">&#9670;&nbsp;</a></span>random_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/da2/classtesting_1_1internal_1_1_random.html">internal::Random</a> testing::internal::UnitTestImpl::random_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00899">899</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0afcc95308ebfacb8d0f53790e77e1ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0afcc95308ebfacb8d0f53790e77e1ab">&#9670;&nbsp;</a></span>random_seed_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::internal::UnitTestImpl::random_seed_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00896">896</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2114799ed634ee849b9dcd9728f9b7b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2114799ed634ee849b9dcd9728f9b7b6">&#9670;&nbsp;</a></span>start_timestamp_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/da7/namespacetesting_1_1internal.html#a66a845df404b38fe85c5e14a069f255a">TimeInMillis</a> testing::internal::UnitTestImpl::start_timestamp_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00903">903</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9b30891f1a9d5b5c25de2bef0f0bb49a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b30891f1a9d5b5c25de2bef0f0bb49a">&#9670;&nbsp;</a></span>test_case_indices_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; testing::internal::UnitTestImpl::test_case_indices_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00846">846</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a79ec0f733ada2898efd1a7fbd8587fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ec0f733ada2898efd1a7fbd8587fb3">&#9670;&nbsp;</a></span>test_cases_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d0/dfa/classtesting_1_1_test_case.html">TestCase</a>*&gt; testing::internal::UnitTestImpl::test_cases_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a> の <a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html#l00840">840</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/googletest/googletest/src/<a class="el" href="../../d0/da1/gtest-internal-inl_8h_source.html">gtest-internal-inl.h</a></li>
+<li>str/googletest/googletest/src/<a class="el" href="../../df/d5b/gtest_8cc_source.html">gtest.cc</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d0/d75/namespacetesting.html">testing</a></li><li class="navelem"><a class="el" href="../../d0/da7/namespacetesting_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="../../d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html">UnitTestImpl</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+digraph "cpp.ast._GenericDeclaration"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="{cpp.ast._GenericDeclaration\n|+ name\l+ namespace\l|+ __init__()\l+ FullName()\l- _TypeStringHelper()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node1 [label="{cpp.ast.Node\n|+ start\l+ end\l|+ __init__()\l+ IsDeclaration()\l+ IsDefinition()\l+ IsExportable()\l+ Requires()\l+ XXX__str__()\l+ __repr__()\l- _StringHelper()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d9c/classcpp_1_1ast_1_1_node.html"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{object\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{cpp.ast._NestedType\n|+ fields\l|+ __init__()\l+ IsDefinition()\l+ IsExportable()\l+ __str__()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/df9/classcpp_1_1ast_1_1___nested_type.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{cpp.ast.Enum\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d04/classcpp_1_1ast_1_1_enum.html"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 [label="{cpp.ast.Union\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d94/classcpp_1_1ast_1_1_union.html"];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node6 [label="{cpp.ast.Class\n|+ bases\l+ body\l+ templated_types\l|+ __init__()\l+ IsDeclaration()\l+ IsDefinition()\l+ IsExportable()\l+ Requires()\l+ __str__()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d99/classcpp_1_1ast_1_1_class.html"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node7 [label="{cpp.ast.Struct\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d2a/classcpp_1_1ast_1_1_struct.html"];
+  Node0 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node8 [label="{cpp.ast.Function\n|+ return_type\l+ parameters\l+ modifiers\l+ body\l+ templated_types\l|+ __init__()\l+ IsDeclaration()\l+ IsDefinition()\l+ IsExportable()\l+ Requires()\l+ __str__()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/df5/classcpp_1_1ast_1_1_function.html"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node9 [label="{cpp.ast.Method\n|+ in_class\l|+ __init__()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d78/classcpp_1_1ast_1_1_method.html"];
+  Node0 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node10 [label="{cpp.ast.Type\n|+ templated_types\l+ name\l+ modifiers\l+ reference\l+ pointer\l+ array\l|+ __init__()\l+ __str__()\l+ IsDeclaration()\l+ IsDefinition()\l+ IsExportable()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d2b/classcpp_1_1ast_1_1_type.html"];
+  Node0 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node11 [label="{cpp.ast.Typedef\n|+ alias\l|+ __init__()\l+ IsDefinition()\l+ IsExportable()\l+ Requires()\l+ __str__()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d8c/classcpp_1_1ast_1_1_typedef.html"];
+  Node0 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node12 [label="{cpp.ast.VariableDeclaration\n|+ type\l+ initial_value\l|+ __init__()\l+ Requires()\l+ ToString()\l+ __str__()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/db4/classcpp_1_1ast_1_1_variable_declaration.html"];
+}

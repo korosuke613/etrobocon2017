@@ -1,0 +1,11 @@
+digraph "str/googletest/googletest/xcode/Samples/FrameworkSample" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_89848c9f728045b7dd1ace4364b5dd8c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Samples" fontname="Helvetica", fontsize="10", URL="dir_89848c9f728045b7dd1ace4364b5dd8c.html"]
+  dir_ab2466550534125f882fb01aac29824a [shape=box, label="FrameworkSample", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ab2466550534125f882fb01aac29824a.html"];
+  }
+  dir_62b27848db8e84eedf42f200e25d6bf1 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_62b27848db8e84eedf42f200e25d6bf1.html"];
+  dir_ab2466550534125f882fb01aac29824a->dir_62b27848db8e84eedf42f200e25d6bf1 [headlabel="1", labeldistance=1.5 headhref="dir_000031_000022.html"];
+}

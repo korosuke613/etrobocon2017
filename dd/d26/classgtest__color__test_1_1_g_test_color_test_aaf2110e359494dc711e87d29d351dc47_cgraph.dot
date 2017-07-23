@@ -1,0 +1,15 @@
+digraph "gtest_color_test.GTestColorTest.testAliasesOfYesAndNo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="gtest_color_test.GTestColor\lTest.testAliasesOfYesAndNo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="gtest_color_test.UsesColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/dee/namespacegtest__color__test.html#a96a2e5fa77bff1cba4a791ad1e5bdafa"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="gtest_color_test.SetEnvVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/dee/namespacegtest__color__test.html#af8659dcaaf59478690f30d7ac141b1c4"];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="gtest_test_utils.Main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d4a/namespacegtest__test__utils.html#a5361b42d9c6843b5b117ead4d1c58cc5"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="gtest_test_utils._ParseAnd\lStripGTestFlags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d4a/namespacegtest__test__utils.html#a05ad62af6574fd7e4fa2cc7c952c4f0b"];
+}

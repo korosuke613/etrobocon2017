@@ -1,0 +1,7 @@
+digraph "クラス階層図"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="std::tr1::gtest_internal\l::SameSizeTuplePrefixComparator\l\< 0, 0 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/structstd_1_1tr1_1_1gtest__internal_1_1_same_size_tuple_prefix_comparator_3_010_00_010_01_4.html"];
+}

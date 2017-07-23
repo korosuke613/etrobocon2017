@@ -1,0 +1,6 @@
+digraph "testing::gmock_matchers_test::DivisibleByImpl"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{testing::gmock_matchers\l_test::DivisibleByImpl\n|- divider_\l|+ DivisibleByImpl()\l+ MatchAndExplain()\l+ DescribeTo()\l+ DescribeNegationTo()\l+ set_divider()\l+ divider()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

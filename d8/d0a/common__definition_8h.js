@@ -1,0 +1,28 @@
+var common__definition_8h =
+[
+    [ "ARM", "d8/d0a/common__definition_8h.html#ac3b52e3cce0aee40e79cc75cdf46019d", null ],
+    [ "BLACK", "d8/d0a/common__definition_8h.html#a7b3b25cba33b07c303f3060fe41887f6", null ],
+    [ "CALIB_FONT", "d8/d0a/common__definition_8h.html#ab694ae852e331430e3b2fed005001244", null ],
+    [ "CALIB_FONT_HEIGHT", "d8/d0a/common__definition_8h.html#a726af388e87ef25ffe8a24cda2285737", null ],
+    [ "CALIB_FONT_WIDTH", "d8/d0a/common__definition_8h.html#a7a1984ed413358042cd26ce668de1069", null ],
+    [ "CMD_START", "d8/d0a/common__definition_8h.html#ab905e6aff2332984df0552c6b50203f2", null ],
+    [ "DEL", "d8/d0a/common__definition_8h.html#ad1e508e805e4ddbc05119be4bb260985", null ],
+    [ "DRIVE_L", "d8/d0a/common__definition_8h.html#a4620a50df75e71205acf384da2622046", null ],
+    [ "DRIVE_R", "d8/d0a/common__definition_8h.html#a756949f18e299595984d932ccb48c9b5", null ],
+    [ "DRIVING_POWER", "d8/d0a/common__definition_8h.html#a8753d78e895244a11e2dbaf829a6d243", null ],
+    [ "GREY", "d8/d0a/common__definition_8h.html#adce122f566c88a1eceeb79a635afa964", null ],
+    [ "GYRO", "d8/d0a/common__definition_8h.html#a1f08084cf1efb2a28f32b97344d199ed", null ],
+    [ "GYRO_OFFSET", "d8/d0a/common__definition_8h.html#a1cfd3fae2e2b2b1c07a342c6e5bff950", null ],
+    [ "IR", "d8/d0a/common__definition_8h.html#a68e22635ff207d8ca10459833856bd75", null ],
+    [ "LIGHT_BLACK", "d8/d0a/common__definition_8h.html#a2ecba8f807ca6bead8d387fc405a991a", null ],
+    [ "LIGHT_WHITE", "d8/d0a/common__definition_8h.html#abb735fb8c356b29b50009c6e7c65a4cf", null ],
+    [ "P_GAIN", "d8/d0a/common__definition_8h.html#a50efaeb0380deed26b8c63b0f4cbfabe", null ],
+    [ "PWM_ABS_MAX", "d8/d0a/common__definition_8h.html#a6babf6dbdc97636ceda1532ee33fda2d", null ],
+    [ "SONAR_ALERT_DISTANCE", "d8/d0a/common__definition_8h.html#a0ae4ea34274a4778e00849c9e3320281", null ],
+    [ "TAIL", "d8/d0a/common__definition_8h.html#a53295d05a2e17797421059d6c8f58cdd", null ],
+    [ "TAIL_ANGLE_DRIVE", "d8/d0a/common__definition_8h.html#a94c0df55596dd3c4eba1acf4d770fb40", null ],
+    [ "TAIL_ANGLE_STAND_UP", "d8/d0a/common__definition_8h.html#a18f2a31468d31ace5887ab28c52ce3d7", null ],
+    [ "TOUCH", "d8/d0a/common__definition_8h.html#a321091c58d47cf5343e216c8139ad3d5", null ],
+    [ "ULTRASONIC", "d8/d0a/common__definition_8h.html#a12ccdfeaa7a759254b28e310f5135792", null ],
+    [ "WHITE", "d8/d0a/common__definition_8h.html#a87b537f5fa5c109d3c05c13d6b18f382", null ]
+];

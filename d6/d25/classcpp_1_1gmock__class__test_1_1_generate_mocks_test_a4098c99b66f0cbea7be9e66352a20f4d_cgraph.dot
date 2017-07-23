@@ -1,0 +1,13 @@
+digraph "cpp.gmock_class_test.GenerateMocksTest.testTemplatedClass"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node18 [label="cpp.gmock_class_test.Generate\lMocksTest.testTemplatedClass",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node18 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="cpp.gmock_class_test.Test\lCase.assertEqualIgnoreLeadingWhitespace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d8a/classcpp_1_1gmock__class__test_1_1_test_case.html#a68f88bba11511f8c582123d47bf80464"];
+  Node19 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="cpp.gmock_class_test.Test\lCase.StripLeadingWhitespace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d8a/classcpp_1_1gmock__class__test_1_1_test_case.html#a366b15717eebc41e397357868c5734c5"];
+  Node18 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="cpp.gmock_class_test.Generate\lMocksTest.GenerateMocks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d25/classcpp_1_1gmock__class__test_1_1_generate_mocks_test.html#afdce6749dca14c1aa90762d389d92c87"];
+}

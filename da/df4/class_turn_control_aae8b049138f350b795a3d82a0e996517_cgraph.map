@@ -1,0 +1,5 @@
+<map id="TurnControl::calculateTurnForPid" name="TurnControl::calculateTurnForPid">
+<area shape="rect" id="node2" href="$dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="237,5,338,31"/>
+<area shape="rect" id="node3" href="$dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="232,55,343,80"/>
+<area shape="rect" id="node4" href="$dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="232,104,343,129"/>
+</map>

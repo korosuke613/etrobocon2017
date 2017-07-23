@@ -1,0 +1,11 @@
+digraph "cpp.ast.AstBuilder._SkipIf0Blocks"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node242 [label="cpp.ast.AstBuilder.\l_SkipIf0Blocks",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node242 -> Node243 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node243 [label="cpp.ast.AstBuilder.\l_GenerateOne",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#ae3a006851c8f8a4b5929e5e8bcbd4618"];
+  Node243 -> Node244 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node244 [label="cpp.ast.AstBuilder.Generate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#aebd0392eee56def849468af5b93b720a"];
+}

@@ -1,0 +1,7 @@
+digraph "クラス階層図"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="testing::internal::\lMatcherCastImpl\< T,\l Matcher\< U \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d0c/classtesting_1_1internal_1_1_matcher_cast_impl_3_01_t_00_01_matcher_3_01_u_01_4_01_4.html"];
+}

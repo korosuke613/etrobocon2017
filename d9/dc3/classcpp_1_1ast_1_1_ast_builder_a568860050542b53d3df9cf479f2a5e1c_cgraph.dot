@@ -1,0 +1,42 @@
+digraph "cpp.ast.AstBuilder.handle_explicit"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node377 [label="cpp.ast.AstBuilder.handle\l_explicit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node377 -> Node378 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node378 [label="cpp.ast.AstBuilder.GetMethod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#af22fb880867876144d20818391ad267a"];
+  Node378 -> Node379 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node379 [label="cpp.ast.AstBuilder.\l_GetTokensUpTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#a93e70a799351e5c40f07efb218889b31"];
+  Node379 -> Node380 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node380 [label="cpp.ast.AstBuilder.\l_GetVarTokensUpTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#a0b5b10f2608ba3e8851fbd65d51b1f22"];
+  Node380 -> Node381 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node381 [label="cpp.ast.AstBuilder.\l_GetNextToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#ac22b5683a8f1a86a49751d6d0bcd4b84"];
+  Node381 -> Node382 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node382 [label="cpp.ast.next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d9c/namespacecpp_1_1ast.html#a39ad8261fef5e0a7c1c17c510541b66f"];
+  Node378 -> Node383 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node383 [label="cpp.ast.AstBuilder.\l_GetMethod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#ad1d43eb0d4bdc6be1a9d7ff86c54bd66"];
+  Node383 -> Node381 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node383 -> Node384 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node384 [label="cpp.ast.AstBuilder.\l_GetMatchingChar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#a30936331903fe395451f8ed8ea2c26ba"];
+  Node384 -> Node381 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node383 -> Node385 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node385 [label="cpp.ast.AstBuilder.\l_GetParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#a89bbfbdcc6d029629f304aa9b643faf3"];
+  Node385 -> Node384 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node383 -> Node386 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node386 [label="cpp.ast.AstBuilder.Handle\lError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#a3e610662018d674f6c57ef19254cc470"];
+  Node386 -> Node387 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node387 [label="cpp.ast.reversed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d9c/namespacecpp_1_1ast.html#a0b1c00fd4aaa476b10de6b3a2550f39f"];
+  Node383 -> Node388 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node388 [label="cpp.ast.AstBuilder.\l_CreateVariable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#aed483f6f87068092d41c7b612553b330"];
+  Node383 -> Node389 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node389 [label="cpp.ast.AstBuilder.GetScope",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#add6826421ce64546a7dbb9b2e699a4d4"];
+  Node389 -> Node384 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node383 -> Node390 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node390 [label="cpp.ast.AstBuilder.\l_GetReturnTypeAndClassName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#abef1c7f48a562a67507bd7ed6f822710"];
+  Node390 -> Node391 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node391 [label="cpp.ast.AstBuilder.GetName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#a327957c4228325fc5f64821b047bdc6f"];
+  Node391 -> Node381 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node391 -> Node382 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node391 -> Node384 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

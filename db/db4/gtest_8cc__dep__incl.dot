@@ -1,0 +1,10 @@
+digraph "str/googletest/googletest/src/gtest.cc"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node60 [label="str/googletest/googletest\l/src/gtest.cc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node60 -> Node61 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node61 [label="str/googletest/googletest\l/src/gtest-all.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d8c/gtest-all_8cc.html"];
+  Node61 -> Node62 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node62 [label="str/googletest/googletest\l/codegear/gtest_all.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d03/gtest__all_8cc.html"];
+}

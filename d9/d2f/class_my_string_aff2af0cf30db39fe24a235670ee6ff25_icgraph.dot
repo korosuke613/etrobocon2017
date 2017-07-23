@@ -1,0 +1,12 @@
+digraph "MyString::c_string"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13 [label="MyString::c_string",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="MyString::Length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d2f/class_my_string.html#a4eb168b1ec401a732b3859abe004d648"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d8a/sample2__unittest_8cc.html#aaf04f91c362407dc08c8bf377a77b4db"];
+  Node13 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

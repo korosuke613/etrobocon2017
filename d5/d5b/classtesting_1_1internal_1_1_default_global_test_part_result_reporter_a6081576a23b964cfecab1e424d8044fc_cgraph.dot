@@ -1,0 +1,17 @@
+digraph "testing::internal::DefaultGlobalTestPartResultReporter::ReportTestPartResult"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="testing::internal::\lDefaultGlobalTestPartResult\lReporter::ReportTestPartResult",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="testing::internal::\lUnitTestImpl::current\l_test_result",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#aba3caef4ad23ce98be80250aeb0cc787"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="testing::TestResult\l::AddTestPartResult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d69/classtesting_1_1_test_result.html#ac28e9821ad3e9314c4fe41b119c5b44d"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="testing::internal::\lUnitTestImpl::listeners",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#a67211f8475936f88d0e4d30f841c0da4"];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="testing::TestEventListeners\l::repeater",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dab/classtesting_1_1_test_event_listeners.html#ad28af964081553de465fbfc1c5a46650"];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="testing::TestEventListener\l::OnTestPartResult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d46/classtesting_1_1_test_event_listener.html#a054f8705c883fa120b91473aff38f2ee"];
+}

@@ -1,0 +1,43 @@
+digraph "testing::internal::UntypedFunctionMockerBase::VerifyAndClearExpectationsLocked"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node95 [label="testing::internal::\lUntypedFunctionMockerBase\l::VerifyAndClearExpectationsLocked",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node95 -> Node96 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node96 [label="testing::internal::\lExpectationBase::IsOverSaturated",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html#a080dab35ecc6c57096f50758a0e8123d"];
+  Node96 -> Node97 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node97 [label="testing::Cardinality\l::IsOverSaturatedByCallCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d1f/classtesting_1_1_cardinality.html#a9b6a55179f6dcc8fadec26e6d93f3e88"];
+  Node95 -> Node98 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node98 [label="testing::internal::\lExpectationBase::IsSatisfied",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html#ae629adc2dd9aee0ac62e50314f1a6449"];
+  Node98 -> Node99 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node99 [label="testing::Cardinality\l::IsSatisfiedByCallCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d1f/classtesting_1_1_cardinality.html#a6c5e2bd2887ff06e20e6fcc4255a0c1c"];
+  Node95 -> Node100 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node100 [label="testing::internal::\lExpectationBase::source_text",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html#a77efdf254df61cfc4f28c91b0e6f62aa"];
+  Node95 -> Node101 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node101 [label="testing::internal::\lExpectationBase::MaybeDescribe\lExtraMatcherTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html#a5ce4f648c7b112d27b798711d1e3ff5b"];
+  Node95 -> Node102 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node102 [label="testing::internal::\lExpectationBase::DescribeCall\lCountTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html#a2beebed3ade29077bcf294b449bb8b9d"];
+  Node102 -> Node103 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 [label="testing::internal::\lExpectationBase::cardinality",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html#a1399efffbc8675510a15c6ba1f18184b"];
+  Node102 -> Node104 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 [label="testing::Cardinality\l::DescribeTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d1f/classtesting_1_1_cardinality.html#a2955f4b65022c422f56e79b767c4fa71"];
+  Node102 -> Node105 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node105 [label="testing::Cardinality\l::DescribeActualCallCountTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d1f/classtesting_1_1_cardinality.html#a7cbea339e2f3072a98367e087aa296e8"];
+  Node102 -> Node106 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node106 [label="testing::internal::\lExpectationBase::call_count",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html#aacc0399271907194ac1627439f65047a"];
+  Node102 -> Node96 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node102 -> Node107 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node107 [label="testing::internal::\lExpectationBase::IsSaturated",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html#ad3e4340cedefdc24fce1478a8d6cab93"];
+  Node107 -> Node108 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node108 [label="testing::Cardinality\l::IsSaturatedByCallCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d1f/classtesting_1_1_cardinality.html#a57128ba46931e24a2b39af177e3346f8"];
+  Node102 -> Node98 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node102 -> Node109 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node109 [label="testing::internal::\lExpectationBase::is\l_retired",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html#afe539dbc5b29d9635403767a4708c476"];
+  Node95 -> Node110 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node110 [label="testing::internal::\lExpect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#ad93379317e10862a77b9fb90aa96e083"];
+  Node95 -> Node111 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node111 [label="testing::internal::\lExpectationBase::file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html#ad8aae77623dbddd5d2099ea6499eda53"];
+  Node95 -> Node112 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node112 [label="testing::internal::\lExpectationBase::line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de4/classtesting_1_1internal_1_1_expectation_base.html#a6a44d831449d31e0e46d0070625b452c"];
+}

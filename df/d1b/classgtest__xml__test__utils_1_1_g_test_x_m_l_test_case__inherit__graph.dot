@@ -1,0 +1,12 @@
+digraph "gtest_xml_test_utils.GTestXMLTestCase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="{gtest_xml_test_utils.GTest\lXMLTestCase\n|+ identifying_attribute\l|+ AssertEquivalentNodes()\l+ NormalizeXml()\l- _GetChildren()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node1 [label="{gtest_test_utils::TestCase\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{gtest_xml_outfiles\l_test.GTestXMLOutFilesTest\n|+ output_dir_\l|+ setUp()\l+ tearDown()\l+ DeleteFilesAndDir()\l+ testOutfile1()\l+ testOutfile2()\l- _TestOutFile()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d8d/classgtest__xml__outfiles__test_1_1_g_test_x_m_l_out_files_test.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{gtest_xml_output_unittest.\lGTestXMLOutputUnitTest\n||+ testNonEmptyXmlOutput()\l+ testEmptyXmlOutput()\l+ testTimestampValue()\l+ testDefaultOutputFile()\l+ testSuppressedXmlOutput()\l+ testFilteredTestXmlOutput()\l- _GetXmlOutput()\l- _TestXmlOutput()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d74/classgtest__xml__output__unittest_1_1_g_test_x_m_l_output_unit_test.html"];
+}

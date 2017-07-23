@@ -1,0 +1,7 @@
+digraph "クラス階層図"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="namespace1::MyTypeInName\lSpace1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d31/classnamespace1_1_1_my_type_in_name_space1.html"];
+}

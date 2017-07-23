@@ -1,0 +1,15 @@
+digraph "testing::internal::CaptureStderr"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node177 [label="testing::internal::\lCaptureStderr",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node177 -> Node178 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node178 [label="testing::internal::\lCheckedDowncastToActualType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#abfe9bfb020d38aa4e0e12c001911b22b"];
+  Node177 -> Node179 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node179 [label="testing::internal::\lGTestLog::~GTestLog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d9e/classtesting_1_1internal_1_1_g_test_log.html#a978a099703bbaa0f380216e8d7ee03d3"];
+  Node177 -> Node180 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node180 [label="TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d88/gtest-death-test__test_8cc.html#a8a47cdbd11c2456db464fe098d134aa0"];
+  Node177 -> Node181 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node181 [label="testing::internal::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#abbc9510a4f690912c32835213d95198f"];
+}

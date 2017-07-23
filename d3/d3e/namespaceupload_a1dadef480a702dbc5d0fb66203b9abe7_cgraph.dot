@@ -1,0 +1,9 @@
+digraph "upload.GetRpcServer"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node49 [label="upload.GetRpcServer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node49 -> Node50 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="upload.GetEmail",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d3e/namespaceupload.html#a4f169469a6d43221ebd38cfd546484e1"];
+}

@@ -1,0 +1,47 @@
+digraph "testing::MatchResultListener::stream"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node33 [label="testing::MatchResultListener\l::stream",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node33 -> Node34 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="testing::internal::\lArgsMatcherImpl::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d8f/classtesting_1_1internal_1_1_args_matcher_impl.html#a60383b3073a61f9d82cbf31fe19e6bfa"];
+  Node33 -> Node35 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node35 [label="testing::internal::\lMatchPrintAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#a0821df2611d54c79bac990719ad8a2dd"];
+  Node35 -> Node36 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node36 [label="testing::internal::\lPredicateFormatterFromMatcher\l::operator()",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd3/classtesting_1_1internal_1_1_predicate_formatter_from_matcher.html#a51d28bee5f86347ea34b7a0f2758b599"];
+  Node35 -> Node37 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="testing::internal::\lPointeeMatcher::Impl\l::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d4c/classtesting_1_1internal_1_1_pointee_matcher_1_1_impl.html#a2aeaf0b7284fb2c7a7745746ec6ce63b"];
+  Node35 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="testing::internal::\lWhenDynamicCastToMatcher\l::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d99/classtesting_1_1internal_1_1_when_dynamic_cast_to_matcher.html#a270f6a1e6ad7c9b69fdefca27c513bf5"];
+  Node35 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="testing::internal::\lWhenDynamicCastToMatcher\l\< To & \>::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d0a/classtesting_1_1internal_1_1_when_dynamic_cast_to_matcher_3_01_to_01_6_01_4.html#a1eb76a60d0943519623f438b29f70a5f"];
+  Node35 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="testing::internal::\lFieldMatcher::MatchAndExplainImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d58/classtesting_1_1internal_1_1_field_matcher.html#a3ac8072e68a33f78531d7b1eff96810c"];
+  Node35 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="testing::internal::\lPropertyMatcher::MatchAndExplainImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc3/classtesting_1_1internal_1_1_property_matcher.html#aee28dd64a2896159661a4f3ad3329ffd"];
+  Node35 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="testing::internal::\lResultOfMatcher::Impl\l::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/df7/classtesting_1_1internal_1_1_result_of_matcher_1_1_impl.html#a4f9d7dfdad8ad8f1ab4f5ffe11c26763"];
+  Node33 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="testing::internal::\lSizeIsMatcher::Impl\l::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d60/classtesting_1_1internal_1_1_size_is_matcher_1_1_impl.html#a5180472f5a18b8c0314ed835c52e09d4"];
+  Node33 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="testing::internal::\lBeginEndDistanceIsMatcher\l::Impl::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d8a/classtesting_1_1internal_1_1_begin_end_distance_is_matcher_1_1_impl.html#aa7bda59eae256018247699b0baa285c9"];
+  Node33 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="testing::internal::\lContainerEqMatcher::\lMatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d85/classtesting_1_1internal_1_1_container_eq_matcher.html#a348c6139776dd7d713d100e406ee38f4"];
+  Node33 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="testing::internal::\lWhenSortedByMatcher\l::Impl::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d30/classtesting_1_1internal_1_1_when_sorted_by_matcher_1_1_impl.html#a9d8f57c729df8c041f2fd7febbc950da"];
+  Node33 -> Node47 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="testing::internal::\lPointwiseMatcher::Impl\l::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d60/classtesting_1_1internal_1_1_pointwise_matcher_1_1_impl.html#a4253946989f3743c4dd983909f2d062b"];
+  Node33 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="testing::internal::\lQuantifierMatcherImpl\l::MatchAndExplainImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/dd6/classtesting_1_1internal_1_1_quantifier_matcher_impl.html#ab8f64532b70f47fc60f7983ebe5cbfc6"];
+  Node33 -> Node49 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node49 [label="testing::internal::\lPairMatcherImpl::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d09/classtesting_1_1internal_1_1_pair_matcher_impl.html#a1bba47f97cbf50a1f6331d3f7bfd47a1"];
+  Node33 -> Node50 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="testing::internal::\lElementsAreMatcherImpl\l::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/daf/classtesting_1_1internal_1_1_elements_are_matcher_impl.html#a6562159fa83e09417c3552fd881f878e"];
+  Node33 -> Node51 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node51 [label="testing::internal::\lUnorderedElementsAreMatcher\lImplBase::VerifyAllElementsAndMatchers\lAreMatched",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d3d/classtesting_1_1internal_1_1_unordered_elements_are_matcher_impl_base.html#a2acbd8f42cb60d9b6d5d7779f156798d"];
+  Node33 -> Node52 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 [label="testing::gmock_matchers\l_test::NewEvenMatcherImpl\l::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d59/classtesting_1_1gmock__matchers__test_1_1_new_even_matcher_impl.html#a56819af55d88569fdfaa51b937f76337"];
+  Node33 -> Node53 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node53 [label="testing::gmock_matchers\l_test::PolymorphicIsEvenImpl\l::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d26/classtesting_1_1gmock__matchers__test_1_1_polymorphic_is_even_impl.html#ab8d500c4d6c57645527fc367acf6189e"];
+}

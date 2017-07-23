@@ -1,0 +1,6 @@
+digraph "testing::ExpectationSet"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{testing::ExpectationSet\n|- expectations_\l|+ ExpectationSet()\l+ ExpectationSet()\l+ ExpectationSet()\l+ operator==()\l+ operator!=()\l+ operator+=()\l+ size()\l+ begin()\l+ end()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

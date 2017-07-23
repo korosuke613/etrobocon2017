@@ -1,0 +1,6 @@
+digraph "testing::gmock_matchers_test::AClass"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="{testing::gmock_matchers\l_test::AClass\n|- n_\l- s_\l- x_\l|+ AClass()\l+ n()\l+ set_n()\l+ s()\l+ set_s()\l+ x()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

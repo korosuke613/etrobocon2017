@@ -1,0 +1,9 @@
+digraph "testing::internal::HasNewFatalFailureHelper"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="{testing::internal::\lHasNewFatalFailureHelper\n|- has_new_fatal_failure_\l|+ HasNewFatalFailureHelper()\l+ ~HasNewFatalFailureHelper()\l+ ReportTestPartResult()\l+ has_new_fatal_failure()\l- GTEST_DISALLOW_COPY\l_AND_ASSIGN_()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{testing::TestPartResultReporter\lInterface\n||+ ~TestPartResultReporterInterface()\l+ ReportTestPartResult()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d6e/classtesting_1_1_test_part_result_reporter_interface.html"];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" -original_reporter_" ,arrowhead="odiamond",fontname="Helvetica"];
+}

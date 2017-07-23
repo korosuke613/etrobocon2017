@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017: Pid クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('dc/de1/class_pid.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="../../dc/dba/class_pid-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Pid クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../da/dcf/_pid_8h_source.html">Pid.h</a>&gt;</code></p>
+<div class="dynheader">
+Pid の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d82/class_pid__inherit__graph.png" border="0" usemap="#_pid_inherit__map" alt="Inheritance graph"/></div>
+<map name="_pid_inherit__map" id="_pid_inherit__map">
+<area shape="rect" id="node2" href="../../dd/dc1/class_speed_control.html" title="{SpeedControl\n|+ speed_value_all\l&#45; walker\l&#45; forward\l&#45; preAngleL\l&#45; preAngleR\l&#45; speed_value\l&#45; speedCount\l&#45; pid_value_old\l&#45; distance4ms\l|+ SpeedControl()\l+ calculateSpeedForPid()\l+ calcDistance4ms()\l}" alt="" coords="5,287,177,493"/>
+<area shape="rect" id="node3" href="../../da/df4/class_turn_control.html" title="{TurnControl\n|&#45; colorSensor\l&#45; turn\l&#45; pid_value_old\l|+ TurnControl()\l+ calculateTurnForPid()\l+ getBrightness()\l}" alt="" coords="202,327,362,453"/>
+</map>
+</div>
+<div class="dynheader">
+Pid 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d5/dff/class_pid__coll__graph.png" border="0" usemap="#_pid_coll__map" alt="Collaboration graph"/></div>
+<map name="_pid_coll__map" id="_pid_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae8a1a4bf3e2d160a4e6148fcea98e030"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#ae8a1a4bf3e2d160a4e6148fcea98e030">Pid</a> (double <a class="el" href="../../dc/de1/class_pid.html#a4b60c048b8e5813a6c0489375a3c958b">p_gain</a>, double <a class="el" href="../../dc/de1/class_pid.html#a9c8208eedb0ecee97840e14dfd16626e">i_gain</a>, double <a class="el" href="../../dc/de1/class_pid.html#a883e3838c812c53429e0f24d1c2ef60d">d_gain</a>, double <a class="el" href="../../dc/de1/class_pid.html#ad76317ac0cbd15dd47f01fcb1d8a82f9">target</a>)</td></tr>
+<tr class="separator:ae8a1a4bf3e2d160a4e6148fcea98e030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8626402086bcd10cbb7f581c92300fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#aa8626402086bcd10cbb7f581c92300fb">setPid</a> (double _p_gain, double _i_gain, double _d_gain, double _target)</td></tr>
+<tr class="separator:aa8626402086bcd10cbb7f581c92300fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe78d03b3e96db6b2dc6b3255ac84bb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5">calculate</a> (double light_value)</td></tr>
+<tr class="separator:afe78d03b3e96db6b2dc6b3255ac84bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b32c86a4e7ee2f25dce2a0fc49823d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d">get_output</a> ()</td></tr>
+<tr class="separator:a12b32c86a4e7ee2f25dce2a0fc49823d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a28a8c791f6ee5ed84709171b21d2471a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a">limitOutput</a> (double pid_value)</td></tr>
+<tr class="separator:a28a8c791f6ee5ed84709171b21d2471a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7876d7f18a70f80454acac1eabe4b50d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#a7876d7f18a70f80454acac1eabe4b50d">wrapper_of_constructor</a> (double _p_gain, double _i_gain, double _d_gain, double _diff, double _integral, double _target, double _output)</td></tr>
+<tr class="separator:a7876d7f18a70f80454acac1eabe4b50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a4b60c048b8e5813a6c0489375a3c958b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#a4b60c048b8e5813a6c0489375a3c958b">p_gain</a></td></tr>
+<tr class="separator:a4b60c048b8e5813a6c0489375a3c958b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c8208eedb0ecee97840e14dfd16626e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#a9c8208eedb0ecee97840e14dfd16626e">i_gain</a></td></tr>
+<tr class="separator:a9c8208eedb0ecee97840e14dfd16626e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a883e3838c812c53429e0f24d1c2ef60d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#a883e3838c812c53429e0f24d1c2ef60d">d_gain</a></td></tr>
+<tr class="separator:a883e3838c812c53429e0f24d1c2ef60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1b4b483c7a09b47b85cd8835036212"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#afb1b4b483c7a09b47b85cd8835036212">old_diff</a></td></tr>
+<tr class="separator:afb1b4b483c7a09b47b85cd8835036212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11d656ec933a259dac8d9c1676231d9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#af11d656ec933a259dac8d9c1676231d9">integral</a></td></tr>
+<tr class="separator:af11d656ec933a259dac8d9c1676231d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76317ac0cbd15dd47f01fcb1d8a82f9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#ad76317ac0cbd15dd47f01fcb1d8a82f9">target</a></td></tr>
+<tr class="separator:ad76317ac0cbd15dd47f01fcb1d8a82f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5301c216590e271aa949b4c766d125"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#a3c5301c216590e271aa949b4c766d125">output</a></td></tr>
+<tr class="separator:a3c5301c216590e271aa949b4c766d125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc75963b7c0dcd6e334ab7db81bfa1c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#a9fc75963b7c0dcd6e334ab7db81bfa1c">del</a></td></tr>
+<tr class="separator:a9fc75963b7c0dcd6e334ab7db81bfa1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../da/dcf/_pid_8h_source.html">Pid.h</a> の <a class="el" href="../../da/dcf/_pid_8h_source.html#l00004">4</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ae8a1a4bf3e2d160a4e6148fcea98e030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a1a4bf3e2d160a4e6148fcea98e030">&#9670;&nbsp;</a></span>Pid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pid::Pid </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>p_gain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>i_gain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>d_gain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d35/_pid_8cpp_source.html">Pid.cpp</a> の <a class="el" href="../../d2/d35/_pid_8cpp_source.html#l00004">4</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/de1/class_pid_ae8a1a4bf3e2d160a4e6148fcea98e030_cgraph.png" border="0" usemap="#dc/de1/class_pid_ae8a1a4bf3e2d160a4e6148fcea98e030_cgraph" alt=""/></div>
+<map name="dc/de1/class_pid_ae8a1a4bf3e2d160a4e6148fcea98e030_cgraph" id="dc/de1/class_pid_ae8a1a4bf3e2d160a4e6148fcea98e030_cgraph">
+<area shape="rect" id="node2" href="../../dc/de1/class_pid.html#a7876d7f18a70f80454acac1eabe4b50d" title="Pid::wrapper_of_constructor" alt="" coords="121,5,309,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="afe78d03b3e96db6b2dc6b3255ac84bb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe78d03b3e96db6b2dc6b3255ac84bb5">&#9670;&nbsp;</a></span>calculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pid::calculate </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>light_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d35/_pid_8cpp_source.html">Pid.cpp</a> の <a class="el" href="../../d2/d35/_pid_8cpp_source.html#l00021">21</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/de1/class_pid_afe78d03b3e96db6b2dc6b3255ac84bb5_icgraph.png" border="0" usemap="#dc/de1/class_pid_afe78d03b3e96db6b2dc6b3255ac84bb5_icgraph" alt=""/></div>
+<map name="dc/de1/class_pid_afe78d03b3e96db6b2dc6b3255ac84bb5_icgraph" id="dc/de1/class_pid_afe78d03b3e96db6b2dc6b3255ac84bb5_icgraph">
+<area shape="rect" id="node2" href="../../dd/dc1/class_speed_control.html#ae07cd7a54722a64d3eb30a3ec40ee497" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="154,5,355,44"/>
+<area shape="rect" id="node3" href="../../da/df4/class_turn_control.html#aae8b049138f350b795a3d82a0e996517" title="TurnControl::calculateTurn\lForPid" alt="" coords="166,68,344,107"/>
+<area shape="rect" id="node4" href="../../da/dbb/class_line_tracer.html#ab595c9e8ed7c1e4b1d38b87cf10e32ee" title="LineTracer::runLine" alt="" coords="403,75,540,100"/>
+<area shape="rect" id="node5" href="../../dd/d88/class_normal_course.html#ab8ef305defb0f50a518eba4ac6453908" title="NormalCourse::runNormalCourse" alt="" coords="588,75,808,100"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a12b32c86a4e7ee2f25dce2a0fc49823d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b32c86a4e7ee2f25dce2a0fc49823d">&#9670;&nbsp;</a></span>get_output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pid::get_output </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d35/_pid_8cpp_source.html">Pid.cpp</a> の <a class="el" href="../../d2/d35/_pid_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/de1/class_pid_a12b32c86a4e7ee2f25dce2a0fc49823d_icgraph.png" border="0" usemap="#dc/de1/class_pid_a12b32c86a4e7ee2f25dce2a0fc49823d_icgraph" alt=""/></div>
+<map name="dc/de1/class_pid_a12b32c86a4e7ee2f25dce2a0fc49823d_icgraph" id="dc/de1/class_pid_a12b32c86a4e7ee2f25dce2a0fc49823d_icgraph">
+<area shape="rect" id="node2" href="../../dd/dc1/class_speed_control.html#ae07cd7a54722a64d3eb30a3ec40ee497" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="164,5,366,44"/>
+<area shape="rect" id="node3" href="../../da/df4/class_turn_control.html#aae8b049138f350b795a3d82a0e996517" title="TurnControl::calculateTurn\lForPid" alt="" coords="176,68,354,107"/>
+<area shape="rect" id="node4" href="../../da/dbb/class_line_tracer.html#ab595c9e8ed7c1e4b1d38b87cf10e32ee" title="LineTracer::runLine" alt="" coords="414,75,550,100"/>
+<area shape="rect" id="node5" href="../../dd/d88/class_normal_course.html#ab8ef305defb0f50a518eba4ac6453908" title="NormalCourse::runNormalCourse" alt="" coords="598,75,818,100"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a28a8c791f6ee5ed84709171b21d2471a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a8c791f6ee5ed84709171b21d2471a">&#9670;&nbsp;</a></span>limitOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pid::limitOutput </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pid_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d35/_pid_8cpp_source.html">Pid.cpp</a> の <a class="el" href="../../d2/d35/_pid_8cpp_source.html#l00047">47</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/de1/class_pid_a28a8c791f6ee5ed84709171b21d2471a_icgraph.png" border="0" usemap="#dc/de1/class_pid_a28a8c791f6ee5ed84709171b21d2471a_icgraph" alt=""/></div>
+<map name="dc/de1/class_pid_a28a8c791f6ee5ed84709171b21d2471a_icgraph" id="dc/de1/class_pid_a28a8c791f6ee5ed84709171b21d2471a_icgraph">
+<area shape="rect" id="node2" href="../../dd/dc1/class_speed_control.html#ae07cd7a54722a64d3eb30a3ec40ee497" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="165,5,367,44"/>
+<area shape="rect" id="node3" href="../../da/df4/class_turn_control.html#aae8b049138f350b795a3d82a0e996517" title="TurnControl::calculateTurn\lForPid" alt="" coords="177,68,355,107"/>
+<area shape="rect" id="node4" href="../../da/dbb/class_line_tracer.html#ab595c9e8ed7c1e4b1d38b87cf10e32ee" title="LineTracer::runLine" alt="" coords="415,75,551,100"/>
+<area shape="rect" id="node5" href="../../dd/d88/class_normal_course.html#ab8ef305defb0f50a518eba4ac6453908" title="NormalCourse::runNormalCourse" alt="" coords="599,75,819,100"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa8626402086bcd10cbb7f581c92300fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8626402086bcd10cbb7f581c92300fb">&#9670;&nbsp;</a></span>setPid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pid::setPid </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_p_gain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_i_gain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_d_gain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d35/_pid_8cpp_source.html">Pid.cpp</a> の <a class="el" href="../../d2/d35/_pid_8cpp_source.html#l00040">40</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/de1/class_pid_aa8626402086bcd10cbb7f581c92300fb_icgraph.png" border="0" usemap="#dc/de1/class_pid_aa8626402086bcd10cbb7f581c92300fb_icgraph" alt=""/></div>
+<map name="dc/de1/class_pid_aa8626402086bcd10cbb7f581c92300fb_icgraph" id="dc/de1/class_pid_aa8626402086bcd10cbb7f581c92300fb_icgraph">
+<area shape="rect" id="node2" href="../../d5/ddb/class_left_normal_course.html#aa921f543570692f3040df1b4987df3f6" title="LeftNormalCourse::goStraight" alt="" coords="153,5,351,31"/>
+<area shape="rect" id="node3" href="../../d5/ddb/class_left_normal_course.html#a812ba4346b4733c8d6b3e78994154055" title="LeftNormalCourse::goStraightSlow" alt="" coords="138,55,365,80"/>
+<area shape="rect" id="node4" href="../../d5/ddb/class_left_normal_course.html#a6a9720eab3f65dc2ed752f2d2478a59c" title="LeftNormalCourse::goCurve\lRight" alt="" coords="158,104,345,143"/>
+<area shape="rect" id="node5" href="../../d5/ddb/class_left_normal_course.html#a20faf91b82997a71467b7fd62bf2051e" title="LeftNormalCourse::goCurve\lLeftShort" alt="" coords="158,167,345,205"/>
+<area shape="rect" id="node6" href="../../d5/ddb/class_left_normal_course.html#ae9a9ae9f4486eab18150a96ab8264ce7" title="LeftNormalCourse::goCurveLeft" alt="" coords="147,229,356,255"/>
+<area shape="rect" id="node7" href="../../dd/d88/class_normal_course.html#ab8ef305defb0f50a518eba4ac6453908" title="NormalCourse::runNormalCourse" alt="" coords="142,279,362,304"/>
+<area shape="rect" id="node8" href="../../d4/d58/class_right_normal_course.html#a4793d60642464ad2adf9504a0e755820" title="RightNormalCourse::\lgoStraight" alt="" coords="179,328,325,367"/>
+<area shape="rect" id="node9" href="../../d4/d58/class_right_normal_course.html#af697c444eec9cc9343522a9f2e1deaed" title="RightNormalCourse::\lgoCurveRight" alt="" coords="179,391,325,429"/>
+<area shape="rect" id="node10" href="../../d4/d58/class_right_normal_course.html#af5156d4276dde7ec0295078996d8a413" title="RightNormalCourse::\lgoCurveLeftShort" alt="" coords="179,453,325,492"/>
+<area shape="rect" id="node11" href="../../d4/d58/class_right_normal_course.html#ad69b533301cdbea1acf812b3b0136b1d" title="RightNormalCourse::\lgoCurveLeft" alt="" coords="179,516,325,555"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7876d7f18a70f80454acac1eabe4b50d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7876d7f18a70f80454acac1eabe4b50d">&#9670;&nbsp;</a></span>wrapper_of_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pid::wrapper_of_constructor </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_p_gain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_i_gain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_d_gain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_diff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_integral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d35/_pid_8cpp_source.html">Pid.cpp</a> の <a class="el" href="../../d2/d35/_pid_8cpp_source.html#l00009">9</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/de1/class_pid_a7876d7f18a70f80454acac1eabe4b50d_icgraph.png" border="0" usemap="#dc/de1/class_pid_a7876d7f18a70f80454acac1eabe4b50d_icgraph" alt=""/></div>
+<map name="dc/de1/class_pid_a7876d7f18a70f80454acac1eabe4b50d_icgraph" id="dc/de1/class_pid_a7876d7f18a70f80454acac1eabe4b50d_icgraph">
+<area shape="rect" id="node2" href="../../dc/de1/class_pid.html#ae8a1a4bf3e2d160a4e6148fcea98e030" title="Pid::Pid" alt="" coords="241,5,309,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a883e3838c812c53429e0f24d1c2ef60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a883e3838c812c53429e0f24d1c2ef60d">&#9670;&nbsp;</a></span>d_gain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pid::d_gain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/dcf/_pid_8h_source.html">Pid.h</a> の <a class="el" href="../../da/dcf/_pid_8h_source.html#l00009">9</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9fc75963b7c0dcd6e334ab7db81bfa1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc75963b7c0dcd6e334ab7db81bfa1c">&#9670;&nbsp;</a></span>del</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pid::del</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/dcf/_pid_8h_source.html">Pid.h</a> の <a class="el" href="../../da/dcf/_pid_8h_source.html#l00014">14</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9c8208eedb0ecee97840e14dfd16626e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c8208eedb0ecee97840e14dfd16626e">&#9670;&nbsp;</a></span>i_gain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pid::i_gain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/dcf/_pid_8h_source.html">Pid.h</a> の <a class="el" href="../../da/dcf/_pid_8h_source.html#l00008">8</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af11d656ec933a259dac8d9c1676231d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11d656ec933a259dac8d9c1676231d9">&#9670;&nbsp;</a></span>integral</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pid::integral</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/dcf/_pid_8h_source.html">Pid.h</a> の <a class="el" href="../../da/dcf/_pid_8h_source.html#l00011">11</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afb1b4b483c7a09b47b85cd8835036212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb1b4b483c7a09b47b85cd8835036212">&#9670;&nbsp;</a></span>old_diff</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pid::old_diff</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/dcf/_pid_8h_source.html">Pid.h</a> の <a class="el" href="../../da/dcf/_pid_8h_source.html#l00010">10</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3c5301c216590e271aa949b4c766d125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5301c216590e271aa949b4c766d125">&#9670;&nbsp;</a></span>output</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pid::output</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/dcf/_pid_8h_source.html">Pid.h</a> の <a class="el" href="../../da/dcf/_pid_8h_source.html#l00013">13</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4b60c048b8e5813a6c0489375a3c958b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b60c048b8e5813a6c0489375a3c958b">&#9670;&nbsp;</a></span>p_gain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pid::p_gain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/dcf/_pid_8h_source.html">Pid.h</a> の <a class="el" href="../../da/dcf/_pid_8h_source.html#l00007">7</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad76317ac0cbd15dd47f01fcb1d8a82f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76317ac0cbd15dd47f01fcb1d8a82f9">&#9670;&nbsp;</a></span>target</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pid::target</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/dcf/_pid_8h_source.html">Pid.h</a> の <a class="el" href="../../da/dcf/_pid_8h_source.html#l00012">12</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="../../da/dcf/_pid_8h_source.html">Pid.h</a></li>
+<li>str/apps/src/<a class="el" href="../../d2/d35/_pid_8cpp_source.html">Pid.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dc/de1/class_pid.html">Pid</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

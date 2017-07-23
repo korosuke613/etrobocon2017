@@ -1,0 +1,6 @@
+digraph "testing::MockFunction&lt; R(A0, A1, A2, A3, A4, A5, A6, A7)&gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{testing::MockFunction\l\< R(A0, A1, A2, A3, A4,\l A5, A6, A7)\>\n||+ MockFunction()\l+ MOCK_METHOD8_T()\l- GTEST_DISALLOW_COPY\l_AND_ASSIGN_()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

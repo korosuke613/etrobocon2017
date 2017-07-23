@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017: TurnControl クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('da/df4/class_turn_control.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="../../df/db9/class_turn_control-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">TurnControl クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a>&gt;</code></p>
+<div class="dynheader">
+TurnControl の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/deb/class_turn_control__inherit__graph.png" border="0" usemap="#_turn_control_inherit__map" alt="Inheritance graph"/></div>
+<map name="_turn_control_inherit__map" id="_turn_control_inherit__map">
+<area shape="rect" id="node2" href="../../dc/de1/class_pid.html" title="{Pid\n|&#45; p_gain\l&#45; i_gain\l&#45; d_gain\l&#45; old_diff\l&#45; integral\l&#45; target\l&#45; output\l&#45; del\l|+ Pid()\l+ setPid()\l+ calculate()\l+ get_output()\l# limitOutput()\l&#45; wrapper_of_constructor()\l}" alt="" coords="5,5,184,239"/>
+</map>
+</div>
+<div class="dynheader">
+TurnControl 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d3f/class_turn_control__coll__graph.png" border="0" usemap="#_turn_control_coll__map" alt="Collaboration graph"/></div>
+<map name="_turn_control_coll__map" id="_turn_control_coll__map">
+<area shape="rect" id="node2" href="../../dc/de1/class_pid.html" title="{Pid\n|&#45; p_gain\l&#45; i_gain\l&#45; d_gain\l&#45; old_diff\l&#45; integral\l&#45; target\l&#45; output\l&#45; del\l|+ Pid()\l+ setPid()\l+ calculate()\l+ get_output()\l# limitOutput()\l&#45; wrapper_of_constructor()\l}" alt="" coords="5,5,184,239"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa517e31db70e27de33c21143b1de110a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df4/class_turn_control.html#aa517e31db70e27de33c21143b1de110a">TurnControl</a> ()</td></tr>
+<tr class="separator:aa517e31db70e27de33c21143b1de110a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8b049138f350b795a3d82a0e996517"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df4/class_turn_control.html#aae8b049138f350b795a3d82a0e996517">calculateTurnForPid</a> (int8_t forward)</td></tr>
+<tr class="separator:aae8b049138f350b795a3d82a0e996517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae694cf3cc817bba1d242bc5920cbc0a"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df4/class_turn_control.html#aae694cf3cc817bba1d242bc5920cbc0a">getBrightness</a> ()</td></tr>
+<tr class="separator:aae694cf3cc817bba1d242bc5920cbc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_pid"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_pid')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../dc/de1/class_pid.html">Pid</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ae8a1a4bf3e2d160a4e6148fcea98e030 inherit pub_methods_class_pid"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#ae8a1a4bf3e2d160a4e6148fcea98e030">Pid</a> (double <a class="el" href="../../dc/de1/class_pid.html#a4b60c048b8e5813a6c0489375a3c958b">p_gain</a>, double <a class="el" href="../../dc/de1/class_pid.html#a9c8208eedb0ecee97840e14dfd16626e">i_gain</a>, double <a class="el" href="../../dc/de1/class_pid.html#a883e3838c812c53429e0f24d1c2ef60d">d_gain</a>, double <a class="el" href="../../dc/de1/class_pid.html#ad76317ac0cbd15dd47f01fcb1d8a82f9">target</a>)</td></tr>
+<tr class="separator:ae8a1a4bf3e2d160a4e6148fcea98e030 inherit pub_methods_class_pid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8626402086bcd10cbb7f581c92300fb inherit pub_methods_class_pid"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#aa8626402086bcd10cbb7f581c92300fb">setPid</a> (double _p_gain, double _i_gain, double _d_gain, double _target)</td></tr>
+<tr class="separator:aa8626402086bcd10cbb7f581c92300fb inherit pub_methods_class_pid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe78d03b3e96db6b2dc6b3255ac84bb5 inherit pub_methods_class_pid"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5">calculate</a> (double light_value)</td></tr>
+<tr class="separator:afe78d03b3e96db6b2dc6b3255ac84bb5 inherit pub_methods_class_pid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b32c86a4e7ee2f25dce2a0fc49823d inherit pub_methods_class_pid"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d">get_output</a> ()</td></tr>
+<tr class="separator:a12b32c86a4e7ee2f25dce2a0fc49823d inherit pub_methods_class_pid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a86644ddd9f082d6a661274b36eac2835"><td class="memItemLeft" align="right" valign="top">ColorSensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df4/class_turn_control.html#a86644ddd9f082d6a661274b36eac2835">colorSensor</a></td></tr>
+<tr class="separator:a86644ddd9f082d6a661274b36eac2835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad8ba59aad9a53dd115f158c7afba0a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df4/class_turn_control.html#a5ad8ba59aad9a53dd115f158c7afba0a">turn</a></td></tr>
+<tr class="separator:a5ad8ba59aad9a53dd115f158c7afba0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea2fa471fffa8be4ee9568a46e357197"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df4/class_turn_control.html#aea2fa471fffa8be4ee9568a46e357197">pid_value_old</a></td></tr>
+<tr class="separator:aea2fa471fffa8be4ee9568a46e357197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_methods_class_pid"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_pid')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../dc/de1/class_pid.html">Pid</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a28a8c791f6ee5ed84709171b21d2471a inherit pro_methods_class_pid"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a">limitOutput</a> (double pid_value)</td></tr>
+<tr class="separator:a28a8c791f6ee5ed84709171b21d2471a inherit pro_methods_class_pid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a> の <a class="el" href="../../da/d7f/_turn_control_8h_source.html#l00009">9</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="aa517e31db70e27de33c21143b1de110a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa517e31db70e27de33c21143b1de110a">&#9670;&nbsp;</a></span>TurnControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TurnControl::TurnControl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html">TurnControl.cpp</a> の <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html#l00003">3</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aae8b049138f350b795a3d82a0e996517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae8b049138f350b795a3d82a0e996517">&#9670;&nbsp;</a></span>calculateTurnForPid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t TurnControl::calculateTurnForPid </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>forward</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html">TurnControl.cpp</a> の <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html#l00008">8</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/df4/class_turn_control_aae8b049138f350b795a3d82a0e996517_cgraph.png" border="0" usemap="#da/df4/class_turn_control_aae8b049138f350b795a3d82a0e996517_cgraph" alt=""/></div>
+<map name="da/df4/class_turn_control_aae8b049138f350b795a3d82a0e996517_cgraph" id="da/df4/class_turn_control_aae8b049138f350b795a3d82a0e996517_cgraph">
+<area shape="rect" id="node2" href="../../dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="237,5,338,31"/>
+<area shape="rect" id="node3" href="../../dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="232,55,343,80"/>
+<area shape="rect" id="node4" href="../../dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="232,104,343,129"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/df4/class_turn_control_aae8b049138f350b795a3d82a0e996517_icgraph.png" border="0" usemap="#da/df4/class_turn_control_aae8b049138f350b795a3d82a0e996517_icgraph" alt=""/></div>
+<map name="da/df4/class_turn_control_aae8b049138f350b795a3d82a0e996517_icgraph" id="da/df4/class_turn_control_aae8b049138f350b795a3d82a0e996517_icgraph">
+<area shape="rect" id="node2" href="../../da/dbb/class_line_tracer.html#ab595c9e8ed7c1e4b1d38b87cf10e32ee" title="LineTracer::runLine" alt="" coords="232,12,368,37"/>
+<area shape="rect" id="node3" href="../../dd/d88/class_normal_course.html#ab8ef305defb0f50a518eba4ac6453908" title="NormalCourse::runNormalCourse" alt="" coords="416,12,636,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aae694cf3cc817bba1d242bc5920cbc0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae694cf3cc817bba1d242bc5920cbc0a">&#9670;&nbsp;</a></span>getBrightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t TurnControl::getBrightness </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html">TurnControl.cpp</a> の <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html#l00019">19</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/df4/class_turn_control_aae694cf3cc817bba1d242bc5920cbc0a_icgraph.png" border="0" usemap="#da/df4/class_turn_control_aae694cf3cc817bba1d242bc5920cbc0a_icgraph" alt=""/></div>
+<map name="da/df4/class_turn_control_aae694cf3cc817bba1d242bc5920cbc0a_icgraph" id="da/df4/class_turn_control_aae694cf3cc817bba1d242bc5920cbc0a_icgraph">
+<area shape="rect" id="node2" href="../../d5/ddb/class_left_normal_course.html#aab759fd5871f1ba580aba419b68d58f2" title="LeftNormalCourse::stop" alt="" coords="238,5,400,31"/>
+<area shape="rect" id="node3" href="../../d4/d58/class_right_normal_course.html#ab687a3f7564d9c0ce9e861d69d98f4e4" title="RightNormalCourse::stop" alt="" coords="234,55,405,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a86644ddd9f082d6a661274b36eac2835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86644ddd9f082d6a661274b36eac2835">&#9670;&nbsp;</a></span>colorSensor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColorSensor TurnControl::colorSensor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a> の <a class="el" href="../../da/d7f/_turn_control_8h_source.html#l00015">15</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aea2fa471fffa8be4ee9568a46e357197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea2fa471fffa8be4ee9568a46e357197">&#9670;&nbsp;</a></span>pid_value_old</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TurnControl::pid_value_old</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a> の <a class="el" href="../../da/d7f/_turn_control_8h_source.html#l00017">17</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5ad8ba59aad9a53dd115f158c7afba0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ad8ba59aad9a53dd115f158c7afba0a">&#9670;&nbsp;</a></span>turn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TurnControl::turn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a> の <a class="el" href="../../da/d7f/_turn_control_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a></li>
+<li>str/apps/src/<a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html">TurnControl.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../da/df4/class_turn_control.html">TurnControl</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+digraph "TEST"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node12 [label="TEST",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="MyString::c_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d2f/class_my_string.html#aff2af0cf30db39fe24a235670ee6ff25"];
+}

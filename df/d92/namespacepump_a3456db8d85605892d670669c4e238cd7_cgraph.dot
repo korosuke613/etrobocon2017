@@ -1,0 +1,26 @@
+digraph "pump.BeautifyCode"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pump.BeautifyCode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="pump.WrapLongLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d92/namespacepump.html#a02427e2ddc80f0f408e27dfc3e38e702"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pump.IsSingleLineComment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d92/namespacepump.html#a417078b1d036b67756c47e5dc50324dc"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pump.IsHeaderGuardInclude\lOrOneLineIWYUPragma",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d92/namespacepump.html#ac8a553b60dc83d100361a0e98d98451b"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pump.WrapComment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d92/namespacepump.html#a73951c98652038351b1cd24291433e12"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pump.IsInPreprocessorDirective",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d92/namespacepump.html#aa33101b01d5781710262f3b5dadd8bc8"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pump.WrapPreprocessorDirective",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d92/namespacepump.html#a59e8ae06bae068d2d72df4f0340635d8"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pump.WrapCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d92/namespacepump.html#a42502545a37fcd4513a0a7ac8ef3c0eb"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="pump.IsMultiLineIWYUPragma",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d92/namespacepump.html#a707a3ff4514c89607e48a87589aed787"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="pump.WrapPlainCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d92/namespacepump.html#a60723738cc38d8ced7e2cfecc72d8b11"];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

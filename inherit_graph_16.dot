@@ -1,0 +1,7 @@
+digraph "クラス階層図"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="foo::PrintableViaPrintTo\lTemplate\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d79/classfoo_1_1_printable_via_print_to_template.html"];
+}

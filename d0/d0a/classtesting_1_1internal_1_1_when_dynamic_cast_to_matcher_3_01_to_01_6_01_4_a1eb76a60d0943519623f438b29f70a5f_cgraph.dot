@@ -1,0 +1,27 @@
+digraph "testing::internal::WhenDynamicCastToMatcher&lt; To &amp; &gt;::MatchAndExplain"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="testing::internal::\lWhenDynamicCastToMatcher\l\< To & \>::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="testing::internal::\lMatchPrintAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#a0821df2611d54c79bac990719ad8a2dd"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="testing::MatchResultListener\l::IsInterested",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d01/classtesting_1_1_match_result_listener.html#ac34f9771f2ba6128cd6a1348b3aebda3"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="testing::internal::\lMatcherBase::Matches",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d93/classtesting_1_1internal_1_1_matcher_base.html#a3b479673ff40cac1a7d548e91d789cb2"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="testing::internal::\lMatcherBase::MatchAndExplain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d93/classtesting_1_1internal_1_1_matcher_base.html#a08429a6d7e7d330de4a4eb4e272105a7"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="testing::internal::\lUniversalPrint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#a30708fa2bacf11895b03bdb21eb72309"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="testing::gtest_printers\l_test::Print",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d01/namespacetesting_1_1gtest__printers__test.html#ab1fefdb330a473343afa3cc6d46a65f6"];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="testing::MatchResultListener\l::stream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d01/classtesting_1_1_match_result_listener.html#a5abecb247e005f7f50a94898e3f44ee3"];
+  Node3 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="testing::internal::\lIsReadableTypeName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#abeedf209750a21d996983e84224ac816"];
+  Node3 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="testing::internal::\lPrintIfNotEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#ad609eb8bac84ab487464a3449c57640a"];
+  Node3 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="testing::StringMatchResult\lListener::str",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dd6/classtesting_1_1_string_match_result_listener.html#a77e501016fa53b76e7eee1739d25dde9"];
+}

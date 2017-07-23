@@ -1,0 +1,6 @@
+digraph "testing::gmock_generated_function_mockers_test::FooInterface"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="{testing::gmock_generated\l_function_mockers_test\l::FooInterface\n||+ ~FooInterface()\l+ VoidReturning()\l+ Nullary()\l+ Unary()\l+ Binary()\l+ Decimal()\l+ TakesNonConstReference()\l+ TakesConstReference()\l+ TakesConst()\l+ OverloadedOnArgumentNumber()\lほか 7 件…\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

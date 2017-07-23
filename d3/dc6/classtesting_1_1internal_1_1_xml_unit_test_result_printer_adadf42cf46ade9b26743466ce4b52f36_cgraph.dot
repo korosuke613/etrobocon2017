@@ -1,0 +1,19 @@
+digraph "testing::internal::XmlUnitTestResultPrinter::EscapeXml"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="testing::internal::\lXmlUnitTestResultPrinter\l::EscapeXml",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="testing::internal::\lXmlUnitTestResultPrinter\l::IsValidXmlCharacter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/dc6/classtesting_1_1internal_1_1_xml_unit_test_result_printer.html#a2b83a24e3ec8544efa1156f9d6e51873"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="testing::internal::\lXmlUnitTestResultPrinter\l::IsNormalizableWhitespace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/dc6/classtesting_1_1internal_1_1_xml_unit_test_result_printer.html#af9d5af6e5d0c505d5c3bd50a8d2a8d76"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="testing::internal::\lString::FormatByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dde/classtesting_1_1internal_1_1_string.html#af702dc7cbd569589d8e3ff215a7cafa9"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="testing::Message::GetString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/da9/classtesting_1_1_message.html#a2cdc4df62bdcc9df37651a1cf527704e"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="testing::internal::\lStringStreamToString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#ac0a2b7f69fc829d80a39e925b6417e39"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="testing::internal::\lscoped_ptr::get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d6a/classtesting_1_1internal_1_1scoped__ptr.html#aa5984291e12453f1e81b7676d1fa26fd"];
+}

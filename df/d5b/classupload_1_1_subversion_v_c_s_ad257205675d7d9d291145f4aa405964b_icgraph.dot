@@ -1,0 +1,10 @@
+digraph "upload.SubversionVCS._GuessBase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node18 [label="upload.SubversionVCS.\l_GuessBase",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="upload.SubversionVCS.\l__init__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d5b/classupload_1_1_subversion_v_c_s.html#a8333f94e27335ce83eed0cc3f5a1eeb0"];
+  Node18 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

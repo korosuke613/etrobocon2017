@@ -1,0 +1,1090 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017: upload.AbstractRpcServer クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('db/d9e/classupload_1_1_abstract_rpc_server.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="../../d8/d24/classupload_1_1_abstract_rpc_server-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">upload.AbstractRpcServer クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+upload.AbstractRpcServer の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d5d/classupload_1_1_abstract_rpc_server__inherit__graph.png" border="0" usemap="#upload_8_abstract_rpc_server_inherit__map" alt="Inheritance graph"/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+upload.AbstractRpcServer 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/d89/classupload_1_1_abstract_rpc_server__coll__graph.png" border="0" usemap="#upload_8_abstract_rpc_server_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 1 -->
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3f6bc1bd16b52bd5a5c33a1fedeef2d0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a3f6bc1bd16b52bd5a5c33a1fedeef2d0">__init__</a> (self, <a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#ab7188d827e2faddcf970f524f5856192">host</a>, <a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#aee0090a3bcf07b913a7dd596a5dabb8f">auth_function</a>, <a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a783a4a7e4ffb776a57a3f267300a213b">host_override</a>=None, <a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#adbbf0109afc13d58d7815fa143cb779f">extra_headers</a>={}, <a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#affe342205c4647d41b127f5a5634858b">save_cookies</a>=False)</td></tr>
+<tr class="separator:a3f6bc1bd16b52bd5a5c33a1fedeef2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b913f8bd00da4741c47ab49ea94cb5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#ac1b913f8bd00da4741c47ab49ea94cb5">Send</a> (self, request_path, payload=None, content_type=&quot;application/octet-stream&quot;, timeout=None, kwargs)</td></tr>
+<tr class="separator:ac1b913f8bd00da4741c47ab49ea94cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f6bc1bd16b52bd5a5c33a1fedeef2d0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a3f6bc1bd16b52bd5a5c33a1fedeef2d0">__init__</a> (self, <a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#ab7188d827e2faddcf970f524f5856192">host</a>, <a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#aee0090a3bcf07b913a7dd596a5dabb8f">auth_function</a>, <a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a783a4a7e4ffb776a57a3f267300a213b">host_override</a>=None, <a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#adbbf0109afc13d58d7815fa143cb779f">extra_headers</a>={}, <a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#affe342205c4647d41b127f5a5634858b">save_cookies</a>=False)</td></tr>
+<tr class="separator:a3f6bc1bd16b52bd5a5c33a1fedeef2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b913f8bd00da4741c47ab49ea94cb5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#ac1b913f8bd00da4741c47ab49ea94cb5">Send</a> (self, request_path, payload=None, content_type=&quot;application/octet-stream&quot;, timeout=None, kwargs)</td></tr>
+<tr class="separator:ac1b913f8bd00da4741c47ab49ea94cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:ab7188d827e2faddcf970f524f5856192"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#ab7188d827e2faddcf970f524f5856192">host</a></td></tr>
+<tr class="separator:ab7188d827e2faddcf970f524f5856192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783a4a7e4ffb776a57a3f267300a213b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a783a4a7e4ffb776a57a3f267300a213b">host_override</a></td></tr>
+<tr class="separator:a783a4a7e4ffb776a57a3f267300a213b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee0090a3bcf07b913a7dd596a5dabb8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#aee0090a3bcf07b913a7dd596a5dabb8f">auth_function</a></td></tr>
+<tr class="separator:aee0090a3bcf07b913a7dd596a5dabb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692955750c802e461c6336d3000cd365"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a692955750c802e461c6336d3000cd365">authenticated</a></td></tr>
+<tr class="separator:a692955750c802e461c6336d3000cd365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbbf0109afc13d58d7815fa143cb779f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#adbbf0109afc13d58d7815fa143cb779f">extra_headers</a></td></tr>
+<tr class="separator:adbbf0109afc13d58d7815fa143cb779f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe342205c4647d41b127f5a5634858b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#affe342205c4647d41b127f5a5634858b">save_cookies</a></td></tr>
+<tr class="separator:affe342205c4647d41b127f5a5634858b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa931446476e0e86f3ade7fef0a0aea5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#aa931446476e0e86f3ade7fef0a0aea5a">opener</a></td></tr>
+<tr class="separator:aa931446476e0e86f3ade7fef0a0aea5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a388a9974eab1157ba4785e2ab2c33be9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a388a9974eab1157ba4785e2ab2c33be9">_GetOpener</a> (self)</td></tr>
+<tr class="separator:a388a9974eab1157ba4785e2ab2c33be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1553c79619eec0770932cd4fa325243c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a1553c79619eec0770932cd4fa325243c">_CreateRequest</a> (self, url, data=None)</td></tr>
+<tr class="separator:a1553c79619eec0770932cd4fa325243c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a801cc3fdbb8222fa58d41e098f70a7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a5a801cc3fdbb8222fa58d41e098f70a7">_GetAuthToken</a> (self, email, password)</td></tr>
+<tr class="separator:a5a801cc3fdbb8222fa58d41e098f70a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ba7a36fd840608f532694be6b6a9ae"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a45ba7a36fd840608f532694be6b6a9ae">_GetAuthCookie</a> (self, auth_token)</td></tr>
+<tr class="separator:a45ba7a36fd840608f532694be6b6a9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8517a9d90ee2478752a53302f01d868d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a8517a9d90ee2478752a53302f01d868d">_Authenticate</a> (self)</td></tr>
+<tr class="separator:a8517a9d90ee2478752a53302f01d868d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388a9974eab1157ba4785e2ab2c33be9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a388a9974eab1157ba4785e2ab2c33be9">_GetOpener</a> (self)</td></tr>
+<tr class="separator:a388a9974eab1157ba4785e2ab2c33be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1553c79619eec0770932cd4fa325243c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a1553c79619eec0770932cd4fa325243c">_CreateRequest</a> (self, url, data=None)</td></tr>
+<tr class="separator:a1553c79619eec0770932cd4fa325243c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a801cc3fdbb8222fa58d41e098f70a7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a5a801cc3fdbb8222fa58d41e098f70a7">_GetAuthToken</a> (self, email, password)</td></tr>
+<tr class="separator:a5a801cc3fdbb8222fa58d41e098f70a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ba7a36fd840608f532694be6b6a9ae"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a45ba7a36fd840608f532694be6b6a9ae">_GetAuthCookie</a> (self, auth_token)</td></tr>
+<tr class="separator:a45ba7a36fd840608f532694be6b6a9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8517a9d90ee2478752a53302f01d868d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html#a8517a9d90ee2478752a53302f01d868d">_Authenticate</a> (self)</td></tr>
+<tr class="separator:a8517a9d90ee2478752a53302f01d868d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><pre class="fragment">Provides a common interface for a simple RPC server.</pre> 
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00124">124</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a3f6bc1bd16b52bd5a5c33a1fedeef2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f6bc1bd16b52bd5a5c33a1fedeef2d0">&#9670;&nbsp;</a></span>__init__() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>auth_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>host_override</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>extra_headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>save_cookies</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Creates a new HttpRpcServer.
+
+Args:
+  host: The host to send requests to.
+  auth_function: A function that takes no arguments and returns an
+(email, password) tuple when called. Will be called if authentication
+is required.
+  host_override: The host header to send to the server (defaults to host).
+  extra_headers: A dict of extra headers to append to every request.
+  save_cookies: If True, save the authentication cookies to local disk.
+If False, use an in-memory cookiejar instead.  Subclasses must
+implement this functionality.  Defaults to False.
+</pre> 
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00128">128</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3f6bc1bd16b52bd5a5c33a1fedeef2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f6bc1bd16b52bd5a5c33a1fedeef2d0">&#9670;&nbsp;</a></span>__init__() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>auth_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>host_override</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>extra_headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>save_cookies</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Creates a new HttpRpcServer.
+
+Args:
+  host: The host to send requests to.
+  auth_function: A function that takes no arguments and returns an
+(email, password) tuple when called. Will be called if authentication
+is required.
+  host_override: The host header to send to the server (defaults to host).
+  extra_headers: A dict of extra headers to append to every request.
+  save_cookies: If True, save the authentication cookies to local disk.
+If False, use an in-memory cookiejar instead.  Subclasses must
+implement this functionality.  Defaults to False.
+</pre> 
+<p class="definition"> <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html#l00128">128</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a3f6bc1bd16b52bd5a5c33a1fedeef2d0_cgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a3f6bc1bd16b52bd5a5c33a1fedeef2d0_cgraph" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a8517a9d90ee2478752a53302f01d868d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8517a9d90ee2478752a53302f01d868d">&#9670;&nbsp;</a></span>_Authenticate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer._Authenticate </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Authenticates the user.
+
+The authentication process works as follows:
+ 1) We get a username and password from the user
+ 2) We use ClientLogin to obtain an AUTH token for the user
+(see http://code.google.com/apis/accounts/AuthForInstalledApps.html).
+ 3) We pass the auth token to /_ah/login on the server to obtain an
+authentication cookie. If login was successful, it tries to redirect
+us to the URL we provided.
+
+If we attempt to access the upload API without first obtaining an
+authentication cookie, it returns a 401 response and directs us to
+authenticate ourselves with ClientLogin.
+</pre> 
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00239">239</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a8517a9d90ee2478752a53302f01d868d_cgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a8517a9d90ee2478752a53302f01d868d_cgraph" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a8517a9d90ee2478752a53302f01d868d_icgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a8517a9d90ee2478752a53302f01d868d_icgraph" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a8517a9d90ee2478752a53302f01d868d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8517a9d90ee2478752a53302f01d868d">&#9670;&nbsp;</a></span>_Authenticate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer._Authenticate </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Authenticates the user.
+
+The authentication process works as follows:
+ 1) We get a username and password from the user
+ 2) We use ClientLogin to obtain an AUTH token for the user
+(see http://code.google.com/apis/accounts/AuthForInstalledApps.html).
+ 3) We pass the auth token to /_ah/login on the server to obtain an
+authentication cookie. If login was successful, it tries to redirect
+us to the URL we provided.
+
+If we attempt to access the upload API without first obtaining an
+authentication cookie, it returns a 401 response and directs us to
+authenticate ourselves with ClientLogin.
+</pre> 
+<p class="definition"> <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html#l00239">239</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a8517a9d90ee2478752a53302f01d868d_cgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a8517a9d90ee2478752a53302f01d868d_cgraph" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a1553c79619eec0770932cd4fa325243c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1553c79619eec0770932cd4fa325243c">&#9670;&nbsp;</a></span>_CreateRequest() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer._CreateRequest </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Creates a new urllib request.</pre> 
+<p class="definition"> <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html#l00162">162</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a1553c79619eec0770932cd4fa325243c_cgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a1553c79619eec0770932cd4fa325243c_cgraph" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a1553c79619eec0770932cd4fa325243c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1553c79619eec0770932cd4fa325243c">&#9670;&nbsp;</a></span>_CreateRequest() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer._CreateRequest </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Creates a new urllib request.</pre> 
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00162">162</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a1553c79619eec0770932cd4fa325243c_icgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a1553c79619eec0770932cd4fa325243c_icgraph" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a45ba7a36fd840608f532694be6b6a9ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ba7a36fd840608f532694be6b6a9ae">&#9670;&nbsp;</a></span>_GetAuthCookie() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer._GetAuthCookie </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>auth_token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Fetches authentication cookies for an authentication token.
+
+Args:
+  auth_token: The authentication token returned by ClientLogin.
+
+Raises:
+  HTTPError: If there was an error fetching the authentication cookies.
+</pre> 
+<p class="definition"> <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html#l00215">215</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a45ba7a36fd840608f532694be6b6a9ae_cgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a45ba7a36fd840608f532694be6b6a9ae_cgraph" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a45ba7a36fd840608f532694be6b6a9ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ba7a36fd840608f532694be6b6a9ae">&#9670;&nbsp;</a></span>_GetAuthCookie() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer._GetAuthCookie </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>auth_token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Fetches authentication cookies for an authentication token.
+
+Args:
+  auth_token: The authentication token returned by ClientLogin.
+
+Raises:
+  HTTPError: If there was an error fetching the authentication cookies.
+</pre> 
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00215">215</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a45ba7a36fd840608f532694be6b6a9ae_cgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a45ba7a36fd840608f532694be6b6a9ae_cgraph" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a45ba7a36fd840608f532694be6b6a9ae_icgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a45ba7a36fd840608f532694be6b6a9ae_icgraph" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="a5a801cc3fdbb8222fa58d41e098f70a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a801cc3fdbb8222fa58d41e098f70a7">&#9670;&nbsp;</a></span>_GetAuthToken() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer._GetAuthToken </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Uses ClientLogin to authenticate the user, returning an auth token.
+
+Args:
+  email:    The user's email address
+  password: The user's password
+
+Raises:
+  ClientLoginError: If there was an error authenticating with ClientLogin.
+  HTTPError: If there was some other form of HTTP error.
+
+Returns:
+  The authentication token returned by ClientLogin.
+</pre> 
+<p class="definition"> <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html#l00172">172</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a5a801cc3fdbb8222fa58d41e098f70a7_cgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a5a801cc3fdbb8222fa58d41e098f70a7_cgraph" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+<a id="a5a801cc3fdbb8222fa58d41e098f70a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a801cc3fdbb8222fa58d41e098f70a7">&#9670;&nbsp;</a></span>_GetAuthToken() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer._GetAuthToken </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Uses ClientLogin to authenticate the user, returning an auth token.
+
+Args:
+  email:    The user's email address
+  password: The user's password
+
+Raises:
+  ClientLoginError: If there was an error authenticating with ClientLogin.
+  HTTPError: If there was some other form of HTTP error.
+
+Returns:
+  The authentication token returned by ClientLogin.
+</pre> 
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00172">172</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a5a801cc3fdbb8222fa58d41e098f70a7_cgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a5a801cc3fdbb8222fa58d41e098f70a7_cgraph" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a5a801cc3fdbb8222fa58d41e098f70a7_icgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a5a801cc3fdbb8222fa58d41e098f70a7_icgraph" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="a388a9974eab1157ba4785e2ab2c33be9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388a9974eab1157ba4785e2ab2c33be9">&#9670;&nbsp;</a></span>_GetOpener() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer._GetOpener </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Returns an OpenerDirector for making HTTP requests.
+
+Returns:
+  A urllib2.OpenerDirector object.
+</pre> 
+<p class="definition"> <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html#l00154">154</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a388a9974eab1157ba4785e2ab2c33be9_cgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a388a9974eab1157ba4785e2ab2c33be9_cgraph" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+
+</div>
+</div>
+<a id="a388a9974eab1157ba4785e2ab2c33be9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388a9974eab1157ba4785e2ab2c33be9">&#9670;&nbsp;</a></span>_GetOpener() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer._GetOpener </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Returns an OpenerDirector for making HTTP requests.
+
+Returns:
+  A urllib2.OpenerDirector object.
+</pre> 
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00154">154</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_a388a9974eab1157ba4785e2ab2c33be9_icgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_a388a9974eab1157ba4785e2ab2c33be9_icgraph" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="ac1b913f8bd00da4741c47ab49ea94cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1b913f8bd00da4741c47ab49ea94cb5">&#9670;&nbsp;</a></span>Send() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer.Send </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>request_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>payload</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>content_type</em> = <code>&quot;application/octet-stream&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>kwargs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Sends an RPC and returns the response.
+
+Args:
+  request_path: The path to send the request to, eg /api/appversion/create.
+  payload: The body of the request, or None to send an empty request.
+  content_type: The Content-Type header to use.
+  timeout: timeout in seconds; default None i.e. no timeout.
+(Note: for large requests on OS X, the timeout doesn't work right.)
+  kwargs: Any keyword arguments are converted into query string parameters.
+
+Returns:
+  The response body, as a string.
+</pre> 
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00294">294</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_ac1b913f8bd00da4741c47ab49ea94cb5_cgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_ac1b913f8bd00da4741c47ab49ea94cb5_cgraph" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_ac1b913f8bd00da4741c47ab49ea94cb5_icgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_ac1b913f8bd00da4741c47ab49ea94cb5_icgraph" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="ac1b913f8bd00da4741c47ab49ea94cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1b913f8bd00da4741c47ab49ea94cb5">&#9670;&nbsp;</a></span>Send() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def upload.AbstractRpcServer.Send </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>request_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>payload</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>content_type</em> = <code>&quot;application/octet-stream&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>kwargs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Sends an RPC and returns the response.
+
+Args:
+  request_path: The path to send the request to, eg /api/appversion/create.
+  payload: The body of the request, or None to send an empty request.
+  content_type: The Content-Type header to use.
+  timeout: timeout in seconds; default None i.e. no timeout.
+(Note: for large requests on OS X, the timeout doesn't work right.)
+  kwargs: Any keyword arguments are converted into query string parameters.
+
+Returns:
+  The response body, as a string.
+</pre> 
+<p class="definition"> <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d4/d1f/googletest_2scripts_2upload_8py_source.html#l00294">294</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d9e/classupload_1_1_abstract_rpc_server_ac1b913f8bd00da4741c47ab49ea94cb5_cgraph.png" border="0" usemap="#db/d9e/classupload_1_1_abstract_rpc_server_ac1b913f8bd00da4741c47ab49ea94cb5_cgraph" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aee0090a3bcf07b913a7dd596a5dabb8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee0090a3bcf07b913a7dd596a5dabb8f">&#9670;&nbsp;</a></span>auth_function</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">upload.AbstractRpcServer.auth_function</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00144">144</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a692955750c802e461c6336d3000cd365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692955750c802e461c6336d3000cd365">&#9670;&nbsp;</a></span>authenticated</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">upload.AbstractRpcServer.authenticated</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00145">145</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adbbf0109afc13d58d7815fa143cb779f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbbf0109afc13d58d7815fa143cb779f">&#9670;&nbsp;</a></span>extra_headers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">upload.AbstractRpcServer.extra_headers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00146">146</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab7188d827e2faddcf970f524f5856192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7188d827e2faddcf970f524f5856192">&#9670;&nbsp;</a></span>host</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">upload.AbstractRpcServer.host</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00142">142</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a783a4a7e4ffb776a57a3f267300a213b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783a4a7e4ffb776a57a3f267300a213b">&#9670;&nbsp;</a></span>host_override</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">upload.AbstractRpcServer.host_override</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00143">143</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa931446476e0e86f3ade7fef0a0aea5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa931446476e0e86f3ade7fef0a0aea5a">&#9670;&nbsp;</a></span>opener</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">upload.AbstractRpcServer.opener</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00148">148</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="affe342205c4647d41b127f5a5634858b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe342205c4647d41b127f5a5634858b">&#9670;&nbsp;</a></span>save_cookies</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">upload.AbstractRpcServer.save_cookies</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a> の <a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html#l00147">147</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/googletest/googlemock/scripts/<a class="el" href="../../d6/df0/googlemock_2scripts_2upload_8py_source.html">upload.py</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d3/d3e/namespaceupload.html">upload</a></li><li class="navelem"><a class="el" href="../../db/d9e/classupload_1_1_abstract_rpc_server.html">AbstractRpcServer</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

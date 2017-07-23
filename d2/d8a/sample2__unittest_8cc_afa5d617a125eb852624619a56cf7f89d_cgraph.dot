@@ -1,0 +1,13 @@
+digraph "TEST"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node15 [label="TEST",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="MyString::Set",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d2f/class_my_string.html#a521c4cd7eccac6ce554d8a51505e4970"];
+  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="MyString::CloneCString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d2f/class_my_string.html#a40753dcfa3314a8993f32bdd75d67ce2"];
+  Node15 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="MyString::c_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d2f/class_my_string.html#aff2af0cf30db39fe24a235670ee6ff25"];
+}

@@ -1,0 +1,6 @@
+digraph "std::tr1::gtest_internal::SameSizeTuplePrefixComparator&lt; kSize1, kSize2 &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{std::tr1::gtest_internal\l::SameSizeTuplePrefixComparator\l\< kSize1, kSize2 \>\n||}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

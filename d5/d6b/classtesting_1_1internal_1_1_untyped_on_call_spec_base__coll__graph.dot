@@ -1,0 +1,6 @@
+digraph "testing::internal::UntypedOnCallSpecBase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="{testing::internal::\lUntypedOnCallSpecBase\n|# file_\l# line_\l# last_clause_\l|+ UntypedOnCallSpecBase()\l+ file()\l+ line()\l# AssertSpecProperty()\l# ExpectSpecProperty()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

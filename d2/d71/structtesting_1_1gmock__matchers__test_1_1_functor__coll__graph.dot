@@ -1,0 +1,8 @@
+digraph "testing::gmock_matchers_test::Functor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="{testing::gmock_matchers\l_test::Functor\n||+ operator()()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{std::unary_function\l\< int, std::string \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

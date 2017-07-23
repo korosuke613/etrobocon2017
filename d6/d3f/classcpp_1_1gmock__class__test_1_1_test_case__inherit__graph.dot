@@ -1,0 +1,12 @@
+digraph "cpp.gmock_class_test.TestCase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="{cpp.gmock_class_test.TestCase\n||+ StripLeadingWhitespace()\l+ assertEqualIgnoreLeading\lWhitespace()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node1 [label="{unittest::TestCase\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{cpp.gmock_class_test.Generate\lMethodsTest\n||+ GenerateMethodSource()\l+ testSimpleMethod()\l+ testSimpleConstructorsAnd\lDestructor()\l+ testVirtualDestructor()\l+ testExplicitlyDefaultedConstructors\lAndDestructor()\l+ testExplicitlyDeletedConstructors\lAndDestructor()\l+ testSimpleOverrideMethod()\l+ testSimpleConstMethod()\l+ testExplicitVoid()\l+ testStrangeNewlineInParameter()\lほか 12 件…\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d60/classcpp_1_1gmock__class__test_1_1_generate_methods_test.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{cpp.gmock_class_test.Generate\lMocksTest\n||+ GenerateMocks()\l+ testNamespaces()\l+ testClassWithStorageSpecifier\lMacro()\l+ testTemplatedForwardDeclaration()\l+ testTemplatedClass()\l+ testTemplateInATemplateTypedef()\l+ testTemplateInATemplateTypedef\lWithComma()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d25/classcpp_1_1gmock__class__test_1_1_generate_mocks_test.html"];
+}

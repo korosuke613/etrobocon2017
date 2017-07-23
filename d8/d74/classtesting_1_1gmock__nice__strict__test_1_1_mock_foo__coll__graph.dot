@@ -1,0 +1,8 @@
+digraph "testing::gmock_nice_strict_test::MockFoo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="{testing::gmock_nice\l_strict_test::MockFoo\n||+ MockFoo()\l+ Delete()\l+ MOCK_METHOD0()\l+ MOCK_METHOD1()\l- GTEST_DISALLOW_COPY\l_AND_ASSIGN_()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{testing::gmock_nice\l_strict_test::Foo\n||+ ~Foo()\l+ DoThis()\l+ DoThat()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d9b/classtesting_1_1gmock__nice__strict__test_1_1_foo.html"];
+}

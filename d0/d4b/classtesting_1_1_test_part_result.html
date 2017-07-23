@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017: testing::TestPartResult クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d0/d4b/classtesting_1_1_test_part_result.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-static-methods">静的非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="../../d3/d13/classtesting_1_1_test_part_result-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">testing::TestPartResult クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a>&gt;</code></p>
+<div class="dynheader">
+testing::TestPartResult 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/de9/classtesting_1_1_test_part_result__coll__graph.png" border="0" usemap="#testing_1_1_test_part_result_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a65ae656b33fdfdfffaf34858778a52d5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a65ae656b33fdfdfffaf34858778a52d5">Type</a> { <a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a65ae656b33fdfdfffaf34858778a52d5a8fa3d06b2baad8bf7c1f17dea314983e">kSuccess</a>, 
+<a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a65ae656b33fdfdfffaf34858778a52d5a00a755614f8ec3f78b2e951f8c91cd92">kNonFatalFailure</a>, 
+<a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a65ae656b33fdfdfffaf34858778a52d5ae1bf0b610b697a43fee97628cdab4ea1">kFatalFailure</a>
+ }</td></tr>
+<tr class="separator:a65ae656b33fdfdfffaf34858778a52d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6409eb519c1cd514aab2426c8f40737f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a6409eb519c1cd514aab2426c8f40737f">TestPartResult</a> (<a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a65ae656b33fdfdfffaf34858778a52d5">Type</a> a_type, const char *a_file_name, int a_line_number, const char *a_message)</td></tr>
+<tr class="separator:a6409eb519c1cd514aab2426c8f40737f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab92b225e8a472e78bd3889ca6df0d2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a65ae656b33fdfdfffaf34858778a52d5">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#aab92b225e8a472e78bd3889ca6df0d2a">type</a> () const</td></tr>
+<tr class="separator:aab92b225e8a472e78bd3889ca6df0d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be40512f50a0086c4d3dc43938978aa"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a0be40512f50a0086c4d3dc43938978aa">file_name</a> () const</td></tr>
+<tr class="separator:a0be40512f50a0086c4d3dc43938978aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c5da5f13245ac18cf256d0d9f3eda9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#ad4c5da5f13245ac18cf256d0d9f3eda9">line_number</a> () const</td></tr>
+<tr class="separator:ad4c5da5f13245ac18cf256d0d9f3eda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a655ab538e510434ba557ad66c35aa42c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a655ab538e510434ba557ad66c35aa42c">summary</a> () const</td></tr>
+<tr class="separator:a655ab538e510434ba557ad66c35aa42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5019dc9d753aba5949777270de255d49"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a5019dc9d753aba5949777270de255d49">message</a> () const</td></tr>
+<tr class="separator:a5019dc9d753aba5949777270de255d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac90edd5ea9cc4bb986a1eb2b5e1d53de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#ac90edd5ea9cc4bb986a1eb2b5e1d53de">passed</a> () const</td></tr>
+<tr class="separator:ac90edd5ea9cc4bb986a1eb2b5e1d53de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04b377c3e7ed57d39e882df5561ac90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#aa04b377c3e7ed57d39e882df5561ac90">failed</a> () const</td></tr>
+<tr class="separator:aa04b377c3e7ed57d39e882df5561ac90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6197c7f6672acc1cfdf580eb1f2183ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a6197c7f6672acc1cfdf580eb1f2183ac">nonfatally_failed</a> () const</td></tr>
+<tr class="separator:a6197c7f6672acc1cfdf580eb1f2183ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77db157eff9531c3c00c2420502f9a89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a77db157eff9531c3c00c2420502f9a89">fatally_failed</a> () const</td></tr>
+<tr class="separator:a77db157eff9531c3c00c2420502f9a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静的非公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac4f4c5383ff6178f441f8bf4ce5ebbff"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#ac4f4c5383ff6178f441f8bf4ce5ebbff">ExtractSummary</a> (const char *<a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a5019dc9d753aba5949777270de255d49">message</a>)</td></tr>
+<tr class="separator:ac4f4c5383ff6178f441f8bf4ce5ebbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a4ee7ac490fe4f10e222fa08c3fa25437"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a65ae656b33fdfdfffaf34858778a52d5">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a4ee7ac490fe4f10e222fa08c3fa25437">type_</a></td></tr>
+<tr class="separator:a4ee7ac490fe4f10e222fa08c3fa25437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf5ab5fc171dc6248579a44353385df6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#abf5ab5fc171dc6248579a44353385df6">file_name_</a></td></tr>
+<tr class="separator:abf5ab5fc171dc6248579a44353385df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a988009362bcdc28d3b801fc6059b5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a7a988009362bcdc28d3b801fc6059b5e">line_number_</a></td></tr>
+<tr class="separator:a7a988009362bcdc28d3b801fc6059b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b9bce29122b56a50295710b7f6e345c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a6b9bce29122b56a50295710b7f6e345c">summary_</a></td></tr>
+<tr class="separator:a6b9bce29122b56a50295710b7f6e345c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9adea12d4a4fb4ebf1cd00d22eac9aff"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a9adea12d4a4fb4ebf1cd00d22eac9aff">message_</a></td></tr>
+<tr class="separator:a9adea12d4a4fb4ebf1cd00d22eac9aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00047">47</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a65ae656b33fdfdfffaf34858778a52d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ae656b33fdfdfffaf34858778a52d5">&#9670;&nbsp;</a></span>Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a65ae656b33fdfdfffaf34858778a52d5">testing::TestPartResult::Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a65ae656b33fdfdfffaf34858778a52d5a8fa3d06b2baad8bf7c1f17dea314983e"></a>kSuccess&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a65ae656b33fdfdfffaf34858778a52d5a00a755614f8ec3f78b2e951f8c91cd92"></a>kNonFatalFailure&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a65ae656b33fdfdfffaf34858778a52d5ae1bf0b610b697a43fee97628cdab4ea1"></a>kFatalFailure&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a6409eb519c1cd514aab2426c8f40737f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6409eb519c1cd514aab2426c8f40737f">&#9670;&nbsp;</a></span>TestPartResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">testing::TestPartResult::TestPartResult </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a65ae656b33fdfdfffaf34858778a52d5">Type</a>&#160;</td>
+          <td class="paramname"><em>a_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>a_file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a_line_number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>a_message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ac4f4c5383ff6178f441f8bf4ce5ebbff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4f4c5383ff6178f441f8bf4ce5ebbff">&#9670;&nbsp;</a></span>ExtractSummary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string testing::TestPartResult::ExtractSummary </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/dc2/gtest-test-part_8cc_source.html">gtest-test-part.cc</a> の <a class="el" href="../../d3/dc2/gtest-test-part_8cc_source.html#l00051">51</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d4b/classtesting_1_1_test_part_result_ac4f4c5383ff6178f441f8bf4ce5ebbff_cgraph.png" border="0" usemap="#d0/d4b/classtesting_1_1_test_part_result_ac4f4c5383ff6178f441f8bf4ce5ebbff_cgraph" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+<a id="aa04b377c3e7ed57d39e882df5561ac90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04b377c3e7ed57d39e882df5561ac90">&#9670;&nbsp;</a></span>failed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool testing::TestPartResult::failed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00094">94</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d4b/classtesting_1_1_test_part_result_aa04b377c3e7ed57d39e882df5561ac90_icgraph.png" border="0" usemap="#d0/d4b/classtesting_1_1_test_part_result_aa04b377c3e7ed57d39e882df5561ac90_icgraph" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a77db157eff9531c3c00c2420502f9a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77db157eff9531c3c00c2420502f9a89">&#9670;&nbsp;</a></span>fatally_failed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool testing::TestPartResult::fatally_failed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00100">100</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d4b/classtesting_1_1_test_part_result_a77db157eff9531c3c00c2420502f9a89_icgraph.png" border="0" usemap="#d0/d4b/classtesting_1_1_test_part_result_a77db157eff9531c3c00c2420502f9a89_icgraph" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a0be40512f50a0086c4d3dc43938978aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0be40512f50a0086c4d3dc43938978aa">&#9670;&nbsp;</a></span>file_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* testing::TestPartResult::file_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00076">76</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d4b/classtesting_1_1_test_part_result_a0be40512f50a0086c4d3dc43938978aa_icgraph.png" border="0" usemap="#d0/d4b/classtesting_1_1_test_part_result_a0be40512f50a0086c4d3dc43938978aa_icgraph" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="ad4c5da5f13245ac18cf256d0d9f3eda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4c5da5f13245ac18cf256d0d9f3eda9">&#9670;&nbsp;</a></span>line_number()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::TestPartResult::line_number </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00082">82</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d4b/classtesting_1_1_test_part_result_ad4c5da5f13245ac18cf256d0d9f3eda9_icgraph.png" border="0" usemap="#d0/d4b/classtesting_1_1_test_part_result_ad4c5da5f13245ac18cf256d0d9f3eda9_icgraph" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a5019dc9d753aba5949777270de255d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5019dc9d753aba5949777270de255d49">&#9670;&nbsp;</a></span>message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* testing::TestPartResult::message </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00088">88</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d4b/classtesting_1_1_test_part_result_a5019dc9d753aba5949777270de255d49_icgraph.png" border="0" usemap="#d0/d4b/classtesting_1_1_test_part_result_a5019dc9d753aba5949777270de255d49_icgraph" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a6197c7f6672acc1cfdf580eb1f2183ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6197c7f6672acc1cfdf580eb1f2183ac">&#9670;&nbsp;</a></span>nonfatally_failed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool testing::TestPartResult::nonfatally_failed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00097">97</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d4b/classtesting_1_1_test_part_result_a6197c7f6672acc1cfdf580eb1f2183ac_icgraph.png" border="0" usemap="#d0/d4b/classtesting_1_1_test_part_result_a6197c7f6672acc1cfdf580eb1f2183ac_icgraph" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="ac90edd5ea9cc4bb986a1eb2b5e1d53de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac90edd5ea9cc4bb986a1eb2b5e1d53de">&#9670;&nbsp;</a></span>passed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool testing::TestPartResult::passed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00091">91</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a655ab538e510434ba557ad66c35aa42c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a655ab538e510434ba557ad66c35aa42c">&#9670;&nbsp;</a></span>summary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* testing::TestPartResult::summary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00085">85</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d4b/classtesting_1_1_test_part_result_a655ab538e510434ba557ad66c35aa42c_icgraph.png" border="0" usemap="#d0/d4b/classtesting_1_1_test_part_result_a655ab538e510434ba557ad66c35aa42c_icgraph" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="aab92b225e8a472e78bd3889ca6df0d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab92b225e8a472e78bd3889ca6df0d2a">&#9670;&nbsp;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a65ae656b33fdfdfffaf34858778a52d5">Type</a> testing::TestPartResult::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00072">72</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d4b/classtesting_1_1_test_part_result_aab92b225e8a472e78bd3889ca6df0d2a_icgraph.png" border="0" usemap="#d0/d4b/classtesting_1_1_test_part_result_aab92b225e8a472e78bd3889ca6df0d2a_icgraph" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="abf5ab5fc171dc6248579a44353385df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf5ab5fc171dc6248579a44353385df6">&#9670;&nbsp;</a></span>file_name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string testing::TestPartResult::file_name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00111">111</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7a988009362bcdc28d3b801fc6059b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a988009362bcdc28d3b801fc6059b5e">&#9670;&nbsp;</a></span>line_number_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testing::TestPartResult::line_number_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00114">114</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9adea12d4a4fb4ebf1cd00d22eac9aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9adea12d4a4fb4ebf1cd00d22eac9aff">&#9670;&nbsp;</a></span>message_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string testing::TestPartResult::message_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00116">116</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6b9bce29122b56a50295710b7f6e345c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b9bce29122b56a50295710b7f6e345c">&#9670;&nbsp;</a></span>summary_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string testing::TestPartResult::summary_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00115">115</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4ee7ac490fe4f10e222fa08c3fa25437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee7ac490fe4f10e222fa08c3fa25437">&#9670;&nbsp;</a></span>type_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html#a65ae656b33fdfdfffaf34858778a52d5">Type</a> testing::TestPartResult::type_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a> の <a class="el" href="../../d1/d01/gtest-test-part_8h_source.html#l00103">103</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/googletest/googletest/include/gtest/<a class="el" href="../../d1/d01/gtest-test-part_8h_source.html">gtest-test-part.h</a></li>
+<li>str/googletest/googletest/src/<a class="el" href="../../d3/dc2/gtest-test-part_8cc_source.html">gtest-test-part.cc</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d0/d75/namespacetesting.html">testing</a></li><li class="navelem"><a class="el" href="../../d0/d4b/classtesting_1_1_test_part_result.html">TestPartResult</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

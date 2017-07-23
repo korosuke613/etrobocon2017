@@ -1,0 +1,6 @@
+digraph "gtest_test_utils.Subprocess"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{gtest_test_utils.Subprocess\n|+ output\l+ terminated_by_signal\l+ exited\l+ signal\l+ exit_code\l- _return_code\l|+ __init__()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

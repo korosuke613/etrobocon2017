@@ -1,0 +1,16 @@
+digraph "cpp.ast.AstBuilder.handle_typedef"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node512 [label="cpp.ast.AstBuilder.handle\l_typedef",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node512 -> Node513 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node513 [label="cpp.ast.AstBuilder.\l_GetNextToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#ac22b5683a8f1a86a49751d6d0bcd4b84"];
+  Node513 -> Node514 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node514 [label="cpp.ast.next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d9c/namespacecpp_1_1ast.html#a39ad8261fef5e0a7c1c17c510541b66f"];
+  Node512 -> Node515 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node515 [label="cpp.ast.AstBuilder.\l_GetTokensUpTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#a93e70a799351e5c40f07efb218889b31"];
+  Node515 -> Node516 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node516 [label="cpp.ast.AstBuilder.\l_GetVarTokensUpTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#a0b5b10f2608ba3e8851fbd65d51b1f22"];
+  Node516 -> Node513 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

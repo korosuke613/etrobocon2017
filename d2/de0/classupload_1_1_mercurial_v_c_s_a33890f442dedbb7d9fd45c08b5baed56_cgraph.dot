@@ -1,0 +1,15 @@
+digraph "upload.MercurialVCS.__init__"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="upload.MercurialVCS.\l__init__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="upload.RunShell",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d3e/namespaceupload.html#adddc423c49132e8879cbb25d6be2cf11"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="upload.RunShellWithReturnCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d3e/namespaceupload.html#afa542d3a5a4f4fce174a1c23644a9204"];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="upload.ErrorExit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d3e/namespaceupload.html#adea53186a1d73e92cc839b7c35c2c044"];
+}

@@ -1,0 +1,11 @@
+digraph "TEST"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="TEST",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="Widget::GetFloatValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d6a/class_widget.html#abf639d975e02cabda8132873aca1a333"];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Widget::GetStringValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d6a/class_widget.html#a7a6e3a7fca3a9373f631c94dc1494d22"];
+}

@@ -1,0 +1,13 @@
+digraph "cpp.ast.AstBuilder.GetScope"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node302 [label="cpp.ast.AstBuilder.GetScope",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node302 -> Node303 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node303 [label="cpp.ast.AstBuilder.\l_GetMatchingChar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#a30936331903fe395451f8ed8ea2c26ba"];
+  Node303 -> Node304 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node304 [label="cpp.ast.AstBuilder.\l_GetNextToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classcpp_1_1ast_1_1_ast_builder.html#ac22b5683a8f1a86a49751d6d0bcd4b84"];
+  Node304 -> Node305 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node305 [label="cpp.ast.next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d9c/namespacecpp_1_1ast.html#a39ad8261fef5e0a7c1c17c510541b66f"];
+}

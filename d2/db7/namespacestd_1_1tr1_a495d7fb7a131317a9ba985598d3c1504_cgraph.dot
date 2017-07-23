@@ -1,0 +1,11 @@
+digraph "std::tr1::GTEST_ADD_REF_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node50 [label="std::tr1::GTEST_ADD_REF_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node50 -> Node51 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node51 [label="testing::Field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/namespacetesting.html#a4df3849391696aa93ac3a7703a717c2a"];
+  Node51 -> Node52 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 [label="testing::MakePolymorphic\lMatcher",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/namespacetesting.html#a667ca94f190ec2e17ee2fbfdb7d3da04"];
+}

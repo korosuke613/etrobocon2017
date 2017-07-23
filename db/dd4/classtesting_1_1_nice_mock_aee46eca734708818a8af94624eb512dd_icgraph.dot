@@ -1,0 +1,13 @@
+digraph "testing::NiceMock::GTEST_DISALLOW_COPY_AND_ASSIGN_"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node26 [label="testing::NiceMock::\lGTEST_DISALLOW_COPY\l_AND_ASSIGN_",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node26 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="testing::NiceMock::\l~NiceMock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dd4/classtesting_1_1_nice_mock.html#a4aaa6bd3850de6b6baa408010909a25f"];
+  Node26 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="testing::NaggyMock\l\< MockFoo \>::~NaggyMock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d23/classtesting_1_1_naggy_mock.html#a4d314aa583c985502eaec875440394ca"];
+  Node26 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="testing::StrictMock\l::~StrictMock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d2f/classtesting_1_1_strict_mock.html#ae22ba62955775b26c88937ee225db528"];
+}

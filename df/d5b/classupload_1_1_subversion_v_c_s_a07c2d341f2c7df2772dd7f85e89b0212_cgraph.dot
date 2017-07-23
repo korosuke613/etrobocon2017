@@ -1,0 +1,15 @@
+digraph "upload.SubversionVCS.GenerateDiff"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node30 [label="upload.SubversionVCS.GenerateDiff",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node30 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="upload.RunShell",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d3e/namespaceupload.html#adddc423c49132e8879cbb25d6be2cf11"];
+  Node31 -> Node32 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="upload.RunShellWithReturnCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d3e/namespaceupload.html#afa542d3a5a4f4fce174a1c23644a9204"];
+  Node32 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 -> Node33 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="upload.ErrorExit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d3e/namespaceupload.html#adea53186a1d73e92cc839b7c35c2c044"];
+  Node30 -> Node33 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,6 @@
+digraph "testing::internal::UnorderedElementsAreMatcherImplBase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="{testing::internal::\lUnorderedElementsAreMatcher\lImplBase\n|- matcher_describers_\l|# DescribeToImpl()\l# DescribeNegationToImpl()\l# VerifyAllElementsAndMatchers\lAreMatched()\l# matcher_describers()\l# Elements()\l- GTEST_DISALLOW_ASSIGN_()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

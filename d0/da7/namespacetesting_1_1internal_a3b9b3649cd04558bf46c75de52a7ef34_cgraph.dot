@@ -1,0 +1,25 @@
+digraph "testing::internal::GetThreadCount"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1094 [label="testing::internal::\lGetThreadCount",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1094 -> Node1095 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1095 [label="testing::internal::\lMutex::Mutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d77/classtesting_1_1internal_1_1_mutex.html#a38e1833a78e3eec81ad23ce1b056b40e"];
+  Node1094 -> Node1096 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1096 [label="testing::internal::\lMutex::Lock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d77/classtesting_1_1internal_1_1_mutex.html#ae7e2191886c00182176b23c4f4d049f8"];
+  Node1094 -> Node1097 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1097 [label="testing::internal::\lMutex::Unlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d77/classtesting_1_1internal_1_1_mutex.html#a315188055de1be98884519ad84eff2e6"];
+  Node1094 -> Node1098 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1098 [label="testing::internal::\lMutex::AssertHeld",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d77/classtesting_1_1internal_1_1_mutex.html#af45bf1660ac4110338a02a8680b2f486"];
+  Node1094 -> Node1099 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1099 [label="testing::internal::\lRE::~RE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dcb/classtesting_1_1internal_1_1_r_e.html#af3ad18e6c0b433f3d85ed23eda8119f3"];
+  Node1094 -> Node1100 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1100 [label="testing::internal::\lRE::FullMatch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dcb/classtesting_1_1internal_1_1_r_e.html#aa79a950758d0f1d62f7762d1e9cefe86"];
+  Node1094 -> Node1101 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1101 [label="testing::internal::\lRE::PartialMatch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dcb/classtesting_1_1internal_1_1_r_e.html#a1e81f9a87211bdca645e025f8f0236c8"];
+  Node1094 -> Node1102 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1102 [label="testing::internal::\lRE::Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dcb/classtesting_1_1internal_1_1_r_e.html#a4c3a519ce849abc57d6d5fffbf1e04dc"];
+  Node1094 -> Node1103 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1103 [label="testing::internal::\lposix::StrDup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d81/namespacetesting_1_1internal_1_1posix.html#a8e352884793a65ae8be144676f1a9136"];
+}

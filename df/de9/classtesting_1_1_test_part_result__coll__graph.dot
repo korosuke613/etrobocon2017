@@ -1,0 +1,6 @@
+digraph "testing::TestPartResult"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{testing::TestPartResult\n|- type_\l- file_name_\l- line_number_\l- summary_\l- message_\l|+ TestPartResult()\l+ type()\l+ file_name()\l+ line_number()\l+ summary()\l+ message()\l+ passed()\l+ failed()\l+ nonfatally_failed()\l+ fatally_failed()\l- ExtractSummary()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

@@ -1,0 +1,8 @@
+<map id="Walker::setBrakeMotor" name="Walker::setBrakeMotor">
+<area shape="rect" id="node2" href="$d1/d49/class_walker.html#a70f88eb11114b0337bfcd4b05392f3d5" title="Walker::run" alt="" coords="210,80,299,105"/>
+<area shape="rect" id="node3" href="$da/dbb/class_line_tracer.html#ab595c9e8ed7c1e4b1d38b87cf10e32ee" title="LineTracer::runLine" alt="" coords="352,5,488,31"/>
+<area shape="rect" id="node5" href="$d1/d49/class_walker.html#a548b93fdfc6cb47eaa9ae8b8b8579c23" title="Walker::stop" alt="" coords="372,55,467,80"/>
+<area shape="rect" id="node6" href="$d1/d49/class_walker.html#a5ee3d6593656b064058949f31f525c31" title="Walker::angleChange" alt="" coords="576,80,725,105"/>
+<area shape="rect" id="node7" href="$d1/d49/class_walker.html#af913f99c575c9be615d03ec96460ce15" title="Walker::edgeChange" alt="" coords="347,156,493,181"/>
+<area shape="rect" id="node4" href="$dd/d88/class_normal_course.html#ab8ef305defb0f50a518eba4ac6453908" title="NormalCourse::runNormalCourse" alt="" coords="541,5,761,31"/>
+</map>

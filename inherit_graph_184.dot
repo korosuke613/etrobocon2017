@@ -1,0 +1,7 @@
+digraph "クラス階層図"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="testing::gmock_more\l_actions_test::SumOf5Functor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d19/structtesting_1_1gmock__more__actions__test_1_1_sum_of5_functor.html"];
+}

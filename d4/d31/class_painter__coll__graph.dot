@@ -1,0 +1,8 @@
+digraph "Painter"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Painter\n||+ Painter()\l+ ~Painter()\l+ DrawCircle()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -turtle_" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{Turtle\n||+ Turtle()\l+ ~Turtle()\l+ PenUp()\l+ PenDown()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/de7/class_turtle.html"];
+}
