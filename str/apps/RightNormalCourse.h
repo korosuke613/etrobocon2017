@@ -2,6 +2,7 @@
 #define __RIGHTNORMALCOURSE__
 
 #include "NormalCourse.h"
+#include "SelfLocalization.h"
 
 using namespace ev3api;
 
@@ -27,6 +28,8 @@ private:
     void statusCheck();
     RightStatus status;
     RightStatus old_status;
+    /* 自己位置推定 インスタンス 初期化*/
+    SelfLocalization sl;
 };
 
 #endif
