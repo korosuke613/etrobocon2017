@@ -10,6 +10,7 @@
 #include "app.h"
 #include "util.h"
 #include "EtRobocon2017.h" // ETロボコン2017
+#include "SelfLocalization.h"
 
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
@@ -37,7 +38,8 @@ void main_task( intptr_t unused )
 
     /* Bluetooth通信タスクの起動 */
     act_tsk( BT_TASK );
-
+    /* 自己位置推定 インスタンス 初期化*/
+    SelfLocalization sl;
 
     msg_f("ET-Robocon2017 Hirakobasample", 1);
     msg_f(" create from github.com/korosuke613/etrobocon2017", 2);
