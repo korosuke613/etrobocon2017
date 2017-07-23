@@ -1,6 +1,9 @@
 var NAVTREE =
 [
-  [ "ETrobocon2017", "index.html", [
+  [ "ETrobocon2017 - 片山研究所モデルベース開発推進事業部", "index.html", [
+    [ "EtRobocon2017のドキュメント", "index.html", [
+      [ "こんにちは！", "index.html#intro_sec", null ]
+    ] ],
     [ "etrobocon2017", "d3/dcc/md__r_e_a_d_m_e.html", null ],
     [ "クラス", "annotated.html", [
       [ "クラス一覧", "annotated.html", "annotated_dup" ],
