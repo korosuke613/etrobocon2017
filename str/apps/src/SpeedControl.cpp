@@ -1,3 +1,9 @@
+/**
+ * @file SpeedControl.cpp
+ * @brief SpeedControlクラスの関数を定義<br>
+ * @author Futa HIRAKOBA
+ */
+
 #include "SpeedControl.h"
 
 SpeedControl::SpeedControl():
@@ -11,7 +17,7 @@ SpeedControl::SpeedControl():
 }
 
 int32_t SpeedControl::calculateSpeedForPid() {
-    int8_t speed_value_thistime = getDistance4ms();
+    int8_t speed_value_thistime = calcDistance4ms();
     speed_value_all += (speed_value_thistime - speed_value[ speedCount ]);
     speed_value[ speedCount ] = speed_value_thistime;
     calculate((double)speed_value_all);
@@ -24,7 +30,7 @@ int32_t SpeedControl::calculateSpeedForPid() {
 }
 
 /* 距離更新（4ms間の移動距離を毎回加算している） */
-int8_t SpeedControl::getDistance4ms(){
+int8_t SpeedControl::calcDistance4ms(){
     int32_t curAngleL = walker.get_count_L ();
 	int32_t curAngleR = walker.get_count_R ();
 

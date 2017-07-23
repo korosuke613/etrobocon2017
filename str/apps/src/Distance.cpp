@@ -1,3 +1,9 @@
+/**
+ * @file Distance.cpp
+ * @brief Distanceクラスの関数を定義<br>
+ * @author Futa HIRAKOBA
+ */
+
 #include "Distance.h"
 
 int32_t Distance::getDistanceTotal(){
@@ -7,8 +13,8 @@ int32_t Distance::getDistanceTotal(){
 }
 
 int32_t Distance::getDistanceCurrent(){
-	leftMotorDeg = walker.get_count_L () - leftMotorDegOld;
-	rightMotorDeg = walker.get_count_R () - rightMotorDegOld;
+	int32_t leftMotorDeg = walker.get_count_L () - leftMotorDegOld;
+	int32_t rightMotorDeg = walker.get_count_R () - rightMotorDegOld;
 
 	return (leftMotorDeg + rightMotorDeg) / 2;
 }
