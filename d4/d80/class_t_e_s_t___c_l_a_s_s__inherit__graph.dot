@@ -1,8 +1,0 @@
-digraph "TEST_CLASS"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="{TEST_CLASS\n||+ TEST_CLASS()\l+ limitOutput()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node1 [label="{Pid\n|- p_gain\l- i_gain\l- d_gain\l- old_diff\l- integral\l- target\l- output\l- del\l|+ Pid()\l+ setPid()\l+ calculate()\l+ get_output()\l# limitOutput()\l- wrapper_of_constructor()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/de1/class_pid.html"];
-}

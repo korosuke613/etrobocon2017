@@ -1,7 +1,0 @@
-digraph "クラス階層図"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="std::tr1::gtest_internal\l::Get\< 9 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dfc/classstd_1_1tr1_1_1gtest__internal_1_1_get_3_019_01_4.html"];
-}

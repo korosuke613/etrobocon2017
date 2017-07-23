@@ -1,6 +1,0 @@
-digraph "testing::internal::OsStackTraceGetterInterface"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node2 [label="{testing::internal::\lOsStackTraceGetterInterface\n|+ kElidedFramesMarker\l|+ OsStackTraceGetterInterface()\l+ ~OsStackTraceGetterInterface()\l+ CurrentStackTrace()\l+ UponLeavingGTest()\l- GTEST_DISALLOW_COPY\l_AND_ASSIGN_()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

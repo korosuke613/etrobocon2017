@@ -1,9 +1,0 @@
-digraph "testing::internal::UntypedActionResultHolderBase::PrintAsActionResult"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node3 [label="testing::internal::\lUntypedActionResultHolderBase\l::PrintAsActionResult",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="testing::internal::\lUntypedFunctionMockerBase\l::UntypedInvokeWith",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d5f/classtesting_1_1internal_1_1_untyped_function_mocker_base.html#adaec41c0ba8a07c2415f6c8efa0ca54f"];
-}

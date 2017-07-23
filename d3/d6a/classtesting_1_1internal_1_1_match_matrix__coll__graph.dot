@@ -1,6 +1,0 @@
-digraph "testing::internal::MatchMatrix"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{testing::internal::\lMatchMatrix\n|- num_elements_\l- num_matchers_\l- matched_\l|+ MatchMatrix()\l+ LhsSize()\l+ RhsSize()\l+ HasEdge()\l+ SetEdge()\l+ NextGraph()\l+ Randomize()\l+ DebugString()\l- SpaceIndex()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

@@ -1,8 +1,0 @@
-digraph "testing::internal::Gt2Matcher"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="{testing::internal::\lGt2Matcher\n||+ Desc()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node1 [label="{testing::internal::\lPairMatchBase\< Gt2Matcher,\l AnyGt \>\n||+ operator Matcher\< \l::testing::tuple\< T1,\l T2 \> \>()\l+ operator Matcher\< const\l ::testing::tuple\< T1,\l T2 \> &\>()\l- GetDesc()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d0e/classtesting_1_1internal_1_1_pair_match_base.html"];
-}

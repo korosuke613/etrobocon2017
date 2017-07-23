@@ -1,9 +1,0 @@
-digraph "testing::DefaultValue&lt; T &amp; &gt;::Exists"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node2 [label="testing::DefaultValue\l\< T & \>::Exists",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="testing::internal::\lBuiltInDefaultValue\l::Exists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d15/classtesting_1_1internal_1_1_built_in_default_value.html#a35207bc20a493b0efb3980eb9a08dd2f"];
-}

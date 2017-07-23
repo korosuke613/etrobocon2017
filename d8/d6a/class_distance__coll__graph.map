@@ -1,3 +1,0 @@
-<map id="Distance" name="Distance">
-<area shape="rect" id="node2" href="$d1/d49/class_walker.html" title="{Walker\n|&#45; leftWheel\l&#45; rightWheel\l&#45; clock\l&#45; leftRight\l|+ Walker()\l+ stop()\l+ run()\l+ edgeChange()\l+ moveAngle()\l+ angleChange()\l+ get_count_L()\l+ get_count_R()\l+ init()\l+ terminate()\l+ reset()\l+ setBrakeMotor()\l}" alt="" coords="19,5,148,265"/>
-</map>

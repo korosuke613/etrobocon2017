@@ -1,8 +1,0 @@
-digraph "testing::Flags"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{testing::Flags\n|+ also_run_disabled_tests\l+ break_on_failure\l+ catch_exceptions\l+ death_test_use_fork\l+ filter\l+ list_tests\l+ output\l+ print_time\l+ shuffle\l+ stream_result_to\l+ throw_on_failure\l|+ Flags()\l+ AlsoRunDisabledTests()\l+ BreakOnFailure()\l+ CatchExceptions()\l+ DeathTestUseFork()\l+ Filter()\l+ ListTests()\l+ Output()\l+ PrintTime()\l+ RandomSeed()\l+ Repeat()\l+ Shuffle()\l+ StackTraceDepth()\l+ StreamResultTo()\l+ ThrowOnFailure()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +stack_trace_depth\n+repeat\n+random_seed" ,arrowhead="odiamond",fontname="Helvetica"];
-  Node2 [label="{Int32\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-}

@@ -1,9 +1,0 @@
-digraph "gtest_catch_exceptions_test.CatchSehExceptionsTest.testCatchesSehExceptionsWithCxxExceptionsEnabled"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node3 [label="gtest_catch_exceptions\l_test.CatchSehExceptionsTest.test\lCatchesSehExceptionsWithCxxExceptions\lEnabled",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="gtest_catch_exceptions\l_test.CatchSehExceptionsTest.\lTestSehExceptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dec/classgtest__catch__exceptions__test_1_1_catch_seh_exceptions_test.html#a737bbcc64405854aa8e0aea87ca5850b"];
-}

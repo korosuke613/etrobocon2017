@@ -1,9 +1,0 @@
-digraph "testing::gmock_matchers_test::Streamlike::end"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node6 [label="testing::gmock_matchers\l_test::Streamlike::end",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="testing::gmock_matchers\l_test::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/de1/namespacetesting_1_1gmock__matchers__test.html#a5aa4eed927d4a1a8ea306d5e47dce94f"];
-}

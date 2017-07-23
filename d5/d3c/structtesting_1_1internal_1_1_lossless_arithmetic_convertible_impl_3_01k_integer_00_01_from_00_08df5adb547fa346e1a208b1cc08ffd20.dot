@@ -1,8 +1,0 @@
-digraph "testing::internal::LosslessArithmeticConvertibleImpl&lt; kInteger, From, kInteger, To &gt;"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node2 [label="{testing::internal::\lLosslessArithmeticConvertible\lImpl\< kInteger, From, kInteger, To \>\n||}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node3 [label="{testing::internal::\lbool_constant\<((sizeof\l(From)\< sizeof(To)) &&\l(!GMOCK_IS_SIGNED_(From)\l\|\|GMOCK_IS_SIGNED_(To)))\l\|\|((sizeof(From)==sizeof\l(To)) &&(GMOCK_IS_SIGNED_\l(From)==GMOCK_IS_SIGNED_(To)))\>\n|+ value\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d75/structtesting_1_1internal_1_1bool__constant.html"];
-}

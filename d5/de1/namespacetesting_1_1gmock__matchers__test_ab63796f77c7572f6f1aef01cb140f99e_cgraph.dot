@@ -1,9 +1,0 @@
-digraph "testing::gmock_matchers_test::TEST"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1478 [label="testing::gmock_matchers\l_test::TEST",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1478 -> Node1479 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1479 [label="testing::Not",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/namespacetesting.html#a3d7d0dda7e51b13fe2f5aa28e23ed6b6"];
-}

@@ -1,9 +1,0 @@
-digraph "TEST_F"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node108 [label="TEST_F",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node108 -> Node109 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node109 [label="testing::Ge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/namespacetesting.html#a42bb19b42d7830b972973a103d5e00f2"];
-}

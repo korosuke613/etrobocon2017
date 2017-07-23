@@ -1,9 +1,0 @@
-digraph "testing::internal::operator=="
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1965 [label="testing::internal::\loperator==",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1965 -> Node1966 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1966 [label="testing::internal::\llinked_ptr::get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/df4/classtesting_1_1internal_1_1linked__ptr.html#a0c2ba99eb3521806f83f5c4435465ce0"];
-}

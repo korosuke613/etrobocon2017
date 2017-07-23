@@ -1,6 +1,0 @@
-digraph "testing::gmock_nice_strict_test::MockBar"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{testing::gmock_nice\l_strict_test::MockBar\n|- str_\l|+ MockBar()\l+ MockBar()\l+ ~MockBar()\l+ str()\l+ MOCK_METHOD0()\l+ MOCK_METHOD2()\l- GTEST_DISALLOW_COPY\l_AND_ASSIGN_()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

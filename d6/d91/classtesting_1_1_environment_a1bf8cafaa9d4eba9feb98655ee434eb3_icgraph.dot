@@ -1,9 +1,0 @@
-digraph "testing::Environment::SetUp"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node3 [label="testing::Environment\l::SetUp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="testing::internal::\lUnitTestImpl::GetTestCase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dda/classtesting_1_1internal_1_1_unit_test_impl.html#ac5684d824a59e963cb3274c79d0b6df3"];
-}

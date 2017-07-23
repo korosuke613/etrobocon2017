@@ -1,9 +1,0 @@
-digraph "testing::internal::ExpectationBase::ExpectSpecProperty"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node97 [label="testing::internal::\lExpectationBase::ExpectSpec\lProperty",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node97 -> Node98 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node98 [label="testing::internal::\lExpect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#ad93379317e10862a77b9fb90aa96e083"];
-}

@@ -1,9 +1,0 @@
-digraph "testing::internal::GetTypeId"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1114 [label="testing::internal::\lGetTypeId",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1114 -> Node1115 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1115 [label="testing::internal::\lGetTestTypeId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#ad0d66d56ead224263cd100c1d6bfc562"];
-}

@@ -1,9 +1,0 @@
-digraph "testing::TestCase::GetMutableTestInfo"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node62 [label="testing::TestCase::\lGetMutableTestInfo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node62 -> Node63 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node63 [label="testing::internal::\lGetElementOr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/da7/namespacetesting_1_1internal.html#a71fdd20a0686bea3dc0cdcd95e0bca1c"];
-}

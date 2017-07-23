@@ -1,6 +1,0 @@
-digraph "pump.Cursor"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{pump.Cursor\n|+ line\l+ column\l|+ __init__()\l+ __eq__()\l+ __ne__()\l+ __lt__()\l+ __le__()\l+ __gt__()\l+ __ge__()\l+ __str__()\l+ __add__()\l+ __sub__()\l+ Clone()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

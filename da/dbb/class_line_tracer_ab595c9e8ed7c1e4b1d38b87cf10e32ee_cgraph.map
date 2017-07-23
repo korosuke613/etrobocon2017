@@ -1,9 +1,0 @@
-<map id="LineTracer::runLine" name="LineTracer::runLine">
-<area shape="rect" id="node2" href="$da/df4/class_turn_control.html#aae8b049138f350b795a3d82a0e996517" title="TurnControl::calculateTurn\lForPid" alt="" coords="190,69,368,108"/>
-<area shape="rect" id="node6" href="$d1/d49/class_walker.html#a70f88eb11114b0337bfcd4b05392f3d5" title="Walker::run" alt="" coords="234,153,323,179"/>
-<area shape="rect" id="node3" href="$dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="444,5,545,31"/>
-<area shape="rect" id="node4" href="$dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="439,55,550,80"/>
-<area shape="rect" id="node5" href="$dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="438,104,550,129"/>
-<area shape="rect" id="node7" href="$d8/d3c/util_8h.html#a0a6d184db0f324ec8dfdd059b9b526a8" title="msg_f" alt="" coords="465,153,523,179"/>
-<area shape="rect" id="node8" href="$d1/d49/class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="416,203,572,228"/>
-</map>

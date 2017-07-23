@@ -1,8 +1,0 @@
-digraph "testing::internal::PrettyUnitTestResultPrinter"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node2 [label="{testing::internal::\lPrettyUnitTestResultPrinter\n||+ PrettyUnitTestResultPrinter()\l+ OnTestProgramStart()\l+ OnTestIterationStart()\l+ OnEnvironmentsSetUpStart()\l+ OnEnvironmentsSetUpEnd()\l+ OnTestCaseStart()\l+ OnTestStart()\l+ OnTestPartResult()\l+ OnTestEnd()\l+ OnTestCaseEnd()\l+ OnEnvironmentsTearDownStart()\l+ OnEnvironmentsTearDownEnd()\l+ OnTestIterationEnd()\l+ OnTestProgramEnd()\l+ PrintTestName()\l- PrintFailedTests()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node3 [label="{testing::TestEventListener\n||+ ~TestEventListener()\l+ OnTestProgramStart()\l+ OnTestIterationStart()\l+ OnEnvironmentsSetUpStart()\l+ OnEnvironmentsSetUpEnd()\l+ OnTestCaseStart()\l+ OnTestStart()\l+ OnTestPartResult()\l+ OnTestEnd()\l+ OnTestCaseEnd()\l+ OnEnvironmentsTearDownStart()\l+ OnEnvironmentsTearDownEnd()\l+ OnTestIterationEnd()\l+ OnTestProgramEnd()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d46/classtesting_1_1_test_event_listener.html"];
-}

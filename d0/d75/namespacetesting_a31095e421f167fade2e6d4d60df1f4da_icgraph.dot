@@ -1,9 +1,0 @@
-digraph "testing::SetErrnoAndReturn"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1342 [label="testing::SetErrnoAndReturn",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1342 -> Node1343 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1343 [label="TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dce/gmock__link__test_8h.html#aef5c583c3e024858d646fd49cb26d38b"];
-}

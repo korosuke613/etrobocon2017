@@ -1,8 +1,0 @@
-digraph "gtest_filter_unittest.GTestFilterUnitTest"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="{gtest_filter_unittest.GTest\lFilterUnitTest\n||+ AssertSetEqual()\l+ AssertPartitionIsValid()\l+ AdjustForParameterizedTests()\l+ RunAndVerify()\l+ RunAndVerifyWithSharding()\l+ RunAndVerifyAllowingDisabled()\l+ setUp()\l+ testDefaultBehavior()\l+ testDefaultBehaviorWithShards()\l+ testEmptyFilter()\lほか 16 件…\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node1 [label="{TestCase\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-}

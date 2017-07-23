@@ -1,6 +1,0 @@
-digraph "testing::internal::EitherOfMatcher&lt; Matcher1, Matcher2 &gt;"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{testing::internal::\lEitherOfMatcher\< Matcher1,\l Matcher2 \>\n|- matcher1_\l- matcher2_\l|+ EitherOfMatcher()\l+ operator Matcher\< T \>()\l- GTEST_DISALLOW_ASSIGN_()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

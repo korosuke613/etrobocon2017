@@ -1,7 +1,0 @@
-digraph "クラス階層図"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="testing::internal::\lAnyOfResult6\< M1, M2,\l M3, M4, M5, M6 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d31/structtesting_1_1internal_1_1_any_of_result6.html"];
-}

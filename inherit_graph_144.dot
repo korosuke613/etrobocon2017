@@ -1,7 +1,0 @@
-digraph "クラス階層図"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="testing::gmock_generated\l_actions_test::GiantTemplate\l\< T1, T2, T3, k4, k5, k6, T7,\l T8, T9 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d1a/structtesting_1_1gmock__generated__actions__test_1_1_giant_template.html"];
-}

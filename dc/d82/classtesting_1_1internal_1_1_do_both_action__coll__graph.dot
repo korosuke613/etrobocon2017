@@ -1,6 +1,0 @@
-digraph "testing::internal::DoBothAction&lt; Action1, Action2 &gt;"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{testing::internal::\lDoBothAction\< Action1,\l Action2 \>\n|- action1_\l- action2_\l|+ DoBothAction()\l+ operator Action\< F \>()\l- GTEST_DISALLOW_ASSIGN_()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

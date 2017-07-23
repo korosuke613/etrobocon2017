@@ -1,8 +1,0 @@
-digraph "str/googletest/googlemock/test/gmock-matchers_test.cc"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node74 [label="str/googletest/googlemock\l/test/gmock-matchers_test.cc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node74 -> Node75 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node75 [label="str/googletest/googlemock\l/test/gmock_all_test.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d40/gmock__all__test_8cc.html"];
-}

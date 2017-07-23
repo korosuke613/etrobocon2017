@@ -1,9 +1,0 @@
-digraph "testing::gmock_generated_actions_test::ACTION"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node10 [label="testing::gmock_generated\l_actions_test::ACTION",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node11 [label="testing::gmock_generated\l_actions_test::Dummy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dae/namespacetesting_1_1gmock__generated__actions__test.html#ab91824b86c842e024337b6de45eb8cdc"];
-}
