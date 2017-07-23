@@ -14,6 +14,7 @@ TurnControl.o \
 Distance.o \
 Walker.o \
 Lifter.o \
+SelfLocalization.o \
 Emoter.o
 
 SRCLANG := c++

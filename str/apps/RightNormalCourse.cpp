@@ -3,6 +3,7 @@
 RightNormalCourse::RightNormalCourse(){
     lineTracer.isLeftsideLine(false);
     old_status = RightStatus::STRAIGHT;
+
     ev3_speaker_set_volume(100);
     FILE *fp;
 
@@ -21,7 +22,8 @@ void RightNormalCourse::runNormalCourse(void){
         return;
     }
 	while ( 1 ) {
-
+        sl.update();
+        sl.writing_current_coordinates();
         forward = lineTracer.speedControl.calculateSpeedForPid();
         statusCheck();
 		switch(status){
@@ -56,7 +58,7 @@ void RightNormalCourse::statusCheck(){
     else if(distanse_total < 9200)status = RightStatus::CURVE_LEFT_SHORT;
     else if(distanse_total < 10800)status = RightStatus::CURVE_LEFT;
     else if(distanse_total < 12800)status = RightStatus::CURVE_RIGHT;
-    else if(distanse_total < 15000)status = RightStatus::STRAIGHT;
+    else if(distanse_total < 16000)status = RightStatus::STRAIGHT;
     else status = RightStatus::STOP;
     if(old_status != status) ev3_speaker_play_tone (NOTE_FS6, 100);
     old_status = status;
@@ -74,7 +76,8 @@ void RightNormalCourse::goStraight(int8_t forward_value){
 void RightNormalCourse::goCurveRight(int8_t forward_value){
     lineTracer.setForward(forward_value);
     lineTracer.speedControl.setPid ( 2.0, 4.8, 0.024, 150.0 );
-    lineTracer.turnControl.setPid ( 4.0, 2.0, 0.096, 40.0 );
+    lineTracer.turnControl.setPid ( 4.0, 2.0, 0.09, 40.0 );
+    //lineTracer.turnControl.setPid ( 4.0, 2.0, 0.096, 40.0 );
     char msg[32];
     sprintf(msg, "Speed_cm/s: %d", lineTracer.speedControl.speed_value_all); 
     msg_f(msg, 4);

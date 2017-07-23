@@ -10,6 +10,7 @@
 #include "app.h"
 #include "util.h"
 #include "EtRobocon2017.h" // ETロボコン2017
+#include "SelfLocalization.h"
 
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
