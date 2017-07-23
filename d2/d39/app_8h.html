@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/app.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">app.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;target_test.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+app.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d84/app_8h__incl.png" border="0" usemap="#str_2app_8h" alt=""/></div>
+<map name="str_2app_8h" id="str_2app_8h">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d3d/app_8h__dep__incl.png" border="0" usemap="#str_2app_8hdep" alt=""/></div>
+<map name="str_2app_8hdep" id="str_2app_8hdep">
+<area shape="rect" id="node2" href="../../d5/df2/app_8cpp.html" title="str/app.cpp" alt="" coords="5,325,93,351"/>
+<area shape="rect" id="node3" href="../../d3/d3a/_self_localization_8h.html" title="str/apps/include/SelfLocalization.h" alt="" coords="98,79,320,104"/>
+<area shape="rect" id="node4" href="../../da/dc8/_left_normal_course_8h.html" title="str/apps/include/LeftNormal\lCourse.h" alt="" coords="117,152,301,191"/>
+<area shape="rect" id="node8" href="../../d2/dfd/_right_normal_course_8h.html" title="str/apps/include/RightNormal\lCourse.h" alt="" coords="343,152,536,191"/>
+<area shape="rect" id="node10" href="../../d6/d47/_self_localization_8cpp.html" title="str/apps/src/SelfLocalization.cpp" alt="" coords="560,159,773,184"/>
+<area shape="rect" id="node5" href="../../d2/dd3/_et_robocon2017_8h.html" title="str/apps/include/EtRobocon2017.h" alt="" coords="338,245,563,271"/>
+<area shape="rect" id="node7" href="../../df/da9/_left_normal_course_8cpp.html" title="str/apps/src/LeftNormalCourse.cpp" alt="" coords="86,245,313,271"/>
+<area shape="rect" id="node6" href="../../d5/d67/_et_robocon2017_8cpp.html" title="str/apps/src/EtRobocon2017.cpp" alt="" coords="343,325,558,351"/>
+<area shape="rect" id="node9" href="../../d4/da7/_right_normal_course_8cpp.html" title="str/apps/src/RightNormal\lCourse.cpp" alt="" coords="586,239,754,277"/>
+</map>
+</div>
+</div>
+<p><a href="../../d2/d39/app_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a0fc58460f052686e9a3987fe7f606d17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d39/app_8h.html#a0fc58460f052686e9a3987fe7f606d17">MAIN_PRIORITY</a>&#160;&#160;&#160;5           /* メインタスクの優先度 */</td></tr>
+<tr class="separator:a0fc58460f052686e9a3987fe7f606d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed801c122c559efe4677d351d07747b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d39/app_8h.html#aed801c122c559efe4677d351d07747b4">HIGH_PRIORITY</a>&#160;&#160;&#160;9           /* 並行実行されるタスクの優先度 */</td></tr>
+<tr class="separator:aed801c122c559efe4677d351d07747b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1557e73ce1cc3b8e9aa283a0f5a766cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d39/app_8h.html#a1557e73ce1cc3b8e9aa283a0f5a766cb">MID_PRIORITY</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a1557e73ce1cc3b8e9aa283a0f5a766cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b470dff68ba3321209a33edc4638bd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d39/app_8h.html#a9b470dff68ba3321209a33edc4638bd8">LOW_PRIORITY</a>&#160;&#160;&#160;11</td></tr>
+<tr class="separator:a9b470dff68ba3321209a33edc4638bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74680d4506184e9c8aa9f24ca07ccbae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d39/app_8h.html#a74680d4506184e9c8aa9f24ca07ccbae">TASK_PORTID</a>&#160;&#160;&#160;1           /* 文字入力するシリアルポートID */</td></tr>
+<tr class="separator:a74680d4506184e9c8aa9f24ca07ccbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6423a880df59733d2d9b509c7718d3a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d39/app_8h.html#a6423a880df59733d2d9b509c7718d3a9">STACK_SIZE</a>&#160;&#160;&#160;4096        /* タスクのスタックサイズ */</td></tr>
+<tr class="separator:a6423a880df59733d2d9b509c7718d3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ab874c34d9d66b14d189a9a3f2d065991"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d39/app_8h.html#ab874c34d9d66b14d189a9a3f2d065991">main_task</a> (intptr_t exinf)</td></tr>
+<tr class="separator:ab874c34d9d66b14d189a9a3f2d065991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a370109ba6a2ea6c1c86f1a5f40514"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d39/app_8h.html#ae2a370109ba6a2ea6c1c86f1a5f40514">bt_task</a> (intptr_t exinf)</td></tr>
+<tr class="separator:ae2a370109ba6a2ea6c1c86f1a5f40514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="aed801c122c559efe4677d351d07747b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed801c122c559efe4677d351d07747b4">&#9670;&nbsp;</a></span>HIGH_PRIORITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HIGH_PRIORITY&#160;&#160;&#160;9           /* 並行実行されるタスクの優先度 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d39/app_8h_source.html">app.h</a> の <a class="el" href="../../d2/d39/app_8h_source.html#l00063">63</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9b470dff68ba3321209a33edc4638bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b470dff68ba3321209a33edc4638bd8">&#9670;&nbsp;</a></span>LOW_PRIORITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOW_PRIORITY&#160;&#160;&#160;11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d39/app_8h_source.html">app.h</a> の <a class="el" href="../../d2/d39/app_8h_source.html#l00065">65</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0fc58460f052686e9a3987fe7f606d17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc58460f052686e9a3987fe7f606d17">&#9670;&nbsp;</a></span>MAIN_PRIORITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAIN_PRIORITY&#160;&#160;&#160;5           /* メインタスクの優先度 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d39/app_8h_source.html">app.h</a> の <a class="el" href="../../d2/d39/app_8h_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1557e73ce1cc3b8e9aa283a0f5a766cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1557e73ce1cc3b8e9aa283a0f5a766cb">&#9670;&nbsp;</a></span>MID_PRIORITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MID_PRIORITY&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d39/app_8h_source.html">app.h</a> の <a class="el" href="../../d2/d39/app_8h_source.html#l00064">64</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6423a880df59733d2d9b509c7718d3a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6423a880df59733d2d9b509c7718d3a9">&#9670;&nbsp;</a></span>STACK_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STACK_SIZE&#160;&#160;&#160;4096        /* タスクのスタックサイズ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d39/app_8h_source.html">app.h</a> の <a class="el" href="../../d2/d39/app_8h_source.html#l00076">76</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a74680d4506184e9c8aa9f24ca07ccbae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74680d4506184e9c8aa9f24ca07ccbae">&#9670;&nbsp;</a></span>TASK_PORTID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_PORTID&#160;&#160;&#160;1           /* 文字入力するシリアルポートID */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d39/app_8h_source.html">app.h</a> の <a class="el" href="../../d2/d39/app_8h_source.html#l00072">72</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ae2a370109ba6a2ea6c1c86f1a5f40514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a370109ba6a2ea6c1c86f1a5f40514">&#9670;&nbsp;</a></span>bt_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bt_task </td>
+          <td>(</td>
+          <td class="paramtype">intptr_t&#160;</td>
+          <td class="paramname"><em>unused</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>概要 : Bluetooth通信によるリモートスタート。 Tera Termなどのターミナルソフトから、 ASCIIコードで1を送信すると、リモートスタートする。 引数 : unused 返り値 : なし </p>
+
+<p class="definition"> <a class="el" href="../../d5/df2/app_8cpp_source.html">app.cpp</a> の <a class="el" href="../../d5/df2/app_8cpp_source.html#l00064">64</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab874c34d9d66b14d189a9a3f2d065991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab874c34d9d66b14d189a9a3f2d065991">&#9670;&nbsp;</a></span>main_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_task </td>
+          <td>(</td>
+          <td class="paramtype">intptr_t&#160;</td>
+          <td class="paramname"><em>exinf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d5/df2/app_8cpp_source.html">app.cpp</a> の <a class="el" href="../../d5/df2/app_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

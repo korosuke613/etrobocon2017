@@ -1,6 +1,0 @@
-<map id="Pid::limitOutput" name="Pid::limitOutput">
-<area shape="rect" id="node2" href="$class_speed_control.html#ae07cd7a54722a64d3eb30a3ec40ee497" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="165,5,367,44"/>
-<area shape="rect" id="node3" href="$class_turn_control.html#aae8b049138f350b795a3d82a0e996517" title="TurnControl::calculateTurn\lForPid" alt="" coords="177,68,355,107"/>
-<area shape="rect" id="node4" href="$class_line_tracer.html#ab595c9e8ed7c1e4b1d38b87cf10e32ee" title="LineTracer::runLine" alt="" coords="415,75,551,100"/>
-<area shape="rect" id="node5" href="$class_normal_course.html#ab8ef305defb0f50a518eba4ac6453908" title="NormalCourse::runNormalCourse" alt="" coords="599,75,819,100"/>
-</map>

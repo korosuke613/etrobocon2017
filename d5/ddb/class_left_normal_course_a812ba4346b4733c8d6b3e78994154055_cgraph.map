@@ -1,0 +1,5 @@
+<map id="LeftNormalCourse::goStraightSlow" name="LeftNormalCourse::goStraightSlow">
+<area shape="rect" id="node2" href="$da/dbb/class_line_tracer.html#a35e228c51d002f08a9a5ea54a3886136" title="LineTracer::setForward" alt="" coords="280,5,439,31"/>
+<area shape="rect" id="node3" href="$dc/de1/class_pid.html#aa8626402086bcd10cbb7f581c92300fb" title="Pid::setPid" alt="" coords="317,55,402,80"/>
+<area shape="rect" id="node4" href="$d8/d3c/util_8h.html#a0a6d184db0f324ec8dfdd059b9b526a8" title="msg_f" alt="" coords="330,104,388,129"/>
+</map>

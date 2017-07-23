@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/apps/include/SpeedControl.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="../../dir_716c0c37d4fad24b6b8f48e824f3bc1d.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SpeedControl.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../db/d18/_speed_control_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __SPEEDCONTROL__</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define __SPEEDCONTROL__</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/dfc/_walker_8h.html">Walker.h</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/dcf/_pid_8h.html">Pid.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../dd/dc1/class_speed_control.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/dc1/class_speed_control.html">SpeedControl</a>: <span class="keyword">public</span> <a class="code" href="../../dc/de1/class_pid.html">Pid</a> {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../dd/dc1/class_speed_control.html#a3b0a21fa2c1bc5dbb4b66d84b18b18df">SpeedControl</a>();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    int32_t <a class="code" href="../../dd/dc1/class_speed_control.html#ae07cd7a54722a64d3eb30a3ec40ee497">calculateSpeedForPid</a>();</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    int8_t <a class="code" href="../../dd/dc1/class_speed_control.html#af8d3ac06b066e693929a5d584d88dac0">calcDistance4ms</a>();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../dd/dc1/class_speed_control.html#a8df5cc0b029e22200de906a58852d77e">   30</a></span>&#160;    int16_t <a class="code" href="../../dd/dc1/class_speed_control.html#a8df5cc0b029e22200de906a58852d77e">speed_value_all</a>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../dd/dc1/class_speed_control.html#ae4217dc7818f95511d61c4875c41bf03">   36</a></span>&#160;    <a class="code" href="../../d1/d49/class_walker.html">Walker</a> <a class="code" href="../../dd/dc1/class_speed_control.html#ae4217dc7818f95511d61c4875c41bf03">walker</a>;</div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../dd/dc1/class_speed_control.html#a4d395e0f9966b19bfcf36592d4b8f472">   38</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../dd/dc1/class_speed_control.html#a4d395e0f9966b19bfcf36592d4b8f472">forward</a>;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../dd/dc1/class_speed_control.html#a98e80958137e813b09953a58d5cf9f30">   40</a></span>&#160;    int32_t <a class="code" href="../../dd/dc1/class_speed_control.html#a98e80958137e813b09953a58d5cf9f30">preAngleL</a>;</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../dd/dc1/class_speed_control.html#ae7db838941b85e8aa4c426e74a80b751">   42</a></span>&#160;    int32_t <a class="code" href="../../dd/dc1/class_speed_control.html#ae7db838941b85e8aa4c426e74a80b751">preAngleR</a>;</div><div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../dd/dc1/class_speed_control.html#a003a3af340ae83cf41d8d5dd53461980">   44</a></span>&#160;    std::array&lt;int16_t, 25&gt; <a class="code" href="../../dd/dc1/class_speed_control.html#a003a3af340ae83cf41d8d5dd53461980">speed_value</a>;</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../dd/dc1/class_speed_control.html#ab0d7caa81bfaa96916fbcebf81e86ac5">   46</a></span>&#160;    uint8_t <a class="code" href="../../dd/dc1/class_speed_control.html#ab0d7caa81bfaa96916fbcebf81e86ac5">speedCount</a>;</div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../dd/dc1/class_speed_control.html#a7ae5d60cc3a07e5649a2ff2c5dcba0dc">   48</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../dd/dc1/class_speed_control.html#a7ae5d60cc3a07e5649a2ff2c5dcba0dc">pid_value_old</a>;</div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../dd/dc1/class_speed_control.html#a0cae691b037314ccb2e58dd9e09f6149">   50</a></span>&#160;    int8_t <a class="code" href="../../dd/dc1/class_speed_control.html#a0cae691b037314ccb2e58dd9e09f6149">distance4ms</a>;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_speed_control_html_af8d3ac06b066e693929a5d584d88dac0"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#af8d3ac06b066e693929a5d584d88dac0">SpeedControl::calcDistance4ms</a></div><div class="ttdeci">int8_t calcDistance4ms()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/ddb/_speed_control_8cpp_source.html#l00033">SpeedControl.cpp:33</a></div></div>
+<div class="ttc" id="class_speed_control_html_a003a3af340ae83cf41d8d5dd53461980"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#a003a3af340ae83cf41d8d5dd53461980">SpeedControl::speed_value</a></div><div class="ttdeci">std::array&lt; int16_t, 25 &gt; speed_value</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00044">SpeedControl.h:44</a></div></div>
+<div class="ttc" id="class_speed_control_html_a3b0a21fa2c1bc5dbb4b66d84b18b18df"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#a3b0a21fa2c1bc5dbb4b66d84b18b18df">SpeedControl::SpeedControl</a></div><div class="ttdeci">SpeedControl()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/ddb/_speed_control_8cpp_source.html#l00009">SpeedControl.cpp:9</a></div></div>
+<div class="ttc" id="class_speed_control_html_ae7db838941b85e8aa4c426e74a80b751"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#ae7db838941b85e8aa4c426e74a80b751">SpeedControl::preAngleR</a></div><div class="ttdeci">int32_t preAngleR</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00042">SpeedControl.h:42</a></div></div>
+<div class="ttc" id="class_speed_control_html_a98e80958137e813b09953a58d5cf9f30"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#a98e80958137e813b09953a58d5cf9f30">SpeedControl::preAngleL</a></div><div class="ttdeci">int32_t preAngleL</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00040">SpeedControl.h:40</a></div></div>
+<div class="ttc" id="class_speed_control_html_ab0d7caa81bfaa96916fbcebf81e86ac5"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#ab0d7caa81bfaa96916fbcebf81e86ac5">SpeedControl::speedCount</a></div><div class="ttdeci">uint8_t speedCount</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00046">SpeedControl.h:46</a></div></div>
+<div class="ttc" id="class_speed_control_html_a8df5cc0b029e22200de906a58852d77e"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#a8df5cc0b029e22200de906a58852d77e">SpeedControl::speed_value_all</a></div><div class="ttdeci">int16_t speed_value_all</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00030">SpeedControl.h:30</a></div></div>
+<div class="ttc" id="class_speed_control_html_a4d395e0f9966b19bfcf36592d4b8f472"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#a4d395e0f9966b19bfcf36592d4b8f472">SpeedControl::forward</a></div><div class="ttdeci">double forward</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00038">SpeedControl.h:38</a></div></div>
+<div class="ttc" id="class_speed_control_html_a7ae5d60cc3a07e5649a2ff2c5dcba0dc"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#a7ae5d60cc3a07e5649a2ff2c5dcba0dc">SpeedControl::pid_value_old</a></div><div class="ttdeci">double pid_value_old</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00048">SpeedControl.h:48</a></div></div>
+<div class="ttc" id="_pid_8h_html"><div class="ttname"><a href="../../da/dcf/_pid_8h.html">Pid.h</a></div></div>
+<div class="ttc" id="class_speed_control_html"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html">SpeedControl</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00016">SpeedControl.h:16</a></div></div>
+<div class="ttc" id="_walker_8h_html"><div class="ttname"><a href="../../d5/dfc/_walker_8h.html">Walker.h</a></div></div>
+<div class="ttc" id="class_speed_control_html_ae4217dc7818f95511d61c4875c41bf03"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#ae4217dc7818f95511d61c4875c41bf03">SpeedControl::walker</a></div><div class="ttdeci">Walker walker</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00036">SpeedControl.h:36</a></div></div>
+<div class="ttc" id="class_pid_html"><div class="ttname"><a href="../../dc/de1/class_pid.html">Pid</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dcf/_pid_8h_source.html#l00004">Pid.h:4</a></div></div>
+<div class="ttc" id="class_speed_control_html_a0cae691b037314ccb2e58dd9e09f6149"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#a0cae691b037314ccb2e58dd9e09f6149">SpeedControl::distance4ms</a></div><div class="ttdeci">int8_t distance4ms</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00050">SpeedControl.h:50</a></div></div>
+<div class="ttc" id="class_speed_control_html_ae07cd7a54722a64d3eb30a3ec40ee497"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#ae07cd7a54722a64d3eb30a3ec40ee497">SpeedControl::calculateSpeedForPid</a></div><div class="ttdeci">int32_t calculateSpeedForPid()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/ddb/_speed_control_8cpp_source.html#l00019">SpeedControl.cpp:19</a></div></div>
+<div class="ttc" id="class_walker_html"><div class="ttname"><a href="../../d1/d49/class_walker.html">Walker</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/_walker_8h_source.html#l00010">Walker.h:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,4 +1,0 @@
-<map id="Pid" name="Pid">
-<area shape="rect" id="node2" href="$class_speed_control.html" title="{SpeedControl\n|+ speed_value_all\l&#45; walker\l&#45; forward\l&#45; preAngleL\l&#45; preAngleR\l&#45; speed_value\l&#45; speedCount\l&#45; pid_value_old\l&#45; distance4ms\l|+ SpeedControl()\l+ calculateSpeedForPid()\l+ calcDistance4ms()\l}" alt="" coords="5,287,177,493"/>
-<area shape="rect" id="node3" href="$class_turn_control.html" title="{TurnControl\n|&#45; colorSensor\l&#45; turn\l&#45; pid_value_old\l|+ TurnControl()\l+ calculateTurnForPid()\l+ getBrightness()\l}" alt="" coords="202,327,362,453"/>
-</map>

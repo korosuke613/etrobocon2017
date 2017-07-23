@@ -1,0 +1,4 @@
+<map id="SpeedControl" name="SpeedControl">
+<area shape="rect" id="node2" href="$dc/de1/class_pid.html" title="{Pid\n|&#45; p_gain\l&#45; i_gain\l&#45; d_gain\l&#45; old_diff\l&#45; integral\l&#45; target\l&#45; output\l&#45; del\l|+ Pid()\l+ setPid()\l+ calculate()\l+ get_output()\l# limitOutput()\l&#45; wrapper_of_constructor()\l}" alt="" coords="5,19,184,252"/>
+<area shape="rect" id="node3" href="$d1/d49/class_walker.html" title="{Walker\n|&#45; leftWheel\l&#45; rightWheel\l&#45; clock\l&#45; leftRight\l|+ Walker()\l+ stop()\l+ run()\l+ edgeChange()\l+ moveAngle()\l+ angleChange()\l+ get_count_L()\l+ get_count_R()\l+ init()\l+ terminate()\l+ reset()\l+ setBrakeMotor()\l}" alt="" coords="208,5,336,265"/>
+</map>

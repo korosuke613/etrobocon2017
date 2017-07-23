@@ -1,5 +1,0 @@
-<map id="RightNormalCourse::goStraight" name="RightNormalCourse::goStraight">
-<area shape="rect" id="node2" href="$class_line_tracer.html#a35e228c51d002f08a9a5ea54a3886136" title="LineTracer::setForward" alt="" coords="199,5,358,31"/>
-<area shape="rect" id="node3" href="$class_pid.html#aa8626402086bcd10cbb7f581c92300fb" title="Pid::setPid" alt="" coords="236,55,321,80"/>
-<area shape="rect" id="node4" href="$util_8h.html#a0a6d184db0f324ec8dfdd059b9b526a8" title="msg_f" alt="" coords="250,104,307,129"/>
-</map>

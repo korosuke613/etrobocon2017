@@ -1,0 +1,718 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: SelfLocalization クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="../../df/daf/class_self_localization-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">SelfLocalization クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a>&gt;</code></p>
+<div class="dynheader">
+SelfLocalization 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d1d/class_self_localization__coll__graph.png" border="0" usemap="#_self_localization_coll__map" alt="Collaboration graph"/></div>
+<map name="_self_localization_coll__map" id="_self_localization_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae98c39e95c6c75e4e9eb3eed63418baf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#ae98c39e95c6c75e4e9eb3eed63418baf">SelfLocalization</a> ()</td></tr>
+<tr class="separator:ae98c39e95c6c75e4e9eb3eed63418baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f876c3f65941a1e3cf33e20d2af49ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a6f876c3f65941a1e3cf33e20d2af49ad">update</a> ()</td></tr>
+<tr class="separator:a6f876c3f65941a1e3cf33e20d2af49ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7b630ff7861c237c1aee94bc8a56bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd">writing_current_coordinates</a> ()</td></tr>
+<tr class="separator:a3b7b630ff7861c237c1aee94bc8a56bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a975edb862d79e6372075e342d8b9bc7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a975edb862d79e6372075e342d8b9bc7d">set_target_coordinates</a> (float target_x, float target_y, float target_radius, float ev3_radius)</td></tr>
+<tr class="separator:a975edb862d79e6372075e342d8b9bc7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5342ae84d0d93a09a4f755ba618789a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a5342ae84d0d93a09a4f755ba618789a6">approached_target_coordinates</a> (float target_x, float target_y, float target_radius, float ev3_radius)</td></tr>
+<tr class="separator:a5342ae84d0d93a09a4f755ba618789a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:ae2f69ed526e9f4185cf5ded506386410"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#ae2f69ed526e9f4185cf5ded506386410">right_motor_current_angle</a></td></tr>
+<tr class="separator:ae2f69ed526e9f4185cf5ded506386410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a164df28911bf46e69e963745a7fbaf22"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a164df28911bf46e69e963745a7fbaf22">right_motor_old_angle</a></td></tr>
+<tr class="separator:a164df28911bf46e69e963745a7fbaf22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd2f7f9198b2dc21fe212ef7372476e4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#afd2f7f9198b2dc21fe212ef7372476e4">right_motor_rotation_angle</a></td></tr>
+<tr class="separator:afd2f7f9198b2dc21fe212ef7372476e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a073a3bcd7bbbcfa5431e2c7383b50fb9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a073a3bcd7bbbcfa5431e2c7383b50fb9">left_motor_current_angle</a></td></tr>
+<tr class="separator:a073a3bcd7bbbcfa5431e2c7383b50fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f960bd73aafee308d9cfed9b61d163f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a6f960bd73aafee308d9cfed9b61d163f">left_motor_old_angle</a></td></tr>
+<tr class="separator:a6f960bd73aafee308d9cfed9b61d163f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa040afaa7b8691d35ed442ba4cb564ef"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#aa040afaa7b8691d35ed442ba4cb564ef">left_motor_rotation_angle</a></td></tr>
+<tr class="separator:aa040afaa7b8691d35ed442ba4cb564ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97fd4d363b59842437fbcb0987e6c4a8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a97fd4d363b59842437fbcb0987e6c4a8">wheel_across</a></td></tr>
+<tr class="separator:a97fd4d363b59842437fbcb0987e6c4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4132e0abace4a3c3ba3b2b3b88555812"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a4132e0abace4a3c3ba3b2b3b88555812">between_wheels</a></td></tr>
+<tr class="separator:a4132e0abace4a3c3ba3b2b3b88555812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae061b32ad42879677056a3a64b38b644"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#ae061b32ad42879677056a3a64b38b644">right_wheel_moving_distance</a></td></tr>
+<tr class="separator:ae061b32ad42879677056a3a64b38b644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80cda5126d2d7133afe2525b12f73573"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a80cda5126d2d7133afe2525b12f73573">left_wheel_moving_distance</a></td></tr>
+<tr class="separator:a80cda5126d2d7133afe2525b12f73573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0a0afbef89523eaed94c247d0f4d56"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#add0a0afbef89523eaed94c247d0f4d56">moving_distance</a></td></tr>
+<tr class="separator:add0a0afbef89523eaed94c247d0f4d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0be3199e2ad39a9e06292e63cdea5f7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#aa0be3199e2ad39a9e06292e63cdea5f7">turning_angle</a></td></tr>
+<tr class="separator:aa0be3199e2ad39a9e06292e63cdea5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d80a11f62795a501b96e46f447bb08"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a91d80a11f62795a501b96e46f447bb08">current_x</a></td></tr>
+<tr class="separator:a91d80a11f62795a501b96e46f447bb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2332c94b3839fd1e6b6c8a193ee2a2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#afe2332c94b3839fd1e6b6c8a193ee2a2">current_y</a></td></tr>
+<tr class="separator:afe2332c94b3839fd1e6b6c8a193ee2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ec9c5d68a71dbfe137e1301c4a0353"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a25ec9c5d68a71dbfe137e1301c4a0353">current_angle</a></td></tr>
+<tr class="separator:a25ec9c5d68a71dbfe137e1301c4a0353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab03129499ff500649c4071fa2c2cb0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a2ab03129499ff500649c4071fa2c2cb0">old_x</a></td></tr>
+<tr class="separator:a2ab03129499ff500649c4071fa2c2cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bad2b9cc1c8138a6585d13ae779434"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#ac8bad2b9cc1c8138a6585d13ae779434">old_y</a></td></tr>
+<tr class="separator:ac8bad2b9cc1c8138a6585d13ae779434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bf5ef48fe3f0a0d9b3e1f274a2f69b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#af6bf5ef48fe3f0a0d9b3e1f274a2f69b">old_angle</a></td></tr>
+<tr class="separator:af6bf5ef48fe3f0a0d9b3e1f274a2f69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ae98c39e95c6c75e4e9eb3eed63418baf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98c39e95c6c75e4e9eb3eed63418baf">&#9670;&nbsp;</a></span>SelfLocalization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SelfLocalization::SelfLocalization </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00016">16</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a5342ae84d0d93a09a4f755ba618789a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5342ae84d0d93a09a4f755ba618789a6">&#9670;&nbsp;</a></span>approached_target_coordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SelfLocalization::approached_target_coordinates </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ev3_radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a975edb862d79e6372075e342d8b9bc7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a975edb862d79e6372075e342d8b9bc7d">&#9670;&nbsp;</a></span>set_target_coordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelfLocalization::set_target_coordinates </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ev3_radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f876c3f65941a1e3cf33e20d2af49ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f876c3f65941a1e3cf33e20d2af49ad">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelfLocalization::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00058">58</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3b7b630ff7861c237c1aee94bc8a56bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7b630ff7861c237c1aee94bc8a56bd">&#9670;&nbsp;</a></span>writing_current_coordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelfLocalization::writing_current_coordinates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00093">93</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a4132e0abace4a3c3ba3b2b3b88555812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4132e0abace4a3c3ba3b2b3b88555812">&#9670;&nbsp;</a></span>between_wheels</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::between_wheels</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a25ec9c5d68a71dbfe137e1301c4a0353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ec9c5d68a71dbfe137e1301c4a0353">&#9670;&nbsp;</a></span>current_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::current_angle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a91d80a11f62795a501b96e46f447bb08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d80a11f62795a501b96e46f447bb08">&#9670;&nbsp;</a></span>current_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::current_x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afe2332c94b3839fd1e6b6c8a193ee2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe2332c94b3839fd1e6b6c8a193ee2a2">&#9670;&nbsp;</a></span>current_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::current_y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a073a3bcd7bbbcfa5431e2c7383b50fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a073a3bcd7bbbcfa5431e2c7383b50fb9">&#9670;&nbsp;</a></span>left_motor_current_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::left_motor_current_angle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6f960bd73aafee308d9cfed9b61d163f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f960bd73aafee308d9cfed9b61d163f">&#9670;&nbsp;</a></span>left_motor_old_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::left_motor_old_angle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa040afaa7b8691d35ed442ba4cb564ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa040afaa7b8691d35ed442ba4cb564ef">&#9670;&nbsp;</a></span>left_motor_rotation_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::left_motor_rotation_angle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a80cda5126d2d7133afe2525b12f73573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80cda5126d2d7133afe2525b12f73573">&#9670;&nbsp;</a></span>left_wheel_moving_distance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::left_wheel_moving_distance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="add0a0afbef89523eaed94c247d0f4d56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0a0afbef89523eaed94c247d0f4d56">&#9670;&nbsp;</a></span>moving_distance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::moving_distance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af6bf5ef48fe3f0a0d9b3e1f274a2f69b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6bf5ef48fe3f0a0d9b3e1f274a2f69b">&#9670;&nbsp;</a></span>old_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::old_angle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00036">36</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2ab03129499ff500649c4071fa2c2cb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab03129499ff500649c4071fa2c2cb0">&#9670;&nbsp;</a></span>old_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::old_x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00036">36</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac8bad2b9cc1c8138a6585d13ae779434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bad2b9cc1c8138a6585d13ae779434">&#9670;&nbsp;</a></span>old_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::old_y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00036">36</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae2f69ed526e9f4185cf5ded506386410"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2f69ed526e9f4185cf5ded506386410">&#9670;&nbsp;</a></span>right_motor_current_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::right_motor_current_angle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00028">28</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a164df28911bf46e69e963745a7fbaf22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a164df28911bf46e69e963745a7fbaf22">&#9670;&nbsp;</a></span>right_motor_old_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::right_motor_old_angle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00028">28</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afd2f7f9198b2dc21fe212ef7372476e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd2f7f9198b2dc21fe212ef7372476e4">&#9670;&nbsp;</a></span>right_motor_rotation_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::right_motor_rotation_angle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00028">28</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae061b32ad42879677056a3a64b38b644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae061b32ad42879677056a3a64b38b644">&#9670;&nbsp;</a></span>right_wheel_moving_distance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::right_wheel_moving_distance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa0be3199e2ad39a9e06292e63cdea5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0be3199e2ad39a9e06292e63cdea5f7">&#9670;&nbsp;</a></span>turning_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::turning_angle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a97fd4d363b59842437fbcb0987e6c4a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97fd4d363b59842437fbcb0987e6c4a8">&#9670;&nbsp;</a></span>wheel_across</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SelfLocalization::wheel_across</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a></li>
+<li>str/apps/src/<a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

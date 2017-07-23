@@ -1,3 +1,0 @@
-<map id="TurnControl" name="TurnControl">
-<area shape="rect" id="node2" href="$class_pid.html" title="{Pid\n|&#45; p_gain\l&#45; i_gain\l&#45; d_gain\l&#45; old_diff\l&#45; integral\l&#45; target\l&#45; output\l&#45; del\l|+ Pid()\l+ setPid()\l+ calculate()\l+ get_output()\l# limitOutput()\l&#45; wrapper_of_constructor()\l}" alt="" coords="5,5,184,239"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="Walker::angleChange" name="Walker::angleChange">
-<area shape="rect" id="node2" href="$class_walker.html#a70f88eb11114b0337bfcd4b05392f3d5" title="Walker::run" alt="" coords="345,5,434,31"/>
-<area shape="rect" id="node5" href="$class_walker.html#a548b93fdfc6cb47eaa9ae8b8b8579c23" title="Walker::stop" alt="" coords="202,56,297,81"/>
-<area shape="rect" id="node3" href="$util_8h.html#a0a6d184db0f324ec8dfdd059b9b526a8" title="msg_f" alt="" coords="532,55,589,80"/>
-<area shape="rect" id="node4" href="$class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="482,5,639,31"/>
-</map>

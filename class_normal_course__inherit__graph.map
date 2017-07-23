@@ -1,4 +1,0 @@
-<map id="NormalCourse" name="NormalCourse">
-<area shape="rect" id="node2" href="$class_left_normal_course.html" title="{LeftNormalCourse\n|&#45; status\l&#45; old_status\l&#45; sl\l|+ LeftNormalCourse()\l+ runNormalCourse()\l&#45; goStraight()\l&#45; goStraightSlow()\l&#45; goCurveRight()\l&#45; goCurveLeft()\l&#45; goCurveLeftShort()\l&#45; stop()\l&#45; statusCheck()\l}" alt="" coords="5,167,155,373"/>
-<area shape="rect" id="node3" href="$class_right_normal_course.html" title="{RightNormalCourse\n|&#45; status\l&#45; old_status\l&#45; sl\l|+ RightNormalCourse()\l+ runNormalCourse()\l&#45; goStraight()\l&#45; goCurveRight()\l&#45; goCurveLeft()\l&#45; goCurveLeftShort()\l&#45; stop()\l&#45; statusCheck()\l}" alt="" coords="180,173,338,367"/>
-</map>

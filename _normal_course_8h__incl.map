@@ -1,9 +1,0 @@
-<map id="str/apps/include/NormalCourse.h" name="str/apps/include/NormalCourse.h">
-<area shape="rect" id="node2" href="$_line_tracer_8h.html" title="LineTracer.h" alt="" coords="201,79,296,104"/>
-<area shape="rect" id="node13" href="$_distance_8h.html" title="タイヤの進んだ距離（回転角）に関するクラス " alt="" coords="328,79,412,104"/>
-<area shape="rect" id="node3" href="$_turn_control_8h.html" title="TurnControl.h" alt="" coords="50,152,152,177"/>
-<area shape="rect" id="node6" href="$_speed_control_8h.html" title="PID制御による速度制御クラス " alt="" coords="176,152,290,177"/>
-<area shape="rect" id="node7" href="$_walker_8h.html" title="Walker.h" alt="" coords="291,225,364,251"/>
-<area shape="rect" id="node4" href="$_pid_8h.html" title="Pid.h" alt="" coords="135,225,187,251"/>
-<area shape="rect" id="node10" href="$util_8h.html" title="util.h" alt="" coords="384,299,434,324"/>
-</map>

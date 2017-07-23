@@ -1,0 +1,5 @@
+<map id="RightNormalCourse::statusCheck" name="RightNormalCourse::statusCheck">
+<area shape="rect" id="node2" href="$d7/d82/class_distance.html#aa600cfae5fe5a646dc49db6e8671671b" title="Distance::getDistanceTotal" alt="" coords="199,31,378,56"/>
+<area shape="rect" id="node3" href="$d1/d49/class_walker.html#aac9aaddeb926d610def2896c27ad405b" title="Walker::get_count_L" alt="" coords="427,5,571,31"/>
+<area shape="rect" id="node4" href="$d1/d49/class_walker.html#ab202921b6baf9ad7c3afbdf9b606bd09" title="Walker::get_count_R" alt="" coords="426,55,572,80"/>
+</map>
