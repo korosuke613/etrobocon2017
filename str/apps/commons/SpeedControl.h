@@ -3,6 +3,7 @@
 
 #include "Walker.h"
 #include "Pid.h"
+#include <array>
 
 class SpeedControl: public Pid {
 public:
@@ -17,7 +18,7 @@ private:
     int32_t preAngleL;
     int32_t preAngleR;
 	Walker walker;
-    int16_t speed_value[25];
+    std::array<int16_t, 25> speed_value;
     uint8_t speedCount;
     double pid_value_old;
 };

@@ -32,7 +32,6 @@ void EtRobocon2017::start( int bluetooth_command )
 void EtRobocon2017::loop()
 {
     SonarAlert sonarAlert( 4 );
-    //LineTracer lineTracer;
     LeftNormalCourse leftNormalCourse;
     RightNormalCourse rightNormalCourse;
     Lifter lifter;
