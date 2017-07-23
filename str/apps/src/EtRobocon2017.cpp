@@ -1,5 +1,11 @@
 #include "EtRobocon2017.h"
 
+/*! \mainpage EtRobocon2017のドキュメント
+ *
+ * \section intro_sec こんにちは！
+ * @b このページは片山研究所モデルベース開発推進事業部が開発している、ETロボコン2017アドバンスドクラス用のプログラムのドキュメントです！
+ */
+
 /*
  * touch_sensor = EV3_PORT_1;
  * sonar_sensor = EV3_PORT_2;
