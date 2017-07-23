@@ -1,0 +1,6 @@
+<map id="Lifter::liftUp" name="Lifter::liftUp">
+<area shape="rect" id="node2" href="$da/d61/classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="352,5,512,31"/>
+<area shape="rect" id="node3" href="$d4/d87/classev3api_1_1_clock.html#a34ff6f7b273edf33eeae7abc1754e319" title="ev3api::Clock::sleep" alt="" coords="153,80,293,105"/>
+<area shape="rect" id="node5" href="$da/d61/classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="142,31,304,56"/>
+<area shape="rect" id="node4" href="$d4/d87/classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1" title="ev3api::Clock::getTim" alt="" coords="358,80,507,105"/>
+</map>

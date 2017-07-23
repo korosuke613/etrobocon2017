@@ -1,5 +1,7 @@
 <map id="TurnControl::calculateTurnForPid" name="TurnControl::calculateTurnForPid">
-<area shape="rect" id="node2" href="$dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="237,5,338,31"/>
-<area shape="rect" id="node3" href="$dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="232,55,343,80"/>
-<area shape="rect" id="node4" href="$dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="232,104,343,129"/>
+<area shape="rect" id="node2" href="$d3/d7f/classev3api_1_1_color_sensor.html#ae7829be979488c7791dcbc835030d350" title="ev3api::ColorSensor\l::getBrightness" alt="" coords="232,5,374,44"/>
+<area shape="rect" id="node4" href="$dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="252,68,353,93"/>
+<area shape="rect" id="node5" href="$dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="247,117,358,143"/>
+<area shape="rect" id="node6" href="$dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="247,167,358,192"/>
+<area shape="rect" id="node3" href="$db/d9e/classev3api_1_1_sensor.html#ac2b40368f76aa4fa837ebc15241e655d" title="ev3api::Sensor::getPort" alt="" coords="422,12,582,37"/>
 </map>

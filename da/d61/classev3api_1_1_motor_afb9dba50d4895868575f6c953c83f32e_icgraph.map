@@ -1,0 +1,5 @@
+<map id="ev3api::Motor::stop" name="ev3api::Motor::stop">
+<area shape="rect" id="node2" href="$d8/dc7/class_emoter.html#a38f7d1f4d0e5e5912559673470842b15" title="Emoter::terminate" alt="" coords="188,5,315,31"/>
+<area shape="rect" id="node3" href="$dd/d56/class_lifter.html#a21e6476b06afcf7e620ecfd57927f434" title="Lifter::terminate" alt="" coords="195,55,309,80"/>
+<area shape="rect" id="node4" href="$d1/d49/class_walker.html#ac898ceba9cd085a9fda42118fc4e9335" title="Walker::terminate" alt="" coords="189,104,314,129"/>
+</map>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rightcourse',['RightCourse',['../df/df1/class_right_course.html',1,'']]],
-  ['rightnormalcourse',['RightNormalCourse',['../d4/d58/class_right_normal_course.html',1,'']]]
+  ['motor',['Motor',['../da/d61/classev3api_1_1_motor.html',1,'ev3api']]]
 ];

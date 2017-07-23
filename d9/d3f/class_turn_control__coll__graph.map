@@ -1,3 +1,5 @@
 <map id="TurnControl" name="TurnControl">
-<area shape="rect" id="node2" href="$dc/de1/class_pid.html" title="{Pid\n|&#45; p_gain\l&#45; i_gain\l&#45; d_gain\l&#45; old_diff\l&#45; integral\l&#45; target\l&#45; output\l&#45; del\l|+ Pid()\l+ setPid()\l+ calculate()\l+ get_output()\l# limitOutput()\l&#45; wrapper_of_constructor()\l}" alt="" coords="5,5,184,239"/>
+<area shape="rect" id="node2" href="$dc/de1/class_pid.html" title="{Pid\n|&#45; p_gain\l&#45; i_gain\l&#45; d_gain\l&#45; old_diff\l&#45; integral\l&#45; target\l&#45; output\l&#45; del\l|+ Pid()\l+ setPid()\l+ calculate()\l+ get_output()\l# limitOutput()\l&#45; wrapper_of_constructor()\l}" alt="" coords="5,168,184,401"/>
+<area shape="rect" id="node3" href="$d3/d7f/classev3api_1_1_color_sensor.html" title="{ev3api::ColorSensor\n||+ ColorSensor()\l+ ~ColorSensor()\l+ getAmbient()\l+ getBrightness()\l+ getColorNumber()\l+ getRawColor()\l}" alt="" coords="207,215,350,355"/>
+<area shape="rect" id="node4" href="$db/d9e/classev3api_1_1_sensor.html" title="{ev3api::Sensor\n|&#45; mPort\l&#45; mType\l|# getPort()\l# Sensor()\l# ~Sensor()\l}" alt="" coords="223,5,334,119"/>
 </map>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/ev3-api/library/libcpp-ev3/src/Steering.cpp ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_c82af91c3623fc9c10fc40964bdc8f6c.html">ev3-api</a></li><li class="navelem"><a class="el" href="../../dir_dde7901b05b0fefedb058974606daa2a.html">library</a></li><li class="navelem"><a class="el" href="../../dir_de2582d59bf4305d94602dbc05a9d78c.html">libcpp-ev3</a></li><li class="navelem"><a class="el" href="../../dir_2a4bdc0d69a024ae549d9028647ddbab.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Steering.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/dbb/_steering_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Steerng.cpp</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Copyright (c) 2016 Embedded Technology Software Design Robot Contest</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d88/_steering_8h.html">Steering.h</a>&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../da/da4/namespaceev3api.html">ev3api</a>;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//=============================================================================</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// Constructor</span></div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d5/d34/classev3api_1_1_steering.html#af8c485f99e3c79e781a879fc9dfb30d0">   12</a></span>&#160;<a class="code" href="../../d5/d34/classev3api_1_1_steering.html#af8c485f99e3c79e781a879fc9dfb30d0">Steering::Steering</a>(<a class="code" href="../../da/d61/classev3api_1_1_motor.html">Motor</a>&amp; leftMotor, <a class="code" href="../../da/d61/classev3api_1_1_motor.html">Motor</a>&amp; rightMotor)</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;:mLeftMotor(leftMotor), mRightMotor(rightMotor) {}</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//=============================================================================</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// Cset steering power</span></div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d5/d34/classev3api_1_1_steering.html#a1693dec1fb1e2b8fc79a29fbcf045a3c">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d5/d34/classev3api_1_1_steering.html#a1693dec1fb1e2b8fc79a29fbcf045a3c">Steering::setPower</a>(<span class="keywordtype">int</span> power, <span class="keywordtype">int</span> turnRatio)</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    (void)ev3_motor_steer(<a class="code" href="../../d5/d34/classev3api_1_1_steering.html#ad914bd6fa31681f9d18a19850cc13280">mLeftMotor</a>.<a class="code" href="../../da/d61/classev3api_1_1_motor.html#a0f93e8cd365d51ea041f087f68c00804">getPort</a>(), <a class="code" href="../../d5/d34/classev3api_1_1_steering.html#a311d9c13ae9bd3e9ed87d6257369ead3">mRightMotor</a>.<a class="code" href="../../da/d61/classev3api_1_1_motor.html#a0f93e8cd365d51ea041f087f68c00804">getPort</a>(), power, turnRatio);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="ttc" id="classev3api_1_1_steering_html_a311d9c13ae9bd3e9ed87d6257369ead3"><div class="ttname"><a href="../../d5/d34/classev3api_1_1_steering.html#a311d9c13ae9bd3e9ed87d6257369ead3">ev3api::Steering::mRightMotor</a></div><div class="ttdeci">Motor &amp; mRightMotor</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/_steering_8h_source.html#l00038">Steering.h:38</a></div></div>
+<div class="ttc" id="namespaceev3api_html"><div class="ttname"><a href="../../da/da4/namespaceev3api.html">ev3api</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dba/_clock_8h_source.html#l00012">Clock.h:12</a></div></div>
+<div class="ttc" id="_steering_8h_html"><div class="ttname"><a href="../../d9/d88/_steering_8h.html">Steering.h</a></div></div>
+<div class="ttc" id="classev3api_1_1_steering_html_ad914bd6fa31681f9d18a19850cc13280"><div class="ttname"><a href="../../d5/d34/classev3api_1_1_steering.html#ad914bd6fa31681f9d18a19850cc13280">ev3api::Steering::mLeftMotor</a></div><div class="ttdeci">Motor &amp; mLeftMotor</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/_steering_8h_source.html#l00037">Steering.h:37</a></div></div>
+<div class="ttc" id="classev3api_1_1_motor_html_a0f93e8cd365d51ea041f087f68c00804"><div class="ttname"><a href="../../da/d61/classev3api_1_1_motor.html#a0f93e8cd365d51ea041f087f68c00804">ev3api::Motor::getPort</a></div><div class="ttdeci">motor_port_t getPort(void) const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d12/_motor_8h_source.html#l00105">Motor.h:105</a></div></div>
+<div class="ttc" id="classev3api_1_1_motor_html"><div class="ttname"><a href="../../da/d61/classev3api_1_1_motor.html">ev3api::Motor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d12/_motor_8h_source.html#l00017">Motor.h:17</a></div></div>
+<div class="ttc" id="classev3api_1_1_steering_html_a1693dec1fb1e2b8fc79a29fbcf045a3c"><div class="ttname"><a href="../../d5/d34/classev3api_1_1_steering.html#a1693dec1fb1e2b8fc79a29fbcf045a3c">ev3api::Steering::setPower</a></div><div class="ttdeci">void setPower(int power, int turnRatio)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbb/_steering_8cpp_source.html#l00017">Steering.cpp:17</a></div></div>
+<div class="ttc" id="classev3api_1_1_steering_html_af8c485f99e3c79e781a879fc9dfb30d0"><div class="ttname"><a href="../../d5/d34/classev3api_1_1_steering.html#af8c485f99e3c79e781a879fc9dfb30d0">ev3api::Steering::Steering</a></div><div class="ttdeci">Steering(Motor &amp;leftMotor, Motor &amp;rightMotor)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbb/_steering_8cpp_source.html#l00012">Steering.cpp:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

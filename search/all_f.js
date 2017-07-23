@@ -1,7 +1,7 @@
 var searchData=
 [
   ['readme_2emd',['README.md',['../d9/dd6/_r_e_a_d_m_e_8md.html',1,'']]],
-  ['reset',['reset',['../d8/dc7/class_emoter.html#a53b215ce4182bb4db8868d4a2934a519',1,'Emoter::reset()'],['../dd/d56/class_lifter.html#a882df9a18bb5a41808acfc595265f751',1,'Lifter::reset()'],['../d1/d49/class_walker.html#a796b87e4f28d73c966b58a7866b018c9',1,'Walker::reset()']]],
+  ['reset',['reset',['../d8/dc7/class_emoter.html#a53b215ce4182bb4db8868d4a2934a519',1,'Emoter::reset()'],['../dd/d56/class_lifter.html#a882df9a18bb5a41808acfc595265f751',1,'Lifter::reset()'],['../d1/d49/class_walker.html#a796b87e4f28d73c966b58a7866b018c9',1,'Walker::reset()'],['../d4/d87/classev3api_1_1_clock.html#ae68ba47fe6d8f4a7f515001c10547ac4',1,'ev3api::Clock::reset()'],['../dc/d08/classev3api_1_1_gyro_sensor.html#a97b505d902fb927c2b15c5d28e9c1533',1,'ev3api::GyroSensor::reset()'],['../da/d61/classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad',1,'ev3api::Motor::reset()']]],
   ['resetdistance',['resetDistance',['../d7/d82/class_distance.html#aebd518d4652e4c5047ba1c56b7d1b3f0',1,'Distance']]],
   ['right_5fmotor_5fcurrent_5fangle',['right_motor_current_angle',['../d4/ddb/class_self_localization.html#ae2f69ed526e9f4185cf5ded506386410',1,'SelfLocalization']]],
   ['right_5fmotor_5fold_5fangle',['right_motor_old_angle',['../d4/ddb/class_self_localization.html#a164df28911bf46e69e963745a7fbaf22',1,'SelfLocalization']]],

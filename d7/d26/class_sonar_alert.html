@@ -73,6 +73,8 @@ SonarAlert 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d46/class_sonar_alert__coll__graph.png" border="0" usemap="#_sonar_alert_coll__map" alt="Collaboration graph"/></div>
 <map name="_sonar_alert_coll__map" id="_sonar_alert_coll__map">
+<area shape="rect" id="node2" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html" title="{ev3api::SonarSensor\n||+ SonarSensor()\l+ ~SonarSensor()\l+ getDistance()\l+ listen()\l}" alt="" coords="33,168,179,281"/>
+<area shape="rect" id="node3" href="../../db/d9e/classev3api_1_1_sensor.html" title="{ev3api::Sensor\n|&#45; mPort\l&#45; mType\l|# getPort()\l# Sensor()\l# ~Sensor()\l}" alt="" coords="51,5,161,119"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -80,7 +82,7 @@ SonarAlert 連携図</div>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a3cb7423e6415315ba0d955a650de26e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d26/class_sonar_alert.html#a3cb7423e6415315ba0d955a650de26e9">SonarAlert</a> (int)</td></tr>
 <tr class="separator:a3cb7423e6415315ba0d955a650de26e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9a252926da1b2e5e7dab340a77d855f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d26/class_sonar_alert.html#aa9a252926da1b2e5e7dab340a77d855f">SonarAlert</a> (int, int, SonarSensor &amp;)</td></tr>
+<tr class="memitem:aa9a252926da1b2e5e7dab340a77d855f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d26/class_sonar_alert.html#aa9a252926da1b2e5e7dab340a77d855f">SonarAlert</a> (int, int, <a class="el" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html">SonarSensor</a> &amp;)</td></tr>
 <tr class="separator:aa9a252926da1b2e5e7dab340a77d855f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64ad8bc16f5ec4867e3541456a8d503d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d26/class_sonar_alert.html#a64ad8bc16f5ec4867e3541456a8d503d">~SonarAlert</a> ()</td></tr>
 <tr class="separator:a64ad8bc16f5ec4867e3541456a8d503d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -93,7 +95,7 @@ SonarAlert 連携図</div>
 非公開変数類</h2></td></tr>
 <tr class="memitem:a3a71754e9937a298f6e0b8eb52da0ac1"><td class="memItemLeft" align="right" valign="top">signed int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d26/class_sonar_alert.html#a3a71754e9937a298f6e0b8eb52da0ac1">SONAR_ALERT_DISTANCE</a></td></tr>
 <tr class="separator:a3a71754e9937a298f6e0b8eb52da0ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5929b7ef80913f498ae04ea432026cfe"><td class="memItemLeft" align="right" valign="top">SonarSensor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d26/class_sonar_alert.html#a5929b7ef80913f498ae04ea432026cfe">sonarSensor</a></td></tr>
+<tr class="memitem:a5929b7ef80913f498ae04ea432026cfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html">SonarSensor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d26/class_sonar_alert.html#a5929b7ef80913f498ae04ea432026cfe">sonarSensor</a></td></tr>
 <tr class="separator:a5929b7ef80913f498ae04ea432026cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d8188abc4988bd050ef0919b5878021"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d26/class_sonar_alert.html#a8d8188abc4988bd050ef0919b5878021">timeCounter</a></td></tr>
 <tr class="separator:a8d8188abc4988bd050ef0919b5878021"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,7 +147,7 @@ SonarAlert 連携図</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SonarSensor &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html">SonarSensor</a> &amp;&#160;</td>
           <td class="paramname"><em>sensor</em>&#160;</td>
         </tr>
         <tr>
@@ -198,6 +200,15 @@ SonarAlert 連携図</div>
 <dl class="section return"><dt>戻り値</dt><dd>0 : 障害物なし 1 : 障害物あり </dd></dl>
 
 <p class="definition"> <a class="el" href="../../d1/dc4/_sonar_alert_8cpp_source.html">SonarAlert.cpp</a> の <a class="el" href="../../d1/dc4/_sonar_alert_8cpp_source.html#l00030">30</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/d26/class_sonar_alert_aec8f12a4a46f97e9dbd62ee91102d66c_cgraph.png" border="0" usemap="#d7/d26/class_sonar_alert_aec8f12a4a46f97e9dbd62ee91102d66c_cgraph" alt=""/></div>
+<map name="d7/d26/class_sonar_alert_aec8f12a4a46f97e9dbd62ee91102d66c_cgraph" id="d7/d26/class_sonar_alert_aec8f12a4a46f97e9dbd62ee91102d66c_cgraph">
+<area shape="rect" id="node2" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html#a2fd894f16c736178df87cd3f667962b9" title="ev3api::SonarSensor\l::getDistance" alt="" coords="221,5,367,44"/>
+<area shape="rect" id="node3" href="../../db/d9e/classev3api_1_1_sensor.html#ac2b40368f76aa4fa837ebc15241e655d" title="ev3api::Sensor::getPort" alt="" coords="415,12,576,37"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -277,7 +288,7 @@ SonarAlert 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SonarSensor* SonarAlert::sonarSensor</td>
+          <td class="memname"><a class="el" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html">SonarSensor</a>* SonarAlert::sonarSensor</td>
         </tr>
       </table>
   </td>

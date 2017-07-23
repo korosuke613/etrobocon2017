@@ -1,0 +1,12 @@
+<map id="ev3api::Clock::sleep" name="ev3api::Clock::sleep">
+<area shape="rect" id="node2" href="$d8/dc7/class_emoter.html#a3622eff628e6e590529f3ae335a6ce74" title="Emoter::wipe" alt="" coords="420,5,519,31"/>
+<area shape="rect" id="node3" href="$d8/dc7/class_emoter.html#aa0aed73b6da8a8fb2e0705d84689de39" title="Emoter::defaultSet" alt="" coords="203,55,334,80"/>
+<area shape="rect" id="node5" href="$dd/d56/class_lifter.html#a2cd742beb76d05535dbf70d7ee1d40d7" title="Lifter::liftUp" alt="" coords="224,104,313,129"/>
+<area shape="rect" id="node6" href="$dd/d56/class_lifter.html#a4ef522e7b1b5a1637d2a5eee7db3d2d0" title="Lifter::liftDown" alt="" coords="216,153,321,179"/>
+<area shape="rect" id="node7" href="$dd/d56/class_lifter.html#a984c26558654a2c67ee5e225062aa324" title="Lifter::defaultSet" alt="" coords="209,203,328,228"/>
+<area shape="rect" id="node9" href="$d1/d49/class_walker.html#af913f99c575c9be615d03ec96460ce15" title="Walker::edgeChange" alt="" coords="195,252,342,277"/>
+<area shape="rect" id="node10" href="$d1/d49/class_walker.html#a5626568e28703a13861149264916132c" title="Walker::moveAngle" alt="" coords="200,301,337,327"/>
+<area shape="rect" id="node11" href="$d1/d49/class_walker.html#a5ee3d6593656b064058949f31f525c31" title="Walker::angleChange" alt="" coords="194,351,343,376"/>
+<area shape="rect" id="node4" href="$d8/dc7/class_emoter.html#aaf3d3334f9b6237acc3facb831341bff" title="Emoter::changeDefault" alt="" coords="391,55,549,80"/>
+<area shape="rect" id="node8" href="$dd/d56/class_lifter.html#ab497fa52bc88dbc892d8a12a25b0d475" title="Lifter::changeDefault" alt="" coords="398,203,542,228"/>
+</map>

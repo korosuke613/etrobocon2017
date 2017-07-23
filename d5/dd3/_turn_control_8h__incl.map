@@ -1,3 +1,6 @@
 <map id="str/apps/include/TurnControl.h" name="str/apps/include/TurnControl.h">
 <area shape="rect" id="node2" href="$da/dcf/_pid_8h.html" title="Pid.h" alt="" coords="29,79,80,104"/>
+<area shape="rect" id="node3" href="$de/d0d/_color_sensor_8h.html" title="ColorSensor.h" alt="" coords="104,79,210,104"/>
+<area shape="rect" id="node4" href="$da/dbb/_sensor_8h.html" title="Sensor.h" alt="" coords="120,152,194,177"/>
+<area shape="rect" id="node5" href="$d3/d42/_port_8h.html" title="モータ/センサポート関連定義 " alt="" coords="85,225,142,251"/>
 </map>

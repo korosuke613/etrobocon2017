@@ -1,6 +1,12 @@
 <map id="Walker::angleChange" name="Walker::angleChange">
-<area shape="rect" id="node2" href="$d1/d49/class_walker.html#a70f88eb11114b0337bfcd4b05392f3d5" title="Walker::run" alt="" coords="345,5,434,31"/>
-<area shape="rect" id="node5" href="$d1/d49/class_walker.html#a548b93fdfc6cb47eaa9ae8b8b8579c23" title="Walker::stop" alt="" coords="202,56,297,81"/>
-<area shape="rect" id="node3" href="$d8/d3c/util_8h.html#a0a6d184db0f324ec8dfdd059b9b526a8" title="msg_f" alt="" coords="532,55,589,80"/>
-<area shape="rect" id="node4" href="$d1/d49/class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="482,5,639,31"/>
+<area shape="rect" id="node2" href="$da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="202,5,366,31"/>
+<area shape="rect" id="node3" href="$d1/d49/class_walker.html#a70f88eb11114b0337bfcd4b05392f3d5" title="Walker::run" alt="" coords="444,105,533,131"/>
+<area shape="rect" id="node8" href="$d4/d87/classev3api_1_1_clock.html#a34ff6f7b273edf33eeae7abc1754e319" title="ev3api::Clock::sleep" alt="" coords="214,55,355,80"/>
+<area shape="rect" id="node10" href="$d1/d49/class_walker.html#a548b93fdfc6cb47eaa9ae8b8b8579c23" title="Walker::stop" alt="" coords="237,156,332,181"/>
+<area shape="rect" id="node4" href="$d8/d3c/util_8h.html#a0a6d184db0f324ec8dfdd059b9b526a8" title="msg_f" alt="" coords="660,156,718,181"/>
+<area shape="rect" id="node5" href="$d1/d49/class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="611,107,768,132"/>
+<area shape="rect" id="node7" href="$da/d61/classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="1026,81,1186,107"/>
+<area shape="rect" id="node6" href="$da/d61/classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="816,107,978,132"/>
+<area shape="rect" id="node9" href="$d4/d87/classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1" title="ev3api::Clock::getTim" alt="" coords="414,55,563,80"/>
+<area shape="rect" id="node11" href="$da/d61/classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="419,207,558,232"/>
 </map>

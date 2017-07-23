@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pid_2ecpp',['Pid.cpp',['../d2/d35/_pid_8cpp.html',1,'']]],
-  ['pid_2eh',['Pid.h',['../da/dcf/_pid_8h.html',1,'']]]
+  ['normalcourse_2ecpp',['NormalCourse.cpp',['../dc/d8a/_normal_course_8cpp.html',1,'']]],
+  ['normalcourse_2eh',['NormalCourse.h',['../d6/dad/_normal_course_8h.html',1,'']]]
 ];

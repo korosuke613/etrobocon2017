@@ -1,0 +1,5 @@
+<map id="Lifter::reset" name="Lifter::reset">
+<area shape="rect" id="node2" href="$da/d61/classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="153,5,292,31"/>
+<area shape="rect" id="node3" href="$da/d61/classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="141,55,304,80"/>
+<area shape="rect" id="node4" href="$da/d61/classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="352,55,511,80"/>
+</map>

@@ -1,8 +1,9 @@
 <map id="SpeedControl::calculateSpeedForPid" name="SpeedControl::calculateSpeedForPid">
 <area shape="rect" id="node2" href="$dd/dc1/class_speed_control.html#af8d3ac06b066e693929a5d584d88dac0" title="SpeedControl::calcDistance4ms" alt="" coords="255,29,466,55"/>
-<area shape="rect" id="node5" href="$dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="310,79,411,104"/>
-<area shape="rect" id="node6" href="$dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="305,128,416,153"/>
-<area shape="rect" id="node7" href="$dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="304,177,416,203"/>
+<area shape="rect" id="node6" href="$dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="310,79,411,104"/>
+<area shape="rect" id="node7" href="$dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="305,128,416,153"/>
+<area shape="rect" id="node8" href="$dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="304,177,416,203"/>
 <area shape="rect" id="node3" href="$d1/d49/class_walker.html#aac9aaddeb926d610def2896c27ad405b" title="Walker::get_count_L" alt="" coords="515,5,658,31"/>
-<area shape="rect" id="node4" href="$d1/d49/class_walker.html#ab202921b6baf9ad7c3afbdf9b606bd09" title="Walker::get_count_R" alt="" coords="514,55,659,80"/>
+<area shape="rect" id="node5" href="$d1/d49/class_walker.html#ab202921b6baf9ad7c3afbdf9b606bd09" title="Walker::get_count_R" alt="" coords="514,55,659,80"/>
+<area shape="rect" id="node4" href="$da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="707,31,871,56"/>
 </map>

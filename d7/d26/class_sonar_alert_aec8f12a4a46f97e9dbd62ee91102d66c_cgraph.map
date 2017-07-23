@@ -1,0 +1,4 @@
+<map id="SonarAlert::detectBarrier" name="SonarAlert::detectBarrier">
+<area shape="rect" id="node2" href="$d9/dcc/classev3api_1_1_sonar_sensor.html#a2fd894f16c736178df87cd3f667962b9" title="ev3api::SonarSensor\l::getDistance" alt="" coords="221,5,367,44"/>
+<area shape="rect" id="node3" href="$db/d9e/classev3api_1_1_sensor.html#ac2b40368f76aa4fa837ebc15241e655d" title="ev3api::Sensor::getPort" alt="" coords="415,12,576,37"/>
+</map>

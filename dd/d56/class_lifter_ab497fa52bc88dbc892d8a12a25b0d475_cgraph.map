@@ -1,4 +1,10 @@
 <map id="Lifter::changeDefault" name="Lifter::changeDefault">
-<area shape="rect" id="node2" href="$dd/d56/class_lifter.html#a984c26558654a2c67ee5e225062aa324" title="Lifter::defaultSet" alt="" coords="198,5,316,31"/>
-<area shape="rect" id="node3" href="$dd/d56/class_lifter.html#a882df9a18bb5a41808acfc595265f751" title="Lifter::reset" alt="" coords="213,55,301,80"/>
+<area shape="rect" id="node2" href="$dd/d56/class_lifter.html#a984c26558654a2c67ee5e225062aa324" title="Lifter::defaultSet" alt="" coords="198,105,316,131"/>
+<area shape="rect" id="node8" href="$dd/d56/class_lifter.html#a882df9a18bb5a41808acfc595265f751" title="Lifter::reset" alt="" coords="213,156,301,181"/>
+<area shape="rect" id="node3" href="$da/d61/classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="576,131,736,156"/>
+<area shape="rect" id="node4" href="$da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="364,5,528,31"/>
+<area shape="rect" id="node5" href="$d4/d87/classev3api_1_1_clock.html#a34ff6f7b273edf33eeae7abc1754e319" title="ev3api::Clock::sleep" alt="" coords="376,55,516,80"/>
+<area shape="rect" id="node7" href="$da/d61/classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="365,156,527,181"/>
+<area shape="rect" id="node6" href="$d4/d87/classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1" title="ev3api::Clock::getTim" alt="" coords="581,55,730,80"/>
+<area shape="rect" id="node9" href="$da/d61/classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="376,205,516,231"/>
 </map>

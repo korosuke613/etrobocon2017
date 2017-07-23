@@ -1,0 +1,4 @@
+<map id="TurnControl::getBrightness" name="TurnControl::getBrightness">
+<area shape="rect" id="node2" href="$d3/d7f/classev3api_1_1_color_sensor.html#ae7829be979488c7791dcbc835030d350" title="ev3api::ColorSensor\l::getBrightness" alt="" coords="234,5,376,44"/>
+<area shape="rect" id="node3" href="$db/d9e/classev3api_1_1_sensor.html#ac2b40368f76aa4fa837ebc15241e655d" title="ev3api::Sensor::getPort" alt="" coords="424,12,584,37"/>
+</map>

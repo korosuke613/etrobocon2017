@@ -1,0 +1,4 @@
+<map id="ev3api::TouchSensor::isPressed" name="ev3api::TouchSensor::isPressed">
+<area shape="rect" id="node2" href="$d0/df8/class_et_robocon2017.html#a08ca7af7ec247ee64e6827896a87383a" title="EtRobocon2017::waitStarter" alt="" coords="199,12,387,37"/>
+<area shape="rect" id="node3" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="435,12,586,37"/>
+</map>

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/ev3-api/library/libcpp-ev3/include/GyroSensor.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_c82af91c3623fc9c10fc40964bdc8f6c.html">ev3-api</a></li><li class="navelem"><a class="el" href="../../dir_dde7901b05b0fefedb058974606daa2a.html">library</a></li><li class="navelem"><a class="el" href="../../dir_de2582d59bf4305d94602dbc05a9d78c.html">libcpp-ev3</a></li><li class="navelem"><a class="el" href="../../dir_3567f02413336b4be8933f2e9c664233.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GyroSensor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d35/_gyro_sensor_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// GyroSensor.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Copyright (c) 2015-2016 Embedded Technology Software Design Robot Contest</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef EV3CPPAPI_GYROSENSOR_H_</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define EV3CPPAPI_GYROSENSOR_H_</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/dbb/_sensor_8h.html">Sensor.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../da/da4/namespaceev3api.html">ev3api</a> {</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../dc/d08/classev3api_1_1_gyro_sensor.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/d08/classev3api_1_1_gyro_sensor.html">GyroSensor</a>: <span class="keyword">public</span> <a class="code" href="../../db/d9e/classev3api_1_1_sensor.html">Sensor</a></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../dc/d08/classev3api_1_1_gyro_sensor.html#ac3c90fe5c97d2d6395f3c4e858821b3c">   22</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> int16_t <a class="code" href="../../dc/d08/classev3api_1_1_gyro_sensor.html#ac3c90fe5c97d2d6395f3c4e858821b3c">DEFAULT_OFFSET</a> = 0;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="../../dc/d08/classev3api_1_1_gyro_sensor.html#ae531673385f409a9438c43367c56fa33">GyroSensor</a>(<a class="code" href="../../d3/d42/_port_8h.html#a8d17f8fabb486d5815d626610983e82d">ePortS</a> port);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d08/classev3api_1_1_gyro_sensor.html#a39716bd4b7d908145e4cc9697054ff4a">setOffset</a>(int16_t offset);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d08/classev3api_1_1_gyro_sensor.html#a97b505d902fb927c2b15c5d28e9c1533">reset</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    int16_t <a class="code" href="../../dc/d08/classev3api_1_1_gyro_sensor.html#a1f8dcc7c2d97d8f6c945a83ec1931ea0">getAnglerVelocity</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    int16_t <a class="code" href="../../dc/d08/classev3api_1_1_gyro_sensor.html#a540bb6c48ffcb0a62fae935d65e4b628">getAngle</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../dc/d08/classev3api_1_1_gyro_sensor.html#a31ffaa898a0b3c1dfe376a5cc6261008">   62</a></span>&#160;    int16_t <a class="code" href="../../dc/d08/classev3api_1_1_gyro_sensor.html#a31ffaa898a0b3c1dfe376a5cc6261008">mOffset</a>;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}; <span class="comment">// class GyroSensor</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}  <span class="comment">// namespace ev3api</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif // ! EV3CPPAPI_GYROSENSOR_H_</span></div><div class="ttc" id="classev3api_1_1_gyro_sensor_html_ac3c90fe5c97d2d6395f3c4e858821b3c"><div class="ttname"><a href="../../dc/d08/classev3api_1_1_gyro_sensor.html#ac3c90fe5c97d2d6395f3c4e858821b3c">ev3api::GyroSensor::DEFAULT_OFFSET</a></div><div class="ttdeci">static const int16_t DEFAULT_OFFSET</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d35/_gyro_sensor_8h_source.html#l00022">GyroSensor.h:22</a></div></div>
+<div class="ttc" id="namespaceev3api_html"><div class="ttname"><a href="../../da/da4/namespaceev3api.html">ev3api</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dba/_clock_8h_source.html#l00012">Clock.h:12</a></div></div>
+<div class="ttc" id="classev3api_1_1_gyro_sensor_html_a31ffaa898a0b3c1dfe376a5cc6261008"><div class="ttname"><a href="../../dc/d08/classev3api_1_1_gyro_sensor.html#a31ffaa898a0b3c1dfe376a5cc6261008">ev3api::GyroSensor::mOffset</a></div><div class="ttdeci">int16_t mOffset</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d35/_gyro_sensor_8h_source.html#l00062">GyroSensor.h:62</a></div></div>
+<div class="ttc" id="classev3api_1_1_gyro_sensor_html_ae531673385f409a9438c43367c56fa33"><div class="ttname"><a href="../../dc/d08/classev3api_1_1_gyro_sensor.html#ae531673385f409a9438c43367c56fa33">ev3api::GyroSensor::GyroSensor</a></div><div class="ttdeci">GyroSensor(ePortS port)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4f/_gyro_sensor_8cpp_source.html#l00013">GyroSensor.cpp:13</a></div></div>
+<div class="ttc" id="_port_8h_html_a8d17f8fabb486d5815d626610983e82d"><div class="ttname"><a href="../../d3/d42/_port_8h.html#a8d17f8fabb486d5815d626610983e82d">ePortS</a></div><div class="ttdeci">ePortS</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d42/_port_8h_source.html#l00018">Port.h:18</a></div></div>
+<div class="ttc" id="classev3api_1_1_gyro_sensor_html_a39716bd4b7d908145e4cc9697054ff4a"><div class="ttname"><a href="../../dc/d08/classev3api_1_1_gyro_sensor.html#a39716bd4b7d908145e4cc9697054ff4a">ev3api::GyroSensor::setOffset</a></div><div class="ttdeci">void setOffset(int16_t offset)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4f/_gyro_sensor_8cpp_source.html#l00024">GyroSensor.cpp:24</a></div></div>
+<div class="ttc" id="classev3api_1_1_gyro_sensor_html_a1f8dcc7c2d97d8f6c945a83ec1931ea0"><div class="ttname"><a href="../../dc/d08/classev3api_1_1_gyro_sensor.html#a1f8dcc7c2d97d8f6c945a83ec1931ea0">ev3api::GyroSensor::getAnglerVelocity</a></div><div class="ttdeci">int16_t getAnglerVelocity(void) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4f/_gyro_sensor_8cpp_source.html#l00039">GyroSensor.cpp:39</a></div></div>
+<div class="ttc" id="classev3api_1_1_sensor_html"><div class="ttname"><a href="../../db/d9e/classev3api_1_1_sensor.html">ev3api::Sensor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbb/_sensor_8h_source.html#l00018">Sensor.h:18</a></div></div>
+<div class="ttc" id="classev3api_1_1_gyro_sensor_html"><div class="ttname"><a href="../../dc/d08/classev3api_1_1_gyro_sensor.html">ev3api::GyroSensor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d35/_gyro_sensor_8h_source.html#l00016">GyroSensor.h:16</a></div></div>
+<div class="ttc" id="_sensor_8h_html"><div class="ttname"><a href="../../da/dbb/_sensor_8h.html">Sensor.h</a></div></div>
+<div class="ttc" id="classev3api_1_1_gyro_sensor_html_a540bb6c48ffcb0a62fae935d65e4b628"><div class="ttname"><a href="../../dc/d08/classev3api_1_1_gyro_sensor.html#a540bb6c48ffcb0a62fae935d65e4b628">ev3api::GyroSensor::getAngle</a></div><div class="ttdeci">int16_t getAngle(void) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4f/_gyro_sensor_8cpp_source.html#l00046">GyroSensor.cpp:46</a></div></div>
+<div class="ttc" id="classev3api_1_1_gyro_sensor_html_a97b505d902fb927c2b15c5d28e9c1533"><div class="ttname"><a href="../../dc/d08/classev3api_1_1_gyro_sensor.html#a97b505d902fb927c2b15c5d28e9c1533">ev3api::GyroSensor::reset</a></div><div class="ttdeci">void reset(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d4f/_gyro_sensor_8cpp_source.html#l00032">GyroSensor.cpp:32</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

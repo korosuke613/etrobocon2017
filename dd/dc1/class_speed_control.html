@@ -82,8 +82,10 @@ SpeedControl 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/dfc/class_speed_control__coll__graph.png" border="0" usemap="#_speed_control_coll__map" alt="Collaboration graph"/></div>
 <map name="_speed_control_coll__map" id="_speed_control_coll__map">
-<area shape="rect" id="node2" href="../../dc/de1/class_pid.html" title="{Pid\n|&#45; p_gain\l&#45; i_gain\l&#45; d_gain\l&#45; old_diff\l&#45; integral\l&#45; target\l&#45; output\l&#45; del\l|+ Pid()\l+ setPid()\l+ calculate()\l+ get_output()\l# limitOutput()\l&#45; wrapper_of_constructor()\l}" alt="" coords="5,19,184,252"/>
-<area shape="rect" id="node3" href="../../d1/d49/class_walker.html" title="{Walker\n|&#45; leftWheel\l&#45; rightWheel\l&#45; clock\l&#45; leftRight\l|+ Walker()\l+ stop()\l+ run()\l+ edgeChange()\l+ moveAngle()\l+ angleChange()\l+ get_count_L()\l+ get_count_R()\l+ init()\l+ terminate()\l+ reset()\l+ setBrakeMotor()\l}" alt="" coords="208,5,336,265"/>
+<area shape="rect" id="node2" href="../../dc/de1/class_pid.html" title="{Pid\n|&#45; p_gain\l&#45; i_gain\l&#45; d_gain\l&#45; old_diff\l&#45; integral\l&#45; target\l&#45; output\l&#45; del\l|+ Pid()\l+ setPid()\l+ calculate()\l+ get_output()\l# limitOutput()\l&#45; wrapper_of_constructor()\l}" alt="" coords="5,367,184,600"/>
+<area shape="rect" id="node3" href="../../d1/d49/class_walker.html" title="{Walker\n|&#45; leftRight\l|+ Walker()\l+ stop()\l+ run()\l+ edgeChange()\l+ moveAngle()\l+ angleChange()\l+ get_count_L()\l+ get_count_R()\l+ init()\l+ terminate()\l+ reset()\l+ setBrakeMotor()\l}" alt="" coords="208,373,336,593"/>
+<area shape="rect" id="node4" href="../../da/d61/classev3api_1_1_motor.html" title="{ev3api::Motor\n|+ PWM_MAX\l+ PWM_MIN\l&#45; mPort\l&#45; mBrake\l&#45; mType\l&#45; mPWM\l&#45; mOffset\l|+ Motor()\l+ ~Motor()\l+ reset()\l+ getCount()\l+ setCount()\l+ setPWM()\l+ setBrake()\l+ stop()\l# getPort()\l# getBrake()\l# getPWM()\l}" alt="" coords="158,5,260,292"/>
+<area shape="rect" id="node5" href="../../d4/d87/classev3api_1_1_clock.html" title="{ev3api::Clock\n|&#45; mStartClock\l|+ Clock()\l+ reset()\l+ now()\l+ wait()\l+ sleep()\l# getTim()\l}" alt="" coords="285,79,387,219"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -184,7 +186,8 @@ SpeedControl 連携図</div>
 <div class="center"><img src="../../dd/dc1/class_speed_control_af8d3ac06b066e693929a5d584d88dac0_cgraph.png" border="0" usemap="#dd/dc1/class_speed_control_af8d3ac06b066e693929a5d584d88dac0_cgraph" alt=""/></div>
 <map name="dd/dc1/class_speed_control_af8d3ac06b066e693929a5d584d88dac0_cgraph" id="dd/dc1/class_speed_control_af8d3ac06b066e693929a5d584d88dac0_cgraph">
 <area shape="rect" id="node2" href="../../d1/d49/class_walker.html#aac9aaddeb926d610def2896c27ad405b" title="Walker::get_count_L" alt="" coords="265,5,409,31"/>
-<area shape="rect" id="node3" href="../../d1/d49/class_walker.html#ab202921b6baf9ad7c3afbdf9b606bd09" title="Walker::get_count_R" alt="" coords="264,55,410,80"/>
+<area shape="rect" id="node4" href="../../d1/d49/class_walker.html#ab202921b6baf9ad7c3afbdf9b606bd09" title="Walker::get_count_R" alt="" coords="264,55,410,80"/>
+<area shape="rect" id="node3" href="../../da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="458,31,621,56"/>
 </map>
 </div>
 <div class="dynheader">
@@ -221,11 +224,12 @@ SpeedControl 連携図</div>
 <div class="center"><img src="../../dd/dc1/class_speed_control_ae07cd7a54722a64d3eb30a3ec40ee497_cgraph.png" border="0" usemap="#dd/dc1/class_speed_control_ae07cd7a54722a64d3eb30a3ec40ee497_cgraph" alt=""/></div>
 <map name="dd/dc1/class_speed_control_ae07cd7a54722a64d3eb30a3ec40ee497_cgraph" id="dd/dc1/class_speed_control_ae07cd7a54722a64d3eb30a3ec40ee497_cgraph">
 <area shape="rect" id="node2" href="../../dd/dc1/class_speed_control.html#af8d3ac06b066e693929a5d584d88dac0" title="SpeedControl::calcDistance4ms" alt="" coords="255,29,466,55"/>
-<area shape="rect" id="node5" href="../../dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="310,79,411,104"/>
-<area shape="rect" id="node6" href="../../dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="305,128,416,153"/>
-<area shape="rect" id="node7" href="../../dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="304,177,416,203"/>
+<area shape="rect" id="node6" href="../../dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="310,79,411,104"/>
+<area shape="rect" id="node7" href="../../dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="305,128,416,153"/>
+<area shape="rect" id="node8" href="../../dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="304,177,416,203"/>
 <area shape="rect" id="node3" href="../../d1/d49/class_walker.html#aac9aaddeb926d610def2896c27ad405b" title="Walker::get_count_L" alt="" coords="515,5,658,31"/>
-<area shape="rect" id="node4" href="../../d1/d49/class_walker.html#ab202921b6baf9ad7c3afbdf9b606bd09" title="Walker::get_count_R" alt="" coords="514,55,659,80"/>
+<area shape="rect" id="node5" href="../../d1/d49/class_walker.html#ab202921b6baf9ad7c3afbdf9b606bd09" title="Walker::get_count_R" alt="" coords="514,55,659,80"/>
+<area shape="rect" id="node4" href="../../da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="707,31,871,56"/>
 </map>
 </div>
 

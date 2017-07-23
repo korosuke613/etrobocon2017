@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalcourse',['NormalCourse',['../dd/d88/class_normal_course.html',1,'']]]
+  ['gyrosensor',['GyroSensor',['../dc/d08/classev3api_1_1_gyro_sensor.html',1,'ev3api']]]
 ];

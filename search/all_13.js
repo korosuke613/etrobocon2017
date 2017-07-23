@@ -1,7 +1,8 @@
 var searchData=
 [
+  ['wait',['wait',['../d4/d87/classev3api_1_1_clock.html#a3d0dff1843a33d71945a1e13f85e20c8',1,'ev3api::Clock']]],
   ['waitstarter',['waitStarter',['../d0/df8/class_et_robocon2017.html#a08ca7af7ec247ee64e6827896a87383a',1,'EtRobocon2017']]],
-  ['walker',['Walker',['../d1/d49/class_walker.html',1,'Walker'],['../d1/d49/class_walker.html#acc0931305bedcf81ff621c31cdf2a92c',1,'Walker::Walker()'],['../d7/d82/class_distance.html#a2142d2203515e334bc2b982e8c4dfa09',1,'Distance::walker()'],['../da/dbb/class_line_tracer.html#a6cfe429a63af1f9415aedb51bc61b341',1,'LineTracer::walker()'],['../dd/dc1/class_speed_control.html#ae4217dc7818f95511d61c4875c41bf03',1,'SpeedControl::walker()']]],
+  ['walker',['Walker',['../d1/d49/class_walker.html',1,'Walker'],['../d7/d82/class_distance.html#a2142d2203515e334bc2b982e8c4dfa09',1,'Distance::walker()'],['../da/dbb/class_line_tracer.html#a6cfe429a63af1f9415aedb51bc61b341',1,'LineTracer::walker()'],['../dd/dc1/class_speed_control.html#ae4217dc7818f95511d61c4875c41bf03',1,'SpeedControl::walker()'],['../d1/d49/class_walker.html#acc0931305bedcf81ff621c31cdf2a92c',1,'Walker::Walker()']]],
   ['walker_2ecpp',['Walker.cpp',['../d3/d11/_walker_8cpp.html',1,'']]],
   ['walker_2eh',['Walker.h',['../d5/dfc/_walker_8h.html',1,'']]],
   ['wheel_5facross',['wheel_across',['../d4/ddb/class_self_localization.html#a97fd4d363b59842437fbcb0987e6c4a8',1,'SelfLocalization']]],

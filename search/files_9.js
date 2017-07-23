@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['selflocalization_2ecpp',['SelfLocalization.cpp',['../d6/d47/_self_localization_8cpp.html',1,'']]],
-  ['selflocalization_2eh',['SelfLocalization.h',['../d3/d3a/_self_localization_8h.html',1,'']]],
-  ['sonaralert_2ecpp',['SonarAlert.cpp',['../d1/dc4/_sonar_alert_8cpp.html',1,'']]],
-  ['sonaralert_2eh',['SonarAlert.h',['../d7/d8d/_sonar_alert_8h.html',1,'']]],
-  ['speedcontrol_2ecpp',['SpeedControl.cpp',['../dc/ddb/_speed_control_8cpp.html',1,'']]],
-  ['speedcontrol_2eh',['SpeedControl.h',['../db/d18/_speed_control_8h.html',1,'']]]
+  ['readme_2emd',['README.md',['../d9/dd6/_r_e_a_d_m_e_8md.html',1,'']]],
+  ['rightcourse_2ecpp',['RightCourse.cpp',['../d1/d6d/_right_course_8cpp.html',1,'']]],
+  ['rightcourse_2eh',['RightCourse.h',['../d3/d94/_right_course_8h.html',1,'']]],
+  ['rightnormalcourse_2ecpp',['RightNormalCourse.cpp',['../d4/da7/_right_normal_course_8cpp.html',1,'']]],
+  ['rightnormalcourse_2eh',['RightNormalCourse.h',['../d2/dfd/_right_normal_course_8h.html',1,'']]]
 ];

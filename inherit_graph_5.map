@@ -1,3 +1,7 @@
 <map id="クラス階層図" name="クラス階層図">
-<area shape="rect" id="node1" href="$da/dbb/class_line_tracer.html" title="LineTracer" alt="" coords="5,5,90,31"/>
+<area shape="rect" id="node1" href="$db/d9e/classev3api_1_1_sensor.html" title="ev3api::Sensor" alt="" coords="5,80,116,105"/>
+<area shape="rect" id="node2" href="$d3/d7f/classev3api_1_1_color_sensor.html" title="ev3api::ColorSensor" alt="" coords="165,5,308,31"/>
+<area shape="rect" id="node3" href="$dc/d08/classev3api_1_1_gyro_sensor.html" title="ev3api::GyroSensor" alt="" coords="167,55,306,80"/>
+<area shape="rect" id="node4" href="$d9/dcc/classev3api_1_1_sonar_sensor.html" title="ev3api::SonarSensor" alt="" coords="164,104,309,129"/>
+<area shape="rect" id="node5" href="$d5/dad/classev3api_1_1_touch_sensor.html" title="ev3api::TouchSensor" alt="" coords="164,153,309,179"/>
 </map>

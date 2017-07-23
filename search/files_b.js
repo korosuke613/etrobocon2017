@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['util_2ecpp',['util.cpp',['../df/d2d/util_8cpp.html',1,'']]],
-  ['util_2eh',['util.h',['../d8/d3c/util_8h.html',1,'']]]
+  ['touchsensor_2ecpp',['TouchSensor.cpp',['../d7/d73/_touch_sensor_8cpp.html',1,'']]],
+  ['touchsensor_2eh',['TouchSensor.h',['../d7/df2/_touch_sensor_8h.html',1,'']]],
+  ['turncontrol_2ecpp',['TurnControl.cpp',['../d6/dcc/_turn_control_8cpp.html',1,'']]],
+  ['turncontrol_2eh',['TurnControl.h',['../da/d7f/_turn_control_8h.html',1,'']]]
 ];

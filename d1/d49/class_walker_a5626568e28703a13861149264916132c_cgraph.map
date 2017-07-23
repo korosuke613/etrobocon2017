@@ -1,0 +1,7 @@
+<map id="Walker::moveAngle" name="Walker::moveAngle">
+<area shape="rect" id="node2" href="$da/d61/classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="202,5,341,31"/>
+<area shape="rect" id="node3" href="$da/d61/classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="192,55,352,80"/>
+<area shape="rect" id="node4" href="$da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="190,104,353,129"/>
+<area shape="rect" id="node5" href="$d4/d87/classev3api_1_1_clock.html#a34ff6f7b273edf33eeae7abc1754e319" title="ev3api::Clock::sleep" alt="" coords="201,153,342,179"/>
+<area shape="rect" id="node6" href="$d4/d87/classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1" title="ev3api::Clock::getTim" alt="" coords="401,153,550,179"/>
+</map>

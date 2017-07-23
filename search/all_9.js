@@ -5,5 +5,6 @@ var searchData=
   ['init_5ff',['init_f',['../d8/d3c/util_8h.html#ad6e21cf567f3484d137058762b3d9e91',1,'init_f(const char *str):&#160;util.cpp'],['../df/d2d/util_8cpp.html#ad6e21cf567f3484d137058762b3d9e91',1,'init_f(const char *str):&#160;util.cpp']]],
   ['integral',['integral',['../dc/de1/class_pid.html#af11d656ec933a259dac8d9c1676231d9',1,'Pid']]],
   ['ir',['IR',['../d8/d0a/common__definition_8h.html#a68e22635ff207d8ca10459833856bd75',1,'common_definition.h']]],
-  ['isleftsideline',['isLeftsideLine',['../da/dbb/class_line_tracer.html#aef99fb034251d6ad92dccc783d502907',1,'LineTracer']]]
+  ['isleftsideline',['isLeftsideLine',['../da/dbb/class_line_tracer.html#aef99fb034251d6ad92dccc783d502907',1,'LineTracer']]],
+  ['ispressed',['isPressed',['../d5/dad/classev3api_1_1_touch_sensor.html#a40da79cecc67c34ae836bcb42e49f309',1,'ev3api::TouchSensor']]]
 ];

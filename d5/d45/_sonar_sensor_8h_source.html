@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/ev3-api/library/libcpp-ev3/include/SonarSensor.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_c82af91c3623fc9c10fc40964bdc8f6c.html">ev3-api</a></li><li class="navelem"><a class="el" href="../../dir_dde7901b05b0fefedb058974606daa2a.html">library</a></li><li class="navelem"><a class="el" href="../../dir_de2582d59bf4305d94602dbc05a9d78c.html">libcpp-ev3</a></li><li class="navelem"><a class="el" href="../../dir_3567f02413336b4be8933f2e9c664233.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SonarSensor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/d45/_sonar_sensor_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// SonarSensor.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Copyright (c) 2015-2016 Embedded Technology Software Design Robot Contest</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef EV3CPPAPI_SONARSENSOR_H_</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define EV3CPPAPI_SONARSENSOR_H_</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/dbb/_sensor_8h.html">Sensor.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../da/da4/namespaceev3api.html">ev3api</a> {</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html">SonarSensor</a>: <span class="keyword">public</span> <a class="code" href="../../db/d9e/classev3api_1_1_sensor.html">Sensor</a></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html#ac37ab8eaae93776c489428d06e845661">SonarSensor</a>(<a class="code" href="../../d3/d42/_port_8h.html#a8d17f8fabb486d5815d626610983e82d">ePortS</a> port);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html#acb2b9447cf733a621c29f6eddb5e1e1d">~SonarSensor</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    int16_t <a class="code" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html#a2fd894f16c736178df87cd3f667962b9">getDistance</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d9/dcc/classev3api_1_1_sonar_sensor.html#a52f953963c6740e3f8425167b60c724a">listen</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}; <span class="comment">// class SonarSensor</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}  <span class="comment">// namespace ev3api</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // ! EV3CPPAPI_SONARSENSOR_H_</span></div><div class="ttc" id="namespaceev3api_html"><div class="ttname"><a href="../../da/da4/namespaceev3api.html">ev3api</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dba/_clock_8h_source.html#l00012">Clock.h:12</a></div></div>
+<div class="ttc" id="classev3api_1_1_sonar_sensor_html_a52f953963c6740e3f8425167b60c724a"><div class="ttname"><a href="../../d9/dcc/classev3api_1_1_sonar_sensor.html#a52f953963c6740e3f8425167b60c724a">ev3api::SonarSensor::listen</a></div><div class="ttdeci">bool listen(void) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d26/_sonar_sensor_8cpp_source.html#l00036">SonarSensor.cpp:36</a></div></div>
+<div class="ttc" id="_port_8h_html_a8d17f8fabb486d5815d626610983e82d"><div class="ttname"><a href="../../d3/d42/_port_8h.html#a8d17f8fabb486d5815d626610983e82d">ePortS</a></div><div class="ttdeci">ePortS</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d42/_port_8h_source.html#l00018">Port.h:18</a></div></div>
+<div class="ttc" id="classev3api_1_1_sensor_html"><div class="ttname"><a href="../../db/d9e/classev3api_1_1_sensor.html">ev3api::Sensor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbb/_sensor_8h_source.html#l00018">Sensor.h:18</a></div></div>
+<div class="ttc" id="classev3api_1_1_sonar_sensor_html_acb2b9447cf733a621c29f6eddb5e1e1d"><div class="ttname"><a href="../../d9/dcc/classev3api_1_1_sonar_sensor.html#acb2b9447cf733a621c29f6eddb5e1e1d">ev3api::SonarSensor::~SonarSensor</a></div><div class="ttdeci">virtual ~SonarSensor(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d26/_sonar_sensor_8cpp_source.html#l00022">SonarSensor.cpp:22</a></div></div>
+<div class="ttc" id="_sensor_8h_html"><div class="ttname"><a href="../../da/dbb/_sensor_8h.html">Sensor.h</a></div></div>
+<div class="ttc" id="classev3api_1_1_sonar_sensor_html_ac37ab8eaae93776c489428d06e845661"><div class="ttname"><a href="../../d9/dcc/classev3api_1_1_sonar_sensor.html#ac37ab8eaae93776c489428d06e845661">ev3api::SonarSensor::SonarSensor</a></div><div class="ttdeci">SonarSensor(ePortS port)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d26/_sonar_sensor_8cpp_source.html#l00013">SonarSensor.cpp:13</a></div></div>
+<div class="ttc" id="classev3api_1_1_sonar_sensor_html"><div class="ttname"><a href="../../d9/dcc/classev3api_1_1_sonar_sensor.html">ev3api::SonarSensor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d45/_sonar_sensor_8h_source.html#l00016">SonarSensor.h:16</a></div></div>
+<div class="ttc" id="classev3api_1_1_sonar_sensor_html_a2fd894f16c736178df87cd3f667962b9"><div class="ttname"><a href="../../d9/dcc/classev3api_1_1_sonar_sensor.html#a2fd894f16c736178df87cd3f667962b9">ev3api::SonarSensor::getDistance</a></div><div class="ttdeci">int16_t getDistance(void) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d26/_sonar_sensor_8cpp_source.html#l00029">SonarSensor.cpp:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

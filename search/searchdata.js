@@ -1,39 +1,45 @@
 var indexSectionsWithContent =
 {
   0: "_abcdefghilmnoprstuw~",
-  1: "delnprstw",
-  2: "acdelmnprstuw",
-  3: "abcdegilmprstuw~",
-  4: "bcdfilmoprstw",
-  5: "lr",
-  6: "cs",
-  7: "_abcdghilmpstuw",
-  8: "e"
+  1: "cdeglmnprstw",
+  2: "e",
+  3: "acdeglmnprstuw",
+  4: "abcdegilmnprstuw~",
+  5: "bcdfilmoprstw",
+  6: "elr",
+  7: "cps",
+  8: "s",
+  9: "_abcdghilmnpstuw",
+  10: "e"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "files",
-  3: "functions",
-  4: "variables",
-  5: "enums",
-  6: "enumvalues",
-  7: "defines",
-  8: "pages"
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "variables",
+  6: "enums",
+  7: "enumvalues",
+  8: "related",
+  9: "defines",
+  10: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "全て",
   1: "クラス",
-  2: "ファイル",
-  3: "関数",
-  4: "変数",
-  5: "列挙型",
-  6: "列挙値",
-  7: "マクロ定義",
-  8: "ページ"
+  2: "名前空間",
+  3: "ファイル",
+  4: "関数",
+  5: "変数",
+  6: "列挙型",
+  7: "列挙値",
+  8: "フレンド",
+  9: "マクロ定義",
+  10: "ページ"
 };
 
