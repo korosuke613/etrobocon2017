@@ -8,6 +8,7 @@ using namespace ev3api;
 
 enum struct LeftStatus {
     STRAIGHT,
+    STRAIGHT_SLOW,
     CURVE_RIGHT,
     CURVE_LEFT,
     CURVE_LEFT_SHORT,
@@ -21,6 +22,7 @@ public:
 
 private:
     void goStraight(int8_t forward_value);
+    void goStraightSlow(int8_t forward_value);
     void goCurveRight(int8_t forward_value);
     void goCurveLeft(int8_t forward_value);
     void goCurveLeftShort(int8_t forward_value);
