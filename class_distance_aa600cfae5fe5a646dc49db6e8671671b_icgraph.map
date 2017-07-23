@@ -1,0 +1,6 @@
+<map id="Distance::getDistanceTotal" name="Distance::getDistanceTotal">
+<area shape="rect" id="node2" href="$class_distance.html#aebd518d4652e4c5047ba1c56b7d1b3f0" title="Distance::resetDistance" alt="" coords="261,5,424,31"/>
+<area shape="rect" id="node3" href="$class_left_normal_course.html#abef1043d381eb87bab4cf4e4bbb0dd71" title="LeftNormalCourse::status\lCheck" alt="" coords="256,55,429,93"/>
+<area shape="rect" id="node4" href="$class_normal_course.html#ab8ef305defb0f50a518eba4ac6453908" title="NormalCourse::runNormalCourse" alt="" coords="233,117,452,143"/>
+<area shape="rect" id="node5" href="$class_right_normal_course.html#a5fe134918f510923592d003a5218b0e4" title="RightNormalCourse::\lstatusCheck" alt="" coords="270,167,415,205"/>
+</map>

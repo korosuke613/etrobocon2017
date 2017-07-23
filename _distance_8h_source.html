@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/apps/include/Distance.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="dir_716c0c37d4fad24b6b8f48e824f3bc1d.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Distance.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_distance_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __DISTANCE__</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define __DISTANCE__</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_walker_8h.html">Walker.h</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceev3api.html">ev3api</a>;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_distance.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_distance.html">Distance</a> {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    int32_t getDistanceTotal( <span class="keywordtype">void</span> );</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    int32_t getDistanceCurrent( <span class="keywordtype">void</span> );</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> resetDistance( <span class="keywordtype">void</span> );</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_distance.html#a2142d2203515e334bc2b982e8c4dfa09">   29</a></span>&#160;    <a class="code" href="class_walker.html">Walker</a> <a class="code" href="class_distance.html#a2142d2203515e334bc2b982e8c4dfa09">walker</a>;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_distance.html#a1409ea56c37fa8b1c055ad7d8a3ad3c9">   31</a></span>&#160;    int32_t <a class="code" href="class_distance.html#a1409ea56c37fa8b1c055ad7d8a3ad3c9">leftMotorDegTotal</a>;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_distance.html#aff74c7211763b35acdbae765bbfea914">   33</a></span>&#160;    int32_t <a class="code" href="class_distance.html#aff74c7211763b35acdbae765bbfea914">rightMotorDegTotal</a>; </div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_distance.html#a982d77411cf945ae8d7a63c899c1842f">   35</a></span>&#160;    int32_t <a class="code" href="class_distance.html#a982d77411cf945ae8d7a63c899c1842f">leftMotorDegOld</a>;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_distance.html#aac7948948f448e50ec8c793e5b982e58">   37</a></span>&#160;    int32_t <a class="code" href="class_distance.html#aac7948948f448e50ec8c793e5b982e58">rightMotorDegOld</a>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;} ;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_distance_html_a1409ea56c37fa8b1c055ad7d8a3ad3c9"><div class="ttname"><a href="class_distance.html#a1409ea56c37fa8b1c055ad7d8a3ad3c9">Distance::leftMotorDegTotal</a></div><div class="ttdeci">int32_t leftMotorDegTotal</div><div class="ttdef"><b>Definition:</b> <a href="_distance_8h_source.html#l00031">Distance.h:31</a></div></div>
+<div class="ttc" id="class_distance_html_aff74c7211763b35acdbae765bbfea914"><div class="ttname"><a href="class_distance.html#aff74c7211763b35acdbae765bbfea914">Distance::rightMotorDegTotal</a></div><div class="ttdeci">int32_t rightMotorDegTotal</div><div class="ttdef"><b>Definition:</b> <a href="_distance_8h_source.html#l00033">Distance.h:33</a></div></div>
+<div class="ttc" id="namespaceev3api_html"><div class="ttname"><a href="namespaceev3api.html">ev3api</a></div></div>
+<div class="ttc" id="class_distance_html_a2142d2203515e334bc2b982e8c4dfa09"><div class="ttname"><a href="class_distance.html#a2142d2203515e334bc2b982e8c4dfa09">Distance::walker</a></div><div class="ttdeci">Walker walker</div><div class="ttdef"><b>Definition:</b> <a href="_distance_8h_source.html#l00029">Distance.h:29</a></div></div>
+<div class="ttc" id="class_distance_html_a982d77411cf945ae8d7a63c899c1842f"><div class="ttname"><a href="class_distance.html#a982d77411cf945ae8d7a63c899c1842f">Distance::leftMotorDegOld</a></div><div class="ttdeci">int32_t leftMotorDegOld</div><div class="ttdef"><b>Definition:</b> <a href="_distance_8h_source.html#l00035">Distance.h:35</a></div></div>
+<div class="ttc" id="_walker_8h_html"><div class="ttname"><a href="_walker_8h.html">Walker.h</a></div></div>
+<div class="ttc" id="class_distance_html"><div class="ttname"><a href="class_distance.html">Distance</a></div><div class="ttdef"><b>Definition:</b> <a href="_distance_8h_source.html#l00016">Distance.h:16</a></div></div>
+<div class="ttc" id="class_distance_html_aac7948948f448e50ec8c793e5b982e58"><div class="ttname"><a href="class_distance.html#aac7948948f448e50ec8c793e5b982e58">Distance::rightMotorDegOld</a></div><div class="ttdeci">int32_t rightMotorDegOld</div><div class="ttdef"><b>Definition:</b> <a href="_distance_8h_source.html#l00037">Distance.h:37</a></div></div>
+<div class="ttc" id="class_walker_html"><div class="ttname"><a href="class_walker.html">Walker</a></div><div class="ttdef"><b>Definition:</b> <a href="_walker_8h_source.html#l00010">Walker.h:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
