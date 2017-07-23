@@ -9,3 +9,7 @@ app
 .project
 *.csv
 appsのエイリアス
+docs
+html
+latex
+Doxyfile
