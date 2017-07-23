@@ -56,7 +56,7 @@ void RightNormalCourse::statusCheck(){
     else if(distanse_total < 9200)status = RightStatus::CURVE_LEFT_SHORT;
     else if(distanse_total < 10800)status = RightStatus::CURVE_LEFT;
     else if(distanse_total < 12800)status = RightStatus::CURVE_RIGHT;
-    else if(distanse_total < 15000)status = RightStatus::STRAIGHT;
+    else if(distanse_total < 16000)status = RightStatus::STRAIGHT;
     else status = RightStatus::STOP;
     if(old_status != status) ev3_speaker_play_tone (NOTE_FS6, 100);
     old_status = status;
