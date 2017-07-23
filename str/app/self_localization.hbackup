@@ -1,12 +1,46 @@
+/*****************************
+ * self_localization.h
+ *
+ * Author Hiroki Tachiyama
+ * Katayama Laboratory
+ * Department of Computer Secience and Systems Engineering
+ * Faculty of Engineering, University of Miyazaki
+ *
+ * Created at: Fri Jul 7 23:07:58 JST 2017
+ *
+ * Coryrights (c) 2017 Katayama Laboratory
+ *
+ *****************************/
+
+
+
 #ifndef __SELF_LOCALIZATION__
 #define __SELF_LOCALIZATION__
 
+
+//要らないかも？
 #include "common_definition.h"
 
-//self_localization.h in 2015
 
-//strcture for self_localization
-typedef struct self_localization_structure {
+// //strcture for self_localization
+// typedef struct self_localization_structure {
+//   float right_motor_current_angle, right_motor_old_angle,right_motor_rotation_angle;
+//   float left_motor_current_angle, left_motor_old_angle, left_motor_rotation_angle;
+//   float wheel_across;
+//   float between_wheels;
+//   float right_wheel_moving_distance, left_wheel_moving_distance;
+//   float moving_distance;
+//   float turning_angle;
+//   float current_x, current_y, current_angle;
+//   float old_x, old_y, old_angle;
+// } self_localization;
+//
+//  ↓
+//
+class Self_localization {
+
+  //member variables
+private:
   float right_motor_current_angle, right_motor_old_angle, right_motor_rotation_angle;
   float left_motor_current_angle, left_motor_old_angle, left_motor_rotation_angle;
   float wheel_across;
@@ -16,7 +50,16 @@ typedef struct self_localization_structure {
   float turning_angle;
   float current_x, current_y, current_angle;
   float old_x, old_y, old_angle;
-} self_localization;
+
+
+  //member methods
+public:
+  void set_target_coordinates(float target_x, float target_y, float target_radius, float ev3_radius);
+  bool approached_target_coordinates(float target_x, float target_y,float target_radius, float ev3_radius);
+private:
+  //残りのメソッドかな？
+};
+
 
 //constructor. self_localization_make is used in self_localization_constructor
 self_localization* self_localization_constructor(void);

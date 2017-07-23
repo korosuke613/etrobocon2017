@@ -11,6 +11,7 @@
 #include "ev3api.h"
 #include "app.h"
 #include "balancer.h"
+#include "SelfLocalization.h"
 
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
@@ -102,6 +103,11 @@ void main_task(intptr_t unused)
     /* Bluetooth通信タスクの起動 */
     act_tsk(BT_TASK);
 
+    /* 自己位置推定 インスタンス 初期化*/
+    SelfLocalization sl;
+
+
+
     ev3_led_set_color(LED_ORANGE); /* 初期化完了通知 */
 
     /* スタート待機 */
@@ -132,6 +138,7 @@ void main_task(intptr_t unused)
 
     ev3_led_set_color(LED_GREEN); /* スタート通知 */
 
+
     /**
     * Main loop for the self-balance control algorithm
     */
@@ -139,6 +146,10 @@ void main_task(intptr_t unused)
     {
         int32_t motor_ang_l, motor_ang_r;
         int gyro, volt;
+
+	sl.update();
+	sl.writing_current_coordinates();
+	
 
         if (ev3_button_is_pressed(BACK_BUTTON)) break;
 
