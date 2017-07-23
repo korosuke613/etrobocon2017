@@ -76,7 +76,7 @@ void LeftNormalCourse::goStraight(int8_t forward_value){
 
 void LeftNormalCourse::goStraightSlow(int8_t forward_value){
     lineTracer.setForward(forward_value);
-    lineTracer.speedControl.setPid ( 2.0, 4.8, 0.024, 120.0 );
+    lineTracer.speedControl.setPid ( 2.0, 2.0, 0.024, 120.0 );
     lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 40.0 );
     char msg[32];
     sprintf(msg, "Speed_cm/s: %d", lineTracer.speedControl.speed_value_all); 
@@ -86,7 +86,7 @@ void LeftNormalCourse::goStraightSlow(int8_t forward_value){
 void LeftNormalCourse::goCurveRight(int8_t forward_value){
     lineTracer.setForward(forward_value);
     lineTracer.speedControl.setPid ( 4.0, 0.8, 0.08, 100.0 );
-    lineTracer.turnControl.setPid ( 4.0, 2.0, 0.09, 35.0 );
+    lineTracer.turnControl.setPid ( 4.0, 2.0, 0.1, 35.0 );
     //lineTracer.turnControl.setPid ( 4.0, 2.0, 0.096, 40.0 );
     char msg[32];
     sprintf(msg, "Speed_cm/s: %d", lineTracer.speedControl.speed_value_all); 
