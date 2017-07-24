@@ -33,7 +33,7 @@ private:
     /** Walkerクラスのインスタンス</br>
     * モータの回転角度を取得するために必要
     */
-	Walker walker;
+    Walker walker;
     /** 前進値(forward) */    
     double forward;
     /** 左モータの回転角度の過去値 */

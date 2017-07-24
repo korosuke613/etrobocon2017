@@ -26,7 +26,7 @@ public:
 
 private:
 	/** Walkerクラスのインスタンス */
-    Walker walker;
+	Walker walker;
 	/** 絶対的な回転角（右タイヤ） */
 	int32_t leftMotorDegTotal;
 	/** 絶対的な回転角（左タイヤ） */
