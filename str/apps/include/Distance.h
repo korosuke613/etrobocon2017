@@ -35,6 +35,6 @@ private:
 	int32_t leftMotorDegOld;
 	/** 相対的な回転角を計算するときに使う変数（左タイヤ） */
 	int32_t rightMotorDegOld;
-} ;
+};
 
 #endif
