@@ -1,33 +1,33 @@
 mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
-<<<<<<< HEAD
-
-APPL_COBJS += balancer.o balancer_param.o
-
-APPL_CXXOBJS += \
-BalancerCpp.o \
-SonarAlert.o
-=======
 
 APPL_CXXOBJS += \
 util.o \
 EtRobocon2017.o \
 SonarAlert.o \
 LineTracer.o \
-pid.o \
+Pid.o \
+NormalCourse.o \
+LeftNormalCourse.o \
+RightNormalCourse.o \
+SpeedControl.o \
+TurnControl.o \
+Distance.o \
 Walker.o \
 Lifter.o \
+SelfLocalization.o \
 Emoter.o
->>>>>>> 8068413fa9c3f18cac400d47730f7be1b12edc78
 
 SRCLANG := c++
 
-APPL_DIR += $(mkfile_path)app
+APPL_DIR += $(mkfile_path)apps
+APPL_DIR += $(mkfile_path)apps/commons
 
 INCLUDES += \
-<<<<<<< HEAD
-    -I$(mkfile_path)app
-=======
+-I$(mkfile_path)apps
+
+INCLUDES += \
 -I$(mkfile_path)app
+-I$(mkfile_path)apps/commons
 
 
 ifdef CONFIG_EV3RT_APPLICATION
@@ -36,4 +36,3 @@ ifdef CONFIG_EV3RT_APPLICATION
 include $(EV3RT_SDK_LIB_DIR)/libcpp-ev3/Makefile
 
 endif
->>>>>>> 8068413fa9c3f18cac400d47730f7be1b12edc78

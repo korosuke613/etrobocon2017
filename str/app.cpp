@@ -8,8 +8,9 @@
 
 #include "ev3api.h"
 #include "app.h"
-#include "app/util.h"
-#include "app/EtRobocon2017.h" // ETロボコン2017
+#include "util.h"
+#include "EtRobocon2017.h" // ETロボコン2017
+#include "SelfLocalization.h"
 
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
@@ -40,7 +41,7 @@ void main_task( intptr_t unused )
 
 
     msg_f("ET-Robocon2017 Hirakobasample", 1);
-    msg_f("a create from github.com/korosuke613/etrobocon2017", 2);
+    msg_f(" create from github.com/korosuke613/etrobocon2017", 2);
 
     EtRobocon2017 etrobocon;
     etrobocon.start( g_bluetooth_command );
