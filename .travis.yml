@@ -12,7 +12,7 @@ script:
 
 after_success:
  - pip install --user codecov
- - codecov -t 728de138-8d7f-4c6f-9d93-7b2383e3848c
+ - codecov -t 312e8395-ab4e-46f9-a0d6-1ae1830769d9
 
 notifications:
   email: false
