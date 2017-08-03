@@ -37,7 +37,7 @@ set(EXT_PROJECTS_DIR ${PROJECT_SOURCE_DIR}/str/apps/ext)
 set(PROJECT_LIB_NAME ${PROJECT_NAME_STR}_impl)
 
 include_directories(${COMMON_INCLUDES})
-file(GLOB SRC_FILES ${PROJECT_SOURCE_DIR}/str/apps/src/*.cpp)
+file(GLOB SRC_FILES ${PROJECT_SOURCE_DIR}/str/apps/src/Pid.cpp)
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 
 add_subdirectory(${EXT_PROJECTS_DIR}/gtest)
