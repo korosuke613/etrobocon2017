@@ -24,7 +24,7 @@ void LeftNormalCourse::runNormalCourse(void){
 	while ( 1 ) {
         sl.update();
         sl.writing_current_coordinates();
-        forward = lineTracer.speedControl.calculateSpeedForPid();
+        forward = lineTracer.speedControl.calculateSpeedForPid(walker.get_count_L(), walker.get_count_R());
         statusCheck();
 		switch(status){
             case LeftStatus::STRAIGHT: goStraight(forward); break;

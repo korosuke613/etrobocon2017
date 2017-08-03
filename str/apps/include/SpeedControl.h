@@ -6,7 +6,6 @@
 #ifndef __SPEEDCONTROL__
 #define __SPEEDCONTROL__
 
-#include "Walker.h"
 #include "Pid.h"
 #include <array>
 
@@ -20,20 +19,16 @@ public:
     
     /** 速度制御をするための前進値(forward)を計算する
     * @return 前進値(forward) */
-    int32_t calculateSpeedForPid();
+    int32_t calculateSpeedForPid(int32_t curAngleL, int32_t curAngleR);
 
     /** 4ms間の移動距離を取得する
     * @return 進んだ距離[mm/4ms] */
-    int8_t calcDistance4ms();
+    int8_t calcDistance4ms(int32_t curAngleL, int32_t curAngleR);
 
     /** 0.1sで進んだ距離[mm/0.1s] */    
     int16_t speed_value_all;
 
 private:
-    /** Walkerクラスのインスタンス</br>
-    * モータの回転角度を取得するために必要
-    */
-    Walker walker;
     /** 前進値(forward) */    
     double forward;
     /** 左モータの回転角度の過去値 */
