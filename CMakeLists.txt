@@ -17,7 +17,7 @@ else()
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX)
-    add_definitions(-Wall -ansi -Wno-deprecated -pthread)
+    add_definitions(-Wall -ansi -Wno-deprecated -pthread -std=c++11)
 endif()
 
 if(MSVC)
