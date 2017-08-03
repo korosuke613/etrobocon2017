@@ -24,7 +24,7 @@ void LeftNormalCourse::runNormalCourse(void){
 	while ( 1 ) {
         sl.update();
         sl.writing_current_coordinates();
-        forward = lineTracer.speedControl.calculateSpeedForPid();
+        forward = lineTracer.speedControl.calculateSpeedForPid(walker.get_count_L(), walker.get_count_R());
         statusCheck();
 		switch(status){
             case LeftStatus::STRAIGHT: goStraight(forward); break;
@@ -38,8 +38,7 @@ void LeftNormalCourse::runNormalCourse(void){
 		lineTracer.runLine();
 		if (ev3_button_is_pressed(BACK_BUTTON)) break;
         if (status == LeftStatus::STOP) break;
-        fprintf(fp, "%d, %d, %d, %d, %d, %d\n",
-        lineTracer.turnControl.getBrightness(),
+        fprintf(fp, "%d, %d, %d, %d, %d\n",
         lineTracer.speedControl.speed_value_all, 
         forward,
         lineTracer.turn,
@@ -52,7 +51,7 @@ void LeftNormalCourse::runNormalCourse(void){
 }
 
 void LeftNormalCourse::statusCheck(){
-    distanse_total = distance.getDistanceTotal();
+    distanse_total = distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R());
     if(distanse_total < 2740)status = LeftStatus::STRAIGHT;
     else if(distanse_total < 3240)status = LeftStatus::STRAIGHT_SLOW;
     else if(distanse_total < 5200)status = LeftStatus::CURVE_RIGHT;
@@ -113,7 +112,4 @@ void LeftNormalCourse::goCurveLeft(int8_t forward_value){
 
 void LeftNormalCourse::stop(){
     lineTracer.setForward(0);
-    char msg[32];
-    sprintf(msg, "Brightness/s: %d", lineTracer.turnControl.getBrightness()); 
-    msg_f(msg, 5);
 }

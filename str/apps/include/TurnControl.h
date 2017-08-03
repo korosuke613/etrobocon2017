@@ -2,17 +2,13 @@
 #define __TURNCONTROL__
 
 #include "Pid.h"
-#include "ColorSensor.h"
-
-using namespace ev3api;
+#include <cstdint>
 
 class TurnControl: public Pid{
 public:
     TurnControl();
-    int8_t calculateTurnForPid( int8_t forward );
-    int8_t getBrightness();
+    std::int8_t calculateTurnForPid( std::int8_t forward, std::int8_t light_value );
 private:
-    ColorSensor colorSensor;
     double turn;
     double pid_value_old;
 };
