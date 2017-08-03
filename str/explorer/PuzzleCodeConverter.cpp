@@ -3,6 +3,10 @@
 
 
 //コンストラクタ
+PuzzleCodeConverter::PuzzleCodeConverter()
+{
+}
+
 PuzzleCodeConverter::PuzzleCodeConverter(int puzzleCode)
 {
 	mPuzzleCode = puzzleCode;
@@ -74,3 +78,36 @@ int PuzzleCodeConverter::getPosition(BlockColor color)
 	
 }
 
+int PuzzleCodeConverter::redToBlackPosition(int redNum)
+{
+	int blackNum=redNum;
+	
+	if(redNum > 0)blackNum++;
+	if(redNum > 5)blackNum+=2;
+	if(redNum > 10)blackNum++;
+	
+	return blackNum;
+}
+
+int PuzzleCodeConverter::yellowToBlackPosition(int yellowNum)
+{
+	int blackNum=yellowNum;	
+	
+	if(yellowNum > 2)blackNum++;
+	if(yellowNum > 3)blackNum++;
+	if(yellowNum > 10)blackNum++;
+	
+	return blackNum;
+}
+
+int PuzzleCodeConverter::blueToBlackPosition(int blueNum)
+{
+	int blackNum=blueNum;	
+	
+	if(blueNum > 1)blackNum++;
+	if(blueNum > 2)blackNum++;
+	if(blueNum > 6)blackNum++;
+	if(blueNum > 7)blackNum++;
+	
+	return blackNum;
+}
