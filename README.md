@@ -1,5 +1,9 @@
 # etrobocon2017
 
+master [![Build Status](https://travis-ci.org/korosuke613/etrobocon2017.svg?branch=master)](https://travis-ci.org/korosuke613/etrobocon2017) [![codecov](https://codecov.io/gh/korosuke613/etrobocon2017/branch/master/graph/badge.svg)](https://codecov.io/gh/korosuke613/etrobocon2017)
+
+dev [![Build Status](https://travis-ci.org/korosuke613/etrobocon2017.svg?branch=dev)](https://travis-ci.org/korosuke613/etrobocon2017) [![codecov](https://codecov.io/gh/korosuke613/etrobocon2017/branch/dev/graph/badge.svg)](https://codecov.io/gh/korosuke613/etrobocon2017)
+
 ようこそ
 
 このページは[片山研究所モデルベース開発推進事業部](http://earth.cs.miyazaki-u.ac.jp "http://earth.cs.miyazaki-u.ac.jp")が開発している、ETロボコン2017デベロッパー部門アドバンスドコースのソースコードのリポジトリです。
