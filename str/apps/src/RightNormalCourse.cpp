@@ -51,7 +51,7 @@ void RightNormalCourse::runNormalCourse(void){
 }
 
 void RightNormalCourse::statusCheck(){
-    distanse_total = distance.getDistanceTotal();
+    distanse_total = distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R());
     if(distanse_total < 3240)status = RightStatus::STRAIGHT;
     else if(distanse_total < 7500)status = RightStatus::CURVE_RIGHT;
     else if(distanse_total < 9200)status = RightStatus::CURVE_LEFT_SHORT;

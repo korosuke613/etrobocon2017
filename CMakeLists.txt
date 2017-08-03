@@ -38,7 +38,7 @@ set(PROJECT_LIB_NAME ${PROJECT_NAME_STR}_impl)
 set(SOURCE_DIR ${PROJECT_SOURCE_DIR}/str/apps/src)
 
 include_directories(${COMMON_INCLUDES})
-file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp ${SOURCE_DIR}/SpeedControl.cpp ${SOURCE_DIR}/TurnControl.cpp)
+file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp ${SOURCE_DIR}/SpeedControl.cpp ${SOURCE_DIR}/TurnControl.cpp ${SOURCE_DIR}/Distance.cpp)
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 
 add_subdirectory(${EXT_PROJECTS_DIR}/gtest)
