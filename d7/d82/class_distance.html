@@ -72,42 +72,35 @@ $(function() {
 Distance 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/d6a/class_distance__coll__graph.png" border="0" usemap="#_distance_coll__map" alt="Collaboration graph"/></div>
-<map name="_distance_coll__map" id="_distance_coll__map">
-<area shape="rect" id="node2" href="../../d1/d49/class_walker.html" title="{Walker\n|&#45; leftRight\l|+ Walker()\l+ stop()\l+ run()\l+ edgeChange()\l+ moveAngle()\l+ angleChange()\l+ get_count_L()\l+ get_count_R()\l+ init()\l+ terminate()\l+ reset()\l+ setBrakeMotor()\l}" alt="" coords="55,367,183,587"/>
-<area shape="rect" id="node3" href="../../da/d61/classev3api_1_1_motor.html" title="{ev3api::Motor\n|+ PWM_MAX\l+ PWM_MIN\l&#45; mPort\l&#45; mBrake\l&#45; mType\l&#45; mPWM\l&#45; mOffset\l|+ Motor()\l+ ~Motor()\l+ reset()\l+ getCount()\l+ setCount()\l+ setPWM()\l+ setBrake()\l+ stop()\l# getPort()\l# getBrake()\l# getPWM()\l}" alt="" coords="5,5,107,292"/>
-<area shape="rect" id="node4" href="../../d4/d87/classev3api_1_1_clock.html" title="{ev3api::Clock\n|&#45; mStartClock\l|+ Clock()\l+ reset()\l+ now()\l+ wait()\l+ sleep()\l# getTim()\l}" alt="" coords="132,79,234,219"/>
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:aa600cfae5fe5a646dc49db6e8671671b"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#aa600cfae5fe5a646dc49db6e8671671b">getDistanceTotal</a> (void)</td></tr>
-<tr class="separator:aa600cfae5fe5a646dc49db6e8671671b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54a35a49fe1b13971a5b3defb75cc860"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a54a35a49fe1b13971a5b3defb75cc860">getDistanceCurrent</a> (void)</td></tr>
-<tr class="separator:a54a35a49fe1b13971a5b3defb75cc860"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebd518d4652e4c5047ba1c56b7d1b3f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#aebd518d4652e4c5047ba1c56b7d1b3f0">resetDistance</a> (void)</td></tr>
-<tr class="separator:aebd518d4652e4c5047ba1c56b7d1b3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039334c729b1da2716a5dbbcf2631d36"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a039334c729b1da2716a5dbbcf2631d36">getDistanceTotal</a> (std::int32_t countL, std::int32_t countR)</td></tr>
+<tr class="separator:a039334c729b1da2716a5dbbcf2631d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda79a6c79adfc691381cbdca55cf342"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#abda79a6c79adfc691381cbdca55cf342">getDistanceCurrent</a> (std::int32_t countL, std::int32_t countR)</td></tr>
+<tr class="separator:abda79a6c79adfc691381cbdca55cf342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a822915c87907cdef0926ee69910b1a9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a822915c87907cdef0926ee69910b1a9c">resetDistance</a> (int32_t countL, int32_t countR)</td></tr>
+<tr class="separator:a822915c87907cdef0926ee69910b1a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 非公開変数類</h2></td></tr>
-<tr class="memitem:a2142d2203515e334bc2b982e8c4dfa09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d49/class_walker.html">Walker</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a2142d2203515e334bc2b982e8c4dfa09">walker</a></td></tr>
-<tr class="separator:a2142d2203515e334bc2b982e8c4dfa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1409ea56c37fa8b1c055ad7d8a3ad3c9"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a1409ea56c37fa8b1c055ad7d8a3ad3c9">leftMotorDegTotal</a></td></tr>
-<tr class="separator:a1409ea56c37fa8b1c055ad7d8a3ad3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff74c7211763b35acdbae765bbfea914"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#aff74c7211763b35acdbae765bbfea914">rightMotorDegTotal</a></td></tr>
-<tr class="separator:aff74c7211763b35acdbae765bbfea914"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a982d77411cf945ae8d7a63c899c1842f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a982d77411cf945ae8d7a63c899c1842f">leftMotorDegOld</a></td></tr>
-<tr class="separator:a982d77411cf945ae8d7a63c899c1842f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac7948948f448e50ec8c793e5b982e58"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#aac7948948f448e50ec8c793e5b982e58">rightMotorDegOld</a></td></tr>
-<tr class="separator:aac7948948f448e50ec8c793e5b982e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70651420393e8edfe347d5648c538444"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a70651420393e8edfe347d5648c538444">leftMotorDegTotal</a></td></tr>
+<tr class="separator:a70651420393e8edfe347d5648c538444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0314d49fedcdf80166a46750ced68cfd"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a0314d49fedcdf80166a46750ced68cfd">rightMotorDegTotal</a></td></tr>
+<tr class="separator:a0314d49fedcdf80166a46750ced68cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba15417fe2f9fb23c452e4145ff6d2d5"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#aba15417fe2f9fb23c452e4145ff6d2d5">leftMotorDegOld</a></td></tr>
+<tr class="separator:aba15417fe2f9fb23c452e4145ff6d2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb9143b6b7cc40a8eb0c10b688e9e42"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a1cb9143b6b7cc40a8eb0c10b688e9e42">rightMotorDegOld</a></td></tr>
+<tr class="separator:a1cb9143b6b7cc40a8eb0c10b688e9e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>タイヤの進んだ距離（回転角）に関するクラス </p>
 
-<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00014">14</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="a54a35a49fe1b13971a5b3defb75cc860"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54a35a49fe1b13971a5b3defb75cc860">&#9670;&nbsp;</a></span>getDistanceCurrent()</h2>
+<a id="abda79a6c79adfc691381cbdca55cf342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda79a6c79adfc691381cbdca55cf342">&#9670;&nbsp;</a></span>getDistanceCurrent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -115,30 +108,30 @@ Distance 連携図</div>
         <tr>
           <td class="memname">int32_t Distance::getDistanceCurrent </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>countL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>countR</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>戻り値</dt><dd>最後のresetDistance()からの回転角の合計 </dd></dl>
 
 <p class="definition"> <a class="el" href="../../d7/d98/_distance_8cpp_source.html">Distance.cpp</a> の <a class="el" href="../../d7/d98/_distance_8cpp_source.html#l00015">15</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d7/d82/class_distance_a54a35a49fe1b13971a5b3defb75cc860_cgraph.png" border="0" usemap="#d7/d82/class_distance_a54a35a49fe1b13971a5b3defb75cc860_cgraph" alt=""/></div>
-<map name="d7/d82/class_distance_a54a35a49fe1b13971a5b3defb75cc860_cgraph" id="d7/d82/class_distance_a54a35a49fe1b13971a5b3defb75cc860_cgraph">
-<area shape="rect" id="node2" href="../../d1/d49/class_walker.html#aac9aaddeb926d610def2896c27ad405b" title="Walker::get_count_L" alt="" coords="250,5,393,31"/>
-<area shape="rect" id="node4" href="../../d1/d49/class_walker.html#ab202921b6baf9ad7c3afbdf9b606bd09" title="Walker::get_count_R" alt="" coords="249,55,394,80"/>
-<area shape="rect" id="node3" href="../../da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="442,31,606,56"/>
-</map>
-</div>
 
 </div>
 </div>
-<a id="aa600cfae5fe5a646dc49db6e8671671b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa600cfae5fe5a646dc49db6e8671671b">&#9670;&nbsp;</a></span>getDistanceTotal()</h2>
+<a id="a039334c729b1da2716a5dbbcf2631d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a039334c729b1da2716a5dbbcf2631d36">&#9670;&nbsp;</a></span>getDistanceTotal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,9 +139,19 @@ Distance 連携図</div>
         <tr>
           <td class="memname">int32_t Distance::getDistanceTotal </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>countL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::int32_t&#160;</td>
+          <td class="paramname"><em>countR</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -156,31 +159,20 @@ Distance 連携図</div>
 
 <p class="definition"> <a class="el" href="../../d7/d98/_distance_8cpp_source.html">Distance.cpp</a> の <a class="el" href="../../d7/d98/_distance_8cpp_source.html#l00009">9</a> 行目に定義があります。</p>
 <div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d7/d82/class_distance_aa600cfae5fe5a646dc49db6e8671671b_cgraph.png" border="0" usemap="#d7/d82/class_distance_aa600cfae5fe5a646dc49db6e8671671b_cgraph" alt=""/></div>
-<map name="d7/d82/class_distance_aa600cfae5fe5a646dc49db6e8671671b_cgraph" id="d7/d82/class_distance_aa600cfae5fe5a646dc49db6e8671671b_cgraph">
-<area shape="rect" id="node2" href="../../d1/d49/class_walker.html#aac9aaddeb926d610def2896c27ad405b" title="Walker::get_count_L" alt="" coords="234,5,377,31"/>
-<area shape="rect" id="node4" href="../../d1/d49/class_walker.html#ab202921b6baf9ad7c3afbdf9b606bd09" title="Walker::get_count_R" alt="" coords="233,55,378,80"/>
-<area shape="rect" id="node3" href="../../da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="426,31,590,56"/>
-</map>
-</div>
-<div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d7/d82/class_distance_aa600cfae5fe5a646dc49db6e8671671b_icgraph.png" border="0" usemap="#d7/d82/class_distance_aa600cfae5fe5a646dc49db6e8671671b_icgraph" alt=""/></div>
-<map name="d7/d82/class_distance_aa600cfae5fe5a646dc49db6e8671671b_icgraph" id="d7/d82/class_distance_aa600cfae5fe5a646dc49db6e8671671b_icgraph">
-<area shape="rect" id="node2" href="../../d7/d82/class_distance.html#aebd518d4652e4c5047ba1c56b7d1b3f0" title="Distance::resetDistance" alt="" coords="261,5,424,31"/>
-<area shape="rect" id="node3" href="../../d5/ddb/class_left_normal_course.html#abef1043d381eb87bab4cf4e4bbb0dd71" title="LeftNormalCourse::status\lCheck" alt="" coords="256,55,429,93"/>
-<area shape="rect" id="node4" href="../../dd/d88/class_normal_course.html#ab8ef305defb0f50a518eba4ac6453908" title="NormalCourse::runNormalCourse" alt="" coords="233,117,452,143"/>
-<area shape="rect" id="node5" href="../../d4/d58/class_right_normal_course.html#a5fe134918f510923592d003a5218b0e4" title="RightNormalCourse::\lstatusCheck" alt="" coords="270,167,415,205"/>
+<div class="center"><img src="../../d7/d82/class_distance_a039334c729b1da2716a5dbbcf2631d36_icgraph.png" border="0" usemap="#d7/d82/class_distance_a039334c729b1da2716a5dbbcf2631d36_icgraph" alt=""/></div>
+<map name="d7/d82/class_distance_a039334c729b1da2716a5dbbcf2631d36_icgraph" id="d7/d82/class_distance_a039334c729b1da2716a5dbbcf2631d36_icgraph">
+<area shape="rect" id="node2" href="../../d7/d82/class_distance.html#a822915c87907cdef0926ee69910b1a9c" title="Distance::resetDistance" alt="" coords="238,5,400,31"/>
+<area shape="rect" id="node3" href="../../d5/ddb/class_left_normal_course.html#abef1043d381eb87bab4cf4e4bbb0dd71" title="LeftNormalCourse::status\lCheck" alt="" coords="233,55,405,93"/>
+<area shape="rect" id="node4" href="../../d4/d58/class_right_normal_course.html#a5fe134918f510923592d003a5218b0e4" title="RightNormalCourse::\lstatusCheck" alt="" coords="246,117,392,156"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aebd518d4652e4c5047ba1c56b7d1b3f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebd518d4652e4c5047ba1c56b7d1b3f0">&#9670;&nbsp;</a></span>resetDistance()</h2>
+<a id="a822915c87907cdef0926ee69910b1a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a822915c87907cdef0926ee69910b1a9c">&#9670;&nbsp;</a></span>resetDistance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,9 +180,19 @@ Distance 連携図</div>
         <tr>
           <td class="memname">void Distance::resetDistance </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>countL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>countR</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -200,20 +202,17 @@ Distance 連携図</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d7/d82/class_distance_aebd518d4652e4c5047ba1c56b7d1b3f0_cgraph.png" border="0" usemap="#d7/d82/class_distance_aebd518d4652e4c5047ba1c56b7d1b3f0_cgraph" alt=""/></div>
-<map name="d7/d82/class_distance_aebd518d4652e4c5047ba1c56b7d1b3f0_cgraph" id="d7/d82/class_distance_aebd518d4652e4c5047ba1c56b7d1b3f0_cgraph">
-<area shape="rect" id="node2" href="../../d7/d82/class_distance.html#aa600cfae5fe5a646dc49db6e8671671b" title="Distance::getDistanceTotal" alt="" coords="215,31,395,56"/>
-<area shape="rect" id="node3" href="../../d1/d49/class_walker.html#aac9aaddeb926d610def2896c27ad405b" title="Walker::get_count_L" alt="" coords="444,5,587,31"/>
-<area shape="rect" id="node5" href="../../d1/d49/class_walker.html#ab202921b6baf9ad7c3afbdf9b606bd09" title="Walker::get_count_R" alt="" coords="443,55,588,80"/>
-<area shape="rect" id="node4" href="../../da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="636,31,800,56"/>
+<div class="center"><img src="../../d7/d82/class_distance_a822915c87907cdef0926ee69910b1a9c_cgraph.png" border="0" usemap="#d7/d82/class_distance_a822915c87907cdef0926ee69910b1a9c_cgraph" alt=""/></div>
+<map name="d7/d82/class_distance_a822915c87907cdef0926ee69910b1a9c_cgraph" id="d7/d82/class_distance_a822915c87907cdef0926ee69910b1a9c_cgraph">
+<area shape="rect" id="node2" href="../../d7/d82/class_distance.html#a039334c729b1da2716a5dbbcf2631d36" title="Distance::getDistanceTotal" alt="" coords="215,5,395,31"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
-<a id="a982d77411cf945ae8d7a63c899c1842f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a982d77411cf945ae8d7a63c899c1842f">&#9670;&nbsp;</a></span>leftMotorDegOld</h2>
+<a id="aba15417fe2f9fb23c452e4145ff6d2d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba15417fe2f9fb23c452e4145ff6d2d5">&#9670;&nbsp;</a></span>leftMotorDegOld</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,7 +221,7 @@ Distance 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t Distance::leftMotorDegOld</td>
+          <td class="memname">std::int32_t Distance::leftMotorDegOld</td>
         </tr>
       </table>
   </td>
@@ -233,12 +232,12 @@ Distance 連携図</div>
 </div><div class="memdoc">
 <p>相対的な回転角を計算するときに使う変数（右タイヤ） </p>
 
-<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00031">31</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a1409ea56c37fa8b1c055ad7d8a3ad3c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1409ea56c37fa8b1c055ad7d8a3ad3c9">&#9670;&nbsp;</a></span>leftMotorDegTotal</h2>
+<a id="a70651420393e8edfe347d5648c538444"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70651420393e8edfe347d5648c538444">&#9670;&nbsp;</a></span>leftMotorDegTotal</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +246,7 @@ Distance 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t Distance::leftMotorDegTotal</td>
+          <td class="memname">std::int32_t Distance::leftMotorDegTotal</td>
         </tr>
       </table>
   </td>
@@ -258,12 +257,12 @@ Distance 連携図</div>
 </div><div class="memdoc">
 <p>絶対的な回転角（右タイヤ） </p>
 
-<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00027">27</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aac7948948f448e50ec8c793e5b982e58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac7948948f448e50ec8c793e5b982e58">&#9670;&nbsp;</a></span>rightMotorDegOld</h2>
+<a id="a1cb9143b6b7cc40a8eb0c10b688e9e42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb9143b6b7cc40a8eb0c10b688e9e42">&#9670;&nbsp;</a></span>rightMotorDegOld</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +271,7 @@ Distance 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t Distance::rightMotorDegOld</td>
+          <td class="memname">std::int32_t Distance::rightMotorDegOld</td>
         </tr>
       </table>
   </td>
@@ -283,12 +282,12 @@ Distance 連携図</div>
 </div><div class="memdoc">
 <p>相対的な回転角を計算するときに使う変数（左タイヤ） </p>
 
-<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00033">33</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aff74c7211763b35acdbae765bbfea914"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff74c7211763b35acdbae765bbfea914">&#9670;&nbsp;</a></span>rightMotorDegTotal</h2>
+<a id="a0314d49fedcdf80166a46750ced68cfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0314d49fedcdf80166a46750ced68cfd">&#9670;&nbsp;</a></span>rightMotorDegTotal</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,7 +296,7 @@ Distance 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t Distance::rightMotorDegTotal</td>
+          <td class="memname">std::int32_t Distance::rightMotorDegTotal</td>
         </tr>
       </table>
   </td>
@@ -307,31 +306,6 @@ Distance 連携図</div>
 </table>
 </div><div class="memdoc">
 <p>絶対的な回転角（左タイヤ） </p>
-
-<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00033">33</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a2142d2203515e334bc2b982e8c4dfa09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2142d2203515e334bc2b982e8c4dfa09">&#9670;&nbsp;</a></span>walker</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d1/d49/class_walker.html">Walker</a> Distance::walker</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Walkerクラスのインスタンス </p>
 
 <p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00029">29</a> 行目に定義があります。</p>
 

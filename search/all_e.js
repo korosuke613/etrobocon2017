@@ -17,8 +17,8 @@ var searchData=
   ['power_5flowspeed',['POWER_LOWSPEED',['../d3/d42/_port_8h.html#a0de7742117569a1ace9ea7cc1448e2dba87c314914b4c9bc1ada20ae5ceed9737',1,'Port.h']]],
   ['power_5flowspeed_5f9v',['POWER_LOWSPEED_9V',['../d3/d42/_port_8h.html#a0de7742117569a1ace9ea7cc1448e2dba5075d6f0666251bb9bb1dde4fd57bad9',1,'Port.h']]],
   ['power_5foff',['POWER_OFF',['../d3/d42/_port_8h.html#a0de7742117569a1ace9ea7cc1448e2dba4a0682c6762857d83fd5d8cb36f9c94e',1,'Port.h']]],
-  ['preanglel',['preAngleL',['../dd/dc1/class_speed_control.html#a98e80958137e813b09953a58d5cf9f30',1,'SpeedControl']]],
-  ['preangler',['preAngleR',['../dd/dc1/class_speed_control.html#ae7db838941b85e8aa4c426e74a80b751',1,'SpeedControl']]],
+  ['preanglel',['preAngleL',['../dd/dc1/class_speed_control.html#a7c4dc147f4d60acaf0c2df39c40852a8',1,'SpeedControl']]],
+  ['preangler',['preAngleR',['../dd/dc1/class_speed_control.html#aa78b19e5d6c43eca9243533117835079',1,'SpeedControl']]],
   ['pwm_5fabs_5fmax',['PWM_ABS_MAX',['../d8/d0a/common__definition_8h.html#a6babf6dbdc97636ceda1532ee33fda2d',1,'common_definition.h']]],
   ['pwm_5fmax',['PWM_MAX',['../da/d61/classev3api_1_1_motor.html#ae855e3c676e89c21f1cad16aecb52ad4',1,'ev3api::Motor']]],
   ['pwm_5fmin',['PWM_MIN',['../da/d61/classev3api_1_1_motor.html#a9fd32f6515ea9984cb4ab738ca3a9499',1,'ev3api::Motor']]]

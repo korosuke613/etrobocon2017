@@ -1,8 +1,3 @@
 <map id="str/apps/include/SpeedControl.h" name="str/apps/include/SpeedControl.h">
-<area shape="rect" id="node2" href="$d5/dfc/_walker_8h.html" title="Walker.h" alt="" coords="91,79,164,104"/>
-<area shape="rect" id="node8" href="$da/dcf/_pid_8h.html" title="Pid.h" alt="" coords="188,79,240,104"/>
-<area shape="rect" id="node3" href="$da/d12/_motor_8h.html" title="Motor.h" alt="" coords="5,152,71,177"/>
-<area shape="rect" id="node6" href="$dd/dba/_clock_8h.html" title="Clock.h" alt="" coords="95,152,160,177"/>
-<area shape="rect" id="node7" href="$d8/d3c/util_8h.html" title="util.h" alt="" coords="184,152,234,177"/>
-<area shape="rect" id="node4" href="$d3/d42/_port_8h.html" title="モータ/センサポート関連定義 " alt="" coords="10,225,67,251"/>
+<area shape="rect" id="node2" href="$da/dcf/_pid_8h.html" title="Pid.h" alt="" coords="9,79,61,104"/>
 </map>

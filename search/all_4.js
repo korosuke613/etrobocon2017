@@ -9,7 +9,7 @@ var searchData=
   ['distance',['Distance',['../d7/d82/class_distance.html',1,'Distance'],['../dd/d88/class_normal_course.html#a71dee69e36e4a9364b8ba8a39274c23d',1,'NormalCourse::distance()']]],
   ['distance_2ecpp',['Distance.cpp',['../d7/d98/_distance_8cpp.html',1,'']]],
   ['distance_2eh',['Distance.h',['../d4/d99/_distance_8h.html',1,'']]],
-  ['distance4ms',['distance4ms',['../dd/dc1/class_speed_control.html#a0cae691b037314ccb2e58dd9e09f6149',1,'SpeedControl']]],
+  ['distance4ms',['distance4ms',['../dd/dc1/class_speed_control.html#aa6633bbcd74339c40673dad51ee65786',1,'SpeedControl']]],
   ['distanse_5ftotal',['distanse_total',['../dd/d88/class_normal_course.html#a6f8d0bbb6b73605fb54aa0933b2ed9df',1,'NormalCourse']]],
   ['drive_5fl',['DRIVE_L',['../d8/d0a/common__definition_8h.html#a4620a50df75e71205acf384da2622046',1,'common_definition.h']]],
   ['drive_5fr',['DRIVE_R',['../d8/d0a/common__definition_8h.html#a756949f18e299595984d932ccb48c9b5',1,'common_definition.h']]],

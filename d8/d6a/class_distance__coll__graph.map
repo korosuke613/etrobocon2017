@@ -1,5 +1,2 @@
 <map id="Distance" name="Distance">
-<area shape="rect" id="node2" href="$d1/d49/class_walker.html" title="{Walker\n|&#45; leftRight\l|+ Walker()\l+ stop()\l+ run()\l+ edgeChange()\l+ moveAngle()\l+ angleChange()\l+ get_count_L()\l+ get_count_R()\l+ init()\l+ terminate()\l+ reset()\l+ setBrakeMotor()\l}" alt="" coords="55,367,183,587"/>
-<area shape="rect" id="node3" href="$da/d61/classev3api_1_1_motor.html" title="{ev3api::Motor\n|+ PWM_MAX\l+ PWM_MIN\l&#45; mPort\l&#45; mBrake\l&#45; mType\l&#45; mPWM\l&#45; mOffset\l|+ Motor()\l+ ~Motor()\l+ reset()\l+ getCount()\l+ setCount()\l+ setPWM()\l+ setBrake()\l+ stop()\l# getPort()\l# getBrake()\l# getPWM()\l}" alt="" coords="5,5,107,292"/>
-<area shape="rect" id="node4" href="$d4/d87/classev3api_1_1_clock.html" title="{ev3api::Clock\n|&#45; mStartClock\l|+ Clock()\l+ reset()\l+ now()\l+ wait()\l+ sleep()\l# getTim()\l}" alt="" coords="132,79,234,219"/>
 </map>

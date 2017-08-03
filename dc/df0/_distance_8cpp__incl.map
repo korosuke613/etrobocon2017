@@ -1,8 +1,3 @@
 <map id="str/apps/src/Distance.cpp" name="str/apps/src/Distance.cpp">
-<area shape="rect" id="node2" href="$d4/d99/_distance_8h.html" title="タイヤの進んだ距離（回転角）に関するクラス " alt="" coords="85,79,170,104"/>
-<area shape="rect" id="node3" href="$d5/dfc/_walker_8h.html" title="Walker.h" alt="" coords="91,152,164,177"/>
-<area shape="rect" id="node4" href="$da/d12/_motor_8h.html" title="Motor.h" alt="" coords="5,225,71,251"/>
-<area shape="rect" id="node7" href="$dd/dba/_clock_8h.html" title="Clock.h" alt="" coords="95,225,160,251"/>
-<area shape="rect" id="node8" href="$d8/d3c/util_8h.html" title="util.h" alt="" coords="184,225,234,251"/>
-<area shape="rect" id="node5" href="$d3/d42/_port_8h.html" title="モータ/センサポート関連定義 " alt="" coords="10,299,67,324"/>
+<area shape="rect" id="node2" href="$d4/d99/_distance_8h.html" title="タイヤの進んだ距離（回転角）に関するクラス " alt="" coords="49,79,133,104"/>
 </map>

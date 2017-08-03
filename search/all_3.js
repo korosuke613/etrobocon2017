@@ -1,10 +1,10 @@
 var searchData=
 [
   ['c_2dsouce_2dfile_2d1_2ec',['c-souce-file-1.c',['../d5/db5/lib2_2src_2c-souce-file-1_8c.html',1,'(大域名前空間)'],['../dc/d80/libcpp-test_2src_2c-souce-file-1_8c.html',1,'(大域名前空間)']]],
-  ['calcdistance4ms',['calcDistance4ms',['../dd/dc1/class_speed_control.html#af8d3ac06b066e693929a5d584d88dac0',1,'SpeedControl']]],
+  ['calcdistance4ms',['calcDistance4ms',['../dd/dc1/class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60',1,'SpeedControl']]],
   ['calculate',['calculate',['../dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5',1,'Pid']]],
-  ['calculatespeedforpid',['calculateSpeedForPid',['../dd/dc1/class_speed_control.html#ae07cd7a54722a64d3eb30a3ec40ee497',1,'SpeedControl']]],
-  ['calculateturnforpid',['calculateTurnForPid',['../da/df4/class_turn_control.html#aae8b049138f350b795a3d82a0e996517',1,'TurnControl']]],
+  ['calculatespeedforpid',['calculateSpeedForPid',['../dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8',1,'SpeedControl']]],
+  ['calculateturnforpid',['calculateTurnForPid',['../da/df4/class_turn_control.html#ac3c948ab0766eda64baf89c613464bf1',1,'TurnControl']]],
   ['calib_5ffont',['CALIB_FONT',['../d8/d0a/common__definition_8h.html#ab694ae852e331430e3b2fed005001244',1,'common_definition.h']]],
   ['calib_5ffont_5fheight',['CALIB_FONT_HEIGHT',['../d8/d0a/common__definition_8h.html#a726af388e87ef25ffe8a24cda2285737',1,'common_definition.h']]],
   ['calib_5ffont_5fwidth',['CALIB_FONT_WIDTH',['../d8/d0a/common__definition_8h.html#a7a1984ed413358042cd26ce668de1069',1,'common_definition.h']]],
@@ -13,7 +13,7 @@ var searchData=
   ['clock_2ecpp',['Clock.cpp',['../d1/de1/_clock_8cpp.html',1,'']]],
   ['clock_2eh',['Clock.h',['../dd/dba/_clock_8h.html',1,'']]],
   ['cmd_5fstart',['CMD_START',['../d8/d0a/common__definition_8h.html#ab905e6aff2332984df0552c6b50203f2',1,'common_definition.h']]],
-  ['colorsensor',['ColorSensor',['../d3/d7f/classev3api_1_1_color_sensor.html',1,'ev3api::ColorSensor'],['../d3/d7f/classev3api_1_1_color_sensor.html#aff12f4c902eaecbf36fb99b3d333a7ea',1,'ev3api::ColorSensor::ColorSensor()'],['../da/df4/class_turn_control.html#a86644ddd9f082d6a661274b36eac2835',1,'TurnControl::colorSensor()']]],
+  ['colorsensor',['ColorSensor',['../d3/d7f/classev3api_1_1_color_sensor.html',1,'ev3api::ColorSensor'],['../da/dbb/class_line_tracer.html#a0c7026a8b16b7aef8162a9cadf6c5f7f',1,'LineTracer::colorSensor()'],['../d3/d7f/classev3api_1_1_color_sensor.html#aff12f4c902eaecbf36fb99b3d333a7ea',1,'ev3api::ColorSensor::ColorSensor()']]],
   ['colorsensor_2ecpp',['ColorSensor.cpp',['../d8/d8c/_color_sensor_8cpp.html',1,'']]],
   ['colorsensor_2eh',['ColorSensor.h',['../de/d0d/_color_sensor_8h.html',1,'']]],
   ['common_5fdefinition_2eh',['common_definition.h',['../d8/d0a/common__definition_8h.html',1,'']]],
