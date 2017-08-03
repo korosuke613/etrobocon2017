@@ -1,11 +1,11 @@
 #include "LineTracer.h"
 
 LineTracer::LineTracer():
-    forward(30), minus(-1){
+     colorSensor(PORT_3), forward(30), minus(-1){
 }
 
 void LineTracer::runLine(){
-    turn = turnControl.calculateTurnForPid( forward );
+    turn = turnControl.calculateTurnForPid( forward, colorSensor.getBrightness() );
     if(forward < 0){
         walker.run(0, 0);
     }else{

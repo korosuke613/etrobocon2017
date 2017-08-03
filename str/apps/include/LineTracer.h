@@ -4,6 +4,7 @@
 #include "TurnControl.h"
 #include "SpeedControl.h"
 #include "Walker.h"
+#include "ColorSensor.h"
 
 using namespace ev3api;
 
@@ -21,6 +22,7 @@ public:
     
 private:
     Walker walker;
+    ColorSensor colorSensor;
     int8_t forward;
     int8_t minus;
 };

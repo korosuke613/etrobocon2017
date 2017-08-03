@@ -38,8 +38,7 @@ void RightNormalCourse::runNormalCourse(void){
 		lineTracer.runLine();
 		if (ev3_button_is_pressed(BACK_BUTTON)) break;
         if (status == RightStatus::STOP) break;
-        fprintf(fp, "%d, %d, %d, %d, %d, %d\n",
-        lineTracer.turnControl.getBrightness(),
+        fprintf(fp, "%d, %d, %d, %d, %d\n",
         lineTracer.speedControl.speed_value_all, 
         forward,
         lineTracer.turn,
@@ -103,7 +102,4 @@ void RightNormalCourse::goCurveLeft(int8_t forward_value){
 
 void RightNormalCourse::stop(){
     lineTracer.setForward(0);
-    char msg[32];
-    sprintf(msg, "Brightness/s: %d", lineTracer.turnControl.getBrightness()); 
-    msg_f(msg, 5);
 }
