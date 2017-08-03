@@ -1,2 +1,2 @@
 ignore:
-  - "test/*"
+  - "str/apps/test/*"
