@@ -8,7 +8,7 @@ $ ./a.out
 */
 
 #include <gtest/gtest.h>
-#include <apps/commons/Pid.h> // このヘッダファイルのcppファイルをテスト
+#include "Pid.h" // このヘッダファイルのcppファイルをテスト
 
 class TEST_CLASS : public Pid {
 public:
