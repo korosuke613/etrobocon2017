@@ -7,7 +7,15 @@
 #
 SDKDIR = .
 WSPDIR = $(basename $(PWD))
-include $(SDKDIR)/Makefile.sdk.conf
+#
+# Input:
+# $(WSPDIR): workspace dir path relative to this SDK dir
+#
+
+EV3RT_BASE_DIR      = ./hrp2/
+EV3RT_PRJ_OBJ_DIR   = ./OBJ/
+EV3RT_LIBKERNEL_DIR = ./str/ev3-api/library/
+
 
 # Configuration
 SRCLANG := c
