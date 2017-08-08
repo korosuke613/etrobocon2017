@@ -6,7 +6,6 @@ googletest
 .vscode
 .cproject
 .project
-*.csv
 appsのエイリアス
 html
 latex
