@@ -5,7 +5,7 @@
 #
 # Include configurations of EV3RT SDK
 #
-SDKDIR = ..
+SDKDIR = .
 WSPDIR = $(basename $(PWD))
 include $(SDKDIR)/Makefile.sdk.conf
 

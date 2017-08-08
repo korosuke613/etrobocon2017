@@ -1,0 +1,14 @@
+#
+# Include this Makefile for USB host support
+#
+
+# USBHost
+USBHOSTDIR = mbed-os/features/unsupported/USBHost
+CFLAGS += -I${USBHOSTDIR}/USBHost \
+		  -I${USBHOSTDIR}/USBHostHub
+ALL_CXX_OBJS += ${USBHOSTDIR}/USBHostSerial/USBHostSerial.o \
+				${USBHOSTDIR}/USBHost/USBHost.o \
+				${USBHOSTDIR}/USBHost/USBEndpoint.o \
+				${USBHOSTDIR}/USBHost/USBDeviceConnected.o \
+				${USBHOSTDIR}/USBHostHub/USBHostHub.o 
+

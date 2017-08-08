@@ -1,0 +1,86 @@
+BTSTACK_ROOT = ../../..
+
+prefix = @prefix@
+
+CC = @CC@
+LDFLAGS = @LDFLAGS@
+CFLAGS = @CFLAGS@ -I.. -I $(BTSTACK_ROOT)/include -I$(BTSTACK_ROOT)/platforms/src/daemon -I $(BTSTACK_ROOT)/ble  -I $(BTSTACK_ROOT)/src -I $(BTSTACK_ROOT)
+BTSTACK_LIB_LDFLAGS = @BTSTACK_LIB_LDFLAGS@
+BTSTACK_LIB_EXTENSION = @BTSTACK_LIB_EXTENSION@
+LIBUSB_CFLAGS = @LIBUSB_CFLAGS@
+LIBUSB_LDFLAGS = @LIBUSB_LDFLAGS@
+
+VPATH += ${BTSTACK_ROOT}/platforms/daemon/src
+VPATH += ${BTSTACK_ROOT}/platforms/posix/src
+VPATH += ${BTSTACK_ROOT}/platforms/cocoa
+VPATH += ${BTSTACK_ROOT}/src
+VPATH += ${BTSTACK_ROOT}/ble
+
+remote_device_db_sources = @REMOTE_DEVICE_DB_SOURCES@
+run_loop_sources = @RUN_LOOP_SOURCES@
+usb_sources = @USB_SOURCES@
+
+libBTstack_SOURCES =    \
+    btstack.c           \
+    socket_connection.c \
+    hci_cmds.c          \
+    linked_list.c       \
+    run_loop.c          \
+    sdp_util.c          \
+    utils.c             \
+    $(run_loop_sources) \
+			  
+BTdaemon_SOURCES =      \
+    daemon.c            \
+    hci_transport_h4.c  \
+    $(libBTstack_SOURCES) \
+    btstack_memory.c    \
+    hci.c               \
+    hci_dump.c          \
+    l2cap.c             \
+    l2cap_signaling.c   \
+    memory_pool.c       \
+    rfcomm.c            \
+    bnep.c              \
+    sdp.c               \
+    sdp_client.c        \
+    sdp_parser.c        \
+    sdp_query_rfcomm.c  \
+    sdp_query_util.c    \
+    att_dispatch.c      \
+    gatt_client.c       \
+    att.c               \
+    att_server.c        \
+    sm.c                \
+    le_device_db_memory.c \
+    $(usb_sources)                \
+    $(remote_device_db_sources)   \
+
+# use $(CC) for Objective-C files
+.m.o:
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+# libBTstack.a
+all: libBTstack.$(BTSTACK_LIB_EXTENSION) BTdaemon
+
+libBTstack.$(BTSTACK_LIB_EXTENSION): $(libBTstack_SOURCES)
+		$(BTSTACK_ROOT)/tools/get_version.sh
+		$(CC) $(CFLAGS) $(BTSTACK_LIB_LDFLAGS) -o $@ $^ $(LDFLAGS)
+
+# libBTstack.a: $(libBTstack_SOURCES:.c=.o) $(libBTstack_SOURCES:.m=.o)
+#		ar cru $@ $(libBTstack_SOURCES:.c=.o) $(libBTstack_SOURCES:.m=.o)
+#		ranlib $@
+
+BTdaemon: $(BTdaemon_SOURCES)
+		$(CC) $(CFLAGS) -DHAVE_HCI_DUMP -o $@ $^ $(LDFLAGS) $(LIBUSB_CFLAGS) $(LIBUSB_LDFLAGS)
+
+clean:
+	rm -rf libBTstack* BTdaemon *.o
+	
+install:    
+	echo "Installing BTdaemon in $(prefix)..."
+	mkdir -p $(prefix)/bin $(prefix)/lib $(prefix)/include
+	# cp libBTstack.a $(prefix)/lib/
+	cp libBTstack.dylib $(prefix)/lib/
+	cp BTdaemon $(prefix)/bin/
+	cp -r $(BTSTACK_ROOT)/include/btstack $(prefix)/include
