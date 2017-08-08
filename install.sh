@@ -1,6 +1,6 @@
 cd hrp2/cfg
 make
-cd ..
+cd ../..
 make app=str
 mkdir build
 cd build
