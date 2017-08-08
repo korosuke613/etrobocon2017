@@ -8,7 +8,7 @@ before_install:
  - sudo apt-get install lcov
  - sudo add-apt-repository -y ppa:terry.guo/gcc-arm-embedded
  - sudo apt-get update
- - sudo apt-get install gcc-arm-none-eabi=4.9.3.2015q1-0trusty13 u-boot-tools libboost1.55-all-dev
+ - sudo apt-get install gcc-arm-none-eabi=4.9.3.2015q3-1trusty1 u-boot-tools libboost1.55-all-dev
 
 script:
  - bash install.sh
