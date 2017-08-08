@@ -4,7 +4,6 @@
 *.exe
 googletest
 .vscode
-app
 .cproject
 .project
 *.csv
