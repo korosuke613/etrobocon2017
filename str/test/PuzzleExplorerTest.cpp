@@ -2,24 +2,24 @@
 #include <gtest/gtest.h>
 #include <PuzzleExplorer.h>
 
-TEST(codeCoversionTest, return10_1_3_8Set12008)
+TEST(nearestBlockExplorerTest, return5SetBlack2Red5Yello8Blue15Green4)
 {
+	array<int, 5> blockPosition{2,5,8,15,4};//黒赤黄青緑の位置
 	
-	// コンストラクタの引数に12008を入れると、12008という数値を初期値とする定数に代入
-	PuzzleCodeConverter converter(12008);
-	// 12008を初期位置コード計算式に従って解いてメンバ変数に格納
-	converter.resolvePositionCode();
+	PuzzleExplorer explorer(blockPosition);
 	
-	// 黒のブロックの位置を返す
-	ASSERT_EQ( converter.getPosition(BlockColor::Black), 10);
+	//最寄りのブロックを探す
+	ASSERT_EQ( explorer.getNearestBlockPosition(), 8);
 	
-	// 赤のブロックの位置を返す
-	ASSERT_EQ( converter.getPosition(BlockColor::Red), 1);
+}
+
+TEST(nearestBlockExplorerTest, return12SetBlack11Red2Yello6Blue8Green12)
+{
+	array<int, 5> blockPosition{11,2,6,8,12};//黒赤黄青緑の位置
 	
-	// 黄のブロックの位置を返す
-	ASSERT_EQ( converter.getPosition(BlockColor::Yellow), 3);
+	PuzzleExplorer explorer(blockPosition);
 	
-	//青のブロックの位置を返す
-	ASSERT_EQ( converter.getPosition(BlockColor::Blue), 8);
+	//最寄りのブロックを探す
+	ASSERT_EQ( explorer.getNearestBlockPosition(), 12);
 	
 }

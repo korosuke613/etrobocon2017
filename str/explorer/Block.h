@@ -9,7 +9,8 @@ using namespace std;
 class Block{
 private:
 	int position;
-
+	char* blockColor;
+	
 public:
 	enum Color{Black, Red, Yellow, Blue, Green};
 	Block(int nodeNum);

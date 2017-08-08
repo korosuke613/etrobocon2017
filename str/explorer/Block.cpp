@@ -11,7 +11,7 @@ Block::Block(int nodeNum){
 Block::~Block(){}
 
 void Block::setPosition(int nodeNum){
-position = nodeNum;
+	position = nodeNum;
 }
 
 void Block::setColor(char color[8]){

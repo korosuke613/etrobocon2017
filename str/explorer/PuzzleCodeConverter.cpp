@@ -25,6 +25,7 @@ void PuzzleCodeConverter::resolvePositionCode()
 	
 	int ary[4];
 	
+	//初期位置コードの解釈
 	ary[0] = (result % 11) + 1;
 	result = result - (ary[0] - 1);
 	
@@ -37,6 +38,7 @@ void PuzzleCodeConverter::resolvePositionCode()
 		}
 	}
 	
+	//
 	blockMap["Blue"] = ary[0];
 	blockMap["Yellow"] = ary[1];
 	blockMap["Red"] = ary[2];
@@ -78,6 +80,10 @@ int PuzzleCodeConverter::getPosition(BlockColor color)
 	
 }
 
+/**
+ *	赤ブロックの位置を黒ブロックの位置で返す
+ *	@param redNum 赤ブロックの位置
+ */
 int PuzzleCodeConverter::redToBlackPosition(int redNum)
 {
 	int blackNum=redNum;
@@ -89,6 +95,10 @@ int PuzzleCodeConverter::redToBlackPosition(int redNum)
 	return blackNum;
 }
 
+/**
+ *	黄ブロックの位置を黒ブロックの位置で返す
+ *	@param yellowNum 黄ブロックの位置
+ */
 int PuzzleCodeConverter::yellowToBlackPosition(int yellowNum)
 {
 	int blackNum=yellowNum;	
@@ -100,6 +110,10 @@ int PuzzleCodeConverter::yellowToBlackPosition(int yellowNum)
 	return blackNum;
 }
 
+/**
+ *	青ブロックの位置を黒ブロックの位置で返す
+ *	@param blueNum 青ブロックの位置
+ */
 int PuzzleCodeConverter::blueToBlackPosition(int blueNum)
 {
 	int blackNum=blueNum;	
