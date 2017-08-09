@@ -13,8 +13,8 @@ WSPDIR = $(basename $(PWD))
 #
 
 EV3RT_BASE_DIR      = ./hrp2/
-EV3RT_PRJ_OBJ_DIR   = ./OBJ/
-EV3RT_LIBKERNEL_DIR = ./str/ev3-api/library/
+EV3RT_PRJ_OBJ_DIR   = ./hrp2/sdk/OBJ/
+EV3RT_LIBKERNEL_DIR = ./hrp2/sdk/common/library/
 
 
 # Configuration
@@ -58,7 +58,7 @@ MKFILENAME := Makefile.app
 endif
 MKFILE_DIR := $(APPLDIR)
 ifeq (,$(wildcard $(mkfile_dir)/$(MKFILENAME)))
-MKFILE_DIR := $(SDKDIR)/common
+MKFILE_DIR := $(SDKDIR)/hrp2/sdk/common
 endif
 
 
