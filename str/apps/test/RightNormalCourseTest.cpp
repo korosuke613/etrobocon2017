@@ -102,6 +102,88 @@ TEST( RightNormalCourseTest, runNormalCourseTest3 )
     ASSERT_EQ(value, false);
 }
 
+// 5200まではCURVE_RIGHTモードになる。
+TEST( RightNormalCourseTest, runNormalCourseTest6 )
+{
+    RightNormalCourse nc;
+    int value;
+
+    nc.statusCheck(0, 0);
+    nc.statusCheck(5000, 5000);
+
+    nc.runNormalCourse();
+
+    value = nc.getStatus();
+
+    ASSERT_EQ(value, (int)RightStatus::CURVE_RIGHT);
+}
+
+// 7500まではCURVE_RIGHTモードになる。
+TEST( RightNormalCourseTest, runNormalCourseTest7 )
+{
+    RightNormalCourse nc;
+    int value;
+
+    nc.statusCheck(0, 0);
+    nc.statusCheck(8000, 8000);
+
+    nc.runNormalCourse();
+
+    value = nc.getStatus();
+
+    ASSERT_EQ(value, (int)RightStatus::CURVE_LEFT_SHORT);
+}
+
+
+// 11000まではCURVE_LEFTモードになる。
+TEST( RightNormalCourseTest, runNormalCourseTest8 )
+{
+    RightNormalCourse nc;
+    int value;
+
+    nc.statusCheck(0, 0);
+    nc.statusCheck(10000, 10000);
+
+    nc.runNormalCourse();
+
+    value = nc.getStatus();
+
+    ASSERT_EQ(value, (int)RightStatus::CURVE_LEFT);
+}
+
+// 12200まではCURVE_RIGHTモードになる。
+TEST( RightNormalCourseTest, runNormalCourseTest9 )
+{
+    RightNormalCourse nc;
+    int value;
+
+    nc.statusCheck(0, 0);
+    nc.statusCheck(12000, 12000);
+
+    nc.runNormalCourse();
+
+    value = nc.getStatus();
+
+    ASSERT_EQ(value, (int)RightStatus::CURVE_RIGHT);
+}
+
+// 15500まではSTRAIGHTモードになる。
+TEST( RightNormalCourseTest, runNormalCourseTest10 )
+{
+    RightNormalCourse nc;
+    int value;
+
+    nc.statusCheck(0, 0);
+    nc.statusCheck(15000, 15000);
+
+    nc.runNormalCourse();
+
+    value = nc.getStatus();
+
+    ASSERT_EQ(value, (int)RightStatus::STRAIGHT);
+}
+
+
 // 左にそれたらturnが正の値になる
 TEST( RightNormalCourseTest, edgeChangeTest1 )
 {

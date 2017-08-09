@@ -102,6 +102,104 @@ TEST( LeftNormalCourseTest, runNormalCourseTest3 )
     ASSERT_EQ(value, false);
 }
 
+// 3240以上走るとSTRAIGHT_SLOWモードになる。
+TEST( LeftNormalCourseTest, runNormalCourseTest4 )
+{
+    LeftNormalCourse lnc;
+    int value;
+
+    lnc.statusCheck(0, 0);
+    lnc.statusCheck(3100, 3100);
+
+    lnc.runNormalCourse();
+
+    value = lnc.getStatus();
+
+    ASSERT_EQ(value, (int)LeftStatus::STRAIGHT_SLOW);
+}
+
+
+// 5200まではCURVE_RIGHTモードになる。
+TEST( LeftNormalCourseTest, runNormalCourseTest6 )
+{
+    LeftNormalCourse lnc;
+    int value;
+
+    lnc.statusCheck(0, 0);
+    lnc.statusCheck(5000, 5000);
+
+    lnc.runNormalCourse();
+
+    value = lnc.getStatus();
+
+    ASSERT_EQ(value, (int)LeftStatus::CURVE_RIGHT);
+}
+
+// 7500まではCURVE_RIGHTモードになる。
+TEST( LeftNormalCourseTest, runNormalCourseTest7 )
+{
+    LeftNormalCourse lnc;
+    int value;
+
+    lnc.statusCheck(0, 0);
+    lnc.statusCheck(7400, 7400);
+
+    lnc.runNormalCourse();
+
+    value = lnc.getStatus();
+
+    ASSERT_EQ(value, (int)LeftStatus::CURVE_LEFT_SHORT);
+}
+
+
+// 11000まではCURVE_LEFTモードになる。
+TEST( LeftNormalCourseTest, runNormalCourseTest8 )
+{
+    LeftNormalCourse lnc;
+    int value;
+
+    lnc.statusCheck(0, 0);
+    lnc.statusCheck(10000, 10000);
+
+    lnc.runNormalCourse();
+
+    value = lnc.getStatus();
+
+    ASSERT_EQ(value, (int)LeftStatus::CURVE_LEFT);
+}
+
+// 12200まではCURVE_RIGHTモードになる。
+TEST( LeftNormalCourseTest, runNormalCourseTest9 )
+{
+    LeftNormalCourse lnc;
+    int value;
+
+    lnc.statusCheck(0, 0);
+    lnc.statusCheck(12000, 12000);
+
+    lnc.runNormalCourse();
+
+    value = lnc.getStatus();
+
+    ASSERT_EQ(value, (int)LeftStatus::CURVE_RIGHT);
+}
+
+// 15500まではSTRAIGHTモードになる。
+TEST( LeftNormalCourseTest, runNormalCourseTest10 )
+{
+    LeftNormalCourse lnc;
+    int value;
+
+    lnc.statusCheck(0, 0);
+    lnc.statusCheck(15000, 15000);
+
+    lnc.runNormalCourse();
+
+    value = lnc.getStatus();
+
+    ASSERT_EQ(value, (int)LeftStatus::STRAIGHT);
+}
+
 // 右にそれたらturnが負の値になる
 TEST( LeftNormalCourseTest, edgeChangeTest1 )
 {
