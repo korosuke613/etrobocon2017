@@ -11,15 +11,16 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR){
     sl.update();
     sl.writing_current_coordinates();
     forward = lineTracer.speedControl.calculateSpeedForPid(countL, countR);
+    lineTracer.setForward(forward);
     statusCheck(countL, countR);
     switch(status){
-        case LeftStatus::STRAIGHT: goStraight(forward); break;
-        case LeftStatus::STRAIGHT_SLOW: goStraightSlow(forward); break;
-        case LeftStatus::CURVE_RIGHT: goCurveRight(forward); break;
-        case LeftStatus::CURVE_LEFT_SHORT: goCurveLeftShort(forward); break;
-        case LeftStatus::CURVE_LEFT: goCurveLeft(forward); break;
+        case LeftStatus::STRAIGHT: goStraight(); break;
+        case LeftStatus::STRAIGHT_SLOW: goStraightSlow(); break;
+        case LeftStatus::CURVE_RIGHT: goCurveRight(); break;
+        case LeftStatus::CURVE_LEFT_SHORT: goCurveLeftShort(); break;
+        case LeftStatus::CURVE_LEFT: goCurveLeft(); break;
         case LeftStatus::STOP: stop(); break;
-        default: goStraight(0);
+        default: stop();
     }
     lineTracer.runLine();
     if (ev3_button_is_pressed(BACK_BUTTON)) return false;
@@ -41,33 +42,28 @@ void LeftNormalCourse::statusCheck(int32_t countL, int32_t countR){
     old_status = status;
 }
 
-void LeftNormalCourse::goStraight(int8_t forward_value){
-    lineTracer.setForward(forward_value);
+void LeftNormalCourse::goStraight(){
     lineTracer.speedControl.setPid ( 2.0, 4.8, 0.024, 150.0 );
     lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 40.0 );
 }
 
-void LeftNormalCourse::goStraightSlow(int8_t forward_value){
-    lineTracer.setForward(forward_value);
+void LeftNormalCourse::goStraightSlow(){
     lineTracer.speedControl.setPid ( 2.0, 2.0, 0.024, 120.0 );
     lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 40.0 );
 }
 
-void LeftNormalCourse::goCurveRight(int8_t forward_value){
-    lineTracer.setForward(forward_value);
+void LeftNormalCourse::goCurveRight(){
     lineTracer.speedControl.setPid ( 4.0, 0.8, 0.08, 100.0 );
     lineTracer.turnControl.setPid ( 4.0, 2.0, 0.1, 35.0 );
     //lineTracer.turnControl.setPid ( 4.0, 2.0, 0.096, 40.0 );
 }
 
-void LeftNormalCourse::goCurveLeftShort(int8_t forward_value){
-    lineTracer.setForward(forward_value);
+void LeftNormalCourse::goCurveLeftShort(){
     lineTracer.speedControl.setPid ( 4.0, 0.8, 0.1, 130.0 );
     lineTracer.turnControl.setPid ( 2.0, 0.5, 0.048, 35.0 );
 }
 
-void LeftNormalCourse::goCurveLeft(int8_t forward_value){
-    lineTracer.setForward(forward_value);
+void LeftNormalCourse::goCurveLeft(){
     lineTracer.speedControl.setPid ( 4.0, 0.8, 0.1, 100.0 );
     lineTracer.turnControl.setPid ( 4.0, 2.0, 0.096, 35.0 );
 }

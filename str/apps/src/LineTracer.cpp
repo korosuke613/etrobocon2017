@@ -1,7 +1,7 @@
 #include "LineTracer.h"
 
 LineTracer::LineTracer():
-     colorSensor(PORT_3), forward(30), minus(-1){
+     colorSensor(PORT_3), forward(30), turn(0), minus(-1){
 }
 
 void LineTracer::runLine(){
@@ -14,17 +14,12 @@ void LineTracer::runLine(){
     tslp_tsk(4); // 4msec周期起動
 }
 
-int32_t LineTracer::getCountL(){
-    return walker.get_count_L();
-}
-
-int32_t LineTracer::getCountR(){
-    return walker.get_count_R();
-}
-
-
 void LineTracer::setForward(int8_t setValue){
     forward = setValue;
+}
+
+void LineTracer::setTurn(int8_t setValue){
+    turn = setValue;
 }
 
 void LineTracer::isLeftsideLine(bool b){

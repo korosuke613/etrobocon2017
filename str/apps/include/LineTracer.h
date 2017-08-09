@@ -13,17 +13,16 @@ public:
     LineTracer();
     void runLine();
     void setForward(int8_t setValue);
-    int32_t getCountL();
-    int32_t getCountR();
+    void setTurn(int8_t setValue);
     void isLeftsideLine(bool b);
     TurnControl turnControl;
     SpeedControl speedControl;
-    int8_t turn;
     
 private:
     Walker walker;
     ColorSensor colorSensor;
     int8_t forward;
+    int8_t turn;
     int8_t minus;
 };
 

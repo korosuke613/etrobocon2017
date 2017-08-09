@@ -7,11 +7,12 @@
 class NormalCourse {
 public:
 	void runNormalCourse ( void ) ;
+	LineTracer lineTracer;
 
 protected:
-	LineTracer lineTracer;
 	Distance distance;
 	int8_t forward;
+	int8_t turn;
     int32_t distanse_total;
 } ;
 

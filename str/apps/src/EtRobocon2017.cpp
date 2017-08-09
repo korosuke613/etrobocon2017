@@ -20,7 +20,7 @@
 
 
 EtRobocon2017::EtRobocon2017():
-    touchSensor( PORT_1 )
+    touchSensor( PORT_1 ), colorSensor( PORT_3 )
 {
     light_white = 60;
     light_black = 0;
@@ -46,6 +46,7 @@ void EtRobocon2017::loop()
     // 左レーン時
 	while ( 1 ) {
         isNormalCourse = leftNormalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R());
+        //LeftNormalCourse.lineTracer.runLine();
         if(! isNormalCourse)break;
     }
     // 右レーン時

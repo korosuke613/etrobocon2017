@@ -16,14 +16,14 @@ enum struct LeftStatus {
 class LeftNormalCourse : public NormalCourse{
 public:
     LeftNormalCourse();
-   	bool runNormalCourse (int32_t countL, int32_t countR) ;
+   	bool runNormalCourse (int32_t countL, int32_t countR);
 
 private:
-    void goStraight(int8_t forward_value);
-    void goStraightSlow(int8_t forward_value);
-    void goCurveRight(int8_t forward_value);
-    void goCurveLeft(int8_t forward_value);
-    void goCurveLeftShort(int8_t forward_value);
+    void goStraight();
+    void goStraightSlow();
+    void goCurveRight();
+    void goCurveLeft();
+    void goCurveLeftShort();
     void stop();
     void statusCheck(int32_t countL, int32_t countR);
     LeftStatus status;

@@ -3,6 +3,7 @@
 
 #include "ev3api.h"
 #include "TouchSensor.h"
+#include "ColorSensor.h"
 #include "SonarAlert.h"
 #include "Lifter.h"
 #include "Emoter.h"
@@ -22,8 +23,9 @@ public:
     void loop();
 
 private:
-	Walker walker;
     TouchSensor touchSensor;
+    ColorSensor colorSensor;
+	Walker walker;
     int8_t light_white;
     int8_t light_black;
 

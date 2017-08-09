@@ -38,13 +38,6 @@ void RightNormalCourse::runNormalCourse(void){
 		lineTracer.runLine();
 		if (ev3_button_is_pressed(BACK_BUTTON)) break;
         if (status == RightStatus::STOP) break;
-        fprintf(fp, "%d, %d, %d, %d, %d\n",
-        lineTracer.speedControl.speed_value_all, 
-        forward,
-        lineTracer.turn,
-        (int)lineTracer.speedControl.get_output(),
-        (int)lineTracer.turnControl.get_output()
-        );
 	}
 
     fclose(fp);
