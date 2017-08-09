@@ -21,7 +21,7 @@ public:
 };
 
 // Pidのtarget以下の数字を入力すると負の数を出力する
-TEST( detectBarrierTest, CalculateTest1 )
+TEST( PidTest, CalculateTest1 )
 {
     TEST_CLASS pid;
  
@@ -47,7 +47,7 @@ TEST( detectBarrierTest, CalculateTest2 )
 }
 
 // Pidの出力が100を超えると100になる
-TEST( detectBarrierTest, limitOutputTest1 )
+TEST( PidTest, limitOutputTest1 )
 {
     TEST_CLASS pid;
 
@@ -61,7 +61,7 @@ TEST( detectBarrierTest, limitOutputTest1 )
 }
 
 // Pidの出力が-100を超えると-100になる
-TEST( detectBarrierTest, limitOutputTest2 )
+TEST( PidTest, limitOutputTest2 )
 {
     TEST_CLASS pid;
 
@@ -75,7 +75,7 @@ TEST( detectBarrierTest, limitOutputTest2 )
 }
 
 // Pidの出力が100~-100の範囲だとそのまま
-TEST( detectBarrierTest, limitOutputTest3 )
+TEST( PidTest, limitOutputTest3 )
 {
     TEST_CLASS pid;
 

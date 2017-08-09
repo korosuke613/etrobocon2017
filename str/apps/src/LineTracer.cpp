@@ -1,30 +1,28 @@
 #include "LineTracer.h"
 
 LineTracer::LineTracer():
-     colorSensor(PORT_3), forward(30), minus(-1){
+     forward(30), turn(0), minus(-1){
 }
 
-void LineTracer::runLine(){
-    turn = turnControl.calculateTurnForPid( forward, colorSensor.getBrightness() );
-    if(forward < 0){
-        walker.run(0, 0);
-    }else{
-        walker.run( forward, turn * minus);
-    }
-    tslp_tsk(4); // 4msec周期起動
+void LineTracer::runLine(int32_t countL, int32_t countR, int8_t light_value){
+    forward = speedControl.calculateSpeedForPid(countL, countR);
+    turn = turnControl.calculateTurnForPid( forward, light_value ) * minus;
 }
-
-int32_t LineTracer::getCountL(){
-    return walker.get_count_L();
-}
-
-int32_t LineTracer::getCountR(){
-    return walker.get_count_R();
-}
-
 
 void LineTracer::setForward(int8_t setValue){
     forward = setValue;
+}
+
+void LineTracer::setTurn(int8_t setValue){
+    turn = setValue;
+}
+
+int8_t LineTracer::getForward(){
+    return forward;
+}
+
+int8_t LineTracer::getTurn(){
+    return turn;
 }
 
 void LineTracer::isLeftsideLine(bool b){
