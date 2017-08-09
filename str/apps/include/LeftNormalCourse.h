@@ -17,7 +17,7 @@ public:
     LeftNormalCourse();
    	bool runNormalCourse ();
     bool statusCheck(int32_t countL, int32_t countR);
-
+    LeftStatus getStatus();
 private:
     LeftStatus status;
     LeftStatus old_status;
