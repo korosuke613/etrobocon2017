@@ -1,2 +1,3 @@
 ignore:
   - "str/apps/test/*"
+  - "str/apps/include/*"
