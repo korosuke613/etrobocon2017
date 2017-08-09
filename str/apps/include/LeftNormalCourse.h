@@ -19,12 +19,6 @@ public:
     bool statusCheck(int32_t countL, int32_t countR);
 
 private:
-    void goStraight();
-    void goStraightSlow();
-    void goCurveRight();
-    void goCurveLeft();
-    void goCurveLeftShort();
-    void stop();
     LeftStatus status;
     LeftStatus old_status;
 };

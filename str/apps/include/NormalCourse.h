@@ -6,7 +6,8 @@
 
 class NormalCourse {
 public:
-	void runNormalCourse ( void ) ;
+	void runNormalCourse ( void );
+	void stop();
 	LineTracer lineTracer;
 
 protected:
@@ -14,6 +15,6 @@ protected:
 	int8_t forward;
 	int8_t turn;
     int32_t distanse_total;
-} ;
+};
 
 #endif

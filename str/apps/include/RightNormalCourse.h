@@ -18,11 +18,6 @@ public:
     bool statusCheck(int32_t countL, int32_t countR);
 
 private:
-    void goStraight();
-    void goCurveRight();
-    void goCurveLeft();
-    void goCurveLeftShort();
-    void stop();
     RightStatus status;
     RightStatus old_status;
 };
