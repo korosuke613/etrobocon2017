@@ -2,7 +2,7 @@
 
 LeftNormalCourse::LeftNormalCourse(){
     lineTracer.isLeftsideLine(true);
-    old_status = LeftStatus::STRAIGHT;
+    status = old_status = LeftStatus::STRAIGHT;
 }
 
 bool LeftNormalCourse::runNormalCourse(){
