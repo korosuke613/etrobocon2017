@@ -45,6 +45,7 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/LineTracer.cpp
     ${SOURCE_DIR}/NormalCourse.cpp
     ${SOURCE_DIR}/LeftNormalCourse.cpp
+    ${SOURCE_DIR}/RightNormalCourse.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 
