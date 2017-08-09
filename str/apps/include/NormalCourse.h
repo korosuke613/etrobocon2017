@@ -6,7 +6,6 @@
 
 class NormalCourse {
 public:
-	void runNormalCourse ( void );
 	void stop();
 	LineTracer lineTracer;
 
