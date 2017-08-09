@@ -2,7 +2,7 @@
 
 RightNormalCourse::RightNormalCourse(){
     lineTracer.isLeftsideLine(false);
-    old_status = RightStatus::STRAIGHT;
+    status = old_status = RightStatus::STRAIGHT;
 }
 
 bool RightNormalCourse::runNormalCourse(){
@@ -47,4 +47,8 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR){
     else status = RightStatus::STOP;
     if(old_status != status) return true;
     return false;
+}
+
+int RightNormalCourse::getStatus(){
+    return (int)status;
 }

@@ -39,8 +39,8 @@ void EtRobocon2017::start( int bluetooth_command )
 void EtRobocon2017::loop()
 {
     SonarAlert sonarAlert( 4 );
-    LeftNormalCourse leftNormalCourse;
-    //RightNormalCourse rightNormalCourse;
+    //LeftNormalCourse normalCourse;
+    RightNormalCourse normalCourse;
     Lifter lifter;
     Emoter emoter;
     bool isNormalCourse;
@@ -48,25 +48,26 @@ void EtRobocon2017::loop()
 	while ( 1 ) {
         sl.update();
         sl.writing_current_coordinates();
-        if(leftNormalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
-        isNormalCourse = leftNormalCourse.runNormalCourse();
-        leftNormalCourse.lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
+        if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
+        isNormalCourse = normalCourse.runNormalCourse();
+        normalCourse.lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
         
-        if(leftNormalCourse.lineTracer.getForward() < 0){
+        if(normalCourse.lineTracer.getForward() < 0){
             walker.run(0, 0);
         }else{
-            walker.run( leftNormalCourse.lineTracer.getForward(), leftNormalCourse.lineTracer.getTurn() * leftNormalCourse.lineTracer.minus);
+            walker.run( normalCourse.lineTracer.getForward(), normalCourse.lineTracer.getTurn() * normalCourse.lineTracer.minus);
         }
 
         tslp_tsk(4); // 4msec周期起動
-        if(! isNormalCourse)break;
+        if(! isNormalCourse){
+            walker.run(0, 0);
+            break;
+        }
         if(ev3_button_is_pressed(BACK_BUTTON)){
             walker.run(0, 0);
             break;
         }
     }
-    // 右レーン時
-    //rightNormalCourse.runNormalCourse();
 }
 
 void EtRobocon2017::waitStarter( int bluetooth_command )

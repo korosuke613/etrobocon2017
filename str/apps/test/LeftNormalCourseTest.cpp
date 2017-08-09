@@ -2,6 +2,9 @@
  * LeftNormalCourseTest.cpp
  */
 
+/* 
+g++-7 -w ../src/Distance.cpp ../src/Pid.cpp ../src/TurnControl.cpp ../src/SpeedControl.cpp ../src/LineTracer.cpp ../src/NormalCourse.cpp ../src/LeftNormalCourse.cpp LeftNormalCourseTest.cpp gtest_main.o gtest-all.o -I../include -I../../googletest/googletest/include
+*/
 
 #include <gtest/gtest.h>
 #include "LeftNormalCourse.h" // このヘッダファイルのcppファイルをテスト
