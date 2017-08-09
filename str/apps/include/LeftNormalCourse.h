@@ -2,9 +2,6 @@
 #define __LEFTNORMALCOURSE__
 
 #include "NormalCourse.h"
-#include "SelfLocalization.h"
-
-using namespace ev3api;
 
 enum struct LeftStatus {
     STRAIGHT,
@@ -18,20 +15,12 @@ enum struct LeftStatus {
 class LeftNormalCourse : public NormalCourse{
 public:
     LeftNormalCourse();
-   	void runNormalCourse ( void ) ;
-
+   	bool runNormalCourse ();
+    bool statusCheck(int32_t countL, int32_t countR);
+    int getStatus();
 private:
-    void goStraight(int8_t forward_value);
-    void goStraightSlow(int8_t forward_value);
-    void goCurveRight(int8_t forward_value);
-    void goCurveLeft(int8_t forward_value);
-    void goCurveLeftShort(int8_t forward_value);
-    void stop();
-    void statusCheck();
     LeftStatus status;
     LeftStatus old_status;
-    /* 自己位置推定 インスタンス 初期化*/
-    SelfLocalization sl;
 };
 
 #endif
