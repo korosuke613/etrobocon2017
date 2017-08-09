@@ -1,7 +1,8 @@
 <map id="Walker::setBrakeMotor" name="Walker::setBrakeMotor">
 <area shape="rect" id="node2" href="$d1/d49/class_walker.html#a70f88eb11114b0337bfcd4b05392f3d5" title="Walker::run" alt="" coords="210,80,299,105"/>
-<area shape="rect" id="node3" href="$da/dbb/class_line_tracer.html#ab595c9e8ed7c1e4b1d38b87cf10e32ee" title="LineTracer::runLine" alt="" coords="352,5,488,31"/>
-<area shape="rect" id="node4" href="$d1/d49/class_walker.html#a548b93fdfc6cb47eaa9ae8b8b8579c23" title="Walker::stop" alt="" coords="372,55,467,80"/>
-<area shape="rect" id="node5" href="$d1/d49/class_walker.html#a5ee3d6593656b064058949f31f525c31" title="Walker::angleChange" alt="" coords="541,80,690,105"/>
-<area shape="rect" id="node6" href="$d1/d49/class_walker.html#af913f99c575c9be615d03ec96460ce15" title="Walker::edgeChange" alt="" coords="347,156,493,181"/>
+<area shape="rect" id="node3" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="347,5,496,31"/>
+<area shape="rect" id="node5" href="$d1/d49/class_walker.html#a548b93fdfc6cb47eaa9ae8b8b8579c23" title="Walker::stop" alt="" coords="374,55,469,80"/>
+<area shape="rect" id="node6" href="$d1/d49/class_walker.html#a5ee3d6593656b064058949f31f525c31" title="Walker::angleChange" alt="" coords="545,80,694,105"/>
+<area shape="rect" id="node7" href="$d1/d49/class_walker.html#af913f99c575c9be615d03ec96460ce15" title="Walker::edgeChange" alt="" coords="349,156,495,181"/>
+<area shape="rect" id="node4" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="544,5,695,31"/>
 </map>

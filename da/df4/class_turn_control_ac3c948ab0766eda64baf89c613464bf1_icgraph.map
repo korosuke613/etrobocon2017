@@ -1,3 +1,5 @@
 <map id="TurnControl::calculateTurnForPid" name="TurnControl::calculateTurnForPid">
-<area shape="rect" id="node2" href="$da/dbb/class_line_tracer.html#ab595c9e8ed7c1e4b1d38b87cf10e32ee" title="LineTracer::runLine" alt="" coords="232,12,368,37"/>
+<area shape="rect" id="node2" href="$da/dbb/class_line_tracer.html#a4685c87f451af9ad63ca124439dc7787" title="LineTracer::runLine" alt="" coords="232,12,368,37"/>
+<area shape="rect" id="node3" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="416,12,566,37"/>
+<area shape="rect" id="node4" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="614,12,764,37"/>
 </map>

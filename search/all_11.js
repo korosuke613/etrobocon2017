@@ -12,8 +12,8 @@ var searchData=
   ['touchsensor',['TouchSensor',['../d5/dad/classev3api_1_1_touch_sensor.html',1,'ev3api::TouchSensor'],['../d0/df8/class_et_robocon2017.html#a201e5ee9c612b03b7990cdf341268003',1,'EtRobocon2017::touchSensor()'],['../d5/dad/classev3api_1_1_touch_sensor.html#aa60ee642ac03fa9d898399a7272d416e',1,'ev3api::TouchSensor::TouchSensor()']]],
   ['touchsensor_2ecpp',['TouchSensor.cpp',['../d7/d73/_touch_sensor_8cpp.html',1,'']]],
   ['touchsensor_2eh',['TouchSensor.h',['../d7/df2/_touch_sensor_8h.html',1,'']]],
-  ['turn',['turn',['../da/dbb/class_line_tracer.html#a71ed2a11d9fc20e838e83555f38b4586',1,'LineTracer::turn()'],['../da/df4/class_turn_control.html#a5ad8ba59aad9a53dd115f158c7afba0a',1,'TurnControl::turn()'],['../d8/dc7/class_emoter.html#a3bc0aefbc31f403816a094aa3a5bd225',1,'Emoter::turn()']]],
-  ['turncontrol',['TurnControl',['../da/df4/class_turn_control.html',1,'TurnControl'],['../da/dbb/class_line_tracer.html#a164daac8c1c5cf23ccbe81dba9d4b9b9',1,'LineTracer::turnControl()'],['../da/df4/class_turn_control.html#aa517e31db70e27de33c21143b1de110a',1,'TurnControl::TurnControl()']]],
+  ['turn',['turn',['../da/dbb/class_line_tracer.html#a71ed2a11d9fc20e838e83555f38b4586',1,'LineTracer::turn()'],['../dd/d88/class_normal_course.html#a0065b58f54e8e9d8ffbcf6297fc9defe',1,'NormalCourse::turn()'],['../da/df4/class_turn_control.html#a5ad8ba59aad9a53dd115f158c7afba0a',1,'TurnControl::turn()'],['../d8/dc7/class_emoter.html#a3bc0aefbc31f403816a094aa3a5bd225',1,'Emoter::turn()']]],
+  ['turncontrol',['TurnControl',['../da/df4/class_turn_control.html',1,'TurnControl'],['../da/df4/class_turn_control.html#aa517e31db70e27de33c21143b1de110a',1,'TurnControl::TurnControl()'],['../da/dbb/class_line_tracer.html#a164daac8c1c5cf23ccbe81dba9d4b9b9',1,'LineTracer::turnControl()']]],
   ['turncontrol_2ecpp',['TurnControl.cpp',['../d6/dcc/_turn_control_8cpp.html',1,'']]],
   ['turncontrol_2eh',['TurnControl.h',['../da/d7f/_turn_control_8h.html',1,'']]],
   ['turning_5fangle',['turning_angle',['../d4/ddb/class_self_localization.html#aa0be3199e2ad39a9e06292e63cdea5f7',1,'SelfLocalization']]]

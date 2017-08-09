@@ -1,0 +1,15 @@
+<map id="update_listings.main" name="update_listings.main">
+<area shape="rect" id="node2" href="$d2/d94/namespaceupdate__listings.html#af70c1d611ccd319af888d432387c0ad8" title="update_listings.processExamples" alt="" coords="196,69,415,95"/>
+<area shape="rect" id="node3" href="$d2/d94/namespaceupdate__listings.html#a477d07ee66c2ad22193cfd183cabdaf9" title="update_listings.getExample\lTitle" alt="" coords="465,5,649,44"/>
+<area shape="rect" id="node4" href="$d2/d94/namespaceupdate__listings.html#a7d01b3bf34c4fa9b81da7e49cf9fd35f" title="update_listings.latexText" alt="" coords="1002,171,1169,196"/>
+<area shape="rect" id="node5" href="$d2/d94/namespaceupdate__listings.html#a51676bfaeb2fd8ee01d9213b6abc35db" title="update_listings.writeListings" alt="" coords="463,297,651,323"/>
+<area shape="rect" id="node6" href="$d2/d94/namespaceupdate__listings.html#aa08cc48f4970bc25900d6c99ddbe9a4a" title="update_listings.isTextTag" alt="" coords="1000,271,1170,296"/>
+<area shape="rect" id="node7" href="$d2/d94/namespaceupdate__listings.html#a296b7de3b483719ba3f9a363f9625c61" title="update_listings.processTextLine" alt="" coords="716,221,926,247"/>
+<area shape="rect" id="node9" href="$d2/d94/namespaceupdate__listings.html#af2d2f77f4034dccaa7218d570aae59b9" title="update_listings.isEndOfComment" alt="" coords="711,323,931,348"/>
+<area shape="rect" id="node10" href="$d2/d94/namespaceupdate__listings.html#a2b606a6f182cb85a0a32829fe97d31c3" title="update_listings.isEmptyCommentLine" alt="" coords="699,372,943,397"/>
+<area shape="rect" id="node11" href="$d2/d94/namespaceupdate__listings.html#ac4f85fb71102abf3b33bba9d07dc9fc7" title="update_listings.writeItemize\lBlock" alt="" coords="728,421,914,460"/>
+<area shape="rect" id="node12" href="$d2/d94/namespaceupdate__listings.html#ac159de68c5de97808430cbdb64441ab8" title="update_listings.writeText\lBlock" alt="" coords="738,484,904,523"/>
+<area shape="rect" id="node13" href="$d2/d94/namespaceupdate__listings.html#a99047e42ce82b4f3d038cc3c94a1eb4c" title="update_listings.isNewItem" alt="" coords="733,547,909,572"/>
+<area shape="rect" id="node14" href="$d2/d94/namespaceupdate__listings.html#ab45afe9df20c74cf07e14229cc35e4ac" title="update_listings.isCommentLine" alt="" coords="718,120,924,145"/>
+<area shape="rect" id="node8" href="$d2/d94/namespaceupdate__listings.html#a9f23cd60de9ecfbc5139d7d922fe932f" title="update_listings.isItemizeTag" alt="" coords="991,221,1179,247"/>
+</map>

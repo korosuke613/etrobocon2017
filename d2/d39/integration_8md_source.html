@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: hrp2/modules/btstack/docs/manual/docs/integration.md ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">hrp2/modules/btstack/docs/manual/docs/integration.md</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/d39/integration_8md.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;While the run loop provided by BTstack is sufficient for new designs,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;BTstack is often used with or added to existing projects. In this case,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;the run loop, data sources, and timers may need to be adapted. The</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;following two sections provides a guideline for single and</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;multi-threaded environments.</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;To simplify the discussion, we’ll consider an application split into</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;“Main ”, “Communication Logic”, and “BTstack”. The Communication Logic</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;contains the packet handler (PH) that handles all asynchronous events</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;and data packets from BTstack. The Main Application makes use of the</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;Communication Logic for its Bluetooth communication.</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;## Adapting BTstack for Single-Threaded Environments {#sec:singlethreadingIntegration}</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;In a single-threaded environment, all application components run on the</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;same (single) thread and use direct function calls as shown in</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;Figure {@fig:BTstackSingle}.</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;![BTstack in single-threaded environment.](picts/singlethreading-btstack.png) {#fig:BTstackSingle}</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;BTstack provides a basic run loop that supports the concept of data</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;sources and timers, which can be registered centrally. This works well</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;when working with a small MCU and without an operating system. To adapt</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;to a basic operating system or a different scheduler, BTstack’s run loop</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;can be implemented based on the functions and mechanism of the existing</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;system.</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;Currently, we have two examples for this:</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;-   *run_loop_cocoa.c* is an implementation for the CoreFoundation</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Framework used in OS X and iOS. All run loop functions are</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    implemented in terms of CoreFoundation calls, data sources and</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    timers are modeled as CFSockets and CFRunLoopTimer respectively.</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;-   *run_loop_posix.c* is an implementation for POSIX compliant</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    systems. The data sources are modeled as file descriptors and</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    managed in a linked list. Then, the*select* function is used to wait</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    for the next file descriptor to become ready or timer to expire.</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;## Adapting BTstack for Multi-Threaded Environments {#sec:multithreadingIntegration}</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;The basic execution model of BTstack is a general while loop. Aside from</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;interrupt-driven UART and timers, everything happens in sequence. When</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;using BTstack in a multi-threaded environment, this assumption has to</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;stay valid - at least with respect to BTstack. For this, there are two</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;common options:</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;-   The Communication Logic is implemented on a dedicated BTstack</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    thread, and the Main Application communicates with the BTstack</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    thread via application-specific messages over an Interprocess</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    Communication (IPC) as depicted in Figure {@fig:MTMonolithic}. </div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    This option results in less code and quick adaption.</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    ![BTstack in multi-threaded environment - monolithic solution.](picts/multithreading-monolithic.png) {#fig:MTMonolithic}</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;-   BTstack must be extended to run standalone, i.e, as a Daemon, on a</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    dedicated thread and the Main Application controls this daemon via</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    BTstack extended HCI command over IPC - this is used for the</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    non-embedded version of BTstack e.g., on the iPhone and it is depicted </div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    in Figure {@fig:MTDaemon}. This option requires more code but provides </div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    more flexibility.</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ![BTstack in multi-threaded environment - solution with daemon.](picts/multithreading-btdaemon.png) {#fig:MTDaemon}</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div></div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

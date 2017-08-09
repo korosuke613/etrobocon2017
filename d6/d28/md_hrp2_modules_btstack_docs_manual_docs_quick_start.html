@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: General Tools</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">General Tools </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>On Unix-based systems, git, make, and Python are usually installed. If not, use the system’s packet manager to install them.</p>
+<p>On Windows, you need to manually install and configure GNU Make, Python, and optionally git :</p>
+<ul>
+<li><a href="http://gnuwin32.sourceforge.net/packages/make.htm">GNU Make</a> for Windows: Add its bin folder to the Windows Path in Environment Variables. The bin folder is where make.exe resides, and it’s usually located in [C: Files]().</li>
+<li><a href="http://www.python.org/getit/">Python</a> for Windows: Add Python installation folder to the Windows Path in Environment Variables.</li>
+</ul>
+<h3>Adding paths to the Windows Path variable {#sec:windowsPathQuickStart}</h3>
+<ul>
+<li>Go to: Control Panel-&gt;System-&gt;Advanced tab-&gt;Environment Variables.</li>
+<li>The top part contains a list of User variables.</li>
+<li>Click on the Path variable and then click edit.</li>
+<li>Go to the end of the line, then append the path to the list, for example, [C: Files]() for GNU Make.</li>
+<li>Ensure that there is a semicolon before and after [C: Files]().</li>
+</ul>
+<h2>Getting BTstack from GitHub</h2>
+<p>Use git to clone the latest version: </p><pre class="fragment">git clone https://github.com/bluekitchen/btstack.git
+</pre><p>Alternatively, you can download it as a ZIP archive from <a href="https://github.com/bluekitchen/btstack/archive/master.zip">BTstack’s page</a> on GitHub.</p>
+<h2>Compiling the examples and loading firmware</h2>
+<p>This step is platform specific. To compile and run the examples, you need to download and install the platform specific toolchain and a flash tool. For TI’s CC256x chipsets, you also need the correct init script, or “Service Pack” in TI nomenclature. Assuming that these are provided, go to folder [btstack/platforms/$PLATFORM$]() in command prompt and run make. If all the paths are correct, it will generate several firmware files. These firmware files can be loaded onto the device using platform specific flash programmer. For the PIC32-Harmony platform, a project file for the MPLAB X IDE is provided, too.</p>
+<h2>Run the Example</h2>
+<p>As a first test, we recommend the <a href="../../examples/generated/#sec:sppcounterExample">SPP Counter example</a>. During the startup, for TI chipsets, the init script is transferred, and the Bluetooth stack brought up. After that, the development board is discoverable as “BTstack SPP Counter” and provides a single virtual serial port. When you connect to it, you’ll receive a counter value as text every second.</p>
+<h2>Platform specifics</h2>
+<p>In the following, we provide more information on specific platform setups, toolchains, programmers, and init scripts.</p>
+<h3>libusb</h3>
+<p>The quickest way to try BTstack is on a Linux or OS X system with an additional USB Bluetooth module. The Makefile [platforms/libusb]() in requires <a href="http://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> and <a href="http://libusb.info">libusb-1.0</a> or higher to be installed.</p>
+<p>On Linux, it’s usually necessary to run the examples as root as the kernel needs to detach from the USB module.</p>
+<p>On OS X, it’s necessary to tell the OS to only use the internal Bluetooth. For this, execute: </p><pre class="fragment">sudo nvram bluetoothHostControllerSwitchBehavior=never
+</pre><p>It’s also possible to run the examples on Win32 systems. For this:</p>
+<ul>
+<li>Install <a href="http://www.mingw.org/wiki/msys">MSYS</a> and <a href="http://www.mingw.org">MINGW32</a> using the MINGW installer</li>
+<li>Compile and install libusb-1.0.19 to [/usr/local/]() in msys command shell</li>
+<li>Setup a USB Bluetooth dongle for use with libusb-1.0:<ul>
+<li>Start <a href="http://zadig.akeo.ie">Zadig</a></li>
+<li>Select Options -&gt; “List all devices”</li>
+<li>Select USB Bluetooth dongle in the big pull down list</li>
+<li>Select WinUSB (libusb) in the right pull pull down list</li>
+<li>Select “Replace Driver”</li>
+</ul>
+</li>
+</ul>
+<p>Now, you can run the examples from the <em>msys</em> shell the same way as on Linux/OS X.</p>
+<h3>Texas Instruments MSP430-based boards</h3>
+<p><b>Compiler Setup.</b> The MSP430 port of BTstack is developed using the Long Term Support (LTS) version of mspgcc. General information about it and installation instructions are provided on the <a href="http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=MSPGCC_Wiki">MSPGCC Wiki</a>. On Windows, you need to download and extract <a href="http://sourceforge.net/projects/mspgcc/files/Windows/mingw32/">mspgcc</a> to [C:](). Add [C:]() folder to the Windows Path in Environment variable as explained <a href="../../#sec:windowsPathQuickStart">here</a>.</p>
+<p><b>Loading Firmware.</b> To load firmware files onto the MSP430 MCU for the MSP-EXP430F5438 Experimeneter board, you need a programmer like the MSP430 MSP-FET430UIF debugger or something similar. The eZ430-RF2560 and MSP430F5529LP contain a basic debugger. Now, you can use one of following software tools:</p>
+<ul>
+<li><a href="http://processors.wiki.ti.com/index.php/MSP430_Flasher_Command_Line_Programmer">MSP430Flasher</a> (windows-only):<ul>
+<li>Use the following command, where you need to replace the [BINARY_FILE_NAME.hex]() with the name of your application:</li>
+</ul>
+</li>
+</ul>
+<pre class="fragment">MSP430Flasher.exe -n MSP430F5438A -w "BINARY_FILE_NAME.hex" -v -g -z [VCC]
+</pre><ul>
+<li><a href="http://mspdebug.sourceforge.net/">MSPDebug</a>: An example session with the MSP-FET430UIF connected on OS X is given in following listing:</li>
+</ul>
+<pre class="fragment">mspdebug -j -d /dev/tty.FET430UIFfd130 uif
+... 
+prog blink.hex
+run
+</pre><h3>Texas Instruments CC256x-based chipsets</h3>
+<p><b>CC256x Init Scripts.</b> In order to use the CC256x chipset on the PAN13xx modules and others, an initialization script must be obtained. Due to licensing restrictions, this initialization script must be obtained separately as follows:</p>
+<ul>
+<li>Download the <a href="http://processors.wiki.ti.com/index.php/CC256x_Downloads">BTS file</a> for your CC256x-based module.</li>
+<li>Copy the included .bts file into</li>
+<li>In [chipset-cc256x](), run the Python script:</li>
+</ul>
+<pre class="fragment">./convert_bts_init_scripts.py
+</pre><p>The common code for all CC256x chipsets is provided by <em>bt_control_cc256x.c</em>. During the setup, <em>bt_control_cc256x_instance</em> function is used to get a <em>bt_control_t</em> instance and passed to <em>hci_init</em> function.</p>
+<p><b>Note:</b> Depending on the CC256x-based module you’re using, you’ll need to update the reference in the Makefile to match the downloaded file.</p>
+<p><b>Update:</b> For the latest revision of the CC256x chipsets, the CC2560B and CC2564B, TI decided to split the init script into a main part and the BLE part. The conversion script has been updated to detect <em>bluetooth_init_cc256x_1.2.bts</em> and adds <em>BLE_init_cc256x_1.2.bts</em> if present and merges them into a single .c file.</p>
+<p><b>Update 2:</b> In May 2015, TI renamed the init scripts to match the naming scheme previously used on Linux systems. The conversion script has been updated to also detect <em>initscripts_TIInit_6.7.16_bt_spec_4.1.bts</em> and integrates <em>initscripts_TIInit_6.7.16_ble_add-on.bts</em> if present.</p>
+<h3>MSP-EXP430F5438 + CC256x Platform {#sec:platformMSP430QuickStart}</h3>
+<p><b>Hardware Setup.</b> We assume that a PAN1315, PAN1317, or PAN1323 module is plugged into RF1 and RF2 of the MSP-EXP430F5438 board and the “RF3 Adapter board” is used or at least simulated. See <a href="http://processors.wiki.ti.com/index.php/PAN1315EMK_User_Guide#RF3_Connector">User Guide</a>.</p>
+<h3>STM32F103RB Nucleo + CC256x Platform</h3>
+<p>To try BTstack on this platform, you’ll need a simple adaptor board. For details, please read the documentation in [platforms/stm32-f103rb-nucleo/README.md]().</p>
+<h3>PIC32 Bluetooth Audio Development Kit</h3>
+<p>The PIC32 Bluetooth Audio Development Kit comes with the CSR8811-based BTM805 Bluetooth module. In the port, the UART on the DAC daughter board was used for the debug output. Please remove the DAC board and connect a 3.3V USB-2-UART converter to GND and TX to get the debug output.</p>
+<p>In [platforms/pic32-harmony](), a project file for the MPLAB X IDE is provided as well as a regular Makefile. Both assume that the MPLAB XC32 compiler is installed. The project is set to use -Os optimization which will cause warnings if you only have the Free version. It will still compile a working example. For this platform, we only provide the SPP and LE Counter example directly. Other examples can be run by replacing the <em>spp_and_le_counter.c</em> file with one of the other example files. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: hrp2/modules/btstack/docs/manual/mkdocs2html.py ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_a30549caddf60b7cff64d563d5b962e4.html">hrp2</a></li><li class="navelem"><a class="el" href="../../dir_1bd8064e88269beae5e1445ffbc74be4.html">modules</a></li><li class="navelem"><a class="el" href="../../dir_f22872e42afed16f7e2167a7297354ec.html">btstack</a></li><li class="navelem"><a class="el" href="../../dir_9e6901d346a3bcbb379be73856952369.html">docs</a></li><li class="navelem"><a class="el" href="../../dir_575f504860803aef669f6a47e0e0e623.html">manual</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">mkdocs2html.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d1a/mkdocs2html_8py.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="../../d3/dc0/namespacemkdocs2html.html">    1</a></span>&#160;<span class="comment">#!/usr/bin/env python</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> os, sys, shutil, re, pickle</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d3/dc0/namespacemkdocs2html.html#a7806436f26b06c73e124996f830ed55d">    6</a></span>&#160;<span class="keyword">def </span><a class="code" href="../../d3/dc0/namespacemkdocs2html.html#a7806436f26b06c73e124996f830ed55d">writeCodeBlock</a>(aout, code, references):</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">for</span> function_name, url <span class="keywordflow">in</span> references.items():</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        html_link = <span class="stringliteral">&#39;&lt;a href=&quot;&#39;</span> + url + <span class="stringliteral">&#39;&quot;&gt;&#39;</span> + function_name + <span class="stringliteral">&#39;&lt;/a&gt;&#39;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="comment">#print &quot;before:&quot; + code + &quot;\n\n&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        code = code.replace(function_name, html_link)</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    aout.write(code)</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d3/dc0/namespacemkdocs2html.html#a179379c0bddbac2f6cea14f631ee28ae">   14</a></span>&#160;<span class="keyword">def </span><a class="code" href="../../d3/dc0/namespacemkdocs2html.html#a179379c0bddbac2f6cea14f631ee28ae">main</a>(argv):</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    html_path = <span class="stringliteral">&quot;btstack/examples/examples/&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    html_tmppath = html_path + <span class="stringliteral">&quot;tmp/&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    html_in  = html_path + <span class="stringliteral">&quot;index.html&quot;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    html_tmp = html_tmppath + <span class="stringliteral">&quot;index.html&quot;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    references = pickle.load(open( <span class="stringliteral">&quot;tmp/references.p&quot;</span>, <span class="stringliteral">&quot;rb&quot;</span> ))</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    os.mkdir(html_tmppath)</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    codeblock = 0</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    codeblock_end = 0</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    with open(html_in, <span class="stringliteral">&#39;r&#39;) as fin:</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="stringliteral">        with open(html_tmp, &#39;w&#39;</span>) <span class="keyword">as</span> fout:</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">for</span> line <span class="keywordflow">in</span> fin:</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">if</span> <span class="keywordflow">not</span> codeblock:</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    fout.write(line)</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    <span class="keywordflow">if</span> re.match(<span class="stringliteral">&#39;.*&lt;pre&gt;&lt;code&gt;.*&#39;</span>,line):</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                        codeblock = 1</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    <span class="keywordflow">continue</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <a class="code" href="../../d3/dc0/namespacemkdocs2html.html#a7806436f26b06c73e124996f830ed55d">writeCodeBlock</a>(fout,line, references)</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="comment"># check if codeblock ended</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">if</span> re.match(<span class="stringliteral">&#39;.*&lt;/code&gt;&lt;/pre&gt;.*&#39;</span>,line):</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    codeblock = 0</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    </div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    shutil.copyfile(html_tmp, html_in)</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    shutil.rmtree(html_tmppath)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordflow">if</span> __name__ == <span class="stringliteral">&quot;__main__&quot;</span>:</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <a class="code" href="../../d3/dc0/namespacemkdocs2html.html#a179379c0bddbac2f6cea14f631ee28ae">main</a>(sys.argv[1:])</div><div class="ttc" id="namespacemkdocs2html_html_a179379c0bddbac2f6cea14f631ee28ae"><div class="ttname"><a href="../../d3/dc0/namespacemkdocs2html.html#a179379c0bddbac2f6cea14f631ee28ae">mkdocs2html.main</a></div><div class="ttdeci">def main(argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d1a/mkdocs2html_8py_source.html#l00014">mkdocs2html.py:14</a></div></div>
+<div class="ttc" id="namespacemkdocs2html_html_a7806436f26b06c73e124996f830ed55d"><div class="ttname"><a href="../../d3/dc0/namespacemkdocs2html.html#a7806436f26b06c73e124996f830ed55d">mkdocs2html.writeCodeBlock</a></div><div class="ttdeci">def writeCodeBlock(aout, code, references)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d1a/mkdocs2html_8py_source.html#l00006">mkdocs2html.py:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

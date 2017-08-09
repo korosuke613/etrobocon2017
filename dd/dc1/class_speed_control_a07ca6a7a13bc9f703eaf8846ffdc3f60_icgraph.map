@@ -1,3 +1,6 @@
 <map id="SpeedControl::calcDistance4ms" name="SpeedControl::calcDistance4ms">
 <area shape="rect" id="node2" href="$dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="264,5,466,44"/>
+<area shape="rect" id="node3" href="$da/dbb/class_line_tracer.html#a4685c87f451af9ad63ca124439dc7787" title="LineTracer::runLine" alt="" coords="514,12,650,37"/>
+<area shape="rect" id="node4" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="698,12,848,37"/>
+<area shape="rect" id="node5" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="896,12,1046,37"/>
 </map>

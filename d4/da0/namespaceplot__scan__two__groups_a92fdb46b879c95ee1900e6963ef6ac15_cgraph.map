@@ -1,0 +1,11 @@
+<map id="plot_scan_two_groups.plot" name="plot_scan_two_groups.plot">
+<area shape="rect" id="node2" href="$d4/da0/namespaceplot__scan__two__groups.html#accf955109158d4ddbf7754a0a03bdb5d" title="plot_scan_two_groups.prepare_data" alt="" coords="233,156,471,181"/>
+<area shape="rect" id="node8" href="$d4/da0/namespaceplot__scan__two__groups.html#a1d3dd20fbe1e519cb8ea14a25fdfec1e" title="plot_scan_two_groups.accplot" alt="" coords="252,241,453,267"/>
+<area shape="rect" id="node10" href="$d4/da0/namespaceplot__scan__two__groups.html#ac9abbacd815b2f6c2377d776800ca2bc" title="plot_scan_two_groups.histplot" alt="" coords="252,291,453,316"/>
+<area shape="rect" id="node3" href="$d4/da0/namespaceplot__scan__two__groups.html#aa8b178c176daec6851aedcfca047ace3" title="plot_scan_two_groups.mean\l_common_time" alt="" coords="531,5,723,44"/>
+<area shape="rect" id="node4" href="$d4/da0/namespaceplot__scan__two__groups.html#af80fc33a165ca5e18c1d8ef25cc2d11a" title="plot_scan_two_groups.mean\l_common_len" alt="" coords="531,68,723,107"/>
+<area shape="rect" id="node5" href="$d4/da0/namespaceplot__scan__two__groups.html#ab4cded89fe0f8bb16a20a06e957aaeaf" title="plot_scan_two_groups.normalize" alt="" coords="519,131,735,156"/>
+<area shape="rect" id="node6" href="$d4/da0/namespaceplot__scan__two__groups.html#aa15ed91d10dc7f4bd901d94347ccb6c8" title="plot_scan_two_groups.delta" alt="" coords="534,180,721,205"/>
+<area shape="rect" id="node7" href="$d4/da0/namespaceplot__scan__two__groups.html#a617b4aa6b16b55ac19f8571e0888a2fc" title="plot_scan_two_groups.cut" alt="" coords="539,229,715,255"/>
+<area shape="rect" id="node9" href="$d4/da0/namespaceplot__scan__two__groups.html#ac0f91dc123aeb4e7bd93bd187e5f350f" title="plot_scan_two_groups.round" alt="" coords="531,279,723,304"/>
+</map>

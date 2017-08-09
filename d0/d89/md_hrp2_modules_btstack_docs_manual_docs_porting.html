@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: porting</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">porting </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>In this section, we highlight the BTstack components that need to be adjusted for different hardware platforms.</p>
+<h2>Time Abstraction Layer {#sec:timeAbstractionPorting}</h2>
+<p>BTstack requires a way to learn about passing time. <em>run_loop_embedded.c</em> supports two different modes: system ticks or a system clock with millisecond resolution. BTstack’s timing requirements are quite low as only Bluetooth timeouts in the second range need to be handled.</p>
+<h3>Tick Hardware Abstraction {#sec:tickAbstractionPorting}</h3>
+<p>If your platform doesn’t require a system clock or if you already have a system tick (as it is the default with CMSIS on ARM Cortex devices), you can use that to implement BTstack’s time abstraction in <em>include/btstack/hal_tick.h&gt;</em>.</p>
+<p>For this, you need to define <em>HAVE_TICK</em> in <em>btstack-config.h</em>: </p><pre class="fragment">#define HAVE_TICK
+</pre><p>Then, you need to implement the functions <em>hal_tick_init</em> and <em>hal_tick_set_handler</em>, which will be called during the initialization of the run loop. </p><pre class="fragment">void hal_tick_init(void);
+void hal_tick_set_handler(void (*tick_handler)(void));
+int  hal_tick_get_tick_period_in_ms(void);
+</pre><p>After BTstack calls <em>hal_tick_init()</em> and <em>hal_tick_set_handler(tick_handler)</em>, it expects that the <em>tick_handler</em> gets called every <em>hal_tick_get_tick_period_in_ms()</em> ms.</p>
+<h3>Time MS Hardware Abstraction {#sec:timeMSAbstractionPorting}</h3>
+<p>If your platform already has a system clock or it is more convenient to provide such a clock, you can use the Time MS Hardware Abstraction in <em>include/btstack/hal_time_ms.h</em>.</p>
+<p>For this, you need to define <em>HAVE_TIME_MS</em> in <em>btstack-config.h</em>: </p><pre class="fragment">#define HAVE_TIME_MS
+</pre><p>Then, you need to implement the function <em>hal_time_ms()</em>, which will be called from BTstack’s run loop and when setting a timer for the future. It has to return the time in milliseconds. </p><pre class="fragment">uint32_t hal_time_ms(void);
+</pre><h2>Bluetooth Hardware Control API {#sec:btHWControlPorting}</h2>
+<p>The Bluetooth hardware control API can provide the HCI layer with a custom initialization script, a vendor-specific baud rate change command, and system power notifications. It is also used to control the power mode of the Bluetooth module, i.e., turning it on/off and putting to sleep. In addition, it provides an error handler <em>hw_error</em> that is called when a Hardware Error is reported by the Bluetooth module. The callback allows for persistent logging or signaling of this failure.</p>
+<p>Overall, the struct <em>bt_control_t</em> encapsulates common functionality that is not covered by the Bluetooth specification. As an example, the <em>bt_control_cc256x_in-stance</em> function returns a pointer to a control struct suitable for the CC256x chipset.</p>
+<h2>HCI Transport Implementation {#sec:hciTransportPorting}</h2>
+<p>On embedded systems, a Bluetooth module can be connected via USB or an UART port. BTstack implements two UART based protocols for carrying HCI commands, events and data between a host and a Bluetooth module: HCI UART Transport Layer (H4) and H4 with eHCILL support, a lightweight low-power variant by Texas Instruments.</p>
+<h3>HCI UART Transport Layer (H4) {#sec:hciUARTPorting}</h3>
+<p>Most embedded UART interfaces operate on the byte level and generate a processor interrupt when a byte was received. In the interrupt handler, common UART drivers then place the received data in a ring buffer and set a flag for further processing or notify the higher-level code, i.e., in our case the Bluetooth stack.</p>
+<p>Bluetooth communication is packet-based and a single packet may contain up to 1021 bytes. Calling a data received handler of the Bluetooth stack for every byte creates an unnecessary overhead. To avoid that, a Bluetooth packet can be read as multiple blocks where the amount of bytes to read is known in advance. Even better would be the use of on-chip DMA modules for these block reads, if available.</p>
+<p>The BTstack UART Hardware Abstraction Layer API reflects this design approach and the underlying UART driver has to implement the following API: </p><pre class="fragment">void hal_uart_dma_init(void);
+void hal_uart_dma_set_block_received(void (*block_handler)(void));
+void hal_uart_dma_set_block_sent(void (*block_handler)(void));
+int  hal_uart_dma_set_baud(uint32_t baud);
+void hal_uart_dma_send_block(const uint8_t *buffer, uint16_t len);
+void hal_uart_dma_receive_block(uint8_t *buffer, uint16_t len);
+</pre><p>The main HCI H4 implementations for embedded system is <em>hci_h4_transport-_dma</em> function. This function calls the following sequence: <em>hal_uart_dma_init</em>, <em>hal_uart_dma_set_block_received</em> and <em>hal_uart_dma_set_block_sent</em> functions. this sequence, the HCI layer will start packet processing by calling <em>hal_uart-_dma_receive_block</em> function. The HAL implementation is responsible for reading the requested amount of bytes, stopping incoming data via the RTS line when the requested amount of data was received and has to call the handler. By this, the HAL implementation can stay generic, while requiring only three callbacks per HCI packet.</p>
+<h3>H4 with eHCILL support</h3>
+<p>With the standard H4 protocol interface, it is not possible for either the host nor the baseband controller to enter a sleep mode. Besides the official H5 protocol, various chip vendors came up with proprietary solutions to this. The eHCILL support by Texas Instruments allows both the host and the baseband controller to independently enter sleep mode without loosing their synchronization with the HCI H4 Transport Layer. In addition to the IRQ-driven block-wise RX and TX, eHCILL requires a callback for CTS interrupts. </p><pre class="fragment">void hal_uart_dma_set_cts_irq_handler(void(*cts_irq_handler)(void));
+void hal_uart_dma_set_sleep(uint8_t sleep);
+</pre><h2>Persistent Storage API {#sec:persistentStoragePorting}</h2>
+<p>On embedded systems there is no generic way to persist data like link keys or remote device names, as every type of a device has its own capabilities, particularities and limitations. The persistent storage API provides an interface to implement concrete drivers for a particular system. As an example and for testing purposes, BTstack provides the memory-only implementation <em>remote_device_db_memory</em>. An implementation has to conform to the interface in Listing <a href="../../#lst:persistentDB">below</a>.</p>
+<div class="fragment"><div class="line">typedef struct {</div><div class="line">    // management</div><div class="line">    void (*open)();</div><div class="line">    void (*close)();</div><div class="line"></div><div class="line">    // link key</div><div class="line">    int  (*get_link_key)(bd_addr_t bd_addr, link_key_t link_key);</div><div class="line">    void (*put_link_key)(bd_addr_t bd_addr, link_key_t key);</div><div class="line">    void (*delete_link_key)(bd_addr_t bd_addr);</div><div class="line"></div><div class="line">    // remote name</div><div class="line">    int (*get_name)(bd_addr_t bd_addr, device_name_t *device_name);</div><div class="line">    void(*put_name)(bd_addr_t bd_addr, device_name_t *device_name);</div><div class="line">    void(*delete_name)(bd_addr_t bd_addr);</div><div class="line">} remote_device_db_t;</div></div><!-- fragment --> </div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

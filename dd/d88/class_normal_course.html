@@ -60,6 +60,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
 <a href="#pro-attribs">限定公開変数類</a> &#124;
 <a href="../../db/dcf/class_normal_course-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
@@ -73,8 +74,8 @@ NormalCourse の継承関係図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/dbc/class_normal_course__inherit__graph.png" border="0" usemap="#_normal_course_inherit__map" alt="Inheritance graph"/></div>
 <map name="_normal_course_inherit__map" id="_normal_course_inherit__map">
-<area shape="rect" id="node2" href="../../d5/ddb/class_left_normal_course.html" title="{LeftNormalCourse\n|&#45; status\l&#45; old_status\l&#45; sl\l|+ LeftNormalCourse()\l+ runNormalCourse()\l&#45; goStraight()\l&#45; goStraightSlow()\l&#45; goCurveRight()\l&#45; goCurveLeft()\l&#45; goCurveLeftShort()\l&#45; stop()\l&#45; statusCheck()\l}" alt="" coords="5,180,155,387"/>
-<area shape="rect" id="node3" href="../../d4/d58/class_right_normal_course.html" title="{RightNormalCourse\n|&#45; status\l&#45; old_status\l&#45; sl\l|+ RightNormalCourse()\l+ runNormalCourse()\l&#45; goStraight()\l&#45; goCurveRight()\l&#45; goCurveLeft()\l&#45; goCurveLeftShort()\l&#45; stop()\l&#45; statusCheck()\l}" alt="" coords="180,187,338,380"/>
+<area shape="rect" id="node2" href="../../d5/ddb/class_left_normal_course.html" title="{LeftNormalCourse\n|&#45; status\l&#45; old_status\l|+ LeftNormalCourse()\l+ runNormalCourse()\l+ statusCheck()\l+ getStatus()\l}" alt="" coords="5,180,155,307"/>
+<area shape="rect" id="node3" href="../../d4/d58/class_right_normal_course.html" title="{RightNormalCourse\n|&#45; status\l&#45; old_status\l|+ RightNormalCourse()\l+ runNormalCourse()\l+ statusCheck()\l+ getStatus()\l}" alt="" coords="180,180,338,307"/>
 </map>
 </div>
 <div class="dynheader">
@@ -82,51 +83,48 @@ NormalCourse 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/de5/class_normal_course__coll__graph.png" border="0" usemap="#_normal_course_coll__map" alt="Collaboration graph"/></div>
 <map name="_normal_course_coll__map" id="_normal_course_coll__map">
-<area shape="rect" id="node2" href="../../d1/d49/class_walker.html" title="{Walker\n|&#45; leftRight\l|+ Walker()\l+ stop()\l+ run()\l+ edgeChange()\l+ moveAngle()\l+ angleChange()\l+ get_count_L()\l+ get_count_R()\l+ init()\l+ terminate()\l+ reset()\l+ setBrakeMotor()\l}" alt="" coords="553,367,681,587"/>
-<area shape="rect" id="node5" href="../../da/dbb/class_line_tracer.html" title="{LineTracer\n|+ turn\l&#45; forward\l&#45; minus\l|+ LineTracer()\l+ runLine()\l+ setForward()\l+ getCountL()\l+ getCountR()\l+ isLeftsideLine()\l}" alt="" coords="379,648,502,815"/>
-<area shape="rect" id="node3" href="../../da/d61/classev3api_1_1_motor.html" title="{ev3api::Motor\n|+ PWM_MAX\l+ PWM_MIN\l&#45; mPort\l&#45; mBrake\l&#45; mType\l&#45; mPWM\l&#45; mOffset\l|+ Motor()\l+ ~Motor()\l+ reset()\l+ getCount()\l+ setCount()\l+ setPWM()\l+ setBrake()\l+ stop()\l# getPort()\l# getBrake()\l# getPWM()\l}" alt="" coords="551,5,653,292"/>
-<area shape="rect" id="node4" href="../../d4/d87/classev3api_1_1_clock.html" title="{ev3api::Clock\n|&#45; mStartClock\l|+ Clock()\l+ reset()\l+ now()\l+ wait()\l+ sleep()\l# getTim()\l}" alt="" coords="678,79,780,219"/>
-<area shape="rect" id="node6" href="../../dd/dc1/class_speed_control.html" title="{SpeedControl\n|+ speed_value_all\l&#45; forward\l&#45; preAngleL\l&#45; preAngleR\l&#45; speed_value\l&#45; speedCount\l&#45; pid_value_old\l&#45; distance4ms\l|+ SpeedControl()\l+ calculateSpeedForPid()\l+ calcDistance4ms()\l}" alt="" coords="5,380,177,573"/>
-<area shape="rect" id="node7" href="../../dc/de1/class_pid.html" title="{Pid\n|&#45; p_gain\l&#45; i_gain\l&#45; d_gain\l&#45; old_diff\l&#45; integral\l&#45; target\l&#45; output\l&#45; del\l|+ Pid()\l+ setPid()\l+ calculate()\l+ get_output()\l# limitOutput()\l&#45; wrapper_of_constructor()\l}" alt="" coords="98,32,277,265"/>
-<area shape="rect" id="node8" href="../../da/df4/class_turn_control.html" title="{TurnControl\n|&#45; turn\l&#45; pid_value_old\l|+ TurnControl()\l+ calculateTurnForPid()\l}" alt="" coords="202,427,362,527"/>
-<area shape="rect" id="node9" href="../../d3/d7f/classev3api_1_1_color_sensor.html" title="{ev3api::ColorSensor\n||+ ColorSensor()\l+ ~ColorSensor()\l+ getAmbient()\l+ getBrightness()\l+ getColorNumber()\l+ getRawColor()\l}" alt="" coords="387,407,529,547"/>
-<area shape="rect" id="node10" href="../../db/d9e/classev3api_1_1_sensor.html" title="{ev3api::Sensor\n|&#45; mPort\l&#45; mType\l|# getPort()\l# Sensor()\l# ~Sensor()\l}" alt="" coords="403,92,513,205"/>
-<area shape="rect" id="node11" href="../../d7/d82/class_distance.html" title="{Distance\n|&#45; leftMotorDegTotal\l&#45; rightMotorDegTotal\l&#45; leftMotorDegOld\l&#45; rightMotorDegOld\l|+ getDistanceTotal()\l+ getDistanceCurrent()\l+ resetDistance()\l}" alt="" coords="690,661,847,801"/>
+<area shape="rect" id="node2" href="../../da/dbb/class_line_tracer.html" title="{LineTracer\n|+ minus\l&#45; forward\l&#45; turn\l|+ LineTracer()\l+ runLine()\l+ setForward()\l+ setTurn()\l+ getForward()\l+ getTurn()\l+ isLeftsideLine()\l}" alt="" coords="124,543,248,723"/>
+<area shape="rect" id="node3" href="../../dd/dc1/class_speed_control.html" title="{SpeedControl\n|+ speed_value_all\l&#45; forward\l&#45; preAngleL\l&#45; preAngleR\l&#45; speed_value\l&#45; speedCount\l&#45; pid_value_old\l&#45; distance4ms\l|+ SpeedControl()\l+ calculateSpeedForPid()\l+ calcDistance4ms()\l}" alt="" coords="5,288,177,481"/>
+<area shape="rect" id="node4" href="../../dc/de1/class_pid.html" title="{Pid\n|&#45; p_gain\l&#45; i_gain\l&#45; d_gain\l&#45; old_diff\l&#45; integral\l&#45; target\l&#45; output\l&#45; del\l|+ Pid()\l+ setPid()\l+ calculate()\l+ get_output()\l# limitOutput()\l&#45; wrapper_of_constructor()\l}" alt="" coords="97,5,275,239"/>
+<area shape="rect" id="node5" href="../../da/df4/class_turn_control.html" title="{TurnControl\n|&#45; turn\l&#45; pid_value_old\l|+ TurnControl()\l+ calculateTurnForPid()\l}" alt="" coords="202,335,362,435"/>
+<area shape="rect" id="node6" href="../../d7/d82/class_distance.html" title="{Distance\n|&#45; leftMotorDegTotal\l&#45; rightMotorDegTotal\l&#45; leftMotorDegOld\l&#45; rightMotorDegOld\l|+ getDistanceTotal()\l+ getDistanceCurrent()\l+ resetDistance()\l}" alt="" coords="272,563,428,703"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:ab8ef305defb0f50a518eba4ac6453908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d88/class_normal_course.html#ab8ef305defb0f50a518eba4ac6453908">runNormalCourse</a> (void)</td></tr>
-<tr class="separator:ab8ef305defb0f50a518eba4ac6453908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643fa714726cffb93ad81f919e5ff140"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d88/class_normal_course.html#a643fa714726cffb93ad81f919e5ff140">stop</a> ()</td></tr>
+<tr class="separator:a643fa714726cffb93ad81f919e5ff140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:aa0bf91c3422865ae2d8018dda1f08649"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/dbb/class_line_tracer.html">LineTracer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d88/class_normal_course.html#aa0bf91c3422865ae2d8018dda1f08649">lineTracer</a></td></tr>
+<tr class="separator:aa0bf91c3422865ae2d8018dda1f08649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
-<tr class="memitem:afff638625dd5a0bb5852e60ccd5ec0a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d49/class_walker.html">Walker</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d88/class_normal_course.html#afff638625dd5a0bb5852e60ccd5ec0a9">walker</a></td></tr>
-<tr class="separator:afff638625dd5a0bb5852e60ccd5ec0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0bf91c3422865ae2d8018dda1f08649"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/dbb/class_line_tracer.html">LineTracer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d88/class_normal_course.html#aa0bf91c3422865ae2d8018dda1f08649">lineTracer</a></td></tr>
-<tr class="separator:aa0bf91c3422865ae2d8018dda1f08649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71dee69e36e4a9364b8ba8a39274c23d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d82/class_distance.html">Distance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d88/class_normal_course.html#a71dee69e36e4a9364b8ba8a39274c23d">distance</a></td></tr>
 <tr class="separator:a71dee69e36e4a9364b8ba8a39274c23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a369fadf7b413c5194ae20b9415ca7251"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d88/class_normal_course.html#a369fadf7b413c5194ae20b9415ca7251">forward</a></td></tr>
 <tr class="separator:a369fadf7b413c5194ae20b9415ca7251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0065b58f54e8e9d8ffbcf6297fc9defe"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d88/class_normal_course.html#a0065b58f54e8e9d8ffbcf6297fc9defe">turn</a></td></tr>
+<tr class="separator:a0065b58f54e8e9d8ffbcf6297fc9defe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f8d0bbb6b73605fb54aa0933b2ed9df"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d88/class_normal_course.html#a6f8d0bbb6b73605fb54aa0933b2ed9df">distanse_total</a></td></tr>
 <tr class="separator:a6f8d0bbb6b73605fb54aa0933b2ed9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock">
-<p class="definition"> <a class="el" href="../../d6/dad/_normal_course_8h_source.html">NormalCourse.h</a> の <a class="el" href="../../d6/dad/_normal_course_8h_source.html#l00010">10</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/dad/_normal_course_8h_source.html">NormalCourse.h</a> の <a class="el" href="../../d6/dad/_normal_course_8h_source.html#l00007">7</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="ab8ef305defb0f50a518eba4ac6453908"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8ef305defb0f50a518eba4ac6453908">&#9670;&nbsp;</a></span>runNormalCourse()</h2>
+<a id="a643fa714726cffb93ad81f919e5ff140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a643fa714726cffb93ad81f919e5ff140">&#9670;&nbsp;</a></span>stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void NormalCourse::runNormalCourse </td>
+          <td class="memname">void NormalCourse::stop </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -137,9 +135,20 @@ NormalCourse 連携図</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../dd/d88/class_normal_course_ab8ef305defb0f50a518eba4ac6453908_cgraph.png" border="0" usemap="#dd/d88/class_normal_course_ab8ef305defb0f50a518eba4ac6453908_cgraph" alt=""/></div>
-<map name="dd/d88/class_normal_course_ab8ef305defb0f50a518eba4ac6453908_cgraph" id="dd/d88/class_normal_course_ab8ef305defb0f50a518eba4ac6453908_cgraph">
-<area shape="rect" id="node2" href="../../da/dbb/class_line_tracer.html#a35e228c51d002f08a9a5ea54a3886136" title="LineTracer::setForward" alt="" coords="273,5,432,31"/>
+<div class="center"><img src="../../dd/d88/class_normal_course_a643fa714726cffb93ad81f919e5ff140_cgraph.png" border="0" usemap="#dd/d88/class_normal_course_a643fa714726cffb93ad81f919e5ff140_cgraph" alt=""/></div>
+<map name="dd/d88/class_normal_course_a643fa714726cffb93ad81f919e5ff140_cgraph" id="dd/d88/class_normal_course_a643fa714726cffb93ad81f919e5ff140_cgraph">
+<area shape="rect" id="node2" href="../../da/dbb/class_line_tracer.html#a35e228c51d002f08a9a5ea54a3886136" title="LineTracer::setForward" alt="" coords="193,5,352,31"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d88/class_normal_course_a643fa714726cffb93ad81f919e5ff140_icgraph.png" border="0" usemap="#dd/d88/class_normal_course_a643fa714726cffb93ad81f919e5ff140_icgraph" alt=""/></div>
+<map name="dd/d88/class_normal_course_a643fa714726cffb93ad81f919e5ff140_icgraph" id="dd/d88/class_normal_course_a643fa714726cffb93ad81f919e5ff140_icgraph">
+<area shape="rect" id="node2" href="../../d5/ddb/class_left_normal_course.html#a4a366448b8d6e3523a51d41c185eb4fc" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="193,5,392,44"/>
+<area shape="rect" id="node3" href="../../d4/d58/class_right_normal_course.html#aef2692f9c696b1e19caf8d366b158482" title="RightNormalCourse::\lrunNormalCourse" alt="" coords="220,68,366,107"/>
+<area shape="rect" id="node4" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="440,75,590,100"/>
+<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="638,75,788,100"/>
 </map>
 </div>
 
@@ -166,7 +175,7 @@ NormalCourse 連携図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/dad/_normal_course_8h_source.html">NormalCourse.h</a> の <a class="el" href="../../d6/dad/_normal_course_8h_source.html#l00017">17</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/dad/_normal_course_8h_source.html">NormalCourse.h</a> の <a class="el" href="../../d6/dad/_normal_course_8h_source.html#l00013">13</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -190,7 +199,7 @@ NormalCourse 連携図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/dad/_normal_course_8h_source.html">NormalCourse.h</a> の <a class="el" href="../../d6/dad/_normal_course_8h_source.html#l00019">19</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/dad/_normal_course_8h_source.html">NormalCourse.h</a> の <a class="el" href="../../d6/dad/_normal_course_8h_source.html#l00016">16</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -214,7 +223,7 @@ NormalCourse 連携図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/dad/_normal_course_8h_source.html">NormalCourse.h</a> の <a class="el" href="../../d6/dad/_normal_course_8h_source.html#l00018">18</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/dad/_normal_course_8h_source.html">NormalCourse.h</a> の <a class="el" href="../../d6/dad/_normal_course_8h_source.html#l00014">14</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -223,27 +232,19 @@ NormalCourse 連携図</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../da/dbb/class_line_tracer.html">LineTracer</a> NormalCourse::lineTracer</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/dad/_normal_course_8h_source.html">NormalCourse.h</a> の <a class="el" href="../../d6/dad/_normal_course_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/dad/_normal_course_8h_source.html">NormalCourse.h</a> の <a class="el" href="../../d6/dad/_normal_course_8h_source.html#l00010">10</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="afff638625dd5a0bb5852e60ccd5ec0a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afff638625dd5a0bb5852e60ccd5ec0a9">&#9670;&nbsp;</a></span>walker</h2>
+<a id="a0065b58f54e8e9d8ffbcf6297fc9defe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0065b58f54e8e9d8ffbcf6297fc9defe">&#9670;&nbsp;</a></span>turn</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,7 +253,7 @@ NormalCourse 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/d49/class_walker.html">Walker</a> NormalCourse::walker</td>
+          <td class="memname">int8_t NormalCourse::turn</td>
         </tr>
       </table>
   </td>

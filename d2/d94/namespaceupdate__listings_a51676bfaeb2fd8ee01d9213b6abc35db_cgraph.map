@@ -1,0 +1,12 @@
+<map id="update_listings.writeListings" name="update_listings.writeListings">
+<area shape="rect" id="node2" href="$d2/d94/namespaceupdate__listings.html#a7d01b3bf34c4fa9b81da7e49cf9fd35f" title="update_listings.latexText" alt="" coords="544,12,710,37"/>
+<area shape="rect" id="node3" href="$d2/d94/namespaceupdate__listings.html#aa08cc48f4970bc25900d6c99ddbe9a4a" title="update_listings.isTextTag" alt="" coords="542,110,712,136"/>
+<area shape="rect" id="node4" href="$d2/d94/namespaceupdate__listings.html#a296b7de3b483719ba3f9a363f9625c61" title="update_listings.processTextLine" alt="" coords="258,61,468,86"/>
+<area shape="rect" id="node6" href="$d2/d94/namespaceupdate__listings.html#af2d2f77f4034dccaa7218d570aae59b9" title="update_listings.isEndOfComment" alt="" coords="253,162,472,188"/>
+<area shape="rect" id="node7" href="$d2/d94/namespaceupdate__listings.html#a2b606a6f182cb85a0a32829fe97d31c3" title="update_listings.isEmptyCommentLine" alt="" coords="241,212,485,237"/>
+<area shape="rect" id="node8" href="$d2/d94/namespaceupdate__listings.html#ac4f85fb71102abf3b33bba9d07dc9fc7" title="update_listings.writeItemize\lBlock" alt="" coords="270,261,455,300"/>
+<area shape="rect" id="node9" href="$d2/d94/namespaceupdate__listings.html#ac159de68c5de97808430cbdb64441ab8" title="update_listings.writeText\lBlock" alt="" coords="280,324,446,362"/>
+<area shape="rect" id="node10" href="$d2/d94/namespaceupdate__listings.html#a99047e42ce82b4f3d038cc3c94a1eb4c" title="update_listings.isNewItem" alt="" coords="275,386,451,412"/>
+<area shape="rect" id="node11" href="$d2/d94/namespaceupdate__listings.html#ab45afe9df20c74cf07e14229cc35e4ac" title="update_listings.isCommentLine" alt="" coords="260,436,466,461"/>
+<area shape="rect" id="node5" href="$d2/d94/namespaceupdate__listings.html#a9f23cd60de9ecfbc5139d7d922fe932f" title="update_listings.isItemizeTag" alt="" coords="533,61,721,86"/>
+</map>

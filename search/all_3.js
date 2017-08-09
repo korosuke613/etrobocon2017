@@ -13,7 +13,7 @@ var searchData=
   ['clock_2ecpp',['Clock.cpp',['../d1/de1/_clock_8cpp.html',1,'']]],
   ['clock_2eh',['Clock.h',['../dd/dba/_clock_8h.html',1,'']]],
   ['cmd_5fstart',['CMD_START',['../d8/d0a/common__definition_8h.html#ab905e6aff2332984df0552c6b50203f2',1,'common_definition.h']]],
-  ['colorsensor',['ColorSensor',['../d3/d7f/classev3api_1_1_color_sensor.html',1,'ev3api::ColorSensor'],['../da/dbb/class_line_tracer.html#a0c7026a8b16b7aef8162a9cadf6c5f7f',1,'LineTracer::colorSensor()'],['../d3/d7f/classev3api_1_1_color_sensor.html#aff12f4c902eaecbf36fb99b3d333a7ea',1,'ev3api::ColorSensor::ColorSensor()']]],
+  ['colorsensor',['ColorSensor',['../d3/d7f/classev3api_1_1_color_sensor.html',1,'ev3api::ColorSensor'],['../d0/df8/class_et_robocon2017.html#aae908cd913d64ff995ccd73541b72f3d',1,'EtRobocon2017::colorSensor()'],['../d3/d7f/classev3api_1_1_color_sensor.html#aff12f4c902eaecbf36fb99b3d333a7ea',1,'ev3api::ColorSensor::ColorSensor()']]],
   ['colorsensor_2ecpp',['ColorSensor.cpp',['../d8/d8c/_color_sensor_8cpp.html',1,'']]],
   ['colorsensor_2eh',['ColorSensor.h',['../de/d0d/_color_sensor_8h.html',1,'']]],
   ['common_5fdefinition_2eh',['common_definition.h',['../d8/d0a/common__definition_8h.html',1,'']]],

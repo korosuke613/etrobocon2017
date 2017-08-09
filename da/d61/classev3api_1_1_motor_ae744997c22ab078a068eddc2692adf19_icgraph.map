@@ -6,16 +6,17 @@
 <area shape="rect" id="node7" href="$dd/d56/class_lifter.html#a4ef522e7b1b5a1637d2a5eee7db3d2d0" title="Lifter::liftDown" alt="" coords="452,403,558,428"/>
 <area shape="rect" id="node8" href="$dd/d56/class_lifter.html#a984c26558654a2c67ee5e225062aa324" title="Lifter::defaultSet" alt="" coords="446,353,564,379"/>
 <area shape="rect" id="node10" href="$d1/d49/class_walker.html#a70f88eb11114b0337bfcd4b05392f3d5" title="Walker::run" alt="" coords="669,403,758,428"/>
-<area shape="rect" id="node15" href="$d1/d49/class_walker.html#a5626568e28703a13861149264916132c" title="Walker::moveAngle" alt="" coords="226,553,363,579"/>
-<area shape="rect" id="node16" href="$da/d61/classev3api_1_1_motor.html#ac138f9d34dd25e95dd51093da1c30f15" title="ev3api::Motor::setCount" alt="" coords="423,452,586,477"/>
-<area shape="rect" id="node17" href="$da/d61/classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="213,300,375,325"/>
+<area shape="rect" id="node16" href="$d1/d49/class_walker.html#a5626568e28703a13861149264916132c" title="Walker::moveAngle" alt="" coords="226,553,363,579"/>
+<area shape="rect" id="node17" href="$da/d61/classev3api_1_1_motor.html#ac138f9d34dd25e95dd51093da1c30f15" title="ev3api::Motor::setCount" alt="" coords="423,452,586,477"/>
+<area shape="rect" id="node18" href="$da/d61/classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="213,300,375,325"/>
 <area shape="rect" id="node5" href="$d8/dc7/class_emoter.html#aaf3d3334f9b6237acc3facb831341bff" title="Emoter::changeDefault" alt="" coords="634,168,792,193"/>
 <area shape="rect" id="node9" href="$dd/d56/class_lifter.html#ab497fa52bc88dbc892d8a12a25b0d475" title="Lifter::changeDefault" alt="" coords="641,304,785,329"/>
-<area shape="rect" id="node11" href="$da/dbb/class_line_tracer.html#ab595c9e8ed7c1e4b1d38b87cf10e32ee" title="LineTracer::runLine" alt="" coords="845,327,981,352"/>
-<area shape="rect" id="node12" href="$d1/d49/class_walker.html#a548b93fdfc6cb47eaa9ae8b8b8579c23" title="Walker::stop" alt="" coords="866,428,960,453"/>
-<area shape="rect" id="node13" href="$d1/d49/class_walker.html#a5ee3d6593656b064058949f31f525c31" title="Walker::angleChange" alt="" coords="1034,403,1183,428"/>
-<area shape="rect" id="node14" href="$d1/d49/class_walker.html#af913f99c575c9be615d03ec96460ce15" title="Walker::edgeChange" alt="" coords="840,477,986,503"/>
-<area shape="rect" id="node18" href="$d8/dc7/class_emoter.html#a53b215ce4182bb4db8868d4a2934a519" title="Emoter::reset" alt="" coords="454,205,555,231"/>
-<area shape="rect" id="node19" href="$dd/d56/class_lifter.html#a882df9a18bb5a41808acfc595265f751" title="Lifter::reset" alt="" coords="461,255,549,280"/>
-<area shape="rect" id="node20" href="$d1/d49/class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="427,304,583,329"/>
+<area shape="rect" id="node11" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="840,327,990,352"/>
+<area shape="rect" id="node13" href="$d1/d49/class_walker.html#a548b93fdfc6cb47eaa9ae8b8b8579c23" title="Walker::stop" alt="" coords="867,428,962,453"/>
+<area shape="rect" id="node14" href="$d1/d49/class_walker.html#a5ee3d6593656b064058949f31f525c31" title="Walker::angleChange" alt="" coords="1038,403,1187,428"/>
+<area shape="rect" id="node15" href="$d1/d49/class_walker.html#af913f99c575c9be615d03ec96460ce15" title="Walker::edgeChange" alt="" coords="842,477,988,503"/>
+<area shape="rect" id="node12" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1038,327,1188,352"/>
+<area shape="rect" id="node19" href="$d8/dc7/class_emoter.html#a53b215ce4182bb4db8868d4a2934a519" title="Emoter::reset" alt="" coords="454,205,555,231"/>
+<area shape="rect" id="node20" href="$dd/d56/class_lifter.html#a882df9a18bb5a41808acfc595265f751" title="Lifter::reset" alt="" coords="461,255,549,280"/>
+<area shape="rect" id="node21" href="$d1/d49/class_walker.html#ac76c3b08a44b6de7d7890d803b9a6c5b" title="Walker::setBrakeMotor" alt="" coords="427,304,583,329"/>
 </map>

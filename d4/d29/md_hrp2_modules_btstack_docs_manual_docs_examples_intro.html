@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: intro</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">intro </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>In this section, we will describe a number of examples from the <em>example/embedded</em> folder. To allow code-reuse with different platforms as well as with new ports, the low-level initialization of BTstack and the hardware configuration has been extracted to the various <em>platforms/PLATFORM/main.c</em> files. The examples only contain the platform-independent Bluetooth logic. But let’s have a look at the common init code.</p>
+<p>Listing <a href="../../#lst:btstackInit">below</a> shows a minimal platform setup for an embedded system with a Bluetooth chipset connected via UART.</p>
+<div class="fragment"><div class="line">int main(){</div><div class="line">  // ... hardware init: watchdoch, IOs, timers, etc...</div><div class="line"></div><div class="line">  // setup BTstack memory pools</div><div class="line">  btstack_memory_init();</div><div class="line"></div><div class="line">  // select embedded run loop</div><div class="line">  run_loop_init(RUN_LOOP_EMBEDDED);</div><div class="line"></div><div class="line">  // use logger: format HCI_DUMP_PACKETLOGGER, HCI_DUMP_BLUEZ or HCI_DUMP_STDOUT</div><div class="line">  hci_dump_open(NULL, HCI_DUMP_STDOUT);</div><div class="line"></div><div class="line">  // init HCI</div><div class="line">  hci_transport_t    * transport = hci_transport_h4_dma_instance();</div><div class="line">  remote_device_db_t * remote_db = (remote_device_db_t *) &amp;remote_device_db_memory;</div><div class="line">  hci_init(transport, NULL, NULL, remote_db);</div><div class="line"></div><div class="line">  // setup example    </div><div class="line">  btstack_main(argc, argv);</div><div class="line"></div><div class="line">  // go</div><div class="line">  run_loop_execute();    </div><div class="line">}</div></div><!-- fragment --><p>First, BTstack’s memory pools are setup up. Then, the standard run loop implementation for embedded systems is selected.</p>
+<p>The call to <em>hci_dump_open</em> configures BTstack to output all Bluetooth packets and it’s own debug and error message via printf. The Python script <em>tools/create_packet_log.py</em> can be used to convert the console output into a Bluetooth PacketLogger format that can be opened by the OS X PacketLogger tool as well as by Wireshark for further inspection. When asking for help, please always include a log created with HCI dump.</p>
+<p>The <em>hci_init</em> function sets up HCI to use the HCI H4 Transport implementation. It doesn’t provide a special transport configuration nor a special implementation for a particular Bluetooth chipset. It makes use of the <em>remote_device_db_memory</em> implementation that allows for re-connects without a new pairing but doesn’t persist the bonding information.</p>
+<p>Finally, it calls <em>btstack_main()</em> of the actual example before executing the run loop. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

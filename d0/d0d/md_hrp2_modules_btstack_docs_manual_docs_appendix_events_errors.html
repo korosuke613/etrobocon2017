@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: L2CAP Events {#sec:eventsAndErrorsAppendix}</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">L2CAP Events {#sec:eventsAndErrorsAppendix} </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>L2CAP events and data packets are delivered to the packet handler specified by <em>l2cap_register_service</em> resp. <em>l2cap_create_channel_internal</em>. Data packets have the L2CAP_DATA_PACKET packet type. L2CAP provides the following events:</p>
+<ul>
+<li>L2CAP_EVENT_CHANNEL_OPENED - sent if channel establishment is done. Status not equal zero indicates an error. Possible errors: out of memory; connection terminated by local host, when the connection to remote device fails.</li>
+<li>L2CAP_EVENT_CHANNEL_CLOSED - emitted when channel is closed. No status information is provided.</li>
+<li>L2CAP_EVENT_INCOMING_CONNECTION - received when the connection is requested by remote. Connection accept and decline are performed with <em>l2cap_accept_connection_internal</em> and <em>l2cap_decline_connecti-on_internal</em> respectively.</li>
+<li>L2CAP_EVENT_CREDITS - emitted when there is a chance to send a new L2CAP packet. BTstack does not buffer packets. Instead, it requires the application to retry sending if BTstack cannot deliver a packet to the Bluetooth module. In this case, the l2cap_send_internal will return an error.</li>
+<li>L2CAP_EVENT_SERVICE_REGISTERED - Status not equal zero indicates an error. Possible errors: service is already registered; MAX_NO_L2CAP_SERVICES (defined in config.h) already registered.</li>
+</ul>
+<table class="doxtable">
+<tr>
+<th>Event </th><th>Event Code  </th></tr>
+<tr>
+<td>L2CAP_EVENT_CHANNEL_OPENED </td><td>0x70 </td></tr>
+<tr>
+<td>L2CAP_EVENT_CHANNEL_CLOSED </td><td>0x71 </td></tr>
+<tr>
+<td>L2CAP_EVENT_INCOMING_CONNECTION </td><td>0x72 </td></tr>
+<tr>
+<td>L2CAP_EVENT_CREDITS </td><td>0x74 </td></tr>
+<tr>
+<td>L2CAP_EVENT_SERVICE_REGISTERED </td><td>0x75 </td></tr>
+</table>
+<p>Table: L2CAP Events. {#tbl:l2capEvents}</p>
+<p>L2CAP event paramaters, with size in bits:</p>
+<ul>
+<li>L2CAP_EVENT_CHANNEL_OPENED:<ul>
+<li><em>event(8), len(8), status(8), address(48), handle(16), psm(16), local_cid(16), remote_cid(16), local_mtu(16), remote_mtu(16)</em></li>
+</ul>
+</li>
+<li>L2CAP_EVENT_CHANNEL_CLOSED:<ul>
+<li><em>event (8), len(8), channel(16)</em></li>
+</ul>
+</li>
+<li>L2CAP_EVENT_INCOMING_CONNECTION:<ul>
+<li><em>event(8), len(8), address(48), handle(16), psm (16), local_cid(16), remote_cid (16)</em></li>
+</ul>
+</li>
+<li>L2CAP_EVENT_CREDITS:<ul>
+<li><em>event(8), len(8), local_cid(16), credits(8)</em></li>
+</ul>
+</li>
+<li>L2CAP_EVENT_SERVICE_REGISTERED:<ul>
+<li><em>event(8), len(8), status(8), psm(16)</em></li>
+</ul>
+</li>
+</ul>
+<h2>RFCOMM Events</h2>
+<p>All RFCOMM events and data packets are currently delivered to the packet handler specified by <em>rfcomm_register_packet_handler</em>. Data packets have the _DATA_PACKET packet type. Here is the list of events provided by RFCOMM:</p>
+<ul>
+<li>RFCOMM_EVENT_INCOMING_CONNECTION - received when the connection is requested by remote. Connection accept and decline are performed with <em>rfcomm_accept_connection_internal</em> and <em>rfcomm_decline_con-nection_internal</em> respectively.</li>
+<li>RFCOMM_EVENT_CHANNEL_CLOSED - emitted when channel is closed. No status information is provided.</li>
+<li>RFCOMM_EVENT_OPEN_CHANNEL_COMPLETE - sent if channel establishment is done. Status not equal zero indicates an error. Possible errors: an L2CAP error, out of memory.</li>
+<li>RFCOMM_EVENT_CREDITS - The application can resume sending when this even is received. See Section on <a href="../../../protocols/#sec:flowControlProtocols">RFCOMM credit-based flow-control</a> for more.</li>
+<li>RFCOMM_EVENT_SERVICE_REGISTERED - Status not equal zero indicates an error. Possible errors:<ul>
+<li>service is already registered;</li>
+<li>MAX_NO_RFCOMM_SERVICES (defined in config.h) already registered.</li>
+</ul>
+</li>
+</ul>
+<table class="doxtable">
+<tr>
+<th>Event </th><th>Event Code  </th></tr>
+<tr>
+<td>RFCOMM_EVENT_OPEN_CHANNEL_COMPLETE </td><td>0x80 </td></tr>
+<tr>
+<td>RFCOMM_EVENT_CHANNEL_CLOSED </td><td>0x81 </td></tr>
+<tr>
+<td>RFCOMM_EVENT_INCOMING_CONNECTION </td><td>0x82 </td></tr>
+<tr>
+<td>RFCOMM_EVENT_CREDITS </td><td>0x84 </td></tr>
+<tr>
+<td>RFCOMM_EVENT_SERVICE_REGISTERED </td><td>0x85 </td></tr>
+</table>
+<p>Table: RFCOMM Events. {#tbl:rfcommEvents}</p>
+<p>RFCOMM event paramaters, with size in bits:</p>
+<ul>
+<li>RFCOMM_EVENT_OPEN_CHANNEL_COMPLETE:<ul>
+<li><em>event(8), len(8), status(8), address(48), handle(16), server_channel(8), rfcomm_cid(16), max_frame_size(16)</em></li>
+</ul>
+</li>
+<li>RFCOMM_EVENT_CHANNEL_CLOSED:<ul>
+<li><em>event(8), len(8), rfcomm_cid(16)</em></li>
+</ul>
+</li>
+<li>RFCOMM_EVENT_INCOMING_CONNECTION:<ul>
+<li><em>event(8), len(8), address(48), channel (8), rfcomm_cid(16)</em></li>
+</ul>
+</li>
+<li>RFCOMM_EVENT_CREDITS:<ul>
+<li><em>event(8), len(8), rfcomm_cid(16), credits(8)</em></li>
+</ul>
+</li>
+<li>RFCOMM_EVENT_SERVICE_REGISTERED:<ul>
+<li><em>event(8), len(8), status(8), rfcomm server channel_id(8)</em></li>
+</ul>
+</li>
+</ul>
+<h2>Errors {#sec:errorsAppendix}</h2>
+<table class="doxtable">
+<tr>
+<th>Error </th><th>Error Code  </th></tr>
+<tr>
+<td>BTSTACK_MEMORY_ALLOC_FAILED </td><td>0x56 </td></tr>
+<tr>
+<td>BTSTACK_ACL_BUFFERS_FULL </td><td>0x57 </td></tr>
+<tr>
+<td>L2CAP_COMMAND_REJECT_REASON_COMMAND_NOT_UNDERSTOOD </td><td>0x60 </td></tr>
+<tr>
+<td>L2CAP_COMMAND_REJECT_REASON_SIGNALING_MTU_EXCEEDED </td><td>0x61 </td></tr>
+<tr>
+<td>L2CAP_COMMAND_REJECT_REASON_INVALID_CID_IN_REQUEST </td><td>0x62 </td></tr>
+<tr>
+<td>L2CAP_CONNECTION_RESPONSE_RESULT_SUCCESSFUL </td><td>0x63 </td></tr>
+<tr>
+<td>L2CAP_CONNECTION_RESPONSE_RESULT_PENDING </td><td>0x64 </td></tr>
+<tr>
+<td>L2CAP_CONNECTION_RESPONSE_RESULT_REFUSED_PSM </td><td>0x65 </td></tr>
+<tr>
+<td>L2CAP_CONNECTION_RESPONSE_RESULT_REFUSED_SECURITY </td><td>0x66 </td></tr>
+<tr>
+<td>L2CAP_CONNECTION_RESPONSE_RESULT_REFUSED_RESOURCES </td><td>0x65 </td></tr>
+<tr>
+<td>L2CAP_CONFIG_RESPONSE_RESULT_SUCCESSFUL </td><td>0x66 </td></tr>
+<tr>
+<td>L2CAP_CONFIG_RESPONSE_RESULT_UNACCEPTABLE_PARAMS </td><td>0x67 </td></tr>
+<tr>
+<td>L2CAP_CONFIG_RESPONSE_RESULT_REJECTED </td><td>0x68 </td></tr>
+<tr>
+<td>L2CAP_CONFIG_RESPONSE_RESULT_UNKNOWN_OPTIONS </td><td>0x69 </td></tr>
+<tr>
+<td>L2CAP_SERVICE_ALREADY_REGISTERED </td><td>0x6a </td></tr>
+<tr>
+<td>RFCOMM_MULTIPLEXER_STOPPED </td><td>0x70 </td></tr>
+<tr>
+<td>RFCOMM_CHANNEL_ALREADY_REGISTERED </td><td>0x71 </td></tr>
+<tr>
+<td>RFCOMM_NO_OUTGOING_CREDITS </td><td>0x72 </td></tr>
+<tr>
+<td>SDP_HANDLE_ALREADY_REGISTERED </td><td>0x80 </td></tr>
+</table>
+<p>Table: Errors. {#tbl:errors} </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

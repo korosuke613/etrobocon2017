@@ -1,5 +1,4 @@
 <map id="Walker::get_count_R" name="Walker::get_count_R">
-<area shape="rect" id="node2" href="$d5/ddb/class_left_normal_course.html#abef1043d381eb87bab4cf4e4bbb0dd71" title="LeftNormalCourse::status\lCheck" alt="" coords="199,5,371,44"/>
-<area shape="rect" id="node3" href="$da/dbb/class_line_tracer.html#a27185e119de638b785d7f59f7c4e8bf7" title="LineTracer::getCountR" alt="" coords="207,68,363,93"/>
-<area shape="rect" id="node4" href="$d4/d58/class_right_normal_course.html#a5fe134918f510923592d003a5218b0e4" title="RightNormalCourse::\lstatusCheck" alt="" coords="212,117,358,156"/>
+<area shape="rect" id="node2" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="199,5,348,31"/>
+<area shape="rect" id="node3" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="396,5,547,31"/>
 </map>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['secpercycle',['secPerCycle',['../d7/d26/class_sonar_alert.html#a5cf7b9b9cdc6c084409755395bfa0628',1,'SonarAlert']]],
-  ['sl',['sl',['../d5/ddb/class_left_normal_course.html#a9d0bc34c3567178377c16907d0c11c44',1,'LeftNormalCourse::sl()'],['../d4/d58/class_right_normal_course.html#a284a48f9b07518cf8094f9e33943c25d',1,'RightNormalCourse::sl()']]],
+  ['sl',['sl',['../d0/df8/class_et_robocon2017.html#a3b6000ed949b09b7315ad3600dceff14',1,'EtRobocon2017']]],
   ['sonar_5falert_5fdistance',['SONAR_ALERT_DISTANCE',['../d7/d26/class_sonar_alert.html#a3a71754e9937a298f6e0b8eb52da0ac1',1,'SonarAlert']]],
   ['sonarsensor',['sonarSensor',['../d7/d26/class_sonar_alert.html#a5929b7ef80913f498ae04ea432026cfe',1,'SonarAlert']]],
   ['speed_5fvalue',['speed_value',['../dd/dc1/class_speed_control.html#a0517569e43d2f503e50844d8066a3230',1,'SpeedControl']]],

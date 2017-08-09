@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: Tutorial</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Tutorial </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2>Arduino IDE</h2>
+<p>Please install the latest version of the Arduino IDE from <a href="http://arduino.cc">http://arduino.cc</a>. This tutorial was created &amp; tested with version 1.6.4, but it should work with all newer versions.</p>
+<h2>BTstack Library</h2>
+<p>To install the BTstack library, please download it from <a href="http://bluekitchen-gmbh.com/files/btstack-arduino-latest.zip">http://bluekitchen-gmbh.com/files/btstack-arduino-latest.zip</a> and unpack it into your Arduino libraries folder. On OS X, that's: </p><pre class="fragment">~/Documents/Arduino/libraries
+</pre><p>After installing the BTstack Library, you have to restart the Arduino IDE to make it show up in the examples section.</p>
+<h2>Hardware</h2>
+<p>Please plug the BTstack LE Shield into one of the supported Arduino boards listed on the <a href="../../../">Welcome page</a>. With an Arduino Mega 2560, it looks like this:</p>
+<div class="image">
+<img src="../../picts/setup.jpg" alt="Image of BTstack LE Shield plugged into Arduion Mega 2560"/>
+</div>
+<h2>Test</h2>
+<p>As a first test, open the iBeaconScanner example via File-&gt;Examples-&gt;BTstack-&gt;iBeaconScanner. In the Sketch window, press the Upload button.</p>
+<div class="image">
+<img src="../../picts/sketch.jpg" alt="Image of Arduino IDE Sketch"/>
+</div>
+<p>After it was successfully uploaded to the board, open the Serial Console.</p>
+<p>The output should look similar to this: </p><pre class="fragment">BTstackManager::setup()
+Local Address: 0C:F3:EE:00:00:00
+--&gt; READY &lt;--
+Start scanning
+Device discovered: 00:21:3C:AC:F7:38, RSSI -55
+Device discovered: 00:21:3C:AC:F7:38, RSSI -55
+Device discovered: D0:39:72:CD:83:45, RSSI -55
+Device discovered: D0:39:72:CD:83:45, RSSI -55
+Device discovered: D0:39:72:CD:83:45, RSSI -55
+Device discovered: D0:39:72:CD:83:45, RSSI -55
+</pre><p>This example listens for BLE Advertisements and prints the Bluetooth BD_ADDR (similar to a WiFi MAC) address and the received signal strength. For iBeacons, also the Major ID, the Minor ID and the iBeacon UUID are shown.</p>
+<p>Please have a look at the other <a href="../../../examples/generated/">examples</a>, too. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
