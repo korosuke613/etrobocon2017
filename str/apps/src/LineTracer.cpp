@@ -6,7 +6,7 @@ LineTracer::LineTracer():
 
 void LineTracer::runLine(int32_t countL, int32_t countR, int8_t light_value){
     forward = speedControl.calculateSpeedForPid(countL, countR);
-    turn = turnControl.calculateTurnForPid( forward, light_value );
+    turn = turnControl.calculateTurnForPid( forward, light_value ) * minus;
 }
 
 void LineTracer::setForward(int8_t setValue){

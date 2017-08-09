@@ -101,3 +101,33 @@ TEST( LeftNormalCourseTest, runNormalCourseTest3 )
 
     ASSERT_EQ(value, false);
 }
+
+// 右にそれたらturnが負の値になる
+TEST( LeftNormalCourseTest, edgeChangeTest1 )
+{
+    LeftNormalCourse lnc;
+    int value;
+
+    lnc.statusCheck(0, 0);
+
+    lnc.runNormalCourse();
+    lnc.lineTracer.runLine(0, 0, 100);
+    value = lnc.lineTracer.getTurn();
+
+    ASSERT_LT(value, 0);
+}
+
+// 左にそれたらturnが正の値になる
+TEST( LeftNormalCourseTest, edgeChangeTest2 )
+{
+    LeftNormalCourse lnc;
+    int value;
+
+    lnc.statusCheck(0, 0);
+
+    lnc.runNormalCourse();
+    lnc.lineTracer.runLine(0, 0, 0);
+    value = lnc.lineTracer.getTurn();
+
+    ASSERT_GT(value, 0);
+}

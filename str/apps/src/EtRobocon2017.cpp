@@ -55,7 +55,7 @@ void EtRobocon2017::loop()
         if(normalCourse.lineTracer.getForward() < 0){
             walker.run(0, 0);
         }else{
-            walker.run( normalCourse.lineTracer.getForward(), normalCourse.lineTracer.getTurn() * normalCourse.lineTracer.minus);
+            walker.run( normalCourse.lineTracer.getForward(), normalCourse.lineTracer.getTurn());
         }
 
         tslp_tsk(4); // 4msec周期起動

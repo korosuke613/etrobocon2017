@@ -101,3 +101,33 @@ TEST( RightNormalCourseTest, runNormalCourseTest3 )
 
     ASSERT_EQ(value, false);
 }
+
+// 左にそれたらturnが正の値になる
+TEST( RightNormalCourseTest, edgeChangeTest1 )
+{
+    RightNormalCourse rnc;
+    int value;
+
+    rnc.statusCheck(0, 0);
+
+    rnc.runNormalCourse();
+    rnc.lineTracer.runLine(0, 0, 100);
+    value = rnc.lineTracer.getTurn();
+
+    ASSERT_GT(value, 0);
+}
+
+// 右にそれたらturnが負の値になる
+TEST( RightNormalCourseTest, edgeChangeTest2 )
+{
+    RightNormalCourse rnc;
+    int value;
+
+    rnc.statusCheck(0, 0);
+
+    rnc.runNormalCourse();
+    rnc.lineTracer.runLine(0, 0, 0);
+    value = rnc.lineTracer.getTurn();
+
+    ASSERT_LT(value, 0);
+}
