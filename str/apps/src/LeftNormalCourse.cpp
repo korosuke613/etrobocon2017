@@ -4,13 +4,9 @@ LeftNormalCourse::LeftNormalCourse(){
     lineTracer.isLeftsideLine(true);
     old_status = LeftStatus::STRAIGHT;
 
-    ev3_speaker_set_volume(100);
 }
 
-bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR){
-    sl.update();
-    sl.writing_current_coordinates();
-    statusCheck(countL, countR);
+bool LeftNormalCourse::runNormalCourse(){
     switch(status){
         case LeftStatus::STRAIGHT: goStraight(); break;
         case LeftStatus::STRAIGHT_SLOW: goStraightSlow(); break;
@@ -20,13 +16,13 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR){
         case LeftStatus::STOP: stop(); break;
         default: stop();
     }
-    if (ev3_button_is_pressed(BACK_BUTTON)) return false;
     if (status == LeftStatus::STOP) return false;
     return true;
 }
 
-void LeftNormalCourse::statusCheck(int32_t countL, int32_t countR){
+bool LeftNormalCourse::statusCheck(int32_t countL, int32_t countR){
     distanse_total = distance.getDistanceTotal(countL, countR);
+    old_status = status;
     if(distanse_total < 2740)status = LeftStatus::STRAIGHT;
     else if(distanse_total < 3240)status = LeftStatus::STRAIGHT_SLOW;
     else if(distanse_total < 5200)status = LeftStatus::CURVE_RIGHT;
@@ -35,8 +31,8 @@ void LeftNormalCourse::statusCheck(int32_t countL, int32_t countR){
     else if(distanse_total < 12200)status = LeftStatus::CURVE_RIGHT;
     else if(distanse_total < 15500)status = LeftStatus::STRAIGHT;
     else status = LeftStatus::STOP;
-    if(old_status != status) ev3_speaker_play_tone (NOTE_FS6, 100);
-    old_status = status;
+    if(old_status != status) return true;
+    return false;
 }
 
 void LeftNormalCourse::goStraight(){

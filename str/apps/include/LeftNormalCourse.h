@@ -2,7 +2,6 @@
 #define __LEFTNORMALCOURSE__
 
 #include "NormalCourse.h"
-#include "SelfLocalization.h"
 
 enum struct LeftStatus {
     STRAIGHT,
@@ -16,7 +15,8 @@ enum struct LeftStatus {
 class LeftNormalCourse : public NormalCourse{
 public:
     LeftNormalCourse();
-   	bool runNormalCourse (int32_t countL, int32_t countR);
+   	bool runNormalCourse ();
+    bool statusCheck(int32_t countL, int32_t countR);
 
 private:
     void goStraight();
@@ -25,11 +25,8 @@ private:
     void goCurveLeft();
     void goCurveLeftShort();
     void stop();
-    void statusCheck(int32_t countL, int32_t countR);
     LeftStatus status;
     LeftStatus old_status;
-    /* 自己位置推定 インスタンス 初期化*/
-    SelfLocalization sl;
 };
 
 #endif

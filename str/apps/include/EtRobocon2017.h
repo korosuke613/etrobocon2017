@@ -10,6 +10,8 @@
 #include "Emoter.h"
 #include "LeftNormalCourse.h"
 #include "RightNormalCourse.h"
+#include "SelfLocalization.h"
+
 
 using namespace ev3api;
 
@@ -26,6 +28,8 @@ private:
     ColorSensor colorSensor;
     int8_t light_white;
     int8_t light_black;
+    /* 自己位置推定 インスタンス 初期化*/
+    SelfLocalization sl;
 };
 
 #endif
