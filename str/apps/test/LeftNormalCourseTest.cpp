@@ -10,9 +10,9 @@
 TEST( LeftNormalCourseTest, statusCheckTest1 )
 {
     LeftNormalCourse lnc;
-    LeftStatus value;
+    int value;
 
     lnc.statusCheck(0, 0);
-    value = lnc.getStatus()
-    ASSERT_LE(value, LeftStatus::STRAIGHT);
+    value = lnc.getStatus();
+    ASSERT_EQ(value, (int)LeftStatus::STRAIGHT);
 }

@@ -55,6 +55,6 @@ bool LeftNormalCourse::statusCheck(int32_t countL, int32_t countR){
     return false;
 }
 
-LeftStatus LeftNormalCourse::getStatus(){
-    return status;
+int LeftNormalCourse::getStatus(){
+    return (int)status;
 }
