@@ -5,8 +5,6 @@
 #include "Distance.h"
 #include "Walker.h"
 
-using namespace ev3api;
-
 class NormalCourse {
 public:
 	void runNormalCourse ( void ) ;

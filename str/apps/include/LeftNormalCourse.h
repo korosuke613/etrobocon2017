@@ -4,8 +4,6 @@
 #include "NormalCourse.h"
 #include "SelfLocalization.h"
 
-using namespace ev3api;
-
 enum struct LeftStatus {
     STRAIGHT,
     STRAIGHT_SLOW,
@@ -18,7 +16,7 @@ enum struct LeftStatus {
 class LeftNormalCourse : public NormalCourse{
 public:
     LeftNormalCourse();
-   	void runNormalCourse ( void ) ;
+   	bool runNormalCourse ( void ) ;
 
 private:
     void goStraight(int8_t forward_value);

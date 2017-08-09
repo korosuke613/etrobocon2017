@@ -7,25 +7,24 @@ LeftNormalCourse::LeftNormalCourse(){
     ev3_speaker_set_volume(100);
 }
 
-void LeftNormalCourse::runNormalCourse(void){
-	while ( 1 ) {
-        sl.update();
-        sl.writing_current_coordinates();
-        forward = lineTracer.speedControl.calculateSpeedForPid(walker.get_count_L(), walker.get_count_R());
-        statusCheck();
-		switch(status){
-            case LeftStatus::STRAIGHT: goStraight(forward); break;
-            case LeftStatus::STRAIGHT_SLOW: goStraightSlow(forward); break;
-            case LeftStatus::CURVE_RIGHT: goCurveRight(forward); break;
-            case LeftStatus::CURVE_LEFT_SHORT: goCurveLeftShort(forward); break;
-            case LeftStatus::CURVE_LEFT: goCurveLeft(forward); break;
-            case LeftStatus::STOP: stop(); break;
-            default: goStraight(0);
-        }
-		lineTracer.runLine();
-		if (ev3_button_is_pressed(BACK_BUTTON)) break;
-        if (status == LeftStatus::STOP) break;
-	}
+bool LeftNormalCourse::runNormalCourse(void){
+    sl.update();
+    sl.writing_current_coordinates();
+    forward = lineTracer.speedControl.calculateSpeedForPid(walker.get_count_L(), walker.get_count_R());
+    statusCheck();
+    switch(status){
+        case LeftStatus::STRAIGHT: goStraight(forward); break;
+        case LeftStatus::STRAIGHT_SLOW: goStraightSlow(forward); break;
+        case LeftStatus::CURVE_RIGHT: goCurveRight(forward); break;
+        case LeftStatus::CURVE_LEFT_SHORT: goCurveLeftShort(forward); break;
+        case LeftStatus::CURVE_LEFT: goCurveLeft(forward); break;
+        case LeftStatus::STOP: stop(); break;
+        default: goStraight(0);
+    }
+    lineTracer.runLine();
+    if (ev3_button_is_pressed(BACK_BUTTON)) return false;
+    if (status == LeftStatus::STOP) return false;
+    return true;
 }
 
 void LeftNormalCourse::statusCheck(){

@@ -42,10 +42,12 @@ void EtRobocon2017::loop()
     RightNormalCourse rightNormalCourse;
     Lifter lifter;
     Emoter emoter;
-
+    bool isNormalCourse;
     // 左レーン時
-    leftNormalCourse.runNormalCourse();
-    
+	while ( 1 ) {
+        isNormalCourse = leftNormalCourse.runNormalCourse();
+        if(! isNormalCourse)break;
+    }
     // 右レーン時
     //rightNormalCourse.runNormalCourse();
 }
