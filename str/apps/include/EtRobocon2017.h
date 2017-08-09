@@ -10,6 +10,7 @@
 #include "NormalCourse.h"
 #include "LeftNormalCourse.h"
 #include "RightNormalCourse.h"
+#include "Walker.h"
 
 using namespace ev3api;
 
@@ -21,6 +22,7 @@ public:
     void loop();
 
 private:
+	Walker walker;
     TouchSensor touchSensor;
     int8_t light_white;
     int8_t light_black;

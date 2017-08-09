@@ -7,11 +7,11 @@ LeftNormalCourse::LeftNormalCourse(){
     ev3_speaker_set_volume(100);
 }
 
-bool LeftNormalCourse::runNormalCourse(void){
+bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR){
     sl.update();
     sl.writing_current_coordinates();
-    forward = lineTracer.speedControl.calculateSpeedForPid(walker.get_count_L(), walker.get_count_R());
-    statusCheck();
+    forward = lineTracer.speedControl.calculateSpeedForPid(countL, countR);
+    statusCheck(countL, countR);
     switch(status){
         case LeftStatus::STRAIGHT: goStraight(forward); break;
         case LeftStatus::STRAIGHT_SLOW: goStraightSlow(forward); break;
@@ -27,8 +27,8 @@ bool LeftNormalCourse::runNormalCourse(void){
     return true;
 }
 
-void LeftNormalCourse::statusCheck(){
-    distanse_total = distance.getDistanceTotal(walker.get_count_L(), walker.get_count_R());
+void LeftNormalCourse::statusCheck(int32_t countL, int32_t countR){
+    distanse_total = distance.getDistanceTotal(countL, countR);
     if(distanse_total < 2740)status = LeftStatus::STRAIGHT;
     else if(distanse_total < 3240)status = LeftStatus::STRAIGHT_SLOW;
     else if(distanse_total < 5200)status = LeftStatus::CURVE_RIGHT;

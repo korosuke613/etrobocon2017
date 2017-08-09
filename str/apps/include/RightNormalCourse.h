@@ -3,6 +3,7 @@
 
 #include "NormalCourse.h"
 #include "SelfLocalization.h"
+#include "Walker.h"
 
 using namespace ev3api;
 
@@ -20,6 +21,7 @@ public:
    	void runNormalCourse ( void ) ;
 
 private:
+    Walker walker;
     void goStraight(int8_t forward_value);
     void goCurveRight(int8_t forward_value);
     void goCurveLeft(int8_t forward_value);

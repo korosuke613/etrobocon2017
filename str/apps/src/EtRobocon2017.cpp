@@ -45,7 +45,7 @@ void EtRobocon2017::loop()
     bool isNormalCourse;
     // 左レーン時
 	while ( 1 ) {
-        isNormalCourse = leftNormalCourse.runNormalCourse();
+        isNormalCourse = leftNormalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R());
         if(! isNormalCourse)break;
     }
     // 右レーン時

@@ -16,7 +16,7 @@ enum struct LeftStatus {
 class LeftNormalCourse : public NormalCourse{
 public:
     LeftNormalCourse();
-   	bool runNormalCourse ( void ) ;
+   	bool runNormalCourse (int32_t countL, int32_t countR) ;
 
 private:
     void goStraight(int8_t forward_value);
@@ -25,7 +25,7 @@ private:
     void goCurveLeft(int8_t forward_value);
     void goCurveLeftShort(int8_t forward_value);
     void stop();
-    void statusCheck();
+    void statusCheck(int32_t countL, int32_t countR);
     LeftStatus status;
     LeftStatus old_status;
     /* 自己位置推定 インスタンス 初期化*/

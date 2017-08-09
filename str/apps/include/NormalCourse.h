@@ -3,14 +3,12 @@
 
 #include "LineTracer.h"
 #include "Distance.h"
-#include "Walker.h"
 
 class NormalCourse {
 public:
 	void runNormalCourse ( void ) ;
 
 protected:
-	Walker walker;
 	LineTracer lineTracer;
 	Distance distance;
 	int8_t forward;
