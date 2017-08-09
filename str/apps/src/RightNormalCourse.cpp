@@ -35,7 +35,6 @@ void RightNormalCourse::runNormalCourse(void){
 
             default: goStraight(0);
         }
-		lineTracer.runLine();
 		if (ev3_button_is_pressed(BACK_BUTTON)) break;
         if (status == RightStatus::STOP) break;
 	}

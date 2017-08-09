@@ -39,14 +39,22 @@ void EtRobocon2017::loop()
 {
     SonarAlert sonarAlert( 4 );
     LeftNormalCourse leftNormalCourse;
-    RightNormalCourse rightNormalCourse;
+    //RightNormalCourse rightNormalCourse;
     Lifter lifter;
     Emoter emoter;
     bool isNormalCourse;
     // 左レーン時
 	while ( 1 ) {
         isNormalCourse = leftNormalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R());
-        //LeftNormalCourse.lineTracer.runLine();
+        leftNormalCourse.lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
+        
+        if(leftNormalCourse.lineTracer.getForward() < 0){
+            walker.run(0, 0);
+        }else{
+            walker.run( leftNormalCourse.lineTracer.getForward(), leftNormalCourse.lineTracer.getTurn() * leftNormalCourse.lineTracer.minus);
+        }
+
+        tslp_tsk(4); // 4msec周期起動
         if(! isNormalCourse)break;
     }
     // 右レーン時

@@ -10,8 +10,6 @@ LeftNormalCourse::LeftNormalCourse(){
 bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR){
     sl.update();
     sl.writing_current_coordinates();
-    forward = lineTracer.speedControl.calculateSpeedForPid(countL, countR);
-    lineTracer.setForward(forward);
     statusCheck(countL, countR);
     switch(status){
         case LeftStatus::STRAIGHT: goStraight(); break;
@@ -22,7 +20,6 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR){
         case LeftStatus::STOP: stop(); break;
         default: stop();
     }
-    lineTracer.runLine();
     if (ev3_button_is_pressed(BACK_BUTTON)) return false;
     if (status == LeftStatus::STOP) return false;
     return true;
