@@ -15,7 +15,9 @@ Distance.o \
 Walker.o \
 Lifter.o \
 SelfLocalization.o \
-Emoter.o
+Emoter.o \
+LeftCourse.o \
+RightCourse.o
 
 SRCLANG := c++
 
