@@ -16,7 +16,7 @@ var searchData=
   ['setpower',['setPower',['../d5/d34/classev3api_1_1_steering.html#a1693dec1fb1e2b8fc79a29fbcf045a3c',1,'ev3api::Steering']]],
   ['setpwm',['setPWM',['../da/d61/classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19',1,'ev3api::Motor']]],
   ['setturn',['setTurn',['../da/dbb/class_line_tracer.html#ae17e8a3f61140eb1e9c7ce11dbc132d7',1,'LineTracer']]],
-  ['sl',['sl',['../d0/df8/class_et_robocon2017.html#a3b6000ed949b09b7315ad3600dceff14',1,'EtRobocon2017']]],
+  ['sl',['sl',['../da/d29/class_left_course.html#a469d2ba2ba1e33b3ff90c8b39f013ea3',1,'LeftCourse::sl()'],['../df/df1/class_right_course.html#a9408859b0e50aead17abd646e78ebcf9',1,'RightCourse::sl()']]],
   ['sleep',['sleep',['../d4/d87/classev3api_1_1_clock.html#a34ff6f7b273edf33eeae7abc1754e319',1,'ev3api::Clock']]],
   ['sonar_5falert_5fdistance',['SONAR_ALERT_DISTANCE',['../d7/d26/class_sonar_alert.html#a3a71754e9937a298f6e0b8eb52da0ac1',1,'SonarAlert::SONAR_ALERT_DISTANCE()'],['../d8/d0a/common__definition_8h.html#a0ae4ea34274a4778e00849c9e3320281',1,'SONAR_ALERT_DISTANCE():&#160;common_definition.h']]],
   ['sonaralert',['SonarAlert',['../d7/d26/class_sonar_alert.html',1,'SonarAlert'],['../d7/d26/class_sonar_alert.html#a3cb7423e6415315ba0d955a650de26e9',1,'SonarAlert::SonarAlert(int)'],['../d7/d26/class_sonar_alert.html#aa9a252926da1b2e5e7dab340a77d855f',1,'SonarAlert::SonarAlert(int, int, SonarSensor &amp;)']]],

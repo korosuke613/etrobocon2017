@@ -1,7 +1,11 @@
 <map id="Distance::getDistanceTotal" name="Distance::getDistanceTotal">
 <area shape="rect" id="node2" href="$d7/d82/class_distance.html#a822915c87907cdef0926ee69910b1a9c" title="Distance::resetDistance" alt="" coords="238,5,400,31"/>
 <area shape="rect" id="node3" href="$d5/ddb/class_left_normal_course.html#a8278a179a43a33ac616f13f0d7276ffa" title="LeftNormalCourse::status\lCheck" alt="" coords="233,55,405,93"/>
-<area shape="rect" id="node4" href="$d4/d58/class_right_normal_course.html#a3bcd4c8e81d831097f189f14acc15c89" title="RightNormalCourse::\lstatusCheck" alt="" coords="246,117,392,156"/>
-<area shape="rect" id="node5" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="453,124,603,149"/>
-<area shape="rect" id="node6" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="651,124,801,149"/>
+<area shape="rect" id="node8" href="$d4/d58/class_right_normal_course.html#a3bcd4c8e81d831097f189f14acc15c89" title="RightNormalCourse::\lstatusCheck" alt="" coords="246,117,392,156"/>
+<area shape="rect" id="node4" href="$da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="457,63,657,88"/>
+<area shape="rect" id="node5" href="$da/d29/class_left_course.html#a3c8814e489519247af3fc80ae09f2c48" title="LeftCourse::convertArea" alt="" coords="714,64,879,89"/>
+<area shape="rect" id="node6" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="932,91,1081,116"/>
+<area shape="rect" id="node7" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1129,91,1280,116"/>
+<area shape="rect" id="node9" href="$df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="453,117,661,143"/>
+<area shape="rect" id="node10" href="$df/df1/class_right_course.html#ad045a67f06f2fcffff9661a2fe5129ab" title="RightCourse::convertArea" alt="" coords="709,115,884,140"/>
 </map>

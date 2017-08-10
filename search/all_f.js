@@ -7,7 +7,7 @@ var searchData=
   ['right_5fmotor_5fold_5fangle',['right_motor_old_angle',['../d4/ddb/class_self_localization.html#a164df28911bf46e69e963745a7fbaf22',1,'SelfLocalization']]],
   ['right_5fmotor_5frotation_5fangle',['right_motor_rotation_angle',['../d4/ddb/class_self_localization.html#afd2f7f9198b2dc21fe212ef7372476e4',1,'SelfLocalization']]],
   ['right_5fwheel_5fmoving_5fdistance',['right_wheel_moving_distance',['../d4/ddb/class_self_localization.html#ae061b32ad42879677056a3a64b38b644',1,'SelfLocalization']]],
-  ['rightcourse',['RightCourse',['../df/df1/class_right_course.html',1,'']]],
+  ['rightcourse',['RightCourse',['../df/df1/class_right_course.html',1,'RightCourse'],['../df/df1/class_right_course.html#a3049ce52253f11d3fa1913728c308f75',1,'RightCourse::RightCourse()']]],
   ['rightcourse_2ecpp',['RightCourse.cpp',['../d1/d6d/_right_course_8cpp.html',1,'']]],
   ['rightcourse_2eh',['RightCourse.h',['../d3/d94/_right_course_8h.html',1,'']]],
   ['rightmotordegold',['rightMotorDegOld',['../d7/d82/class_distance.html#a1cb9143b6b7cc40a8eb0c10b688e9e42',1,'Distance']]],
@@ -19,5 +19,5 @@ var searchData=
   ['rightwheel',['rightWheel',['../d1/d49/class_walker.html#a53f354cc37326bf9a36404740824995a',1,'Walker']]],
   ['run',['run',['../d1/d49/class_walker.html#a70f88eb11114b0337bfcd4b05392f3d5',1,'Walker']]],
   ['runline',['runLine',['../da/dbb/class_line_tracer.html#a4685c87f451af9ad63ca124439dc7787',1,'LineTracer']]],
-  ['runnormalcourse',['runNormalCourse',['../d5/ddb/class_left_normal_course.html#a4a366448b8d6e3523a51d41c185eb4fc',1,'LeftNormalCourse::runNormalCourse()'],['../d4/d58/class_right_normal_course.html#aef2692f9c696b1e19caf8d366b158482',1,'RightNormalCourse::runNormalCourse()']]]
+  ['runnormalcourse',['runNormalCourse',['../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f',1,'LeftCourse::runNormalCourse()'],['../d5/ddb/class_left_normal_course.html#a4a366448b8d6e3523a51d41c185eb4fc',1,'LeftNormalCourse::runNormalCourse()'],['../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd',1,'RightCourse::runNormalCourse()'],['../d4/d58/class_right_normal_course.html#aef2692f9c696b1e19caf8d366b158482',1,'RightNormalCourse::runNormalCourse()']]]
 ];

@@ -115,8 +115,9 @@ TurnControl 連携図</div>
 <tr class="separator:a28a8c791f6ee5ed84709171b21d2471a inherit pro_methods_class_pid"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a> の <a class="el" href="../../da/d7f/_turn_control_8h_source.html#l00007">7</a> 行目に定義があります。</p>
+<div class="textblock"><p>PID制御によるターン制御クラス </p>
+
+<p class="definition"> <a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a> の <a class="el" href="../../da/d7f/_turn_control_8h_source.html#l00015">15</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="aa517e31db70e27de33c21143b1de110a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa517e31db70e27de33c21143b1de110a">&#9670;&nbsp;</a></span>TurnControl()</h2>
@@ -132,8 +133,9 @@ TurnControl 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>コンストラクタ </p>
 
-<p class="definition"> <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html">TurnControl.cpp</a> の <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html#l00003">3</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html">TurnControl.cpp</a> の <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html#l00009">9</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -163,8 +165,9 @@ TurnControl 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ターン制御をするためのターン値(turn)を計算する </p><dl class="section return"><dt>戻り値</dt><dd>ターン値(turn) </dd></dl>
 
-<p class="definition"> <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html">TurnControl.cpp</a> の <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html#l00008">8</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html">TurnControl.cpp</a> の <a class="el" href="../../d6/dcc/_turn_control_8cpp_source.html#l00014">14</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -180,9 +183,13 @@ TurnControl 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/df4/class_turn_control_ac3c948ab0766eda64baf89c613464bf1_icgraph.png" border="0" usemap="#da/df4/class_turn_control_ac3c948ab0766eda64baf89c613464bf1_icgraph" alt=""/></div>
 <map name="da/df4/class_turn_control_ac3c948ab0766eda64baf89c613464bf1_icgraph" id="da/df4/class_turn_control_ac3c948ab0766eda64baf89c613464bf1_icgraph">
-<area shape="rect" id="node2" href="../../da/dbb/class_line_tracer.html#a4685c87f451af9ad63ca124439dc7787" title="LineTracer::runLine" alt="" coords="232,12,368,37"/>
-<area shape="rect" id="node3" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="416,12,566,37"/>
-<area shape="rect" id="node4" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="614,12,764,37"/>
+<area shape="rect" id="node2" href="../../da/dbb/class_line_tracer.html#a4685c87f451af9ad63ca124439dc7787" title="LineTracer::runLine" alt="" coords="232,31,368,56"/>
+<area shape="rect" id="node3" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="420,5,620,31"/>
+<area shape="rect" id="node7" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="416,55,624,80"/>
+<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a3c8814e489519247af3fc80ae09f2c48" title="LeftCourse::convertArea" alt="" coords="677,5,842,31"/>
+<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="895,31,1044,56"/>
+<area shape="rect" id="node6" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1092,31,1243,56"/>
+<area shape="rect" id="node8" href="../../df/df1/class_right_course.html#ad045a67f06f2fcffff9661a2fe5129ab" title="RightCourse::convertArea" alt="" coords="672,55,847,80"/>
 </map>
 </div>
 
@@ -209,7 +216,7 @@ TurnControl 連携図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a> の <a class="el" href="../../da/d7f/_turn_control_8h_source.html#l00013">13</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a> の <a class="el" href="../../da/d7f/_turn_control_8h_source.html#l00024">24</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -233,7 +240,7 @@ TurnControl 連携図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a> の <a class="el" href="../../da/d7f/_turn_control_8h_source.html#l00012">12</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../da/d7f/_turn_control_8h_source.html">TurnControl.h</a> の <a class="el" href="../../da/d7f/_turn_control_8h_source.html#l00023">23</a> 行目に定義があります。</p>
 
 </div>
 </div>

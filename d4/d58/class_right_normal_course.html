@@ -127,8 +127,9 @@ RightNormalCourse 連携図</div>
 <tr class="separator:a6f8d0bbb6b73605fb54aa0933b2ed9df inherit pro_attribs_class_normal_course"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html">RightNormalCourse.h</a> の <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html#l00014">14</a> 行目に定義があります。</p>
+<div class="textblock"><p>RコースのNormalCourseの処理を行うクラス </p>
+
+<p class="definition"> <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html">RightNormalCourse.h</a> の <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html#l00026">26</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a889f1172fbab1bbcd67bcf27f4d619e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a889f1172fbab1bbcd67bcf27f4d619e7">&#9670;&nbsp;</a></span>RightNormalCourse()</h2>
@@ -144,8 +145,9 @@ RightNormalCourse 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>コンストラクタ。 右エッジである設定をしている </p>
 
-<p class="definition"> <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html">RightNormalCourse.cpp</a> の <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html#l00003">3</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html">RightNormalCourse.cpp</a> の <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html#l00009">9</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -172,8 +174,9 @@ RightNormalCourse 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>現在の走行場所の状態を取得する </p><dl class="section return"><dt>戻り値</dt><dd>現在の走行場所の状態(int型) </dd></dl>
 
-<p class="definition"> <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html">RightNormalCourse.cpp</a> の <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html#l00052">52</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html">RightNormalCourse.cpp</a> の <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html#l00058">58</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -191,8 +194,9 @@ RightNormalCourse 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>走行場所でのPID値を設定する </p><dl class="section return"><dt>戻り値</dt><dd>Goalしたかどうか </dd></dl>
 
-<p class="definition"> <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html">RightNormalCourse.cpp</a> の <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html#l00008">8</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html">RightNormalCourse.cpp</a> の <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html#l00014">14</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -208,8 +212,10 @@ RightNormalCourse 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d58/class_right_normal_course_aef2692f9c696b1e19caf8d366b158482_icgraph.png" border="0" usemap="#d4/d58/class_right_normal_course_aef2692f9c696b1e19caf8d366b158482_icgraph" alt=""/></div>
 <map name="d4/d58/class_right_normal_course_aef2692f9c696b1e19caf8d366b158482_icgraph" id="d4/d58/class_right_normal_course_aef2692f9c696b1e19caf8d366b158482_icgraph">
-<area shape="rect" id="node2" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="199,12,349,37"/>
-<area shape="rect" id="node3" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="397,12,547,37"/>
+<area shape="rect" id="node2" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="199,12,407,37"/>
+<area shape="rect" id="node3" href="../../df/df1/class_right_course.html#ad045a67f06f2fcffff9661a2fe5129ab" title="RightCourse::convertArea" alt="" coords="455,12,630,37"/>
+<area shape="rect" id="node4" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="678,12,828,37"/>
+<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="876,12,1026,37"/>
 </map>
 </div>
 
@@ -240,8 +246,16 @@ RightNormalCourse 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>現在の走行場所の状態を設定する </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">countL</td><td>左タイヤの回転角 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">countR</td><td>右タイヤの回転角 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>走行場所の状態が変わったかどうか </dd></dl>
 
-<p class="definition"> <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html">RightNormalCourse.cpp</a> の <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html#l00038">38</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html">RightNormalCourse.cpp</a> の <a class="el" href="../../d4/da7/_right_normal_course_8cpp_source.html#l00044">44</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -255,8 +269,10 @@ RightNormalCourse 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d58/class_right_normal_course_a3bcd4c8e81d831097f189f14acc15c89_icgraph.png" border="0" usemap="#d4/d58/class_right_normal_course_a3bcd4c8e81d831097f189f14acc15c89_icgraph" alt=""/></div>
 <map name="d4/d58/class_right_normal_course_a3bcd4c8e81d831097f189f14acc15c89_icgraph" id="d4/d58/class_right_normal_course_a3bcd4c8e81d831097f189f14acc15c89_icgraph">
-<area shape="rect" id="node2" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="199,12,349,37"/>
-<area shape="rect" id="node3" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="397,12,547,37"/>
+<area shape="rect" id="node2" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="199,12,407,37"/>
+<area shape="rect" id="node3" href="../../df/df1/class_right_course.html#ad045a67f06f2fcffff9661a2fe5129ab" title="RightCourse::convertArea" alt="" coords="455,12,630,37"/>
+<area shape="rect" id="node4" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="678,12,828,37"/>
+<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="876,12,1026,37"/>
 </map>
 </div>
 
@@ -283,7 +299,7 @@ RightNormalCourse 連携図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html">RightNormalCourse.h</a> の <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html#l00022">22</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html">RightNormalCourse.h</a> の <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html#l00052">52</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -307,7 +323,7 @@ RightNormalCourse 連携図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html">RightNormalCourse.h</a> の <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html">RightNormalCourse.h</a> の <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html#l00051">51</a> 行目に定義があります。</p>
 
 </div>
 </div>

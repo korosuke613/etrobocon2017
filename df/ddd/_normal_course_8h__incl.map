@@ -1,7 +1,7 @@
 <map id="str/apps/include/NormalCourse.h" name="str/apps/include/NormalCourse.h">
 <area shape="rect" id="node2" href="$d0/d1b/_line_tracer_8h.html" title="LineTracer.h" alt="" coords="122,79,216,104"/>
 <area shape="rect" id="node8" href="$d4/d99/_distance_8h.html" title="タイヤの進んだ距離（回転角）に関するクラス " alt="" coords="240,79,324,104"/>
-<area shape="rect" id="node3" href="$da/d7f/_turn_control_8h.html" title="TurnControl.h" alt="" coords="143,152,246,177"/>
+<area shape="rect" id="node3" href="$da/d7f/_turn_control_8h.html" title="PID制御によるターン制御クラス " alt="" coords="143,152,246,177"/>
 <area shape="rect" id="node6" href="$db/d18/_speed_control_8h.html" title="PID制御による速度制御クラス " alt="" coords="5,152,119,177"/>
 <area shape="rect" id="node4" href="$da/dcf/_pid_8h.html" title="Pid.h" alt="" coords="100,225,152,251"/>
 </map>

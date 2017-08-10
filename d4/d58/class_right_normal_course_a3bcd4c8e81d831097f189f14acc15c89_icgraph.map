@@ -1,4 +1,6 @@
 <map id="RightNormalCourse::statusCheck" name="RightNormalCourse::statusCheck">
-<area shape="rect" id="node2" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="199,12,349,37"/>
-<area shape="rect" id="node3" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="397,12,547,37"/>
+<area shape="rect" id="node2" href="$df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="199,12,407,37"/>
+<area shape="rect" id="node3" href="$df/df1/class_right_course.html#ad045a67f06f2fcffff9661a2fe5129ab" title="RightCourse::convertArea" alt="" coords="455,12,630,37"/>
+<area shape="rect" id="node4" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="678,12,828,37"/>
+<area shape="rect" id="node5" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="876,12,1026,37"/>
 </map>

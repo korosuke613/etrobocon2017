@@ -69,6 +69,9 @@ $(function() {
 <div class="title">RightNormalCourse.h ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>RコースのNormalCourseの処理を行うクラス  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d6/dad/_normal_course_8h_source.html">NormalCourse.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 RightNormalCourse.h の依存先関係図:</div>
@@ -78,7 +81,7 @@ RightNormalCourse.h の依存先関係図:</div>
 <area shape="rect" id="node2" href="../../d6/dad/_normal_course_8h.html" title="NormalCourse.h" alt="" coords="166,92,284,117"/>
 <area shape="rect" id="node3" href="../../d0/d1b/_line_tracer_8h.html" title="LineTracer.h" alt="" coords="122,165,216,191"/>
 <area shape="rect" id="node9" href="../../d4/d99/_distance_8h.html" title="タイヤの進んだ距離（回転角）に関するクラス " alt="" coords="240,165,324,191"/>
-<area shape="rect" id="node4" href="../../da/d7f/_turn_control_8h.html" title="TurnControl.h" alt="" coords="143,239,246,264"/>
+<area shape="rect" id="node4" href="../../da/d7f/_turn_control_8h.html" title="PID制御によるターン制御クラス " alt="" coords="143,239,246,264"/>
 <area shape="rect" id="node7" href="../../db/d18/_speed_control_8h.html" title="PID制御による速度制御クラス " alt="" coords="5,239,119,264"/>
 <area shape="rect" id="node5" href="../../da/dcf/_pid_8h.html" title="Pid.h" alt="" coords="100,312,152,337"/>
 </map>
@@ -88,10 +91,12 @@ RightNormalCourse.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/df1/_right_normal_course_8h__dep__incl.png" border="0" usemap="#str_2apps_2include_2_right_normal_course_8hdep" alt=""/></div>
 <map name="str_2apps_2include_2_right_normal_course_8hdep" id="str_2apps_2include_2_right_normal_course_8hdep">
-<area shape="rect" id="node2" href="../../d2/dd3/_et_robocon2017_8h.html" title="str/apps/include/EtRobocon2017.h" alt="" coords="23,99,248,124"/>
-<area shape="rect" id="node5" href="../../d4/da7/_right_normal_course_8cpp.html" title="str/apps/src/RightNormal\lCourse.cpp" alt="" coords="272,92,440,131"/>
-<area shape="rect" id="node3" href="../../d5/df2/app_8cpp.html" title="str/app.cpp" alt="" coords="5,179,93,204"/>
-<area shape="rect" id="node4" href="../../d5/d67/_et_robocon2017_8cpp.html" title="str/apps/src/EtRobocon2017.cpp" alt="" coords="116,179,331,204"/>
+<area shape="rect" id="node2" href="../../d3/d94/_right_course_8h.html" title="Rコースを走らせるときに呼び出されるクラス " alt="" coords="150,99,353,124"/>
+<area shape="rect" id="node7" href="../../d4/da7/_right_normal_course_8cpp.html" title="RightNormalCourseクラスの関数を定義 &#160;" alt="" coords="377,92,545,131"/>
+<area shape="rect" id="node3" href="../../d2/dd3/_et_robocon2017_8h.html" title="main的なクラス " alt="" coords="23,179,248,204"/>
+<area shape="rect" id="node6" href="../../d1/d6d/_right_course_8cpp.html" title="RightCourseクラスの関数を定義 &#160;" alt="" coords="272,179,466,204"/>
+<area shape="rect" id="node4" href="../../d5/df2/app_8cpp.html" title="str/app.cpp" alt="" coords="5,252,93,277"/>
+<area shape="rect" id="node5" href="../../d5/d67/_et_robocon2017_8cpp.html" title="Etrobocon2017クラスの関数を定義 &#160;" alt="" coords="116,252,331,277"/>
 </map>
 </div>
 </div>
@@ -115,7 +120,12 @@ RightNormalCourse.h の依存先関係図:</div>
  }</td></tr>
 <tr class="separator:aae2628787c9dc60a2ae7bab80efa5020"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">列挙型詳解</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>RコースのNormalCourseの処理を行うクラス </p>
+<dl class="section author"><dt>著者</dt><dd>Futa HIRAKOBA </dd></dl>
+
+<p class="definition"> <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html">RightNormalCourse.h</a> に定義があります。</p>
+</div><h2 class="groupheader">列挙型詳解</h2>
 <a id="aae2628787c9dc60a2ae7bab80efa5020"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae2628787c9dc60a2ae7bab80efa5020">&#9670;&nbsp;</a></span>RightStatus</h2>
 
@@ -135,6 +145,7 @@ RightNormalCourse.h の依存先関係図:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>走行場所の状態を保持する列挙型 </p>
 <table class="fieldtable">
 <tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="aae2628787c9dc60a2ae7bab80efa5020a8c5e50fab3748e9c53a6863b3dce1401"></a>STRAIGHT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aae2628787c9dc60a2ae7bab80efa5020ad842028bb5f67a5d8a26ca7720720d3c"></a>CURVE_RIGHT&#160;</td><td class="fielddoc"></td></tr>
@@ -143,7 +154,7 @@ RightNormalCourse.h の依存先関係図:</div>
 <tr><td class="fieldname"><a id="aae2628787c9dc60a2ae7bab80efa5020a615a46af313786fc4e349f34118be111"></a>STOP&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html">RightNormalCourse.h</a> の <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html#l00006">6</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html">RightNormalCourse.h</a> の <a class="el" href="../../d2/dfd/_right_normal_course_8h_source.html#l00015">15</a> 行目に定義があります。</p>
 
 </div>
 </div>

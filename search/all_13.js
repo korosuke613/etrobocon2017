@@ -2,7 +2,7 @@ var searchData=
 [
   ['wait',['wait',['../d4/d87/classev3api_1_1_clock.html#a3d0dff1843a33d71945a1e13f85e20c8',1,'ev3api::Clock']]],
   ['waitstarter',['waitStarter',['../d0/df8/class_et_robocon2017.html#a08ca7af7ec247ee64e6827896a87383a',1,'EtRobocon2017']]],
-  ['walker',['Walker',['../d1/d49/class_walker.html',1,'Walker'],['../d1/d49/class_walker.html#acc0931305bedcf81ff621c31cdf2a92c',1,'Walker::Walker()'],['../d0/df8/class_et_robocon2017.html#ab284c22d89cedc1cfe42b569422cb535',1,'EtRobocon2017::walker()']]],
+  ['walker',['Walker',['../d1/d49/class_walker.html',1,'Walker'],['../d1/d49/class_walker.html#acc0931305bedcf81ff621c31cdf2a92c',1,'Walker::Walker()'],['../da/d29/class_left_course.html#ab356861394cbdde63eef1191b9a229a5',1,'LeftCourse::walker()'],['../df/df1/class_right_course.html#a78019cd04b9b18ef1f3357c7bae47669',1,'RightCourse::walker()']]],
   ['walker_2ecpp',['Walker.cpp',['../d3/d11/_walker_8cpp.html',1,'']]],
   ['walker_2eh',['Walker.h',['../d5/dfc/_walker_8h.html',1,'']]],
   ['wheel_5facross',['wheel_across',['../d4/ddb/class_self_localization.html#a97fd4d363b59842437fbcb0987e6c4a8',1,'SelfLocalization']]],

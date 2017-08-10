@@ -1,4 +1,8 @@
 <map id="LineTracer::runLine" name="LineTracer::runLine">
-<area shape="rect" id="node2" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="190,5,339,31"/>
-<area shape="rect" id="node3" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="387,5,538,31"/>
+<area shape="rect" id="node2" href="$da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="194,5,393,31"/>
+<area shape="rect" id="node6" href="$df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="190,55,398,80"/>
+<area shape="rect" id="node3" href="$da/d29/class_left_course.html#a3c8814e489519247af3fc80ae09f2c48" title="LeftCourse::convertArea" alt="" coords="450,5,616,31"/>
+<area shape="rect" id="node4" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="669,31,818,56"/>
+<area shape="rect" id="node5" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="866,31,1016,56"/>
+<area shape="rect" id="node7" href="$df/df1/class_right_course.html#ad045a67f06f2fcffff9661a2fe5129ab" title="RightCourse::convertArea" alt="" coords="446,55,621,80"/>
 </map>

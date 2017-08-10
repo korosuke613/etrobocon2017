@@ -127,8 +127,9 @@ LeftNormalCourse 連携図</div>
 <tr class="separator:a6f8d0bbb6b73605fb54aa0933b2ed9df inherit pro_attribs_class_normal_course"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html">LeftNormalCourse.h</a> の <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html#l00015">15</a> 行目に定義があります。</p>
+<div class="textblock"><p>LコースのNormalCourseの処理を行うクラス </p>
+
+<p class="definition"> <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html">LeftNormalCourse.h</a> の <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html#l00027">27</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a5a07e4b41de72aaaff4796d286589902"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a07e4b41de72aaaff4796d286589902">&#9670;&nbsp;</a></span>LeftNormalCourse()</h2>
@@ -144,8 +145,9 @@ LeftNormalCourse 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>コンストラクタ。 左エッジである設定をしている </p>
 
-<p class="definition"> <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html">LeftNormalCourse.cpp</a> の <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html#l00003">3</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html">LeftNormalCourse.cpp</a> の <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html#l00009">9</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -172,8 +174,9 @@ LeftNormalCourse 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>現在の走行場所の状態を取得する </p><dl class="section return"><dt>戻り値</dt><dd>現在の走行場所の状態(int型) </dd></dl>
 
-<p class="definition"> <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html">LeftNormalCourse.cpp</a> の <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html#l00058">58</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html">LeftNormalCourse.cpp</a> の <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html#l00064">64</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -191,8 +194,9 @@ LeftNormalCourse 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>走行場所でのPID値を設定する </p><dl class="section return"><dt>戻り値</dt><dd>Goalしたかどうか </dd></dl>
 
-<p class="definition"> <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html">LeftNormalCourse.cpp</a> の <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html#l00008">8</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html">LeftNormalCourse.cpp</a> の <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html#l00014">14</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -201,6 +205,17 @@ LeftNormalCourse 連携図</div>
 <area shape="rect" id="node2" href="../../dc/de1/class_pid.html#aa8626402086bcd10cbb7f581c92300fb" title="Pid::setPid" alt="" coords="280,5,365,31"/>
 <area shape="rect" id="node3" href="../../dd/d88/class_normal_course.html#a643fa714726cffb93ad81f919e5ff140" title="NormalCourse::stop" alt="" coords="253,55,392,80"/>
 <area shape="rect" id="node4" href="../../da/dbb/class_line_tracer.html#a35e228c51d002f08a9a5ea54a3886136" title="LineTracer::setForward" alt="" coords="440,55,599,80"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d5/ddb/class_left_normal_course_a4a366448b8d6e3523a51d41c185eb4fc_icgraph.png" border="0" usemap="#d5/ddb/class_left_normal_course_a4a366448b8d6e3523a51d41c185eb4fc_icgraph" alt=""/></div>
+<map name="d5/ddb/class_left_normal_course_a4a366448b8d6e3523a51d41c185eb4fc_icgraph" id="d5/ddb/class_left_normal_course_a4a366448b8d6e3523a51d41c185eb4fc_icgraph">
+<area shape="rect" id="node2" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="253,12,452,37"/>
+<area shape="rect" id="node3" href="../../da/d29/class_left_course.html#a3c8814e489519247af3fc80ae09f2c48" title="LeftCourse::convertArea" alt="" coords="500,12,666,37"/>
+<area shape="rect" id="node4" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="714,12,863,37"/>
+<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="911,12,1061,37"/>
 </map>
 </div>
 
@@ -231,14 +246,33 @@ LeftNormalCourse 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>現在の走行場所の状態を設定する </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">countL</td><td>左タイヤの回転角 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">countR</td><td>右タイヤの回転角 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>走行場所の状態が変わったかどうか </dd></dl>
 
-<p class="definition"> <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html">LeftNormalCourse.cpp</a> の <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html#l00043">43</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html">LeftNormalCourse.cpp</a> の <a class="el" href="../../df/da9/_left_normal_course_8cpp_source.html#l00049">49</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/ddb/class_left_normal_course_a8278a179a43a33ac616f13f0d7276ffa_cgraph.png" border="0" usemap="#d5/ddb/class_left_normal_course_a8278a179a43a33ac616f13f0d7276ffa_cgraph" alt=""/></div>
 <map name="d5/ddb/class_left_normal_course_a8278a179a43a33ac616f13f0d7276ffa_cgraph" id="d5/ddb/class_left_normal_course_a8278a179a43a33ac616f13f0d7276ffa_cgraph">
 <area shape="rect" id="node2" href="../../d7/d82/class_distance.html#a039334c729b1da2716a5dbbcf2631d36" title="Distance::getDistanceTotal" alt="" coords="226,12,405,37"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d5/ddb/class_left_normal_course_a8278a179a43a33ac616f13f0d7276ffa_icgraph.png" border="0" usemap="#d5/ddb/class_left_normal_course_a8278a179a43a33ac616f13f0d7276ffa_icgraph" alt=""/></div>
+<map name="d5/ddb/class_left_normal_course_a8278a179a43a33ac616f13f0d7276ffa_icgraph" id="d5/ddb/class_left_normal_course_a8278a179a43a33ac616f13f0d7276ffa_icgraph">
+<area shape="rect" id="node2" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="226,12,425,37"/>
+<area shape="rect" id="node3" href="../../da/d29/class_left_course.html#a3c8814e489519247af3fc80ae09f2c48" title="LeftCourse::convertArea" alt="" coords="473,12,639,37"/>
+<area shape="rect" id="node4" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="687,12,836,37"/>
+<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="884,12,1035,37"/>
 </map>
 </div>
 
@@ -265,7 +299,7 @@ LeftNormalCourse 連携図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html">LeftNormalCourse.h</a> の <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html#l00023">23</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html">LeftNormalCourse.h</a> の <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html#l00053">53</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -289,7 +323,7 @@ LeftNormalCourse 連携図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html">LeftNormalCourse.h</a> の <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html#l00022">22</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html">LeftNormalCourse.h</a> の <a class="el" href="../../da/dc8/_left_normal_course_8h_source.html#l00052">52</a> 行目に定義があります。</p>
 
 </div>
 </div>

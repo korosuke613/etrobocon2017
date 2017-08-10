@@ -4,7 +4,7 @@ var searchData=
   ['left_5fmotor_5fold_5fangle',['left_motor_old_angle',['../d4/ddb/class_self_localization.html#a6f960bd73aafee308d9cfed9b61d163f',1,'SelfLocalization']]],
   ['left_5fmotor_5frotation_5fangle',['left_motor_rotation_angle',['../d4/ddb/class_self_localization.html#aa040afaa7b8691d35ed442ba4cb564ef',1,'SelfLocalization']]],
   ['left_5fwheel_5fmoving_5fdistance',['left_wheel_moving_distance',['../d4/ddb/class_self_localization.html#a80cda5126d2d7133afe2525b12f73573',1,'SelfLocalization']]],
-  ['leftcourse',['LeftCourse',['../da/d29/class_left_course.html',1,'']]],
+  ['leftcourse',['LeftCourse',['../da/d29/class_left_course.html',1,'LeftCourse'],['../da/d29/class_left_course.html#ab2db5427367db3c3b16af9c417a0ea4c',1,'LeftCourse::LeftCourse()']]],
   ['leftcourse_2ecpp',['LeftCourse.cpp',['../d7/dc2/_left_course_8cpp.html',1,'']]],
   ['leftcourse_2eh',['LeftCourse.h',['../d3/d13/_left_course_8h.html',1,'']]],
   ['leftmotordegold',['leftMotorDegOld',['../d7/d82/class_distance.html#aba15417fe2f9fb23c452e4145ff6d2d5',1,'Distance']]],
