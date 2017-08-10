@@ -7,6 +7,7 @@
 #include "Lifter.h"
 #include "Emoter.h"
 #include "LeftCourse.h"
+#include "RightCourse.h"
 
 
 using namespace ev3api;

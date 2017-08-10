@@ -16,7 +16,8 @@ Walker.o \
 Lifter.o \
 SelfLocalization.o \
 Emoter.o \
-LeftCourse.o
+LeftCourse.o \
+RightCourse.o
 
 SRCLANG := c++
 

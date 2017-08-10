@@ -41,9 +41,15 @@ void EtRobocon2017::loop()
     SonarAlert sonarAlert( 4 );
     Lifter lifter;
     Emoter emoter;
-    LeftCourse leftCourse;
 
+// Rコースを走らせるときは1, Lコースを走らせるときは0
+#if 1
+    RightCourse rightCourse;
+    rightCourse.convertArea();
+#elif
+    LeftCourse leftCourse;
     leftCourse.convertArea();
+#endif
 }
 
 void EtRobocon2017::waitStarter( int bluetooth_command )
