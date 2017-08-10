@@ -1,3 +1,8 @@
+/**
+ * @file LeftCourse.cpp
+ * @brief LeftCourseクラスの関数を定義<br>
+ * @author Futa HIRAKOBA
+ */
 #include "LeftCourse.h"
 
 LeftCourse::LeftCourse():
@@ -15,7 +20,7 @@ void LeftCourse::convertArea(){
 void LeftCourse::runNormalCourse(){
    	LeftNormalCourse normalCourse;
 	bool isNormalCourse;
-    // 左レーン時
+    // NormalCourseを抜けるまでループする
 	while ( 1 ) {
         sl.update();
         sl.writing_current_coordinates();

@@ -1,3 +1,8 @@
+/**
+ * @file RightCourse.cpp
+ * @brief RightCourseクラスの関数を定義<br>
+ * @author Futa HIRAKOBA
+ */
 #include "RightCourse.h"
 
 RightCourse::RightCourse():
@@ -15,7 +20,7 @@ void RightCourse::convertArea(){
 void RightCourse::runNormalCourse(){
 	RightNormalCourse normalCourse;
 	bool isNormalCourse;
-    // 左レーン時
+    // NormalCourseを抜けるまでループする
 	while ( 1 ) {
         sl.update();
         sl.writing_current_coordinates();

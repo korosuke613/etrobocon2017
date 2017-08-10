@@ -18,12 +18,18 @@
  * tail_motor   = EV3_PORT_D;
  */
 
+/**
+ * @file Etrobocon2017.cpp
+ * @brief Etrobocon2017クラスの関数を定義<br>
+ * @author Futa HIRAKOBA
+ */
 
 EtRobocon2017::EtRobocon2017():
     touchSensor( PORT_1 )
 {
     light_white = 60;
     light_black = 0;
+    /** TODO Courseクラスに移す */
     ev3_speaker_set_volume(100);
 }
 
