@@ -1,4 +1,10 @@
-#include "LeftNormalCourse.h"
+/**
+ * @file LeftNormalCourse.cpp
+ * @brief LeftNormalCourseクラスの関数を定義<br>
+ * @author Futa HIRAKOBA
+ */
+ 
+ #include "LeftNormalCourse.h"
 
 LeftNormalCourse::LeftNormalCourse(){
     lineTracer.isLeftsideLine(true);

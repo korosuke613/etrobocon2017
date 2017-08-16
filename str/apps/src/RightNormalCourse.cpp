@@ -1,3 +1,9 @@
+/**
+ * @file RightNormalCourse.cpp
+ * @brief RightNormalCourseクラスの関数を定義<br>
+ * @author Futa HIRAKOBA
+ */
+
 #include "RightNormalCourse.h"
 
 RightNormalCourse::RightNormalCourse(){
