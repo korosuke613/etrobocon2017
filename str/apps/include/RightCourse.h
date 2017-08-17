@@ -19,6 +19,16 @@
 using namespace ev3api;
 
 /**
+* 走行場所の状態を保持する列挙型
+*/
+enum struct ShinkansenStatus {
+    BEFORE_SHINKANSEN,
+    FIRST_RAIL,
+    FIRST_LINE,
+    STOP
+};
+
+/**
 * Rコースを走らせるときに呼び出されるクラス
 */
 class RightCourse {

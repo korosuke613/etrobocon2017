@@ -23,7 +23,9 @@ void RightCourse::convertArea(){
 void RightCourse::runShinkansen(){
     int16_t distance;    
     Shinkansen shinkansen;
-    
+    LineTracer lineTracer;
+    lineTracer.isLeftsideLine(false);
+    int16_t time_count = 0;
     while(1){
         distance = sonarSensor.getDistance();
         
@@ -32,16 +34,39 @@ void RightCourse::runShinkansen(){
             case ShinkansenStatus::BEFORE_SHINKANSEN:
                 if(shinkansen.checkPass(distance)){
                     ev3_speaker_play_tone (NOTE_FS6, 100);
-                    shinkansenStatus = ShinkansenStatus::FIRST_BLOCK;
+                    shinkansenStatus = ShinkansenStatus::FIRST_RAIL;
                 }
                 break;
-            case ShinkansenStatus::FIRST_BLOCK:
-            
+            case ShinkansenStatus::FIRST_RAIL:
+                walker.moveAngle(10, 200);
+                shinkansenStatus = ShinkansenStatus::FIRST_LINE;
+                break;
+            case ShinkansenStatus::FIRST_LINE:
+                lineTracer.speedControl.setPid ( 4.0, 0.8, 0.1, 20.0 );
+                lineTracer.turnControl.setPid ( 4.0, 2.0, 0.096, 20.0 );
+                lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
+
+                if(lineTracer.getForward() < 0){
+                    walker.run(0, 0);
+                }else{
+                    walker.run( lineTracer.getForward(), lineTracer.getTurn());
+                }
+                if(colorSensor.getBrightness() < 7 && time_count > 125){
+                    ev3_speaker_play_tone (NOTE_FS6, 100);                
+                    shinkansenStatus = ShinkansenStatus::STOP;
+                }
+                time_count++;
+                break;                
+            case ShinkansenStatus::STOP:
                 break;
             default:
                 break;
         }
 
+        if(ev3_button_is_pressed(BACK_BUTTON) || shinkansenStatus == ShinkansenStatus::STOP){
+            walker.run(0, 0);
+            break;
+        }
         tslp_tsk(4); // 4msec周期起動      
     }
     //新幹線が通った後クロスのところまで行く処理

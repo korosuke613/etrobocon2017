@@ -10,14 +10,6 @@
 #include <cstdint>
 
 /**
-* 走行場所の状態を保持する列挙型
-*/
-enum struct ShinkansenStatus {
-    BEFORE_SHINKANSEN,
-    FIRST_BLOCK
-};
-
-/**
 * RコースのShinkansenの処理を行うクラス
 */
 class Shinkansen{
