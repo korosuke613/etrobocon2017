@@ -1,8 +1,10 @@
 #ifndef _INC_NODE
 #define _INC_NODE
 
+#include "BlockColor.h"
+
 #include<cstdlib>
-#include<iostream>
+#include<array>
 #include<vector>
 
 using namespace std;
@@ -10,22 +12,20 @@ using namespace std;
 class Node{
 private:
 	int nodeNum;
-	char state;
-	vector<int> nextNode;
+	vector<Node> neighbor;
 	int cost;
-	char nodeColor[8];
+	BlockColor color;
+	bool hasBlock;
 
 public:
+	Node() = default;
 	Node(int num);
-	void setEdge(int nodeNum);
-	void setState(char state);
-	char getState();
-	int distance(Node* node);
-	vector<int> getNextNode();
-	int getNodeNum();
-	int getCost();
-	char* getNodeColor();
-	void setCost(int num);
+	void setNeighbor(vector<Node> nodes);
+	vector<Node> getNeighbor();
+	int getNum();
+	BlockColor getColor();
+	void setHasBlock(bool exists);
+	bool getHasBlock();
 	~Node();
 
 };

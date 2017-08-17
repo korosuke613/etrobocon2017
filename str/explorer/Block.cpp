@@ -3,25 +3,30 @@
 #include<string.h>
 
 //コンストラクタ
-Block::Block(int nodeNum){
-	position = nodeNum;
+Block::Block(int num)
+{
+	position = num;
 }
 
 //デストラクタ
 Block::~Block(){}
 
-void Block::setPosition(int nodeNum){
+void Block::setPosition(int nodeNum)
+{
 	position = nodeNum;
 }
 
-void Block::setColor(char color[8]){
-	strcpy(blockColor, color);
+void Block::setColor(BlockColor blockColor)
+{
+	color = blockColor;
 }
 
-int Block::getPosition(){
+int Block::getPosition()
+{
 	return position;
 }
 
-char* Block::getBlockColor(){
-	return blockColor;
+BlockColor Block::getBlockColor()
+{
+	return color;
 }

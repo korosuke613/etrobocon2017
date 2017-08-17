@@ -1,93 +1,70 @@
 
 #include"Node.h"
-#include<string.h>
+
 
 //コンストラクタ
-Node::Node(int num){
-	state = '*';
+Node::Node(int num)
+{
 	nodeNum = num;
+	hasBlock = false;
 	
-	if(num == 0 || num == 1 || num == 4 || num == 5){
-		strcpy(nodeColor, "red");
-	}else if(num == 2 || num == 3 || num == 6 || num == 7){
-		strcpy(nodeColor, "yellow");
-	}else if(num == 8 || num == 9 || num == 12 || num == 13){
-		strcpy(nodeColor, "blue");
-	}else if(num == 10 || num == 11 || num == 14 || num == 15){
-		strcpy(nodeColor, "green");
+	// ノードの色設定
+	if(num == 1 || num == 7 || num == 8 || num == 14)
+	{
+		color = BlockColor::Red;
+	}else if(num == 3 || num == 5 || num == 13 || num == 15)
+	{
+		color = BlockColor::Yellow;
+	}else if(num == 2 || num == 4 || num == 9 || num == 12)
+	{
+		color = BlockColor::Blue;
+	}else if(num == 6 || num == 10 || num == 11)
+	{
+		color = BlockColor::Green;
+	}else if(num == 0)
+	{
+		color = BlockColor::Black;
 	}
 
-	//cout << nodeColor << endl;
 }
 
 //デストラクタ
 Node::~Node(){}
 
+
 //周囲のノードの設定
-void Node::setEdge(int nodeNum){
-	int target = nodeNum-5;
-
-	for(int i=0; i<11; i++){
-		if((i !=0 && i%4 == 3) || target+i == nodeNum){
-			continue;
-		}
-		nextNode.push_back(target+i);
-	}
-
-	//隣り合わないノードの排除
-	if(nextNode[0]%4 == 3){
-		nextNode[0] = nextNode[3] = nextNode[5] = -1;
-	}
-
-	if(nextNode[2]%4 == 0){
-		nextNode[2] = nextNode[4] = nextNode[7] = -1;
-	}
-	
-	int count = 0;
-	while(count < (int )nextNode.size()){
-		if(nextNode[count] < 0 || nextNode[count] > 15){
-			nextNode.erase(nextNode.begin()+count);
-			count = count-1;
-		}
-		count++;
-	}
-
+void Node::setNeighbor(vector<Node> nodes)
+{
+	neighbor = nodes;
 	return;
 }
 
-void Node::setState(char state){
-	this->state = state;
-	return;
+// 隣接ノード取得
+vector<Node> Node::getNeighbor()
+{
+	return neighbor;
 }
 
-char Node::getState(){
-	return state;
-}
-
-//任意のノードまでの距離の計算
-int Node::distance(Node* node){
-	int x = (nodeNum%4 - node->nodeNum%4)*(nodeNum%4 - node->nodeNum%4);
-	int y = (nodeNum/4 - node->nodeNum/4)*(nodeNum/4 - node->nodeNum/4);
-
-	return x+y;
-}
-
-vector<int> Node::getNextNode(){
-	return nextNode;
-}
-
-int Node::getNodeNum(){
+// ノードの位置番号取得
+int Node::getNum()
+{
 	return nodeNum;
 }
 
-int Node::getCost(){
-	return cost;
+// ノードの色取得
+BlockColor Node::getColor()
+{
+	return color; 
 }
 
-char* Node::getNodeColor(){
-	return nodeColor; 
+// ノードがブロックを持っているかの判定の変化
+void Node::setHasBlock(bool exists)
+{
+	hasBlock = exists;
 }
 
-void Node::setCost(int num){
-	cost = num;
+bool Node::getHasBlock()
+{
+	return hasBlock;
 }
+

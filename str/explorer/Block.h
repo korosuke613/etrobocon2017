@@ -1,23 +1,24 @@
 #ifndef _INC_BLOCK
 #define _INC_BLOCK
 
-#include<cstdlib>
-#include<iostream>
+#include <cstdlib>
+
+#include "BlockColor.h"
 
 using namespace std;
 
 class Block{
 private:
 	int position;
-	char* blockColor;
+	BlockColor color;
 	
 public:
-	enum Color{Black, Red, Yellow, Blue, Green};
+	Block() = default;
 	Block(int nodeNum);
 	void setPosition(int nodeNum);
-	void setColor(char color[8]);
+	void setColor(BlockColor blockColor);
 	int getPosition();
-	char* getBlockColor();
+	BlockColor getBlockColor();
 	~Block();
 };
 
