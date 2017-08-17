@@ -8,9 +8,12 @@
 #define __RIGHT_COURSE__
 
 #include "ev3api.h"
+#include "util.h"
 #include "Walker.h"
 #include "ColorSensor.h"
+#include "SonarSensor.h"
 #include "RightNormalCourse.h"
+#include "Shinkansen.h"
 #include "SelfLocalization.h"
 
 using namespace ev3api;
@@ -30,9 +33,8 @@ public:
 	void runShinkansen();
 private:
 	Walker walker;
-    ColorSensor colorSensor;
-    /** 自己位置推定 インスタンス 初期化*/
-    SelfLocalization sl;
+	ColorSensor colorSensor;
+	SonarSensor sonarSensor;
 };
 
 #endif
