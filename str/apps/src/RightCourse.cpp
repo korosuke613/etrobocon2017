@@ -20,19 +20,13 @@ void RightCourse::convertArea(){
 void RightCourse::runShinkansen(){
     int16_t distance;    
     Shinkansen shinkansen;
-    char msg[32];
-    msg_f("Not passed", 4);            
+         
     while(1){
         distance = sonarSensor.getDistance();
-        sprintf(msg, "Distance: %d", distance); 
-        msg_f(msg, 5);
-        if(shinkansen.checkPass(distance)){
-            ev3_speaker_play_tone (NOTE_FS6, 100);
-            msg_f("Has Has Has passed", 4);                        
-        }
+        if(shinkansen.run(distance)) ev3_speaker_play_tone (NOTE_FS6, 100);
+
         tslp_tsk(4); // 4msec周期起動      
     }
-    //新幹線が通るまで待つ処理
     //新幹線が通った後クロスのところまで行く処理
     //90度回転させる処理
     //腕を少し上げる処理
