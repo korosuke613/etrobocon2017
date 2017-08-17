@@ -18,7 +18,13 @@ void RightCourse::convertArea(){
 }
 
 void RightCourse::runShinkansen(){
-    //未実装
+    //新幹線が通るまで待つ処理
+    //新幹線が通った後クロスのところまで行く処理
+    //90度回転させる処理
+    //腕を少し上げる処理
+    //進む処理
+    //ブロックの手前で止まる処理
+    //色を見る処理
 }
 
 void RightCourse::runNormalCourse(){
