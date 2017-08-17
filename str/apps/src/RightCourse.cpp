@@ -17,6 +17,10 @@ void RightCourse::convertArea(){
 	//Park
 }
 
+void RightCourse::runShinkansen(){
+    //未実装
+}
+
 void RightCourse::runNormalCourse(){
 	RightNormalCourse normalCourse;
 	bool isNormalCourse;

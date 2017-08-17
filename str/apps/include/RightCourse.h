@@ -26,6 +26,8 @@ public:
 	void convertArea();
 	/** NormalCourseエリアの処理 */
 	void runNormalCourse();
+	/** Shinkansenエリアの処理 */
+	void runShinkansen();
 private:
 	Walker walker;
     ColorSensor colorSensor;
