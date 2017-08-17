@@ -9,28 +9,10 @@
 Shinkansen::Shinkansen():
     time_counter(0),
     isInFrontOf(false), 
-    status(ShinkansenStatus::BEFORE_SHINKANSEN),
     TO_PASS(200),
     PASS_THRESHOLD(TO_PASS/10),
     DISTANCE_THRESHOLD(30){
 
-}
-
-bool Shinkansen::run(std::int16_t distance)
-{
-    bool hasChange = false;
-    switch(status){
-        //新幹線が通るまで待つ処理
-        case ShinkansenStatus::BEFORE_SHINKANSEN:
-            if(checkPass(distance)){
-                hasChange = true;
-                status = ShinkansenStatus::FIRST_BLOCK;
-            }
-            break;
-        default:
-            break;
-    }
-    return hasChange;
 }
 
 bool Shinkansen::checkPass(std::int16_t distance)

@@ -6,7 +6,10 @@
 #include "RightCourse.h"
 
 RightCourse::RightCourse():
-	 colorSensor( PORT_3 ), sonarSensor( PORT_2 ){}
+     colorSensor( PORT_3 ), 
+     sonarSensor( PORT_2 ),
+     shinkansenStatus(ShinkansenStatus::BEFORE_SHINKANSEN){
+}
 
 /**
  *Rコースの走行範囲の切り替えを行う
@@ -20,10 +23,24 @@ void RightCourse::convertArea(){
 void RightCourse::runShinkansen(){
     int16_t distance;    
     Shinkansen shinkansen;
-         
+    
     while(1){
         distance = sonarSensor.getDistance();
-        if(shinkansen.run(distance)) ev3_speaker_play_tone (NOTE_FS6, 100);
+        
+        switch(shinkansenStatus){
+            //新幹線が通るまで待つ処理
+            case ShinkansenStatus::BEFORE_SHINKANSEN:
+                if(shinkansen.checkPass(distance)){
+                    ev3_speaker_play_tone (NOTE_FS6, 100);
+                    shinkansenStatus = ShinkansenStatus::FIRST_BLOCK;
+                }
+                break;
+            case ShinkansenStatus::FIRST_BLOCK:
+            
+                break;
+            default:
+                break;
+        }
 
         tslp_tsk(4); // 4msec周期起動      
     }

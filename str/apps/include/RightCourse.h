@@ -35,6 +35,7 @@ private:
 	Walker walker;
 	ColorSensor colorSensor;
 	SonarSensor sonarSensor;
+	ShinkansenStatus shinkansenStatus;
 };
 
 #endif
