@@ -14,6 +14,7 @@
 #include "SonarSensor.h"
 #include "RightNormalCourse.h"
 #include "Shinkansen.h"
+#include "Distance.h"
 #include "SelfLocalization.h"
 
 using namespace ev3api;
@@ -24,7 +25,8 @@ using namespace ev3api;
 enum struct ShinkansenStatus {
     BEFORE_SHINKANSEN,
     FIRST_RAIL,
-    FIRST_LINE,
+	FIRST_LINE,
+	FIRST_RIGHT_ANGLE,
     STOP
 };
 
@@ -46,6 +48,7 @@ private:
 	ColorSensor colorSensor;
 	SonarSensor sonarSensor;
 	ShinkansenStatus shinkansenStatus;
+	Distance distance;
 };
 
 #endif

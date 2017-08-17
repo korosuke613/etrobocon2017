@@ -21,18 +21,18 @@ void RightCourse::convertArea(){
 }
 
 void RightCourse::runShinkansen(){
-    int16_t distance;    
+    int16_t distance_shinkansen;    
     Shinkansen shinkansen;
     LineTracer lineTracer;
     lineTracer.isLeftsideLine(false);
     int16_t time_count = 0;
     while(1){
-        distance = sonarSensor.getDistance();
+        distance_shinkansen = sonarSensor.getDistance();
         
         switch(shinkansenStatus){
             //新幹線が通るまで待つ処理
             case ShinkansenStatus::BEFORE_SHINKANSEN:
-                if(shinkansen.checkPass(distance)){
+                if(shinkansen.checkPass(distance_shinkansen)){
                     ev3_speaker_play_tone (NOTE_FS6, 100);
                     shinkansenStatus = ShinkansenStatus::FIRST_RAIL;
                 }
@@ -40,23 +40,29 @@ void RightCourse::runShinkansen(){
             case ShinkansenStatus::FIRST_RAIL:
                 walker.moveAngle(10, 200);
                 shinkansenStatus = ShinkansenStatus::FIRST_LINE;
+                ev3_speaker_play_tone (NOTE_FS6, 100);
+                distance.resetDistance(walker.get_count_L(), walker.get_count_R());
                 break;
             case ShinkansenStatus::FIRST_LINE:
                 lineTracer.speedControl.setPid ( 4.0, 0.8, 0.1, 20.0 );
-                lineTracer.turnControl.setPid ( 4.0, 2.0, 0.096, 20.0 );
+                lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 20.0 );
                 lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
-
+                lineTracer.setTurn(lineTracer.turnControl.calculateTurnForPid(50, colorSensor.getBrightness())*lineTracer.minus);
                 if(lineTracer.getForward() < 0){
                     walker.run(0, 0);
                 }else{
                     walker.run( lineTracer.getForward(), lineTracer.getTurn());
                 }
-                if(colorSensor.getBrightness() < 7 && time_count > 125){
+                if(distance.getDistanceCurrent(walker.get_count_L(), walker.get_count_R()) > 300){
                     ev3_speaker_play_tone (NOTE_FS6, 100);                
-                    shinkansenStatus = ShinkansenStatus::STOP;
+                    shinkansenStatus = ShinkansenStatus::FIRST_RIGHT_ANGLE;
                 }
                 time_count++;
-                break;                
+                break;
+            case ShinkansenStatus::FIRST_RIGHT_ANGLE:
+                walker.angleChange(90, -1);
+                shinkansenStatus = ShinkansenStatus::STOP;
+                break;
             case ShinkansenStatus::STOP:
                 break;
             default:
