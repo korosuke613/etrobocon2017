@@ -66,11 +66,11 @@ TEST( LeftNormalCourseTest, runNormalCourseTest1 )
     lnc.statusCheck(0, 0);
     lnc.statusCheck(20000, 20000);
 
-    lnc.runNormalCourse();
+    lnc.runNormalCourse(20000,20000,40);
 
     value = lnc.getStatus();
 
-    ASSERT_EQ(value, (int)LeftStatus::STOP);
+    ASSERT_EQ(value, (int)LeftStatus::EDGE_CHANGE);
 }
 
 // STOPモードになるまではtrueを返す。
@@ -82,7 +82,7 @@ TEST( LeftNormalCourseTest, runNormalCourseTest2 )
     lnc.statusCheck(0, 0);
     lnc.statusCheck(10000, 10000);
 
-    value = lnc.runNormalCourse();
+    value = lnc.runNormalCourse(10000,10000,40);
 
     ASSERT_EQ(value, true);
 }
@@ -97,8 +97,10 @@ TEST( LeftNormalCourseTest, runNormalCourseTest3 )
     lnc.statusCheck(10000, 10000);
     lnc.statusCheck(20000, 20000);
 
-    value = lnc.runNormalCourse();
-
+    for(int i = 0; i<200; i++){
+        lnc.statusCheck(20000, 20000);
+        value = lnc.runNormalCourse(20000,20000,50);
+    }
     ASSERT_EQ(value, false);
 }
 
@@ -111,7 +113,7 @@ TEST( LeftNormalCourseTest, runNormalCourseTest4 )
     lnc.statusCheck(0, 0);
     lnc.statusCheck(3100, 3100);
 
-    lnc.runNormalCourse();
+    lnc.runNormalCourse(3100,3100,40);
 
     value = lnc.getStatus();
 
@@ -128,7 +130,7 @@ TEST( LeftNormalCourseTest, runNormalCourseTest6 )
     lnc.statusCheck(0, 0);
     lnc.statusCheck(5000, 5000);
 
-    lnc.runNormalCourse();
+    lnc.runNormalCourse(5000,5000,40);
 
     value = lnc.getStatus();
 
@@ -144,7 +146,7 @@ TEST( LeftNormalCourseTest, runNormalCourseTest7 )
     lnc.statusCheck(0, 0);
     lnc.statusCheck(7400, 7400);
 
-    lnc.runNormalCourse();
+    lnc.runNormalCourse(7400,7400,40);
 
     value = lnc.getStatus();
 
@@ -161,7 +163,7 @@ TEST( LeftNormalCourseTest, runNormalCourseTest8 )
     lnc.statusCheck(0, 0);
     lnc.statusCheck(10000, 10000);
 
-    lnc.runNormalCourse();
+    lnc.runNormalCourse(10000,10000,40);
 
     value = lnc.getStatus();
 
@@ -177,27 +179,27 @@ TEST( LeftNormalCourseTest, runNormalCourseTest9 )
     lnc.statusCheck(0, 0);
     lnc.statusCheck(12000, 12000);
 
-    lnc.runNormalCourse();
+    lnc.runNormalCourse(12000,12000,40);
 
     value = lnc.getStatus();
 
     ASSERT_EQ(value, (int)LeftStatus::CURVE_RIGHT);
 }
 
-// 15500まではSTRAIGHTモードになる。
+// 14750まではNEUTRALモードになる。
 TEST( LeftNormalCourseTest, runNormalCourseTest10 )
 {
     LeftNormalCourse lnc;
     int value;
 
     lnc.statusCheck(0, 0);
-    lnc.statusCheck(15000, 15000);
+    lnc.statusCheck(14500, 14500);
 
-    lnc.runNormalCourse();
+    lnc.runNormalCourse(14750,14750,40);
 
     value = lnc.getStatus();
 
-    ASSERT_EQ(value, (int)LeftStatus::STRAIGHT);
+    ASSERT_EQ(value, (int)LeftStatus::NEUTRAL);
 }
 
 // 右にそれたらturnが負の値になる
@@ -208,7 +210,7 @@ TEST( LeftNormalCourseTest, edgeChangeTest1 )
 
     lnc.statusCheck(0, 0);
 
-    lnc.runNormalCourse();
+    lnc.runNormalCourse(0,0,40);
     lnc.lineTracer.runLine(0, 0, 100);
     value = lnc.lineTracer.getTurn();
 
@@ -223,7 +225,7 @@ TEST( LeftNormalCourseTest, edgeChangeTest2 )
 
     lnc.statusCheck(0, 0);
 
-    lnc.runNormalCourse();
+    lnc.runNormalCourse(0,0,40);
     lnc.lineTracer.runLine(0, 0, 0);
     value = lnc.lineTracer.getTurn();
 
