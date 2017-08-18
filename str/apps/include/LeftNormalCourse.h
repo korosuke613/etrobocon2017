@@ -18,6 +18,9 @@ enum struct LeftStatus {
     CURVE_RIGHT,
     CURVE_LEFT,
     CURVE_LEFT_SHORT,
+    NEUTRAL,
+    EDGE_CHANGE,
+    EDGE_RESET,
     STOP
 };
 
@@ -33,7 +36,7 @@ public:
     * 走行場所でのPID値を設定する 
     * @return Goalしたかどうか
     */
-   	bool runNormalCourse ();
+   	bool runNormalCourse (int32_t countL, int32_t countR, int8_t light_value);
 
     /**
     * 現在の走行場所の状態を設定する
@@ -51,6 +54,8 @@ public:
 private:
     LeftStatus status;
     LeftStatus old_status;
+    bool isChangedEdge;
+    int16_t time_count;
 };
 
 #endif

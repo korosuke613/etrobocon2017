@@ -49,10 +49,10 @@ void EtRobocon2017::loop()
     Emoter emoter;
 
 // Rコースを走らせるときは1, Lコースを走らせるときは0
-#if 1
+#if 0
     RightCourse rightCourse;
     rightCourse.convertArea();
-#elif
+#else
     LeftCourse leftCourse;
     leftCourse.convertArea();
 #endif

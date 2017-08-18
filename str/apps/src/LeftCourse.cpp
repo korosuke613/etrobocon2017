@@ -25,8 +25,7 @@ void LeftCourse::runNormalCourse(){
         sl.update();
         sl.writing_current_coordinates();
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
-        isNormalCourse = normalCourse.runNormalCourse();
-        normalCourse.lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
+        isNormalCourse = normalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
         
         if(normalCourse.lineTracer.getForward() < 0){
             walker.run(0, 0);
