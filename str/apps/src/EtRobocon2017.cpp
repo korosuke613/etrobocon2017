@@ -42,9 +42,12 @@ void EtRobocon2017::loop()
     RightNormalCourse rightNormalCourse;
     Lifter lifter;
     Emoter emoter;
+	PuzzleLineTracer puzzleLineTracer ;
 
     // 左レーン時
-    leftNormalCourse.runNormalCourse();
+    //leftNormalCourse.runNormalCourse();
+	puzzleLineTracer.preparatePuzzle () ;
+	puzzleLineTracer.puzzleLineTrace ( 10, 12 ) ;	// test
     
     // 右レーン時
     //rightNormalCourse.runNormalCourse();

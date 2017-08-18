@@ -10,6 +10,7 @@
 #include "NormalCourse.h"
 #include "LeftNormalCourse.h"
 #include "RightNormalCourse.h"
+#include "PuzzleLineTracer.h"
 
 using namespace ev3api;
 

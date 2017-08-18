@@ -15,7 +15,8 @@ Distance.o \
 Walker.o \
 Lifter.o \
 SelfLocalization.o \
-Emoter.o
+Emoter.o \
+PuzzleLineTracer.o
 
 SRCLANG := c++
 
@@ -26,7 +27,7 @@ INCLUDES += \
 -I$(mkfile_path)apps
 
 INCLUDES += \
--I$(mkfile_path)app
+-I$(mkfile_path)app \
 -I$(mkfile_path)apps/commons
 
 
