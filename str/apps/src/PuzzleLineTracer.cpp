@@ -1,6 +1,8 @@
 #include "PuzzleLineTracer.h"
 
-PuzzleLineTracer::PuzzleLineTracer () {
+PuzzleLineTracer::PuzzleLineTracer ():
+	colorSensor(PORT_3),
+	traceDistance(0){
 	ev3_speaker_set_volume ( 100 ) ;
 }
 
@@ -8,14 +10,15 @@ void PuzzleLineTracer::preparatePuzzle ( void )
 {
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 	lineTracer.isLeftsideLine ( false ) ;
+	distance.resetDistance(walker.get_count_L(), walker.get_count_R());
 	while ( traceDistance < 1760 ) {
-        forward = lineTracer.speedControl.calculateSpeedForPid();
-		traceDistance = distance.getDistanceTotal();
+        forward = lineTracer.speedControl.calculateSpeedForPid(walker.get_count_L(), walker.get_count_R());
+		traceDistance = distance.getDistanceCurrent(walker.get_count_L(), walker.get_count_R());
 		lineTracer.setForward( forward );
 		lineTracer.speedControl.setPid ( 2.4, 4.8, 0.054, 60.0 );
 		lineTracer.turnControl.setPid ( 2.4, 0.8, 0.02, 45.0 );
-		lineTracer.runLine () ;
-		if (ev3_button_is_pressed(BACK_BUTTON)) break;
+		lineTracer.runLine (walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness()) ;
+		walker.run( lineTracer.getForward(), lineTracer.getTurn());
 	}
     lineTracer.setForward( -1 ) ;
 }
@@ -31,7 +34,7 @@ void PuzzleLineTracer::puzzleLineTrace ( int8_t currentPosition, int8_t nextPosi
 	// 行先への絶対角を取得する
 	nextDegree = puzzleConnectPosition[currentPosition][destinatePosition][DEGREE] ;
 	// 行先までの距離を取得する
-	traceDistance = distance.getDistanceCurrent () ;
+	traceDistance = distance.getDistanceCurrent (walker.get_count_L(), walker.get_count_R()) ;
 	nextDistance = puzzleConnectPosition[currentPosition][destinatePosition][DISTANCE] + traceDistance ;
 	// 現在の絶対角と行先への絶対角から車体を動かす角度を計算する
 	moveDegree = currentDegree - nextDegree ;
@@ -45,7 +48,7 @@ void PuzzleLineTracer::puzzleLineTrace ( int8_t currentPosition, int8_t nextPosi
 	msg_f ( msg, 5 ) ;
     sprintf ( msg, "Position>Current:%d,Next:%d", currentPosition, destinatePosition ) ; 
     msg_f ( msg, 6 ) ;
-	sprintf ( msg, "Distance>Next:%d,Trace:%d", nextDistance, traceDistance ) ;
+	sprintf ( msg, "Distance>Next:%ld,Trace:%ld", nextDistance, traceDistance ) ;
 	msg_f ( msg, 7 ) ;
 	// 車体を動かして角度を合わせる
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
@@ -60,12 +63,13 @@ void PuzzleLineTracer::puzzleLineTrace ( int8_t currentPosition, int8_t nextPosi
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 	msg_f ( "OK", 8 ) ;
 	while ( traceDistance < nextDistance ) {
-		forward = lineTracer.speedControl.calculateSpeedForPid () ;
-		traceDistance = distance.getDistanceCurrent () ;
+		forward = lineTracer.speedControl.calculateSpeedForPid (walker.get_count_L(), walker.get_count_R()) ;
+		traceDistance = distance.getDistanceCurrent (walker.get_count_L(), walker.get_count_R()) ;
 		lineTracer.setForward ( forward ) ;
 		lineTracer.speedControl.setPid ( 2.4, 4.8, 0.054, 60.0 );
 		lineTracer.turnControl.setPid ( 2.4, 0.8, 0.02, 45.0 );
-		lineTracer.runLine () ;
+		lineTracer.runLine (walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness()) ;
+		walker.run( lineTracer.getForward(), lineTracer.getTurn());		
 	}
 	lineTracer.setForward ( -1 ) ;
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;

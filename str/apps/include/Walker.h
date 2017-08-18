@@ -12,7 +12,6 @@ public:
   Walker();
   void stop();
   void run(int8_t pwm, int8_t turn);
-  void rotate ( int8_t ) ;
   int edgeChange();
   void moveAngle(int8_t pwm, int angle);
   void angleChange(int angle, int rotation);

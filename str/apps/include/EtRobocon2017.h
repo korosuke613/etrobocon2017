@@ -1,3 +1,8 @@
+/**
+ * @file EtRobocon2017.h
+ * @brief main的なクラス
+ * @author Futa HIRAKOBA
+ */
 #ifndef __ETROBOCON2017__
 #define __ETROBOCON2017__
 
@@ -6,26 +11,30 @@
 #include "SonarAlert.h"
 #include "Lifter.h"
 #include "Emoter.h"
-#include "LineTracer.h"
-#include "NormalCourse.h"
-#include "LeftNormalCourse.h"
-#include "RightNormalCourse.h"
-#include "PuzzleLineTracer.h"
+#include "LeftCourse.h"
+#include "RightCourse.h"
+
 
 using namespace ev3api;
 
+/**
+* main的なクラス
+*/
 class EtRobocon2017 {
 public:
+    /** コンストラクタ。各センサー等の初期化を行う */
     EtRobocon2017();
+    /** タッチセンサが押されたときに行われる処理 */
     void start( int );
+    /** スイッチを入れたときに行われる処理 */
     void waitStarter( int );
+    /** 実際にマシンを動かすときの処理 */
     void loop();
 
 private:
     TouchSensor touchSensor;
     int8_t light_white;
     int8_t light_black;
-
 };
 
 #endif

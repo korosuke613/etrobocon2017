@@ -18,12 +18,19 @@
  * tail_motor   = EV3_PORT_D;
  */
 
+/**
+ * @file Etrobocon2017.cpp
+ * @brief Etrobocon2017クラスの関数を定義<br>
+ * @author Futa HIRAKOBA
+ */
 
 EtRobocon2017::EtRobocon2017():
     touchSensor( PORT_1 )
 {
     light_white = 60;
     light_black = 0;
+    /** TODO Courseクラスに移す */
+    ev3_speaker_set_volume(100);
 }
 
 void EtRobocon2017::start( int bluetooth_command )
@@ -38,19 +45,17 @@ void EtRobocon2017::start( int bluetooth_command )
 void EtRobocon2017::loop()
 {
     SonarAlert sonarAlert( 4 );
-    LeftNormalCourse leftNormalCourse;
-    RightNormalCourse rightNormalCourse;
     Lifter lifter;
     Emoter emoter;
-	PuzzleLineTracer puzzleLineTracer ;
 
-    // 左レーン時
-    //leftNormalCourse.runNormalCourse();
-	puzzleLineTracer.preparatePuzzle () ;
-	puzzleLineTracer.puzzleLineTrace ( 10, 12 ) ;	// test
-    
-    // 右レーン時
-    //rightNormalCourse.runNormalCourse();
+// Rコースを走らせるときは1, Lコースを走らせるときは0
+#if 0
+    RightCourse rightCourse;
+    rightCourse.convertArea();
+#else
+    LeftCourse leftCourse;
+    leftCourse.convertArea();
+#endif
 }
 
 void EtRobocon2017::waitStarter( int bluetooth_command )

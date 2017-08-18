@@ -4,17 +4,16 @@
 #include "LineTracer.h"
 #include "Distance.h"
 
-using namespace ev3api;
-
 class NormalCourse {
 public:
-	void runNormalCourse ( void ) ;
+	void stop();
+	LineTracer lineTracer;
 
 protected:
-	LineTracer lineTracer;
 	Distance distance;
 	int8_t forward;
+	int8_t turn;
     int32_t distanse_total;
-} ;
+};
 
 #endif

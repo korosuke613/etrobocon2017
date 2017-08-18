@@ -1,6 +1,9 @@
 #ifndef __PUZZLELINETRACER__
 #define __PUZZLELINETRACER__
 
+#include "ev3api.h"
+#include "Walker.h"
+#include "ColorSensor.h"
 #include "LeftNormalCourse.h"
 
 #define X 0x00
@@ -27,6 +30,7 @@ public:
 
 private:
 	Walker walker ;
+	ColorSensor colorSensor;
 	LineTracer lineTracer;
 	Distance distance;
 	LeftNormalCourse leftNormalCourse ;
