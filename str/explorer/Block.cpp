@@ -2,13 +2,13 @@
 #include"Block.h"
 #include<string.h>
 
-//コンストラクタ
+//繧ｳ繝ｳ繧ｹ繝医Λ繧ｯ繧ｿ
 Block::Block(int num)
 {
 	position = num;
 }
 
-//デストラクタ
+//繝�繧ｹ繝医Λ繧ｯ繧ｿ
 Block::~Block(){}
 
 void Block::setPosition(int nodeNum)

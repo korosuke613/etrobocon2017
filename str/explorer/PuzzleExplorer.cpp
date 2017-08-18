@@ -34,13 +34,17 @@ void PuzzleExplorer::setMyPosition(int num)
 	return;
 }
 
-// ノードの設定(位置番号、色)
+// ノードの設定(位置番号、色、位置座標)
 void PuzzleExplorer::setNodes()
 {
 	for(int i=0; i<16; i++)
 	{
-		Node node(i);
+		Node node;
+		node.setNum(i);
+		node.setColor();
+		node.setPosition(nodePositionList[i][0], nodePositionList[i][1]);
 		nodeList[i] = node;
+		
 	}
 }
 
@@ -50,7 +54,7 @@ void PuzzleExplorer::setNeighborNode()
 	//nodeListから隣接ノードを取得
 	for(int i=0; i<16;i++)
 	{
-		vector<Node> neighbor;
+		vector<Node*> neighbor;
 		
 		for(int j=0; j<5; j++)
 		{
@@ -59,7 +63,8 @@ void PuzzleExplorer::setNeighborNode()
 			{
 				continue;
 			}
-			neighbor.push_back(nodeList[neighborList[i][j]]);
+			Node* node = &nodeList[neighborList[i][j]];
+			neighbor.push_back(node);
 		}
 		
 		nodeList[i].setNeighbor(neighbor);
@@ -96,7 +101,7 @@ BlockColor PuzzleExplorer::getNodeColor(int num)
 }
 
 // 現在地の隣接ノード取得
-vector<Node> PuzzleExplorer::getMyNeighbor()
+vector<Node*> PuzzleExplorer::getMyNeighbor()
 {
 	return nodeList[myPosition].getNeighbor();
 }
@@ -110,11 +115,11 @@ int PuzzleExplorer::getNearestBlockPosition()
 	// ブロックを持つノードが見つかるまで幅優先探索
 	while(!node.getHasBlock())
 	{
-		vector<Node> nodes = node.getNeighbor();
+		vector<Node*> nodes = node.getNeighbor();
 		
 		// 隣接ノードをキューに格納 
 		for(int i=0; i<nodes.size(); i++){
-			que.push(nodes[i]);
+			que.push(*nodes[i]);
 		}
 		
 		node = que.front();
@@ -130,4 +135,46 @@ int PuzzleExplorer::getNearestBlockPosition()
 	}
 	
 	return node.getNum();
+}
+
+// 2つのノード間の経路探索
+vector<int> PuzzleExplorer::getRoot(int startNode, int goalNode)
+{
+	Node node = nodeList[startNode];
+	Node goal = nodeList[goalNode];
+	vector<int> root;
+	
+	// rootに経路を格納
+	root.push_back(node.getNum());
+	
+	
+	// ゴールノードに到着するまで探索
+	while(node.getNum() != goal.getNum())
+	{	
+		int cost = 1000;
+		vector<Node*> explorerNodes = node.getNeighbor();
+		// 隣接ノードからゴールまでのコストが低いノードを次の探索ノードに選択
+		for(int i=0; i<explorerNodes.size(); i++)
+		{
+			// ゴールノードまでの距離コストが小さければ更新
+			int neighborCost = getCost(*explorerNodes[i], goal);
+			if(cost > neighborCost)
+				{
+					cost = neighborCost;
+					node = *explorerNodes[i];
+				}
+		}
+		
+		root.push_back(node.getNum());
+	}
+	
+	return root;
+}
+
+// ノード間の距離コストを計算
+int PuzzleExplorer::getCost(Node node1, Node node2)
+{
+	int cost = (node1.getPositionX() - node2.getPositionX())*(node1.getPositionX() - node2.getPositionX()) + (node1.getPositionY() - node2.getPositionY())*(node1.getPositionY() - node2.getPositionY());
+	
+	return cost;
 }

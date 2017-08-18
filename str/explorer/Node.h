@@ -12,21 +12,28 @@ using namespace std;
 class Node{
 private:
 	int nodeNum;
-	vector<Node> neighbor;
+	vector<Node*> neighbor;
 	int cost;
 	BlockColor color;
 	bool hasBlock;
+	int positionX;
+	int positionY;
 
 public:
-	Node() = default;
-	Node(int num);
-	void setNeighbor(vector<Node> nodes);
-	vector<Node> getNeighbor();
+	Node();
+	void setNeighbor(vector<Node*> nodes);
+	vector<Node*> getNeighbor();
 	int getNum();
 	BlockColor getColor();
 	void setHasBlock(bool exists);
 	bool getHasBlock();
+	void setPosition(int x, int y);
+	int getPositionX();
+	int getPositionY();
+	void setNum(int num);
+	void setColor();
 	~Node();
+	
 
 };
 

@@ -2,62 +2,73 @@
 #include"Node.h"
 
 
-//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-Node::Node(int num)
+//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+Node::Node()
 {
-	nodeNum = num;
+	nodeNum = 0;
 	hasBlock = false;
+	positionX=0;
+	positionY=0;
 	
-	// ƒm[ƒh‚ÌFİ’è
-	if(num == 1 || num == 7 || num == 8 || num == 14)
-	{
-		color = BlockColor::Red;
-	}else if(num == 3 || num == 5 || num == 13 || num == 15)
-	{
-		color = BlockColor::Yellow;
-	}else if(num == 2 || num == 4 || num == 9 || num == 12)
-	{
-		color = BlockColor::Blue;
-	}else if(num == 6 || num == 10 || num == 11)
-	{
-		color = BlockColor::Green;
-	}else if(num == 0)
-	{
-		color = BlockColor::Black;
-	}
+	
 
 }
 
-//ƒfƒXƒgƒ‰ƒNƒ^
+//ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 Node::~Node(){}
 
+void Node::setNum(int num)
+{
+	nodeNum = num;
+}
 
-//üˆÍ‚Ìƒm[ƒh‚Ìİ’è
-void Node::setNeighbor(vector<Node> nodes)
+void Node::setColor()
+{
+	// ãƒãƒ¼ãƒ‰ã®è‰²è¨­å®š
+	if(nodeNum == 1 || nodeNum == 7 || nodeNum == 8 || nodeNum == 14)
+	{
+		color = BlockColor::Red;
+	}else if(nodeNum == 3 || nodeNum == 5 || nodeNum == 13 || nodeNum == 15)
+	{
+		color = BlockColor::Yellow;
+	}else if(nodeNum == 2 || nodeNum == 4 || nodeNum == 9 || nodeNum == 12)
+	{
+		color = BlockColor::Blue;
+	}else if(nodeNum == 6 || nodeNum == 10 || nodeNum == 11)
+	{
+		color = BlockColor::Green;
+	}else if(nodeNum == 0)
+	{
+		color = BlockColor::Black;
+	}
+	
+}
+//å‘¨å›²ã®ãƒãƒ¼ãƒ‰ã®è¨­å®š
+void Node::setNeighbor(vector<Node*> nodes)
 {
 	neighbor = nodes;
 	return;
 }
 
-// —×Úƒm[ƒhæ“¾
-vector<Node> Node::getNeighbor()
+// éš£æ¥ãƒãƒ¼ãƒ‰å–å¾—
+vector<Node*> Node::getNeighbor()
 {
 	return neighbor;
 }
 
-// ƒm[ƒh‚ÌˆÊ’u”Ô†æ“¾
+// ãƒãƒ¼ãƒ‰ã®ä½ç½®ç•ªå·å–å¾—
 int Node::getNum()
 {
 	return nodeNum;
 }
 
-// ƒm[ƒh‚ÌFæ“¾
+// ãƒãƒ¼ãƒ‰ã®è‰²å–å¾—
 BlockColor Node::getColor()
 {
 	return color; 
 }
 
-// ƒm[ƒh‚ªƒuƒƒbƒN‚ğ‚Á‚Ä‚¢‚é‚©‚Ì”»’è‚Ì•Ï‰»
+// ãƒãƒ¼ãƒ‰ãŒãƒ–ãƒ­ãƒƒã‚¯ã‚’æŒã£ã¦ã„ã‚‹ã‹ã®åˆ¤å®šã®å¤‰åŒ–
 void Node::setHasBlock(bool exists)
 {
 	hasBlock = exists;
@@ -66,5 +77,21 @@ void Node::setHasBlock(bool exists)
 bool Node::getHasBlock()
 {
 	return hasBlock;
+}
+
+void Node::setPosition(int x, int y)
+{
+	positionX = x;
+	positionY = y;
+}
+
+int Node::getPositionX()
+{
+	return positionX;
+}
+
+int Node::getPositionY()
+{
+	return positionY;
 }
 

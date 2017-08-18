@@ -9,6 +9,12 @@
 
 using namespace std;
 
+#define TARGET_BLACK 0
+#define TARGET_RED 1
+#define TARGET_YELLOW 5
+#define TARGET_BLUE 2
+#define TARGET_GREEN 10
+
 class PuzzleExplorer
 {
 private:
@@ -33,6 +39,24 @@ private:
 		{0,9,13,15,-1},
 		{9,11,14,-1,-1}
 	};
+	const int nodePositionList[16][2] = {
+		{6,3},
+		{0,0},
+		{4,0},
+		{8,0},
+		{12,0},
+		{2,1},
+		{6,1},
+		{10,1},
+		{4,2},
+		{8,2},
+		{1,3},
+		{11,3},
+		{3,4},
+		{5,4},
+		{7,4},
+		{9,4}
+	};
 	void setNodes();
 	void setBlocks(array<int, 5> blockPositions);
 	void setNeighborNode();
@@ -42,9 +66,11 @@ public:
 	~PuzzleExplorer();
 	void init(array<int, 5> blockPositions);
 	BlockColor getNodeColor(int num);
-	vector<Node> getMyNeighbor();
+	vector<Node*> getMyNeighbor();
 	void setMyPosition(int num);
 	int getNearestBlockPosition();
+	vector<int> getRoot(int startNode, int goalNode);
+	int getCost(Node node1, Node node2);
 
 };
 
