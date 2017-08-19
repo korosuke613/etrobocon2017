@@ -38,7 +38,7 @@ void RightCourse::runShinkansen(){
                 }
                 break;
             case ShinkansenStatus::FIRST_RAIL:
-                walker.moveAngle(10, 200);
+                walker.moveAngle(50, 400);
                 shinkansenStatus = ShinkansenStatus::FIRST_LINE;
                 ev3_speaker_play_tone (NOTE_FS6, 100);
                 distance.resetDistance(walker.get_count_L(), walker.get_count_R());

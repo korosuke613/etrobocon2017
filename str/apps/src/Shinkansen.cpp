@@ -10,7 +10,7 @@ Shinkansen::Shinkansen():
     time_counter(0),
     isInFrontOf(false), 
     TO_PASS(200),
-    PASS_THRESHOLD(TO_PASS/10),
+    PASS_THRESHOLD(8),
     DISTANCE_THRESHOLD(30){
 
 }
