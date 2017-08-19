@@ -17,7 +17,8 @@ void LeftCourse::convertArea(){
     //Puzzle
     PuzzleLineTracer puzzleLineTracer ;    
     puzzleLineTracer.preparatePuzzle () ;
-    puzzleLineTracer.puzzleLineTrace ( 10, 12 ) ;
+    puzzleLineTracer.puzzleLineTrace ( 10, 12 ) ;	// test
+    //puzzleLineTracer.puzzleLineTrace ( 12, 8 ) ;	// test
 	//Park
 }
 

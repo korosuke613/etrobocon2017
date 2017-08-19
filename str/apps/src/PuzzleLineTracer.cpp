@@ -1,26 +1,29 @@
 #include "PuzzleLineTracer.h"
 
 PuzzleLineTracer::PuzzleLineTracer ():
-	colorSensor(PORT_3),
-	traceDistance(0){
+	colorSensor ( PORT_3 ),
+	traceDistance ( 0 ) {
+	lineTracer.isLeftsideLine ( false ),
 	ev3_speaker_set_volume ( 100 ) ;
 }
 
 void PuzzleLineTracer::preparatePuzzle ( void )
 {
+	tslp_tsk ( 100 ) ;
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
-	lineTracer.isLeftsideLine ( false ) ;
-	distance.resetDistance(walker.get_count_L(), walker.get_count_R());
-	while ( traceDistance < 1760 ) {
-        forward = lineTracer.speedControl.calculateSpeedForPid(walker.get_count_L(), walker.get_count_R());
-		traceDistance = distance.getDistanceCurrent(walker.get_count_L(), walker.get_count_R());
-		lineTracer.setForward( forward );
-		lineTracer.speedControl.setPid ( 2.4, 4.8, 0.054, 60.0 );
-		lineTracer.turnControl.setPid ( 2.4, 0.8, 0.02, 45.0 );
-		lineTracer.runLine (walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness()) ;
-		walker.run( lineTracer.getForward(), lineTracer.getTurn());
+	distance.resetDistance ( walker.get_count_L (), walker.get_count_R () ) ;
+	while ( traceDistance < 1860 ) {
+		traceDistance = distance.getDistanceTotal ( walker.get_count_L (), walker.get_count_R () ) ;
+		lineTracer.speedControl.setPid ( 1.0, 0.8, 0.08, 60.0 ) ;
+		lineTracer.turnControl.setPid ( 2.8, 0.8, 0.06, 30.0 ) ;
+		color = colorSensor.getBrightness () ;
+		lineTracer.runLine ( walker.get_count_L (), walker.get_count_R (), color ) ;
+		walker.run( lineTracer.getForward (), lineTracer.getTurn () ) ;
+		tslp_tsk ( 4 ) ;
 	}
-    lineTracer.setForward( -1 ) ;
+	walker.run ( 0, 0 ) ;
+	walker.reset () ;
+	tslp_tsk ( 100 ) ;
 }
 
 void PuzzleLineTracer::puzzleLineTrace ( int8_t currentPosition, int8_t nextPosition )
@@ -28,7 +31,7 @@ void PuzzleLineTracer::puzzleLineTrace ( int8_t currentPosition, int8_t nextPosi
 	// 現在の車体の絶対角を取得する
 	leftMotorDeg  = walker.get_count_L () ;
 	rightMotorDeg = walker.get_count_R () ;
-	currentDegree = ( ( leftMotorDeg - rightMotorDeg ) / 2 ) - 140 ;
+	currentDegree = ( leftMotorDeg - rightMotorDeg ) / 2 ;
 	// 現在位置からの接続番号の付与
 	destinatePosition = destinateNumberManager[currentPosition][nextPosition] ;
 	// 行先への絶対角を取得する
@@ -37,9 +40,9 @@ void PuzzleLineTracer::puzzleLineTrace ( int8_t currentPosition, int8_t nextPosi
 	traceDistance = distance.getDistanceCurrent (walker.get_count_L(), walker.get_count_R()) ;
 	nextDistance = puzzleConnectPosition[currentPosition][destinatePosition][DISTANCE] + traceDistance ;
 	// 現在の絶対角と行先への絶対角から車体を動かす角度を計算する
-	moveDegree = currentDegree - nextDegree ;
+	moveDegree = currentDegree - nextDegree + 90 ;
 	if ( moveDegree < 0 ) {
-		moveDegree = moveDegree * -1 ;
+		absMoveDegree = moveDegree * -1 ;
 	}
 	char msg[32] ;
 	sprintf ( msg, "Degree>  Current:%d,Next:%d", currentDegree, nextDegree ) ;
@@ -53,8 +56,8 @@ void PuzzleLineTracer::puzzleLineTrace ( int8_t currentPosition, int8_t nextPosi
 	// 車体を動かして角度を合わせる
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 	tslp_tsk ( 100 ) ;
-	for ( int i = 0 ; i < moveDegree ; i++ ) {
-		walker.run ( 0, ( -1 * moveDegree ) ) ;
+	for ( int i = 0 ; i < absMoveDegree ; i++ ) {
+		walker.run ( 0, ( ( moveDegree * 3 ) / 4 ) * -1 ) ;
 		tslp_tsk ( 4 ) ;
 	}
 	walker.run ( 0, 0 ) ;
@@ -63,13 +66,12 @@ void PuzzleLineTracer::puzzleLineTrace ( int8_t currentPosition, int8_t nextPosi
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 	msg_f ( "OK", 8 ) ;
 	while ( traceDistance < nextDistance ) {
-		forward = lineTracer.speedControl.calculateSpeedForPid (walker.get_count_L(), walker.get_count_R()) ;
 		traceDistance = distance.getDistanceCurrent (walker.get_count_L(), walker.get_count_R()) ;
-		lineTracer.setForward ( forward ) ;
-		lineTracer.speedControl.setPid ( 2.4, 4.8, 0.054, 60.0 );
-		lineTracer.turnControl.setPid ( 2.4, 0.8, 0.02, 45.0 );
+		lineTracer.speedControl.setPid ( 1.2, 2.4, 0.04, 30.0 );
+		lineTracer.turnControl.setPid ( 2.4, 0.8, 0.02, 30.0 );
 		lineTracer.runLine (walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness()) ;
-		walker.run( lineTracer.getForward(), lineTracer.getTurn());		
+		walker.run( lineTracer.getForward(), lineTracer.getTurn());
+		tslp_tsk ( 4 ) ;
 	}
 	lineTracer.setForward ( -1 ) ;
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;

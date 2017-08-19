@@ -4,7 +4,8 @@
 #include "ev3api.h"
 #include "Walker.h"
 #include "ColorSensor.h"
-#include "LeftNormalCourse.h"
+#include "Distance.h"
+#include "LineTracer.h"
 
 #define X 0x00
 
@@ -16,9 +17,9 @@
 #define DEGREE   0
 #define DISTANCE 1
 
-#define PUZZLE_LINE_LONG   1080
-#define PUZZLE_LINE_NORMAL 720
-#define PUZZLE_LINE_SHORT  450
+#define PUZZLE_LINE_LONG   1130
+#define PUZZLE_LINE_NORMAL 770
+#define PUZZLE_LINE_SHORT  500
 
 using namespace ev3api;
 
@@ -33,7 +34,7 @@ private:
 	ColorSensor colorSensor;
 	LineTracer lineTracer;
 	Distance distance;
-	LeftNormalCourse leftNormalCourse ;
+	int8_t color ;
 	int8_t forward;
     int32_t traceDistance ;
 	int8_t currentDegree ;
@@ -42,6 +43,7 @@ private:
 	int8_t destinatePosition ;
 	int8_t nextDegree ;
 	int32_t nextDistance ;
+	int8_t absMoveDegree ;
 	int8_t moveDegree ;
 	int8_t destinateNumberManager[PUZZLE_POSITION_CURRENT][PUZZLE_POSITION_NEXT] = {
 	/* 接続ノード番号付与テーブル　( 'X'は非接続を示す )                                        */

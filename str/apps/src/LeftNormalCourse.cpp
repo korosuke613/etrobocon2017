@@ -17,52 +17,54 @@ bool LeftNormalCourse::runNormalCourse(int32_t countL, int32_t countR, int8_t li
     switch(status){
         case LeftStatus::STRAIGHT: 
             lineTracer.speedControl.setPid ( 2.0, 4.8, 0.024, 150.0 );
-            lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 40.0 );
+            lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 30.0 );
             lineTracer.runLine(countL, countR, light_value);
             break;
 
         case LeftStatus::STRAIGHT_SLOW: 
             lineTracer.speedControl.setPid ( 2.0, 2.0, 0.024, 120.0 );
-            lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 40.0 );
+            lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 30.0 );
             lineTracer.runLine(countL, countR, light_value);            
             break;
 
         case LeftStatus::NEUTRAL:
             lineTracer.speedControl.setPid ( 4.0, 0.8, 0.08, 70.0 );
-            lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 35.0 );
+            lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 30.0 );
             lineTracer.runLine(countL, countR, light_value);            
             break;
 
         case LeftStatus::EDGE_CHANGE:
-            lineTracer.setForward(15);
-            lineTracer.setTurn(-2);
+			if ( light_value > 30 ) {
+				lineTracer.setForward(15);
+				lineTracer.setTurn(-2);
+			}
             lineTracer.isLeftsideLine(false);
             time_count++;
-            if(light_value > 40 && time_count > 125) isChangedEdge = true;
+            if(light_value > 30 && time_count > 125) isChangedEdge = true;
             break;
 
         case LeftStatus::EDGE_RESET:
             lineTracer.speedControl.setPid ( 4.0, 0.8, 0.08, 10.0 );
-            lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 35.0 );
+            lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 30.0 );
             lineTracer.runLine(countL, countR, light_value);            
             break;
 
         case LeftStatus::CURVE_RIGHT: 
             lineTracer.speedControl.setPid ( 4.0, 0.8, 0.08, 80.0 );
-            lineTracer.turnControl.setPid ( 4.0, 2.0, 0.1, 35.0 );
+            lineTracer.turnControl.setPid ( 4.0, 2.0, 0.1, 30.0 );
             //lineTracer.turnControl.setPid ( 4.0, 2.0, 0.096, 40.0 );
             lineTracer.runLine(countL, countR, light_value);            
             break;
 
         case LeftStatus::CURVE_LEFT_SHORT: 
             lineTracer.speedControl.setPid ( 4.0, 0.8, 0.1, 100.0 );
-            lineTracer.turnControl.setPid ( 2.0, 0.5, 0.048, 35.0 );
+            lineTracer.turnControl.setPid ( 2.0, 0.5, 0.048, 30.0 );
             lineTracer.runLine(countL, countR, light_value);            
             break;
 
         case LeftStatus::CURVE_LEFT: 
             lineTracer.speedControl.setPid ( 4.0, 0.8, 0.1, 100.0 );
-            lineTracer.turnControl.setPid ( 4.0, 2.0, 0.096, 35.0 ); 
+            lineTracer.turnControl.setPid ( 4.0, 2.0, 0.096, 30.0 ); 
             lineTracer.runLine(countL, countR, light_value);            
             break;
 
@@ -82,7 +84,7 @@ bool LeftNormalCourse::statusCheck(int32_t countL, int32_t countR){
     else if(distanse_total < 7500)status = LeftStatus::CURVE_LEFT_SHORT;
     else if(distanse_total < 11000)status = LeftStatus::CURVE_LEFT;
     else if(distanse_total < 12200)status = LeftStatus::CURVE_RIGHT;
-    else if(distanse_total < 14750)status = LeftStatus::NEUTRAL;
+    else if(distanse_total < 14250)status = LeftStatus::NEUTRAL;
     else status = LeftStatus::EDGE_CHANGE;
     if(isChangedEdge){
         status = LeftStatus::STOP;
