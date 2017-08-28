@@ -40,18 +40,6 @@ SelfLocalization::SelfLocalization () {
     ev3_lcd_draw_string("SelfLoc file error!", 0, 5);
   }
 
-  ev3_led_set_color(LED_GREEN); /* 初期化完了通知 */
-  tslp_tsk(10); /* 10msecウェイト */
-  ev3_led_set_color(LED_ORANGE); /* 初期化完了通知 */
-  tslp_tsk(10); /* 10msecウェイト */
-  ev3_led_set_color(LED_GREEN); /* 初期化完了通知 */
-  tslp_tsk(10); /* 10msecウェイト */
-  ev3_led_set_color(LED_ORANGE); /* 初期化完了通知 */
-  tslp_tsk(10); /* 10msecウェイト */
-
-
-  
-
 }
 
 
