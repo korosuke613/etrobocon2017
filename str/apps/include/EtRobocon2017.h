@@ -35,6 +35,7 @@ private:
     TouchSensor touchSensor;
     int8_t light_white;
     int8_t light_black;
+    LeftCourse leftCourse;    
 };
 
 #endif
