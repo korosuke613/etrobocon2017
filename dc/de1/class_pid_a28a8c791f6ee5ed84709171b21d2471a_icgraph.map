@@ -1,11 +1,12 @@
 <map id="Pid::limitOutput" name="Pid::limitOutput">
 <area shape="rect" id="node2" href="$dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="165,5,367,44"/>
-<area shape="rect" id="node10" href="$da/df4/class_turn_control.html#ac3c948ab0766eda64baf89c613464bf1" title="TurnControl::calculateTurn\lForPid" alt="" coords="177,68,355,107"/>
+<area shape="rect" id="node11" href="$da/df4/class_turn_control.html#ac3c948ab0766eda64baf89c613464bf1" title="TurnControl::calculateTurn\lForPid" alt="" coords="177,68,355,107"/>
 <area shape="rect" id="node3" href="$da/dbb/class_line_tracer.html#a4685c87f451af9ad63ca124439dc7787" title="LineTracer::runLine" alt="" coords="415,44,551,69"/>
-<area shape="rect" id="node4" href="$da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="603,19,803,44"/>
-<area shape="rect" id="node8" href="$df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="599,68,807,93"/>
-<area shape="rect" id="node5" href="$da/d29/class_left_course.html#a3c8814e489519247af3fc80ae09f2c48" title="LeftCourse::convertArea" alt="" coords="860,19,1025,44"/>
-<area shape="rect" id="node6" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="1078,44,1227,69"/>
-<area shape="rect" id="node7" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1275,44,1426,69"/>
-<area shape="rect" id="node9" href="$df/df1/class_right_course.html#ad045a67f06f2fcffff9661a2fe5129ab" title="RightCourse::convertArea" alt="" coords="855,68,1030,93"/>
+<area shape="rect" id="node4" href="$d5/ddb/class_left_normal_course.html#a8a9bb16c15fdf4b3fa8b2618813d7df8" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="599,8,798,47"/>
+<area shape="rect" id="node9" href="$df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="846,68,1054,93"/>
+<area shape="rect" id="node5" href="$da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="851,17,1050,43"/>
+<area shape="rect" id="node6" href="$da/d29/class_left_course.html#a3c8814e489519247af3fc80ae09f2c48" title="LeftCourse::convertArea" alt="" coords="1107,19,1273,44"/>
+<area shape="rect" id="node7" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="1325,44,1475,69"/>
+<area shape="rect" id="node8" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1523,44,1673,69"/>
+<area shape="rect" id="node10" href="$df/df1/class_right_course.html#ad045a67f06f2fcffff9661a2fe5129ab" title="RightCourse::convertArea" alt="" coords="1102,68,1277,93"/>
 </map>

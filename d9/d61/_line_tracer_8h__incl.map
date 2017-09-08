@@ -1,5 +1,5 @@
 <map id="str/apps/include/LineTracer.h" name="str/apps/include/LineTracer.h">
 <area shape="rect" id="node2" href="$da/d7f/_turn_control_8h.html" title="PID制御によるターン制御クラス " alt="" coords="5,79,108,104"/>
 <area shape="rect" id="node5" href="$db/d18/_speed_control_8h.html" title="PID制御による速度制御クラス " alt="" coords="132,79,246,104"/>
-<area shape="rect" id="node3" href="$da/dcf/_pid_8h.html" title="Pid.h" alt="" coords="111,152,162,177"/>
+<area shape="rect" id="node3" href="$da/dcf/_pid_8h.html" title="PID制御の計算を行うクラス " alt="" coords="111,152,162,177"/>
 </map>

@@ -64,7 +64,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
-<a href="#pri-attribs">非公開変数類</a> &#124;
 <a href="../../d9/d0a/classev3api_1_1_steering-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
 <div class="title">ev3api::Steering クラス</div>  </div>
@@ -76,9 +75,6 @@ $(function() {
 ev3api::Steering 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/dbb/classev3api_1_1_steering__coll__graph.png" border="0" usemap="#ev3api_1_1_steering_coll__map" alt="Collaboration graph"/></div>
-<map name="ev3api_1_1_steering_coll__map" id="ev3api_1_1_steering_coll__map">
-<area shape="rect" id="node2" href="../../da/d61/classev3api_1_1_motor.html" title="{ev3api::Motor\n|+ PWM_MAX\l+ PWM_MIN\l&#45; mPort\l&#45; mBrake\l&#45; mType\l&#45; mPWM\l&#45; mOffset\l|+ Motor()\l+ ~Motor()\l+ reset()\l+ getCount()\l+ setCount()\l+ setPWM()\l+ setBrake()\l+ stop()\l# getPort()\l# getBrake()\l# getPWM()\l}" alt="" coords="13,5,115,292"/>
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -87,13 +83,6 @@ ev3api::Steering 連携図</div>
 <tr class="separator:af8c485f99e3c79e781a879fc9dfb30d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1693dec1fb1e2b8fc79a29fbcf045a3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d34/classev3api_1_1_steering.html#a1693dec1fb1e2b8fc79a29fbcf045a3c">setPower</a> (int power, int turnRatio)</td></tr>
 <tr class="separator:a1693dec1fb1e2b8fc79a29fbcf045a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-非公開変数類</h2></td></tr>
-<tr class="memitem:ad914bd6fa31681f9d18a19850cc13280"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d61/classev3api_1_1_motor.html">Motor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d34/classev3api_1_1_steering.html#ad914bd6fa31681f9d18a19850cc13280">mLeftMotor</a></td></tr>
-<tr class="separator:ad914bd6fa31681f9d18a19850cc13280"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a311d9c13ae9bd3e9ed87d6257369ead3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d61/classev3api_1_1_motor.html">Motor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d34/classev3api_1_1_steering.html#a311d9c13ae9bd3e9ed87d6257369ead3">mRightMotor</a></td></tr>
-<tr class="separator:a311d9c13ae9bd3e9ed87d6257369ead3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>ステアリング操作クラス </p>
@@ -192,55 +181,6 @@ ev3api::Steering 連携図</div>
 <area shape="rect" id="node2" href="../../da/d61/classev3api_1_1_motor.html#a0f93e8cd365d51ea041f087f68c00804" title="ev3api::Motor::getPort" alt="" coords="234,5,387,31"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">メンバ詳解</h2>
-<a id="ad914bd6fa31681f9d18a19850cc13280"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad914bd6fa31681f9d18a19850cc13280">&#9670;&nbsp;</a></span>mLeftMotor</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../da/d61/classev3api_1_1_motor.html">Motor</a>&amp; ev3api::Steering::mLeftMotor</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="../../d9/d88/_steering_8h_source.html">Steering.h</a> の <a class="el" href="../../d9/d88/_steering_8h_source.html#l00037">37</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a311d9c13ae9bd3e9ed87d6257369ead3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a311d9c13ae9bd3e9ed87d6257369ead3">&#9670;&nbsp;</a></span>mRightMotor</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../da/d61/classev3api_1_1_motor.html">Motor</a>&amp; ev3api::Steering::mRightMotor</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="../../d9/d88/_steering_8h_source.html">Steering.h</a> の <a class="el" href="../../d9/d88/_steering_8h_source.html#l00038">38</a> 行目に定義があります。</p>
 
 </div>
 </div>

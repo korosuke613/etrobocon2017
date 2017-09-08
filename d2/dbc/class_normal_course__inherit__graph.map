@@ -1,4 +1,4 @@
 <map id="NormalCourse" name="NormalCourse">
-<area shape="rect" id="node2" href="$d5/ddb/class_left_normal_course.html" title="{LeftNormalCourse\n|&#45; status\l&#45; old_status\l|+ LeftNormalCourse()\l+ runNormalCourse()\l+ statusCheck()\l+ getStatus()\l}" alt="" coords="5,180,155,307"/>
-<area shape="rect" id="node3" href="$d4/d58/class_right_normal_course.html" title="{RightNormalCourse\n|&#45; status\l&#45; old_status\l|+ RightNormalCourse()\l+ runNormalCourse()\l+ statusCheck()\l+ getStatus()\l}" alt="" coords="180,180,338,307"/>
+<area shape="rect" id="node2" href="$d5/ddb/class_left_normal_course.html" title="{LeftNormalCourse\n||+ LeftNormalCourse()\l+ runNormalCourse()\l+ statusCheck()\l+ getStatus()\l}" alt="" coords="5,180,155,293"/>
+<area shape="rect" id="node3" href="$d4/d58/class_right_normal_course.html" title="{RightNormalCourse\n||+ RightNormalCourse()\l+ runNormalCourse()\l+ statusCheck()\l+ getStatus()\l}" alt="" coords="180,180,338,293"/>
 </map>

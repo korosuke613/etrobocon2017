@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['calcdistance4ms',['calcDistance4ms',['../dd/dc1/class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60',1,'SpeedControl']]],
   ['calculate',['calculate',['../dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5',1,'Pid']]],
   ['calculatespeedforpid',['calculateSpeedForPid',['../dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8',1,'SpeedControl']]],
   ['calculateturnforpid',['calculateTurnForPid',['../da/df4/class_turn_control.html#ac3c948ab0766eda64baf89c613464bf1',1,'TurnControl']]],

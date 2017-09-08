@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: sample/app.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c29eeb5af533606caea8a09e66794740.html">sample</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">app.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &quot;ev3api.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d70/sample_2app_8h_source.html">app.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d49/sample_2util_8h_source.html">util.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d0d/_color_sensor_8h_source.html">ColorSensor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/df2/_touch_sensor_8h_source.html">TouchSensor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d45/_sonar_sensor_8h_source.html">SonarSensor.h</a>&quot;</code><br />
+<code>#include &quot;kernel_cfg.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+app.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/d9d/sample_2app_8cpp__incl.png" border="0" usemap="#sample_2app_8cpp" alt=""/></div>
+<map name="sample_2app_8cpp" id="sample_2app_8cpp">
+<area shape="rect" id="node4" href="../../dc/d70/sample_2app_8h.html" title="app.h" alt="" coords="134,79,189,104"/>
+<area shape="rect" id="node6" href="../../db/d49/sample_2util_8h.html" title="util.h" alt="" coords="253,152,302,177"/>
+<area shape="rect" id="node7" href="../../de/d0d/_color_sensor_8h.html" title="ColorSensor.h" alt="" coords="265,79,371,104"/>
+<area shape="rect" id="node10" href="../../d7/df2/_touch_sensor_8h.html" title="TouchSensor.h" alt="" coords="395,79,504,104"/>
+<area shape="rect" id="node11" href="../../d5/d45/_sonar_sensor_8h.html" title="SonarSensor.h" alt="" coords="528,79,638,104"/>
+<area shape="rect" id="node8" href="../../da/dbb/_sensor_8h.html" title="Sensor.h" alt="" coords="370,152,444,177"/>
+<area shape="rect" id="node9" href="../../d3/d42/_port_8h.html" title="モータ/センサポート関連定義 " alt="" coords="379,225,435,251"/>
+</map>
+</div>
+</div>
+<p><a href="../../df/d47/sample_2app_8cpp_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ad72dbcf6d0153db1b8d8a58001feed83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d47/sample_2app_8cpp.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a></td></tr>
+<tr class="separator:ad72dbcf6d0153db1b8d8a58001feed83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3529aa23ecd4f82f3a23d3a7da7523"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d47/sample_2app_8cpp.html#a1c3529aa23ecd4f82f3a23d3a7da7523">_debug</a>(x)&#160;&#160;&#160;(x)</td></tr>
+<tr class="separator:a1c3529aa23ecd4f82f3a23d3a7da7523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a4754344fc3fec0a802660bb5dcdefad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d47/sample_2app_8cpp.html#a4754344fc3fec0a802660bb5dcdefad9">main_task</a> (intptr_t unused)</td></tr>
+<tr class="separator:a4754344fc3fec0a802660bb5dcdefad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8acfff21b683329658182112636b3e57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d47/sample_2app_8cpp.html#a8acfff21b683329658182112636b3e57">bt_task</a> (intptr_t unused)</td></tr>
+<tr class="separator:a8acfff21b683329658182112636b3e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a1c3529aa23ecd4f82f3a23d3a7da7523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c3529aa23ecd4f82f3a23d3a7da7523">&#9670;&nbsp;</a></span>_debug</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _debug</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(x)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d47/sample_2app_8cpp_source.html">app.cpp</a> の <a class="el" href="../../df/d47/sample_2app_8cpp_source.html#l00028">28</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad72dbcf6d0153db1b8d8a58001feed83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72dbcf6d0153db1b8d8a58001feed83">&#9670;&nbsp;</a></span>DEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d47/sample_2app_8cpp_source.html">app.cpp</a> の <a class="el" href="../../df/d47/sample_2app_8cpp_source.html#l00025">25</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a8acfff21b683329658182112636b3e57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8acfff21b683329658182112636b3e57">&#9670;&nbsp;</a></span>bt_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bt_task </td>
+          <td>(</td>
+          <td class="paramtype">intptr_t&#160;</td>
+          <td class="paramname"><em>unused</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>概要 : Bluetooth通信によるリモートスタート。 Tera Termなどのターミナルソフトから、 ASCIIコードで1を送信すると、リモートスタートする。 引数 : unused 返り値 : なし </p>
+
+<p class="definition"> <a class="el" href="../../df/d47/sample_2app_8cpp_source.html">app.cpp</a> の <a class="el" href="../../df/d47/sample_2app_8cpp_source.html#l00098">98</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4754344fc3fec0a802660bb5dcdefad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4754344fc3fec0a802660bb5dcdefad9">&#9670;&nbsp;</a></span>main_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main_task </td>
+          <td>(</td>
+          <td class="paramtype">intptr_t&#160;</td>
+          <td class="paramname"><em>unused</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../df/d47/sample_2app_8cpp_source.html">app.cpp</a> の <a class="el" href="../../df/d47/sample_2app_8cpp_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

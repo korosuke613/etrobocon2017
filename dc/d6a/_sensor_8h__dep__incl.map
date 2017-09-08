@@ -1,19 +1,20 @@
 <map id="str/ev3&#45;api/library/libcpp&#45;ev3/include/Sensor.h" name="str/ev3&#45;api/library/libcpp&#45;ev3/include/Sensor.h">
-<area shape="rect" id="node2" href="$de/d0d/_color_sensor_8h.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/include\l/ColorSensor.h" alt="" coords="377,105,509,157"/>
-<area shape="rect" id="node11" href="$de/d35/_gyro_sensor_8h.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/include\l/GyroSensor.h" alt="" coords="1364,105,1496,157"/>
-<area shape="rect" id="node13" href="$d5/d45/_sonar_sensor_8h.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/include\l/SonarSensor.h" alt="" coords="941,105,1073,157"/>
-<area shape="rect" id="node17" href="$d7/df2/_touch_sensor_8h.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/include\l/TouchSensor.h" alt="" coords="1097,105,1229,157"/>
-<area shape="rect" id="node3" href="$d3/d13/_left_course_8h.html" title="Lコースを走らせるときに呼び出されるクラス " alt="" coords="232,212,427,237"/>
-<area shape="rect" id="node8" href="$d3/d94/_right_course_8h.html" title="Rコースを走らせるときに呼び出されるクラス " alt="" coords="5,212,209,237"/>
-<area shape="rect" id="node10" href="$d8/d8c/_color_sensor_8cpp.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/src/ColorSensor.cpp" alt="" coords="452,205,661,244"/>
-<area shape="rect" id="node4" href="$d2/dd3/_et_robocon2017_8h.html" title="main的なクラス " alt="" coords="563,292,788,317"/>
-<area shape="rect" id="node7" href="$d7/dc2/_left_course_8cpp.html" title="LeftCourseクラスの関数を定義 &#160;" alt="" coords="238,292,422,317"/>
-<area shape="rect" id="node5" href="$d5/df2/app_8cpp.html" title="str/app.cpp" alt="" coords="544,365,631,391"/>
-<area shape="rect" id="node6" href="$d5/d67/_et_robocon2017_8cpp.html" title="Etrobocon2017クラスの関数を定義 &#160;" alt="" coords="654,365,869,391"/>
-<area shape="rect" id="node9" href="$d1/d6d/_right_course_8cpp.html" title="RightCourseクラスの関数を定義 &#160;" alt="" coords="11,292,204,317"/>
-<area shape="rect" id="node12" href="$d6/d4f/_gyro_sensor_8cpp.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/src/GyroSensor.cpp" alt="" coords="1427,205,1633,244"/>
-<area shape="rect" id="node14" href="$d7/d8d/_sonar_alert_8h.html" title="str/apps/include/SonarAlert.h" alt="" coords="923,212,1115,237"/>
-<area shape="rect" id="node16" href="$d4/d26/_sonar_sensor_8cpp.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/src/SonarSensor.cpp" alt="" coords="686,205,899,244"/>
-<area shape="rect" id="node15" href="$d1/dc4/_sonar_alert_8cpp.html" title="str/apps/src/SonarAlert.cpp" alt="" coords="928,292,1110,317"/>
-<area shape="rect" id="node18" href="$d7/d73/_touch_sensor_8cpp.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/src/TouchSensor.cpp" alt="" coords="1190,205,1403,244"/>
+<area shape="rect" id="node2" href="$de/d0d/_color_sensor_8h.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/include\l/ColorSensor.h" alt="" coords="490,105,622,157"/>
+<area shape="rect" id="node12" href="$de/d35/_gyro_sensor_8h.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/include\l/GyroSensor.h" alt="" coords="1455,105,1587,157"/>
+<area shape="rect" id="node14" href="$d5/d45/_sonar_sensor_8h.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/include\l/SonarSensor.h" alt="" coords="1095,105,1227,157"/>
+<area shape="rect" id="node18" href="$d7/df2/_touch_sensor_8h.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/include\l/TouchSensor.h" alt="" coords="827,105,959,157"/>
+<area shape="rect" id="node3" href="$df/d47/sample_2app_8cpp.html" title="sample/app.cpp" alt="" coords="685,212,800,237"/>
+<area shape="rect" id="node4" href="$d3/d13/_left_course_8h.html" title="Lコースを走らせるときに呼び出されるクラス " alt="" coords="5,212,200,237"/>
+<area shape="rect" id="node9" href="$d3/d94/_right_course_8h.html" title="Rコースを走らせるときに呼び出されるクラス " alt="" coords="224,212,427,237"/>
+<area shape="rect" id="node11" href="$d8/d8c/_color_sensor_8cpp.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/src/ColorSensor.cpp" alt="" coords="451,205,661,244"/>
+<area shape="rect" id="node5" href="$d2/dd3/_et_robocon2017_8h.html" title="main的なクラス " alt="" coords="586,292,811,317"/>
+<area shape="rect" id="node8" href="$d7/dc2/_left_course_8cpp.html" title="LeftCourseクラスの関数を定義 &#160;" alt="" coords="11,292,195,317"/>
+<area shape="rect" id="node6" href="$d2/db0/str_2app_8cpp.html" title="str/app.cpp" alt="" coords="567,365,654,391"/>
+<area shape="rect" id="node7" href="$d5/d67/_et_robocon2017_8cpp.html" title="Etrobocon2017クラスの関数を定義 &#160;" alt="" coords="678,365,893,391"/>
+<area shape="rect" id="node10" href="$d1/d6d/_right_course_8cpp.html" title="RightCourseクラスの関数を定義 &#160;" alt="" coords="229,292,422,317"/>
+<area shape="rect" id="node13" href="$d6/d4f/_gyro_sensor_8cpp.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/src/GyroSensor.cpp" alt="" coords="1566,205,1773,244"/>
+<area shape="rect" id="node15" href="$d7/d8d/_sonar_alert_8h.html" title="str/apps/include/SonarAlert.h" alt="" coords="1349,212,1542,237"/>
+<area shape="rect" id="node17" href="$d4/d26/_sonar_sensor_8cpp.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/src/SonarSensor.cpp" alt="" coords="1112,205,1325,244"/>
+<area shape="rect" id="node16" href="$d1/dc4/_sonar_alert_8cpp.html" title="str/apps/src/SonarAlert.cpp" alt="" coords="1354,292,1536,317"/>
+<area shape="rect" id="node19" href="$d7/d73/_touch_sensor_8cpp.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/src/TouchSensor.cpp" alt="" coords="875,205,1088,244"/>
 </map>

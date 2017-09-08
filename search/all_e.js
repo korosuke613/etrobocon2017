@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['p_5fgain',['p_gain',['../dc/de1/class_pid.html#a4b60c048b8e5813a6c0489375a3c958b',1,'Pid::p_gain()'],['../d8/d0a/common__definition_8h.html#a50efaeb0380deed26b8c63b0f4cbfabe',1,'P_GAIN():&#160;common_definition.h']]],
+  ['p_5fgain',['P_GAIN',['../d8/d0a/common__definition_8h.html#a50efaeb0380deed26b8c63b0f4cbfabe',1,'common_definition.h']]],
   ['pid',['Pid',['../dc/de1/class_pid.html',1,'Pid'],['../dc/de1/class_pid.html#ae8a1a4bf3e2d160a4e6148fcea98e030',1,'Pid::Pid()']]],
   ['pid_2ecpp',['Pid.cpp',['../d2/d35/_pid_8cpp.html',1,'']]],
   ['pid_2eh',['Pid.h',['../da/dcf/_pid_8h.html',1,'']]],
-  ['pid_5fvalue_5fold',['pid_value_old',['../dd/dc1/class_speed_control.html#a7ae5d60cc3a07e5649a2ff2c5dcba0dc',1,'SpeedControl::pid_value_old()'],['../da/df4/class_turn_control.html#aea2fa471fffa8be4ee9568a46e357197',1,'TurnControl::pid_value_old()']]],
   ['port_2eh',['Port.h',['../d3/d42/_port_8h.html',1,'']]],
   ['port_5f1',['PORT_1',['../d3/d42/_port_8h.html#a8d17f8fabb486d5815d626610983e82daa0bafbc5d1a37affbad146654a13527f',1,'Port.h']]],
   ['port_5f2',['PORT_2',['../d3/d42/_port_8h.html#a8d17f8fabb486d5815d626610983e82da1196d475e71fa8b4236f365de58ad9fc',1,'Port.h']]],
@@ -17,8 +16,6 @@ var searchData=
   ['power_5flowspeed',['POWER_LOWSPEED',['../d3/d42/_port_8h.html#a0de7742117569a1ace9ea7cc1448e2dba87c314914b4c9bc1ada20ae5ceed9737',1,'Port.h']]],
   ['power_5flowspeed_5f9v',['POWER_LOWSPEED_9V',['../d3/d42/_port_8h.html#a0de7742117569a1ace9ea7cc1448e2dba5075d6f0666251bb9bb1dde4fd57bad9',1,'Port.h']]],
   ['power_5foff',['POWER_OFF',['../d3/d42/_port_8h.html#a0de7742117569a1ace9ea7cc1448e2dba4a0682c6762857d83fd5d8cb36f9c94e',1,'Port.h']]],
-  ['preanglel',['preAngleL',['../dd/dc1/class_speed_control.html#a7c4dc147f4d60acaf0c2df39c40852a8',1,'SpeedControl']]],
-  ['preangler',['preAngleR',['../dd/dc1/class_speed_control.html#aa78b19e5d6c43eca9243533117835079',1,'SpeedControl']]],
   ['pwm_5fabs_5fmax',['PWM_ABS_MAX',['../d8/d0a/common__definition_8h.html#a6babf6dbdc97636ceda1532ee33fda2d',1,'common_definition.h']]],
   ['pwm_5fmax',['PWM_MAX',['../da/d61/classev3api_1_1_motor.html#ae855e3c676e89c21f1cad16aecb52ad4',1,'ev3api::Motor']]],
   ['pwm_5fmin',['PWM_MIN',['../da/d61/classev3api_1_1_motor.html#a9fd32f6515ea9984cb4ab738ca3a9499',1,'ev3api::Motor']]]

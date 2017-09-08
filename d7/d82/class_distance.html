@@ -60,7 +60,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
-<a href="#pri-attribs">非公開変数類</a> &#124;
 <a href="../../dc/d0a/class_distance-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
 <div class="title">Distance クラス</div>  </div>
@@ -82,17 +81,6 @@ Distance 連携図</div>
 <tr class="separator:abda79a6c79adfc691381cbdca55cf342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a822915c87907cdef0926ee69910b1a9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a822915c87907cdef0926ee69910b1a9c">resetDistance</a> (int32_t countL, int32_t countR)</td></tr>
 <tr class="separator:a822915c87907cdef0926ee69910b1a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-非公開変数類</h2></td></tr>
-<tr class="memitem:a70651420393e8edfe347d5648c538444"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a70651420393e8edfe347d5648c538444">leftMotorDegTotal</a></td></tr>
-<tr class="separator:a70651420393e8edfe347d5648c538444"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0314d49fedcdf80166a46750ced68cfd"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a0314d49fedcdf80166a46750ced68cfd">rightMotorDegTotal</a></td></tr>
-<tr class="separator:a0314d49fedcdf80166a46750ced68cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba15417fe2f9fb23c452e4145ff6d2d5"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#aba15417fe2f9fb23c452e4145ff6d2d5">leftMotorDegOld</a></td></tr>
-<tr class="separator:aba15417fe2f9fb23c452e4145ff6d2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cb9143b6b7cc40a8eb0c10b688e9e42"><td class="memItemLeft" align="right" valign="top">std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d82/class_distance.html#a1cb9143b6b7cc40a8eb0c10b688e9e42">rightMotorDegOld</a></td></tr>
-<tr class="separator:a1cb9143b6b7cc40a8eb0c10b688e9e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>タイヤの進んだ距離（回転角）に関するクラス </p>
@@ -213,107 +201,6 @@ Distance 連携図</div>
 <area shape="rect" id="node2" href="../../d7/d82/class_distance.html#a039334c729b1da2716a5dbbcf2631d36" title="Distance::getDistanceTotal" alt="" coords="215,5,395,31"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">メンバ詳解</h2>
-<a id="aba15417fe2f9fb23c452e4145ff6d2d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba15417fe2f9fb23c452e4145ff6d2d5">&#9670;&nbsp;</a></span>leftMotorDegOld</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::int32_t Distance::leftMotorDegOld</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>相対的な回転角を計算するときに使う変数（右タイヤ） </p>
-
-<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00031">31</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a70651420393e8edfe347d5648c538444"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70651420393e8edfe347d5648c538444">&#9670;&nbsp;</a></span>leftMotorDegTotal</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::int32_t Distance::leftMotorDegTotal</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>絶対的な回転角（右タイヤ） </p>
-
-<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00027">27</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a1cb9143b6b7cc40a8eb0c10b688e9e42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cb9143b6b7cc40a8eb0c10b688e9e42">&#9670;&nbsp;</a></span>rightMotorDegOld</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::int32_t Distance::rightMotorDegOld</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>相対的な回転角を計算するときに使う変数（左タイヤ） </p>
-
-<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00033">33</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a0314d49fedcdf80166a46750ced68cfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0314d49fedcdf80166a46750ced68cfd">&#9670;&nbsp;</a></span>rightMotorDegTotal</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::int32_t Distance::rightMotorDegTotal</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>絶対的な回転角（左タイヤ） </p>
-
-<p class="definition"> <a class="el" href="../../d4/d99/_distance_8h_source.html">Distance.h</a> の <a class="el" href="../../d4/d99/_distance_8h_source.html#l00029">29</a> 行目に定義があります。</p>
 
 </div>
 </div>

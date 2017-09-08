@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['edge_5fchange',['EDGE_CHANGE',['../da/dc8/_left_normal_course_8h.html#ae9734ae0725c823f7a2722f4a478daa1af1a3b41e5c32de3922ac9ed927e6419f',1,'LeftNormalCourse.h']]],
+  ['edge_5freset',['EDGE_RESET',['../da/dc8/_left_normal_course_8h.html#ae9734ae0725c823f7a2722f4a478daa1a2ae3bdd4c5aeafe64dac645638bb113e',1,'LeftNormalCourse.h']]],
   ['edgechange',['edgeChange',['../d1/d49/class_walker.html#af913f99c575c9be615d03ec96460ce15',1,'Walker']]],
   ['emoter',['Emoter',['../d8/dc7/class_emoter.html',1,'Emoter'],['../d8/dc7/class_emoter.html#ae699f05a30951f438c4bb0e2e155fcd1',1,'Emoter::Emoter()']]],
   ['emoter_2ecpp',['Emoter.cpp',['../d2/d68/_emoter_8cpp.html',1,'']]],

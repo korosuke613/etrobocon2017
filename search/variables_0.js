@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['between_5fwheels',['between_wheels',['../d4/ddb/class_self_localization.html#a4132e0abace4a3c3ba3b2b3b88555812',1,'SelfLocalization']]]
+  ['default_5foffset',['DEFAULT_OFFSET',['../dc/d08/classev3api_1_1_gyro_sensor.html#ac3c90fe5c97d2d6395f3c4e858821b3c',1,'ev3api::GyroSensor']]],
+  ['distance',['distance',['../dd/d88/class_normal_course.html#a71dee69e36e4a9364b8ba8a39274c23d',1,'NormalCourse']]],
+  ['distanse_5ftotal',['distanse_total',['../dd/d88/class_normal_course.html#a6f8d0bbb6b73605fb54aa0933b2ed9df',1,'NormalCourse']]]
 ];

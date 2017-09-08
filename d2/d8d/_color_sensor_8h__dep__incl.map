@@ -1,10 +1,11 @@
 <map id="str/ev3&#45;api/library/libcpp&#45;ev3/include/ColorSensor.h" name="str/ev3&#45;api/library/libcpp&#45;ev3/include/ColorSensor.h">
-<area shape="rect" id="node2" href="$d3/d13/_left_course_8h.html" title="Lコースを走らせるときに呼び出されるクラス " alt="" coords="117,112,312,137"/>
-<area shape="rect" id="node7" href="$d3/d94/_right_course_8h.html" title="Rコースを走らせるときに呼び出されるクラス " alt="" coords="336,112,539,137"/>
-<area shape="rect" id="node9" href="$d8/d8c/_color_sensor_8cpp.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/src/ColorSensor.cpp" alt="" coords="563,105,773,144"/>
-<area shape="rect" id="node3" href="$d2/dd3/_et_robocon2017_8h.html" title="main的なクラス " alt="" coords="214,192,439,217"/>
-<area shape="rect" id="node6" href="$d7/dc2/_left_course_8cpp.html" title="LeftCourseクラスの関数を定義 &#160;" alt="" coords="5,192,190,217"/>
-<area shape="rect" id="node4" href="$d5/df2/app_8cpp.html" title="str/app.cpp" alt="" coords="197,265,284,291"/>
-<area shape="rect" id="node5" href="$d5/d67/_et_robocon2017_8cpp.html" title="Etrobocon2017クラスの関数を定義 &#160;" alt="" coords="307,265,522,291"/>
-<area shape="rect" id="node8" href="$d1/d6d/_right_course_8cpp.html" title="RightCourseクラスの関数を定義 &#160;" alt="" coords="464,192,657,217"/>
+<area shape="rect" id="node2" href="$df/d47/sample_2app_8cpp.html" title="sample/app.cpp" alt="" coords="5,112,121,137"/>
+<area shape="rect" id="node3" href="$d3/d13/_left_course_8h.html" title="Lコースを走らせるときに呼び出されるクラス " alt="" coords="144,112,339,137"/>
+<area shape="rect" id="node8" href="$d3/d94/_right_course_8h.html" title="Rコースを走らせるときに呼び出されるクラス " alt="" coords="363,112,566,137"/>
+<area shape="rect" id="node10" href="$d8/d8c/_color_sensor_8cpp.html" title="str/ev3&#45;api/library\l/libcpp&#45;ev3/src/ColorSensor.cpp" alt="" coords="590,105,800,144"/>
+<area shape="rect" id="node4" href="$d2/dd3/_et_robocon2017_8h.html" title="main的なクラス " alt="" coords="240,192,465,217"/>
+<area shape="rect" id="node7" href="$d7/dc2/_left_course_8cpp.html" title="LeftCourseクラスの関数を定義 &#160;" alt="" coords="31,192,215,217"/>
+<area shape="rect" id="node5" href="$d2/db0/str_2app_8cpp.html" title="str/app.cpp" alt="" coords="222,265,309,291"/>
+<area shape="rect" id="node6" href="$d5/d67/_et_robocon2017_8cpp.html" title="Etrobocon2017クラスの関数を定義 &#160;" alt="" coords="333,265,548,291"/>
+<area shape="rect" id="node9" href="$d1/d6d/_right_course_8cpp.html" title="RightCourseクラスの関数を定義 &#160;" alt="" coords="489,192,682,217"/>
 </map>

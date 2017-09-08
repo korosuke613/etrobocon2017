@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['clock',['clock',['../d8/dc7/class_emoter.html#ac7dd648851fdf66c1a76bb109fab5f1a',1,'Emoter::clock()'],['../dd/d56/class_lifter.html#a3bf369b33f3e975f270059ab8322adb1',1,'Lifter::clock()'],['../d1/d49/class_walker.html#aad7e82652753f8acb2d18ddde6149a17',1,'Walker::clock()']]],
-  ['colorsensor',['colorSensor',['../da/d29/class_left_course.html#afcd167e1ebc638c9241bd4260723fb70',1,'LeftCourse::colorSensor()'],['../df/df1/class_right_course.html#a7f15d9277fd6f7a4e67bd06c8df8bf71',1,'RightCourse::colorSensor()']]],
-  ['current_5fangle',['current_angle',['../d4/ddb/class_self_localization.html#a25ec9c5d68a71dbfe137e1301c4a0353',1,'SelfLocalization']]],
-  ['current_5fx',['current_x',['../d4/ddb/class_self_localization.html#a91d80a11f62795a501b96e46f447bb08',1,'SelfLocalization']]],
-  ['current_5fy',['current_y',['../d4/ddb/class_self_localization.html#afe2332c94b3839fd1e6b6c8a193ee2a2',1,'SelfLocalization']]]
+  ['forward',['forward',['../dd/d88/class_normal_course.html#a369fadf7b413c5194ae20b9415ca7251',1,'NormalCourse']]]
 ];

@@ -4,10 +4,10 @@ var indexSectionsWithContent =
   1: "cdeglmnprstw",
   2: "e",
   3: "acdeglmnprstuw",
-  4: "abcdegilmnprstuw~",
-  5: "bcdfilmoprstw",
+  4: "abcdegilmnoprstuw~",
+  5: "dflmpst",
   6: "elr",
-  7: "cps",
+  7: "cenps",
   8: "s",
   9: "_abcdghilmnpstuw",
   10: "e"

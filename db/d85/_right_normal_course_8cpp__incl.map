@@ -5,5 +5,5 @@
 <area shape="rect" id="node10" href="$d4/d99/_distance_8h.html" title="タイヤの進んだ距離（回転角）に関するクラス " alt="" coords="240,239,324,264"/>
 <area shape="rect" id="node5" href="$da/d7f/_turn_control_8h.html" title="PID制御によるターン制御クラス " alt="" coords="143,312,246,337"/>
 <area shape="rect" id="node8" href="$db/d18/_speed_control_8h.html" title="PID制御による速度制御クラス " alt="" coords="5,312,119,337"/>
-<area shape="rect" id="node6" href="$da/dcf/_pid_8h.html" title="Pid.h" alt="" coords="100,385,152,411"/>
+<area shape="rect" id="node6" href="$da/dcf/_pid_8h.html" title="PID制御の計算を行うクラス " alt="" coords="100,385,152,411"/>
 </map>

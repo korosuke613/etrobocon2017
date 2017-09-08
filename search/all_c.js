@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['neutral',['NEUTRAL',['../da/dc8/_left_normal_course_8h.html#ae9734ae0725c823f7a2722f4a478daa1a31ba17aa58cdb681423f07ca21a6efc7',1,'LeftNormalCourse.h']]],
   ['normalcourse',['NormalCourse',['../dd/d88/class_normal_course.html',1,'']]],
   ['normalcourse_2ecpp',['NormalCourse.cpp',['../dc/d8a/_normal_course_8cpp.html',1,'']]],
   ['normalcourse_2eh',['NormalCourse.h',['../d6/dad/_normal_course_8h.html',1,'']]],

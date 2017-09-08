@@ -1,4 +1,2 @@
 <map id="SonarAlert" name="SonarAlert">
-<area shape="rect" id="node2" href="$d9/dcc/classev3api_1_1_sonar_sensor.html" title="{ev3api::SonarSensor\n||+ SonarSensor()\l+ ~SonarSensor()\l+ getDistance()\l+ listen()\l}" alt="" coords="33,168,179,281"/>
-<area shape="rect" id="node3" href="$db/d9e/classev3api_1_1_sensor.html" title="{ev3api::Sensor\n|&#45; mPort\l&#45; mType\l|# getPort()\l# Sensor()\l# ~Sensor()\l}" alt="" coords="51,5,161,119"/>
 </map>
