@@ -15,18 +15,15 @@ Distance.o \
 Walker.o \
 Lifter.o \
 SelfLocalization.o \
-Emoter.o
+Emoter.o \
+LeftCourse.o \
+RightCourse.o
 
 SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
-APPL_DIR += $(mkfile_path)apps/commons
 
-INCLUDES += \
--I$(mkfile_path)apps
-
-INCLUDES += \
--I$(mkfile_path)apps/commons
+INCLUDES += -I$(mkfile_path)apps
 
 
 ifdef CONFIG_EV3RT_APPLICATION

@@ -18,6 +18,12 @@ public:
     double limitOutput(double pid_value) {
         return Pid::limitOutput(pid_value);
     }
+    void calculate(double now_value){
+        Pid::calculate(now_value);
+    }
+    double get_output(){
+        return Pid::get_output();
+    }
 };
 
 // Pidのtarget以下の数字を入力すると負の数を出力する

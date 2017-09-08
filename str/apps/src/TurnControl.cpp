@@ -1,3 +1,9 @@
+/**
+ * @file TurnControl.cpp
+ * @brief TurnControlクラスの関数を定義<br>
+ * @author Futa HIRAKOBA
+ */
+
 #include "TurnControl.h"
 
 TurnControl::TurnControl():

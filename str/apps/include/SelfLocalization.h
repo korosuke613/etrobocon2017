@@ -40,8 +40,11 @@ public:
   SelfLocalization ();
   void update ();
   void writing_current_coordinates ();
-  void set_target_coordinates(float target_x, float target_y, float target_radius, float ev3_radius);
-  bool approached_target_coordinates(float target_x, float target_y,float target_radius, float ev3_radius);
+  bool approached_target_coordinates (float target_x, float target_y, float target_radius);
+  bool over_target_line_of_x (float target_x);
+  bool over_target_line_of_y (float target_y);
+  bool below_target_line_of_x(float target_x);
+  bool below_target_line_of_y(float target_y);
 private:
   //残りのメソッドかな？
   

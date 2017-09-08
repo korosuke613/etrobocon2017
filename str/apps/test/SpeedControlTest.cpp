@@ -2,6 +2,10 @@
  * SpeedControlTest.cpp
  */
 
+ /* コンパイル(平木場) 
+$ g++-7 -w ../src/Pid.cpp ../src/SpeedControl.cpp SpeedControlTest.cpp gtest_main.o gtest-all.o -I../include -I../../googletest/googletest/include
+$ ./a.out
+*/
 
 #include <gtest/gtest.h>
 #include "SpeedControl.h" // このヘッダファイルのcppファイルをテスト
@@ -36,11 +40,21 @@ TEST( SpeedControlTest, calculateSpeedForPidTest2 )
     ASSERT_GE(value, -100);
 }
 
+class test_SpeedControl: public SpeedControl{
+public:
+    test_SpeedControl():
+        SpeedControl(){
+    }
+    int calcDistance4ms(int curAngleL, int curAngleR){
+        return SpeedControl::calcDistance4ms(curAngleL, curAngleR);
+    }
+};
+
 // SpeedControl.calcDistance4msで4msで360度進んだとき、
 // 円周分進んだことになる。
 TEST( SpeedControlTest, calcDistance4msTest1 )
 {
-    SpeedControl sp;
+    test_SpeedControl sp;
     int value, r, l;
     float circle;
 

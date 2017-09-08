@@ -40,18 +40,6 @@ SelfLocalization::SelfLocalization () {
     ev3_lcd_draw_string("SelfLoc file error!", 0, 5);
   }
 
-  ev3_led_set_color(LED_GREEN); /* 初期化完了通知 */
-  tslp_tsk(10); /* 10msecウェイト */
-  ev3_led_set_color(LED_ORANGE); /* 初期化完了通知 */
-  tslp_tsk(10); /* 10msecウェイト */
-  ev3_led_set_color(LED_GREEN); /* 初期化完了通知 */
-  tslp_tsk(10); /* 10msecウェイト */
-  ev3_led_set_color(LED_ORANGE); /* 初期化完了通知 */
-  tslp_tsk(10); /* 10msecウェイト */
-
-
-  
-
 }
 
 
@@ -95,4 +83,28 @@ void SelfLocalization::writing_current_coordinates() {
   fprintf(fp, "%f %f\n", current_x, current_y);
 
   return;
+}
+
+
+bool SelfLocalization::approached_target_coordinates (float target_x, float target_y, float target_radius) {
+  float distance = sqrt(
+		      (target_x - current_x) * (target_x - current_x) +
+		      (target_y - current_y) * (target_y - current_y)   );
+  if(distance < target_radius)
+    return true;
+  return false;
+}
+
+bool SelfLocalization::over_target_line_of_x(float target_x) {
+  return target_x < current_x;
+}
+bool SelfLocalization::over_target_line_of_y(float target_y) {
+  return target_y < current_y;
+}
+
+bool SelfLocalization::below_target_line_of_x(float target_x) {
+  return target_x > current_x;
+}
+bool SelfLocalization::below_target_line_of_y(float target_y) {
+  return target_y > current_y;
 }
