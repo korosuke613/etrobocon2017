@@ -29,13 +29,14 @@ public:
     /** 0.1sで進んだ距離[mm/0.1s] */    
     std::int16_t speed_value_all;
 
-private:
+protected:
     /** 4ms間の移動距離を取得する
     * @param curAngleL 左モータ回転角
     * @param curAngleR 右モータ回転角
     * @return 進んだ距離[mm/4ms] */
     std::int8_t calcDistance4ms(std::int32_t curAngleL, std::int32_t curAngleR);
-    
+
+private:
     /** 前進値(forward) */    
     double forward;
     /** 左モータの回転角度の過去値 */
