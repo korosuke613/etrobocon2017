@@ -1,13 +1,13 @@
 #ifndef __NORMALCOURSE__
 #define __NORMALCOURSE__
 
-#include "LineTracer.h"
+#include "LineTracerWalker.h"
 #include "Distance.h"
 
 class NormalCourse {
 public:
 	void stop();
-	LineTracer lineTracer;
+	LineTracerWalker lineTracerWalker;
 
 protected:
 	Distance distance;

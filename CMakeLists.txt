@@ -42,7 +42,7 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/SpeedControl.cpp
     ${SOURCE_DIR}/TurnControl.cpp
     ${SOURCE_DIR}/Distance.cpp
-    ${SOURCE_DIR}/LineTracer.cpp
+    ${SOURCE_DIR}/LineTracerWalker.cpp
     ${SOURCE_DIR}/NormalCourse.cpp
     ${SOURCE_DIR}/LeftNormalCourse.cpp
     ${SOURCE_DIR}/RightNormalCourse.cpp
