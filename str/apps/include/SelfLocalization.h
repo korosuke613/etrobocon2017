@@ -18,11 +18,6 @@
 #include "app.h"
 #include <math.h>
 
-static motor_port_t
-  left_motor_sl  = EV3_PORT_C,
-  right_motor_sl = EV3_PORT_B;
-static FILE* fp;
-
 class SelfLocalization {
 private:
   float right_motor_current_angle, right_motor_old_angle, right_motor_rotation_angle;
@@ -34,6 +29,8 @@ private:
   float turning_angle;
   float current_x, current_y, current_angle;
   float old_x, old_y, old_angle;
+  static motor_port_t left_motor_sl, right_motor_sl;
+  static FILE* fp;
 
   //member methods
 public:
@@ -49,7 +46,5 @@ private:
   //残りのメソッドかな？
   
 };
-
-
 
 #endif
