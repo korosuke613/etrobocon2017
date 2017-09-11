@@ -1,7 +1,7 @@
 #include "LineTracerWalker.h"
 
 LineTracerWalker::LineTracerWalker():
-     forward(30), turn(0), minus(-1){
+    minus(-1), forward(30), turn(0){
 }
 
 void LineTracerWalker::runLine(int32_t countL, int32_t countR, int8_t light_value){
