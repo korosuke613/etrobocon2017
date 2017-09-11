@@ -1,5 +1,5 @@
 ﻿#include "NormalCourse.h"
 
 void NormalCourse::stop(){
-    lineTracer.setForward(0);
+    lineTracerWalker.setForward(0);
 }

@@ -3,7 +3,7 @@
  */
 
 /* 
-g++-7 -w ../src/Distance.cpp ../src/Pid.cpp ../src/TurnControl.cpp ../src/SpeedControl.cpp ../src/LineTracer.cpp ../src/NormalCourse.cpp ../src/LeftNormalCourse.cpp LeftNormalCourseTest.cpp gtest_main.o gtest-all.o -I../include -I../../googletest/googletest/include
+g++-7 -w ../src/Distance.cpp ../src/Pid.cpp ../src/TurnControl.cpp ../src/SpeedControl.cpp ../src/LineTracerWalker.cpp ../src/NormalCourse.cpp ../src/LeftNormalCourse.cpp LeftNormalCourseTest.cpp gtest_main.o gtest-all.o -I../include -I../../googletest/googletest/include
 */
 
 #include <gtest/gtest.h>
@@ -211,8 +211,8 @@ TEST( LeftNormalCourseTest, edgeChangeTest1 )
     lnc.statusCheck(0, 0);
 
     lnc.runNormalCourse(0,0,40);
-    lnc.lineTracer.runLine(0, 0, 100);
-    value = lnc.lineTracer.getTurn();
+    lnc.lineTracerWalker.runLine(0, 0, 100);
+    value = lnc.lineTracerWalker.getTurn();
 
     ASSERT_LT(value, 0);
 }
@@ -226,8 +226,8 @@ TEST( LeftNormalCourseTest, edgeChangeTest2 )
     lnc.statusCheck(0, 0);
 
     lnc.runNormalCourse(0,0,40);
-    lnc.lineTracer.runLine(0, 0, 0);
-    value = lnc.lineTracer.getTurn();
+    lnc.lineTracerWalker.runLine(0, 0, 0);
+    value = lnc.lineTracerWalker.getTurn();
 
     ASSERT_GT(value, 0);
 }

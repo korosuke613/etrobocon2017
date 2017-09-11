@@ -13,7 +13,11 @@
  *****************************/
 #include "SelfLocalization.h"
 
-SelfLocalization::SelfLocalization () {
+motor_port_t SelfLocalization::left_motor_sl = EV3_PORT_C;
+motor_port_t SelfLocalization::right_motor_sl = EV3_PORT_B;
+FILE* SelfLocalization::fp;
+
+SelfLocalization::SelfLocalization (){
   //車輪モーターのカウントの初期化は、
   //他の場所に影響を与える可能性があるので、コメントアウト
   //本当はした方が良い？

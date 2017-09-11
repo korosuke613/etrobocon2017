@@ -4,7 +4,7 @@ APPL_CXXOBJS += \
 util.o \
 EtRobocon2017.o \
 SonarAlert.o \
-LineTracer.o \
+LineTracerWalker.o \
 Pid.o \
 NormalCourse.o \
 LeftNormalCourse.o \
