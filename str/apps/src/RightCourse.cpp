@@ -11,7 +11,7 @@ RightCourse::RightCourse():
 /**
  *Rコースの走行範囲の切り替えを行う
  */
-void RightCourse::convertArea(){
+void RightCourse::run(){
 	runNormalCourse();
 	//Sinkansen
 	//Park

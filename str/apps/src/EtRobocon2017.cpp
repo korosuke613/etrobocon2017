@@ -48,9 +48,9 @@ void EtRobocon2017::loop()
 // Rコースを走らせるときは1, Lコースを走らせるときは0
 #if 0
     RightCourse rightCourse;
-    rightCourse.convertArea();
+    rightCourse.run();
 #else
-    leftCourse.convertArea();
+    leftCourse.run();
 #endif
 }
 
