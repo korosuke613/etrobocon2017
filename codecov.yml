@@ -1,3 +1,12 @@
+# https://github.com/codecov/support/wiki/Codecov-Yaml#team-yaml
+# https://github.com/codecov/support/wiki/Patch-Status
+
+patch:                     # pull requests only: this commit status will measure the
+                            # entire pull requests Coverage Diff. Checking if the lines
+                            # adjusted are covered at least X%.
+  default:
+    target: 80%              # specify the target "X%" coverage to hit
+
 ignore:
   - "str/apps/test/*"
   - "str/apps/include/*"
