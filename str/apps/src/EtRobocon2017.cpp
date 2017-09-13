@@ -52,7 +52,7 @@ void EtRobocon2017::loop()
 #if 1
     RightCourse rightCourse;
     rightCourse.convertArea();
-#elif
+#elif 0
     LeftCourse leftCourse;
     leftCourse.convertArea();
 #endif
