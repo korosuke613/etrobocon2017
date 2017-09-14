@@ -5,7 +5,7 @@
 #include "Walker.h"
 #include "ColorSensor.h"
 #include "Distance.h"
-#include "LineTracer.h"
+#include "LineTracerWalker.h"
 
 #define X 0x00
 
@@ -32,7 +32,7 @@ public:
 private:
 	Walker walker ;
 	ColorSensor colorSensor;
-	LineTracer lineTracer;
+	LineTracerWalker lineTracer;
 	Distance distance;
 	int8_t color ;
 	int8_t forward;

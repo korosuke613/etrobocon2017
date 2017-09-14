@@ -37,6 +37,7 @@ private:
     int8_t light_white;
     int8_t light_black;
     LeftCourse leftCourse;    
+    RightCourse rightCourse;
 };
 
 #endif
