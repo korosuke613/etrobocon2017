@@ -18,7 +18,8 @@ SelfLocalization.o \
 Emoter.o \
 LeftCourse.o \
 RightCourse.o \
-PuzzleLineTracer.o
+PuzzleLineTracer.o\
+basicWalker.o
 
 SRCLANG := c++
 

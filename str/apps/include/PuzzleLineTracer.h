@@ -27,7 +27,7 @@ class PuzzleLineTracer {
 public:
 	PuzzleLineTracer () ;
 	void preparatePuzzle ( void ) ;
-	void puzzleLineTrace ( int8_t, int8_t ) ;
+	void puzzleLineTrace ( int8_t, int8_t, int8_t ) ;
 
 private:
 	Walker walker ;
@@ -40,12 +40,13 @@ private:
 	int8_t currentDegree ;
 	int8_t leftMotorDeg ;
 	int8_t rightMotorDeg ;
-	int8_t destinatePosition ;
+	int8_t connectPosition ;
+	int8_t beforeConnectPosition ;
+	int8_t beforeDegree ;
 	int8_t nextDegree ;
 	int32_t nextDistance ;
-	int8_t absMoveDegree ;
 	int8_t moveDegree ;
-	int8_t destinateNumberManager[PUZZLE_POSITION_CURRENT][PUZZLE_POSITION_NEXT] = {
+	int8_t connectNumberManager[PUZZLE_POSITION_CURRENT][PUZZLE_POSITION_NEXT] = {
 	/* 接続ノード番号付与テーブル　( 'X'は非接続を示す )                                        */
 	/*                                     N E X T                               */
 	/*            0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, */
@@ -66,54 +67,54 @@ private:
 	/*     14 */{ 0,  X,  X,  X,  X,  X,  X,  X,  X,  1,  X,  X,  X,  2,  X,  3 },
 	/*     15 */{ X,  X,  X,  X,  X,  X,  X,  X,  X,  0,  X,  1,  X,  X,  2,  X }
 	} ;
-	int32_t puzzleConnectPosition[PUZZLE_POSITION_CURRENT][PUZZLE_POSITION_DESTINATE][PUZZLE_POLAR_COODINATE] = {
+	int32_t allConnectPosition[PUZZLE_POSITION_CURRENT][PUZZLE_POSITION_DESTINATE][PUZZLE_POLAR_COODINATE] = {
 		{
-			{ X, X }, { X, X }, { X, X }, { X, X }, { X, X }
+		/*  0 */{ X, X }, { X, X }, { X, X }, { X, X }, { X, X }
 		},
 		{
-			{ 0, PUZZLE_LINE_LONG }, { -30, PUZZLE_LINE_SHORT }, { -75, PUZZLE_LINE_NORMAL }, { 0, 0 }, { 0, 0 }
+		/*  1 */{ 0, PUZZLE_LINE_LONG }, { -30, PUZZLE_LINE_SHORT }, { -75, PUZZLE_LINE_NORMAL }, { 0, 0 }, { 0, 0 }
 		},
 		{
-			{ 180, PUZZLE_LINE_LONG }, { 0, PUZZLE_LINE_LONG }, { -150, PUZZLE_LINE_SHORT }, { -30, PUZZLE_LINE_SHORT }, { X, X }
+		/*  2 */{ 180, PUZZLE_LINE_LONG }, { 0, PUZZLE_LINE_LONG }, { -150, PUZZLE_LINE_SHORT }, { -30, PUZZLE_LINE_SHORT }, { X, X }
 		},
 		{
-			{ 180, PUZZLE_LINE_SHORT }, { 0, PUZZLE_LINE_LONG }, { -150, PUZZLE_LINE_SHORT }, { -30, PUZZLE_LINE_SHORT }, { X, X }
+		/*  3 */{ 180, PUZZLE_LINE_SHORT }, { 0, PUZZLE_LINE_LONG }, { -150, PUZZLE_LINE_SHORT }, { -30, PUZZLE_LINE_SHORT }, { X, X }
 		},
 		{
-			{ 180, PUZZLE_LINE_LONG }, { -150, PUZZLE_LINE_SHORT }, { -105, PUZZLE_LINE_NORMAL }, { 0, 0 }, { X, X }
+		/*  4 */{ 180, PUZZLE_LINE_LONG }, { -150, PUZZLE_LINE_SHORT }, { -105, PUZZLE_LINE_NORMAL }, { 0, 0 }, { X, X }
 		},
 		{
-			{ 150, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { -120, PUZZLE_LINE_SHORT }, { -30, PUZZLE_LINE_SHORT }, { X, X }
+		/*  5 */{ 150, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { -120, PUZZLE_LINE_SHORT }, { -30, PUZZLE_LINE_SHORT }, { X, X }
 		},
 		{
-			{ 150, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { -150, PUZZLE_LINE_SHORT }, { -30, PUZZLE_LINE_SHORT }, { X, X }
+		/*  6 */{ 150, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { -150, PUZZLE_LINE_SHORT }, { -30, PUZZLE_LINE_SHORT }, { X, X }
 		},
 		{
-			{ 150, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { -150, PUZZLE_LINE_SHORT }, { -60, PUZZLE_LINE_SHORT }, { X, X }
+		/*  7 */{ 150, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { -150, PUZZLE_LINE_SHORT }, { -60, PUZZLE_LINE_SHORT }, { X, X }
 		},
 		{
-			{ 150, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { -120, PUZZLE_LINE_SHORT }, { -60, PUZZLE_LINE_SHORT }, { X, X }
+		/*  8 */{ 150, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { -120, PUZZLE_LINE_SHORT }, { -60, PUZZLE_LINE_SHORT }, { X, X }
 		},
 		{
-			{ 150, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { -120, PUZZLE_LINE_SHORT }, { -60, PUZZLE_LINE_SHORT }, { X, X }
+		/*  9 */{ 150, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { -120, PUZZLE_LINE_SHORT }, { -60, PUZZLE_LINE_SHORT }, { X, X }
 		},
 		{
-			{ 105, PUZZLE_LINE_NORMAL }, { 60, PUZZLE_LINE_SHORT }, { -30, PUZZLE_LINE_SHORT }, { 0, 0 }, { X, X }
+		/* 10 */{ 105, PUZZLE_LINE_NORMAL }, { 60, PUZZLE_LINE_SHORT }, { -30, PUZZLE_LINE_SHORT }, { 0, 0 }, { X, X }
 		},
 		{
-			{ 75, PUZZLE_LINE_NORMAL }, { 120, PUZZLE_LINE_SHORT }, { -150, PUZZLE_LINE_SHORT }, { 0, 0 }, { X, X }
+		/* 11 */{ 75, PUZZLE_LINE_NORMAL }, { 120, PUZZLE_LINE_SHORT }, { -150, PUZZLE_LINE_SHORT }, { 0, 0 }, { X, X }
 		},
 		{
-			{ 150, PUZZLE_LINE_SHORT }, { 60, PUZZLE_LINE_SHORT }, { 0, PUZZLE_LINE_SHORT }, { 0, 0 }, { X, X }
+		/* 12 */{ 60, PUZZLE_LINE_SHORT }, { 150, PUZZLE_LINE_SHORT }, { 0, PUZZLE_LINE_SHORT }, { 0, 0 }, { X, X }
 		},
 		{
-			{ 120, PUZZLE_LINE_SHORT }, { 180, PUZZLE_LINE_SHORT }, { 0, PUZZLE_LINE_SHORT }, { 0, 0 }, { X, X }
+		/* 13 */{ 0, 0 }, { 120, PUZZLE_LINE_SHORT }, { 180, PUZZLE_LINE_SHORT }, { 0, PUZZLE_LINE_SHORT }, { X, X }
 		},
 		{
-			{ 60, PUZZLE_LINE_SHORT }, { 180, PUZZLE_LINE_SHORT }, { 0, PUZZLE_LINE_SHORT }, { 0, 0 }, { X, X }
+		/* 14 */{ 60, PUZZLE_LINE_SHORT }, { 180, PUZZLE_LINE_SHORT }, { 0, PUZZLE_LINE_SHORT }, { 0, 0 }, { X, X }
 		},
 		{
-			{ 120, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { 180, PUZZLE_LINE_SHORT }, { 0, 0 }, { X, X }
+		/* 15 */{ 120, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { 180, PUZZLE_LINE_SHORT }, { 0, 0 }, { X, X }
 		},
 	} ;
 		
