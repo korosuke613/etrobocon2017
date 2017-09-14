@@ -39,6 +39,10 @@ void basicWalker::goStraight ( int32_t forward, int32_t distance ) {
 	rightWheel.setPWM ( 0 ) ;
 }
 
+void basicWalker::backStraight ( int32_t forward, int32_t distance ) {
+	goStraight ( ( -1 * forward ), distance ) ;
+}
+
 void basicWalker::parkingLeft ( void ) {
 	goStraight ( 30, 300 ) ;
 	spinRightAngle ( 30, SPIN_RIGHT ) ;
