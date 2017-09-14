@@ -13,6 +13,7 @@
 #include "Emoter.h"
 #include "LeftCourse.h"
 #include "RightCourse.h"
+#include "basicWalker.h"
 
 
 using namespace ev3api;
