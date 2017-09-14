@@ -41,6 +41,9 @@ public:
   bool over_target_line_of_y (float target_y);
   bool below_target_line_of_x(float target_x);
   bool below_target_line_of_y(float target_y);
+  float getPointX();
+  float getPointY();
+  
 private:
   //残りのメソッドかな？
   

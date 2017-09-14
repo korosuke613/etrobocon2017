@@ -80,6 +80,14 @@ void SelfLocalization::update (std::int32_t left_motor_sl, std::int32_t right_mo
 
 }
 
+float SelfLocalization::getPointX(){
+  return current_x;
+}
+
+float SelfLocalization::getPointY(){
+  return current_y;
+}
+
 void SelfLocalization::writing_current_coordinates() {
 
   fprintf(fp, "%f %f\n", current_x, current_y);
