@@ -13,11 +13,9 @@
  *****************************/
 #include "SelfLocalization.h"
 
-motor_port_t SelfLocalization::left_motor_sl = EV3_PORT_C;
-motor_port_t SelfLocalization::right_motor_sl = EV3_PORT_B;
 FILE* SelfLocalization::fp;
 
-SelfLocalization::SelfLocalization (){
+SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl){
   //車輪モーターのカウントの初期化は、
   //他の場所に影響を与える可能性があるので、コメントアウト
   //本当はした方が良い？
@@ -25,8 +23,8 @@ SelfLocalization::SelfLocalization (){
   //ev3_motor_reset_counts(right_motor_sl);
 
   //メンバ変数の初期化 基本的に0
-  left_motor_current_angle  = ev3_motor_get_counts(left_motor_sl);
-  right_motor_current_angle = ev3_motor_get_counts(right_motor_sl);
+  left_motor_current_angle  = left_motor_sl;
+  right_motor_current_angle = right_motor_sl;
   left_motor_old_angle = left_motor_current_angle;
   right_motor_old_angle = right_motor_current_angle;
   left_motor_rotation_angle = right_motor_rotation_angle = 0;
@@ -41,17 +39,17 @@ SelfLocalization::SelfLocalization (){
 
   /* 地図を作らない時はFILE関連は消しとくこと！ ヘッダファイル含めて！*/
   if (( fp = fopen("sl.data", "w")) != NULL) {
-    ev3_lcd_draw_string("SelfLoc file error!", 0, 5);
+    // ev3_lcd_draw_string("SelfLoc file error!", 0, 5);
   }
 
 }
 
 
-void SelfLocalization::update () {
+void SelfLocalization::update (std::int32_t left_motor_sl, std::int32_t right_motor_sl) {
 
   //左車輪の回転角
   left_motor_old_angle = left_motor_current_angle;
-  left_motor_current_angle = ev3_motor_get_counts(left_motor_sl);
+  left_motor_current_angle = left_motor_sl;
   left_motor_rotation_angle =
     left_motor_current_angle - left_motor_old_angle;
   left_wheel_moving_distance =
@@ -63,7 +61,7 @@ void SelfLocalization::update () {
   old_angle = current_angle;
 
   right_motor_old_angle = right_motor_current_angle;
-  right_motor_current_angle = ev3_motor_get_counts(right_motor_sl);
+  right_motor_current_angle = right_motor_sl;
   right_motor_rotation_angle =
     right_motor_current_angle - right_motor_old_angle;
   right_wheel_moving_distance =
