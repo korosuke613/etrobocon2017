@@ -16,18 +16,19 @@
 #include "Shinkansen.h"
 #include "Distance.h"
 #include "SelfLocalization.h"
+#include "Lifter.h"
 
 using namespace ev3api;
 
 /**
 * 走行場所の状態を保持する列挙型
 */
-enum struct ShinkansenStatus{
-	BEFORE_SHINKANSEN,
-	FIRST_RAIL,
+enum struct ShinkansenStatus {
+    BEFORE_SHINKANSEN,
+    FIRST_RAIL,
 	FIRST_LINE,
 	FIRST_RIGHT_ANGLE,
-	STOP
+    STOP
 };
 
 /**
@@ -41,11 +42,11 @@ public:
 	void convertArea();
 	/** NormalCourseエリアの処理 **/
 	void runNormalCourse();
-	/** Shinkansenエリアの処理 **/
+	/** Shinkansenエリアの処理 */
 	void runShinkansen();
 private:
 	Walker walker;
-    ColorSensor colorSensor;
+	ColorSensor colorSensor;
 	SonarSensor sonarSensor;
 	ShinkansenStatus shinkansenStatus;
 	Distance distance;
