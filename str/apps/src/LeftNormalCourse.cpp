@@ -82,7 +82,7 @@ bool LeftNormalCourse::statusCheck(int32_t countL, int32_t countR){
     else if(distanse_total < 7500)status = LeftStatus::CURVE_LEFT_SHORT;
     else if(distanse_total < 11000)status = LeftStatus::CURVE_LEFT;
     else if(distanse_total < 12200)status = LeftStatus::CURVE_RIGHT;
-    else if(distanse_total < 14250)status = LeftStatus::NEUTRAL;
+    else if(distanse_total < 14750)status = LeftStatus::NEUTRAL;
     else status = LeftStatus::EDGE_CHANGE;
     if(isChangedEdge){
         status = LeftStatus::STOP;
