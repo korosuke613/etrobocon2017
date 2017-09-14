@@ -11,7 +11,7 @@ RightCourse::RightCourse():
 /**
  *Rコースの走行範囲の切り替えを行う
  */
-void RightCourse::convertArea(){
+void RightCourse::run(){
 	runNormalCourse();
 	//Sinkansen
 	//Park
@@ -26,12 +26,12 @@ void RightCourse::runNormalCourse(){
         sl.writing_current_coordinates();
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
         isNormalCourse = normalCourse.runNormalCourse();
-        normalCourse.lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
+        normalCourse.lineTracerWalker.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
         
-        if(normalCourse.lineTracer.getForward() < 0){
+        if(normalCourse.lineTracerWalker.getForward() < 0){
             walker.run(0, 0);
         }else{
-            walker.run( normalCourse.lineTracer.getForward(), normalCourse.lineTracer.getTurn());
+            walker.run( normalCourse.lineTracerWalker.getForward(), normalCourse.lineTracerWalker.getTurn());
         }
         if(! isNormalCourse){
             walker.run(0, 0);
