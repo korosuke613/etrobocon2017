@@ -17,7 +17,9 @@ Lifter.o \
 SelfLocalization.o \
 Emoter.o \
 LeftCourse.o \
-RightCourse.o
+RightCourse.o \
+UserInterface.o \
+FirstCode.o
 
 SRCLANG := c++
 

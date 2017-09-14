@@ -145,3 +145,61 @@ TEST( FirstCodeTest, get12345WhenOnceDown5thDigit )
     ASSERT_EQ( expected, 12345 );
 }
 
+// 桁数を何もいじらない場合は5を返す
+TEST( FirstCodeTest, get5WhenDoNotChangeLeftAndRightAnyDigitNumber )
+{
+    FirstCode obj;
+
+    int expected = obj.getDigit();
+
+    ASSERT_EQ( expected, 5 );
+}
+
+// 桁数を右に1回ずれた場合は4を返す
+TEST( FirstCodeTest, get4WhenOnceChangeRightDigitNumber )
+{
+    FirstCode obj;
+
+    obj.changeRightDigit();
+    int expected = obj.getDigit();
+
+    ASSERT_EQ( expected, 4 );
+}
+
+// 桁数を右に5回ずれた場合は5を返す
+TEST( FirstCodeTest, get5When5thChangeRightDigitNumber )
+{
+    FirstCode obj;
+
+    for( int i = 0; i < 5; i++ ) {
+        obj.changeRightDigit();
+    }
+    int expected = obj.getDigit();
+
+    ASSERT_EQ( expected, 5 );
+}
+
+// 桁数を右に2回ずれてから左に1回ずれた場合は4を返す
+TEST( FirstCodeTest, get5WhenOnceChangeLeftDigitNumberAfterTwiceChangeRightDigitNumber )
+{
+    FirstCode obj;
+
+    obj.changeRightDigit();
+    obj.changeRightDigit();
+    obj.changeLeftDigit();
+    int expected = obj.getDigit();
+
+    ASSERT_EQ( expected, 4 );
+}
+
+// 桁数を左に1回ずれた場合は1を返す
+TEST( FirstCodeTest, get1WhenOnceChangeLeftDigitNumber )
+{
+    FirstCode obj;
+
+    obj.changeLeftDigit();
+    int expected = obj.getDigit();
+
+    ASSERT_EQ( expected, 1 );
+}
+

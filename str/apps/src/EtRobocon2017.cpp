@@ -35,6 +35,8 @@ EtRobocon2017::EtRobocon2017():
 
 void EtRobocon2017::start( int bluetooth_command )
 {
+    ui.inputFirstCode();
+    firstCode = ui.getFirstCode();
     ev3_led_set_color(LED_ORANGE);
     waitStarter( bluetooth_command );
 
