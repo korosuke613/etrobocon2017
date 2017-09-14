@@ -2,6 +2,15 @@
  * @file UserInterface.h
  * @brief 走行体が走り出す前にユーザが入力するインターフェースを提供するクラス
  * @author Keisuke MORI
+ *
+ * 簡単な使い方は以下の通りです。
+ *
+ * ```
+ * UserInterface ui;
+ * ui.inputFirstCode(); // 初期位置コードを入力している
+ *                      // ループになっており、ループを抜けたら次の処理に進める
+ * int32_t firstCode = ui.getFirstCode(); // 入力した初期位置コードを取得する
+ * ```
  */
 #ifndef __USER_INTERFACE__
 #define __USER_INTERFACE__
