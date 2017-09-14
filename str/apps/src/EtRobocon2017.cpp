@@ -49,11 +49,11 @@ void EtRobocon2017::loop()
 {
 // Rコースを走らせるときは1, Lコースを走らせるときは0
 #if 0
-    RightCourse rightCourse;
     rightCourse.run();
 #else
     leftCourse.run();
 #endif
+
 }
 
 void EtRobocon2017::waitStarter( int bluetooth_command )

@@ -14,6 +14,7 @@
 #include "UserInterface.h"
 #include "LeftCourse.h"
 #include "RightCourse.h"
+#include "basicWalker.h"
 
 
 using namespace ev3api;
@@ -38,6 +39,7 @@ private:
     int8_t light_black;
     int32_t firstCode;
     LeftCourse leftCourse;    
+    RightCourse rightCourse;
     UserInterface ui;
 };
 
