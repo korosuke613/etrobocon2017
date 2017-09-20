@@ -16,12 +16,6 @@
 FILE* SelfLocalization::fp;
 
 SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl){
-  //車輪モーターのカウントの初期化は、
-  //他の場所に影響を与える可能性があるので、コメントアウト
-  //本当はした方が良い？
-  //ev3_motor_reset_counts(left_motor_sl);
-  //ev3_motor_reset_counts(right_motor_sl);
-
   //メンバ変数の初期化 基本的に0
   left.init(left_motor_sl);
   right.init(right_motor_sl);
@@ -29,13 +23,10 @@ SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t rig
   moving_distance_mean = 0;
   turning_angle = 0;
   current_x = current_y = current_angle = 0;
-  old_x = old_y = old_angle = 0;
 
 
   /* 地図を作らない時はFILE関連は消しとくこと！ ヘッダファイル含めて！*/
-  if (( fp = fopen("sl.data", "w")) != NULL) {
-    // ev3_lcd_draw_string("SelfLoc file error!", 0, 5);
-  }
+  fp = fopen("traveling_route.txt", "w");
 }
 
 
@@ -45,21 +36,16 @@ void SelfLocalization::update (std::int32_t left_motor_sl, std::int32_t right_mo
   left.update(left_motor_sl);
 
   //右車輪の回転角
-  right.update(right_motor_sl);
-
-  old_x = current_x;
-  old_y = current_y;
-  old_angle = current_angle;
-  
+  right.update(right_motor_sl);  
 
   //移動距離と、車体の回転角
   moving_distance_mean = (right.moving_distance + left.moving_distance) / 2;
   turning_angle = (right.moving_distance - left.moving_distance) / between_wheels;
 
   //座標
-  current_x = old_x + (moving_distance_mean * cos(old_angle + (turning_angle/2)));
-  current_y = old_y + (moving_distance_mean * sin(old_angle + (turning_angle/2)));
-  current_angle = old_angle + turning_angle;
+  current_x += (moving_distance_mean * cos(current_angle + (turning_angle/2)));
+  current_y += (moving_distance_mean * sin(current_angle + (turning_angle/2)));
+  current_angle += turning_angle;
 
 }
 
@@ -78,7 +64,6 @@ void SelfLocalization::writing_current_coordinates() {
   return;
 }
 
-
 bool SelfLocalization::approached_target_coordinates (float target_x, float target_y, float target_radius) {
   float distance = sqrt(
 		      (target_x - current_x) * (target_x - current_x) +
@@ -86,18 +71,4 @@ bool SelfLocalization::approached_target_coordinates (float target_x, float targ
   if(distance < target_radius)
     return true;
   return false;
-}
-
-bool SelfLocalization::over_target_line_of_x(float target_x) {
-  return target_x < current_x;
-}
-bool SelfLocalization::over_target_line_of_y(float target_y) {
-  return target_y < current_y;
-}
-
-bool SelfLocalization::below_target_line_of_x(float target_x) {
-  return target_x > current_x;
-}
-bool SelfLocalization::below_target_line_of_y(float target_y) {
-  return target_y > current_y;
 }
