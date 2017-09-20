@@ -16,6 +16,6 @@ TEST( SelfLocalizationTest, CalculateTest1 )
 
     sl.update(100, 200);
 
-    std::cout << sl.getPointX() << std::endl;
-    std::cout << sl.getPointY() << std::endl;    
+    ASSERT_GE(sl.getPointX(), 10.0);
+    ASSERT_GE(sl.getPointY(), 2.0);  
 }

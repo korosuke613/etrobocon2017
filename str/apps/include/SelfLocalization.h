@@ -18,14 +18,34 @@
 #include <cstdint>
 #include <math.h>
 
+class MotorAngle{
+public:
+  float current_angle;
+  float old_angle;
+  float rotation_angle;
+  float moving_distance;
+  float wheel_across;
+  MotorAngle(){
+    rotation_angle = 0;
+    wheel_across = 8.0;
+    moving_distance = 0;
+  }
+  void init(std::int32_t update_degree){
+    old_angle = current_angle = update_degree;
+  }
+  void update(std::int32_t update_degree){
+    old_angle = current_angle;
+    current_angle = update_degree;
+    rotation_angle = current_angle - old_angle;
+    moving_distance = wheel_across * M_PI * (rotation_angle / 360.0);
+  }
+};
+
 class SelfLocalization {
 private:
-  float right_motor_current_angle, right_motor_old_angle, right_motor_rotation_angle;
-  float left_motor_current_angle, left_motor_old_angle, left_motor_rotation_angle;
-  float wheel_across;
+  MotorAngle left, right;
   float between_wheels;
-  float right_wheel_moving_distance, left_wheel_moving_distance;
-  float moving_distance;
+  float moving_distance_mean;
   float turning_angle;
   float current_x, current_y, current_angle;
   float old_x, old_y, old_angle;
