@@ -42,5 +42,4 @@ TEST( SelfLocalizationTest, CalculateTest2 )
         sl.update(l, r);
         sl.writing_current_coordinates();
     }
-    std::cout << sl.getPointY() << std::endl;
 }

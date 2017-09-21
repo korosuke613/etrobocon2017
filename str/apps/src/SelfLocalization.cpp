@@ -15,10 +15,9 @@
 
 FILE* SelfLocalization::fp;
 
-SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl){
+SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl):
+  left(left_motor_sl), right(right_motor_sl){
   //メンバ変数の初期化 基本的に0
-  left.init(left_motor_sl);
-  right.init(right_motor_sl);
   between_wheels = 16.0;
   moving_distance_mean = 0;
   turning_angle = 0;

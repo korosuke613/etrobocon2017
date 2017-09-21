@@ -25,13 +25,11 @@ public:
   float rotation_angle;
   float moving_distance;
   float wheel_across;
-  MotorAngle(){
+  MotorAngle(std::int32_t degree){
     rotation_angle = 0;
     wheel_across = 8.0;
     moving_distance = 0;
-  }
-  void init(std::int32_t update_degree){
-    old_angle = current_angle = update_degree;
+    old_angle = current_angle = degree;
   }
   void update(std::int32_t update_degree){
     old_angle = current_angle;
