@@ -78,3 +78,17 @@ bool SelfLocalization::approached_target_coordinates (float target_x, float targ
     return true;
   return false;
 }
+
+//高校の時の数学で出た点と直線の距離の公式
+//点(x0, y0)と直線ax + by + c = 0の距離dは、d = |a*x0 + by0 + c| / (a^2 + b^2)^(1/2)
+//式の整理は自分で計算したやつ
+float calculate_between_ev3_and_border
+(float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y) {
+
+  float a = (_goal_y - _start_y) / (_goal_x - _start_x);
+  float b = -1.0;
+  float c = _start_y - (_goal_y - _start_y) / (_goal_x - _start_x) * _start_x;
+
+  return abs(a*_current_x + b*_current_y + c) / sqrt(a*a + b*b);
+}
+

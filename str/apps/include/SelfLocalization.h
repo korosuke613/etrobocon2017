@@ -57,6 +57,10 @@ public:
   bool approached_target_coordinates (float target_x, float target_y, float target_radius);
   float getPointX();
   float getPointY();
+
+  float calculate_between_ev3_and_border
+  (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y);
+
   
 private:
   //残りのメソッドかな？
