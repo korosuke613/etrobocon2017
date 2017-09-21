@@ -14,18 +14,21 @@
 #include "SelfLocalization.h"
 
 FILE* SelfLocalization::fp;
+bool SelfLocalization::isSave;
 
-SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl):
+SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl, bool save):
   left(left_motor_sl), right(right_motor_sl){
   //メンバ変数の初期化 基本的に0
   between_wheels = 16.0;
   moving_distance_mean = 0;
   turning_angle = 0;
   current_x = current_y = current_angle = 0;
-
+  isSave = save;
 
   /* 地図を作らない時はFILE関連は消しとくこと！ ヘッダファイル含めて！*/
-  fp = fopen("traveling_route.txt", "w");
+  if(save == true){
+    fp = fopen("traveling_route.txt", "w");
+  }
 }
 
 
@@ -46,6 +49,10 @@ void SelfLocalization::update (std::int32_t left_motor_sl, std::int32_t right_mo
   current_y += (moving_distance_mean * sin(current_angle + (turning_angle/2)));
   current_angle += turning_angle;
 
+  //保存
+  if(isSave == true){
+    writing_current_coordinates();
+  }
 }
 
 float SelfLocalization::getPointX(){

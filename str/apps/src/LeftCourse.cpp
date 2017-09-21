@@ -29,7 +29,6 @@ void LeftCourse::runNormalCourse(){
     // NormalCourseを抜けるまでループする
 	while ( 1 ) {
         sl.update(walker.get_count_L(), walker.get_count_R());
-        sl.writing_current_coordinates();
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
         isNormalCourse = normalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
         

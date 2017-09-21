@@ -9,10 +9,25 @@ $ g++-7 SelfLocalizationTest.cpp ../src/SelfLocalization.cpp gtest_main.o gtest-
 #include <gtest/gtest.h>
 #include "SelfLocalization.h" // このヘッダファイルのcppファイルをテスト
 
-// Pidのtarget以下の数字を入力すると負の数を出力する
+void straight(SelfLocalization &sl, int kyori, int &l, int &r){
+    for(int i = 0; i < kyori; i++){
+        l += 10; 
+        r += 10;
+        sl.update(l, r);
+    }
+}
+
+void curve(SelfLocalization &sl, float sub_degree, int &l, int &r){
+    sub_degree = sub_degree / 90;
+    for(int i = 0; i < 120 * sub_degree; i++){
+        l += 3; 
+        sl.update(l, r);
+    }
+}
+
 TEST( SelfLocalizationTest, CalculateTest1 )
 {
-    SelfLocalization sl(0,0);
+    SelfLocalization sl(0,0, false);
 
     sl.update(100, 200);
 
@@ -20,26 +35,18 @@ TEST( SelfLocalizationTest, CalculateTest1 )
     ASSERT_GE(sl.getPointY(), 2.0);  
 }
 
-// Pidのtarget以下の数字を入力すると負の数を出力する
 TEST( SelfLocalizationTest, CalculateTest2 )
 {
-    SelfLocalization sl(0,0);
-
+    SelfLocalization sl(0, 0, true);
     int l, r;
     l = r = 0;
-    for(int i = 0; i < 40; i++){
-        l = r += 3;
-        sl.update(l, r);
-        sl.writing_current_coordinates();
+
+    for(int i=0; i < 10; i++){
+        straight(sl, 20, l, r);
+        curve(sl, 180, l, r);
+        straight(sl, 20, l, r);
+        curve(sl, 180, l, r);
     }
-    for(int i = 0; i < 20; i++){
-        l += 3;
-        r += 1;
-        sl.update(l, r);
-    }
-    for(int i = 0; i < 40; i++){
-        l = r += 3;
-        sl.update(l, r);
-        sl.writing_current_coordinates();
-    }
+    ASSERT_LE(sl.getPointX(), 1.0);
+    ASSERT_LE(sl.getPointY(), 1.0); 
 }

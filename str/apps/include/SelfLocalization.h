@@ -47,10 +47,11 @@ private:
   float turning_angle;
   float current_x, current_y, current_angle;
   static FILE* fp;
+  static bool isSave;  
 
   //member methods
 public:
-  SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl);
+  SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl, bool save = true);
   void update (std::int32_t left_motor_sl, std::int32_t right_motor_sl);
   void writing_current_coordinates ();
   bool approached_target_coordinates (float target_x, float target_y, float target_radius);
