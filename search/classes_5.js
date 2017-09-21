@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['motor',['Motor',['../da/d61/classev3api_1_1_motor.html',1,'ev3api']]]
+  ['gyrosensor',['GyroSensor',['../dc/d08/classev3api_1_1_gyro_sensor.html',1,'ev3api']]]
 ];

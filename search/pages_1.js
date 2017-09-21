@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['btstack_20arduino_20manual',['BTstack Arduino Manual',['../d5/d0e/md_hrp2_modules_btstack_platforms_arduino_docs_docs_index.html',1,'']]]
+  ['speedcontrolクラスの使い方',['SpeedControlクラスの使い方',['../d0/d97/md_str_apps_examples_example__speed_control.html',1,'']]]
 ];

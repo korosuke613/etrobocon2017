@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['gyrosensor',['GyroSensor',['../dc/d08/classev3api_1_1_gyro_sensor.html',1,'ev3api']]]
+  ['emoter',['Emoter',['../d8/dc7/class_emoter.html',1,'']]],
+  ['etrobocon2017',['EtRobocon2017',['../d0/df8/class_et_robocon2017.html',1,'']]]
 ];

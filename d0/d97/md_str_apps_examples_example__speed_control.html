@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: SpeedControlクラスの使い方</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SpeedControlクラスの使い方 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>SpeedControlクラスの仕様？については<a href="https://korosuke613.github.io/etrobocon2017/dd/dc1/class_speed_control.html">こちら</a>をご覧ください。</p>
+<h2>概要</h2>
+<p>SpeedControlクラスはEV3をPID制御を用いて速度制御するためのクラスです。PIDクラスを継承しています。</p>
+<h2>使い方</h2>
+<p>### 1. インクルードする </p><div class="fragment"><div class="line">{c++}</div><div class="line">#include &quot;SpeedControl.h&quot;</div></div><!-- fragment --><p>### 2. コンストラクタを作成する </p><div class="fragment"><div class="line">{c++}</div><div class="line">SpeedControl sp;</div></div><!-- fragment --><p>### 3. PIDパラメータを設定する </p><div class="fragment"><div class="line">{c++}</div><div class="line">sp.setPid(Kp, Ki, Kd, target);</div></div><!-- fragment --><p> <a href="https://korosuke613.github.io/etrobocon2017/dc/de1/class_pid.html#aa8626402086bcd10cbb7f581c92300fb">setPidメソッド</a>でPIDパラメータを設定できます。</p><ul>
+<li>Kp - 比例定数</li>
+<li>Ki - 積分定数</li>
+<li>Kd - 微分定数</li>
+<li>target - 目標値</li>
+</ul>
+<p>### 4. PID計算をする </p><div class="fragment"><div class="line">{c++}</div><div class="line">value = sp.calculateSpeedForPid(right_motor, left_motor);</div></div><!-- fragment --><p> <a href="https://korosuke613.github.io/etrobocon2017/dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8">calculateSpeedForPidメソッド</a>でPID計算ができます。</p><ul>
+<li>value - 実際に計算された結果</li>
+<li>right_motor - 右モータの回転角</li>
+<li>left_motor - 左モータの回転角</li>
+</ul>
+<p><b>この計算は4msごとに実行してください。</b></p>
+<h2>使用例</h2>
+<p><a href="https://gist.github.com/korosuke613/9b595f525988115c085337dc386d83e6">ソースはこちら</a></p>
+<p>今回はPIDパラメータを以下のように設定しています。</p><ul>
+<li>Kp = 2.0</li>
+<li>Ki = 2.0</li>
+<li>Kd = 0.024</li>
+<li>目標値 = 70.0</li>
+</ul>
+<div class="fragment"><div class="line">{c++}</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;random&gt;</div><div class="line">#include &lt;unistd.h&gt;</div><div class="line">/** インクルード */</div><div class="line">#include &quot;SpeedControl.h&quot;</div><div class="line"></div><div class="line">// グローバル変数</div><div class="line">int speed100ms, value;</div><div class="line">int right_motor, left_motor;</div><div class="line"></div><div class="line">// プロトタイプ宣言</div><div class="line">void calcVirtualWheels();</div><div class="line"></div><div class="line">int main(){</div><div class="line">    speed100ms = value = right_motor = left_motor = 0;</div><div class="line"></div><div class="line">    /** １．コンストラクタを作成する */</div><div class="line">    SpeedControl sp;</div><div class="line"></div><div class="line">    /** ２．PIDパラメータの設定する </div><div class="line">    * 今回は以下のようにしています</div><div class="line">    * Kp = 2.0</div><div class="line">    * Ki = 2.0</div><div class="line">    * Kd = 0.024</div><div class="line">    * 目標値 = 70.0</div><div class="line">    */</div><div class="line">    sp.setPid(2.0, 2.0, 0.024, 70.0);</div><div class="line"></div><div class="line">    // 注）4msごとに実行されると仮定して2500回(10秒)回してます</div><div class="line">    for(int i=0; i&lt;2500; i++){</div><div class="line">        speed100ms = sp.getSpeed100ms();</div><div class="line">        calcVirtualWheels();</div><div class="line">        /** ３．PID計算をする */</div><div class="line">        value = sp.calculateSpeedForPid(right_motor, left_motor);</div><div class="line">        // 結果を画面に出力</div><div class="line">        std::cout &lt;&lt; &quot;スピード(100ms) &quot; &lt;&lt; speed100ms &lt;&lt; &quot;, PID値 &quot; &lt;&lt; value &lt;&lt; &quot;, 前進値&quot; &lt;&lt; (right_motor + left_motor) / 2 &lt;&lt; std::endl;</div><div class="line">        usleep(4000);</div><div class="line">    }</div><div class="line">    return 0;</div><div class="line">}</div><div class="line"></div><div class="line">// 仮想的なモータエンコーダです。</div><div class="line">void calcVirtualWheels(){</div><div class="line">    // モータの前進にランダム性を持たせる</div><div class="line">    std::random_device rnd;</div><div class="line">    std::mt19937 mt(rnd());</div><div class="line">    std::uniform_int_distribution&lt;int&gt; rand50(0,50); // 1~10の一様乱数</div><div class="line">    double r_value = rand50(mt) * 0.1;</div><div class="line"></div><div class="line">    // 実際に進んだ距離とする</div><div class="line">    left_motor = right_motor += (speed100ms/25 + value + r_value) * 0.1;</div><div class="line">}</div></div><!-- fragment --><p> ### コンパイル方法 </p><div class="fragment"><div class="line">g++ -w ../src/Pid.cpp ../src/SpeedControl.cpp example_SpeedControl.cpp -I../include</div></div><!-- fragment --><h3>実行結果</h3>
+<p>最後から30行を抽出しています。 大体70[m/0.1s]近くをさまよっていることがわかります。 </p><div class="fragment"><div class="line">スピード(100ms) 72, PID値 26, 前進値5160</div><div class="line">スピード(100ms) 70, PID値 23, 前進値5163</div><div class="line">スピード(100ms) 72, PID値 26, 前進値5165</div><div class="line">スピード(100ms) 70, PID値 23, 前進値5168</div><div class="line">スピード(100ms) 72, PID値 26, 前進値5170</div><div class="line">スピード(100ms) 70, PID値 25, 前進値5173</div><div class="line">スピード(100ms) 70, PID値 23, 前進値5176</div><div class="line">スピード(100ms) 72, PID値 26, 前進値5178</div><div class="line">スピード(100ms) 70, PID値 23, 前進値5181</div><div class="line">スピード(100ms) 72, PID値 24, 前進値5183</div><div class="line">スピード(100ms) 72, PID値 24, 前進値5185</div><div class="line">スピード(100ms) 72, PID値 26, 前進値5187</div><div class="line">スピード(100ms) 70, PID値 23, 前進値5190</div><div class="line">スピード(100ms) 72, PID値 24, 前進値5192</div><div class="line">スピード(100ms) 72, PID値 24, 前進値5194</div><div class="line">スピード(100ms) 72, PID値 26, 前進値5196</div><div class="line">スピード(100ms) 70, PID値 26, 前進値5198</div><div class="line">スピード(100ms) 68, PID値 25, 前進値5200</div><div class="line">スピード(100ms) 68, PID値 25, 前進値5202</div><div class="line">スピード(100ms) 68, PID値 25, 前進値5204</div><div class="line">スピード(100ms) 68, PID値 27, 前進値5206</div><div class="line">スピード(100ms) 66, PID値 24, 前進値5209</div><div class="line">スピード(100ms) 68, PID値 25, 前進値5212</div><div class="line">スピード(100ms) 68, PID値 25, 前進値5214</div><div class="line">スピード(100ms) 68, PID値 27, 前進値5216</div><div class="line">スピード(100ms) 66, PID値 26, 前進値5218</div><div class="line">スピード(100ms) 66, PID値 27, 前進値5220</div><div class="line">スピード(100ms) 64, PID値 24, 前進値5223</div><div class="line">スピード(100ms) 66, PID値 27, 前進値5225</div></div><!-- fragment --> </div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

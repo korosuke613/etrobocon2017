@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['get_5fcount_5fl',['get_count_L',['../d1/d49/class_walker.html#aac9aaddeb926d610def2896c27ad405b',1,'Walker']]],
-  ['get_5fcount_5fr',['get_count_R',['../d1/d49/class_walker.html#ab202921b6baf9ad7c3afbdf9b606bd09',1,'Walker']]],
-  ['get_5foutput',['get_output',['../dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d',1,'Pid']]],
-  ['getambient',['getAmbient',['../d3/d7f/classev3api_1_1_color_sensor.html#a18019a3fc61ce7020c9abe9e3a8ca31c',1,'ev3api::ColorSensor']]],
-  ['getangle',['getAngle',['../dc/d08/classev3api_1_1_gyro_sensor.html#a540bb6c48ffcb0a62fae935d65e4b628',1,'ev3api::GyroSensor']]],
-  ['getanglervelocity',['getAnglerVelocity',['../dc/d08/classev3api_1_1_gyro_sensor.html#a1f8dcc7c2d97d8f6c945a83ec1931ea0',1,'ev3api::GyroSensor']]],
-  ['getbrake',['getBrake',['../da/d61/classev3api_1_1_motor.html#a57c9950e883285372ff386781c7aeb27',1,'ev3api::Motor']]],
-  ['getbrightness',['getBrightness',['../d3/d7f/classev3api_1_1_color_sensor.html#ae7829be979488c7791dcbc835030d350',1,'ev3api::ColorSensor']]],
-  ['getcolornumber',['getColorNumber',['../d3/d7f/classev3api_1_1_color_sensor.html#a3c15bd64eb73d301e456a34c42982e50',1,'ev3api::ColorSensor']]],
-  ['getcount',['getCount',['../da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a',1,'ev3api::Motor']]],
-  ['getdistance',['getDistance',['../d9/dcc/classev3api_1_1_sonar_sensor.html#a2fd894f16c736178df87cd3f667962b9',1,'ev3api::SonarSensor']]],
-  ['getdistanceborder',['getDistanceBorder',['../d7/d26/class_sonar_alert.html#a003e9db9b5ab60e304ca4311b237aafc',1,'SonarAlert']]],
-  ['getdistancecurrent',['getDistanceCurrent',['../d7/d82/class_distance.html#abda79a6c79adfc691381cbdca55cf342',1,'Distance']]],
-  ['getdistancetotal',['getDistanceTotal',['../d7/d82/class_distance.html#a039334c729b1da2716a5dbbcf2631d36',1,'Distance']]],
-  ['getforward',['getForward',['../da/dbb/class_line_tracer.html#adc4d506b58b451a582aedcc9e5a0468c',1,'LineTracer']]],
-  ['getport',['getPort',['../da/d61/classev3api_1_1_motor.html#a0f93e8cd365d51ea041f087f68c00804',1,'ev3api::Motor::getPort()'],['../db/d9e/classev3api_1_1_sensor.html#ac2b40368f76aa4fa837ebc15241e655d',1,'ev3api::Sensor::getPort()']]],
-  ['getpwm',['getPWM',['../da/d61/classev3api_1_1_motor.html#ad20c76d13e5fbce4ab84e4ffa34eb83a',1,'ev3api::Motor']]],
-  ['getrawcolor',['getRawColor',['../d3/d7f/classev3api_1_1_color_sensor.html#a86dbce353b54a14bdfb57125d85f59f3',1,'ev3api::ColorSensor']]],
-  ['getstatus',['getStatus',['../d5/ddb/class_left_normal_course.html#a79e9a306dc154b59ff5051270438999b',1,'LeftNormalCourse::getStatus()'],['../d4/d58/class_right_normal_course.html#a9a2e1f2638ef477f9ca8935f207f2696',1,'RightNormalCourse::getStatus()']]],
-  ['gettim',['getTim',['../d4/d87/classev3api_1_1_clock.html#a4e0631ed1cccad6401b473dcf64f4fe1',1,'ev3api::Clock']]],
-  ['getturn',['getTurn',['../da/dbb/class_line_tracer.html#a2181ffe63f07139871737e22938c25e4',1,'LineTracer']]],
-  ['gyrosensor',['GyroSensor',['../dc/d08/classev3api_1_1_gyro_sensor.html#ae531673385f409a9438c43367c56fa33',1,'ev3api::GyroSensor']]]
+  ['firstcode',['FirstCode',['../df/da6/class_first_code.html#a7cdcdd8c22efcf8b4bf4eff4a4a79215',1,'FirstCode']]]
 ];

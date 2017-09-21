@@ -34,12 +34,12 @@ var menudata={children:[
 {text:"c",url:"functions_func.html#index_c"},
 {text:"d",url:"functions_func.html#index_d"},
 {text:"e",url:"functions_func.html#index_e"},
+{text:"f",url:"functions_func.html#index_f"},
 {text:"g",url:"functions_func.html#index_g"},
 {text:"i",url:"functions_func.html#index_i"},
 {text:"l",url:"functions_func.html#index_l"},
 {text:"m",url:"functions_func.html#index_m"},
 {text:"n",url:"functions_func.html#index_n"},
-{text:"o",url:"functions_func.html#index_o"},
 {text:"p",url:"functions_func.html#index_p"},
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
@@ -70,8 +70,11 @@ var menudata={children:[
 {text:"s",url:"globals.html#index_s"},
 {text:"t",url:"globals.html#index_t"},
 {text:"u",url:"globals.html#index_u"},
-{text:"w",url:"globals.html#index_w"}]},
+{text:"v",url:"globals.html#index_v"},
+{text:"w",url:"globals.html#index_w"},
+{text:"x",url:"globals.html#index_x"}]},
 {text:"関数",url:"globals_func.html"},
+{text:"変数",url:"globals_vars.html"},
 {text:"列挙型",url:"globals_enum.html"},
 {text:"列挙値",url:"globals_eval.html"},
 {text:"マクロ定義",url:"globals_defs.html",children:[
@@ -90,4 +93,5 @@ var menudata={children:[
 {text:"s",url:"globals_defs.html#index_s"},
 {text:"t",url:"globals_defs.html#index_t"},
 {text:"u",url:"globals_defs.html#index_u"},
-{text:"w",url:"globals_defs.html#index_w"}]}]}]}]}
+{text:"w",url:"globals_defs.html#index_w"},
+{text:"x",url:"globals_defs.html#index_x"}]}]}]}]}

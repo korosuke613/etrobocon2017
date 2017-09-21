@@ -1,0 +1,6 @@
+<map id="basicWalker::goStraight" name="basicWalker::goStraight">
+<area shape="rect" id="node2" href="$db/d57/sample_2util_8cpp.html#a0a6d184db0f324ec8dfdd059b9b526a8" title="msg_f" alt="" coords="268,5,326,31"/>
+<area shape="rect" id="node3" href="$da/d61/classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="216,55,378,80"/>
+<area shape="rect" id="node4" href="$da/d61/classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="427,80,587,105"/>
+<area shape="rect" id="node5" href="$da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="215,156,379,181"/>
+</map>

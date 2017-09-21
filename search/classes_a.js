@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['touchsensor',['TouchSensor',['../d5/dad/classev3api_1_1_touch_sensor.html',1,'ev3api']]],
-  ['turncontrol',['TurnControl',['../da/df4/class_turn_control.html',1,'']]]
+  ['rightcourse',['RightCourse',['../df/df1/class_right_course.html',1,'']]],
+  ['rightnormalcourse',['RightNormalCourse',['../d4/d58/class_right_normal_course.html',1,'']]]
 ];

@@ -10,7 +10,7 @@ var searchData=
   ['touchsensor_2ecpp',['TouchSensor.cpp',['../d7/d73/_touch_sensor_8cpp.html',1,'']]],
   ['touchsensor_2eh',['TouchSensor.h',['../d7/df2/_touch_sensor_8h.html',1,'']]],
   ['turn',['turn',['../dd/d88/class_normal_course.html#a0065b58f54e8e9d8ffbcf6297fc9defe',1,'NormalCourse::turn()'],['../d8/dc7/class_emoter.html#a3bc0aefbc31f403816a094aa3a5bd225',1,'Emoter::turn()']]],
-  ['turncontrol',['TurnControl',['../da/df4/class_turn_control.html',1,'TurnControl'],['../da/dbb/class_line_tracer.html#a164daac8c1c5cf23ccbe81dba9d4b9b9',1,'LineTracer::turnControl()'],['../da/df4/class_turn_control.html#aa517e31db70e27de33c21143b1de110a',1,'TurnControl::TurnControl()']]],
+  ['turncontrol',['TurnControl',['../da/df4/class_turn_control.html',1,'TurnControl'],['../da/df4/class_turn_control.html#aa517e31db70e27de33c21143b1de110a',1,'TurnControl::TurnControl()'],['../dc/db4/class_line_tracer_walker.html#a466dcd31f0ccffa81d21401b13d8ffe7',1,'LineTracerWalker::turnControl()']]],
   ['turncontrol_2ecpp',['TurnControl.cpp',['../d6/dcc/_turn_control_8cpp.html',1,'']]],
   ['turncontrol_2eh',['TurnControl.h',['../da/d7f/_turn_control_8h.html',1,'']]]
 ];

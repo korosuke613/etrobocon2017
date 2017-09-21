@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/apps/include/LineTracerWalker.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="../../dir_716c0c37d4fad24b6b8f48e824f3bc1d.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">LineTracerWalker.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/da8/_line_tracer_walker_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __LINETRACERWALKER__</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __LINETRACERWALKER__</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d7f/_turn_control_8h.html">TurnControl.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d18/_speed_control_8h.html">SpeedControl.h</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../dc/db4/class_line_tracer_walker.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/db4/class_line_tracer_walker.html">LineTracerWalker</a> {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="../../dc/db4/class_line_tracer_walker.html#ae7e6510ac4dfdf3e76e85bdfbf4594f1">LineTracerWalker</a>();</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/db4/class_line_tracer_walker.html#a2a9562c7ecfb36239745490fae5e1a3d">runLine</a>(int32_t countL, int32_t countR, int8_t light_value);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/db4/class_line_tracer_walker.html#a7af6bb6d2bc87351f4824d09a0eda3d1">setForward</a>(int8_t setValue);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/db4/class_line_tracer_walker.html#a9319a2e5fe665086cbcf966dbcd65034">setTurn</a>(int8_t setValue);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    int8_t <a class="code" href="../../dc/db4/class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961">getForward</a>();</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    int8_t <a class="code" href="../../dc/db4/class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390">getTurn</a>();</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/db4/class_line_tracer_walker.html#ab1f0f717138372f536dbb81a83aa6034">isLeftsideLine</a>(<span class="keywordtype">bool</span> b);</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../dc/db4/class_line_tracer_walker.html#a466dcd31f0ccffa81d21401b13d8ffe7">   16</a></span>&#160;    <a class="code" href="../../da/df4/class_turn_control.html">TurnControl</a> <a class="code" href="../../dc/db4/class_line_tracer_walker.html#a466dcd31f0ccffa81d21401b13d8ffe7">turnControl</a>;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../dc/db4/class_line_tracer_walker.html#ac2cd2253acde19117b52d5f7d98de698">   17</a></span>&#160;    <a class="code" href="../../dd/dc1/class_speed_control.html">SpeedControl</a> <a class="code" href="../../dc/db4/class_line_tracer_walker.html#ac2cd2253acde19117b52d5f7d98de698">speedControl</a>;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../dc/db4/class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">   18</a></span>&#160;    int8_t <a class="code" href="../../dc/db4/class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">minus</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    int8_t forward;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    int8_t turn;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_line_tracer_walker_html_ab1f0f717138372f536dbb81a83aa6034"><div class="ttname"><a href="../../dc/db4/class_line_tracer_walker.html#ab1f0f717138372f536dbb81a83aa6034">LineTracerWalker::isLeftsideLine</a></div><div class="ttdeci">void isLeftsideLine(bool b)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00028">LineTracerWalker.cpp:28</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a7af6bb6d2bc87351f4824d09a0eda3d1"><div class="ttname"><a href="../../dc/db4/class_line_tracer_walker.html#a7af6bb6d2bc87351f4824d09a0eda3d1">LineTracerWalker::setForward</a></div><div class="ttdeci">void setForward(int8_t setValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00012">LineTracerWalker.cpp:12</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_ae7e6510ac4dfdf3e76e85bdfbf4594f1"><div class="ttname"><a href="../../dc/db4/class_line_tracer_walker.html#ae7e6510ac4dfdf3e76e85bdfbf4594f1">LineTracerWalker::LineTracerWalker</a></div><div class="ttdeci">LineTracerWalker()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00003">LineTracerWalker.cpp:3</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_aafb2becdcc66d5552b80633aa47e959e"><div class="ttname"><a href="../../dc/db4/class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">LineTracerWalker::minus</a></div><div class="ttdeci">int8_t minus</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da8/_line_tracer_walker_8h_source.html#l00018">LineTracerWalker.h:18</a></div></div>
+<div class="ttc" id="_turn_control_8h_html"><div class="ttname"><a href="../../da/d7f/_turn_control_8h.html">TurnControl.h</a></div><div class="ttdoc">PID制御によるターン制御クラス </div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a2a9562c7ecfb36239745490fae5e1a3d"><div class="ttname"><a href="../../dc/db4/class_line_tracer_walker.html#a2a9562c7ecfb36239745490fae5e1a3d">LineTracerWalker::runLine</a></div><div class="ttdeci">void runLine(int32_t countL, int32_t countR, int8_t light_value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00007">LineTracerWalker.cpp:7</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a0f4b2a7a72cde7f8a4d9ed4f05237961"><div class="ttname"><a href="../../dc/db4/class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961">LineTracerWalker::getForward</a></div><div class="ttdeci">int8_t getForward()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00020">LineTracerWalker.cpp:20</a></div></div>
+<div class="ttc" id="class_speed_control_html"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html">SpeedControl</a></div><div class="ttdoc">PID制御による速度制御クラス </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00018">SpeedControl.h:18</a></div></div>
+<div class="ttc" id="class_turn_control_html"><div class="ttname"><a href="../../da/df4/class_turn_control.html">TurnControl</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d7f/_turn_control_8h_source.html#l00015">TurnControl.h:15</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a75c6e77a03e0fedc2ad1ccf72a6ef390"><div class="ttname"><a href="../../dc/db4/class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390">LineTracerWalker::getTurn</a></div><div class="ttdeci">int8_t getTurn()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00024">LineTracerWalker.cpp:24</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a466dcd31f0ccffa81d21401b13d8ffe7"><div class="ttname"><a href="../../dc/db4/class_line_tracer_walker.html#a466dcd31f0ccffa81d21401b13d8ffe7">LineTracerWalker::turnControl</a></div><div class="ttdeci">TurnControl turnControl</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da8/_line_tracer_walker_8h_source.html#l00016">LineTracerWalker.h:16</a></div></div>
+<div class="ttc" id="_speed_control_8h_html"><div class="ttname"><a href="../../db/d18/_speed_control_8h.html">SpeedControl.h</a></div><div class="ttdoc">PID制御による速度制御クラス </div></div>
+<div class="ttc" id="class_line_tracer_walker_html_a9319a2e5fe665086cbcf966dbcd65034"><div class="ttname"><a href="../../dc/db4/class_line_tracer_walker.html#a9319a2e5fe665086cbcf966dbcd65034">LineTracerWalker::setTurn</a></div><div class="ttdeci">void setTurn(int8_t setValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00016">LineTracerWalker.cpp:16</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html_ac2cd2253acde19117b52d5f7d98de698"><div class="ttname"><a href="../../dc/db4/class_line_tracer_walker.html#ac2cd2253acde19117b52d5f7d98de698">LineTracerWalker::speedControl</a></div><div class="ttdeci">SpeedControl speedControl</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da8/_line_tracer_walker_8h_source.html#l00017">LineTracerWalker.h:17</a></div></div>
+<div class="ttc" id="class_line_tracer_walker_html"><div class="ttname"><a href="../../dc/db4/class_line_tracer_walker.html">LineTracerWalker</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da8/_line_tracer_walker_8h_source.html#l00007">LineTracerWalker.h:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

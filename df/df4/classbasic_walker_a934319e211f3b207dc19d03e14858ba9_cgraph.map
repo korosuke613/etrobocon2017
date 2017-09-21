@@ -1,0 +1,9 @@
+<map id="basicWalker::parkingLeft" name="basicWalker::parkingLeft">
+<area shape="rect" id="node2" href="$df/df4/classbasic_walker.html#a70c3914d87ac8c112d64792b0e67da6f" title="basicWalker::goStraight" alt="" coords="235,81,396,106"/>
+<area shape="rect" id="node7" href="$df/df4/classbasic_walker.html#a88f6355dbe66d7f317a838672a22a10d" title="basicWalker::spinRightAngle" alt="" coords="220,130,411,156"/>
+<area shape="rect" id="node3" href="$db/d57/sample_2util_8cpp.html#a0a6d184db0f324ec8dfdd059b9b526a8" title="msg_f" alt="" coords="512,32,569,57"/>
+<area shape="rect" id="node4" href="$da/d61/classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="459,81,622,106"/>
+<area shape="rect" id="node5" href="$da/d61/classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="670,81,830,106"/>
+<area shape="rect" id="node6" href="$da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="459,130,622,156"/>
+<area shape="rect" id="node8" href="$da/d61/classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="471,232,610,257"/>
+</map>

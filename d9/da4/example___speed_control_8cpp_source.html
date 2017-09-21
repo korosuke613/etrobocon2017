@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/apps/examples/example_SpeedControl.cpp ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="../../dir_7ddface023733e8076f170809cfd9fe9.html">examples</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">example_SpeedControl.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/da4/example___speed_control_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d18/_speed_control_8h.html">SpeedControl.h</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// グローバル変数</span></div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d9/da4/example___speed_control_8cpp.html#ac4f474c82e82cbb89ca7c36dd52be0ed">   17</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ae2385d0e1670ce147d83127706ad00fe">speed100ms</a>, <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ac4f474c82e82cbb89ca7c36dd52be0ed">value</a>;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d9/da4/example___speed_control_8cpp.html#a35feaef5a31fc4d7da604b2caee14026">   18</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#a35feaef5a31fc4d7da604b2caee14026">right_motor</a>, <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ad9aff47a6bd1e6466e99f17970a99763">left_motor</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// プロトタイプ宣言</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#a6a753b395f36ba0fe68c7574f02b611a">calcVirtualWheels</a>();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d9/da4/example___speed_control_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   23</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(){</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ae2385d0e1670ce147d83127706ad00fe">speed100ms</a> = <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ac4f474c82e82cbb89ca7c36dd52be0ed">value</a> = <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#a35feaef5a31fc4d7da604b2caee14026">right_motor</a> = <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ad9aff47a6bd1e6466e99f17970a99763">left_motor</a> = 0;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../dd/dc1/class_speed_control.html">SpeedControl</a> sp;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    sp.<a class="code" href="../../dc/de1/class_pid.html#aa8626402086bcd10cbb7f581c92300fb">setPid</a>(2.0, 2.0, 0.024, 70.0);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// 注）4msごとに実行されると仮定して2500回(10秒)回してます</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;2500; i++){</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ae2385d0e1670ce147d83127706ad00fe">speed100ms</a> = sp.<a class="code" href="../../dd/dc1/class_speed_control.html#a52d9842daaab11fc25d24c631d5534ed">getSpeed100ms</a>();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#a6a753b395f36ba0fe68c7574f02b611a">calcVirtualWheels</a>();</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ac4f474c82e82cbb89ca7c36dd52be0ed">value</a> = sp.<a class="code" href="../../dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8">calculateSpeedForPid</a>(<a class="code" href="../../d9/da4/example___speed_control_8cpp.html#a35feaef5a31fc4d7da604b2caee14026">right_motor</a>, <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ad9aff47a6bd1e6466e99f17970a99763">left_motor</a>);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// 結果を画面に出力</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;スピード(100ms) &quot;</span> &lt;&lt; <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ae2385d0e1670ce147d83127706ad00fe">speed100ms</a> &lt;&lt; <span class="stringliteral">&quot;, PID値 &quot;</span> &lt;&lt; <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ac4f474c82e82cbb89ca7c36dd52be0ed">value</a> &lt;&lt; <span class="stringliteral">&quot;, 前進値&quot;</span> &lt;&lt; (<a class="code" href="../../d9/da4/example___speed_control_8cpp.html#a35feaef5a31fc4d7da604b2caee14026">right_motor</a> + <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ad9aff47a6bd1e6466e99f17970a99763">left_motor</a>) / 2 &lt;&lt; std::endl;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        usleep(4000);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">// 仮想的なモータエンコーダです。</span></div><div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d9/da4/example___speed_control_8cpp.html#a6a753b395f36ba0fe68c7574f02b611a">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#a6a753b395f36ba0fe68c7574f02b611a">calcVirtualWheels</a>(){</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// モータの前進にランダム性を持たせる</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::random_device rnd;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::mt19937 mt(rnd());</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::uniform_int_distribution&lt;int&gt; rand50(0,50); <span class="comment">// 1~10の一様乱数</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">double</span> r_value = rand50(mt) * 0.1;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// 実際に進んだ距離とする</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ad9aff47a6bd1e6466e99f17970a99763">left_motor</a> = <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#a35feaef5a31fc4d7da604b2caee14026">right_motor</a> += (<a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ae2385d0e1670ce147d83127706ad00fe">speed100ms</a>/25 + <a class="code" href="../../d9/da4/example___speed_control_8cpp.html#ac4f474c82e82cbb89ca7c36dd52be0ed">value</a> + r_value) * 0.1;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div><div class="ttc" id="example___speed_control_8cpp_html_ac4f474c82e82cbb89ca7c36dd52be0ed"><div class="ttname"><a href="../../d9/da4/example___speed_control_8cpp.html#ac4f474c82e82cbb89ca7c36dd52be0ed">value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da4/example___speed_control_8cpp_source.html#l00017">example_SpeedControl.cpp:17</a></div></div>
+<div class="ttc" id="example___speed_control_8cpp_html_ae2385d0e1670ce147d83127706ad00fe"><div class="ttname"><a href="../../d9/da4/example___speed_control_8cpp.html#ae2385d0e1670ce147d83127706ad00fe">speed100ms</a></div><div class="ttdeci">int speed100ms</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da4/example___speed_control_8cpp_source.html#l00017">example_SpeedControl.cpp:17</a></div></div>
+<div class="ttc" id="example___speed_control_8cpp_html_a35feaef5a31fc4d7da604b2caee14026"><div class="ttname"><a href="../../d9/da4/example___speed_control_8cpp.html#a35feaef5a31fc4d7da604b2caee14026">right_motor</a></div><div class="ttdeci">int right_motor</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da4/example___speed_control_8cpp_source.html#l00018">example_SpeedControl.cpp:18</a></div></div>
+<div class="ttc" id="example___speed_control_8cpp_html_a6a753b395f36ba0fe68c7574f02b611a"><div class="ttname"><a href="../../d9/da4/example___speed_control_8cpp.html#a6a753b395f36ba0fe68c7574f02b611a">calcVirtualWheels</a></div><div class="ttdeci">void calcVirtualWheels()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da4/example___speed_control_8cpp_source.html#l00052">example_SpeedControl.cpp:52</a></div></div>
+<div class="ttc" id="class_speed_control_html_a4dc24488ce1566fe7b2dc1ecaf1a7bc8"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8">SpeedControl::calculateSpeedForPid</a></div><div class="ttdeci">std::int32_t calculateSpeedForPid(std::int32_t curAngleL, std::int32_t curAngleR)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/ddb/_speed_control_8cpp_source.html#l00020">SpeedControl.cpp:20</a></div></div>
+<div class="ttc" id="class_pid_html_aa8626402086bcd10cbb7f581c92300fb"><div class="ttname"><a href="../../dc/de1/class_pid.html#aa8626402086bcd10cbb7f581c92300fb">Pid::setPid</a></div><div class="ttdeci">void setPid(double _p_gain, double _i_gain, double _d_gain, double _target)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d35/_pid_8cpp_source.html#l00040">Pid.cpp:40</a></div></div>
+<div class="ttc" id="class_speed_control_html"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html">SpeedControl</a></div><div class="ttdoc">PID制御による速度制御クラス </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/_speed_control_8h_source.html#l00018">SpeedControl.h:18</a></div></div>
+<div class="ttc" id="example___speed_control_8cpp_html_ad9aff47a6bd1e6466e99f17970a99763"><div class="ttname"><a href="../../d9/da4/example___speed_control_8cpp.html#ad9aff47a6bd1e6466e99f17970a99763">left_motor</a></div><div class="ttdeci">int left_motor</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da4/example___speed_control_8cpp_source.html#l00018">example_SpeedControl.cpp:18</a></div></div>
+<div class="ttc" id="example___speed_control_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="../../d9/da4/example___speed_control_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da4/example___speed_control_8cpp_source.html#l00023">example_SpeedControl.cpp:23</a></div></div>
+<div class="ttc" id="class_speed_control_html_a52d9842daaab11fc25d24c631d5534ed"><div class="ttname"><a href="../../dd/dc1/class_speed_control.html#a52d9842daaab11fc25d24c631d5534ed">SpeedControl::getSpeed100ms</a></div><div class="ttdeci">std::int16_t getSpeed100ms()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/ddb/_speed_control_8cpp_source.html#l00052">SpeedControl.cpp:52</a></div></div>
+<div class="ttc" id="_speed_control_8h_html"><div class="ttname"><a href="../../db/d18/_speed_control_8h.html">SpeedControl.h</a></div><div class="ttdoc">PID制御による速度制御クラス </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

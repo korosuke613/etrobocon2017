@@ -1,3 +1,5 @@
 <map id="クラス階層図" name="クラス階層図">
-<area shape="rect" id="node1" href="$d7/d26/class_sonar_alert.html" title="SonarAlert" alt="" coords="5,5,90,31"/>
+<area shape="rect" id="node1" href="$dc/de1/class_pid.html" title="PID制御の計算を行うクラス " alt="" coords="5,31,46,56"/>
+<area shape="rect" id="node2" href="$dd/dc1/class_speed_control.html" title="PID制御による速度制御クラス " alt="" coords="94,5,197,31"/>
+<area shape="rect" id="node3" href="$da/df4/class_turn_control.html" title="TurnControl" alt="" coords="100,55,191,80"/>
 </map>

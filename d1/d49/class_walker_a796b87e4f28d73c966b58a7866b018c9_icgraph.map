@@ -1,3 +1,7 @@
 <map id="Walker::reset" name="Walker::reset">
-<area shape="rect" id="node2" href="$d1/d49/class_walker.html#acc0931305bedcf81ff621c31cdf2a92c" title="Walker::Walker" alt="" coords="153,5,263,31"/>
+<area shape="rect" id="node2" href="$d2/d87/class_puzzle_line_tracer.html#abc9cfaf800f212a5dae9050470cec11c" title="PuzzleLineTracer::preparate\lPuzzle" alt="" coords="153,5,342,44"/>
+<area shape="rect" id="node6" href="$d1/d49/class_walker.html#acc0931305bedcf81ff621c31cdf2a92c" title="Walker::Walker" alt="" coords="192,68,303,93"/>
+<area shape="rect" id="node3" href="$da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="390,12,503,37"/>
+<area shape="rect" id="node4" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="551,12,701,37"/>
+<area shape="rect" id="node5" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="749,12,899,37"/>
 </map>

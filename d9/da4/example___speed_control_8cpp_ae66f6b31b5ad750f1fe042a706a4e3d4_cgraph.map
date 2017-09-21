@@ -1,0 +1,10 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$dc/de1/class_pid.html#aa8626402086bcd10cbb7f581c92300fb" title="Pid::setPid" alt="" coords="165,5,250,31"/>
+<area shape="rect" id="node3" href="$dd/dc1/class_speed_control.html#a52d9842daaab11fc25d24c631d5534ed" title="SpeedControl::getSpeed100ms" alt="" coords="104,55,311,80"/>
+<area shape="rect" id="node4" href="$d9/da4/example___speed_control_8cpp.html#a6a753b395f36ba0fe68c7574f02b611a" title="calcVirtualWheels" alt="" coords="144,104,271,129"/>
+<area shape="rect" id="node5" href="$dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="107,153,308,192"/>
+<area shape="rect" id="node6" href="$dd/dc1/class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="359,85,570,111"/>
+<area shape="rect" id="node7" href="$dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="414,135,515,160"/>
+<area shape="rect" id="node8" href="$dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="409,184,520,209"/>
+<area shape="rect" id="node9" href="$dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="409,233,520,259"/>
+</map>

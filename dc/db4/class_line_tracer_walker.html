@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: LineTracerWalker クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="../../d2/d91/class_line_tracer_walker-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">LineTracerWalker クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html">LineTracerWalker.h</a>&gt;</code></p>
+<div class="dynheader">
+LineTracerWalker 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d7f/class_line_tracer_walker__coll__graph.png" border="0" usemap="#_line_tracer_walker_coll__map" alt="Collaboration graph"/></div>
+<map name="_line_tracer_walker_coll__map" id="_line_tracer_walker_coll__map">
+<area shape="rect" id="node2" href="../../dd/dc1/class_speed_control.html" title="PID制御による速度制御クラス " alt="" coords="5,181,177,295"/>
+<area shape="rect" id="node3" href="../../dc/de1/class_pid.html" title="PID制御の計算を行うクラス " alt="" coords="134,5,239,132"/>
+<area shape="rect" id="node4" href="../../da/df4/class_turn_control.html" title="{TurnControl\n||+ TurnControl()\l+ calculateTurnForPid()\l}" alt="" coords="202,195,362,281"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae7e6510ac4dfdf3e76e85bdfbf4594f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#ae7e6510ac4dfdf3e76e85bdfbf4594f1">LineTracerWalker</a> ()</td></tr>
+<tr class="separator:ae7e6510ac4dfdf3e76e85bdfbf4594f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a9562c7ecfb36239745490fae5e1a3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#a2a9562c7ecfb36239745490fae5e1a3d">runLine</a> (int32_t countL, int32_t countR, int8_t light_value)</td></tr>
+<tr class="separator:a2a9562c7ecfb36239745490fae5e1a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af6bb6d2bc87351f4824d09a0eda3d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#a7af6bb6d2bc87351f4824d09a0eda3d1">setForward</a> (int8_t setValue)</td></tr>
+<tr class="separator:a7af6bb6d2bc87351f4824d09a0eda3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9319a2e5fe665086cbcf966dbcd65034"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#a9319a2e5fe665086cbcf966dbcd65034">setTurn</a> (int8_t setValue)</td></tr>
+<tr class="separator:a9319a2e5fe665086cbcf966dbcd65034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f4b2a7a72cde7f8a4d9ed4f05237961"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961">getForward</a> ()</td></tr>
+<tr class="separator:a0f4b2a7a72cde7f8a4d9ed4f05237961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c6e77a03e0fedc2ad1ccf72a6ef390"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390">getTurn</a> ()</td></tr>
+<tr class="separator:a75c6e77a03e0fedc2ad1ccf72a6ef390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f0f717138372f536dbb81a83aa6034"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#ab1f0f717138372f536dbb81a83aa6034">isLeftsideLine</a> (bool b)</td></tr>
+<tr class="separator:ab1f0f717138372f536dbb81a83aa6034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a466dcd31f0ccffa81d21401b13d8ffe7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/df4/class_turn_control.html">TurnControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#a466dcd31f0ccffa81d21401b13d8ffe7">turnControl</a></td></tr>
+<tr class="separator:a466dcd31f0ccffa81d21401b13d8ffe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2cd2253acde19117b52d5f7d98de698"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dc1/class_speed_control.html">SpeedControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#ac2cd2253acde19117b52d5f7d98de698">speedControl</a></td></tr>
+<tr class="separator:ac2cd2253acde19117b52d5f7d98de698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb2becdcc66d5552b80633aa47e959e"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">minus</a></td></tr>
+<tr class="separator:aafb2becdcc66d5552b80633aa47e959e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html#l00007">7</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ae7e6510ac4dfdf3e76e85bdfbf4594f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e6510ac4dfdf3e76e85bdfbf4594f1">&#9670;&nbsp;</a></span>LineTracerWalker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LineTracerWalker::LineTracerWalker </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00003">3</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a0f4b2a7a72cde7f8a4d9ed4f05237961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f4b2a7a72cde7f8a4d9ed4f05237961">&#9670;&nbsp;</a></span>getForward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t LineTracerWalker::getForward </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00020">20</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/db4/class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph.png" border="0" usemap="#dc/db4/class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph" alt=""/></div>
+<map name="dc/db4/class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph" id="dc/db4/class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph">
+<area shape="rect" id="node2" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="258,5,457,31"/>
+<area shape="rect" id="node6" href="../../d2/d87/class_puzzle_line_tracer.html#abc9cfaf800f212a5dae9050470cec11c" title="PuzzleLineTracer::preparate\lPuzzle" alt="" coords="263,55,452,93"/>
+<area shape="rect" id="node7" href="../../d2/d87/class_puzzle_line_tracer.html#a970a4c69f253b85f9df0a5c1757b05f7" title="PuzzleLineTracer::puzzle\lLineTrace" alt="" coords="273,117,443,156"/>
+<area shape="rect" id="node8" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="254,180,462,205"/>
+<area shape="rect" id="node3" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="514,93,627,119"/>
+<area shape="rect" id="node4" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="680,119,830,144"/>
+<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="878,119,1028,144"/>
+<area shape="rect" id="node9" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="510,161,632,187"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a75c6e77a03e0fedc2ad1ccf72a6ef390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75c6e77a03e0fedc2ad1ccf72a6ef390">&#9670;&nbsp;</a></span>getTurn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t LineTracerWalker::getTurn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00024">24</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/db4/class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph.png" border="0" usemap="#dc/db4/class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph" alt=""/></div>
+<map name="dc/db4/class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph" id="dc/db4/class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph">
+<area shape="rect" id="node2" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="236,5,435,31"/>
+<area shape="rect" id="node6" href="../../d2/d87/class_puzzle_line_tracer.html#abc9cfaf800f212a5dae9050470cec11c" title="PuzzleLineTracer::preparate\lPuzzle" alt="" coords="241,55,430,93"/>
+<area shape="rect" id="node7" href="../../d2/d87/class_puzzle_line_tracer.html#a970a4c69f253b85f9df0a5c1757b05f7" title="PuzzleLineTracer::puzzle\lLineTrace" alt="" coords="251,117,421,156"/>
+<area shape="rect" id="node8" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="232,180,440,205"/>
+<area shape="rect" id="node3" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="492,93,606,119"/>
+<area shape="rect" id="node4" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="658,119,808,144"/>
+<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="856,119,1006,144"/>
+<area shape="rect" id="node9" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="488,161,610,187"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab1f0f717138372f536dbb81a83aa6034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f0f717138372f536dbb81a83aa6034">&#9670;&nbsp;</a></span>isLeftsideLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineTracerWalker::isLeftsideLine </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00028">28</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/db4/class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph.png" border="0" usemap="#dc/db4/class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph" alt=""/></div>
+<map name="dc/db4/class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph" id="dc/db4/class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph">
+<area shape="rect" id="node2" href="../../d5/ddb/class_left_normal_course.html#a5a07e4b41de72aaaff4796d286589902" title="LeftNormalCourse::LeftNormal\lCourse" alt="" coords="268,5,470,44"/>
+<area shape="rect" id="node3" href="../../d5/ddb/class_left_normal_course.html#a8a9bb16c15fdf4b3fa8b2618813d7df8" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="269,68,469,107"/>
+<area shape="rect" id="node8" href="../../d2/d87/class_puzzle_line_tracer.html#a2a91d0db7dc4f176783548894e9eb3a5" title="PuzzleLineTracer::Puzzle\lLineTracer" alt="" coords="283,131,455,169"/>
+<area shape="rect" id="node9" href="../../d4/d58/class_right_normal_course.html#a889f1172fbab1bbcd67bcf27f4d619e7" title="RightNormalCourse::\lRightNormalCourse" alt="" coords="296,193,442,232"/>
+<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="518,75,717,100"/>
+<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="765,75,878,100"/>
+<area shape="rect" id="node6" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="926,75,1076,100"/>
+<area shape="rect" id="node7" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1124,75,1274,100"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2a9562c7ecfb36239745490fae5e1a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a9562c7ecfb36239745490fae5e1a3d">&#9670;&nbsp;</a></span>runLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineTracerWalker::runLine </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>countL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>countR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>light_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00007">7</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/db4/class_line_tracer_walker_a2a9562c7ecfb36239745490fae5e1a3d_cgraph.png" border="0" usemap="#dc/db4/class_line_tracer_walker_a2a9562c7ecfb36239745490fae5e1a3d_cgraph" alt=""/></div>
+<map name="dc/db4/class_line_tracer_walker_a2a9562c7ecfb36239745490fae5e1a3d_cgraph" id="dc/db4/class_line_tracer_walker_a2a9562c7ecfb36239745490fae5e1a3d_cgraph">
+<area shape="rect" id="node2" href="../../dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="231,48,432,87"/>
+<area shape="rect" id="node7" href="../../da/df4/class_turn_control.html#ac3c948ab0766eda64baf89c613464bf1" title="TurnControl::calculateTurn\lForPid" alt="" coords="242,111,421,149"/>
+<area shape="rect" id="node3" href="../../dd/dc1/class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="480,5,691,31"/>
+<area shape="rect" id="node4" href="../../dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="535,55,636,80"/>
+<area shape="rect" id="node5" href="../../dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="530,104,641,129"/>
+<area shape="rect" id="node6" href="../../dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="530,153,642,179"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/db4/class_line_tracer_walker_a2a9562c7ecfb36239745490fae5e1a3d_icgraph.png" border="0" usemap="#dc/db4/class_line_tracer_walker_a2a9562c7ecfb36239745490fae5e1a3d_icgraph" alt=""/></div>
+<map name="dc/db4/class_line_tracer_walker_a2a9562c7ecfb36239745490fae5e1a3d_icgraph" id="dc/db4/class_line_tracer_walker_a2a9562c7ecfb36239745490fae5e1a3d_icgraph">
+<area shape="rect" id="node2" href="../../d5/ddb/class_left_normal_course.html#a8a9bb16c15fdf4b3fa8b2618813d7df8" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="231,5,430,44"/>
+<area shape="rect" id="node7" href="../../d2/d87/class_puzzle_line_tracer.html#abc9cfaf800f212a5dae9050470cec11c" title="PuzzleLineTracer::preparate\lPuzzle" alt="" coords="487,63,677,101"/>
+<area shape="rect" id="node8" href="../../d2/d87/class_puzzle_line_tracer.html#a970a4c69f253b85f9df0a5c1757b05f7" title="PuzzleLineTracer::puzzle\lLineTrace" alt="" coords="245,120,416,159"/>
+<area shape="rect" id="node9" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="478,180,686,205"/>
+<area shape="rect" id="node3" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="482,13,682,39"/>
+<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="738,99,852,124"/>
+<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="904,124,1054,149"/>
+<area shape="rect" id="node6" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1102,124,1252,149"/>
+<area shape="rect" id="node10" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="734,148,856,173"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7af6bb6d2bc87351f4824d09a0eda3d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af6bb6d2bc87351f4824d09a0eda3d1">&#9670;&nbsp;</a></span>setForward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineTracerWalker::setForward </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>setValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00012">12</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/db4/class_line_tracer_walker_a7af6bb6d2bc87351f4824d09a0eda3d1_icgraph.png" border="0" usemap="#dc/db4/class_line_tracer_walker_a7af6bb6d2bc87351f4824d09a0eda3d1_icgraph" alt=""/></div>
+<map name="dc/db4/class_line_tracer_walker_a7af6bb6d2bc87351f4824d09a0eda3d1_icgraph" id="dc/db4/class_line_tracer_walker_a7af6bb6d2bc87351f4824d09a0eda3d1_icgraph">
+<area shape="rect" id="node2" href="../../d5/ddb/class_left_normal_course.html#a8a9bb16c15fdf4b3fa8b2618813d7df8" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="472,63,671,101"/>
+<area shape="rect" id="node7" href="../../dd/d88/class_normal_course.html#a643fa714726cffb93ad81f919e5ff140" title="NormalCourse::stop" alt="" coords="268,120,408,145"/>
+<area shape="rect" id="node11" href="../../d2/d87/class_puzzle_line_tracer.html#a970a4c69f253b85f9df0a5c1757b05f7" title="PuzzleLineTracer::puzzle\lLineTrace" alt="" coords="253,5,424,44"/>
+<area shape="rect" id="node3" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="723,69,922,95"/>
+<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="979,69,1092,95"/>
+<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="1145,97,1294,123"/>
+<area shape="rect" id="node6" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1342,97,1493,123"/>
+<area shape="rect" id="node8" href="../../d4/d58/class_right_normal_course.html#aef2692f9c696b1e19caf8d366b158482" title="RightNormalCourse::\lrunNormalCourse" alt="" coords="498,125,644,164"/>
+<area shape="rect" id="node9" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="719,128,927,153"/>
+<area shape="rect" id="node10" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="975,121,1097,147"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9319a2e5fe665086cbcf966dbcd65034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9319a2e5fe665086cbcf966dbcd65034">&#9670;&nbsp;</a></span>setTurn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineTracerWalker::setTurn </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>setValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a> の <a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html#l00016">16</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/db4/class_line_tracer_walker_a9319a2e5fe665086cbcf966dbcd65034_icgraph.png" border="0" usemap="#dc/db4/class_line_tracer_walker_a9319a2e5fe665086cbcf966dbcd65034_icgraph" alt=""/></div>
+<map name="dc/db4/class_line_tracer_walker_a9319a2e5fe665086cbcf966dbcd65034_icgraph" id="dc/db4/class_line_tracer_walker_a9319a2e5fe665086cbcf966dbcd65034_icgraph">
+<area shape="rect" id="node2" href="../../d5/ddb/class_left_normal_course.html#a8a9bb16c15fdf4b3fa8b2618813d7df8" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="231,5,430,44"/>
+<area shape="rect" id="node3" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="478,12,677,37"/>
+<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="725,12,839,37"/>
+<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="887,12,1036,37"/>
+<area shape="rect" id="node6" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1084,12,1235,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aafb2becdcc66d5552b80633aa47e959e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb2becdcc66d5552b80633aa47e959e">&#9670;&nbsp;</a></span>minus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t LineTracerWalker::minus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html#l00018">18</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac2cd2253acde19117b52d5f7d98de698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2cd2253acde19117b52d5f7d98de698">&#9670;&nbsp;</a></span>speedControl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/dc1/class_speed_control.html">SpeedControl</a> LineTracerWalker::speedControl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html#l00017">17</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a466dcd31f0ccffa81d21401b13d8ffe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a466dcd31f0ccffa81d21401b13d8ffe7">&#9670;&nbsp;</a></span>turnControl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/df4/class_turn_control.html">TurnControl</a> LineTracerWalker::turnControl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>str/apps/include/<a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html">LineTracerWalker.h</a></li>
+<li>str/apps/src/<a class="el" href="../../d2/dc4/_line_tracer_walker_8cpp_source.html">LineTracerWalker.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

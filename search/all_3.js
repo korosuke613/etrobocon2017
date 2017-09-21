@@ -1,13 +1,17 @@
 var searchData=
 [
   ['c_2dsouce_2dfile_2d1_2ec',['c-souce-file-1.c',['../d5/db5/lib2_2src_2c-souce-file-1_8c.html',1,'(大域名前空間)'],['../dc/d80/libcpp-test_2src_2c-souce-file-1_8c.html',1,'(大域名前空間)']]],
+  ['calcdistance4ms',['calcDistance4ms',['../dd/dc1/class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60',1,'SpeedControl']]],
   ['calculate',['calculate',['../dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5',1,'Pid']]],
   ['calculatespeedforpid',['calculateSpeedForPid',['../dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8',1,'SpeedControl']]],
   ['calculateturnforpid',['calculateTurnForPid',['../da/df4/class_turn_control.html#ac3c948ab0766eda64baf89c613464bf1',1,'TurnControl']]],
+  ['calcvirtualwheels',['calcVirtualWheels',['../d9/da4/example___speed_control_8cpp.html#a6a753b395f36ba0fe68c7574f02b611a',1,'example_SpeedControl.cpp']]],
   ['calib_5ffont',['CALIB_FONT',['../d8/d0a/common__definition_8h.html#ab694ae852e331430e3b2fed005001244',1,'common_definition.h']]],
   ['calib_5ffont_5fheight',['CALIB_FONT_HEIGHT',['../d8/d0a/common__definition_8h.html#a726af388e87ef25ffe8a24cda2285737',1,'common_definition.h']]],
   ['calib_5ffont_5fwidth',['CALIB_FONT_WIDTH',['../d8/d0a/common__definition_8h.html#a7a1984ed413358042cd26ce668de1069',1,'common_definition.h']]],
   ['changedefault',['changeDefault',['../d8/dc7/class_emoter.html#aaf3d3334f9b6237acc3facb831341bff',1,'Emoter::changeDefault()'],['../dd/d56/class_lifter.html#ab497fa52bc88dbc892d8a12a25b0d475',1,'Lifter::changeDefault()']]],
+  ['changeleftdigit',['changeLeftDigit',['../df/da6/class_first_code.html#ae83469b18ff7d840c10c1e5a05ab9e40',1,'FirstCode']]],
+  ['changerightdigit',['changeRightDigit',['../df/da6/class_first_code.html#a96b2a9b13a138fe2ffbfa6074904d17d',1,'FirstCode']]],
   ['clock',['Clock',['../d4/d87/classev3api_1_1_clock.html',1,'ev3api::Clock'],['../d4/d87/classev3api_1_1_clock.html#a14501814029d4e1829632ac0fdfd0926',1,'ev3api::Clock::Clock()']]],
   ['clock_2ecpp',['Clock.cpp',['../d1/de1/_clock_8cpp.html',1,'']]],
   ['clock_2eh',['Clock.h',['../dd/dba/_clock_8h.html',1,'']]],
@@ -16,8 +20,8 @@ var searchData=
   ['colorsensor_2ecpp',['ColorSensor.cpp',['../d8/d8c/_color_sensor_8cpp.html',1,'']]],
   ['colorsensor_2eh',['ColorSensor.h',['../de/d0d/_color_sensor_8h.html',1,'']]],
   ['common_5fdefinition_2eh',['common_definition.h',['../d8/d0a/common__definition_8h.html',1,'']]],
-  ['convertarea',['convertArea',['../da/d29/class_left_course.html#a3c8814e489519247af3fc80ae09f2c48',1,'LeftCourse::convertArea()'],['../df/df1/class_right_course.html#ad045a67f06f2fcffff9661a2fe5129ab',1,'RightCourse::convertArea()']]],
   ['cpp_2dsouce_2dfile_2d1_2ecpp',['cpp-souce-file-1.cpp',['../d4/d89/cpp-souce-file-1_8cpp.html',1,'']]],
+  ['current_5fangle',['current_angle',['../d6/dc5/class_motor_angle.html#a97b5d9010fb1b9eda47b6c59c64bc537',1,'MotorAngle']]],
   ['curve_5fleft',['CURVE_LEFT',['../da/dc8/_left_normal_course_8h.html#ae9734ae0725c823f7a2722f4a478daa1a81d48596483d48bce4d68130b2bfc6d1',1,'CURVE_LEFT():&#160;LeftNormalCourse.h'],['../d2/dfd/_right_normal_course_8h.html#aae2628787c9dc60a2ae7bab80efa5020a81d48596483d48bce4d68130b2bfc6d1',1,'CURVE_LEFT():&#160;RightNormalCourse.h']]],
   ['curve_5fleft_5fshort',['CURVE_LEFT_SHORT',['../da/dc8/_left_normal_course_8h.html#ae9734ae0725c823f7a2722f4a478daa1aecf59db4adf3552c0909383ea606d1ff',1,'CURVE_LEFT_SHORT():&#160;LeftNormalCourse.h'],['../d2/dfd/_right_normal_course_8h.html#aae2628787c9dc60a2ae7bab80efa5020aecf59db4adf3552c0909383ea606d1ff',1,'CURVE_LEFT_SHORT():&#160;RightNormalCourse.h']]],
   ['curve_5fright',['CURVE_RIGHT',['../da/dc8/_left_normal_course_8h.html#ae9734ae0725c823f7a2722f4a478daa1ad842028bb5f67a5d8a26ca7720720d3c',1,'CURVE_RIGHT():&#160;LeftNormalCourse.h'],['../d2/dfd/_right_normal_course_8h.html#aae2628787c9dc60a2ae7bab80efa5020ad842028bb5f67a5d8a26ca7720720d3c',1,'CURVE_RIGHT():&#160;RightNormalCourse.h']]]

@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['gyrosensor_2ecpp',['GyroSensor.cpp',['../d6/d4f/_gyro_sensor_8cpp.html',1,'']]],
-  ['gyrosensor_2eh',['GyroSensor.h',['../de/d35/_gyro_sensor_8h.html',1,'']]]
+  ['emoter_2ecpp',['Emoter.cpp',['../d2/d68/_emoter_8cpp.html',1,'']]],
+  ['emoter_2eh',['Emoter.h',['../d2/df3/_emoter_8h.html',1,'']]],
+  ['etrobocon2017_2ecpp',['EtRobocon2017.cpp',['../d5/d67/_et_robocon2017_8cpp.html',1,'']]],
+  ['etrobocon2017_2eh',['EtRobocon2017.h',['../d2/dd3/_et_robocon2017_8h.html',1,'']]],
+  ['example_5fspeedcontrol_2ecpp',['example_SpeedControl.cpp',['../d9/da4/example___speed_control_8cpp.html',1,'']]],
+  ['example_5fspeedcontrol_2emd',['example_SpeedControl.md',['../d7/d85/example___speed_control_8md.html',1,'']]]
 ];
