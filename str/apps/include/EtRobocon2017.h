@@ -11,6 +11,7 @@
 #include "SonarAlert.h"
 #include "Lifter.h"
 #include "Emoter.h"
+#include "UserInterface.h"
 #include "LeftCourse.h"
 #include "RightCourse.h"
 #include "basicWalker.h"
@@ -36,8 +37,10 @@ private:
     TouchSensor touchSensor;
     int8_t light_white;
     int8_t light_black;
+    int32_t firstCode;
     LeftCourse leftCourse;    
     RightCourse rightCourse;
+    UserInterface ui;
 };
 
 #endif

@@ -47,6 +47,7 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/LeftNormalCourse.cpp
     ${SOURCE_DIR}/RightNormalCourse.cpp
     ${SOURCE_DIR}/SelfLocalization.cpp
+    ${SOURCE_DIR}/FirstCode.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 

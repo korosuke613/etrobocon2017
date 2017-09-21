@@ -18,6 +18,8 @@ SelfLocalization.o \
 Emoter.o \
 LeftCourse.o \
 RightCourse.o \
+UserInterface.o \
+FirstCode.o \
 PuzzleLineTracer.o\
 basicWalker.o
 
