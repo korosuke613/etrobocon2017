@@ -54,8 +54,6 @@ TEST( SelfLocalizationTest, CalculateTest2 )
 TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder1)
 {
     SelfLocalization sl(0, 0, true);
-    int l, r;
-    l = r = 0;
     float distance = sl.calculate_between_ev3_and_border(0.0, 0.0, 10.0, 10.0, 0.0, 0.0);
     ASSERT_FLOAT_EQ(distance, 0.0);
 
@@ -64,8 +62,6 @@ TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder1)
 TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder2)
 {
     SelfLocalization sl(0, 0, true);
-    int l, r;
-    l = r = 0;
     float distance = sl.calculate_between_ev3_and_border(-50.0, 80.0, 127.0, 91.0, -85.0, 70.0);
     ASSERT_NEAR(distance, 7.809, 0.001);
 
@@ -74,8 +70,6 @@ TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder2)
 TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder3)
 {
     SelfLocalization sl(0, 0, true);
-    int l, r;
-    l = r = 0;
     float distance = sl.calculate_between_ev3_and_border(2.0, 1.0, 6.0, 7.0, 3.0, 4.0);
     ASSERT_NEAR(distance, 0.83205, 0.001);
 
@@ -84,8 +78,6 @@ TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder3)
 TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder4)
 {
     SelfLocalization sl(0, 0, true);
-    int l, r;
-    l = r = 0;
     float distance = sl.calculate_between_ev3_and_border( 0.0, 0.0, 10.0, 0.0, 3.0, 0.0);
     ASSERT_NEAR(distance, 0.0, 0.001);
 
@@ -94,8 +86,6 @@ TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder4)
 TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder5)
 {
     SelfLocalization sl(0, 0, true);
-    int l, r;
-    l = r = 0;
     float distance = sl.calculate_between_ev3_and_border( 0.0, 0.0, 0.0, 10.0, 0.0, 3.0);
     ASSERT_NEAR(distance, 0.0, 0.001);
 
