@@ -57,14 +57,6 @@ public:
 
 private:
     /**
-     * 任意の桁数以外になっているかどうかを判定する。
-     * 任意の桁数とは1から5までの数値であるため、1未満または5超の場合は偽とする。
-     * @param 任意の桁数
-     * @return 任意の桁数か否か 正しい桁数であればtrue、そうでなければfalseを返す
-     */
-    bool isCorrectDigitNumber( int8_t );
-
-    /**
      * 5桁の初期位置コード
      */
     int firstCodeDigit[ 5 ];

@@ -36,14 +36,6 @@ void FirstCode::downDigit( int8_t digitNumber ) {
     }
 }
 
-bool FirstCode::isCorrectDigitNumber( int8_t currentDigit ) {
-    if( currentDigit < 1 || 5 < currentDigit ) {
-        return false;
-    } else {
-        return true;
-    }
-}
-
 int32_t FirstCode::getFirstCode() {
     int32_t firstCode = 0;
 
