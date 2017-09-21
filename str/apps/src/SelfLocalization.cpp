@@ -45,8 +45,8 @@ void SelfLocalization::update (std::int32_t left_motor_sl, std::int32_t right_mo
   turning_angle = (right.moving_distance - left.moving_distance) / between_wheels;
 
   //座標
-  current_x += (moving_distance_mean * cos(current_angle + (turning_angle/2)));
-  current_y += (moving_distance_mean * sin(current_angle + (turning_angle/2)));
+  current_x += (moving_distance_mean * std::cos(current_angle + (turning_angle/2)));
+  current_y += (moving_distance_mean * std::sin(current_angle + (turning_angle/2)));
   current_angle += turning_angle;
 
   //保存
@@ -71,7 +71,7 @@ void SelfLocalization::writing_current_coordinates() {
 }
 
 bool SelfLocalization::approached_target_coordinates (float target_x, float target_y, float target_radius) {
-  float distance = sqrt(
+  float distance = std::sqrt(
 		      (target_x - current_x) * (target_x - current_x) +
 		      (target_y - current_y) * (target_y - current_y)   );
   if(distance < target_radius)
@@ -82,13 +82,14 @@ bool SelfLocalization::approached_target_coordinates (float target_x, float targ
 //高校の時の数学で出た点と直線の距離の公式
 //点(x0, y0)と直線ax + by + c = 0の距離dは、d = |a*x0 + by0 + c| / (a^2 + b^2)^(1/2)
 //式の整理は自分で計算したやつ
-float calculate_between_ev3_and_border
+float SelfLocalization::calculate_between_ev3_and_border
 (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y) {
+  float a, b, c, d;
 
-  float a = (_goal_y - _start_y) / (_goal_x - _start_x);
-  float b = -1.0;
-  float c = _start_y - (_goal_y - _start_y) / (_goal_x - _start_x) * _start_x;
-
+  a = _goal_y - _start_y;
+  b = -(_goal_x - _start_x);
+  c = -b * _start_y - a * _start_x;
+  
   return std::abs(a*_current_x + b*_current_y + c) / std::sqrt(a*a + b*b);
 }
 
