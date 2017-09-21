@@ -89,6 +89,6 @@ float calculate_between_ev3_and_border
   float b = -1.0;
   float c = _start_y - (_goal_y - _start_y) / (_goal_x - _start_x) * _start_x;
 
-  return abs(a*_current_x + b*_current_y + c) / sqrt(a*a + b*b);
+  return std::abs(a*_current_x + b*_current_y + c) / std::sqrt(a*a + b*b);
 }
 
