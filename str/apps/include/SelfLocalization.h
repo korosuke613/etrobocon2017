@@ -57,7 +57,10 @@ public:
   bool approached_target_coordinates (float target_x, float target_y, float target_radius);
   float getPointX();
   float getPointY();
-
+  bool is_over_target_line_of_x (float target_x);
+  bool is_over_target_line_of_y (float target_y);
+  bool is_below_target_line_of_x(float target_x);
+  bool is_below_target_line_of_y(float target_y);
   float calculate_between_ev3_and_border
   (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y);
 

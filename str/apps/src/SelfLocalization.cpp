@@ -90,6 +90,19 @@ float SelfLocalization::calculate_between_ev3_and_border
   b = -(_goal_x - _start_x);
   c = -b * _start_y - a * _start_x;
   
-  return std::abs(a*_current_x + b*_current_y + c) / std::sqrt(a*a + b*b);
+  return (a*_current_x + b*_current_y + c) / std::sqrt(a*a + b*b);
 }
 
+bool SelfLocalization::is_over_target_line_of_x(float target_x) {
+  return target_x < current_x;
+}
+bool SelfLocalization::is_over_target_line_of_y(float target_y) {
+  return target_y < current_y;
+}
+
+bool SelfLocalization::is_below_target_line_of_x(float target_x) {
+  return target_x > current_x;
+}
+bool SelfLocalization::is_below_target_line_of_y(float target_y) {
+  return target_y > current_y;
+}
