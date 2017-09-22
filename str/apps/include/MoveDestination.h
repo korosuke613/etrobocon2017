@@ -6,6 +6,7 @@
  #ifndef __MOVEDESTINATION__
  #define __MOVEDESTINATION__
  
+ #include <cmath>
  #include "LineTracerWalker.h"
  #include "SelfLocalization.h"
  
@@ -20,19 +21,16 @@
      /** コンストラクタ */
      MoveDestination();
      
-     /** 速度制御をするための前進値(forward)を計算する
+     /** 仮想線を定義する
      * @param curAngleL 左モータ回転角
      * @param curAngleR 右モータ回転角
      * @return forward 前進値 */
-
+    bool setLine(float, float, float, float);
+    float getDiffLine(float, float);
+    bool checkEndOfLine();
+    bool calculateValue(std::int32_t, std::int32_t);
          
      /** 0.1sで進んだ距離[mm/0.1s] */    
- 
- protected:
-     /** 4ms間の移動距離を取得する
-     * @param curAngleL 左モータ回転角
-     * @param curAngleR 右モータ回転角
-     * @return 進んだ距離[mm/4ms] */
  
  private:
     SelfLocalization sl;

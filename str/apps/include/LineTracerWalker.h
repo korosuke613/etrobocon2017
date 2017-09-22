@@ -16,7 +16,7 @@ public:
     TurnControl turnControl;
     SpeedControl speedControl;
     int8_t minus;
-private:
+protected:
     int8_t forward;
     int8_t turn;
 };

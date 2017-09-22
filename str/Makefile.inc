@@ -22,6 +22,7 @@ UserInterface.o \
 FirstCode.o \
 PuzzleLineTracer.o\
 basicWalker.o\
+MoveDestination.o \
 Node.o \
 Block.o \
 PuzzleCodeConverter.o \
