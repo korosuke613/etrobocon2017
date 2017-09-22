@@ -6,11 +6,15 @@
  * 注記 : Bluetooth通信リモートスタート機能付き
  */
 
+#include <string>
 #include "ev3api.h"
 #include "app.h"
 #include "util.h"
-#include "EtRobocon2017.h" // ETロボコン2017
-#include "SelfLocalization.h"
+#include "ColorSensor.h"
+#include "TouchSensor.h"
+#include "SonarSensor.h"
+
+using namespace ev3api;
 
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
@@ -40,13 +44,43 @@ void main_task( intptr_t unused )
     act_tsk( BT_TASK );
 
 
-    msg_f("ET-Robocon2017 Hirakobasample", 1);
+    msg_f("Check Colors", 1);
     msg_f(" create from github.com/korosuke613/etrobocon2017", 2);
+    ColorSensor colorSensor(PORT_3);
+    TouchSensor touchSensor(PORT_1);
+    SonarSensor sonarSensor(PORT_2);
+    int time_count = 0;
+    char msg[32];
+    int color_num;
+    std::string color_name[8] = {"NONE", "BLACK", "BLUE", "GREEN", "YELLOW", "RED", "WHITE", "BROWN"};
+    rgb_raw_t rgb;
+    while(1){
+        color_num = (int)colorSensor.getColorNumber();
+        colorSensor.getRawColor( rgb );
+        sprintf ( msg, "LightValue: %d", colorSensor.getBrightness());
+        msg_f ( msg, 4 ) ;
+        
+        sprintf ( msg, "ColorNumber: %s", color_name[color_num].c_str());
+        msg_f ( msg, 5 ) ;
+        sprintf ( msg, "    R:%3d G:%3d B:%3d", rgb.r, rgb.g, rgb.b);
+        msg_f ( msg, 6 ) ;
 
-    EtRobocon2017 etrobocon;
-    etrobocon.start( g_bluetooth_command );
+        sprintf ( msg, "DistanceEye: %d", sonarSensor.getDistance());
+        msg_f ( msg, 7 );
 
+        if(sonarSensor.getDistance() < 10){
+            time_count++;
+        }
 
+        sprintf ( msg, "DistanceTime: %d", time_count);
+        msg_f ( msg, 8 );
+        
+        if ( touchSensor.isPressed()== 1)
+        {
+            break; /* タッチセンサが押された */
+        }
+        tslp_tsk ( 4 ) ;        
+    }
 
     ter_tsk( BT_TASK );
     fclose( g_bluetooth );
