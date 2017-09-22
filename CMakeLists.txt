@@ -53,8 +53,8 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/FirstCode.cpp
     ${EXPLORER_DIR}/Block.cpp
     ${EXPLORER_DIR}/Node.cpp
-    ${EXPLORER_DIR}/PuzzleExplorerTest.cpp
-    ${EXPLORER_DIR}/PuzzleCodeConverterTest.cpp
+    ${EXPLORER_DIR}/PuzzleExplorer.cpp
+    ${EXPLORER_DIR}/PuzzleCodeConverter.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 
