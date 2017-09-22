@@ -29,6 +29,7 @@ endif()
 # set common include folder for module
 #-------------------
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/str/apps/include)
+set(EXPLORER_INCLUDES ${PROJECT_SOURCE_DIR}/str/apps/explorer)
 set(EXT_PROJECTS_DIR ${PROJECT_SOURCE_DIR}/str/apps/ext)
 
 #-------------------
@@ -36,8 +37,10 @@ set(EXT_PROJECTS_DIR ${PROJECT_SOURCE_DIR}/str/apps/ext)
 #-------------------
 set(PROJECT_LIB_NAME ${PROJECT_NAME_STR}_impl)
 set(SOURCE_DIR ${PROJECT_SOURCE_DIR}/str/apps/src)
+set(EXPLORER_DIR ${PROJECT_SOURCE_DIR}/str/apps/explorer)
 
 include_directories(${COMMON_INCLUDES})
+include_directories(${EXPLORER_INCLUDES})
 file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/SpeedControl.cpp
     ${SOURCE_DIR}/TurnControl.cpp
@@ -48,6 +51,10 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/RightNormalCourse.cpp
     ${SOURCE_DIR}/SelfLocalization.cpp
     ${SOURCE_DIR}/FirstCode.cpp
+    ${EXPLORER_DIR}/Block.cpp
+    ${EXPLORER_DIR}/Node.cpp
+    ${EXPLORER_DIR}/PuzzleExplorerTest.cpp
+    ${EXPLORER_DIR}/PuzzleCodeConverterTest.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 
