@@ -71,7 +71,7 @@ TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder3)
 {
     SelfLocalization sl(0, 0, true);
     float distance = sl.calculate_between_ev3_and_border(2.0, 1.0, 6.0, 7.0, 3.0, 4.0);
-    ASSERT_NEAR(distance, 0.83205, 0.001);
+    ASSERT_NEAR(distance, -0.83205, 0.001);
 
 }
 
