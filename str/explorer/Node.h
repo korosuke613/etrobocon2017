@@ -13,7 +13,6 @@ class Node{
 private:
 	int nodeNum;
 	vector<Node*> neighbor;
-	int cost;
 	BlockColor color;
 	bool hasBlock;
 	int positionX;
