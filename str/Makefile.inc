@@ -21,11 +21,17 @@ RightCourse.o \
 UserInterface.o \
 FirstCode.o \
 PuzzleLineTracer.o\
-basicWalker.o
+basicWalker.o\
+Node.o \
+Block.o \
+PuzzleCodeConverter.o \
+PuzzleExplorer.o
+
 
 SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
+APPL_DIR += $(mkfile_path)apps/explorer
 
 INCLUDES += -I$(mkfile_path)apps
 
