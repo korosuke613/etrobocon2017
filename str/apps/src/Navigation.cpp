@@ -28,8 +28,8 @@ float Navigation::getDiffLine(float _current_x, float _current_y){
 }
 
 bool Navigation::checkEndOfLine(){
-    if(std::abs(current_x - goal_x) < 20.0){
-        if(std::abs(current_y - goal_y) < 20.0){
+    if(std::abs(current_x - goal_x) < 30.0){
+        if(std::abs(current_y - goal_y) < 30.0){
             return true;
         }
     }

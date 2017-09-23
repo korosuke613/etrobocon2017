@@ -40,7 +40,7 @@
     
      /** 0.1sで進んだ距離[mm/0.1s] */    
  
- private:
+ public:
     /** スタートの座標 */
     float start_x, start_y;
     /** ゴールの座標 */    

@@ -35,10 +35,12 @@ int main(){
     * 目標値 = 70.0
     */
     navi.turnControl.setPid(2.0, 0.0, 3.0, 0.0);
-    navi.setLine(0.0, 0.0, 500.0, 500.0);
+    navi.speedControl.setPid(2.0, 2.0, 0.024, 30.0);    
+    navi.setLine(0.0, 0.0, 100.0, -100.0);
     // 注）4msごとに実行されると仮定して2500回(10秒)回してます
     std::cout << "スピード(100ms), forword値, Target値, turn値, 前進値" << std::endl;
-    while(navi.calculateValue(left_motor, right_motor)){
+    while(navi.sl.is_over_normal_vector(navi.start_x, navi.start_y, navi.goal_x, navi.goal_y, navi.current_x, navi.current_y)){
+        navi.calculateValue(left_motor, right_motor);
         speed100ms = navi.speedControl.getSpeed100ms();
         calcVirtualWheels();
         /** ３．PID計算をする */
@@ -49,8 +51,9 @@ int main(){
         //std::cout << "スピード(100ms) " << speed100ms << ", forword値 " << forword << ",Target値" << target << ", turn値 " << turn << ", 前進値" << (right_motor + left_motor) / 2 << std::endl;
         std::cout << speed100ms << "," << forword << "," << target << "," << turn << "," << (right_motor + left_motor) / 2 << std::endl;                
     }
-    navi.setLine(500.0, 500.0, 1000.0, 750.0);    
-    while(navi.calculateValue(left_motor, right_motor)){
+    navi.setLine(100.0, -100.0, 300.0, -110.0);    
+    while(navi.sl.is_over_normal_vector(navi.start_x, navi.start_y, navi.goal_x, navi.goal_y, navi.current_x, navi.current_y)){
+        navi.calculateValue(left_motor, right_motor);
         speed100ms = navi.speedControl.getSpeed100ms();
         calcVirtualWheels();
         /** ３．PID計算をする */
@@ -61,8 +64,10 @@ int main(){
         //std::cout << "スピード(100ms) " << speed100ms << ", forword値 " << forword << ",Target値" << target << ", turn値 " << turn << ", 前進値" << (right_motor + left_motor) / 2 << std::endl;
         std::cout << speed100ms << "," << forword << "," << target << "," << turn << "," << (right_motor + left_motor) / 2 << std::endl;                
     }
+    return 0;
     navi.setLine(1000.0, 750.0, 0.0, 0.0);    
-    while(navi.calculateValue(left_motor, right_motor)){
+    while(navi.sl.is_over_normal_vector(navi.start_x, navi.start_y, navi.goal_x, navi.goal_y, navi.current_x, navi.current_y)){
+        navi.calculateValue(left_motor, right_motor);
         speed100ms = navi.speedControl.getSpeed100ms();
         calcVirtualWheels();
         /** ３．PID計算をする */
