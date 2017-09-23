@@ -3,7 +3,7 @@
 Navigation::Navigation(std::int32_t left_degree, std::int32_t right_degree):
     sl(left_degree, right_degree, true){
     speedControl.setPid(2.0, 2.0, 0.024, 30.0);
-    turnControl.setPid(2.0, 0.0, 0.0, 0.0);
+    turnControl.setPid(4.0, 0.0, 0.0, 0.0);
     isLeftsideLine(true);
     setLine(0.0, 0.0, 100.0, 100.0);
     diff_line = sl.calculate_between_ev3_and_border(start_x, start_y, goal_x, goal_y, 0.0, 0.0);    
@@ -28,8 +28,8 @@ float Navigation::getDiffLine(float _current_x, float _current_y){
 }
 
 bool Navigation::checkEndOfLine(){
-    if(std::abs(current_x - goal_x) < 10.0){
-        if(std::abs(current_y - goal_y) < 10.0){
+    if(std::abs(current_x - goal_x) < 20.0){
+        if(std::abs(current_y - goal_y) < 20.0){
             return true;
         }
     }

@@ -31,7 +31,6 @@ SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t rig
   }
 }
 
-
 void SelfLocalization::update (std::int32_t left_motor_sl, std::int32_t right_motor_sl) {
 
   //左車輪の回転角
@@ -105,4 +104,8 @@ bool SelfLocalization::is_below_target_line_of_x(float target_x) {
 }
 bool SelfLocalization::is_below_target_line_of_y(float target_y) {
   return target_y > current_y;
+}
+
+void SelfLocalization::file_close(){
+  fclose(fp);
 }

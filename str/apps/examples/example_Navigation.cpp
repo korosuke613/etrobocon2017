@@ -34,6 +34,7 @@ int main(){
     * Kd = 0.024
     * 目標値 = 70.0
     */
+    navi.turnControl.setPid(2.0, 0.0, 3.0, 0.0);
     navi.setLine(0.0, 0.0, 500.0, 500.0);
     // 注）4msごとに実行されると仮定して2500回(10秒)回してます
     std::cout << "スピード(100ms), forword値, Target値, turn値, 前進値" << std::endl;

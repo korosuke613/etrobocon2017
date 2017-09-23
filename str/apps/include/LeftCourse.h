@@ -28,7 +28,7 @@ public:
 	void run();
 	/** NormalCourseエリアの処理 */
 	void runNormalCourse();
-	void runTyokusen();
+	void runTyokusen(float, float);
 private:
 	Walker walker;
     ColorSensor colorSensor;

@@ -6,7 +6,7 @@
 #include "LeftCourse.h"
 
 LeftCourse::LeftCourse():
-    colorSensor( PORT_3 ), sl(walker.get_count_L(), walker.get_count_R()){
+    colorSensor( PORT_3 ), sl(walker.get_count_L(), walker.get_count_R(), true){
     
 }
 
@@ -14,7 +14,7 @@ LeftCourse::LeftCourse():
  * Lコースの走行範囲の切り替えを行う
  */
 void LeftCourse::run(){
-    runTyokusen();
+    runTyokusen(100, -100);
 	//runNormalCourse();
   msg_f("Finish NormalCourse", 3);
 	//Puzzle
@@ -51,9 +51,10 @@ void LeftCourse::runNormalCourse(){
     }
 }
 
-void LeftCourse::runTyokusen(){
+void LeftCourse::runTyokusen(float _goal_x, float _goal_y){
     Navigation navi(walker.get_count_L(), walker.get_count_R());
-    navi.setLine(navi.sl.getPointX(), navi.sl.getPointY(), navi.sl.getPointX() + 2000.0, navi.sl.getPointY() + 0.0);
+    navi.turnControl.setPid(2.0, 0.0, 3.0, 0.0);    
+    navi.setLine(navi.sl.getPointX(), navi.sl.getPointY(), _goal_x, _goal_y);
     // NormalCourseを抜けるまでループする
     while ( navi.calculateValue(walker.get_count_L(), walker.get_count_R()) ) {
         if(navi.getForward() < 0){
@@ -63,6 +64,7 @@ void LeftCourse::runTyokusen(){
         }
         if(ev3_button_is_pressed(BACK_BUTTON)){
             walker.run(0, 0);
+            navi.sl.file_close();
             break;
         }
         
