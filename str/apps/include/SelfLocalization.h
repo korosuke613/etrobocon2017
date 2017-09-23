@@ -64,6 +64,8 @@ public:
   float calculate_between_ev3_and_border
   (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y);
   void file_close();
+  bool is_over_normal_vector
+  (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y);
   
 private:
   //残りのメソッドかな？
