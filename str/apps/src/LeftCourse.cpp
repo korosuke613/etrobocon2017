@@ -53,7 +53,7 @@ void LeftCourse::runNormalCourse(){
     }
 }
 
-void LeftCourse::runTyokusen(Navigation navi, float _goal_x, float _goal_y){
+void LeftCourse::runTyokusen(Navigation &navi, float _goal_x, float _goal_y){
     navi.turnControl.setPid(2.0, 0.0, 3.0, 0.0);    
     navi.setLine(navi.sl.getPointX(), navi.sl.getPointY(), _goal_x, _goal_y);
     // NormalCourseを抜けるまでループする
