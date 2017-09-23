@@ -106,3 +106,13 @@ bool SelfLocalization::is_below_target_line_of_x(float target_x) {
 bool SelfLocalization::is_below_target_line_of_y(float target_y) {
   return target_y > current_y;
 }
+
+//指定した二点 (start, goal)を結んだ直線の点goalにおける法線 (normal vector)
+bool SelfLocalization::is_over_normal_vector
+(float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y) {
+  flaot k = (_start_x - _goal_x) / (_goal_y - _start_y);
+  float border_y = k * _current_x + _goal_y - k * _goal_x;
+  return _current_y >= border_y;
+}
+
+
