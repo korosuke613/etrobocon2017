@@ -4,5 +4,5 @@ g++-7 -w ../src/Pid.cpp ../src/SpeedControl.cpp ../src/TurnControl.cpp ../src/Li
 ./a.out
 gnuplot -persist << EOF
 set size ratio -1
-p 'traveling_route.txt', x, x * 0.5 + 250, x * 0.75
+p "hirakoba.png" binary filetype=png dx=0.45 dy=0.45 origin=(-60,-760) with rgbimage, 'traveling_route.txt', -x, x-200, -100
 EOF
