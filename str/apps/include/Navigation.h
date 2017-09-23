@@ -1,39 +1,46 @@
 /**
- * @file MoveDestination.h
+ * @file Navigation.h
  * @brief 2点間を結ぶ仮想直線をライントレースするクラスのヘッダファイル
  * @author Futa HIRAKOBA
  */
- #ifndef __MOVEDESTINATION__
- #define __MOVEDESTINATION__
+ #ifndef __NAVIGATION__
+ #define __NAVIGATION__
  
  #include <cmath>
  #include "LineTracerWalker.h"
  #include "SelfLocalization.h"
  
  
- /*! @class MoveDestination MoveDestination.h "MoveDestination.h"
+ /*! @class Navigation Navigation.h "Navigation.h"
   *  @brief 2点間を結ぶ仮想直線をライントレースするクラス
   *
   * このクラスはLineTracerWalkerクラスを継承しています。
   */
- class MoveDestination: public LineTracerWalker {
+ class Navigation: public LineTracerWalker {
  public:
      /** コンストラクタ */
-     MoveDestination();
+     Navigation(std::int32_t, std::int32_t);
      
-     /** 仮想線を定義する
-     * @param curAngleL 左モータ回転角
-     * @param curAngleR 右モータ回転角
-     * @return forward 前進値 */
+    /** 仮想線を定義する関数
+    * @param スタートのX座標
+    * @param スタートのY座標
+    * @param ゴールのX座標
+    * @param ゴールのY座標
+    * @return 正常にラインを引けたか */
     bool setLine(float, float, float, float);
+    /** 走行体から仮想線までの最短距離を取得する関数
+    * @param 現在地のX座標
+    * @param 現在地のY座標
+    * @return  走行体から仮想線までの最短距離 */
     float getDiffLine(float, float);
+    /** 仮想線を走破したかどうかをチェックする */
     bool checkEndOfLine();
     bool calculateValue(std::int32_t, std::int32_t);
-         
+    SelfLocalization sl;
+    
      /** 0.1sで進んだ距離[mm/0.1s] */    
  
  private:
-    SelfLocalization sl;
     /** スタートの座標 */
     float start_x, start_y;
     /** ゴールの座標 */    

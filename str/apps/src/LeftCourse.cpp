@@ -14,12 +14,13 @@ LeftCourse::LeftCourse():
  * Lコースの走行範囲の切り替えを行う
  */
 void LeftCourse::run(){
-	runNormalCourse();
+    runTyokusen();
+	//runNormalCourse();
   msg_f("Finish NormalCourse", 3);
 	//Puzzle
-  PuzzleLineTracer puzzleLineTracer ;    
-  puzzleLineTracer.preparatePuzzle () ;
-  puzzleLineTracer.puzzleLineTrace ( 10, 0x00, 12 ) ;	// test
+  //PuzzleLineTracer puzzleLineTracer ;    
+  //puzzleLineTracer.preparatePuzzle () ;
+  //puzzleLineTracer.puzzleLineTrace ( 10, 0x00, 12 ) ;	// test
 	//Park
 }
 
@@ -40,6 +41,25 @@ void LeftCourse::runNormalCourse(){
         if(! isNormalCourse){
             walker.run(0, 0);
             break;
+        }
+        if(ev3_button_is_pressed(BACK_BUTTON)){
+            walker.run(0, 0);
+            break;
+        }
+        
+        tslp_tsk(4); // 4msec周期起動
+    }
+}
+
+void LeftCourse::runTyokusen(){
+    Navigation navi(walker.get_count_L(), walker.get_count_R());
+    navi.setLine(navi.sl.getPointX(), navi.sl.getPointY(), navi.sl.getPointX() + 2000.0, navi.sl.getPointY() + 0.0);
+    // NormalCourseを抜けるまでループする
+    while ( navi.calculateValue(walker.get_count_L(), walker.get_count_R()) ) {
+        if(navi.getForward() < 0){
+            walker.run(0, 0);
+        }else{
+            walker.run( navi.getForward(), navi.getTurn());
         }
         if(ev3_button_is_pressed(BACK_BUTTON)){
             walker.run(0, 0);

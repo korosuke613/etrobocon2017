@@ -13,6 +13,7 @@
 #include "LeftNormalCourse.h"
 #include "SelfLocalization.h"
 #include "PuzzleLineTracer.h"
+#include "Navigation.h"
 
 using namespace ev3api;
 
@@ -27,6 +28,7 @@ public:
 	void run();
 	/** NormalCourseエリアの処理 */
 	void runNormalCourse();
+	void runTyokusen();
 private:
 	Walker walker;
     ColorSensor colorSensor;
