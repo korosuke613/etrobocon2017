@@ -1,6 +1,7 @@
 *.o
 *.gch
 *.out
+*.out.dSYM
 *.exe
 googletest
 .vscode
