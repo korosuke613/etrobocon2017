@@ -28,12 +28,13 @@ public:
 	void run();
 	/** NormalCourseエリアの処理 */
 	void runNormalCourse();
-	void runTyokusen(Navigation&, float, float);
+	void runTyokusen(float, float);
 private:
 	Walker walker;
     ColorSensor colorSensor;
     /** 自己位置推定 インスタンス 初期化*/
-    SelfLocalization sl;
+	SelfLocalization sl;
+	Navigation navi;    	
 };
 
 #endif

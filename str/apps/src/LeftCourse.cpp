@@ -6,7 +6,9 @@
 #include "LeftCourse.h"
 
 LeftCourse::LeftCourse():
-    colorSensor( PORT_3 ), sl(walker.get_count_L(), walker.get_count_R(), true){
+    colorSensor( PORT_3 ), 
+    sl(walker.get_count_L(), walker.get_count_R(), true),
+    navi(walker.get_count_L(), walker.get_count_R()){
     
 }
 
@@ -14,15 +16,14 @@ LeftCourse::LeftCourse():
  * Lコースの走行範囲の切り替えを行う
  */
 void LeftCourse::run(){
-    Navigation navi(walker.get_count_L(), walker.get_count_R());    
-    runTyokusen(navi, 100.0, -100.0);
-    runTyokusen(navi, 300.0, -110.0);
-	//runNormalCourse();
-  msg_f("Finish NormalCourse", 3);
+    /*runTyokusen(100.0, -100.0);
+    runTyokusen(300.0, -110.0);*/
+	runNormalCourse();
+    msg_f("Finish NormalCourse", 3);
 	//Puzzle
-  //PuzzleLineTracer puzzleLineTracer ;    
-  //puzzleLineTracer.preparatePuzzle () ;
-  //puzzleLineTracer.puzzleLineTrace ( 10, 0x00, 12 ) ;	// test
+    PuzzleLineTracer puzzleLineTracer ;    
+    puzzleLineTracer.preparatePuzzle () ;
+    puzzleLineTracer.puzzleLineTrace ( 10, 0x00, 12 ) ;	// test
 	//Park
 }
 
@@ -53,7 +54,7 @@ void LeftCourse::runNormalCourse(){
     }
 }
 
-void LeftCourse::runTyokusen(Navigation &navi, float _goal_x, float _goal_y){
+void LeftCourse::runTyokusen(float _goal_x, float _goal_y){
     navi.turnControl.setPid(2.0, 0.0, 3.0, 0.0);    
     navi.setLine(navi.sl.getPointX(), navi.sl.getPointY(), _goal_x, _goal_y);
     // NormalCourseを抜けるまでループする

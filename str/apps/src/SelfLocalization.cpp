@@ -83,7 +83,7 @@ bool SelfLocalization::approached_target_coordinates (float target_x, float targ
 //式の整理は自分で計算したやつ
 float SelfLocalization::calculate_between_ev3_and_border
 (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y) {
-  float a, b, c, d;
+  float a, b, c;
 
   a = _goal_y - _start_y;
   b = -(_goal_x - _start_x);
@@ -114,7 +114,7 @@ bool SelfLocalization::is_over_normal_vector(float _start_x, float _start_y, flo
   float k = (_start_x - _goal_x) / (_goal_y - _start_y);
   float border_y = k * _current_x + _goal_y - k * _goal_x;
   if(_start_y >= _goal_y )return _current_y >= border_y;
-  if(_start_y < _goal_y)return _current_y < border_y;
+  return _current_y < border_y;
 }
 
 
