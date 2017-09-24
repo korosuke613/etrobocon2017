@@ -17,11 +17,18 @@ Lifter.o \
 SelfLocalization.o \
 Emoter.o \
 LeftCourse.o \
-RightCourse.o
+RightCourse.o \
+UserInterface.o \
+FirstCode.o \
+PuzzleLineTracer.o\
+basicWalker.o\
+Navigation.o \
+
 
 SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
+APPL_DIR += $(mkfile_path)apps/explorer
 
 INCLUDES += -I$(mkfile_path)apps
 

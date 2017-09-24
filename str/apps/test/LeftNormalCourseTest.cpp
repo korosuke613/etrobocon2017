@@ -195,7 +195,7 @@ TEST( LeftNormalCourseTest, runNormalCourseTest10 )
     lnc.statusCheck(0, 0);
     lnc.statusCheck(14500, 14500);
 
-    lnc.runNormalCourse(14750,14750,40);
+    lnc.runNormalCourse(14500,14500,40);
 
     value = lnc.getStatus();
 
