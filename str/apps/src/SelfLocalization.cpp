@@ -13,7 +13,7 @@
  *****************************/
 #include "SelfLocalization.h"
 
-FILE* SelfLocalization::fp;
+FILE* SelfLocalization::fp = fopen("traveling_route.txt", "w");
 bool SelfLocalization::isSave;
 
 SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl, bool save):
@@ -24,11 +24,6 @@ SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t rig
   turning_angle = 0;
   current_x = current_y = current_angle = 0;
   isSave = save;
-
-  /* 地図を作らない時はFILE関連は消しとくこと！ ヘッダファイル含めて！*/
-  if(save == true){
-    fp = fopen("traveling_route.txt", "w");
-  }
 }
 
 void SelfLocalization::update (std::int32_t left_motor_sl, std::int32_t right_motor_sl) {
