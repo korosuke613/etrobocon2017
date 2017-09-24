@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rightstatus',['RightStatus',['../d2/dfd/_right_normal_course_8h.html#aae2628787c9dc60a2ae7bab80efa5020',1,'RightNormalCourse.h']]]
+  ['leftstatus',['LeftStatus',['../da/dc8/_left_normal_course_8h.html#ae9734ae0725c823f7a2722f4a478daa1',1,'LeftNormalCourse.h']]]
 ];

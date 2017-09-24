@@ -1,0 +1,25 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$dc/de1/class_pid.html#aa8626402086bcd10cbb7f581c92300fb" title="Pid::setPid" alt="" coords="104,164,189,189"/>
+<area shape="rect" id="node3" href="$db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="126,213,166,239"/>
+<area shape="rect" id="node4" href="$da/d2d/class_navigation.html#aca35987cb1196a6ed95eecc97fb66f67" title="Navigation::setLine" alt="" coords="273,5,408,31"/>
+<area shape="rect" id="node5" href="$d4/ddb/class_self_localization.html#ae19f89b94c0bf61d0327a8d56f10dff7" title="SelfLocalization::getPointX" alt="" coords="503,56,683,81"/>
+<area shape="rect" id="node6" href="$d4/ddb/class_self_localization.html#add371c55e00d96c08cd49f19e96c17d3" title="SelfLocalization::getPointY" alt="" coords="503,105,683,131"/>
+<area shape="rect" id="node7" href="$d4/ddb/class_self_localization.html#a2c3a8eb44703b39ee70ca452ef570cb6" title="SelfLocalization::is\l_over_normal_vector" alt="" coords="267,207,414,245"/>
+<area shape="rect" id="node8" href="$da/d2d/class_navigation.html#a24313ef9332e005e7d47beb0636b9ca6" title="Navigation::calculateValue" alt="" coords="252,157,429,183"/>
+<area shape="rect" id="node21" href="$dd/dc1/class_speed_control.html#a52d9842daaab11fc25d24c631d5534ed" title="SpeedControl::getSpeed100ms" alt="" coords="237,269,444,295"/>
+<area shape="rect" id="node22" href="$db/d71/example___navigation_8cpp.html#ad940a51d4501af7ce84a3b6a73d830c4" title="calcVirtualWheels" alt="" coords="277,319,404,344"/>
+<area shape="rect" id="node23" href="$dc/db4/class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="240,368,441,393"/>
+<area shape="rect" id="node24" href="$dc/db4/class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="251,417,430,443"/>
+<area shape="rect" id="node9" href="$d4/ddb/class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="511,204,674,229"/>
+<area shape="rect" id="node12" href="$da/d2d/class_navigation.html#a649ad016379f15bea98c5f4dcedd3914" title="Navigation::getDiffLine" alt="" coords="515,396,670,421"/>
+<area shape="rect" id="node14" href="$dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="492,253,693,292"/>
+<area shape="rect" id="node19" href="$da/df4/class_turn_control.html#ac3c948ab0766eda64baf89c613464bf1" title="TurnControl::calculateTurn\lForPid" alt="" coords="504,316,682,355"/>
+<area shape="rect" id="node20" href="$da/d2d/class_navigation.html#a7c0360e81decb7cd69e4e13325756efc" title="Navigation::checkEndOfLine" alt="" coords="498,155,688,180"/>
+<area shape="rect" id="node10" href="$d6/dc5/class_motor_angle.html#afde9e7ae516de013cfea7e5bf6a9db2a" title="MotorAngle::update" alt="" coords="778,168,916,193"/>
+<area shape="rect" id="node11" href="$d4/ddb/class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd" title="SelfLocalization::writing\l_current_coordinates" alt="" coords="767,105,927,144"/>
+<area shape="rect" id="node13" href="$d4/ddb/class_self_localization.html#ab1529f9d1a7c6729ec771702e3174bc4" title="SelfLocalization::calculate\l_between_ev3_and_border" alt="" coords="755,415,939,453"/>
+<area shape="rect" id="node15" href="$dd/dc1/class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="741,217,953,243"/>
+<area shape="rect" id="node16" href="$dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="797,267,897,292"/>
+<area shape="rect" id="node17" href="$dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="791,316,903,341"/>
+<area shape="rect" id="node18" href="$dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="791,365,903,391"/>
+</map>

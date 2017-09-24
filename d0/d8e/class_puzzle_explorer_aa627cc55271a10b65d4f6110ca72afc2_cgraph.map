@@ -1,0 +1,7 @@
+<map id="PuzzleExplorer::getRoot" name="PuzzleExplorer::getRoot">
+<area shape="rect" id="node2" href="$dc/d8f/class_node.html#a5922bd7936a4b2326e3821df3c6736d2" title="Node::getNum" alt="" coords="247,5,354,31"/>
+<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a7ab5c1db69585010087eb9c550c18521" title="Node::getNeighbor" alt="" coords="234,55,367,80"/>
+<area shape="rect" id="node4" href="$d0/d8e/class_puzzle_explorer.html#a19f6d450528478dbb7aefa471db899c4" title="PuzzleExplorer::getCost" alt="" coords="218,104,383,129"/>
+<area shape="rect" id="node5" href="$dc/d8f/class_node.html#a535896357ea40bc56fe4d6aed70b6361" title="Node::getPositionX" alt="" coords="431,79,566,104"/>
+<area shape="rect" id="node6" href="$dc/d8f/class_node.html#a9a5a7aa1c1cade5e1c959115d8f56441" title="Node::getPositionY" alt="" coords="431,128,566,153"/>
+</map>

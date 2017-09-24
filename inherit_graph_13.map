@@ -1,5 +1,3 @@
 <map id="クラス階層図" name="クラス階層図">
-<area shape="rect" id="node1" href="$dd/d88/class_normal_course.html" title="NormalCourse" alt="" coords="5,31,113,56"/>
-<area shape="rect" id="node2" href="$d5/ddb/class_left_normal_course.html" title="LeftNormalCourse" alt="" coords="165,5,295,31"/>
-<area shape="rect" id="node3" href="$d4/d58/class_right_normal_course.html" title="RightNormalCourse" alt="" coords="161,55,299,80"/>
+<area shape="rect" id="node1" href="$d6/dc5/class_motor_angle.html" title="MotorAngle" alt="" coords="5,5,95,31"/>
 </map>

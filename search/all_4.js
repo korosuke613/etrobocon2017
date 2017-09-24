@@ -6,6 +6,7 @@ var searchData=
   ['degree',['DEGREE',['../d0/d75/_puzzle_line_tracer_8h.html#a5d88b17d70c985f2f2b8e987037fd6dd',1,'PuzzleLineTracer.h']]],
   ['del',['DEL',['../d8/d0a/common__definition_8h.html#ad1e508e805e4ddbc05119be4bb260985',1,'common_definition.h']]],
   ['detectbarrier',['detectBarrier',['../d7/d26/class_sonar_alert.html#aec8f12a4a46f97e9dbd62ee91102d66c',1,'SonarAlert']]],
+  ['diff_5fline',['diff_line',['../da/d2d/class_navigation.html#a66807c6ce2176f115b0ac5abae325dbb',1,'Navigation']]],
   ['distance',['Distance',['../d7/d82/class_distance.html',1,'Distance'],['../dd/d88/class_normal_course.html#a71dee69e36e4a9364b8ba8a39274c23d',1,'NormalCourse::distance()'],['../d0/d75/_puzzle_line_tracer_8h.html#a9d41d147039787c25d6631b276ab4330',1,'DISTANCE():&#160;PuzzleLineTracer.h']]],
   ['distance_2ecpp',['Distance.cpp',['../d7/d98/_distance_8cpp.html',1,'']]],
   ['distance_2eh',['Distance.h',['../d4/d99/_distance_8h.html',1,'']]],

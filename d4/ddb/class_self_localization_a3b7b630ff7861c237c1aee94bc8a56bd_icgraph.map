@@ -1,9 +1,14 @@
 <map id="SelfLocalization::writing_current_coordinates" name="SelfLocalization::writing_current_coordinates">
-<area shape="rect" id="node2" href="$d4/ddb/class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="214,31,377,56"/>
-<area shape="rect" id="node3" href="$da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="429,5,629,31"/>
-<area shape="rect" id="node7" href="$df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="425,55,633,80"/>
-<area shape="rect" id="node4" href="$da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="685,5,799,31"/>
-<area shape="rect" id="node5" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="851,31,1001,56"/>
-<area shape="rect" id="node6" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1049,31,1199,56"/>
-<area shape="rect" id="node8" href="$df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="681,55,803,80"/>
+<area shape="rect" id="node2" href="$d4/ddb/class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="214,80,377,105"/>
+<area shape="rect" id="node3" href="$d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="504,5,554,31"/>
+<area shape="rect" id="node4" href="$da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="429,153,629,179"/>
+<area shape="rect" id="node8" href="$da/d2d/class_navigation.html#a24313ef9332e005e7d47beb0636b9ca6" title="Navigation::calculateValue" alt="" coords="440,55,618,80"/>
+<area shape="rect" id="node12" href="$df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="425,104,633,129"/>
+<area shape="rect" id="node5" href="$da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="710,153,823,179"/>
+<area shape="rect" id="node6" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="899,129,1049,155"/>
+<area shape="rect" id="node7" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1097,129,1247,155"/>
+<area shape="rect" id="node9" href="$db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="746,5,786,31"/>
+<area shape="rect" id="node11" href="$da/d29/class_left_course.html#af963a96bb4c84876554c08bf5276899a" title="LeftCourse::runTyokusen" alt="" coords="681,55,851,80"/>
+<area shape="rect" id="node10" href="$db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="949,5,999,31"/>
+<area shape="rect" id="node13" href="$df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="705,104,827,129"/>
 </map>

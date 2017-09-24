@@ -61,6 +61,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
 <a href="../../d2/d91/class_line_tracer_walker-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
 <div class="title">LineTracerWalker クラス</div>  </div>
@@ -68,6 +69,14 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html">LineTracerWalker.h</a>&gt;</code></p>
+<div class="dynheader">
+LineTracerWalker の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d92/class_line_tracer_walker__inherit__graph.png" border="0" usemap="#_line_tracer_walker_inherit__map" alt="Inheritance graph"/></div>
+<map name="_line_tracer_walker_inherit__map" id="_line_tracer_walker_inherit__map">
+<area shape="rect" id="node2" href="../../da/d2d/class_navigation.html" title="2点間を結ぶ仮想直線をライントレースするクラス " alt="" coords="9,260,148,480"/>
+</map>
+</div>
 <div class="dynheader">
 LineTracerWalker 連携図</div>
 <div class="dyncontent">
@@ -104,6 +113,13 @@ LineTracerWalker 連携図</div>
 <tr class="separator:ac2cd2253acde19117b52d5f7d98de698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb2becdcc66d5552b80633aa47e959e"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#aafb2becdcc66d5552b80633aa47e959e">minus</a></td></tr>
 <tr class="separator:aafb2becdcc66d5552b80633aa47e959e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a59aca75c8c99efb32b9baa62d914f379"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#a59aca75c8c99efb32b9baa62d914f379">forward</a></td></tr>
+<tr class="separator:a59aca75c8c99efb32b9baa62d914f379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a361d90c5269313f31a6696b022847aa0"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db4/class_line_tracer_walker.html#a361d90c5269313f31a6696b022847aa0">turn</a></td></tr>
+<tr class="separator:a361d90c5269313f31a6696b022847aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock">
@@ -150,14 +166,17 @@ LineTracerWalker 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/db4/class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph.png" border="0" usemap="#dc/db4/class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph" alt=""/></div>
 <map name="dc/db4/class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph" id="dc/db4/class_line_tracer_walker_a0f4b2a7a72cde7f8a4d9ed4f05237961_icgraph">
-<area shape="rect" id="node2" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="258,5,457,31"/>
-<area shape="rect" id="node6" href="../../d2/d87/class_puzzle_line_tracer.html#abc9cfaf800f212a5dae9050470cec11c" title="PuzzleLineTracer::preparate\lPuzzle" alt="" coords="263,55,452,93"/>
-<area shape="rect" id="node7" href="../../d2/d87/class_puzzle_line_tracer.html#a970a4c69f253b85f9df0a5c1757b05f7" title="PuzzleLineTracer::puzzle\lLineTrace" alt="" coords="273,117,443,156"/>
-<area shape="rect" id="node8" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="254,180,462,205"/>
-<area shape="rect" id="node3" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="514,93,627,119"/>
-<area shape="rect" id="node4" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="680,119,830,144"/>
-<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="878,119,1028,144"/>
-<area shape="rect" id="node9" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="510,161,632,187"/>
+<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="337,5,378,31"/>
+<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="258,55,457,80"/>
+<area shape="rect" id="node8" href="../../da/d29/class_left_course.html#af963a96bb4c84876554c08bf5276899a" title="LeftCourse::runTyokusen" alt="" coords="273,104,443,129"/>
+<area shape="rect" id="node9" href="../../d2/d87/class_puzzle_line_tracer.html#abc9cfaf800f212a5dae9050470cec11c" title="PuzzleLineTracer::preparate\lPuzzle" alt="" coords="263,153,452,192"/>
+<area shape="rect" id="node10" href="../../d2/d87/class_puzzle_line_tracer.html#a970a4c69f253b85f9df0a5c1757b05f7" title="PuzzleLineTracer::puzzle\lLineTrace" alt="" coords="273,216,443,255"/>
+<area shape="rect" id="node11" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="254,279,462,304"/>
+<area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="546,5,596,31"/>
+<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="514,191,627,216"/>
+<area shape="rect" id="node6" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="680,216,830,241"/>
+<area shape="rect" id="node7" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="878,216,1028,241"/>
+<area shape="rect" id="node12" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="510,260,632,285"/>
 </map>
 </div>
 
@@ -184,14 +203,17 @@ LineTracerWalker 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/db4/class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph.png" border="0" usemap="#dc/db4/class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph" alt=""/></div>
 <map name="dc/db4/class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph" id="dc/db4/class_line_tracer_walker_a75c6e77a03e0fedc2ad1ccf72a6ef390_icgraph">
-<area shape="rect" id="node2" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="236,5,435,31"/>
-<area shape="rect" id="node6" href="../../d2/d87/class_puzzle_line_tracer.html#abc9cfaf800f212a5dae9050470cec11c" title="PuzzleLineTracer::preparate\lPuzzle" alt="" coords="241,55,430,93"/>
-<area shape="rect" id="node7" href="../../d2/d87/class_puzzle_line_tracer.html#a970a4c69f253b85f9df0a5c1757b05f7" title="PuzzleLineTracer::puzzle\lLineTrace" alt="" coords="251,117,421,156"/>
-<area shape="rect" id="node8" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="232,180,440,205"/>
-<area shape="rect" id="node3" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="492,93,606,119"/>
-<area shape="rect" id="node4" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="658,119,808,144"/>
-<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="856,119,1006,144"/>
-<area shape="rect" id="node9" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="488,161,610,187"/>
+<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="316,5,356,31"/>
+<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="236,55,435,80"/>
+<area shape="rect" id="node8" href="../../da/d29/class_left_course.html#af963a96bb4c84876554c08bf5276899a" title="LeftCourse::runTyokusen" alt="" coords="251,104,421,129"/>
+<area shape="rect" id="node9" href="../../d2/d87/class_puzzle_line_tracer.html#abc9cfaf800f212a5dae9050470cec11c" title="PuzzleLineTracer::preparate\lPuzzle" alt="" coords="241,153,430,192"/>
+<area shape="rect" id="node10" href="../../d2/d87/class_puzzle_line_tracer.html#a970a4c69f253b85f9df0a5c1757b05f7" title="PuzzleLineTracer::puzzle\lLineTrace" alt="" coords="251,216,421,255"/>
+<area shape="rect" id="node11" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="232,279,440,304"/>
+<area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="524,5,574,31"/>
+<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="492,191,606,216"/>
+<area shape="rect" id="node6" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="658,216,808,241"/>
+<area shape="rect" id="node7" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="856,216,1006,241"/>
+<area shape="rect" id="node12" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="488,260,610,285"/>
 </map>
 </div>
 
@@ -219,14 +241,16 @@ LineTracerWalker 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/db4/class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph.png" border="0" usemap="#dc/db4/class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph" alt=""/></div>
 <map name="dc/db4/class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph" id="dc/db4/class_line_tracer_walker_ab1f0f717138372f536dbb81a83aa6034_icgraph">
-<area shape="rect" id="node2" href="../../d5/ddb/class_left_normal_course.html#a5a07e4b41de72aaaff4796d286589902" title="LeftNormalCourse::LeftNormal\lCourse" alt="" coords="268,5,470,44"/>
-<area shape="rect" id="node3" href="../../d5/ddb/class_left_normal_course.html#a8a9bb16c15fdf4b3fa8b2618813d7df8" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="269,68,469,107"/>
-<area shape="rect" id="node8" href="../../d2/d87/class_puzzle_line_tracer.html#a2a91d0db7dc4f176783548894e9eb3a5" title="PuzzleLineTracer::Puzzle\lLineTracer" alt="" coords="283,131,455,169"/>
-<area shape="rect" id="node9" href="../../d4/d58/class_right_normal_course.html#a889f1172fbab1bbcd67bcf27f4d619e7" title="RightNormalCourse::\lRightNormalCourse" alt="" coords="296,193,442,232"/>
-<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="518,75,717,100"/>
-<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="765,75,878,100"/>
-<area shape="rect" id="node6" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="926,75,1076,100"/>
-<area shape="rect" id="node7" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1124,75,1274,100"/>
+<area shape="rect" id="node2" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="344,5,394,31"/>
+<area shape="rect" id="node3" href="../../d5/ddb/class_left_normal_course.html#a5a07e4b41de72aaaff4796d286589902" title="LeftNormalCourse::LeftNormal\lCourse" alt="" coords="268,55,470,93"/>
+<area shape="rect" id="node4" href="../../d5/ddb/class_left_normal_course.html#a8a9bb16c15fdf4b3fa8b2618813d7df8" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="269,117,469,156"/>
+<area shape="rect" id="node9" href="../../da/d2d/class_navigation.html#a1475bf04744151b0787a738c7abe8dcd" title="Navigation::Navigation" alt="" coords="292,180,446,205"/>
+<area shape="rect" id="node10" href="../../d2/d87/class_puzzle_line_tracer.html#a2a91d0db7dc4f176783548894e9eb3a5" title="PuzzleLineTracer::Puzzle\lLineTracer" alt="" coords="283,229,455,268"/>
+<area shape="rect" id="node11" href="../../d4/d58/class_right_normal_course.html#a889f1172fbab1bbcd67bcf27f4d619e7" title="RightNormalCourse::\lRightNormalCourse" alt="" coords="296,292,442,331"/>
+<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="518,124,717,149"/>
+<area shape="rect" id="node6" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="765,124,878,149"/>
+<area shape="rect" id="node7" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="926,124,1076,149"/>
+<area shape="rect" id="node8" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1124,124,1274,149"/>
 </map>
 </div>
 
@@ -367,6 +391,30 @@ LineTracerWalker 連携図</div>
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
+<a id="a59aca75c8c99efb32b9baa62d914f379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59aca75c8c99efb32b9baa62d914f379">&#9670;&nbsp;</a></span>forward</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t LineTracerWalker::forward</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="aafb2becdcc66d5552b80633aa47e959e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafb2becdcc66d5552b80633aa47e959e">&#9670;&nbsp;</a></span>minus</h2>
 
@@ -396,6 +444,30 @@ LineTracerWalker 連携図</div>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html#l00017">17</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a361d90c5269313f31a6696b022847aa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a361d90c5269313f31a6696b022847aa0">&#9670;&nbsp;</a></span>turn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t LineTracerWalker::turn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html">LineTracerWalker.h</a> の <a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html#l00021">21</a> 行目に定義があります。</p>
 
 </div>
 </div>

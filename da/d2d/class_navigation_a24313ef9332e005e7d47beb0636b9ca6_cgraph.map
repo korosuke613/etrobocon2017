@@ -1,0 +1,16 @@
+<map id="Navigation::calculateValue" name="Navigation::calculateValue">
+<area shape="rect" id="node2" href="$d4/ddb/class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="250,68,413,93"/>
+<area shape="rect" id="node5" href="$da/d2d/class_navigation.html#a649ad016379f15bea98c5f4dcedd3914" title="Navigation::getDiffLine" alt="" coords="254,120,409,145"/>
+<area shape="rect" id="node7" href="$d4/ddb/class_self_localization.html#ae19f89b94c0bf61d0327a8d56f10dff7" title="SelfLocalization::getPointX" alt="" coords="242,169,422,195"/>
+<area shape="rect" id="node8" href="$d4/ddb/class_self_localization.html#add371c55e00d96c08cd49f19e96c17d3" title="SelfLocalization::getPointY" alt="" coords="242,219,422,244"/>
+<area shape="rect" id="node9" href="$dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="231,268,432,307"/>
+<area shape="rect" id="node14" href="$da/df4/class_turn_control.html#ac3c948ab0766eda64baf89c613464bf1" title="TurnControl::calculateTurn\lForPid" alt="" coords="242,331,421,369"/>
+<area shape="rect" id="node15" href="$da/d2d/class_navigation.html#a7c0360e81decb7cd69e4e13325756efc" title="Navigation::checkEndOfLine" alt="" coords="237,393,426,419"/>
+<area shape="rect" id="node3" href="$d6/dc5/class_motor_angle.html#afde9e7ae516de013cfea7e5bf6a9db2a" title="MotorAngle::update" alt="" coords="517,68,655,93"/>
+<area shape="rect" id="node4" href="$d4/ddb/class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd" title="SelfLocalization::writing\l_current_coordinates" alt="" coords="505,5,666,44"/>
+<area shape="rect" id="node6" href="$d4/ddb/class_self_localization.html#ab1529f9d1a7c6729ec771702e3174bc4" title="SelfLocalization::calculate\l_between_ev3_and_border" alt="" coords="494,117,678,156"/>
+<area shape="rect" id="node10" href="$dd/dc1/class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="480,225,691,251"/>
+<area shape="rect" id="node11" href="$dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="535,275,636,300"/>
+<area shape="rect" id="node12" href="$dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="530,324,641,349"/>
+<area shape="rect" id="node13" href="$dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="530,373,642,399"/>
+</map>

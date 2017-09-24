@@ -1,3 +1,4 @@
 <map id="クラス階層図" name="クラス階層図">
-<area shape="rect" id="node1" href="$d6/dc5/class_motor_angle.html" title="MotorAngle" alt="" coords="5,5,95,31"/>
+<area shape="rect" id="node1" href="$dc/db4/class_line_tracer_walker.html" title="LineTracerWalker" alt="" coords="5,5,131,31"/>
+<area shape="rect" id="node2" href="$da/d2d/class_navigation.html" title="2点間を結ぶ仮想直線をライントレースするクラス " alt="" coords="179,5,263,31"/>
 </map>

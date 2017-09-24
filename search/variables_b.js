@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wheel_5facross',['wheel_across',['../d6/dc5/class_motor_angle.html#a29b78a43b1999452702a2ca5330caa0a',1,'MotorAngle']]]
+  ['value',['value',['../d9/da4/example___speed_control_8cpp.html#ac4f474c82e82cbb89ca7c36dd52be0ed',1,'example_SpeedControl.cpp']]]
 ];

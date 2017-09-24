@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main',['main',['../d9/da4/example___speed_control_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'example_SpeedControl.cpp']]],
+  ['main',['main',['../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;example_Navigation.cpp'],['../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;example_SelfLocalization.cpp'],['../d9/da4/example___speed_control_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;example_SpeedControl.cpp']]],
   ['main_5ftask',['main_task',['../df/d47/sample_2app_8cpp.html#a4754344fc3fec0a802660bb5dcdefad9',1,'main_task(intptr_t unused):&#160;app.cpp'],['../dc/d70/sample_2app_8h.html#ab874c34d9d66b14d189a9a3f2d065991',1,'main_task(intptr_t exinf):&#160;app.cpp'],['../d2/db0/str_2app_8cpp.html#a4754344fc3fec0a802660bb5dcdefad9',1,'main_task(intptr_t unused):&#160;app.cpp'],['../d6/d5e/str_2app_8h.html#ab874c34d9d66b14d189a9a3f2d065991',1,'main_task(intptr_t exinf):&#160;app.cpp']]],
   ['motor',['Motor',['../da/d61/classev3api_1_1_motor.html#aef82e3c672ac5e8493e103570b70964a',1,'ev3api::Motor']]],
   ['motorangle',['MotorAngle',['../d6/dc5/class_motor_angle.html#ac19f7f1721f150df359e7c445b89e7e8',1,'MotorAngle']]],

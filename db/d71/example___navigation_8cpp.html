@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/apps/examples/example_Navigation.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="../../dir_7ddface023733e8076f170809cfd9fe9.html">examples</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">example_Navigation.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/da8/_line_tracer_walker_8h_source.html">LineTracerWalker.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/da4/_navigation_8h_source.html">Navigation.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+example_Navigation.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d47/example___navigation_8cpp__incl.png" border="0" usemap="#str_2apps_2examples_2example___navigation_8cpp" alt=""/></div>
+<map name="str_2apps_2examples_2example___navigation_8cpp" id="str_2apps_2examples_2example___navigation_8cpp">
+<area shape="rect" id="node5" href="../../d5/da8/_line_tracer_walker_8h.html" title="LineTracerWalker.h" alt="" coords="224,165,360,191"/>
+<area shape="rect" id="node11" href="../../d3/da4/_navigation_8h.html" title="2点間を結ぶ仮想直線をライントレースするクラスのヘッダファイル " alt="" coords="345,92,440,117"/>
+<area shape="rect" id="node6" href="../../da/d7f/_turn_control_8h.html" title="PID制御によるターン制御クラス " alt="" coords="260,239,362,264"/>
+<area shape="rect" id="node9" href="../../db/d18/_speed_control_8h.html" title="PID制御による速度制御クラス " alt="" coords="122,239,236,264"/>
+<area shape="rect" id="node7" href="../../da/dcf/_pid_8h.html" title="PID制御の計算を行うクラス " alt="" coords="217,312,269,337"/>
+<area shape="rect" id="node13" href="../../d3/d3a/_self_localization_8h.html" title="SelfLocalization.h" alt="" coords="435,165,560,191"/>
+</map>
+</div>
+</div>
+<p><a href="../../db/d71/example___navigation_8cpp_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a5a28cec10844ce50571a7ce388fb2f92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92">run</a> (<a class="el" href="../../da/d2d/class_navigation.html">Navigation</a> &amp;navi, float goal_x, float goal_y)</td></tr>
+<tr class="separator:a5a28cec10844ce50571a7ce388fb2f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad940a51d4501af7ce84a3b6a73d830c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d71/example___navigation_8cpp.html#ad940a51d4501af7ce84a3b6a73d830c4">calcVirtualWheels</a> (int, int)</td></tr>
+<tr class="separator:ad940a51d4501af7ce84a3b6a73d830c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:ae2385d0e1670ce147d83127706ad00fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d71/example___navigation_8cpp.html#ae2385d0e1670ce147d83127706ad00fe">speed100ms</a></td></tr>
+<tr class="separator:ae2385d0e1670ce147d83127706ad00fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35feaef5a31fc4d7da604b2caee14026"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d71/example___navigation_8cpp.html#a35feaef5a31fc4d7da604b2caee14026">right_motor</a></td></tr>
+<tr class="separator:a35feaef5a31fc4d7da604b2caee14026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9aff47a6bd1e6466e99f17970a99763"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d71/example___navigation_8cpp.html#ad9aff47a6bd1e6466e99f17970a99763">left_motor</a></td></tr>
+<tr class="separator:ad9aff47a6bd1e6466e99f17970a99763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ad940a51d4501af7ce84a3b6a73d830c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad940a51d4501af7ce84a3b6a73d830c4">&#9670;&nbsp;</a></span>calcVirtualWheels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void calcVirtualWheels </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>forward</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>turn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../db/d71/example___navigation_8cpp_source.html">example_Navigation.cpp</a> の <a class="el" href="../../db/d71/example___navigation_8cpp_source.html#l00057">57</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d71/example___navigation_8cpp_ad940a51d4501af7ce84a3b6a73d830c4_icgraph.png" border="0" usemap="#db/d71/example___navigation_8cpp_ad940a51d4501af7ce84a3b6a73d830c4_icgraph" alt=""/></div>
+<map name="db/d71/example___navigation_8cpp_ad940a51d4501af7ce84a3b6a73d830c4_icgraph" id="db/d71/example___navigation_8cpp_ad940a51d4501af7ce84a3b6a73d830c4_icgraph">
+<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="180,5,221,31"/>
+<area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="269,5,319,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>１．コンストラクタを作成する </p>
+
+<p class="definition"> <a class="el" href="../../db/d71/example___navigation_8cpp_source.html">example_Navigation.cpp</a> の <a class="el" href="../../db/d71/example___navigation_8cpp_source.html#l00025">25</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d71/example___navigation_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#db/d71/example___navigation_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="db/d71/example___navigation_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="db/d71/example___navigation_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" id="node2" href="../../dc/de1/class_pid.html#aa8626402086bcd10cbb7f581c92300fb" title="Pid::setPid" alt="" coords="104,164,189,189"/>
+<area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="126,213,166,239"/>
+<area shape="rect" id="node4" href="../../da/d2d/class_navigation.html#aca35987cb1196a6ed95eecc97fb66f67" title="Navigation::setLine" alt="" coords="273,5,408,31"/>
+<area shape="rect" id="node5" href="../../d4/ddb/class_self_localization.html#ae19f89b94c0bf61d0327a8d56f10dff7" title="SelfLocalization::getPointX" alt="" coords="503,56,683,81"/>
+<area shape="rect" id="node6" href="../../d4/ddb/class_self_localization.html#add371c55e00d96c08cd49f19e96c17d3" title="SelfLocalization::getPointY" alt="" coords="503,105,683,131"/>
+<area shape="rect" id="node7" href="../../d4/ddb/class_self_localization.html#a2c3a8eb44703b39ee70ca452ef570cb6" title="SelfLocalization::is\l_over_normal_vector" alt="" coords="267,207,414,245"/>
+<area shape="rect" id="node8" href="../../da/d2d/class_navigation.html#a24313ef9332e005e7d47beb0636b9ca6" title="Navigation::calculateValue" alt="" coords="252,157,429,183"/>
+<area shape="rect" id="node21" href="../../dd/dc1/class_speed_control.html#a52d9842daaab11fc25d24c631d5534ed" title="SpeedControl::getSpeed100ms" alt="" coords="237,269,444,295"/>
+<area shape="rect" id="node22" href="../../db/d71/example___navigation_8cpp.html#ad940a51d4501af7ce84a3b6a73d830c4" title="calcVirtualWheels" alt="" coords="277,319,404,344"/>
+<area shape="rect" id="node23" href="../../dc/db4/class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="240,368,441,393"/>
+<area shape="rect" id="node24" href="../../dc/db4/class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="251,417,430,443"/>
+<area shape="rect" id="node9" href="../../d4/ddb/class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="511,204,674,229"/>
+<area shape="rect" id="node12" href="../../da/d2d/class_navigation.html#a649ad016379f15bea98c5f4dcedd3914" title="Navigation::getDiffLine" alt="" coords="515,396,670,421"/>
+<area shape="rect" id="node14" href="../../dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="492,253,693,292"/>
+<area shape="rect" id="node19" href="../../da/df4/class_turn_control.html#ac3c948ab0766eda64baf89c613464bf1" title="TurnControl::calculateTurn\lForPid" alt="" coords="504,316,682,355"/>
+<area shape="rect" id="node20" href="../../da/d2d/class_navigation.html#a7c0360e81decb7cd69e4e13325756efc" title="Navigation::checkEndOfLine" alt="" coords="498,155,688,180"/>
+<area shape="rect" id="node10" href="../../d6/dc5/class_motor_angle.html#afde9e7ae516de013cfea7e5bf6a9db2a" title="MotorAngle::update" alt="" coords="778,168,916,193"/>
+<area shape="rect" id="node11" href="../../d4/ddb/class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd" title="SelfLocalization::writing\l_current_coordinates" alt="" coords="767,105,927,144"/>
+<area shape="rect" id="node13" href="../../d4/ddb/class_self_localization.html#ab1529f9d1a7c6729ec771702e3174bc4" title="SelfLocalization::calculate\l_between_ev3_and_border" alt="" coords="755,415,939,453"/>
+<area shape="rect" id="node15" href="../../dd/dc1/class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="741,217,953,243"/>
+<area shape="rect" id="node16" href="../../dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="797,267,897,292"/>
+<area shape="rect" id="node17" href="../../dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="791,316,903,341"/>
+<area shape="rect" id="node18" href="../../dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="791,365,903,391"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5a28cec10844ce50571a7ce388fb2f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a28cec10844ce50571a7ce388fb2f92">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void run </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d2d/class_navigation.html">Navigation</a> &amp;&#160;</td>
+          <td class="paramname"><em>navi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>goal_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>goal_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../db/d71/example___navigation_8cpp_source.html">example_Navigation.cpp</a> の <a class="el" href="../../db/d71/example___navigation_8cpp_source.html#l00042">42</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d71/example___navigation_8cpp_a5a28cec10844ce50571a7ce388fb2f92_cgraph.png" border="0" usemap="#db/d71/example___navigation_8cpp_a5a28cec10844ce50571a7ce388fb2f92_cgraph" alt=""/></div>
+<map name="db/d71/example___navigation_8cpp_a5a28cec10844ce50571a7ce388fb2f92_cgraph" id="db/d71/example___navigation_8cpp_a5a28cec10844ce50571a7ce388fb2f92_cgraph">
+<area shape="rect" id="node2" href="../../da/d2d/class_navigation.html#aca35987cb1196a6ed95eecc97fb66f67" title="Navigation::setLine" alt="" coords="130,5,265,31"/>
+<area shape="rect" id="node3" href="../../d4/ddb/class_self_localization.html#ae19f89b94c0bf61d0327a8d56f10dff7" title="SelfLocalization::getPointX" alt="" coords="360,56,540,81"/>
+<area shape="rect" id="node4" href="../../d4/ddb/class_self_localization.html#add371c55e00d96c08cd49f19e96c17d3" title="SelfLocalization::getPointY" alt="" coords="360,105,540,131"/>
+<area shape="rect" id="node5" href="../../d4/ddb/class_self_localization.html#a2c3a8eb44703b39ee70ca452ef570cb6" title="SelfLocalization::is\l_over_normal_vector" alt="" coords="124,207,271,245"/>
+<area shape="rect" id="node6" href="../../da/d2d/class_navigation.html#a24313ef9332e005e7d47beb0636b9ca6" title="Navigation::calculateValue" alt="" coords="109,157,286,183"/>
+<area shape="rect" id="node19" href="../../dd/dc1/class_speed_control.html#a52d9842daaab11fc25d24c631d5534ed" title="SpeedControl::getSpeed100ms" alt="" coords="94,269,301,295"/>
+<area shape="rect" id="node20" href="../../db/d71/example___navigation_8cpp.html#ad940a51d4501af7ce84a3b6a73d830c4" title="calcVirtualWheels" alt="" coords="134,319,261,344"/>
+<area shape="rect" id="node21" href="../../dc/db4/class_line_tracer_walker.html#a0f4b2a7a72cde7f8a4d9ed4f05237961" title="LineTracerWalker::getForward" alt="" coords="97,368,298,393"/>
+<area shape="rect" id="node22" href="../../dc/db4/class_line_tracer_walker.html#a75c6e77a03e0fedc2ad1ccf72a6ef390" title="LineTracerWalker::getTurn" alt="" coords="108,417,287,443"/>
+<area shape="rect" id="node7" href="../../d4/ddb/class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="369,204,532,229"/>
+<area shape="rect" id="node10" href="../../da/d2d/class_navigation.html#a649ad016379f15bea98c5f4dcedd3914" title="Navigation::getDiffLine" alt="" coords="372,396,528,421"/>
+<area shape="rect" id="node12" href="../../dd/dc1/class_speed_control.html#a4dc24488ce1566fe7b2dc1ecaf1a7bc8" title="SpeedControl::calculateSpeed\lForPid" alt="" coords="349,253,551,292"/>
+<area shape="rect" id="node17" href="../../da/df4/class_turn_control.html#ac3c948ab0766eda64baf89c613464bf1" title="TurnControl::calculateTurn\lForPid" alt="" coords="361,316,539,355"/>
+<area shape="rect" id="node18" href="../../da/d2d/class_navigation.html#a7c0360e81decb7cd69e4e13325756efc" title="Navigation::checkEndOfLine" alt="" coords="355,155,545,180"/>
+<area shape="rect" id="node8" href="../../d6/dc5/class_motor_angle.html#afde9e7ae516de013cfea7e5bf6a9db2a" title="MotorAngle::update" alt="" coords="635,168,773,193"/>
+<area shape="rect" id="node9" href="../../d4/ddb/class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd" title="SelfLocalization::writing\l_current_coordinates" alt="" coords="624,105,785,144"/>
+<area shape="rect" id="node11" href="../../d4/ddb/class_self_localization.html#ab1529f9d1a7c6729ec771702e3174bc4" title="SelfLocalization::calculate\l_between_ev3_and_border" alt="" coords="612,415,796,453"/>
+<area shape="rect" id="node13" href="../../dd/dc1/class_speed_control.html#a07ca6a7a13bc9f703eaf8846ffdc3f60" title="SpeedControl::calcDistance4ms" alt="" coords="599,217,810,243"/>
+<area shape="rect" id="node14" href="../../dc/de1/class_pid.html#afe78d03b3e96db6b2dc6b3255ac84bb5" title="Pid::calculate" alt="" coords="654,267,755,292"/>
+<area shape="rect" id="node15" href="../../dc/de1/class_pid.html#a12b32c86a4e7ee2f25dce2a0fc49823d" title="Pid::get_output" alt="" coords="649,316,760,341"/>
+<area shape="rect" id="node16" href="../../dc/de1/class_pid.html#a28a8c791f6ee5ed84709171b21d2471a" title="Pid::limitOutput" alt="" coords="648,365,760,391"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d71/example___navigation_8cpp_a5a28cec10844ce50571a7ce388fb2f92_icgraph.png" border="0" usemap="#db/d71/example___navigation_8cpp_a5a28cec10844ce50571a7ce388fb2f92_icgraph" alt=""/></div>
+<map name="db/d71/example___navigation_8cpp_a5a28cec10844ce50571a7ce388fb2f92_icgraph" id="db/d71/example___navigation_8cpp_a5a28cec10844ce50571a7ce388fb2f92_icgraph">
+<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="94,5,144,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="ad9aff47a6bd1e6466e99f17970a99763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9aff47a6bd1e6466e99f17970a99763">&#9670;&nbsp;</a></span>left_motor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int left_motor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../db/d71/example___navigation_8cpp_source.html">example_Navigation.cpp</a> の <a class="el" href="../../db/d71/example___navigation_8cpp_source.html#l00019">19</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a35feaef5a31fc4d7da604b2caee14026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35feaef5a31fc4d7da604b2caee14026">&#9670;&nbsp;</a></span>right_motor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int right_motor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../db/d71/example___navigation_8cpp_source.html">example_Navigation.cpp</a> の <a class="el" href="../../db/d71/example___navigation_8cpp_source.html#l00019">19</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae2385d0e1670ce147d83127706ad00fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2385d0e1670ce147d83127706ad00fe">&#9670;&nbsp;</a></span>speed100ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int speed100ms</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="../../db/d71/example___navigation_8cpp.html">example_Navigation.cpp</a> このプログラムはNavigationクラスを使う時に参考にできる使用例です。</p>
+<p>【コンパイル・実行の仕方】 g++-7 -w ../src/Pid.cpp ../src/SpeedControl.cpp ../src/TurnControl.cpp ../src/LineTracerWalker.cpp ../src/SelfLocalization.cpp ../src/Navigation.cpp <a class="el" href="../../db/d71/example___navigation_8cpp.html">example_Navigation.cpp</a> -I../include ./a.outインクルード </p>
+
+<p class="definition"> <a class="el" href="../../db/d71/example___navigation_8cpp_source.html">example_Navigation.cpp</a> の <a class="el" href="../../db/d71/example___navigation_8cpp_source.html#l00018">18</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

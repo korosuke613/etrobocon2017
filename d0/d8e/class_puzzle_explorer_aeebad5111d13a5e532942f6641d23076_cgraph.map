@@ -1,0 +1,5 @@
+<map id="PuzzleExplorer::setMyPosition" name="PuzzleExplorer::setMyPosition">
+<area shape="rect" id="node2" href="$dc/d8f/class_node.html#a94dcfdc17fefdecacc58d3fe3e9f8f73" title="Node::setNum" alt="" coords="264,5,371,31"/>
+<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a5bb0f6fdf6b77b66f6c123f4f6e82c4d" title="Node::setColor" alt="" coords="263,55,373,80"/>
+<area shape="rect" id="node4" href="$dc/d8f/class_node.html#a0855f6940db2abe5b9d2f9550bb66678" title="Node::setPosition" alt="" coords="255,104,381,129"/>
+</map>

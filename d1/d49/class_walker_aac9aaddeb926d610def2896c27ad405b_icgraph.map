@@ -1,10 +1,11 @@
 <map id="Walker::get_count_L" name="Walker::get_count_L">
 <area shape="rect" id="node2" href="$da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="201,5,400,31"/>
-<area shape="rect" id="node6" href="$d2/d87/class_puzzle_line_tracer.html#abc9cfaf800f212a5dae9050470cec11c" title="PuzzleLineTracer::preparate\lPuzzle" alt="" coords="206,55,395,93"/>
-<area shape="rect" id="node7" href="$d2/d87/class_puzzle_line_tracer.html#a970a4c69f253b85f9df0a5c1757b05f7" title="PuzzleLineTracer::puzzle\lLineTrace" alt="" coords="215,117,386,156"/>
-<area shape="rect" id="node8" href="$df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="196,180,405,205"/>
-<area shape="rect" id="node3" href="$da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="457,93,570,119"/>
-<area shape="rect" id="node4" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="623,119,772,144"/>
-<area shape="rect" id="node5" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="820,119,971,144"/>
-<area shape="rect" id="node9" href="$df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="453,161,575,187"/>
+<area shape="rect" id="node6" href="$da/d29/class_left_course.html#af963a96bb4c84876554c08bf5276899a" title="LeftCourse::runTyokusen" alt="" coords="215,55,386,80"/>
+<area shape="rect" id="node7" href="$d2/d87/class_puzzle_line_tracer.html#abc9cfaf800f212a5dae9050470cec11c" title="PuzzleLineTracer::preparate\lPuzzle" alt="" coords="206,104,395,143"/>
+<area shape="rect" id="node8" href="$d2/d87/class_puzzle_line_tracer.html#a970a4c69f253b85f9df0a5c1757b05f7" title="PuzzleLineTracer::puzzle\lLineTrace" alt="" coords="215,167,386,205"/>
+<area shape="rect" id="node9" href="$df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="196,229,405,255"/>
+<area shape="rect" id="node3" href="$da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="457,143,570,168"/>
+<area shape="rect" id="node4" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="623,168,772,193"/>
+<area shape="rect" id="node5" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="820,168,971,193"/>
+<area shape="rect" id="node10" href="$df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="453,211,575,236"/>
 </map>

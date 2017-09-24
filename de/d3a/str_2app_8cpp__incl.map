@@ -1,31 +1,32 @@
 <map id="str/app.cpp" name="str/app.cpp">
-<area shape="rect" id="node3" href="$d6/d5e/str_2app_8h.html" title="app.h" alt="" coords="294,79,348,104"/>
-<area shape="rect" id="node6" href="$d2/dd3/_et_robocon2017_8h.html" title="main的なクラス " alt="" coords="550,79,678,104"/>
-<area shape="rect" id="node32" href="$d3/d3a/_self_localization_8h.html" title="SelfLocalization.h" alt="" coords="1642,225,1768,251"/>
-<area shape="rect" id="node7" href="$d7/df2/_touch_sensor_8h.html" title="TouchSensor.h" alt="" coords="1109,152,1219,177"/>
-<area shape="rect" id="node10" href="$d7/d8d/_sonar_alert_8h.html" title="SonarAlert.h" alt="" coords="1243,152,1338,177"/>
-<area shape="rect" id="node12" href="$d2/d15/_lifter_8h.html" title="Lifter.h" alt="" coords="584,299,645,324"/>
-<area shape="rect" id="node16" href="$d2/df3/_emoter_8h.html" title="Emoter.h" alt="" coords="485,299,560,324"/>
+<area shape="rect" id="node3" href="$d6/d5e/str_2app_8h.html" title="app.h" alt="" coords="1868,79,1923,104"/>
+<area shape="rect" id="node6" href="$d2/dd3/_et_robocon2017_8h.html" title="main的なクラス " alt="" coords="513,79,641,104"/>
+<area shape="rect" id="node32" href="$d3/d3a/_self_localization_8h.html" title="SelfLocalization.h" alt="" coords="1589,299,1715,324"/>
+<area shape="rect" id="node7" href="$d7/df2/_touch_sensor_8h.html" title="TouchSensor.h" alt="" coords="568,152,677,177"/>
+<area shape="rect" id="node10" href="$d7/d8d/_sonar_alert_8h.html" title="SonarAlert.h" alt="" coords="701,152,797,177"/>
+<area shape="rect" id="node12" href="$d2/d15/_lifter_8h.html" title="Lifter.h" alt="" coords="357,299,418,324"/>
+<area shape="rect" id="node16" href="$d2/df3/_emoter_8h.html" title="Emoter.h" alt="" coords="442,299,517,324"/>
 <area shape="rect" id="node17" href="$d9/dbf/_user_interface_8h.html" title="走行体が走り出す前にユーザが入力するインターフェースを提供するクラス " alt="" coords="170,299,283,324"/>
-<area shape="rect" id="node20" href="$d3/d13/_left_course_8h.html" title="Lコースを走らせるときに呼び出されるクラス " alt="" coords="827,152,925,177"/>
-<area shape="rect" id="node36" href="$d3/d94/_right_course_8h.html" title="Rコースを走らせるときに呼び出されるクラス " alt="" coords="979,152,1085,177"/>
-<area shape="rect" id="node38" href="$d1/d89/basic_walker_8h.html" title="basicWalker.h" alt="" coords="357,299,461,324"/>
-<area shape="rect" id="node8" href="$da/dbb/_sensor_8h.html" title="Sensor.h" alt="" coords="1417,372,1491,397"/>
-<area shape="rect" id="node9" href="$d3/d42/_port_8h.html" title="モータ/センサポート関連定義 " alt="" coords="1215,445,1272,471"/>
-<area shape="rect" id="node11" href="$d5/d45/_sonar_sensor_8h.html" title="SonarSensor.h" alt="" coords="1509,225,1619,251"/>
-<area shape="rect" id="node13" href="$da/d12/_motor_8h.html" title="Motor.h" alt="" coords="660,372,726,397"/>
-<area shape="rect" id="node14" href="$dd/dba/_clock_8h.html" title="Clock.h" alt="" coords="571,372,637,397"/>
-<area shape="rect" id="node15" href="$d9/dec/str_2apps_2include_2util_8h.html" title="util.h" alt="" coords="498,372,547,397"/>
+<area shape="rect" id="node20" href="$d3/d13/_left_course_8h.html" title="Lコースを走らせるときに呼び出されるクラス " alt="" coords="1038,152,1135,177"/>
+<area shape="rect" id="node37" href="$d3/d94/_right_course_8h.html" title="Rコースを走らせるときに呼び出されるクラス " alt="" coords="877,152,984,177"/>
+<area shape="rect" id="node39" href="$d1/d89/basic_walker_8h.html" title="basicWalker.h" alt="" coords="541,299,645,324"/>
+<area shape="rect" id="node8" href="$da/dbb/_sensor_8h.html" title="Sensor.h" alt="" coords="816,372,890,397"/>
+<area shape="rect" id="node9" href="$d3/d42/_port_8h.html" title="モータ/センサポート関連定義 " alt="" coords="767,445,824,471"/>
+<area shape="rect" id="node11" href="$d5/d45/_sonar_sensor_8h.html" title="SonarSensor.h" alt="" coords="660,225,769,251"/>
+<area shape="rect" id="node13" href="$da/d12/_motor_8h.html" title="Motor.h" alt="" coords="618,372,683,397"/>
+<area shape="rect" id="node14" href="$dd/dba/_clock_8h.html" title="Clock.h" alt="" coords="528,372,594,397"/>
+<area shape="rect" id="node15" href="$d9/dec/str_2apps_2include_2util_8h.html" title="util.h" alt="" coords="455,372,505,397"/>
 <area shape="rect" id="node18" href="$db/d80/_first_code_8h.html" title="初期位置コードクラス " alt="" coords="5,372,96,397"/>
-<area shape="rect" id="node21" href="$d5/dfc/_walker_8h.html" title="Walker.h" alt="" coords="669,299,741,324"/>
-<area shape="rect" id="node22" href="$de/d0d/_color_sensor_8h.html" title="ColorSensor.h" alt="" coords="968,299,1074,324"/>
-<area shape="rect" id="node23" href="$da/dc8/_left_normal_course_8h.html" title="LコースのNormalCourseの処理を行うクラス " alt="" coords="1120,225,1261,251"/>
-<area shape="rect" id="node35" href="$d0/d75/_puzzle_line_tracer_8h.html" title="PuzzleLineTracer.h" alt="" coords="808,225,943,251"/>
-<area shape="rect" id="node24" href="$d6/dad/_normal_course_8h.html" title="NormalCourse.h" alt="" coords="1226,299,1344,324"/>
-<area shape="rect" id="node25" href="$d5/da8/_line_tracer_walker_8h.html" title="LineTracerWalker.h" alt="" coords="1149,372,1285,397"/>
-<area shape="rect" id="node31" href="$d4/d99/_distance_8h.html" title="タイヤの進んだ距離（回転角）に関するクラス " alt="" coords="1310,372,1394,397"/>
-<area shape="rect" id="node26" href="$da/d7f/_turn_control_8h.html" title="PID制御によるターン制御クラス " alt="" coords="1297,445,1399,471"/>
-<area shape="rect" id="node29" href="$db/d18/_speed_control_8h.html" title="PID制御による速度制御クラス " alt="" coords="1077,445,1191,471"/>
-<area shape="rect" id="node27" href="$da/dcf/_pid_8h.html" title="PID制御の計算を行うクラス " alt="" coords="1258,519,1310,544"/>
-<area shape="rect" id="node37" href="$d2/dfd/_right_normal_course_8h.html" title="RコースのNormalCourseの処理を行うクラス " alt="" coords="1285,225,1435,251"/>
+<area shape="rect" id="node21" href="$d5/dfc/_walker_8h.html" title="Walker.h" alt="" coords="770,299,843,324"/>
+<area shape="rect" id="node22" href="$de/d0d/_color_sensor_8h.html" title="ColorSensor.h" alt="" coords="1022,299,1127,324"/>
+<area shape="rect" id="node23" href="$da/dc8/_left_normal_course_8h.html" title="LコースのNormalCourseの処理を行うクラス " alt="" coords="1431,225,1571,251"/>
+<area shape="rect" id="node35" href="$d0/d75/_puzzle_line_tracer_8h.html" title="PuzzleLineTracer.h" alt="" coords="1098,225,1233,251"/>
+<area shape="rect" id="node36" href="$d3/da4/_navigation_8h.html" title="2点間を結ぶ仮想直線をライントレースするクラスのヘッダファイル " alt="" coords="1647,225,1742,251"/>
+<area shape="rect" id="node24" href="$d6/dad/_normal_course_8h.html" title="NormalCourse.h" alt="" coords="1369,299,1487,324"/>
+<area shape="rect" id="node25" href="$d5/da8/_line_tracer_walker_8h.html" title="LineTracerWalker.h" alt="" coords="1272,372,1408,397"/>
+<area shape="rect" id="node31" href="$d4/d99/_distance_8h.html" title="タイヤの進んだ距離（回転角）に関するクラス " alt="" coords="1432,372,1517,397"/>
+<area shape="rect" id="node26" href="$da/d7f/_turn_control_8h.html" title="PID制御によるターン制御クラス " alt="" coords="1378,445,1480,471"/>
+<area shape="rect" id="node29" href="$db/d18/_speed_control_8h.html" title="PID制御による速度制御クラス " alt="" coords="1240,445,1354,471"/>
+<area shape="rect" id="node27" href="$da/dcf/_pid_8h.html" title="PID制御の計算を行うクラス " alt="" coords="1375,519,1427,544"/>
+<area shape="rect" id="node38" href="$d2/dfd/_right_normal_course_8h.html" title="RコースのNormalCourseの処理を行うクラス " alt="" coords="1257,225,1407,251"/>
 </map>
