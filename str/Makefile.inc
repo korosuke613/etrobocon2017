@@ -22,10 +22,7 @@ UserInterface.o \
 FirstCode.o \
 PuzzleLineTracer.o\
 basicWalker.o\
-Node.o \
-Block.o \
-PuzzleCodeConverter.o \
-PuzzleExplorer.o
+Navigation.o \
 
 
 SRCLANG := c++
