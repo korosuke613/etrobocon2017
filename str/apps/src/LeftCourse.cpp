@@ -67,7 +67,6 @@ void LeftCourse::runTyokusen(float _goal_x, float _goal_y){
         }
         if(ev3_button_is_pressed(BACK_BUTTON)){
             walker.run(0, 0);
-            navi.sl.file_close();
             break;
         }
         
