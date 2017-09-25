@@ -5,19 +5,21 @@
 
 #include <array>
 
+using namespace std;
+
 class TargetFigure
 {
 private:
-	array<int, 5> initPositions;
-	const array<int, 5> leftSquare = {0, 1, 5, 2, 10};
-	const array<int, 5> pentagon = {8, 14, 13, 9, 6};
-	const array<int, 5> rightSquare = {0, 7, 3, 4, 11};
-	array<int, 5> targets;
+	int initPositions[5];
+	const int leftSquare[5] = {0, 1, 5, 2, 10};
+	const int pentagon[5] = {8, 14, 13, 9, 6};
+	const int rightSquare[5] = {0, 7, 3, 4, 11};
+	int targets[5];
 	
 public:
 	TargetFigure();
 	~TargetFigure();
-	void set(array<int, 5> positions);
+	void set(int positions[5]);
 	void evaluate();
 	int getTargetNum(BlockColor color);
 };

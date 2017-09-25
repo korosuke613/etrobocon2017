@@ -3,8 +3,8 @@
 
 #include "Block.h"
 #include "Node.h"
+#include <stdio.h>
 
-#include <array>
 #include <queue>
 
 using namespace std;
@@ -17,10 +17,21 @@ using namespace std;
 
 class PuzzleExplorer
 {
+public:
+	PuzzleExplorer();
+	~PuzzleExplorer();
+	void init(int *blockPositions);
+	BlockColor getNodeColor(int num);
+	Node** getMyNeighbor();
+	void setMyPosition(int num);
+	int getNearestBlockPosition();
+	int* getRoot(int startNode, int goalNode);
+	int getCost(Node node1, Node node2);
+	
 private:
 	int myPosition;
-	array<Block, 5> blockList;
-	array<Node, 16> nodeList;
+	Block blockList[5];
+	Node nodeList[16];
 	const int neighborList[16][5] = {
 		{6,8,9,13,14},
 		{2,5,10,-1,-1},
@@ -57,20 +68,10 @@ private:
 		{7,4},
 		{9,4}
 	};
+	int root[16]={};
 	void setNodes();
-	void setBlocks(array<int, 5> blockPositions);
+	void setBlocks(int *blockPositions);
 	void setNeighborNode();
-
-public:
-	PuzzleExplorer();
-	~PuzzleExplorer();
-	void init(array<int, 5> blockPositions);
-	BlockColor getNodeColor(int num);
-	vector<Node*> getMyNeighbor();
-	void setMyPosition(int num);
-	int getNearestBlockPosition();
-	vector<int> getRoot(int startNode, int goalNode);
-	int getCost(Node node1, Node node2);
 
 };
 

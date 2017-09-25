@@ -11,8 +11,9 @@ PuzzleExplorer::PuzzleExplorer()
 PuzzleExplorer::~PuzzleExplorer(){}
 
 // ブロック並べエリアのマップ、ブロックの初期配置などの初期設定
-void PuzzleExplorer::init(array<int, 5> blockPositions)
+void PuzzleExplorer::init(int *blockPositions)
 {
+	
 	//機体初期位置10
 	setMyPosition(10);
 	
@@ -48,33 +49,8 @@ void PuzzleExplorer::setNodes()
 	}
 }
 
-// 隣接ノードの設定
-void PuzzleExplorer::setNeighborNode()
-{
-	//nodeListから隣接ノードを取得
-	for(int i=0; i<16;i++)
-	{
-		vector<Node*> neighbor;
-		
-		for(int j=0; j<5; j++)
-		{
-			// 配列の数をそろえるために入れた-1を取り除く
-			if(neighborList[i][j] == -1)
-			{
-				continue;
-			}
-			Node* node = &nodeList[neighborList[i][j]];
-			neighbor.push_back(node);
-		}
-		
-		nodeList[i].setNeighbor(neighbor);
-		neighbor.clear();
-	}
-	return;
-}
-
 // ブロック設定
-void PuzzleExplorer::setBlocks(array<int, 5> blockPositions)
+void PuzzleExplorer::setBlocks(int *blockPositions)
 {
 	for(int i=0; i<5; i++)
 	{
@@ -94,6 +70,32 @@ void PuzzleExplorer::setBlocks(array<int, 5> blockPositions)
 	return;
 }
 
+// 隣接ノードの設定
+void PuzzleExplorer::setNeighborNode()
+{
+	//nodeListから隣接ノードを取得
+	for(int i=0; i<16;i++)
+	{
+		Node* neighbor[5] = {};
+		
+		for(int j=0; j<5; j++)
+		{
+			// 隣接ノード番号が-1の時(隣接ノードがないとき)nullポインタを入れる
+			if(neighborList[i][j] == -1)
+			{
+				neighbor[j] = nullptr;
+				continue;
+			}
+			Node* node = &nodeList[neighborList[i][j]];
+			neighbor[j] = node;
+		}
+		
+		nodeList[i].setNeighbor(neighbor);
+		neighbor[5] = {};
+	}
+	return;
+}
+
 // 位置番号からノードの色を返す
 BlockColor PuzzleExplorer::getNodeColor(int num)
 {
@@ -101,7 +103,7 @@ BlockColor PuzzleExplorer::getNodeColor(int num)
 }
 
 // 現在地の隣接ノード取得
-vector<Node*> PuzzleExplorer::getMyNeighbor()
+Node** PuzzleExplorer::getMyNeighbor()
 {
 	return nodeList[myPosition].getNeighbor();
 }
@@ -115,10 +117,14 @@ int PuzzleExplorer::getNearestBlockPosition()
 	// ブロックを持つノードが見つかるまで幅優先探索
 	while(!node.getHasBlock())
 	{
-		vector<Node*> nodes = node.getNeighbor();
+		Node** nodes = node.getNeighbor();
 		
 		// 隣接ノードをキューに格納 
-		for(int i=0; i<nodes.size(); i++){
+		for(int i=0; i<5; i++){
+			
+			// 隣接ノードがnullの時は飛ばす
+			if(nodes[i] == nullptr)continue;
+			
 			que.push(*nodes[i]);
 		}
 		
@@ -138,34 +144,41 @@ int PuzzleExplorer::getNearestBlockPosition()
 }
 
 // 2つのノード間の経路探索
-vector<int> PuzzleExplorer::getRoot(int startNode, int goalNode)
+int* PuzzleExplorer::getRoot(int startNode, int goalNode)
 {
 	Node node = nodeList[startNode];
 	Node goal = nodeList[goalNode];
-	vector<int> root;
+	int i=0;
 	
 	// rootに経路を格納
-	root.push_back(node.getNum());
-	
+	root[i] = node.getNum();
+	i++;
 	
 	// ゴールノードに到着するまで探索
 	while(node.getNum() != goal.getNum())
 	{	
 		int cost = 1000;
-		vector<Node*> explorerNodes = node.getNeighbor();
+		Node** explorerNodes = node.getNeighbor();
+		Node nextNode;
+		
 		// 隣接ノードからゴールまでのコストが低いノードを次の探索ノードに選択
-		for(int i=0; i<explorerNodes.size(); i++)
+		for(int j=0; j<5; j++)
 		{
+			//隣接ノードがnullの時飛ばす
+			if(explorerNodes[j] == nullptr)continue;
+			
 			// ゴールノードまでの距離コストが小さければ更新
-			int neighborCost = getCost(*explorerNodes[i], goal);
+			int neighborCost = getCost(*explorerNodes[j], goal);
 			if(cost > neighborCost)
 				{
 					cost = neighborCost;
-					node = *explorerNodes[i];
+					nextNode = *explorerNodes[j];
 				}
 		}
 		
-		root.push_back(node.getNum());
+		root[i] = nextNode.getNum();
+		node = nextNode;
+		i++;
 	}
 	
 	return root;

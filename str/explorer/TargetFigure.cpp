@@ -12,41 +12,47 @@ TargetFigure::~TargetFigure()
 }
 
 // ブロックの初期位置設定
-void TargetFigure::set(array<int, 5> positions)
+void TargetFigure::set(int* positions)
 {
-	initPositions = positions;
+	for(int i=0; i<5; i++){
+		initPositions[i] = positions[i];
+	}
 }
 
 // 初期位置を評価し、目標とする図形を決定する
-void TargetFigure::evaluate();
+void TargetFigure::evaluate()
 {
-	targets = leftSquare;
+	
+	for(int i=0; i<5; i++){
+		targets[i] = leftSquare[i];
+	}
+	
 }
 
-int getTargetNum(BlockColor color)
+int TargetFigure::getTargetNum(BlockColor color)
 {
 	int targetNum = 0;
 	
 	switch(color)
 	{
 	case BlockColor::Black:
-		targetNum = targets(0);
+		targetNum = targets[0];
 		break;
 		
 	case BlockColor::Red:
-		targetNum = targets(1);
+		targetNum = targets[1];
 		break;
 		
 	case BlockColor::Yellow:
-		targetNum = targets(2);
+		targetNum = targets[2];
 		break;
 		
 	case BlockColor::Blue:
-		targetNum = targets(3);
+		targetNum = targets[3];
 		break;
 		
 	case BlockColor::Green:
-		targetNum = targets(4);
+		targetNum = targets[4];
 		break;
 	}
 	
