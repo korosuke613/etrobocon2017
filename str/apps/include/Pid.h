@@ -20,7 +20,9 @@ public:
   * @param _d_gain Kd
   * @param _target 目標値 */
   void setPid(double _p_gain,double _i_gain,double _d_gain,double _target);
-
+  void wrapper_of_constructor(double _p_gain,double _i_gain,double _d_gain,
+    double _diff, double _integral,
+    double _target,double _output);
 protected:
   /** PID制御の計算をする
   * @param light_value 現在の値 */
@@ -36,9 +38,6 @@ protected:
   double limitOutput(double pid_value);
 
 private:
-  void wrapper_of_constructor(double _p_gain,double _i_gain,double _d_gain,
-			      double _diff, double _integral,
-			      double _target,double _output);
   double p_gain;
   double i_gain;
   double d_gain;

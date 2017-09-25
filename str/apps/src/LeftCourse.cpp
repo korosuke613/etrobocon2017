@@ -62,8 +62,9 @@ void LeftCourse::runTyokusen(float _goal_x, float _goal_y, bool _isBack){
     bool isEndAngle = false;
     int minus = 1;
     if(_isBack == true)minus = -1;
-    navi.turnControl.setPid(4.0, 0.5, 3.0, 0.0); 
-    navi.speedControl.setPid(4.0, 2.0, 0.024, 210.0 * minus);
+    
+    navi.turnControl.wrapper_of_constructor(4.0, 0.5, 3.0, 0, 0, 0.0, 0); 
+    navi.speedControl.wrapper_of_constructor(4.0, 2.0, 0.024, 0, 0, 210.0 * minus, 0);
     
     navi.setLine(navi.sl.getPointX(), navi.sl.getPointY(), _goal_x, _goal_y);
     navi.getDiffLine(navi.sl.getPointX(), navi.sl.getPointY());    
