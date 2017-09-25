@@ -19,7 +19,7 @@ Emoter.o \
 LeftCourse.o \
 RightCourse.o \
 PuzzleLineTracer.o\
-basicWalker.o
+BasicWalker.o
 
 SRCLANG := c++
 

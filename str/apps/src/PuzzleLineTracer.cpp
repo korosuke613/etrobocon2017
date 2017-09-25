@@ -4,7 +4,7 @@ PuzzleLineTracer::PuzzleLineTracer ():
 	colorSensor ( PORT_3 ),
 	traceDistance ( 0 ) {
 	lineTracer.isLeftsideLine ( false ),
-	ev3_speaker_set_volume ( 100 ) ;
+	ev3_speaker_set_volume ( 5 ) ;
 }
 
 void PuzzleLineTracer::preparatePuzzle ( void )
@@ -28,51 +28,70 @@ void PuzzleLineTracer::preparatePuzzle ( void )
 
 void PuzzleLineTracer::puzzleLineTrace ( int8_t currentPosition, int8_t beforePosition, int8_t nextPosition )
 {
+	char msg[32] ;
 	// 現在位置からの接続番号の付与
 	connectPosition = connectNumberManager[currentPosition][nextPosition] ;
 	// 行先への角度を取得する
-	if ( beforePosition == 0x00 ) {
-		beforeDegree = 0 ;
+	if ( beforePosition == X ) {
+		currentDegree = 100 ;
 	} else {
 		beforeConnectPosition = connectNumberManager[beforePosition][currentPosition] ;
-		beforeDegree = allConnectPosition[beforePosition][beforeConnectPosition][DEGREE] ;
+		currentDegree = allConnectPosition[beforePosition][beforeConnectPosition][DEGREE] ;
 	}
 	nextDegree = allConnectPosition[currentPosition][connectPosition][DEGREE] ;
+	if ( nextDegree < 0 ) {
+		spinVector = SPIN_RIGHT ;
+		sprintf ( msg, "Spin Vector:SPIN_RIGHT" ) ;
+		msg_f ( msg, 8 ) ;
+	} else {
+		spinVector = SPIN_LEFT ;
+		sprintf ( msg, "Spin Vector:SPIN_LEFT" ) ;
+		msg_f ( msg, 8 ) ;
+	}
 	// 行先までの距離を取得する
-	traceDistance = distance.getDistanceCurrent ( walker.get_count_L (), walker.get_count_R () ) ;
-	nextDistance = allConnectPosition[currentPosition][connectPosition][DISTANCE] + traceDistance ;
-	// 現在の角度と行先への角度から車体を動かす角度を計算する
-	moveDegree = nextDegree - beforeDegree ;
+	nextDistance = allConnectPosition[currentPosition][connectPosition][DISTANCE] ;
+	spinDegree = nextDegree - currentDegree ;
+	if ( spinDegree < 0 ) {
+		spinDegree *= -1 ;
+	}
 	// 値が取れているか確認用のログ
-	char msg[32] ;
-	sprintf ( msg, "Degree>  Current:%d,Next:%d", currentDegree, nextDegree ) ;
+	sprintf ( msg, "Degree>Current:%ld,Next:%ld", currentDegree, nextDegree ) ;
 	msg_f ( msg, 4 ) ;
-	sprintf ( msg, "         Move:%d", moveDegree ) ;
+	sprintf ( msg, "          Spin:%ld", spinDegree ) ;
 	msg_f ( msg, 5 ) ;
-    sprintf ( msg, "Position>Current:%d,Next:%d", currentPosition, connectPosition ) ; 
+    sprintf ( msg, "Position>Current:%d->Next:%d", currentPosition, nextPosition ) ; 
     msg_f ( msg, 6 ) ;
-	sprintf ( msg, "Distance>Next:%ld,Trace:%ld", nextDistance, traceDistance ) ;
+	sprintf ( msg, "Distance>Next:%ld", nextDistance ) ;
 	msg_f ( msg, 7 ) ;
 	// 車体を動かして角度を合わせる
-	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
-	tslp_tsk ( 100 ) ;
-	for ( int i = 0 ; i < moveDegree ; i++ ) {
-		walker.run ( 0, ( ( moveDegree * 3 ) / 4 ) * -1 ) ;
-		tslp_tsk ( 4 ) ;
-	}
-	walker.run ( 0, 0 ) ;
+	ev3_speaker_play_tone ( NOTE_FS5, 100 ) ;
+	basicWalker.spin ( 30, spinVector, spinDegree ) ;
 	tslp_tsk ( 100 ) ;
 	// ラインをトレースする
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
-	msg_f ( "OK", 8 ) ;
-	while ( traceDistance < nextDistance ) {
-		traceDistance = distance.getDistanceCurrent ( walker.get_count_L (), walker.get_count_R () ) ;
-		lineTracer.speedControl.setPid ( 1.2, 2.4, 0.04, 30.0 );
-		lineTracer.turnControl.setPid ( 2.4, 0.8, 0.02, 30.0 );
-		lineTracer.runLine ( walker.get_count_L (), walker.get_count_R (), colorSensor.getBrightness () ) ;
-		walker.run( lineTracer.getForward (), lineTracer.getTurn () ) ;
-		tslp_tsk ( 4 ) ;
-	}
-	lineTracer.setForward ( -1 ) ;
-	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
+	msg_f ( "OK", 9 ) ;
+	basicWalker.goStraight ( 30, nextDistance ) ;
+	tslp_tsk ( 100 ) ;
+	ev3_speaker_play_tone ( NOTE_FS5, 100 ) ;
+}
+
+void PuzzleLineTracer::avoidBlock ( int8_t currentPosition, int8_t beforePosition, int8_t nextPosition ) {
+	basicWalker.backStraight ( 20, allConnectPosition[beforePosition][connectNumberManager[beforePosition][currentPosition]][DISTANCE] ) ;
+	puzzleLineTrace ( beforePosition, currentPosition, nextPosition ) ;
+	
+}
+
+void PuzzleLineTracer::testGame ( void ) {
+	puzzleLineTrace ( 10,  X,  1 ) ;
+	tslp_tsk ( 1000 ) ;
+	puzzleLineTrace (  1, 10,  5 ) ;
+	tslp_tsk ( 1000 ) ;
+	puzzleLineTrace (  5,  1,  8 ) ;
+	tslp_tsk ( 1000 ) ;
+	puzzleLineTrace (  8,  5,  6 ) ;
+	tslp_tsk ( 1000 ) ;
+	puzzleLineTrace (  6,  8,  0 ) ;
+	tslp_tsk ( 1000 ) ;
+	avoidBlock (  0,  6,  9 ) ;
+	tslp_tsk ( 1000 ) ;
 }

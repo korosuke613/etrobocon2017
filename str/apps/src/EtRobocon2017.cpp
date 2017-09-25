@@ -47,7 +47,10 @@ void EtRobocon2017::loop()
     SonarAlert sonarAlert( 4 );
     Lifter lifter;
     Emoter emoter;
-	basicWalker basicWalker ;
+	BasicWalker basicWalker ;
+	PuzzleLineTracer puzzleLineTracer ;
+	
+	puzzleLineTracer.testGame () ;
 	
 	basicWalker.parkingLeft () ;
 
