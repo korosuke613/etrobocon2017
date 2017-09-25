@@ -87,6 +87,10 @@ float SelfLocalization::calculate_between_ev3_and_border
   return (a*_current_x + b*_current_y + c) / std::sqrt(a*a + b*b);
 }
 
+void SelfLocalization::calculate_current_angle(){
+  current_angle_degree = int(current_angle*180/3.14);
+}
+
 bool SelfLocalization::is_over_target_line_of_x(float target_x) {
   return target_x < current_x;
 }

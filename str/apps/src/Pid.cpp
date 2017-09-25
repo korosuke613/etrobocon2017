@@ -38,10 +38,7 @@ double Pid::get_output() {
  * PID値を入力する
  */
 void Pid::setPid(double _p_gain, double _i_gain, double _d_gain, double _target) {
-    p_gain = _p_gain;
-    i_gain = _i_gain;
-    d_gain = _d_gain;
-    target = _target;
+    wrapper_of_constructor(_p_gain,_i_gain,_d_gain,0,0,_target,0);
 }
 
 double Pid::limitOutput(double pid_value){

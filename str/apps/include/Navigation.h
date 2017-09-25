@@ -38,8 +38,11 @@
     bool checkEndOfLine();
     /** 実際の前進値と回転値を計算して格納する関数
     * @return ラインを走破したかどうか */
-    bool calculateValue(std::int32_t, std::int32_t);
+    bool calculateValue(std::int32_t, std::int32_t, bool);
+    bool calculateAngle(std::int32_t, std::int32_t, bool); 
+    void calculate_line_angle(bool);
     SelfLocalization sl;
+    int goal_angle;
     
      /** 0.1sで進んだ距離[mm/0.1s] */    
  
