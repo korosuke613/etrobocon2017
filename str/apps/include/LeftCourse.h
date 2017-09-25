@@ -7,7 +7,6 @@
 #ifndef __LEFT_COURSE__
 #define __LEFT_COURSE__
 
-#include "ev3api.h"
 #include "Walker.h"
 #include "ColorSensor.h"
 #include "LeftNormalCourse.h"
