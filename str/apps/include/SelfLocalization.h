@@ -46,8 +46,11 @@ private:
   float moving_distance_mean;
   float turning_angle;
   float current_x, current_y, current_angle;
+  bool  is_below_of_normal_border;
+  float start_x, start_y, goal_x, goal_y;
   static FILE* fp;
-  static bool isSave;  
+  static bool isSave;
+
 
   //member methods
 public:
