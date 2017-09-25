@@ -1,4 +1,4 @@
-/*****************************
+p/*****************************
  * self_localization.cpp
  *
  * Author Hiroki Tachiyama
@@ -38,7 +38,7 @@ void SelfLocalization::update (std::int32_t left_motor_sl, std::int32_t right_mo
   left.update(left_motor_sl);
 
   //右車輪の回転角
-  right.update(right_motor_sl);  
+  right.update(right_motor_sl);
 
   //移動距離と、車体の回転角
   moving_distance_mean = (right.moving_distance + left.moving_distance) / 2;
@@ -107,12 +107,39 @@ bool SelfLocalization::is_below_target_line_of_y(float target_y) {
   return target_y > current_y;
 }
 
-//指定した二点 (start, goal)を結んだ直線の点goalにおける法線 (normal vector)
-bool SelfLocalization::is_over_normal_vector
+
+//スタートとゴールの登録、現在の機体位置のyがゴールの法線の下か否かの登録
+void SelfLocalization::init_normal_vector
 (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y) {
-  flaot k = (_start_x - _goal_x) / (_goal_y - _start_y);
-  float border_y = k * _current_x + _goal_y - k * _goal_x;
-  return _current_y >= border_y;
+  start_x = _start_x; start_y = _start_y;
+  goal_x = _goal_x; goal_y = _goal_y;
+
+  float k = (start_x - goal_x) / (goal_y - start_y);
+  float border_y = k * _current_x + goal_y - k * goal_x;
+
+  is_below_normal_vector = (_current_y >= border_y);
 }
 
+//指定した二点 (start, goal)を結んだ直線の点goalにおける法線 (normal vector)
+bool SelfLocalization::is_over_normal_vector
+(float _current_x, float _current_y) {
+  float k = (start_x - goal_x) / (goal_y - start_y);
+  float border_y = k * _current_x + goal_y - k * goal_x;
+
+  if (is_below_normal_vector) { //init時に機体が法線より下の場合
+    if (border_y >= _current_y) { //機体が法線をまだ越えていないなら
+      return false;
+    } else { //機体が法線を越えたら
+      is_below_normal_vector = false;
+      return true;
+    }
+  } else { //init時に機体が法線以上にある場合
+    if (_current_y >= border_y) { //機体が法線をまだ越えていないなら
+      return false;
+    } else { //機体が法線を越えたら
+      is_below_normal_vector = true;
+      return true;
+    }
+  }
+}
 
