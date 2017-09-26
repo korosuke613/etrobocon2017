@@ -11,9 +11,13 @@ LeftCourse::LeftCourse():
 /**
  * Lコースの走行範囲の切り替えを行う
  */
-void LeftCourse::convertArea(){
+void LeftCourse::run(){
 	runNormalCourse();
+  msg_f("Finish NormalCourse", 3);
 	//Puzzle
+  PuzzleLineTracer puzzleLineTracer ;    
+  puzzleLineTracer.preparatePuzzle () ;
+  puzzleLineTracer.puzzleLineTrace ( 10, 0x00, 12 ) ;	// test
 	//Park
 }
 
@@ -25,13 +29,12 @@ void LeftCourse::runNormalCourse(){
         sl.update();
         sl.writing_current_coordinates();
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
-        isNormalCourse = normalCourse.runNormalCourse();
-        normalCourse.lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
+        isNormalCourse = normalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
         
-        if(normalCourse.lineTracer.getForward() < 0){
+        if(normalCourse.lineTracerWalker.getForward() < 0){
             walker.run(0, 0);
         }else{
-            walker.run( normalCourse.lineTracer.getForward(), normalCourse.lineTracer.getTurn());
+            walker.run( normalCourse.lineTracerWalker.getForward(), normalCourse.lineTracerWalker.getTurn());
         }
         if(! isNormalCourse){
             walker.run(0, 0);

@@ -13,6 +13,7 @@
 #include "Emoter.h"
 #include "LeftCourse.h"
 #include "RightCourse.h"
+#include "basicWalker.h"
 
 
 using namespace ev3api;
@@ -35,6 +36,8 @@ private:
     TouchSensor touchSensor;
     int8_t light_white;
     int8_t light_black;
+    LeftCourse leftCourse;    
+    RightCourse rightCourse;
 };
 
 #endif

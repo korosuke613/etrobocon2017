@@ -4,7 +4,7 @@ APPL_CXXOBJS += \
 util.o \
 EtRobocon2017.o \
 SonarAlert.o \
-LineTracer.o \
+LineTracerWalker.o \
 Pid.o \
 NormalCourse.o \
 LeftNormalCourse.o \
@@ -18,18 +18,15 @@ SelfLocalization.o \
 Emoter.o \
 LeftCourse.o \
 RightCourse.o \
-Shinkansen.o
+Shinkansen.o \
+PuzzleLineTracer.o \
+basicWalker.o
 
 SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
-APPL_DIR += $(mkfile_path)apps/commons
 
-INCLUDES += \
--I$(mkfile_path)apps
-
-INCLUDES += \
--I$(mkfile_path)apps/commons
+INCLUDES += -I$(mkfile_path)apps
 
 
 ifdef CONFIG_EV3RT_APPLICATION

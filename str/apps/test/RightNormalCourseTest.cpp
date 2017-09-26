@@ -3,7 +3,7 @@
  */
 
 /*
-g++-7 -w ../src/Distance.cpp ../src/Pid.cpp ../src/TurnControl.cpp ../src/SpeedControl.cpp ../src/LineTracer.cpp ../src/NormalCourse.cpp ../src/RightNormalCourse.cpp RightNormalCourseTest.cpp gtest_main.o gtest-all.o -I../include -I../../googletest/googletest/include
+g++-7 -w ../src/Distance.cpp ../src/Pid.cpp ../src/TurnControl.cpp ../src/SpeedControl.cpp ../src/LineTracerWalker.cpp ../src/NormalCourse.cpp ../src/RightNormalCourse.cpp RightNormalCourseTest.cpp gtest_main.o gtest-all.o -I../include -I../../googletest/googletest/include
 */
 
 #include <gtest/gtest.h>
@@ -193,8 +193,8 @@ TEST( RightNormalCourseTest, edgeChangeTest1 )
     rnc.statusCheck(0, 0);
 
     rnc.runNormalCourse();
-    rnc.lineTracer.runLine(0, 0, 100);
-    value = rnc.lineTracer.getTurn();
+    rnc.lineTracerWalker.runLine(0, 0, 100);
+    value = rnc.lineTracerWalker.getTurn();
 
     ASSERT_GT(value, 0);
 }
@@ -208,8 +208,8 @@ TEST( RightNormalCourseTest, edgeChangeTest2 )
     rnc.statusCheck(0, 0);
 
     rnc.runNormalCourse();
-    rnc.lineTracer.runLine(0, 0, 0);
-    value = rnc.lineTracer.getTurn();
+    rnc.lineTracerWalker.runLine(0, 0, 0);
+    value = rnc.lineTracerWalker.getTurn();
 
     ASSERT_LT(value, 0);
 }

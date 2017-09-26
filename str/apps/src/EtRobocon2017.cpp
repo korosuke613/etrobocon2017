@@ -35,6 +35,7 @@ EtRobocon2017::EtRobocon2017():
 
 void EtRobocon2017::start( int bluetooth_command )
 {
+    ev3_led_set_color(LED_ORANGE);
     waitStarter( bluetooth_command );
 
     ev3_led_set_color(LED_GREEN); /* スタート通知 */
@@ -44,10 +45,6 @@ void EtRobocon2017::start( int bluetooth_command )
 
 void EtRobocon2017::loop()
 {
-    SonarAlert sonarAlert( 4 );
-    Lifter lifter;
-    Emoter emoter;
-
 // Rコースを走らせるときは1, Lコースを走らせるときは0
 #if 1
     RightCourse rightCourse;
@@ -56,6 +53,7 @@ void EtRobocon2017::loop()
     LeftCourse leftCourse;
     leftCourse.convertArea();
 #endif
+
 }
 
 void EtRobocon2017::waitStarter( int bluetooth_command )

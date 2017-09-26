@@ -17,6 +17,7 @@
 #include "Distance.h"
 #include "SelfLocalization.h"
 #include "Lifter.h"
+#include "basicWalker.h"
 
 using namespace ev3api;
 
@@ -44,7 +45,10 @@ public:
 	void runNormalCourse();
 	/** Shinkansenエリアの処理 */
 	void runShinkansen();
+	/** 色検知の処理 **/
+	void colorDetection();
 private:
+	basicWalker basicwalker;
 	Walker walker;
 	ColorSensor colorSensor;
 	SonarSensor sonarSensor;
