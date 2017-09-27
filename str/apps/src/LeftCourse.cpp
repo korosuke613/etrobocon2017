@@ -69,8 +69,9 @@ void LeftCourse::runTyokusen(float _goal_x, float _goal_y, bool _isBack){
     navi.setLine(navi.sl.getPointX(), navi.sl.getPointY(), _goal_x, _goal_y);
     navi.getDiffLine(navi.sl.getPointX(), navi.sl.getPointY());    
     navi.calculate_line_angle(_isBack);
+    navi.sl.init_normal_vector(navi.start_x, navi.start_y, navi.goal_x, navi.goal_y, navi.current_x, navi.current_y);    
     // NormalCourseを抜けるまでループする
-    while (navi.sl.is_over_normal_vector(navi.start_x, navi.start_y, navi.goal_x, navi.goal_y, navi.current_x, navi.current_y)) {
+    while (!navi.sl.is_over_normal_vector(navi.current_x, navi.current_y)) {
         //navi.calculateValue(walker.get_count_L(), walker.get_count_R());
         if(! isEndAngle){
             isEndAngle = navi.calculateAngle(walker.get_count_L(), walker.get_count_R(), _isBack);
