@@ -4,24 +4,14 @@
 #include "BlockColor.h"
 
 #include<cstdlib>
-#include<array>
-#include<vector>
 
-using namespace std;
 
 class Node{
-private:
-	int nodeNum;
-	vector<Node*> neighbor;
-	BlockColor color;
-	bool hasBlock;
-	int positionX;
-	int positionY;
-
 public:
 	Node();
-	void setNeighbor(vector<Node*> nodes);
-	vector<Node*> getNeighbor();
+	~Node();
+	void setNeighbor(Node** nodes);
+	Node** getNeighbor();
 	int getNum();
 	BlockColor getColor();
 	void setHasBlock(bool exists);
@@ -31,8 +21,14 @@ public:
 	int getPositionY();
 	void setNum(int num);
 	void setColor();
-	~Node();
 	
+private:
+	int nodeNum;
+	Node* neighbor[5];
+	BlockColor color;
+	bool hasBlock;
+	int positionX;
+	int positionY;
 
 };
 
