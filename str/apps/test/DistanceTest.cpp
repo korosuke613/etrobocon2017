@@ -41,14 +41,12 @@ TEST( DistanceTest, getDistanceCurrentTest1 )
 TEST( DistanceTest, getDistanceCurrentTest2 )
 {
     Distance ds;
-    int l, r, step_l, step_r;
+    int l, r;
     
     l = 100;
     r = 200;
     ds.getDistanceTotal(l, r);
     ds.resetDistance(l, r);
-    step_l = 20;
-    step_r = 10;
 
     ASSERT_EQ(
         ds.getDistanceTotal(l, r), 

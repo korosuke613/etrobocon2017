@@ -16,8 +16,12 @@ LeftCourse::LeftCourse():
  * Lコースの走行範囲の切り替えを行う
  */
 void LeftCourse::run(){
-    /*runTyokusen(100.0, -100.0);
-    runTyokusen(300.0, -110.0);*/
+    /*runTyokusen(-80.0, 90.0, true);
+    runTyokusen(-270.0, 60.0, true);
+    runTyokusen(-200.0, 70.0, false);
+    runTyokusen(-180.0, 100.0, false);
+    runTyokusen(-120.0, 400.0, false);
+    */
 	runNormalCourse();
     msg_f("Finish NormalCourse", 3);
 	//Puzzle
@@ -54,20 +58,29 @@ void LeftCourse::runNormalCourse(){
     }
 }
 
-void LeftCourse::runTyokusen(float _goal_x, float _goal_y){
-    navi.turnControl.setPid(2.0, 0.0, 3.0, 0.0);    
+void LeftCourse::runTyokusen(float _goal_x, float _goal_y, bool _isBack){
+    bool isEndAngle = false;
+    int minus = 1;
+    if(_isBack == true)minus = -1;
+    
+    navi.turnControl.wrapper_of_constructor(4.0, 0.5, 3.0, 0, 0, 0.0, 0); 
+    navi.speedControl.wrapper_of_constructor(4.0, 2.0, 0.024, 0, 0, 210.0 * minus, 0);
+    
     navi.setLine(navi.sl.getPointX(), navi.sl.getPointY(), _goal_x, _goal_y);
+    navi.getDiffLine(navi.sl.getPointX(), navi.sl.getPointY());    
+    navi.calculate_line_angle(_isBack);
+    navi.sl.init_normal_vector(navi.start_x, navi.start_y, navi.goal_x, navi.goal_y, navi.current_x, navi.current_y);    
     // NormalCourseを抜けるまでループする
-    while (navi.calculateValue(walker.get_count_L(), walker.get_count_R()) ) {
+    while (!navi.sl.is_over_normal_vector(navi.current_x, navi.current_y)) {
         //navi.calculateValue(walker.get_count_L(), walker.get_count_R());
-        if(navi.getForward() < 0){
-            walker.run(0, 0);
+        if(! isEndAngle){
+            isEndAngle = navi.calculateAngle(walker.get_count_L(), walker.get_count_R(), _isBack);
         }else{
-            walker.run( navi.getForward(), navi.getTurn());
+            navi.calculateValue(walker.get_count_L(), walker.get_count_R(), _isBack);
         }
+        walker.run(navi.getForward(), navi.getTurn());
         if(ev3_button_is_pressed(BACK_BUTTON)){
             walker.run(0, 0);
-            navi.sl.file_close();
             break;
         }
         

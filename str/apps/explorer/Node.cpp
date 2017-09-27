@@ -44,14 +44,17 @@ void Node::setColor()
 	
 }
 //周囲のノードの設定
-void Node::setNeighbor(vector<Node*> nodes)
+void Node::setNeighbor(Node** nodes)
 {
-	neighbor = nodes;
+	for(int i=0; i<5; i++){
+		neighbor[i] = nodes[i];
+	}
+	
 	return;
 }
 
 // 隣接ノード取得
-vector<Node*> Node::getNeighbor()
+Node** Node::getNeighbor()
 {
 	return neighbor;
 }
