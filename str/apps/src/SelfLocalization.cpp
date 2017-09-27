@@ -112,8 +112,6 @@ void SelfLocalization::init_normal_vector
   start_x = _start_x; start_y = _start_y;
   goal_x = _goal_x; goal_y = _goal_y;
 
-  float k = (start_x - goal_x) / (goal_y - start_y);
-
   is_below_normal_vector = (start_y < goal_y);
 }
 
