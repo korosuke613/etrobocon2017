@@ -19,7 +19,7 @@
  class Navigation: public LineTracerWalker {
  public:
      /** コンストラクタ */
-     Navigation(std::int32_t, std::int32_t);
+     Navigation(std::int32_t, std::int32_t, bool isSave=true);
      
     /** 仮想線を定義する関数
     * @param スタートのX座標

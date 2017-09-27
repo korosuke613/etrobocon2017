@@ -1,7 +1,7 @@
 #include "Navigation.h"
 
-Navigation::Navigation(std::int32_t left_degree, std::int32_t right_degree):
-    sl(left_degree, right_degree, true){
+Navigation::Navigation(std::int32_t left_degree, std::int32_t right_degree, bool isSave):
+    sl(left_degree, right_degree, isSave){
     speedControl.setPid(2.0, 2.0, 0.024, 30.0);
     turnControl.setPid(4.0, 0.0, 0.0, 0.0);
     isLeftsideLine(true);
@@ -13,8 +13,8 @@ bool Navigation::setLine(float _start_x, float _start_y, float _goal_x, float _g
     if((_start_x == _goal_x) && (_start_y == _goal_y)){
         return false;
     }
-    start_x = _start_x;
-    start_y = _start_y;
+    current_x = start_x = _start_x;
+    current_y = start_y = _start_y;
     goal_x = _goal_x;
     goal_y = _goal_y;
     
