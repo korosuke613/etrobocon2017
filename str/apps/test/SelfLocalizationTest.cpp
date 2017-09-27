@@ -18,9 +18,11 @@ void straight(SelfLocalization &sl, int kyori, int &l, int &r){
 }
 
 void curve(SelfLocalization &sl, float sub_degree, int &l, int &r){
+    int angle_one = -3;
+    if(sub_degree < 0)angle_one = 3;
     sub_degree = sub_degree / 90;
-    for(int i = 0; i < 120 * sub_degree; i++){
-        l += 3; 
+    for(int i = 0; i < 120 * std::abs(sub_degree); i++){
+        l += angle_one; 
         sl.update(l, r);
     }
 }
@@ -89,4 +91,72 @@ TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder5)
     float distance = sl.calculate_between_ev3_and_border( 0.0, 0.0, 0.0, 10.0, 0.0, 3.0);
     ASSERT_NEAR(distance, 0.0, 0.001);
 
+}
+
+TEST( SelfLocalizationTest, calculateCurrentAngleTest1)
+{
+    SelfLocalization sl(0, 0, false);
+    int l, r;
+    l = r = 0;
+
+    straight(sl, 20, l, r);
+    curve(sl, 45, l, r);
+
+    sl.calculate_current_angle();
+
+    ASSERT_EQ(sl.current_angle_degree, 45);
+}
+
+TEST( SelfLocalizationTest, calculateCurrentAngleTest2)
+{
+    SelfLocalization sl(0, 0, false);
+    int l, r;
+    l = r = 0;
+
+    straight(sl, 20, l, r);
+    curve(sl, -45, l, r);
+
+    sl.calculate_current_angle();
+
+    ASSERT_EQ(sl.current_angle_degree, -45);
+}
+
+TEST( SelfLocalizationTest, calculateCurrentAngleTest3)
+{
+    SelfLocalization sl(0, 0, false);
+    int l, r;
+    l = r = 0;
+
+    straight(sl, 20, l, r);
+    curve(sl, 90, l, r);
+    straight(sl, 20, l, r);
+    curve(sl, -90, l, r);
+
+    sl.calculate_current_angle();
+
+    ASSERT_EQ(sl.current_angle_degree, 0);
+}
+
+TEST( SelfLocalizationTest, isOverNormalVectorTest1){
+    SelfLocalization sl(0, 0, false);
+    sl.init_normal_vector(0.0, 0.0, 100.0, 100.0, 0.0, 0.0);
+    ASSERT_EQ(sl.is_over_normal_vector(10.0, 10.0), false);
+}
+
+TEST( SelfLocalizationTest, isOverNormalVectorTest2){
+    SelfLocalization sl(0, 0, false);
+    sl.init_normal_vector(0.0, 0.0, 100.0, 100.0, 0.0, 0.0);
+    ASSERT_EQ(sl.is_over_normal_vector(101.0, 101.0), true);
+}
+
+TEST( SelfLocalizationTest, isOverNormalVectorTest3){
+    SelfLocalization sl(0, 0, false);
+    sl.init_normal_vector(0.0, 0.0, 100.0, 100.0, 0.0, 0.0);
+    ASSERT_EQ(sl.is_over_normal_vector(99.0, 101.0), true);
+}
+
+TEST( SelfLocalizationTest, isOverNormalVectorTest4){
+    SelfLocalization sl(0, 0, false);
+    sl.init_normal_vector(0.0, 0.0, 100.0, 100.0, 0.0, 0.0);
+    ASSERT_EQ(sl.is_over_normal_vector(101.0, 99.0), true);
 }

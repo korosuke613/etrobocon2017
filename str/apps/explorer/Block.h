@@ -5,7 +5,6 @@
 
 #include "BlockColor.h"
 
-using namespace std;
 
 class Block{
 private:

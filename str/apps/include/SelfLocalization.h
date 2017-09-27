@@ -50,10 +50,12 @@ private:
   float start_x, start_y, goal_x, goal_y;
   static FILE* fp;
   static bool isSave;
+  bool is_below_normal_vector;
 
 
   //member methods
 public:
+  int current_angle_degree;
   SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl, bool save = true);
   void update (std::int32_t left_motor_sl, std::int32_t right_motor_sl);
   void writing_current_coordinates ();
@@ -67,9 +69,9 @@ public:
   float calculate_between_ev3_and_border
   (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y);
   void file_close();
-  bool is_over_normal_vector
-  (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y);
-  
+  void init_normal_vector(float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y);
+  bool is_over_normal_vector(float _current_x, float _current_y);
+  void calculate_current_angle();
 private:
   //残りのメソッドかな？
   
