@@ -47,7 +47,8 @@ void run(Navigation &navi, float goal_x, float goal_y, bool isBack){
     navi.setLine(navi.sl.getPointX(), navi.sl.getPointY(), goal_x, goal_y);
     navi.getDiffLine(navi.sl.getPointX(), navi.sl.getPointY());
     navi.calculate_line_angle(isBack);
-    while(navi.sl.is_over_normal_vector(navi.start_x, navi.start_y, navi.goal_x, navi.goal_y, navi.current_x, navi.current_y)){
+    navi.sl.init_normal_vector(navi.start_x, navi.start_y, navi.goal_x, navi.goal_y, navi.current_x, navi.current_y);
+    while(!navi.sl.is_over_normal_vector(navi.current_x, navi.current_y)){
         if(! isEndAngle){
             isEndAngle = navi.calculateAngle(left_motor, right_motor, isBack);
         }else{
