@@ -51,11 +51,11 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${SOURCE_DIR}/RightNormalCourse.cpp
     ${SOURCE_DIR}/SelfLocalization.cpp
     ${SOURCE_DIR}/FirstCode.cpp
+    ${SOURCE_DIR}/Navigation.cpp
     ${EXPLORER_DIR}/Block.cpp
     ${EXPLORER_DIR}/Node.cpp
     ${EXPLORER_DIR}/PuzzleExplorer.cpp
     ${EXPLORER_DIR}/PuzzleCodeConverter.cpp
-    ${EXPLORER_DIR}/Navigation.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 
