@@ -17,7 +17,7 @@ bool Navigation::setLine(float _start_x, float _start_y, float _goal_x, float _g
     start_y = _start_y;
     goal_x = _goal_x;
     goal_y = _goal_y;
-
+    
     return true;
 }
 
@@ -35,14 +35,35 @@ bool Navigation::checkEndOfLine(){
     }
     return false;
 }
+void Navigation::calculate_line_angle(bool isBack){
+    if(isBack == true){
+        goal_angle = int(std::atan2(start_y - goal_y, start_x - goal_x)*180/3.14);        
+    }else{
+        goal_angle = int(std::atan2(goal_y - start_y, goal_x - start_x)*180/3.14);
+    }
+}
 
-bool Navigation::calculateValue(std::int32_t left_degree, std::int32_t right_degree){
+bool Navigation::calculateValue(std::int32_t left_degree, std::int32_t right_degree, bool isBack){
+    int minus = 1;
+    if(isBack == true)minus = -1;
     sl.update(left_degree, right_degree);
-    diff_line = getDiffLine(sl.getPointX(), sl.getPointY());
+    diff_line = getDiffLine(sl.getPointX(), sl.getPointY()) * minus;
     forward = speedControl.calculateSpeedForPid(left_degree, right_degree);
     turn = turnControl.calculateTurnForPid(forward, diff_line);
     if(checkEndOfLine() == true){
         return false;
     }
     return true;
+}
+
+bool Navigation::calculateAngle(std::int32_t left_degree, std::int32_t right_degree, bool isBack){
+    sl.update(left_degree, right_degree);
+    sl.calculate_current_angle();
+    forward = 0;
+    if(goal_angle < sl.current_angle_degree )turn = -30;
+    else turn = 30;
+    if(goal_angle - 2 <= sl.current_angle_degree && goal_angle + 2 >= sl.current_angle_degree){
+        return true;
+    }
+    return false;
 }

@@ -37,7 +37,7 @@ double Pid::get_output() {
 /*
  * PID値を入力する
  */
-void Pid::setPid(double _p_gain, double _i_gain, double _d_gain, double _target) {
+void Pid::setPid(double _p_gain, double _i_gain, double _d_gain, double _target) {    
     p_gain = _p_gain;
     i_gain = _i_gain;
     d_gain = _d_gain;

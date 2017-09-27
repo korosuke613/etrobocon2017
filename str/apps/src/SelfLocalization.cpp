@@ -87,6 +87,10 @@ float SelfLocalization::calculate_between_ev3_and_border
   return (a*_current_x + b*_current_y + c) / std::sqrt(a*a + b*b);
 }
 
+void SelfLocalization::calculate_current_angle(){
+  current_angle_degree = int(current_angle*180/3.14);
+}
+
 bool SelfLocalization::is_over_target_line_of_x(float target_x) {
   return target_x < current_x;
 }
@@ -108,13 +112,7 @@ void SelfLocalization::init_normal_vector
   start_x = _start_x; start_y = _start_y;
   goal_x = _goal_x; goal_y = _goal_y;
 
-  float k = (start_x - goal_x) / (goal_y - start_y);
-  float border_y = k * _current_x + goal_y - k * goal_x;
-
-  is_below_normal_vector = (_current_y >= border_y);
-
-void SelfLocalization::file_close(){
-  fclose(fp);
+  is_below_normal_vector = (start_y < goal_y);
 }
 
 //指定した二点 (start, goal)を結んだ直線の点goalにおける法線 (normal vector)
@@ -124,19 +122,12 @@ bool SelfLocalization::is_over_normal_vector
   float border_y = k * _current_x + goal_y - k * goal_x;
 
   if (is_below_normal_vector) { //init時に機体が法線より下の場合
-    if (border_y >= _current_y) { //機体が法線をまだ越えていないなら
-      return false;
-    } else { //機体が法線を越えたら
-      is_below_normal_vector = false;
-      return true;
-    }
+    return _current_y >= border_y;
   } else { //init時に機体が法線以上にある場合
-    if (_current_y >= border_y) { //機体が法線をまだ越えていないなら
-      return false;
-    } else { //機体が法線を越えたら
-      is_below_normal_vector = true;
-      return true;
-    }
+    return _current_y < border_y;
   }
 }
 
+void SelfLocalization::file_close(){
+  fclose(fp);
+}
