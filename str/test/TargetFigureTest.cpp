@@ -10,7 +10,7 @@ TEST(TargetFigureTest, returnBlack0Red1Yellow5Blue2Green10SetBlack8Red13Yellow9B
 	// 各ブロックの初期位置を入力
 	int initPositions[5] = {8,13,9,6,14};// 黒 赤 黄 青 緑
 	targetFigure.set(initPositions); 
-	// 初期位置を評価し、目標図形を決定する
+	// 目標図形を決定する
 	targetFigure.evaluate();
 	
 	ASSERT_EQ( targetFigure.getTargetNum(BlockColor::Black), 0);

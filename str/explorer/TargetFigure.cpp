@@ -23,10 +23,21 @@ void TargetFigure::set(int* positions)
 void TargetFigure::evaluate()
 {
 	
+	if(getNumberInLeftSquare(initPosition) )
+	
 	for(int i=0; i<5; i++){
 		targets[i] = leftSquare[i];
 	}
 	
+}
+
+int TargetFigure::getNumberInLeftSquare()
+{
+	int num = 0;
+	
+	
+	
+	return 
 }
 
 int TargetFigure::getTargetNum(BlockColor color)
