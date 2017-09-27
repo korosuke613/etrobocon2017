@@ -11,7 +11,7 @@ TargetFigure::~TargetFigure()
 	
 }
 
-// ƒuƒƒbƒN‚Ì‰ŠúˆÊ’uİ’è
+// ï¿½uï¿½ï¿½ï¿½bï¿½Nï¿½Ìï¿½ï¿½ï¿½ï¿½Ê’uï¿½İ’ï¿½
 void TargetFigure::set(int* positions)
 {
 	for(int i=0; i<5; i++){
@@ -19,11 +19,11 @@ void TargetFigure::set(int* positions)
 	}
 }
 
-// ‰ŠúˆÊ’u‚ğ•]‰¿‚µA–Ú•W‚Æ‚·‚é}Œ`‚ğŒˆ’è‚·‚é
+// ï¿½ï¿½ï¿½ï¿½ï¿½Ê’uï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Ú•Wï¿½Æ‚ï¿½ï¿½ï¿½}ï¿½`ï¿½ï¿½è‚·ï¿½ï¿½
 void TargetFigure::evaluate()
 {
 	
-	if(getNumberInLeftSquare(initPosition) )
+	if(getNumberInLeftSquare(initPositions) )
 	
 	for(int i=0; i<5; i++){
 		targets[i] = leftSquare[i];
@@ -31,13 +31,13 @@ void TargetFigure::evaluate()
 	
 }
 
-int TargetFigure::getNumberInLeftSquare()
+int TargetFigure::getNumberInLeftSquare(int initPositions[])
 {
 	int num = 0;
 	
 	
 	
-	return 
+	return 0;
 }
 
 int TargetFigure::getTargetNum(BlockColor color)

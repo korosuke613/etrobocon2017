@@ -109,7 +109,6 @@ TEST( NavigationTest, calculateAngleTest2)
     navi.setLine(0.0, 0.0, 100.0, 100.0);
     navi.calculate_line_angle(isBack);
     bool end = navi.calculateAngle(0, 100, isBack);
-    printf("%d %d\n", navi.sl.current_angle_degree, navi.goal_angle);
     ASSERT_EQ(end, false);
 }
 
