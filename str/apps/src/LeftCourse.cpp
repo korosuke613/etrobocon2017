@@ -15,10 +15,6 @@ void LeftCourse::convertArea(){
     runNormalCourse();
     msg_f("Finish NormalCourse", 3);
     //Puzzle
-    PuzzleLineTracer puzzleLineTracer ;    
-    puzzleLineTracer.preparatePuzzle () ;
-    puzzleLineTracer.puzzleLineTrace ( 10, 0x00, 12 ) ;	// test
-    //puzzleLineTracer.puzzleLineTrace ( 12, 10, 8 ) ;	// test
 	//Park
 }
 

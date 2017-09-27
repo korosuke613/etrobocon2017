@@ -12,7 +12,6 @@
 #include "ColorSensor.h"
 #include "LeftNormalCourse.h"
 #include "SelfLocalization.h"
-#include "PuzzleLineTracer.h"
 
 using namespace ev3api;
 

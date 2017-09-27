@@ -15,7 +15,7 @@ void BasicWalker::spin ( int32_t forward, int32_t reverseValue, int32_t angle ) 
 	rightWheel.setBrake ( false ) ;
 	leftReverseValue = reverseValue ;
 	rightReverseValue = reverseValue * -1 ;
-	while ( ( leftWheel.getCount () * leftReverseValue ) < angle ) {
+	while ( ( leftWheel.getCount () * leftReverseValue ) < ( angle / 0.6 ) ) {	// 0.6は角度から回転数への変換に必要な値
 		leftWheel.setPWM ( forward * leftReverseValue ) ;
 		rightWheel.setPWM ( forward * rightReverseValue ) ;
 		tslp_tsk ( 2 ) ;
@@ -60,8 +60,8 @@ void BasicWalker::backStraight ( int32_t forward, int32_t distance ) {
 
 void BasicWalker::parkingLeft ( void ) {
 	goStraight ( 30, 300 ) ;
-	spin ( 30, SPIN_LEFT, 132 ) ;
+	spin ( 30, SPIN_LEFT, 90 ) ;
 	goStraight ( 30, 300 ) ;
-	spin ( 30, SPIN_RIGHT, 132 ) ;
+	spin ( 30, SPIN_RIGHT, 90 ) ;
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 }

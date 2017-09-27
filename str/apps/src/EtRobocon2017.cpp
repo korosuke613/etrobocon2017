@@ -48,12 +48,15 @@ void EtRobocon2017::loop()
     Lifter lifter;
     Emoter emoter;
 	BasicWalker basicWalker ;
-	PuzzleLineTracer puzzleLineTracer ;
+	PuzzleField puzzleField ;
 	
-	puzzleLineTracer.testGame () ;
+	//puzzleField.spinReverse () ;
+	
+	//puzzleField.preparatePuzzle () ;
+	puzzleField.testGame () ;
 	
 	basicWalker.parkingLeft () ;
-
+	
 // Rコースを走らせるときは1, Lコースを走らせるときは0
 /*
 #if 0
