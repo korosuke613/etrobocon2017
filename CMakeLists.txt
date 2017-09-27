@@ -55,6 +55,7 @@ file(GLOB SRC_FILES ${SOURCE_DIR}/Pid.cpp
     ${EXPLORER_DIR}/Node.cpp
     ${EXPLORER_DIR}/PuzzleExplorer.cpp
     ${EXPLORER_DIR}/PuzzleCodeConverter.cpp
+    ${EXPLORER_DIR}/Navigation.cpp
     )
 add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
 
