@@ -13,6 +13,7 @@ SpeedControl::SpeedControl():
     speedCount = 0;
     speed_value_all = 0;
     pid_value_old = 0.0;
+    distance4ms = 0.0;
     //150のときいい感じ pid(0.8, 1.2, 0.0, 30.0), forward(30){
 }
 
@@ -46,4 +47,8 @@ std::int8_t SpeedControl::calcDistance4ms(std::int32_t curAngleL, std::int32_t c
     distance4ms = (int)distance4msFloat;
     // 単位はmm
     return distance4ms;
+}
+
+std::int16_t SpeedControl::getSpeed100ms(){
+    return speed_value_all;
 }
