@@ -11,7 +11,7 @@ BoardAnalyzer::~BoardAnalyzer()
 }
 
 // ブロックの配置の入力
-void BoardAnalyzer::set(int* initPositions)
+void BoardAnalyzer::set(int *initPositions)
 {
 	positions = initPositions;
 }
@@ -20,6 +20,8 @@ void BoardAnalyzer::set(int* initPositions)
 int BoardAnalyzer::getInLeftSquareCount()
 {
 	int leftSquareCount = 0;
+	
+	// ブロックの初期位置で左凹四角形上にあるものをカウント
 	for(int i=0; i<5; i++)
 	{
 		for(int j=0; j<5; j++)
@@ -32,5 +34,15 @@ int BoardAnalyzer::getInLeftSquareCount()
 	}
 	
 	return leftSquareCount;
+}
+
+bool BoardAnalyzer::hasExchangePatternOnLeftSquare()
+{
+	// 
+	for(int i=0; i<5; i++)
+	{
+		
+	}
+	return ;
 }
 
