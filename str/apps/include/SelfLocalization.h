@@ -20,14 +20,14 @@
 
 class MotorAngle{
 public:
-  float current_angle;
-  float old_angle;
-  float rotation_angle;
+  std::int32_t current_angle;
+  std::int32_t old_angle;
+  std::int32_t rotation_angle;
   float moving_distance;
   float wheel_across;
   MotorAngle(std::int32_t degree){
     rotation_angle = 0;
-    wheel_across = 8.0;
+    wheel_across = 8.2;
     moving_distance = 0;
     old_angle = current_angle = degree;
   }
