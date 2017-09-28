@@ -50,8 +50,6 @@ void EtRobocon2017::loop()
 	BasicWalker basicWalker ;
 	PuzzleField puzzleField ;
 	
-	//puzzleField.spinReverse () ;
-	
 	//puzzleField.preparatePuzzle () ;
 	puzzleField.testGame () ;
 	
