@@ -52,6 +52,7 @@ void EtRobocon2017::loop()
 #if 0
     rightCourse.run();
 #else
+    leftCourse.setFirstCode( firstCode );
     leftCourse.run();
 #endif
 
