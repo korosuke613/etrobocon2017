@@ -22,8 +22,7 @@ void LeftCourse::run(){
     runTyokusen(-200.0, 70.0, false);
     runTyokusen(-180.0, 100.0, false);
     runTyokusen(-120.0, 400.0, false);
-    */
-  
+    */  
 	  runNormalCourse();
     msg_f("Finish NormalCourse", 3);
   
@@ -63,7 +62,7 @@ void LeftCourse::runNormalCourse(){
     }
 }
 
-void LeftCourse::runTyokusen(float _goal_x, float _goal_y, bool _isBack){
+void LeftCourse::runTyokusen(float _start_x, float _start_y, float _goal_x, float _goal_y, bool _isBack){
     bool isEndAngle = false;
     int minus = 1;
     if(_isBack == true)minus = -1;
@@ -71,7 +70,7 @@ void LeftCourse::runTyokusen(float _goal_x, float _goal_y, bool _isBack){
     navi.turnControl.wrapper_of_constructor(4.0, 0.5, 3.0, 0, 0, 0.0, 0); 
     navi.speedControl.wrapper_of_constructor(4.0, 2.0, 0.024, 0, 0, 210.0 * minus, 0);
     
-    navi.setLine(navi.sl.getPointX(), navi.sl.getPointY(), _goal_x, _goal_y);
+    navi.setLine(_start_x, _start_y, _goal_x, _goal_y);
     navi.getDiffLine(navi.sl.getPointX(), navi.sl.getPointY());    
     navi.calculate_line_angle(_isBack);
     navi.sl.init_normal_vector(navi.start_x, navi.start_y, navi.goal_x, navi.goal_y, navi.current_x, navi.current_y);    
@@ -84,6 +83,7 @@ void LeftCourse::runTyokusen(float _goal_x, float _goal_y, bool _isBack){
             navi.calculateValue(walker.get_count_L(), walker.get_count_R(), _isBack);
         }
         walker.run(navi.getForward(), navi.getTurn());
+        navi.sl.update(walker.get_count_L(), walker.get_count_R());
         if(ev3_button_is_pressed(BACK_BUTTON)){
             walker.run(0, 0);
             break;
@@ -92,5 +92,6 @@ void LeftCourse::runTyokusen(float _goal_x, float _goal_y, bool _isBack){
         tslp_tsk(4); // 4msec周期起動
     }
     walker.run(0, 0);    
+    tslp_tsk(100); // 4msec周期起動    
     ev3_speaker_play_tone (NOTE_FS6, 100);
 }

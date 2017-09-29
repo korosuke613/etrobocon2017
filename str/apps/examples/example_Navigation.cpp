@@ -56,6 +56,7 @@ void run(Navigation &navi, float goal_x, float goal_y, bool isBack){
         }
         speed100ms = navi.speedControl.getSpeed100ms();
         calcVirtualWheels(navi.getForward(), navi.getTurn());
+        navi.sl.update(left_motor, right_motor);
         // 結果を画面に出力
         std::cout << navi.sl.getPointX() << ", " << navi.sl.getPointY() << std::endl;    
         //std::cout << "スピード(100ms) " << speed100ms << ", forword値 " << forword << ",Target値" << target << ", turn値 " << turn << ", 前進値" << (right_motor + left_motor) / 2 << std::endl;
