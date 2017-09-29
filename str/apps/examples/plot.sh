@@ -6,6 +6,6 @@ gnuplot -persist << EOF
 set xrange [] reverse
 set yrange [] reverse 
 set size ratio -1
-p 'traveling_route.txt'
+p 'traveling_route.txt' with line
 EOF
 # "hirakoba.png" binary filetype=png dx=0.45 dy=0.45 origin=(-60,-760) with rgbimage,

@@ -19,7 +19,7 @@ bool SelfLocalization::isSave;
 SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl, bool save):
   left(left_motor_sl), right(right_motor_sl){
   //メンバ変数の初期化 基本的に0
-  between_wheels = 13.0;
+  between_wheels = 12.7;
   moving_distance_mean = 0;
   turning_angle = 0;
   current_x = current_y = current_angle = 0;
@@ -36,12 +36,12 @@ void SelfLocalization::update (std::int32_t left_motor_sl, std::int32_t right_mo
   right.update(right_motor_sl);
 
   //移動距離と、車体の回転角
-  moving_distance_mean = (right.moving_distance + left.moving_distance) / 2;
+  moving_distance_mean = (right.moving_distance + left.moving_distance) / 2.0;
   turning_angle = (right.moving_distance - left.moving_distance) / between_wheels;
 
   //座標
-  current_x += (moving_distance_mean * std::cos(current_angle + (turning_angle/2)));
-  current_y += (moving_distance_mean * std::sin(current_angle + (turning_angle/2)));
+  current_x += (moving_distance_mean * std::cos(current_angle + (turning_angle/2.0)));
+  current_y += (moving_distance_mean * std::sin(current_angle + (turning_angle/2.0)));
   current_angle += turning_angle;
 
   //保存
