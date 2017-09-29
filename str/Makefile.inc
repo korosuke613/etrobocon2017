@@ -34,7 +34,7 @@ ifeq ($(side),left)
     PuzzleCodeConverter.o \
     Parking.o\
     PuzzleExplorer.o \
-    Navigation.o \
+#    Navigation.o \
 
 endif
 
