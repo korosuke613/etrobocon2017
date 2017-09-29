@@ -16,11 +16,10 @@ public:
 	void setPidWithoutTarget ( double, double, double ) ;
 	void spin ( bool, int32_t ) ;
 	void goStraight ( int32_t, int32_t ) ;
-	void backStraight ( int32_t ) ;
-
+	void backStraight ( int32_t, int32_t ) ;
     const bool SPIN_LEFT = false;
     const bool SPIN_RIGHT = true; 
-	
+
 private:
 	Clock clock ;
 	Walker walker ;

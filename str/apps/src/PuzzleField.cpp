@@ -5,7 +5,7 @@ PuzzleField::PuzzleField ():
 	traceDistance ( 0 ) {
 	lineTracer.isLeftsideLine ( false ),
 	ev3_speaker_set_volume ( 5 ) ;
-	basicWalker.setPidWithoutTarget ( 2.0, 2.0, 0.1 ) ;
+	basicWalker.setPidWithoutTarget ( 2.0, 1.0, 0.1 ) ;
 }
 
 void PuzzleField::preparatePuzzle ( void ) {
@@ -32,7 +32,8 @@ void PuzzleField::runPuzzleField ( int8_t currentPosition, int8_t beforePosition
 }
 
 void PuzzleField::avoidBlock ( int8_t currentPosition, int8_t beforePosition, int8_t nextPosition ) {
-	basicWalker.backStraight ( allconnectNumber[currentPosition][connectNumberManager[currentPosition][beforePosition]][DISTANCE] ) ;
+	basicWalker.reset () ;
+	basicWalker.backStraight ( -80, allconnectNumber[currentPosition][connectNumberManager[currentPosition][beforePosition]][DISTANCE] ) ;
 	walker.run ( 0, 0 ) ;
 	runPuzzleFieldVectorChange ( currentPosition, beforePosition, nextPosition, 180 ) ;
 	ev3_speaker_play_tone ( NOTE_FS6, 75 ) ;
@@ -75,6 +76,11 @@ void PuzzleField::runPuzzleFieldVectorChange ( int8_t currentPosition, int8_t be
 		sprintf ( msg, "Spin Vector:SPIN_LEFT " ) ;
 		msg_f ( msg, 6 ) ;
 	}
+	if ( spinDegree < 90 ) {
+		spinDegree -= spinDegree / 5 ;
+	} else {
+		spinDegree += spinDegree / 10 ;
+	}
 	// 行先までの距離を取得する
 	nextDistance = allconnectNumber[currentPosition][connectNumber][DISTANCE] ;
 	// 値が取れているか確認用のログ
@@ -113,17 +119,17 @@ void PuzzleField::runPuzzleFieldVectorChange ( int8_t currentPosition, int8_t be
 		ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 		distance.resetDistance ( walker.get_count_L (), walker.get_count_R () ) ;
 		traceDistance = 0 ;
-		lineTracer.speedControl.setPid ( 2.0, 4.0, 0.1, 45.0 ) ;
-		lineTracer.turnControl.setPid ( 4.0, 1.0, 0.06, 45.0 ) ;
+		lineTracer.speedControl.setPid ( 2.0, 2.0, 0.1, 40.0 ) ;
+		lineTracer.turnControl.setPid ( 5.8, 0.6, 0.1, 36.0 ) ;
 		while ( traceDistance < nextDistance ) {
 			traceDistance = distance.getDistanceTotal ( walker.get_count_L (), walker.get_count_R () ) ;
 			color = colorSensor.getBrightness () ;
 			lineTracer.runLine ( walker.get_count_L (), walker.get_count_R (), color ) ;
 			walker.run ( lineTracer.getForward (), lineTracer.getTurn () ) ;
-			if ( nextDistance - 180 < traceDistance ) {
+			if ( nextDistance - 135 < traceDistance ) {
 				if ( colorSensor.getColorNumber () == COLOR_RED || colorSensor.getColorNumber () == COLOR_BLUE || colorSensor.getColorNumber () == COLOR_GREEN || colorSensor.getColorNumber () == COLOR_YELLOW ) {
 					basicWalker.reset () ;
-					basicWalker.goStraight ( 90, 140 ) ;
+					basicWalker.goStraight ( 80, 130 ) ;
 					break ;
 				}
 			}
@@ -139,6 +145,10 @@ void PuzzleField::runPuzzleFieldVectorChange ( int8_t currentPosition, int8_t be
 	tslp_tsk ( 100 ) ;
 	ev3_speaker_play_tone ( NOTE_FS5, 100 ) ;
 	tslp_tsk ( 1000 ) ;
+}
+
+void PuzzleField::runRoot ( void ) {
+	root = puzzleExplorer.getRoot (  )
 }
 
 void PuzzleField::testRun ( void ) {

@@ -76,27 +76,30 @@ void Shinkansen::runBackward(double speed, int32_t targetDistance){
 	walker.run(0, 0);
 }
 
-void Shinkansen::spinBlack(int8_t forward, int32_t rotationalDirection){
+void Shinkansen::spinBlack(int8_t forward, bool rotationalDirection){
 	int32_t leftReverseValue, rightReverseValue;
 	colorid_t lineColor = COLOR_NONE;
 	basicWalker.spin(rotationalDirection, 45);
+  // 古いバージョン
+	// basicWalker.spin(forward, reverseValue, 45);
     int8_t reverseValue = rotationalDirection == basicWalker.SPIN_RIGHT
         ? -1
         :  1;
+	int8_t value = reverseValue * -1;
 	leftWheel.reset();
 	rightWheel.reset();
 	tslp_tsk(100);
 	msg_f("Spin...", 2);
 	leftWheel.setBrake(false);
 	rightWheel.setBrake(false);
-	leftReverseValue = reverseValue;
-	rightReverseValue = reverseValue * -1;
+	leftReverseValue = value;
+	rightReverseValue = value * -1;
 	while(1){
 		leftWheel.setPWM(forward * leftReverseValue);
 		rightWheel.setPWM(forward * rightReverseValue);
 		lineColor = colorSensor.getColorNumber();
 		if(lineColor == COLOR_BLACK) break;
-		tslp_tsk(1);
+		tslp_tsk(2);
 	}
 	leftWheel.setPWM(0);
 	rightWheel.setPWM(0);	
@@ -107,9 +110,9 @@ void Shinkansen::runColor(){
 	lineTracer.setForward(30);
 	colorid_t lineColor = COLOR_NONE;
 	lifter.liftDown();
-    lifter.changeDefault(1);
+	lifter.changeDefault(0);
 	lineTracer.speedControl.setPid ( 2.0, 1.0, 0.024, 50.0 );
-    lineTracer.turnControl.setPid ( 4.0, 1.0, 0.048, 13.0 );
+    lineTracer.turnControl.setPid ( 4.0, 1.0, 0.09, 20.0 );
     do{
     	lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
     	walker.run( lineTracer.getForward(), lineTracer.getTurn());
@@ -129,51 +132,52 @@ void Shinkansen::colorDetection(){
 			basicWalker.backStraight(50);
 			lifter.changeDefault(60);
 			blockColor = colorSensor.getColorNumber();
-			lifter.changeDefault(15);
 			while(blockColor != COLOR_BLUE && blockColor != COLOR_GREEN && blockColor != COLOR_YELLOW && blockColor != COLOR_RED){
 				if(count > 10)break;
 				basicWalker.goStraight(10, 10);
         		blockColor = colorSensor.getColorNumber();
 				count++;
         	}
-			lifter.changeDefault(-75);
+			lifter.changeDefault(-60);
 			if(circleColor == blockColor){
-				basicWalker.goStraight(10, 80);
+				basicWalker.goStraight(10, 50);
 				ev3_speaker_play_tone (NOTE_FS6, 100);
 			}else{
 				basicWalker.goStraight(10, 230 - 10 * count);
 				basicWalker.backStraight(100);
+        // 古いバージョン
+				// basicWalker.backStraight(10, 100);
 				ev3_speaker_play_tone (NOTE_FS6, 200);
 				
 			}
 			lifter.liftDown();
-    		lifter.changeDefault(1);
+    		lifter.changeDefault(0);
 			break;
 		}
 	}
 }
 
 void Shinkansen::firstPattern(){
-	spinBlack(30, 1);
+	spinBlack(30, basicWalker.SPIN_RIGHT);
 	runColor();
 	colorDetection();
-	spinBlack(30, 1);
+	spinBlack(30, basicWalker.SPIN_RIGHT);
 	runColor();
 	colorDetection();
-	spinBlack(30, -1);
+	spinBlack(30, basicWalker.SPIN_LEFT);
 	runForward(10.0, 240);
-	spinBlack(30, -1);
+	spinBlack(30, basicWalker.SPIN_LEFT);
 	runForward(10.0, 440);
 }
 
 void Shinkansen::secondPattern(){
-	spinBlack(30, 1);
+	spinBlack(30, basicWalker.SPIN_RIGHT);
 	runColor();
 	colorDetection();
-	spinBlack(30, -1);
+	spinBlack(30, basicWalker.SPIN_LEFT);
 	runColor();
 	colorDetection();
-	spinBlack(30, 1);
+	spinBlack(30, basicWalker.SPIN_RIGHT);
 	runForward(10.0, 240);
-	spinBlack(30, -1);
+	spinBlack(30, basicWalker.SPIN_LEFT);
 }

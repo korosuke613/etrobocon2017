@@ -7,6 +7,7 @@
 #include "Distance.h"
 #include "LineTracerWalker.h"
 #include "BasicWalker.h"
+#include "PuzzleExplorer.h"
 
 using namespace ev3api;
 
@@ -23,6 +24,8 @@ private:
 	ColorSensor colorSensor;
 	LineTracerWalker lineTracer;
 	Distance distance;
+	PuzzleExplorer puzzleExplorer ;
+	int* root ;
 	static const int8_t X = -1 ;
 	static const int8_t PUZZLE_POSITION_CURRENT   = 16 ;
 	static const int8_t PUZZLE_POSITION_NEXT      = 16 ;
@@ -30,10 +33,10 @@ private:
 	static const int8_t PUZZLE_POLAR_COODINATE    =  2 ;
 	static const int8_t DEGREE = 0 ;
 	static const int8_t DISTANCE = 1 ;
-	static const int PUZZLE_LINE_LONG       = 1100 ;
+	static const int PUZZLE_LINE_LONG       = 1075 ;
 	static const int PUZZLE_LINE_NORMAL     =  920 ;
 	static const int PUZZLE_LINE_SHORT      =  645 ;
-	static const int PUZZLE_LINE_VERY_SHORT =  345 ;
+	static const int PUZZLE_LINE_VERY_SHORT =  330 ;
 	int modifiedSpinVector ;
 	int32_t modifiedSpinDegree ;
 	int8_t color ;
@@ -114,7 +117,7 @@ private:
 		/* 13 */{ 120, PUZZLE_LINE_SHORT }, { 180, PUZZLE_LINE_SHORT }, { 0, PUZZLE_LINE_SHORT }, { X, X }, { X, X }, { 75, PUZZLE_LINE_LONG }, { 108, PUZZLE_LINE_LONG }, { 100, PUZZLE_LINE_SHORT }, { X, X }
 		},
 		{
-		/* 14 */{ 108, PUZZLE_LINE_SHORT }, { 180, PUZZLE_LINE_SHORT }, { 0, PUZZLE_LINE_SHORT }, { X, X }, { X, X }, { 130, PUZZLE_LINE_LONG }, { 160, PUZZLE_LINE_NORMAL }, { 120, PUZZLE_LINE_VERY_SHORT }, { X, X }
+		/* 14 */{ 108, PUZZLE_LINE_SHORT }, { 180, PUZZLE_LINE_SHORT }, { 0, PUZZLE_LINE_SHORT }, { X, X }, { X, X }, { 120, PUZZLE_LINE_LONG }, { 150, PUZZLE_LINE_NORMAL }, { 120, PUZZLE_LINE_VERY_SHORT }, { X, X }
 		},
 		{
 		/* 15 */{ 120, PUZZLE_LINE_SHORT }, { 30, PUZZLE_LINE_SHORT }, { 180, PUZZLE_LINE_SHORT }, { X, X }, { 210, PUZZLE_LINE_LONG }, { X, X }, { X, X }, { X, X }, { X, X }
