@@ -1,11 +1,11 @@
 #include "basicWalker.h"
 
-basicWalker::basicWalker ():
+BasicWalker::BasicWalker ():
 	leftWheel ( PORT_C ), rightWheel ( PORT_B ) {
 	ev3_speaker_set_volume ( 100 ) ;
 }
 
-void basicWalker::spinRightAngle ( int32_t forward, int32_t reverseValue ) {
+void BasicWalker::spin ( int32_t forward, int32_t reverseValue, int32_t angle ) {
 	leftWheel.reset () ;
 	rightWheel.reset () ;
 	tslp_tsk ( 100 ) ;
@@ -15,7 +15,7 @@ void basicWalker::spinRightAngle ( int32_t forward, int32_t reverseValue ) {
 	rightWheel.setBrake ( false ) ;
 	leftReverseValue = reverseValue ;
 	rightReverseValue = reverseValue * -1 ;
-	while ( ( leftWheel.getCount () * leftReverseValue ) < 132 ) {
+	while ( ( leftWheel.getCount () * leftReverseValue ) < ( angle / 0.64 ) ) {	// 数値は角度から回転数への変換に必要な値
 		leftWheel.setPWM ( forward * leftReverseValue ) ;
 		rightWheel.setPWM ( forward * rightReverseValue ) ;
 		tslp_tsk ( 2 ) ;
@@ -24,7 +24,9 @@ void basicWalker::spinRightAngle ( int32_t forward, int32_t reverseValue ) {
 	rightWheel.setPWM ( 0 ) ;
 }
 
-void basicWalker::goStraight ( int32_t forward, int32_t distance ) {
+void BasicWalker::goStraight ( int32_t forward, int32_t distance ) {
+	leftWheel.reset () ;
+	rightWheel.reset () ;
 	tslp_tsk ( 100 ) ;
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 	msg_f ( "Go...", 3 ) ;
@@ -39,14 +41,30 @@ void basicWalker::goStraight ( int32_t forward, int32_t distance ) {
 	rightWheel.setPWM ( 0 ) ;
 }
 
-void basicWalker::backStraight ( int32_t forward, int32_t distance ) {
-	goStraight ( ( -1 * forward ), distance ) ;
+void BasicWalker::backStraight ( int32_t forward, int32_t distance ) {
+	leftWheel.reset () ;
+	rightWheel.reset () ;
+	tslp_tsk ( 100 ) ;
+	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
+	msg_f ( "Go...", 3 ) ;
+	leftWheel.setBrake ( false ) ;
+	rightWheel.setBrake ( false ) ;
+	while ( ( ( leftWheel.getCount () + rightWheel.getCount () ) / 2 ) > ( -1 * distance ) ) {
+		leftWheel.setPWM ( -1 * forward ) ;
+		rightWheel.setPWM ( -1 * forward ) ;
+		tslp_tsk ( 4 ) ;
+	}
+	leftWheel.setPWM ( 0 ) ;
+	rightWheel.setPWM ( 0 ) ;
 }
 
-void basicWalker::parkingLeft ( void ) {
+void BasicWalker::parkingLeft ( void ) {
+	char msg[32] ;
+	sprintf ( msg, "Parking..." ) ;
+	msg_f ( msg, 0 ) ;
 	goStraight ( 30, 300 ) ;
-	spinRightAngle ( 30, SPIN_RIGHT ) ;
+	spin ( 30, SPIN_LEFT, 90 ) ;
 	goStraight ( 30, 300 ) ;
-	spinRightAngle ( 30, SPIN_LEFT ) ;
+	spin ( 30, SPIN_RIGHT, 90 ) ;
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 }

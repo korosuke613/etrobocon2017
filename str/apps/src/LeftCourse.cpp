@@ -16,26 +16,31 @@ LeftCourse::LeftCourse():
  * Lコースの走行範囲の切り替えを行う
  */
 void LeftCourse::run(){
+    // Normal Area
     /*runTyokusen(-80.0, 90.0, true);
     runTyokusen(-270.0, 60.0, true);
     runTyokusen(-200.0, 70.0, false);
     runTyokusen(-180.0, 100.0, false);
     runTyokusen(-120.0, 400.0, false);
     */
-	runNormalCourse();
+  
+	  runNormalCourse();
     msg_f("Finish NormalCourse", 3);
-	//Puzzle
-    PuzzleLineTracer puzzleLineTracer ;    
-    puzzleLineTracer.preparatePuzzle () ;
-    puzzleLineTracer.puzzleLineTrace ( 10, 0x00, 12 ) ;	// test
-	//Park
+  
+	  // Puzzle
+	  PuzzleField puzzleField ;
+	
+	  puzzleField.testGame () ;
+  
+  
+	  // Park
 }
 
 void LeftCourse::runNormalCourse(){
    	LeftNormalCourse normalCourse;
-	bool isNormalCourse;
+	  bool isNormalCourse;
     // NormalCourseを抜けるまでループする
-	while ( 1 ) {
+	  while ( 1 ) {
         sl.update(walker.get_count_L(), walker.get_count_R());
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
         isNormalCourse = normalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());

@@ -18,14 +18,15 @@ SelfLocalization.o \
 Emoter.o \
 LeftCourse.o \
 RightCourse.o \
+PuzzleField.o\
+BasicWalker.o \
 UserInterface.o \
 FirstCode.o \
 PuzzleLineTracer.o\
-basicWalker.o\
 Navigation.o \
-Block.o\
-Node.o\
-PuzzleCodeConverter.o\
+Block.o \
+Node.o \
+PuzzleCodeConverter.o \
 PuzzleExplorer.o
 
 SRCLANG := c++
