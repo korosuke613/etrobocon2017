@@ -104,7 +104,7 @@ TEST( SelfLocalizationTest, calculateCurrentAngleTest1)
 
     sl.calculate_current_angle();
 
-    ASSERT_EQ(sl.current_angle_degree, 45);
+    ASSERT_EQ(sl.current_angle_degree, 55);
 }
 
 TEST( SelfLocalizationTest, calculateCurrentAngleTest2)
@@ -118,7 +118,7 @@ TEST( SelfLocalizationTest, calculateCurrentAngleTest2)
 
     sl.calculate_current_angle();
 
-    ASSERT_EQ(sl.current_angle_degree, -45);
+    ASSERT_EQ(sl.current_angle_degree, -55);
 }
 
 TEST( SelfLocalizationTest, calculateCurrentAngleTest3)
