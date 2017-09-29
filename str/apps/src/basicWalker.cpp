@@ -16,8 +16,8 @@ void BasicWalker::reset ( void ) {
 
 void BasicWalker::spin ( int32_t reverseValue, int32_t angle ) {
 	reset () ;
-	while ( ( walker.get_count_R () * reverseValue ) < ( angle / 0.64 ) ) {	// 数値は角度から回転数への変換に必要な値
-		walker.run ( 0, ( 24 * reverseValue ) ) ;
+	while ( ( walker.get_count_R () * reverseValue ) < ( angle / 0.645 ) ) {	// 数値は角度から回転数への変換に必要な値
+		walker.run ( 0, ( 18 * reverseValue ) ) ;
 		tslp_tsk ( 4 ) ;
 	}
 	walker.run ( 0, 0 ) ;
@@ -32,9 +32,11 @@ void BasicWalker::goStraight ( int32_t target_forward, int32_t distance ) {
 	}
 }
 
-void BasicWalker::backStraight ( int32_t distance ) {
-	while ( ( ( walker.get_count_L () + walker.get_count_R () ) / 2 ) > distance ) {
-		walker.run ( -30, 0 ) ;
+void BasicWalker::backStraight ( int32_t target_forward, int32_t distance ) {
+	speedControl.setPid ( p_value, i_value, d_value, target_forward ) ;
+	while ( ( ( walker.get_count_L () + walker.get_count_R () ) / 2 ) * -1 < distance ) {
+		forward = speedControl.calculateSpeedForPid ( walker.get_count_L (), walker.get_count_R () ) ;
+		walker.run ( forward, 0 ) ;
 		tslp_tsk ( 4 ) ;
 	}
 }

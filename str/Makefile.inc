@@ -26,8 +26,8 @@ PuzzleLineTracer.o\
 Navigation.o \
 Block.o \
 Node.o \
-PuzzleCodeConverter.o
-#PuzzleExplorer.o
+PuzzleCodeConverter.o \
+PuzzleExplorer.o
 
 SRCLANG := c++
 

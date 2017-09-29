@@ -19,7 +19,7 @@ public:
 	void setPidWithoutTarget ( double, double, double ) ;
 	void spin ( int32_t, int32_t ) ;
 	void goStraight ( int32_t, int32_t ) ;
-	void backStraight ( int32_t ) ;
+	void backStraight ( int32_t, int32_t ) ;
 	
 private:
 	Clock clock ;
