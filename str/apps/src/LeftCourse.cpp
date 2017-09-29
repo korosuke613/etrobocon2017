@@ -17,27 +17,40 @@ LeftCourse::LeftCourse():
  */
 void LeftCourse::run(){
     // Normal Area
-    /*runTyokusen(-80.0, 90.0, true);
-    runTyokusen(-270.0, 60.0, true);
-    runTyokusen(-200.0, 70.0, false);
-    runTyokusen(-180.0, 100.0, false);
-    runTyokusen(-120.0, 400.0, false);
-    */  
-	  runNormalCourse();
-    msg_f("Finish NormalCourse", 3);
+    /* ショートカットする場合は外す
+    //最初のまっすぐ
+    runTyokusen(0.0, 0.0, -20.0, 1.0, true);
+    //GATE2クリア
+    runTyokusen(-20.0, 1.0, -80.0, 100.0, true);
+    //GATE1クリア
+    runTyokusen(-80.0, 100.0, -240.0, 101.0, true);
+    //GATE1まっすぐ
+    runTyokusen(-240.0, 101.0, -180.0, 100.0, false);
+    //緑超え
+    runTyokusen(-180.0, 100.0, -160.0, 180.0, false);
+    //最後の直線
+    runTyokusen(-141.0, 130.0, -160.0, 600.0, false);
+    while(1){
+        walker.run(10, 0);
+        if(colorSensor.getBrightness() < 5)break;
+    }
+    */
+
+	runNormalCourse();
+    //msg_f("Finish NormalCourse", 3);
   
-	  // Puzzle
-	  PuzzleField puzzleField ;
+	// Puzzle
+	PuzzleField puzzleField ;
 	
-	  puzzleField.testGame () ;
+	puzzleField.testGame () ;
   
   
-	  // Park
+	// Park
 }
 
 void LeftCourse::runNormalCourse(){
    	LeftNormalCourse normalCourse;
-	  bool isNormalCourse;
+      bool isNormalCourse;
     // NormalCourseを抜けるまでループする
 	  while ( 1 ) {
         sl.update(walker.get_count_L(), walker.get_count_R());
