@@ -22,6 +22,7 @@ public:
 	void set(int positions[5]);
 	void evaluate();
 	int getTargetNum(BlockColor color);
+	int getNumberInLeftSquare(int[]);
 };
 
 #endif //_INC_TARGET_FIGURE

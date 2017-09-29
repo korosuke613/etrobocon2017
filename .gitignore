@@ -1,6 +1,7 @@
 *.o
 *.gch
 *.out
+*.out.dSYM
 *.exe
 googletest
 .vscode
@@ -12,3 +13,5 @@ appsのエイリアス
 html
 latex
 docs
+sl.data
+traveling_route*

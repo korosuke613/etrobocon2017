@@ -19,11 +19,20 @@ Emoter.o \
 LeftCourse.o \
 RightCourse.o \
 PuzzleField.o\
-BasicWalker.o
+BasicWalker.o \
+UserInterface.o \
+FirstCode.o \
+PuzzleLineTracer.o\
+Navigation.o \
+Block.o \
+Node.o \
+PuzzleCodeConverter.o \
+#PuzzleExplorer.o
 
 SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
+APPL_DIR += $(mkfile_path)apps/explorer
 
 INCLUDES += -I$(mkfile_path)apps
 

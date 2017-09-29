@@ -35,6 +35,8 @@ EtRobocon2017::EtRobocon2017():
 
 void EtRobocon2017::start( int bluetooth_command )
 {
+    ui.inputFirstCode();
+    firstCode = ui.getFirstCode();
     ev3_led_set_color(LED_ORANGE);
     waitStarter( bluetooth_command );
 
@@ -48,7 +50,6 @@ void EtRobocon2017::loop()
 // Rコースを走らせるときは1, Lコースを走らせるときは0
 
 #if 0
-    RightCourse rightCourse;
     rightCourse.run();
 #else
     leftCourse.run();

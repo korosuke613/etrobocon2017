@@ -1,3 +1,6 @@
+/*
+$ g++-7 PuzzleExplorerTest.cpp ../explorer/Block.cpp ../explorer/Node.cpp ../explorer/PuzzleExplorer.cpp gtest_main.o gtest-all.o -I../explorer -I../../googletest/googletest/include
+*/
 #ifndef _INC_PUZZLE_EXPLORER_
 #define _INC_PUZZLE_EXPLORER
 
