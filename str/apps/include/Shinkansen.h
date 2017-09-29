@@ -30,7 +30,7 @@ public:
 	/** 線上を後進する処理 **/
 	void runBackward(double speed, int32_t targetDistance);
 	/** 黒を見つけるまで回転 **/
-	void spinBlack(int8_t forward, int32_t reverseValue);
+	void spinBlack(int8_t forward, bool reverseValue);
 	/** 色を見つけるまで走る処理 **/
 	void runColor();
 	/** 色検知の処理 **/
