@@ -1,4 +1,4 @@
-#include "basicWalker.h"
+#include "BasicWalker.h"
 
 BasicWalker::BasicWalker () {
 	ev3_speaker_set_volume ( 100 ) ;
@@ -14,7 +14,11 @@ void BasicWalker::reset ( void ) {
 	walker.reset () ;
 }
 
-void BasicWalker::spin ( int32_t reverseValue, int32_t angle ) {
+void BasicWalker::spin ( bool rotationalDirection, int32_t angle ) {
+    int8_t reverseValue = rotationalDirection == SPIN_RIGHT
+        ?  1
+        : -1;
+
 	reset () ;
 	while ( ( walker.get_count_R () * reverseValue ) < ( angle / 0.645 ) ) {	// 数値は角度から回転数への変換に必要な値
 		walker.run ( 0, ( 18 * reverseValue ) ) ;
@@ -39,15 +43,4 @@ void BasicWalker::backStraight ( int32_t target_forward, int32_t distance ) {
 		walker.run ( forward, 0 ) ;
 		tslp_tsk ( 4 ) ;
 	}
-}
-
-void BasicWalker::parkingLeft ( void ) {
-	char msg[32] ;
-	sprintf ( msg, "Parking..." ) ;
-	msg_f ( msg, 0 ) ;
-	goStraight ( 30, 300 ) ;
-	spin ( SPIN_LEFT, 90 ) ;
-	goStraight ( 30, 300 ) ;
-	spin ( SPIN_RIGHT, 90 ) ;
-	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 }

@@ -7,6 +7,7 @@
 #include "Distance.h"
 #include "LineTracerWalker.h"
 #include "BasicWalker.h"
+#include "PuzzleExplorer.h"
 
 using namespace ev3api;
 
@@ -50,7 +51,7 @@ private:
 	int32_t nextDegree ;
 	int32_t nextDistance ;
 	int32_t spinDegree ;
-	int32_t spinVector ;
+	bool spinVector ;
 	int8_t connectNumberManager[PUZZLE_POSITION_CURRENT][PUZZLE_POSITION_NEXT] = {
 	/* 接続ノード番号付与テーブル　( 'X'は非接続を示す )                                       */
 	/*                                     N E X T                               */

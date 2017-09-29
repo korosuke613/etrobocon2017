@@ -20,6 +20,7 @@ void UserInterface::inputFirstCode() {
     digit = firstCode.getDigit();
     msg_f( getCurrentDigitText( digit ), 6 );
 
+    ev3_speaker_set_volume( 20 );
     ev3_speaker_play_tone( 200, 500 );
 
     // 初期位置コードを入力

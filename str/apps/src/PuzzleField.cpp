@@ -61,18 +61,18 @@ void PuzzleField::runPuzzleFieldVectorChange ( int8_t currentPosition, int8_t be
 	nextDegree = allconnectNumber[currentPosition][connectNumber][DEGREE] ;
 	spinDegree = nextDegree - currentDegree ;
 	if ( spinDegree < 0 ) {
-		spinVector = SPIN_RIGHT ;
+		spinVector = basicWalker.SPIN_RIGHT ;
 		spinDegree *= -1 ;
 		sprintf ( msg, "Spin Vector:SPIN_RIGHT" ) ;
 		msg_f ( msg, 6 ) ;
 	} else if ( 180 < spinDegree ) {
-		spinVector = SPIN_RIGHT ;
+		spinVector = basicWalker.SPIN_RIGHT ;
 		spinDegree -= 360 ;
 		spinDegree *= -1 ;
 		sprintf ( msg, "Spin Vector:SPIN_RIGHT" ) ;
 		msg_f ( msg, 6 ) ;
 	} else {
-		spinVector = SPIN_LEFT ;
+		spinVector = basicWalker.SPIN_LEFT ;
 		sprintf ( msg, "Spin Vector:SPIN_LEFT " ) ;
 		msg_f ( msg, 6 ) ;
 	}
@@ -100,6 +100,21 @@ void PuzzleField::runPuzzleFieldVectorChange ( int8_t currentPosition, int8_t be
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 	msg_f ( "OK", 9 ) ;
 	if ( connectNumber < 4 && nextPosition != 0 ) {
+		/*
+		basicWalker.goStraight ( 30, nextDistance / 4 ) ;
+		modifiedSpinDegree = 0 ;
+		modifiedSpinVector = basicWalker.SPIN_LEFT ;
+		while ( colorSensor.getBrightness () > 80 ) {
+			tslp_tsk ( 50 ) ;
+			basicWalker.backStraight ( 36, nextDistance / 4 ) ;
+			tslp_tsk ( 50 ) ;
+			modifiedSpinVector *= -1 ;
+			modifiedSpinDegree += 5 ;
+			basicWalker.spin ( 30, modifiedSpinVector, modifiedSpinDegree ) ;
+			basicWalker.goStraight ( 30, nextDistance / 4 ) ;
+		}
+		basicWalker.goStraight ( 30, ( nextDistance / 4 ) * 3 ) ;
+		*/
 		tslp_tsk ( 100 ) ;
 		ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 		distance.resetDistance ( walker.get_count_L (), walker.get_count_R () ) ;
@@ -138,7 +153,7 @@ void PuzzleField::runRoot ( void ) {
 
 void PuzzleField::testRun ( void ) {
 	basicWalker.setPidWithoutTarget ( 2.0, 2.0, 0.1 ) ;
-	basicWalker.spin ( SPIN_LEFT, 90 ) ;
+	basicWalker.spin ( basicWalker.SPIN_LEFT, 90 ) ;
 	basicWalker.goStraight ( 160, 1000 ) ;
 } 
 
@@ -158,6 +173,6 @@ void PuzzleField::testGame ( void ) {
 	runPuzzleField ( 15,  9, 11 ) ;
 	
 	basicWalker.goStraight ( 20, 640 ) ;
-	basicWalker.spin ( SPIN_LEFT, 60 ) ;
+	basicWalker.spin ( 10, basicWalker.SPIN_LEFT, 60 ) ;
 
 }

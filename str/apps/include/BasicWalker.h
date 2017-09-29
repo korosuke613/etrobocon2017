@@ -6,9 +6,6 @@
 #include "Walker.h"
 #include "SpeedControl.h"
 
-#define SPIN_LEFT  +1
-#define SPIN_RIGHT -1 
-
 using namespace ev3api ;
 
 class BasicWalker {
@@ -17,10 +14,12 @@ public:
 	void reset ( void ) ;
 	void parkingLeft ( void ) ;
 	void setPidWithoutTarget ( double, double, double ) ;
-	void spin ( int32_t, int32_t ) ;
+	void spin ( bool, int32_t ) ;
 	void goStraight ( int32_t, int32_t ) ;
 	void backStraight ( int32_t, int32_t ) ;
-	
+    const bool SPIN_LEFT = false;
+    const bool SPIN_RIGHT = true; 
+
 private:
 	Clock clock ;
 	Walker walker ;
