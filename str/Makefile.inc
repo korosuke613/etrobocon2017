@@ -4,31 +4,62 @@ APPL_CXXOBJS += \
 util.o \
 EtRobocon2017.o \
 SonarAlert.o \
-LineTracer.o \
+LineTracerWalker.o \
 Pid.o \
-NormalCourse.o \
-LeftNormalCourse.o \
-RightNormalCourse.o \
 SpeedControl.o \
 TurnControl.o \
 Distance.o \
 Walker.o \
 Lifter.o \
 SelfLocalization.o \
-Emoter.o
+Emoter.o \
+LeftCourse.o \
+RightCourse.o \
+PuzzleField.o\
+BasicWalker.o \
+UserInterface.o \
+FirstCode.o \
+PuzzleLineTracer.o\
+Navigation.o \
+Block.o \
+Node.o \
+PuzzleCodeConverter.o \
+PuzzleExplorer.o \
+NormalCourse.o
+
+ifeq ($(side),right)
+    APPL_CXXOBJS += RightNormalCourse.o \
+    RightCourse.o \
+    BasicWalker.o \
+    Shinkansen.o \
+
+endif
+
+ifeq ($(side),left)
+
+    APPL_CXXOBJS += LeftNormalCourse.o \
+    LeftCourse.o \
+    PuzzleField.o\
+    BasicWalker.o \
+    UserInterface.o \
+    FirstCode.o \
+    Block.o \
+    Node.o \
+    PuzzleCodeConverter.o \
+    Parking.o\
+    PuzzleExplorer.o \
+    TargetFigure.o\
+    BoardAnalyzer.o\
+	Navigation.o \
+
+endif
 
 SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
-APPL_DIR += $(mkfile_path)apps/commons
+APPL_DIR += $(mkfile_path)apps/explorer
 
-INCLUDES += \
--I$(mkfile_path)apps
-
-INCLUDES += \
--I$(mkfile_path)app
--I$(mkfile_path)apps/commons
-
+INCLUDES += -I$(mkfile_path)apps 
 
 ifdef CONFIG_EV3RT_APPLICATION
 

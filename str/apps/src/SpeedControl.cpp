@@ -13,11 +13,12 @@ SpeedControl::SpeedControl():
     speedCount = 0;
     speed_value_all = 0;
     pid_value_old = 0.0;
+    distance4ms = 0.0;
     //150のときいい感じ pid(0.8, 1.2, 0.0, 30.0), forward(30){
 }
 
-int32_t SpeedControl::calculateSpeedForPid() {
-    int8_t speed_value_thistime = calcDistance4ms();
+std::int8_t SpeedControl::calculateSpeedForPid(std::int32_t curAngleL, std::int32_t curAngleR) {
+    int8_t speed_value_thistime = calcDistance4ms(curAngleL, curAngleR);
     speed_value_all += (speed_value_thistime - speed_value[ speedCount ]);
     speed_value[ speedCount ] = speed_value_thistime;
     calculate((double)speed_value_all);
@@ -30,9 +31,7 @@ int32_t SpeedControl::calculateSpeedForPid() {
 }
 
 /* 距離更新（4ms間の移動距離を毎回加算している） */
-int8_t SpeedControl::calcDistance4ms(){
-    int32_t curAngleL = walker.get_count_L ();
-	int32_t curAngleR = walker.get_count_R ();
+std::int8_t SpeedControl::calcDistance4ms(std::int32_t curAngleL, std::int32_t curAngleR){
 
     float distance4msFloat = 0.0;        //4msの距離
 
@@ -48,4 +47,8 @@ int8_t SpeedControl::calcDistance4ms(){
     distance4ms = (int)distance4msFloat;
     // 単位はmm
     return distance4ms;
+}
+
+std::int16_t SpeedControl::getSpeed100ms(){
+    return speed_value_all;
 }

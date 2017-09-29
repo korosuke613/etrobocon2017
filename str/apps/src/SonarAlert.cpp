@@ -3,7 +3,7 @@
 SonarAlert::SonarAlert( int secPerCycle )
 {
     timeCounter = 0;
-    sonarSensor = new SonarSensor( PORT_3 );
+    sonarSensor = new SonarSensor( PORT_2 );
     this->secPerCycle = secPerCycle;
 }
 
