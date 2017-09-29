@@ -19,8 +19,8 @@ Emoter.o \
 LeftCourse.o \
 RightCourse.o \
 Shinkansen.o \
-PuzzleLineTracer.o \
-basicWalker.o
+PuzzleField.o\
+BasicWalker.o
 
 SRCLANG := c++
 

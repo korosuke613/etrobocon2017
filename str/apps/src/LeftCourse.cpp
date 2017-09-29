@@ -15,9 +15,9 @@ void LeftCourse::run(){
 	runNormalCourse();
   msg_f("Finish NormalCourse", 3);
 	//Puzzle
-  PuzzleLineTracer puzzleLineTracer ;    
-  puzzleLineTracer.preparatePuzzle () ;
-  puzzleLineTracer.puzzleLineTrace ( 10, 0x00, 12 ) ;	// test
+  //PuzzleLineTracer puzzleLineTracer ;    
+  //puzzleLineTracer.preparatePuzzle () ;
+  //puzzleLineTracer.puzzleLineTrace ( 10, 0x00, 12 ) ;	// test
 	//Park
 }
 

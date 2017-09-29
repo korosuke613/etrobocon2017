@@ -5,16 +5,16 @@
 #include "Clock.h"
 #include "util.h"
 
-#define SPIN_LEFT   1
-#define SPIN_RIGHT -1 
+#define SPIN_LEFT  -1
+#define SPIN_RIGHT  1 
 
 using namespace ev3api ;
 
-class basicWalker {
+class BasicWalker {
 public:
-	basicWalker () ;
+	BasicWalker () ;
 	void parkingLeft ( void ) ;
-	void spinRightAngle ( int32_t, int32_t ) ;
+	void spin ( int32_t, int32_t, int32_t ) ;
 	void goStraight ( int32_t, int32_t ) ;
 	void backStraight ( int32_t, int32_t ) ;
 	

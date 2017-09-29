@@ -17,7 +17,7 @@
 #include "Distance.h"
 #include "SelfLocalization.h"
 #include "Lifter.h"
-#include "basicWalker.h"
+#include "BasicWalker.h"
 
 using namespace ev3api;
 
@@ -53,7 +53,7 @@ public:
 private:
 	LineTracerWalker lineTracer;
 	Lifter lifter;
-	basicWalker basicwalker;
+	BasicWalker basicWalker;
 	Walker walker;
 	ColorSensor colorSensor;
 	SonarSensor sonarSensor;

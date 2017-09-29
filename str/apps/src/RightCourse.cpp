@@ -26,8 +26,8 @@ void RightCourse::runColor(){
 	lifter.liftDown();
     lifter.changeDefault(5);
     do{
-    	lineTracer.speedControl.setPid ( 2.0, 4.8, 0.024, 150.0 );
-    	lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 20.0 );
+    	lineTracer.speedControl.setPid ( 2.0, 4.8, 0.024, 100.0 );
+    	lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 18.0 );
     	lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
     	walker.run( lineTracer.getForward(), lineTracer.getTurn());
     	lineColor = colorSensor.getColorNumber();
@@ -43,23 +43,23 @@ void RightCourse::colorDetection(){
 		circleColor = colorSensor.getColorNumber();
 		if(circleColor == COLOR_BLUE || circleColor == COLOR_GREEN || circleColor == COLOR_YELLOW || circleColor == COLOR_RED){
 			ev3_speaker_play_tone (NOTE_FS6, 100);
-			basicwalker.backStraight(-10, -50);
+			basicWalker.backStraight(10, 50);
 			lifter.changeDefault(60);
 			blockColor = colorSensor.getColorNumber();
 			lifter.changeDefault(15);
 			while(blockColor == COLOR_BLACK || blockColor == COLOR_NONE){
-				if(count > 25)break;
-				basicwalker.goStraight(10, 4);
+				if(count > 5)break;
+				basicWalker.goStraight(10, 10);
         		blockColor = colorSensor.getColorNumber();
 				count++;
         	}
 			lifter.changeDefault(-75);
 			if(circleColor == blockColor){
-				basicwalker.goStraight(10, 50);
+				basicWalker.goStraight(10, 50);
 				ev3_speaker_play_tone (NOTE_FS6, 100);
 			}else{
-				basicwalker.goStraight(10, 190);
-				basicwalker.backStraight(-10, -140);
+				basicWalker.goStraight(10, 190 - 10 * count);
+				basicWalker.backStraight(10, 140);
 				ev3_speaker_play_tone (NOTE_FS6, 200);
 				
 			}
@@ -72,8 +72,6 @@ void RightCourse::runShinkansen(){
     int16_t distance_shinkansen;    
     Shinkansen shinkansen;
     lineTracer.isLeftsideLine(false);
-	lineTracer.setForward(10);
-    int16_t time_count = 0;
 	int32_t distance_total;
     while(1){
         distance_shinkansen = sonarSensor.getDistance();
@@ -88,32 +86,29 @@ void RightCourse::runShinkansen(){
                 break;
             case ShinkansenStatus::FIRST_RAIL:
         		distance.resetDistance(walker.get_count_L(), walker.get_count_R());
-                basicwalker.goStraight(40, 500);
+                basicWalker.goStraight(40, 500);
                 shinkansenStatus = ShinkansenStatus::FIRST_LINE;
                 ev3_speaker_play_tone (NOTE_FS6, 100);
                 break;
             case ShinkansenStatus::FIRST_LINE:
-                basicwalker.spinRightAngle(30, SPIN_LEFT);
+                basicWalker.spin(30, SPIN_RIGHT, 90);
         		runColor();
         		colorDetection();
-        		basicwalker.spinRightAngle(30, SPIN_LEFT);
-        		basicwalker.spinRightAngle(30, SPIN_LEFT);
+        		basicWalker.spin(30, SPIN_RIGHT, 160);
         		runColor();
         		colorDetection();
-        		basicwalker.spinRightAngle(30, SPIN_RIGHT);
-        		basicwalker.spinRightAngle(30, SPIN_RIGHT);
+        		basicWalker.spin(30, SPIN_LEFT, 170);
         		distance.resetDistance(walker.get_count_L(), walker.get_count_R());
         		do{
         			distance_total = distance.getDistanceCurrent(walker.get_count_L(), walker.get_count_R());
-        			lineTracer.setForward(10);
-        			lineTracer.speedControl.setPid ( 2.0, 4.8, 0.024, 150.0 );
-    				lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 20.0 );
+        			lineTracer.speedControl.setPid ( 2.0, 4.8, 0.024, 5.0 );
+    				lineTracer.turnControl.setPid ( 2.0, 1.0, 0.048, 18.0 );
     				lineTracer.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
     				walker.run( lineTracer.getForward(), lineTracer.getTurn());
         		}while(distance_total < 100);
         		walker.run(0, 0);
-        		basicwalker.spinRightAngle(30, SPIN_RIGHT);
-        		basicwalker.goStraight(30, 400);
+        		basicWalker.spin(30, SPIN_LEFT, 90);
+        		basicWalker.goStraight(30, 400);
                 ev3_speaker_play_tone (NOTE_FS6, 100);
                 shinkansenStatus = ShinkansenStatus::FIRST_RIGHT_ANGLE;
                 break;
@@ -121,21 +116,21 @@ void RightCourse::runShinkansen(){
                 shinkansenStatus = ShinkansenStatus::PRIZE;
                 break;
         	case ShinkansenStatus::PRIZE:
-        		/*basicwalker.backStraight(-10, -230);
-        		basicwalker.spinRightAngle(10, SPIN_LEFT);
+        		/*basicWalker.backStraight(10, 230);
+        		basicWalker.spin(10, SPIN_RIGHT, 90);
         		lifter.liftDown();
         		lifter.changeDefault(-10);
-        		basicwalker.goStraight(10, 400);
+        		basicWalker.goStraight(10, 400);
         		lifter.changeDefault(40);
         		lifter.changeDefault(40);
-        		basicwalker.backStraight(-10, -400);
-        		basicwalker.spinRightAngle(10, SPIN_RIGHT);
-        		basicwalker.goStraight(10, 730);
-        		basicwalker.spinRightAngle(10, SPIN_LEFT);
-				basicwalker.goStraight(10, 400);
+        		basicWalker.backStraight(10, 400);
+        		basicWalker.spin(10, SPIN_LEFT, 90);
+        		basicWalker.goStraight(10, 730);
+        		basicWalker.spin(10, SPIN_RIGHT, 90);
+				basicWalker.goStraight(10, 400);
         		lifter.changeDefault(-80);
-        		basicwalker.backStraight(-10, -400);
-        		basicwalker.spinRightAngle(10, SPIN_RIGHT);*/
+        		basicWalker.backStraight(10, 400);
+        		basicWalker.spin(10, SPIN_LEFT);*/
         		shinkansenStatus = ShinkansenStatus::STOP;
         		break;
             case ShinkansenStatus::STOP:
