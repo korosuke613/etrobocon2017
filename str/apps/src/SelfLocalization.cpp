@@ -19,10 +19,11 @@ bool SelfLocalization::isSave;
 SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t right_motor_sl, bool save):
   left(left_motor_sl), right(right_motor_sl){
   //メンバ変数の初期化 基本的に0
-  between_wheels = 16.0;
+  between_wheels = 13.0;
   moving_distance_mean = 0;
   turning_angle = 0;
   current_x = current_y = current_angle = 0;
+  errno = 0;
   isSave = save;
 }
 

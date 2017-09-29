@@ -17,6 +17,7 @@
 #include <cstdio>
 #include <cstdint>
 #include <cmath>
+#include <cerrno>
 
 class MotorAngle{
 public:

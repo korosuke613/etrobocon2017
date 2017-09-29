@@ -11,6 +11,7 @@
 #include "ColorSensor.h"
 #include "LeftNormalCourse.h"
 #include "SelfLocalization.h"
+#include "PuzzleField.h"
 #include "PuzzleLineTracer.h"
 #include "Navigation.h"
 

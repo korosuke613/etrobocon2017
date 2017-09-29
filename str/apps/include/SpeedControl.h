@@ -24,7 +24,7 @@ public:
     * @param curAngleL 左モータ回転角
     * @param curAngleR 右モータ回転角
     * @return forward 前進値 */
-    std::int32_t calculateSpeedForPid(std::int32_t curAngleL, std::int32_t curAngleR);
+    std::int8_t calculateSpeedForPid(std::int32_t curAngleL, std::int32_t curAngleR);
     std::int16_t getSpeed100ms();
         
     /** 0.1sで進んだ距離[mm/0.1s] */    
