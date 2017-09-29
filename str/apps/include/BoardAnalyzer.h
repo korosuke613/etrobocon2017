@@ -12,10 +12,14 @@ public:
 	void set(int8_t *initPositions);
 	int8_t getInLeftSquareCount();
 	bool hasExchangePatternOnLeftSquare();
+	bool hasExchangePatternOnPentagon();
+	int8_t getInRightSideCount();
 	
 private:
 	int8_t *positions;
 	const int8_t leftSquare[5] = {0, 1, 5, 2, 10};
+	const int8_t pentagon[5] = {8, 14, 13, 9, 6};
+	const int8_t rightSide[6] = {3, 4, 7, 9, 11, 15};
 	const BlockColor BlockArea[16] = {
 		BlockColor::Black,
 		BlockColor::Red,
