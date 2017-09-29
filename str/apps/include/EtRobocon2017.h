@@ -10,6 +10,7 @@
 //変更してもいけない
 //#define IS_RIGHT_COURSE
 
+#include "settings.h"
 #include "ev3api.h"
 #include "TouchSensor.h"
 #include "SonarAlert.h"

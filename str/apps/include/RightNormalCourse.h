@@ -7,6 +7,7 @@
 #ifndef __RIGHTNORMALCOURSE__
 #define __RIGHTNORMALCOURSE__
 
+#include "settings.h"
 #include "NormalCourse.h"
 
 /**
