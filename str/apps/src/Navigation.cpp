@@ -60,8 +60,8 @@ bool Navigation::calculateAngle(std::int32_t left_degree, std::int32_t right_deg
     sl.update(left_degree, right_degree);
     sl.calculate_current_angle();
     forward = 0;
-    if(goal_angle < sl.current_angle_degree )turn = -5;
-    else turn = 5;
+    if(goal_angle < sl.current_angle_degree )turn = -20;
+    else turn = 20;
     if(goal_angle - 1 <= sl.current_angle_degree && goal_angle + 1 >= sl.current_angle_degree){
         return true;
     }

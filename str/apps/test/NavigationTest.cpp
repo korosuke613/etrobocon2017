@@ -121,5 +121,5 @@ TEST( NavigationTest, calculateAngleTest3)
     navi.setLine(0.0, 0.0, 100.0, 100.0);
     navi.calculate_line_angle(isBack);
     bool end = navi.calculateAngle(0, -440, isBack);
-    ASSERT_EQ(end, true);
+    ASSERT_EQ(end, false);
 }
