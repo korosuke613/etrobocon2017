@@ -12,6 +12,7 @@
 #include "ColorSensor.h"
 #include "LeftNormalCourse.h"
 #include "SelfLocalization.h"
+#include "PuzzleField.h"
 
 using namespace ev3api;
 
