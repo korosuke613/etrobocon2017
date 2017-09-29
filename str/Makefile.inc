@@ -18,14 +18,20 @@ SelfLocalization.o \
 Emoter.o \
 LeftCourse.o \
 RightCourse.o \
-Block.o \
-Node.o \
-PuzzleCodeConverter.o \
+UserInterface.o \
+FirstCode.o \
+PuzzleLineTracer.o\
+basicWalker.o\
+Navigation.o \
+Block.o\
+Node.o\
+PuzzleCodeConverter.o\
 PuzzleExplorer.o
 
 SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
+APPL_DIR += $(mkfile_path)apps/explorer
 
 INCLUDES += -I$(mkfile_path)apps 
 

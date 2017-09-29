@@ -6,7 +6,7 @@
 #include "RightCourse.h"
 
 RightCourse::RightCourse():
-	 colorSensor( PORT_3 ){}
+	 colorSensor( PORT_3 ), sl(walker.get_count_L(), walker.get_count_R()){}
 
 /**
  *Rコースの走行範囲の切り替えを行う
@@ -22,8 +22,7 @@ void RightCourse::runNormalCourse(){
 	bool isNormalCourse;
     // NormalCourseを抜けるまでループする
 	while ( 1 ) {
-        sl.update();
-        sl.writing_current_coordinates();
+        sl.update(walker.get_count_L(), walker.get_count_R());
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
         isNormalCourse = normalCourse.runNormalCourse();
         normalCourse.lineTracerWalker.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
