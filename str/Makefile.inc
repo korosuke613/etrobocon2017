@@ -6,9 +6,6 @@ EtRobocon2017.o \
 SonarAlert.o \
 LineTracerWalker.o \
 Pid.o \
-NormalCourse.o \
-LeftNormalCourse.o \
-RightNormalCourse.o \
 SpeedControl.o \
 TurnControl.o \
 Distance.o \
@@ -16,18 +13,30 @@ Walker.o \
 Lifter.o \
 SelfLocalization.o \
 Emoter.o \
-LeftCourse.o \
-RightCourse.o \
-PuzzleField.o\
-BasicWalker.o \
-UserInterface.o \
-FirstCode.o \
-Navigation.o \
-Block.o \
-Node.o \
-PuzzleCodeConverter.o \
-Parking.o\
-PuzzleExplorer.o \
+NormalCourse.o \
+
+ifeq ($(side),right)
+    APPL_CXXOBJS += RightNormalCourse.o \
+    RightCourse.o \
+
+endif
+
+ifeq ($(side),left)
+
+    APPL_CXXOBJS += LeftNormalCourse.o \
+    LeftCourse.o \
+    PuzzleField.o\
+    BasicWalker.o \
+    UserInterface.o \
+    FirstCode.o \
+    Block.o \
+    Node.o \
+    PuzzleCodeConverter.o \
+    Parking.o\
+    PuzzleExplorer.o \
+    Navigation.o \
+
+endif
 
 SRCLANG := c++
 
