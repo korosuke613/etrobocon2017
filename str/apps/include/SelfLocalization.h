@@ -17,6 +17,7 @@
 #include "ev3api.h"
 #include "app.h"
 #include <math.h>
+#include <cerrno>
 
 class SelfLocalization {
 private:
@@ -42,6 +43,7 @@ public:
   bool over_target_line_of_y (float target_y);
   bool below_target_line_of_x(float target_x);
   bool below_target_line_of_y(float target_y);
+
 private:
   //残りのメソッドかな？
   

@@ -37,7 +37,7 @@ SelfLocalization::SelfLocalization (){
   left_wheel_moving_distance = right_wheel_moving_distance = 0;
   current_x = current_y = current_angle = 0;
   old_x = old_y = old_angle = 0;
-
+  errno = 0;
 
   /* 地図を作らない時はFILE関連は消しとくこと！ ヘッダファイル含めて！*/
   if (( fp = fopen("sl.data", "w")) != NULL) {

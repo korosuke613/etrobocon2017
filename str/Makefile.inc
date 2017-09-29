@@ -17,14 +17,17 @@ Lifter.o \
 SelfLocalization.o \
 Emoter.o \
 LeftCourse.o \
-RightCourse.o
+RightCourse.o \
+Block.o \
+Node.o \
+PuzzleCodeConverter.o \
+PuzzleExplorer.o
 
 SRCLANG := c++
 
 APPL_DIR += $(mkfile_path)apps
 
-INCLUDES += -I$(mkfile_path)apps
-
+INCLUDES += -I$(mkfile_path)apps 
 
 ifdef CONFIG_EV3RT_APPLICATION
 

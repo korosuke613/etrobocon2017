@@ -91,7 +91,6 @@ void PuzzleExplorer::setNeighborNode()
 		}
 		
 		nodeList[i].setNeighbor(neighbor);
-		neighbor[5] = {};
 	}
 	return;
 }
