@@ -17,3 +17,5 @@ sl.data
 traveling_route*
 *.a
 *.swp
+*.lnk
+uImage
