@@ -15,7 +15,7 @@ void BasicWalker::spin ( int32_t forward, int32_t reverseValue, int32_t angle ) 
 	rightWheel.setBrake ( false ) ;
 	leftReverseValue = reverseValue ;
 	rightReverseValue = reverseValue * -1 ;
-	while ( ( leftWheel.getCount () * leftReverseValue ) < ( angle * 1.64 ) ) {	// 1.65は角度から回転数への変換に必要な値
+	while ( ( leftWheel.getCount () * leftReverseValue ) < ( angle / 0.64 ) ) {
 		leftWheel.setPWM ( forward * leftReverseValue ) ;
 		rightWheel.setPWM ( forward * rightReverseValue ) ;
 		tslp_tsk ( 2 ) ;

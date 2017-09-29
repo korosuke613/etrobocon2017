@@ -12,12 +12,12 @@ LeftCourse::LeftCourse():
  * Lコースの走行範囲の切り替えを行う
  */
 void LeftCourse::run(){
-	runNormalCourse();
-  msg_f("Finish NormalCourse", 3);
+	//runNormalCourse();
+	//msg_f("Finish NormalCourse", 3);
 	//Puzzle
-  //PuzzleLineTracer puzzleLineTracer ;    
-  //puzzleLineTracer.preparatePuzzle () ;
-  //puzzleLineTracer.puzzleLineTrace ( 10, 0x00, 12 ) ;	// test
+	PuzzleField puzzleField ;
+	
+	puzzleField.testGame () ;
 	//Park
 }
 

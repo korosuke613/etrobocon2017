@@ -25,10 +25,15 @@ using namespace ev3api;
 * 走行場所の状態を保持する列挙型
 */
 enum struct ShinkansenStatus {
-    BEFORE_SHINKANSEN,
+    BEFORE_FIRST_SHINKANSEN,
     FIRST_RAIL,
 	FIRST_LINE,
-	FIRST_RIGHT_ANGLE,
+	SECOND_LINE,
+	BEFORE_SECOND_SHINKANSEN,
+	SECOND_RAIL,
+	THIRD_LINE,
+	FOURTH_LINE,
+	BEFORE_THIRD_SHINKANSEN,
 	PRIZE,
     STOP
 };
@@ -46,10 +51,6 @@ public:
 	void runNormalCourse();
 	/** Shinkansenエリアの処理 */
 	void runShinkansen();
-	/** 色を見つけるまで走る処理 **/
-	void runColor();
-	/** 色検知の処理 **/
-	void colorDetection();
 private:
 	LineTracerWalker lineTracer;
 	Lifter lifter;
@@ -58,7 +59,6 @@ private:
 	ColorSensor colorSensor;
 	SonarSensor sonarSensor;
 	ShinkansenStatus shinkansenStatus;
-	Distance distance;
 };
 
 #endif

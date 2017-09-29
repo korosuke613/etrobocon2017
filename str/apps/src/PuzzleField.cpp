@@ -31,7 +31,7 @@ void PuzzleField::runPuzzleField ( int8_t currentPosition, int8_t beforePosition
 }
 
 void PuzzleField::avoidBlock ( int8_t currentPosition, int8_t beforePosition, int8_t nextPosition ) {
-	basicWalker.backStraight ( 20, allconnectNumber[currentPosition][connectNumberManager[currentPosition][beforePosition]][DISTANCE] ) ;
+	basicWalker.backStraight ( 40, allconnectNumber[currentPosition][connectNumberManager[currentPosition][beforePosition]][DISTANCE] ) ;
 	runPuzzleFieldVectorChange ( currentPosition, beforePosition, nextPosition, 180 ) ;
 	ev3_speaker_play_tone ( NOTE_FS6, 75 ) ;
 	tslp_tsk ( 500 ) ;
@@ -50,7 +50,10 @@ void PuzzleField::runPuzzleFieldVectorChange ( int8_t currentPosition, int8_t be
 		currentDegree = 60 ;
 	} else {
 		beforeconnectNumber = connectNumberManager[beforePosition][currentPosition] ;
-		currentDegree = allconnectNumber[beforePosition][beforeconnectNumber][DEGREE] + vectorStatus ;
+		currentDegree = allconnectNumber[beforePosition][beforeconnectNumber][DEGREE] - vectorStatus ;
+		if ( vectorStatus == 180 && currentDegree < -180 ) {
+			currentDegree += 360 ;
+		}
 	}
 	nextDegree = allconnectNumber[currentPosition][connectNumber][DEGREE] ;
 	spinDegree = nextDegree - currentDegree ;
@@ -83,12 +86,46 @@ void PuzzleField::runPuzzleFieldVectorChange ( int8_t currentPosition, int8_t be
 	msg_f ( msg, 8 ) ;
 	// 車体を動かして角度を合わせる
 	ev3_speaker_play_tone ( NOTE_FS5, 100 ) ;
-	basicWalker.spin ( 15, spinVector, spinDegree ) ;
+	basicWalker.spin ( 16, spinVector, spinDegree ) ;
 	tslp_tsk ( 100 ) ;
 	// ラインをトレースする
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 	msg_f ( "OK", 9 ) ;
-	basicWalker.goStraight ( 40, nextDistance ) ;
+	if ( connectNumber < 4 && nextPosition != 0 ) {
+		/*
+		basicWalker.goStraight ( 30, nextDistance / 4 ) ;
+		modifiedSpinDegree = 0 ;
+		modifiedSpinVector = SPIN_LEFT ;
+		while ( colorSensor.getBrightness () > 80 ) {
+			tslp_tsk ( 50 ) ;
+			basicWalker.backStraight ( 36, nextDistance / 4 ) ;
+			tslp_tsk ( 50 ) ;
+			modifiedSpinVector *= -1 ;
+			modifiedSpinDegree += 5 ;
+			basicWalker.spin ( 30, modifiedSpinVector, modifiedSpinDegree ) ;
+			basicWalker.goStraight ( 30, nextDistance / 4 ) ;
+		}
+		basicWalker.goStraight ( 30, ( nextDistance / 4 ) * 3 ) ;
+		*/
+		tslp_tsk ( 100 ) ;
+		ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
+		distance.resetDistance ( walker.get_count_L (), walker.get_count_R () ) ;
+		while ( traceDistance < nextDistance || colorSensor.getColorNumber () == COLOR_RED || colorSensor.getColorNumber () == COLOR_BLUE || colorSensor.getColorNumber () == COLOR_GREEN || colorSensor.getColorNumber () == COLOR_YELLOW ) {
+			traceDistance = distance.getDistanceTotal ( walker.get_count_L (), walker.get_count_R () ) ;
+			lineTracer.speedControl.setPid ( 1.0, 0.8, 0.08, 60.0 ) ;
+			lineTracer.turnControl.setPid ( 2.8, 0.8, 0.06, 30.0 ) ;
+			color = colorSensor.getBrightness () ;
+			lineTracer.runLine ( walker.get_count_L (), walker.get_count_R (), color ) ;
+			walker.run( lineTracer.getForward (), lineTracer.getTurn () ) ;
+			tslp_tsk ( 4 ) ;
+		}
+		basicWalker.goStraight ( 10, 60 ) ;
+		walker.run ( 0, 0 ) ;
+		walker.reset () ;
+		tslp_tsk ( 100 ) ;
+	} else {
+		basicWalker.goStraight ( 30, nextDistance ) ;
+	}
 	tslp_tsk ( 100 ) ;
 	ev3_speaker_play_tone ( NOTE_FS5, 100 ) ;
 	tslp_tsk ( 1000 ) ;
@@ -112,18 +149,5 @@ void PuzzleField::testGame ( void ) {
 	
 	basicWalker.goStraight ( 20, 640 ) ;
 	basicWalker.spin ( 10, SPIN_LEFT, 60 ) ;
-	
-	tslp_tsk ( 100 ) ;
-	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
-	distance.resetDistance ( walker.get_count_L (), walker.get_count_R () ) ;
-	while ( traceDistance < 1200 ) {
-		traceDistance = distance.getDistanceTotal ( walker.get_count_L (), walker.get_count_R () ) ;
-		lineTracer.speedControl.setPid ( 1.0, 0.8, 0.08, 60.0 ) ;
-		lineTracer.turnControl.setPid ( 2.8, 0.8, 0.06, 30.0 ) ;
-		color = colorSensor.getBrightness () ;
-		lineTracer.runLine ( walker.get_count_L (), walker.get_count_R (), color ) ;
-		walker.run( lineTracer.getForward (), lineTracer.getTurn () ) ;
-		tslp_tsk ( 4 ) ;
-	}
-	basicWalker.goStraight ( 0, 0 ) ;
+
 }
