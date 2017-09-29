@@ -50,7 +50,7 @@ TEST( SelfLocalizationTest, CalculateTest2 )
         curve(sl, 180, l, r);
     }
     ASSERT_LE(sl.getPointX(), 7.0);
-    ASSERT_LE(sl.getPointY(), 1.0); 
+    ASSERT_LE(sl.getPointY(), 3.0); 
 }
 
 TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder1)
