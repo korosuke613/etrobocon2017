@@ -46,7 +46,7 @@ public:
 	/** コンストラクタ。センサ類の初期化を行う **/
 	RightCourse();
 	/** 各エリアの処理を呼び出す **/
-	void convertArea();
+	void run();
 	/** NormalCourseエリアの処理 **/
 	void runNormalCourse();
 	/** Shinkansenエリアの処理 */
@@ -59,6 +59,7 @@ private:
 	ColorSensor colorSensor;
 	SonarSensor sonarSensor;
 	ShinkansenStatus shinkansenStatus;
+	SelfLocalization sl;	
 };
 
 #endif

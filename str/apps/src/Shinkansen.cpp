@@ -151,26 +151,26 @@ void Shinkansen::colorDetection(){
 }
 
 void Shinkansen::firstPattern(){
-	spinBlack(30, SPIN_RIGHT);
+	spinBlack(30, 1);
 	runColor();
 	colorDetection();
-	spinBlack(30, SPIN_RIGHT);
+	spinBlack(30, 1);
 	runColor();
 	colorDetection();
-	spinBlack(30, SPIN_LEFT);
+	spinBlack(30, -1);
 	runForward(10.0, 240);
-	spinBlack(30, SPIN_LEFT);
+	spinBlack(30, -1);
 	runForward(10.0, 440);
 }
 
 void Shinkansen::secondPattern(){
-	spinBlack(30, SPIN_RIGHT);
+	spinBlack(30, 1);
 	runColor();
 	colorDetection();
-	spinBlack(30, SPIN_LEFT);
+	spinBlack(30, -1);
 	runColor();
 	colorDetection();
-	spinBlack(30, SPIN_RIGHT);
+	spinBlack(30, 1);
 	runForward(10.0, 240);
-	spinBlack(30, SPIN_LEFT);
+	spinBlack(30, -1);
 }

@@ -1,4 +1,6 @@
-
+/*
+$ g++-7 PuzzleCodeConverterTest.cpp ../explorer/PuzzleCodeConverter.cpp gtest_main.o gtest-all.o -I../explorer -I../../googletest/googletest/include
+*/
 #include <gtest/gtest.h>
 #include <PuzzleExplorer.h>
 

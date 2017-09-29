@@ -8,13 +8,14 @@
 RightCourse::RightCourse():
      colorSensor( PORT_3 ), 
      sonarSensor( PORT_2 ),
-     shinkansenStatus(ShinkansenStatus::BEFORE_FIRST_SHINKANSEN){
+     shinkansenStatus(ShinkansenStatus::BEFORE_FIRST_SHINKANSEN),
+     sl(walker.get_count_L(), walker.get_count_R()){
 }
 
 /**
  *Rコースの走行範囲の切り替えを行う
  */
-void RightCourse::convertArea(){
+void RightCourse::run(){
 	//runNormalCourse();
     runShinkansen();
 	//Park
@@ -79,7 +80,7 @@ void RightCourse::runShinkansen(){
                 break;
         	case ShinkansenStatus::PRIZE:
         		basicWalker.backStraight(10, 230);
-        		basicWalker.spin(10, SPIN_RIGHT, 90);
+        		basicWalker.spin(10, 1, 90);
         		lifter.liftDown();
         		lifter.reset();
         		lifter.defaultSet(-10);
@@ -94,14 +95,14 @@ void RightCourse::runShinkansen(){
         		lifter.changeDefault(40);
         		lifter.defaultSet(40);
         		basicWalker.backStraight(10, 400);
-        		basicWalker.spin(10, SPIN_LEFT, 90);
+        		basicWalker.spin(10, -1, 90);
         		basicWalker.goStraight(40, 800);
         		lifter.liftUp();
-        		basicWalker.spin(30, SPIN_RIGHT, 90);
+        		basicWalker.spin(30, 1, 90);
 				basicWalker.goStraight(10, 180);
         		lifter.changeDefault(-10);
         		basicWalker.backStraight(10, 200);
-        		shinkansen.spinBlack(30, SPIN_LEFT);
+        		shinkansen.spinBlack(30, -1);
         		lifter.liftDown();
         		lifter.reset();
         		shinkansenStatus = ShinkansenStatus::STOP;
@@ -123,12 +124,9 @@ void RightCourse::runShinkansen(){
 void RightCourse::runNormalCourse(){
 	RightNormalCourse normalCourse;
     bool isNormalCourse;
-    /** 自己位置推定 インスタンス 初期化*/
-    SelfLocalization sl;
     // NormalCourseを抜けるまでループする
 	while ( 1 ) {
-        sl.update();
-        sl.writing_current_coordinates();
+        sl.update(walker.get_count_L(), walker.get_count_R());
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
         isNormalCourse = normalCourse.runNormalCourse();
         normalCourse.lineTracerWalker.runLine(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());

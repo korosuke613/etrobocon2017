@@ -1,10 +1,14 @@
 *.o
 *.gch
 *.out
+*.out.dSYM
 *.exe
 googletest
 .vscode
 app
+app_left
+app_right
+hrp2
 .cproject
 .project
 *.csv
@@ -12,3 +16,9 @@ appsのエイリアス
 html
 latex
 docs
+sl.data
+traveling_route*
+*.a
+*.swp
+*.lnk
+uImage
