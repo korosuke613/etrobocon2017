@@ -22,12 +22,12 @@ PuzzleField.o\
 BasicWalker.o \
 UserInterface.o \
 FirstCode.o \
-PuzzleLineTracer.o\
 Navigation.o \
 Block.o \
 Node.o \
-PuzzleCodeConverter.o
-#PuzzleExplorer.o
+PuzzleCodeConverter.o \
+Parking.o
+# PuzzleExplorer.o \
 
 SRCLANG := c++
 
