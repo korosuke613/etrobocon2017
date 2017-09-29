@@ -49,7 +49,7 @@ TEST( SelfLocalizationTest, CalculateTest2 )
         straight(sl, 20, l, r);
         curve(sl, 180, l, r);
     }
-    ASSERT_LE(sl.getPointX(), 1.0);
+    ASSERT_LE(sl.getPointX(), 7.0);
     ASSERT_LE(sl.getPointY(), 1.0); 
 }
 
