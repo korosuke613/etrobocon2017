@@ -18,6 +18,8 @@ NormalCourse.o \
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
     RightCourse.o \
+    BasicWalker.o \
+    Shinkansen.o \
 
 endif
 
