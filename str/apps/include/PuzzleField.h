@@ -8,27 +8,13 @@
 #include "LineTracerWalker.h"
 #include "BasicWalker.h"
 
-#define X -1
-
-#define PUZZLE_POSITION_CURRENT 16
-#define PUZZLE_POSITION_NEXT    16
-#define PUZZLE_POSITION_DESTINATE 9
-#define PUZZLE_POLAR_COODINATE 2
-
-#define DEGREE   0
-#define DISTANCE 1
-
-#define PUZZLE_LINE_LONG      1100
-#define PUZZLE_LINE_NORMAL     920
-#define PUZZLE_LINE_SHORT      660
-#define PUZZLE_LINE_VERY_SHORT 345
-
 using namespace ev3api;
 
 class PuzzleField {
 public:
 	PuzzleField () ;
 	void preparatePuzzle ( void ) ;
+	void testRun ( void ) ;
 	void testGame ( void ) ;
 
 private:
@@ -37,6 +23,17 @@ private:
 	ColorSensor colorSensor;
 	LineTracerWalker lineTracer;
 	Distance distance;
+	static const int8_t X = -1 ;
+	static const int8_t PUZZLE_POSITION_CURRENT   = 16 ;
+	static const int8_t PUZZLE_POSITION_NEXT      = 16 ;
+	static const int8_t PUZZLE_POSITION_DESTINATE =  9 ;
+	static const int8_t PUZZLE_POLAR_COODINATE    =  2 ;
+	static const int8_t DEGREE = 0 ;
+	static const int8_t DISTANCE = 1 ;
+	static const int PUZZLE_LINE_LONG       = 1100 ;
+	static const int PUZZLE_LINE_NORMAL     =  920 ;
+	static const int PUZZLE_LINE_SHORT      =  645 ;
+	static const int PUZZLE_LINE_VERY_SHORT =  345 ;
 	int modifiedSpinVector ;
 	int32_t modifiedSpinDegree ;
 	int8_t color ;
@@ -53,7 +50,7 @@ private:
 	int32_t spinDegree ;
 	bool spinVector ;
 	int8_t connectNumberManager[PUZZLE_POSITION_CURRENT][PUZZLE_POSITION_NEXT] = {
-	/* 接続ノード番号付与テーブル　( 'X'は非接続を示す )                                        */
+	/* 接続ノード番号付与テーブル　( 'X'は非接続を示す )                                       */
 	/*                                     N E X T                               */
 	/*            0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, */
 	/*      0 */{ X,  X,  X,  X,  X,  X,  0,  X,  1,  2,  X,  X,  X,  3,  4,  X },

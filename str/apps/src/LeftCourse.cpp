@@ -42,9 +42,7 @@ void LeftCourse::run(){
     */
 
 	runNormalCourse();
-    //msg_f("Finish NormalCourse", 3);
-  
-  msg_f("Finished NormalArea", 3);
+    msg_f("Finished NormalArea", 3);
   
 	// Puzzle
     runBlockRange();
