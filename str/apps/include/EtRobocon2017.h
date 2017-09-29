@@ -14,7 +14,8 @@
 #include "UserInterface.h"
 #include "LeftCourse.h"
 #include "RightCourse.h"
-#include "basicWalker.h"
+#include "BasicWalker.h"
+#include "PuzzleField.h"
 
 
 using namespace ev3api;

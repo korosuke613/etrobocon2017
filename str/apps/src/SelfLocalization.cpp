@@ -23,6 +23,7 @@ SelfLocalization::SelfLocalization (std::int32_t left_motor_sl, std::int32_t rig
   moving_distance_mean = 0;
   turning_angle = 0;
   current_x = current_y = current_angle = 0;
+  errno = 0;
   isSave = save;
 }
 
