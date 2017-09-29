@@ -8,8 +8,11 @@
 LeftCourse::LeftCourse():
     colorSensor( PORT_3 ), 
     sl(walker.get_count_L(), walker.get_count_R(), true),
-    navi(walker.get_count_L(), walker.get_count_R()){
-    
+    navi(walker.get_count_L(), walker.get_count_R()) {
+}
+
+void LeftCourse::setFirstCode( int32_t code ) {
+    firstCode = code;
 }
 
 /**
@@ -39,24 +42,26 @@ void LeftCourse::run(){
 	runNormalCourse();
     //msg_f("Finish NormalCourse", 3);
   
-	// Puzzle
-	PuzzleField puzzleField ;
-	
-	puzzleField.testGame () ;
+  msg_f("Finished NormalArea", 3);
   
+	// Puzzle
+    runBlockRange();
+    msg_f("Finished BlockRange", 3);
   
 	// Park
+    runParallelParking();
+    msg_f("Finished ParallelParking", 3);
 }
 
 void LeftCourse::runNormalCourse(){
-   	LeftNormalCourse normalCourse;
-      bool isNormalCourse;
+    LeftNormalCourse normalCourse;
+    bool isNormalCourse;
     // NormalCourseを抜けるまでループする
-	  while ( 1 ) {
+    while ( 1 ) {
         sl.update(walker.get_count_L(), walker.get_count_R());
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
         isNormalCourse = normalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
-        
+
         if(normalCourse.lineTracerWalker.getForward() < 0){
             walker.run(0, 0);
         }else{
@@ -70,7 +75,7 @@ void LeftCourse::runNormalCourse(){
             walker.run(0, 0);
             break;
         }
-        
+
         tslp_tsk(4); // 4msec周期起動
     }
 }
@@ -107,4 +112,15 @@ void LeftCourse::runTyokusen(float _start_x, float _start_y, float _goal_x, floa
     walker.run(0, 0);    
     tslp_tsk(100); // 4msec周期起動    
     ev3_speaker_play_tone (NOTE_FS6, 100);
+}
+
+void LeftCourse::runBlockRange(){
+	PuzzleField puzzleField ;
+	
+	puzzleField.testGame () ;
+}
+
+void LeftCourse::runParallelParking(){
+    Parking parking;
+    parking.runParallel();
 }

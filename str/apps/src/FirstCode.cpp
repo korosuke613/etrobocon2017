@@ -1,5 +1,5 @@
 /**
- * @file FirstCode.h
+ * @file FirstCode.cpp
  * @brief 初期位置コードクラス
  * @author Keisuke MORI
  */
