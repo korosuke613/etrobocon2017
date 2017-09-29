@@ -6,6 +6,11 @@
 #ifndef __ETROBOCON2017__
 #define __ETROBOCON2017__
 
+//この下の行のコメントは消すな！
+//変更してもいけない
+//#define IS_RIGHT_COURSE
+
+#include "settings.h"
 #include "ev3api.h"
 #include "TouchSensor.h"
 #include "SonarAlert.h"
@@ -39,9 +44,14 @@ private:
     int8_t light_white;
     int8_t light_black;
     int32_t firstCode;
-    LeftCourse leftCourse;    
+
+#ifdef IS_RIGHT_COURSE
     RightCourse rightCourse;
+#else
+    LeftCourse leftCourse;  
     UserInterface ui;
+#endif  
+
 };
 
 #endif

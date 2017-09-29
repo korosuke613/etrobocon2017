@@ -7,6 +7,8 @@
 #ifndef __LEFT_COURSE__
 #define __LEFT_COURSE__
 
+#define IS_SHORT_CUT 0
+
 #include "Walker.h"
 #include "ColorSensor.h"
 #include "LeftNormalCourse.h"
@@ -36,9 +38,10 @@ public:
 	/** 各エリアの処理を呼び出す */
 	void run();
 	/** NormalCourseエリアの処理 */
-	void runNormalCourse();
+    void runNormalCourse();
+#if IS_SHORT_CUT
 	void runTyokusen(float, float, float, float, bool);
-
+#endif
     /**
      * ブロック並べを行う。
      * PuzzleFieldクラスに依存する。
@@ -56,8 +59,9 @@ private:
     ColorSensor colorSensor;
     /** 自己位置推定 インスタンス 初期化*/
 	SelfLocalization sl;
-	Navigation navi;    	
-
+#if IS_SHORT_CUT
+    Navigation navi;    	
+#endif
     /**
      * UserInterfaceの初期位置コードを記録する。
      * ブロック並べに用いる。

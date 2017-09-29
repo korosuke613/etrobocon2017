@@ -6,9 +6,11 @@
 #include "LeftCourse.h"
 
 LeftCourse::LeftCourse():
+#if IS_SHORT_CUT
+    navi(walker.get_count_L(), walker.get_count_R())
+#endif
     colorSensor( PORT_3 ), 
-    sl(walker.get_count_L(), walker.get_count_R(), true),
-    navi(walker.get_count_L(), walker.get_count_R()) {
+    sl(walker.get_count_L(), walker.get_count_R(), true){
 }
 
 void LeftCourse::setFirstCode( int32_t code ) {
@@ -78,6 +80,7 @@ void LeftCourse::runNormalCourse(){
     }
 }
 
+#if IS_SHORT_CUT
 void LeftCourse::runTyokusen(float _start_x, float _start_y, float _goal_x, float _goal_y, bool _isBack){
     bool isEndAngle = false;
     int minus = 1;
@@ -111,6 +114,7 @@ void LeftCourse::runTyokusen(float _start_x, float _start_y, float _goal_x, floa
     tslp_tsk(100); // 4msec周期起動    
     ev3_speaker_play_tone (NOTE_FS6, 100);
 }
+#endif
 
 void LeftCourse::runBlockRange(){
 	PuzzleField puzzleField ;
