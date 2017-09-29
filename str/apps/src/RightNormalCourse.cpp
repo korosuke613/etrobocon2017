@@ -34,7 +34,7 @@ bool RightNormalCourse::runNormalCourse(){
             lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, 35.0 );
             break;
         case RightStatus::CURVE_LEFT_SHORT_SLOW: 
-            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 40.0 );
+            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 30.0 );
             lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, 35.0 );
             break;
         case RightStatus::CURVE_LEFT: 
