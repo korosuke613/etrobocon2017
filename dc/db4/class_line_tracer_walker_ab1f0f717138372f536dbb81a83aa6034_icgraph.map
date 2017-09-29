@@ -2,9 +2,10 @@
 <area shape="rect" id="node2" href="$d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="344,5,394,31"/>
 <area shape="rect" id="node3" href="$d5/ddb/class_left_normal_course.html#a5a07e4b41de72aaaff4796d286589902" title="LeftNormalCourse::LeftNormal\lCourse" alt="" coords="268,55,470,93"/>
 <area shape="rect" id="node4" href="$d5/ddb/class_left_normal_course.html#a8a9bb16c15fdf4b3fa8b2618813d7df8" title="LeftNormalCourse::runNormal\lCourse" alt="" coords="269,117,469,156"/>
-<area shape="rect" id="node9" href="$da/d2d/class_navigation.html#a1475bf04744151b0787a738c7abe8dcd" title="Navigation::Navigation" alt="" coords="292,180,446,205"/>
-<area shape="rect" id="node10" href="$d2/d87/class_puzzle_line_tracer.html#a2a91d0db7dc4f176783548894e9eb3a5" title="PuzzleLineTracer::Puzzle\lLineTracer" alt="" coords="283,229,455,268"/>
-<area shape="rect" id="node11" href="$d4/d58/class_right_normal_course.html#a889f1172fbab1bbcd67bcf27f4d619e7" title="RightNormalCourse::\lRightNormalCourse" alt="" coords="296,292,442,331"/>
+<area shape="rect" id="node9" href="$da/d2d/class_navigation.html#a6f58dbb1765e51b3d123921b0744ce3e" title="Navigation::Navigation" alt="" coords="292,180,446,205"/>
+<area shape="rect" id="node10" href="$d1/d15/class_puzzle_field.html#ab51924c52e293fa9e13ee107d792b58a" title="PuzzleField::PuzzleField" alt="" coords="286,229,452,255"/>
+<area shape="rect" id="node11" href="$d2/d87/class_puzzle_line_tracer.html#a2a91d0db7dc4f176783548894e9eb3a5" title="PuzzleLineTracer::Puzzle\lLineTracer" alt="" coords="283,279,455,317"/>
+<area shape="rect" id="node12" href="$d4/d58/class_right_normal_course.html#a889f1172fbab1bbcd67bcf27f4d619e7" title="RightNormalCourse::\lRightNormalCourse" alt="" coords="296,341,442,380"/>
 <area shape="rect" id="node5" href="$da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="518,124,717,149"/>
 <area shape="rect" id="node6" href="$da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="765,124,878,149"/>
 <area shape="rect" id="node7" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="926,124,1076,149"/>

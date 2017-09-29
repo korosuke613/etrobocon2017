@@ -1,0 +1,12 @@
+<map id="str/apps/include/BlockColor.h" name="str/apps/include/BlockColor.h">
+<area shape="rect" id="node2" href="$d0/d0f/include_2_block_8h.html" title="str/apps/include/Block.h" alt="" coords="209,85,372,111"/>
+<area shape="rect" id="node6" href="$d4/d42/include_2_node_8h.html" title="str/apps/include/Node.h" alt="" coords="419,85,581,111"/>
+<area shape="rect" id="node8" href="$de/d9a/include_2_puzzle_code_converter_8h.html" title="str/apps/include/PuzzleCode\lConverter.h" alt="" coords="617,79,807,117"/>
+<area shape="rect" id="node10" href="$dc/d76/include_2_target_figure_8h.html" title="str/apps/include/TargetFigure.h" alt="" coords="848,85,1053,111"/>
+<area shape="rect" id="node3" href="$de/dc8/include_2_puzzle_explorer_8h.html" title="str/apps/include/PuzzleExplorer.h" alt="" coords="181,165,400,191"/>
+<area shape="rect" id="node5" href="$d5/dd1/src_2_block_8cpp.html" title="str/apps/src/Block.cpp" alt="" coords="5,165,157,191"/>
+<area shape="rect" id="node4" href="$d0/d38/src_2_puzzle_explorer_8cpp.html" title="str/apps/src/PuzzleExplorer.cpp" alt="" coords="186,239,395,264"/>
+<area shape="rect" id="node7" href="$df/d07/src_2_node_8cpp.html" title="str/apps/src/Node.cpp" alt="" coords="424,165,575,191"/>
+<area shape="rect" id="node9" href="$d7/d1f/src_2_puzzle_code_converter_8cpp.html" title="str/apps/src/PuzzleCodeConverter.cpp" alt="" coords="599,165,848,191"/>
+<area shape="rect" id="node11" href="$dd/d51/src_2_target_figure_8cpp.html" title="str/apps/src/TargetFigure.cpp" alt="" coords="872,165,1066,191"/>
+</map>

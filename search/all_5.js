@@ -13,6 +13,7 @@ var searchData=
   ['etrobocon2017_2ecpp',['EtRobocon2017.cpp',['../d5/d67/_et_robocon2017_8cpp.html',1,'']]],
   ['etrobocon2017_2eh',['EtRobocon2017.h',['../d2/dd3/_et_robocon2017_8h.html',1,'']]],
   ['ev3api',['ev3api',['../da/da4/namespaceev3api.html',1,'']]],
+  ['evaluate',['evaluate',['../d7/d02/class_target_figure.html#a169ea8cbc6539ab6e3cdee8b82ace670',1,'TargetFigure::evaluate()'],['../d7/d02/class_target_figure.html#a169ea8cbc6539ab6e3cdee8b82ace670',1,'TargetFigure::evaluate()']]],
   ['example_5fnavigation_2ecpp',['example_Navigation.cpp',['../db/d71/example___navigation_8cpp.html',1,'']]],
   ['example_5fselflocalization_2ecpp',['example_SelfLocalization.cpp',['../d0/d72/example___self_localization_8cpp.html',1,'']]],
   ['example_5fspeedcontrol_2ecpp',['example_SpeedControl.cpp',['../d9/da4/example___speed_control_8cpp.html',1,'']]],

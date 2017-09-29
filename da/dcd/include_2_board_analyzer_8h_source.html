@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/apps/include/BoardAnalyzer.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="../../dir_716c0c37d4fad24b6b8f48e824f3bc1d.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">BoardAnalyzer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/dcd/include_2_board_analyzer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _INC_BOARD_ANALYZER</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _INC_BOARD_ANALYZER</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d8c/class_board_analyzer.html">BoardAnalyzer</a></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="../../de/d8c/class_board_analyzer.html#acac7124a2c66d2255436f7f71714f40d">BoardAnalyzer</a>();</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="../../de/d8c/class_board_analyzer.html#a8de0c80c64df26da8ed83e45600acec2">~BoardAnalyzer</a>();</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">void</span> <span class="keyword">set</span>(<span class="keywordtype">int</span>* initPositions);</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../de/d8c/class_board_analyzer.html#abf1af2146b481cb824a4d6f81b517966">getInLeftSquareCount</a>();</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../de/d8c/class_board_analyzer.html#ac3e4e2ec86c6287e8cfeaa96b1b08a8a">getExchangePattern</a>();</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    </div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span> *positions;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> leftSquare[5] = {0, 1, 5, 2, 10};</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif //_INC_BOARD_ANALYZER</span></div><div class="ttc" id="class_board_analyzer_html_ac3e4e2ec86c6287e8cfeaa96b1b08a8a"><div class="ttname"><a href="../../de/d8c/class_board_analyzer.html#ac3e4e2ec86c6287e8cfeaa96b1b08a8a">BoardAnalyzer::getExchangePattern</a></div><div class="ttdeci">bool getExchangePattern()</div></div>
+<div class="ttc" id="class_board_analyzer_html"><div class="ttname"><a href="../../de/d8c/class_board_analyzer.html">BoardAnalyzer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d3f/explorer_2_board_analyzer_8h_source.html#l00004">BoardAnalyzer.h:4</a></div></div>
+<div class="ttc" id="class_board_analyzer_html_acac7124a2c66d2255436f7f71714f40d"><div class="ttname"><a href="../../de/d8c/class_board_analyzer.html#acac7124a2c66d2255436f7f71714f40d">BoardAnalyzer::BoardAnalyzer</a></div><div class="ttdeci">BoardAnalyzer()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d92/explorer_2_board_analyzer_8cpp_source.html#l00003">BoardAnalyzer.cpp:3</a></div></div>
+<div class="ttc" id="class_board_analyzer_html_a8de0c80c64df26da8ed83e45600acec2"><div class="ttname"><a href="../../de/d8c/class_board_analyzer.html#a8de0c80c64df26da8ed83e45600acec2">BoardAnalyzer::~BoardAnalyzer</a></div><div class="ttdeci">~BoardAnalyzer()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d92/explorer_2_board_analyzer_8cpp_source.html#l00008">BoardAnalyzer.cpp:8</a></div></div>
+<div class="ttc" id="class_board_analyzer_html_abf1af2146b481cb824a4d6f81b517966"><div class="ttname"><a href="../../de/d8c/class_board_analyzer.html#abf1af2146b481cb824a4d6f81b517966">BoardAnalyzer::getInLeftSquareCount</a></div><div class="ttdeci">int getInLeftSquareCount()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d92/explorer_2_board_analyzer_8cpp_source.html#l00020">BoardAnalyzer.cpp:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

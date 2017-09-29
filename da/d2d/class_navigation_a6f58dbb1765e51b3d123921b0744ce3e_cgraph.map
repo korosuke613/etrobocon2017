@@ -1,0 +1,6 @@
+<map id="Navigation::Navigation" name="Navigation::Navigation">
+<area shape="rect" id="node2" href="$dc/de1/class_pid.html#aa8626402086bcd10cbb7f581c92300fb" title="Pid::setPid" alt="" coords="273,5,358,31"/>
+<area shape="rect" id="node3" href="$dc/db4/class_line_tracer_walker.html#ab1f0f717138372f536dbb81a83aa6034" title="LineTracerWalker::isLeftsideLine" alt="" coords="208,55,423,80"/>
+<area shape="rect" id="node4" href="$da/d2d/class_navigation.html#aca35987cb1196a6ed95eecc97fb66f67" title="Navigation::setLine" alt="" coords="248,104,383,129"/>
+<area shape="rect" id="node5" href="$d4/ddb/class_self_localization.html#ab1529f9d1a7c6729ec771702e3174bc4" title="SelfLocalization::calculate\l_between_ev3_and_border" alt="" coords="223,153,407,192"/>
+</map>

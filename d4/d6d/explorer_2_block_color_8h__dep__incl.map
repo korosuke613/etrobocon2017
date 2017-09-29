@@ -1,0 +1,12 @@
+<map id="str/apps/explorer/BlockColor.h" name="str/apps/explorer/BlockColor.h">
+<area shape="rect" id="node2" href="$d8/d59/explorer_2_block_8h.html" title="str/apps/explorer/Block.h" alt="" coords="210,85,378,111"/>
+<area shape="rect" id="node6" href="$d9/d9a/explorer_2_node_8h.html" title="str/apps/explorer/Node.h" alt="" coords="407,85,575,111"/>
+<area shape="rect" id="node8" href="$d1/d2f/explorer_2_puzzle_code_converter_8h.html" title="str/apps/explorer/Puzzle\lCodeConverter.h" alt="" coords="602,79,767,117"/>
+<area shape="rect" id="node10" href="$da/d52/explorer_2_target_figure_8h.html" title="str/apps/explorer/Target\lFigure.h" alt="" coords="792,79,953,117"/>
+<area shape="rect" id="node3" href="$d2/d4c/explorer_2_block_8cpp.html" title="str/apps/explorer/Block.cpp" alt="" coords="5,172,187,197"/>
+<area shape="rect" id="node4" href="$dc/db8/explorer_2_puzzle_explorer_8h.html" title="str/apps/explorer/Puzzle\lExplorer.h" alt="" coords="212,165,376,204"/>
+<area shape="rect" id="node5" href="$da/d68/explorer_2_puzzle_explorer_8cpp.html" title="str/apps/explorer/Puzzle\lExplorer.cpp" alt="" coords="212,252,376,291"/>
+<area shape="rect" id="node7" href="$d8/d46/explorer_2_node_8cpp.html" title="str/apps/explorer/Node.cpp" alt="" coords="400,172,582,197"/>
+<area shape="rect" id="node9" href="$de/d8e/explorer_2_puzzle_code_converter_8cpp.html" title="str/apps/explorer/Puzzle\lCodeConverter.cpp" alt="" coords="606,165,771,204"/>
+<area shape="rect" id="node11" href="$d3/d38/explorer_2_target_figure_8cpp.html" title="str/apps/explorer/Target\lFigure.cpp" alt="" coords="794,165,956,204"/>
+</map>

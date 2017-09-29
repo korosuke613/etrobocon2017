@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/apps/explorer/Block.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="../../dir_33f1b902ad8fadada0a9d0a9c6e7ad74.html">explorer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Block.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/d59/explorer_2_block_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _INC_BLOCK</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _INC_BLOCK</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d3b/explorer_2_block_color_8h.html">BlockColor.h</a>&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d2/df8/class_block.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/df8/class_block.html">Block</a>{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> position;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="../../d2/d3b/explorer_2_block_color_8h.html#aab797d2c5a77341e7ee17eac46d7d6d7">BlockColor</a> color;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../d2/df8/class_block.html#a76fbfd04573d87f7a697364d9db79abf">Block</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d2/df8/class_block.html#a76fbfd04573d87f7a697364d9db79abf">Block</a>(<span class="keywordtype">int</span> nodeNum);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df8/class_block.html#ad107ef5bdac456d4a27b86cf6d8efa91">setPosition</a>(<span class="keywordtype">int</span> nodeNum);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df8/class_block.html#ad8fbdf80726d6c288b41ee6eb67b7518">setColor</a>(<a class="code" href="../../d2/d3b/explorer_2_block_color_8h.html#aab797d2c5a77341e7ee17eac46d7d6d7">BlockColor</a> blockColor);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d2/df8/class_block.html#aa73a01a0aab27c9de18f3c67e0530808">getPosition</a>();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../d2/d3b/explorer_2_block_color_8h.html#aab797d2c5a77341e7ee17eac46d7d6d7">BlockColor</a> <a class="code" href="../../d2/df8/class_block.html#aca08046101ad698ae582b7a0add11f9e">getBlockColor</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../d2/df8/class_block.html#a19d1bd0e1cef6a865ed2745a2e648405">~Block</a>();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif //INC_BLOCK</span></div><div class="ttc" id="class_block_html_aa73a01a0aab27c9de18f3c67e0530808"><div class="ttname"><a href="../../d2/df8/class_block.html#aa73a01a0aab27c9de18f3c67e0530808">Block::getPosition</a></div><div class="ttdeci">int getPosition()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4c/explorer_2_block_8cpp_source.html#l00024">Block.cpp:24</a></div></div>
+<div class="ttc" id="class_block_html_a19d1bd0e1cef6a865ed2745a2e648405"><div class="ttname"><a href="../../d2/df8/class_block.html#a19d1bd0e1cef6a865ed2745a2e648405">Block::~Block</a></div><div class="ttdeci">~Block()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4c/explorer_2_block_8cpp_source.html#l00012">Block.cpp:12</a></div></div>
+<div class="ttc" id="explorer_2_block_color_8h_html_aab797d2c5a77341e7ee17eac46d7d6d7"><div class="ttname"><a href="../../d2/d3b/explorer_2_block_color_8h.html#aab797d2c5a77341e7ee17eac46d7d6d7">BlockColor</a></div><div class="ttdeci">BlockColor</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3b/explorer_2_block_color_8h_source.html#l00005">BlockColor.h:5</a></div></div>
+<div class="ttc" id="explorer_2_block_color_8h_html"><div class="ttname"><a href="../../d2/d3b/explorer_2_block_color_8h.html">BlockColor.h</a></div></div>
+<div class="ttc" id="class_block_html_a76fbfd04573d87f7a697364d9db79abf"><div class="ttname"><a href="../../d2/df8/class_block.html#a76fbfd04573d87f7a697364d9db79abf">Block::Block</a></div><div class="ttdeci">Block()=default</div></div>
+<div class="ttc" id="class_block_html_ad8fbdf80726d6c288b41ee6eb67b7518"><div class="ttname"><a href="../../d2/df8/class_block.html#ad8fbdf80726d6c288b41ee6eb67b7518">Block::setColor</a></div><div class="ttdeci">void setColor(BlockColor blockColor)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4c/explorer_2_block_8cpp_source.html#l00019">Block.cpp:19</a></div></div>
+<div class="ttc" id="class_block_html"><div class="ttname"><a href="../../d2/df8/class_block.html">Block</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d59/explorer_2_block_8h_source.html#l00009">Block.h:9</a></div></div>
+<div class="ttc" id="class_block_html_ad107ef5bdac456d4a27b86cf6d8efa91"><div class="ttname"><a href="../../d2/df8/class_block.html#ad107ef5bdac456d4a27b86cf6d8efa91">Block::setPosition</a></div><div class="ttdeci">void setPosition(int nodeNum)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4c/explorer_2_block_8cpp_source.html#l00014">Block.cpp:14</a></div></div>
+<div class="ttc" id="class_block_html_aca08046101ad698ae582b7a0add11f9e"><div class="ttname"><a href="../../d2/df8/class_block.html#aca08046101ad698ae582b7a0add11f9e">Block::getBlockColor</a></div><div class="ttdeci">BlockColor getBlockColor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4c/explorer_2_block_8cpp_source.html#l00029">Block.cpp:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

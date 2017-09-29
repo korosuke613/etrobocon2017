@@ -1,6 +1,3 @@
 <map id="Distance::getDistanceCurrent" name="Distance::getDistanceCurrent">
 <area shape="rect" id="node2" href="$d2/d87/class_puzzle_line_tracer.html#a970a4c69f253b85f9df0a5c1757b05f7" title="PuzzleLineTracer::puzzle\lLineTrace" alt="" coords="249,5,419,44"/>
-<area shape="rect" id="node3" href="$da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="467,12,581,37"/>
-<area shape="rect" id="node4" href="$d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="629,12,778,37"/>
-<area shape="rect" id="node5" href="$d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="826,12,976,37"/>
 </map>

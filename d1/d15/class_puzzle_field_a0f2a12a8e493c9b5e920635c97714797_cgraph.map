@@ -1,0 +1,9 @@
+<map id="PuzzleField::testGame" name="PuzzleField::testGame">
+<area shape="rect" id="node2" href="$dc/d1b/class_basic_walker.html#a44caadc89689b322fe9ec4c89600c4a7" title="BasicWalker::goStraight" alt="" coords="209,85,372,110"/>
+<area shape="rect" id="node8" href="$dc/d1b/class_basic_walker.html#afa1f765784b080a8eb0a2f600d73cac4" title="BasicWalker::spin" alt="" coords="227,134,354,160"/>
+<area shape="rect" id="node3" href="$da/d61/classev3api_1_1_motor.html#ad523541d8a7319ae905dc17ff7c2ffad" title="ev3api::Motor::reset" alt="" coords="432,36,571,61"/>
+<area shape="rect" id="node4" href="$db/d57/sample_2util_8cpp.html#a0a6d184db0f324ec8dfdd059b9b526a8" title="msg_f" alt="" coords="473,85,531,110"/>
+<area shape="rect" id="node5" href="$da/d61/classev3api_1_1_motor.html#aefbceb61e09c200e813d03985aedc8df" title="ev3api::Motor::setBrake" alt="" coords="421,134,583,160"/>
+<area shape="rect" id="node6" href="$da/d61/classev3api_1_1_motor.html#ae744997c22ab078a068eddc2692adf19" title="ev3api::Motor::setPWM" alt="" coords="632,134,791,160"/>
+<area shape="rect" id="node7" href="$da/d61/classev3api_1_1_motor.html#a7469f26b239b91c0a58a6ef3f783d72a" title="ev3api::Motor::getCount" alt="" coords="420,184,584,209"/>
+</map>

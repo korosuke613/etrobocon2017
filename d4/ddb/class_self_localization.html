@@ -60,6 +60,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
 <a href="../../df/daf/class_self_localization-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
 <div class="title">SelfLocalization クラス</div>  </div>
@@ -71,6 +72,8 @@ $(function() {
 SelfLocalization 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d1d/class_self_localization__coll__graph.png" border="0" usemap="#_self_localization_coll__map" alt="Collaboration graph"/></div>
+<map name="_self_localization_coll__map" id="_self_localization_coll__map">
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -99,12 +102,21 @@ SelfLocalization 連携図</div>
 <tr class="separator:ab1529f9d1a7c6729ec771702e3174bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfc0d573399ac0f96e4d909807562888"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#adfc0d573399ac0f96e4d909807562888">file_close</a> ()</td></tr>
 <tr class="separator:adfc0d573399ac0f96e4d909807562888"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c3a8eb44703b39ee70ca452ef570cb6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a2c3a8eb44703b39ee70ca452ef570cb6">is_over_normal_vector</a> (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y)</td></tr>
-<tr class="separator:a2c3a8eb44703b39ee70ca452ef570cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55291484c632478e4082d898c4b779aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a55291484c632478e4082d898c4b779aa">init_normal_vector</a> (float _start_x, float _start_y, float _goal_x, float _goal_y, float _current_x, float _current_y)</td></tr>
+<tr class="separator:a55291484c632478e4082d898c4b779aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b0e878f693afaafd5dbf756e1347493"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a9b0e878f693afaafd5dbf756e1347493">is_over_normal_vector</a> (float _current_x, float _current_y)</td></tr>
+<tr class="separator:a9b0e878f693afaafd5dbf756e1347493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea475599c77503b159c98779ade302b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a8ea475599c77503b159c98779ade302b">calculate_current_angle</a> ()</td></tr>
+<tr class="separator:a8ea475599c77503b159c98779ade302b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a47c7428cb256bec359853ef9b8c9476e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_self_localization.html#a47c7428cb256bec359853ef9b8c9476e">current_angle_degree</a></td></tr>
+<tr class="separator:a47c7428cb256bec359853ef9b8c9476e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock">
-<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00042">42</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00043">43</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a2f85240baca6e921eccd0713444e8ec9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f85240baca6e921eccd0713444e8ec9">&#9670;&nbsp;</a></span>SelfLocalization()</h2>
@@ -175,7 +187,7 @@ SelfLocalization 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00067">67</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00068">68</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -237,20 +249,50 @@ SelfLocalization 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00080">80</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00081">81</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/ddb/class_self_localization_ab1529f9d1a7c6729ec771702e3174bc4_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_ab1529f9d1a7c6729ec771702e3174bc4_icgraph" alt=""/></div>
 <map name="d4/ddb/class_self_localization_ab1529f9d1a7c6729ec771702e3174bc4_icgraph" id="d4/ddb/class_self_localization_ab1529f9d1a7c6729ec771702e3174bc4_icgraph">
 <area shape="rect" id="node2" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="308,5,358,31"/>
-<area shape="rect" id="node3" href="../../da/d2d/class_navigation.html#a1475bf04744151b0787a738c7abe8dcd" title="Navigation::Navigation" alt="" coords="256,55,411,80"/>
+<area shape="rect" id="node3" href="../../da/d2d/class_navigation.html#a6f58dbb1765e51b3d123921b0744ce3e" title="Navigation::Navigation" alt="" coords="256,55,411,80"/>
 <area shape="rect" id="node4" href="../../da/d2d/class_navigation.html#a649ad016379f15bea98c5f4dcedd3914" title="Navigation::getDiffLine" alt="" coords="256,104,411,129"/>
 <area shape="rect" id="node9" href="../../d4/ddb/class_self_localization.html#a5e2c24bc3c33228450fa316c005ade32" title="SelfLocalization::approached\l_target_coordinates" alt="" coords="237,153,430,192"/>
-<area shape="rect" id="node5" href="../../da/d2d/class_navigation.html#a24313ef9332e005e7d47beb0636b9ca6" title="Navigation::calculateValue" alt="" coords="478,104,655,129"/>
-<area shape="rect" id="node6" href="../../db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="768,79,809,104"/>
-<area shape="rect" id="node8" href="../../da/d29/class_left_course.html#af963a96bb4c84876554c08bf5276899a" title="LeftCourse::runTyokusen" alt="" coords="703,128,873,153"/>
-<area shape="rect" id="node7" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="921,79,972,104"/>
+<area shape="rect" id="node5" href="../../db/d71/example___navigation_8cpp.html#af7f23982a821eb64e5a9742b95f90c02" title="run" alt="" coords="768,80,809,105"/>
+<area shape="rect" id="node7" href="../../da/d29/class_left_course.html#a921ff4bd9534f6aa7f54f66f1d291e30" title="LeftCourse::runTyokusen" alt="" coords="703,129,873,155"/>
+<area shape="rect" id="node8" href="../../da/d2d/class_navigation.html#a762c2306462b80ac1a19c3de524096ee" title="Navigation::calculateValue" alt="" coords="478,104,655,129"/>
+<area shape="rect" id="node6" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="921,80,972,105"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8ea475599c77503b159c98779ade302b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ea475599c77503b159c98779ade302b">&#9670;&nbsp;</a></span>calculate_current_angle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelfLocalization::calculate_current_angle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00091">91</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/ddb/class_self_localization_a8ea475599c77503b159c98779ade302b_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_a8ea475599c77503b159c98779ade302b_icgraph" alt=""/></div>
+<map name="d4/ddb/class_self_localization_a8ea475599c77503b159c98779ade302b_icgraph" id="d4/ddb/class_self_localization_a8ea475599c77503b159c98779ade302b_icgraph">
+<area shape="rect" id="node2" href="../../da/d2d/class_navigation.html#a01cd413f91e734f7245ce153c94d49f8" title="Navigation::calculateAngle" alt="" coords="228,31,407,56"/>
+<area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#af7f23982a821eb64e5a9742b95f90c02" title="run" alt="" coords="519,5,560,31"/>
+<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#a921ff4bd9534f6aa7f54f66f1d291e30" title="LeftCourse::runTyokusen" alt="" coords="455,55,625,80"/>
+<area shape="rect" id="node4" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="673,5,723,31"/>
 </map>
 </div>
 
@@ -271,7 +313,7 @@ SelfLocalization 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00104">104</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00132">132</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -290,16 +332,16 @@ SelfLocalization 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00052">52</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00053">53</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/ddb/class_self_localization_ae19f89b94c0bf61d0327a8d56f10dff7_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_ae19f89b94c0bf61d0327a8d56f10dff7_icgraph" alt=""/></div>
 <map name="d4/ddb/class_self_localization_ae19f89b94c0bf61d0327a8d56f10dff7_icgraph" id="d4/ddb/class_self_localization_ae19f89b94c0bf61d0327a8d56f10dff7_icgraph">
-<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="524,54,564,79"/>
+<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#af7f23982a821eb64e5a9742b95f90c02" title="run" alt="" coords="524,54,564,79"/>
 <area shape="rect" id="node4" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="297,29,347,54"/>
-<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#af963a96bb4c84876554c08bf5276899a" title="LeftCourse::runTyokusen" alt="" coords="459,103,629,129"/>
-<area shape="rect" id="node6" href="../../da/d2d/class_navigation.html#a24313ef9332e005e7d47beb0636b9ca6" title="Navigation::calculateValue" alt="" coords="233,78,411,103"/>
+<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#a921ff4bd9534f6aa7f54f66f1d291e30" title="LeftCourse::runTyokusen" alt="" coords="459,103,629,129"/>
+<area shape="rect" id="node6" href="../../da/d2d/class_navigation.html#a762c2306462b80ac1a19c3de524096ee" title="Navigation::calculateValue" alt="" coords="233,78,411,103"/>
 <area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="677,54,727,79"/>
 </map>
 </div>
@@ -321,86 +363,30 @@ SelfLocalization 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00056">56</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00057">57</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/ddb/class_self_localization_add371c55e00d96c08cd49f19e96c17d3_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_add371c55e00d96c08cd49f19e96c17d3_icgraph" alt=""/></div>
 <map name="d4/ddb/class_self_localization_add371c55e00d96c08cd49f19e96c17d3_icgraph" id="d4/ddb/class_self_localization_add371c55e00d96c08cd49f19e96c17d3_icgraph">
-<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="524,54,564,79"/>
+<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#af7f23982a821eb64e5a9742b95f90c02" title="run" alt="" coords="524,54,564,79"/>
 <area shape="rect" id="node4" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="297,29,347,54"/>
-<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#af963a96bb4c84876554c08bf5276899a" title="LeftCourse::runTyokusen" alt="" coords="459,103,629,129"/>
-<area shape="rect" id="node6" href="../../da/d2d/class_navigation.html#a24313ef9332e005e7d47beb0636b9ca6" title="Navigation::calculateValue" alt="" coords="233,78,411,103"/>
+<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#a921ff4bd9534f6aa7f54f66f1d291e30" title="LeftCourse::runTyokusen" alt="" coords="459,103,629,129"/>
+<area shape="rect" id="node6" href="../../da/d2d/class_navigation.html#a762c2306462b80ac1a19c3de524096ee" title="Navigation::calculateValue" alt="" coords="233,78,411,103"/>
 <area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="677,54,727,79"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="abeb8d0684a4057c7c7e15dcacf9504fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abeb8d0684a4057c7c7e15dcacf9504fe">&#9670;&nbsp;</a></span>is_below_target_line_of_x()</h2>
+<a id="a55291484c632478e4082d898c4b779aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55291484c632478e4082d898c4b779aa">&#9670;&nbsp;</a></span>init_normal_vector()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool SelfLocalization::is_below_target_line_of_x </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>target_x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00097">97</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d4/ddb/class_self_localization_abeb8d0684a4057c7c7e15dcacf9504fe_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_abeb8d0684a4057c7c7e15dcacf9504fe_icgraph" alt=""/></div>
-<map name="d4/ddb/class_self_localization_abeb8d0684a4057c7c7e15dcacf9504fe_icgraph" id="d4/ddb/class_self_localization_abeb8d0684a4057c7c7e15dcacf9504fe_icgraph">
-<area shape="rect" id="node2" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="219,12,269,37"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a8f2c2033c145921f52609b6583a623c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f2c2033c145921f52609b6583a623c6">&#9670;&nbsp;</a></span>is_below_target_line_of_y()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SelfLocalization::is_below_target_line_of_y </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>target_y</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00100">100</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_icgraph" alt=""/></div>
-<map name="d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_icgraph" id="d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_icgraph">
-<area shape="rect" id="node2" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="219,12,269,37"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a2c3a8eb44703b39ee70ca452ef570cb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c3a8eb44703b39ee70ca452ef570cb6">&#9670;&nbsp;</a></span>is_over_normal_vector()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SelfLocalization::is_over_normal_vector </td>
+          <td class="memname">void SelfLocalization::init_normal_vector </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>_start_x</em>, </td>
@@ -443,14 +429,133 @@ SelfLocalization 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00108">108</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00112">112</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/ddb/class_self_localization_a55291484c632478e4082d898c4b779aa_cgraph.png" border="0" usemap="#d4/ddb/class_self_localization_a55291484c632478e4082d898c4b779aa_cgraph" alt=""/></div>
+<map name="d4/ddb/class_self_localization_a55291484c632478e4082d898c4b779aa_cgraph" id="d4/ddb/class_self_localization_a55291484c632478e4082d898c4b779aa_cgraph">
+<area shape="rect" id="node2" href="../../d4/ddb/class_self_localization.html#a9b0e878f693afaafd5dbf756e1347493" title="SelfLocalization::is\l_over_normal_vector" alt="" coords="193,5,339,44"/>
+</map>
+</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d4/ddb/class_self_localization_a2c3a8eb44703b39ee70ca452ef570cb6_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_a2c3a8eb44703b39ee70ca452ef570cb6_icgraph" alt=""/></div>
-<map name="d4/ddb/class_self_localization_a2c3a8eb44703b39ee70ca452ef570cb6_icgraph" id="d4/ddb/class_self_localization_a2c3a8eb44703b39ee70ca452ef570cb6_icgraph">
-<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="200,12,241,37"/>
-<area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="289,12,339,37"/>
+<div class="center"><img src="../../d4/ddb/class_self_localization_a55291484c632478e4082d898c4b779aa_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_a55291484c632478e4082d898c4b779aa_icgraph" alt=""/></div>
+<map name="d4/ddb/class_self_localization_a55291484c632478e4082d898c4b779aa_icgraph" id="d4/ddb/class_self_localization_a55291484c632478e4082d898c4b779aa_icgraph">
+<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#af7f23982a821eb64e5a9742b95f90c02" title="run" alt="" coords="257,5,298,31"/>
+<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a921ff4bd9534f6aa7f54f66f1d291e30" title="LeftCourse::runTyokusen" alt="" coords="193,55,363,80"/>
+<area shape="rect" id="node5" href="../../d4/ddb/class_self_localization.html#a8f2c2033c145921f52609b6583a623c6" title="SelfLocalization::is\l_below_target_line_of_y" alt="" coords="195,104,361,143"/>
+<area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="411,5,461,31"/>
+<area shape="rect" id="node6" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="411,111,461,136"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abeb8d0684a4057c7c7e15dcacf9504fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb8d0684a4057c7c7e15dcacf9504fe">&#9670;&nbsp;</a></span>is_below_target_line_of_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SelfLocalization::is_below_target_line_of_x </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00102">102</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/ddb/class_self_localization_abeb8d0684a4057c7c7e15dcacf9504fe_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_abeb8d0684a4057c7c7e15dcacf9504fe_icgraph" alt=""/></div>
+<map name="d4/ddb/class_self_localization_abeb8d0684a4057c7c7e15dcacf9504fe_icgraph" id="d4/ddb/class_self_localization_abeb8d0684a4057c7c7e15dcacf9504fe_icgraph">
+<area shape="rect" id="node2" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="219,12,269,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8f2c2033c145921f52609b6583a623c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f2c2033c145921f52609b6583a623c6">&#9670;&nbsp;</a></span>is_below_target_line_of_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SelfLocalization::is_below_target_line_of_y </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>target_y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00105">105</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_cgraph.png" border="0" usemap="#d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_cgraph" alt=""/></div>
+<map name="d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_cgraph" id="d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_cgraph">
+<area shape="rect" id="node2" href="../../d4/ddb/class_self_localization.html#a55291484c632478e4082d898c4b779aa" title="SelfLocalization::init\l_normal_vector" alt="" coords="219,5,358,44"/>
+<area shape="rect" id="node3" href="../../d4/ddb/class_self_localization.html#a9b0e878f693afaafd5dbf756e1347493" title="SelfLocalization::is\l_over_normal_vector" alt="" coords="406,5,553,44"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_icgraph" alt=""/></div>
+<map name="d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_icgraph" id="d4/ddb/class_self_localization_a8f2c2033c145921f52609b6583a623c6_icgraph">
+<area shape="rect" id="node2" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="219,12,269,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9b0e878f693afaafd5dbf756e1347493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0e878f693afaafd5dbf756e1347493">&#9670;&nbsp;</a></span>is_over_normal_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SelfLocalization::is_over_normal_vector </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_current_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_current_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00121">121</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/ddb/class_self_localization_a9b0e878f693afaafd5dbf756e1347493_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_a9b0e878f693afaafd5dbf756e1347493_icgraph" alt=""/></div>
+<map name="d4/ddb/class_self_localization_a9b0e878f693afaafd5dbf756e1347493_icgraph" id="d4/ddb/class_self_localization_a9b0e878f693afaafd5dbf756e1347493_icgraph">
+<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#af7f23982a821eb64e5a9742b95f90c02" title="run" alt="" coords="452,5,493,31"/>
+<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a921ff4bd9534f6aa7f54f66f1d291e30" title="LeftCourse::runTyokusen" alt="" coords="387,117,557,143"/>
+<area shape="rect" id="node5" href="../../d4/ddb/class_self_localization.html#a55291484c632478e4082d898c4b779aa" title="SelfLocalization::init\l_normal_vector" alt="" coords="200,55,339,93"/>
+<area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="605,5,656,31"/>
+<area shape="rect" id="node6" href="../../d4/ddb/class_self_localization.html#a8f2c2033c145921f52609b6583a623c6" title="SelfLocalization::is\l_below_target_line_of_y" alt="" coords="389,55,555,93"/>
+<area shape="rect" id="node7" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="605,61,656,87"/>
 </map>
 </div>
 
@@ -472,7 +577,7 @@ SelfLocalization 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00090">90</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00095">95</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -500,7 +605,7 @@ SelfLocalization 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00093">93</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00098">98</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -538,7 +643,7 @@ SelfLocalization 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00029">29</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00030">30</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -553,17 +658,18 @@ SelfLocalization 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/ddb/class_self_localization_a13a84e776674b978d4f23a528f621eda_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_a13a84e776674b978d4f23a528f621eda_icgraph" alt=""/></div>
 <map name="d4/ddb/class_self_localization_a13a84e776674b978d4f23a528f621eda_icgraph" id="d4/ddb/class_self_localization_a13a84e776674b978d4f23a528f621eda_icgraph">
-<area shape="rect" id="node2" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="295,5,345,31"/>
-<area shape="rect" id="node3" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="221,153,420,179"/>
-<area shape="rect" id="node7" href="../../da/d2d/class_navigation.html#a24313ef9332e005e7d47beb0636b9ca6" title="Navigation::calculateValue" alt="" coords="232,55,409,80"/>
-<area shape="rect" id="node11" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="216,104,424,129"/>
-<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="501,153,614,179"/>
-<area shape="rect" id="node5" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="691,129,840,155"/>
-<area shape="rect" id="node6" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="888,129,1039,155"/>
-<area shape="rect" id="node8" href="../../db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="537,5,578,31"/>
-<area shape="rect" id="node10" href="../../da/d29/class_left_course.html#af963a96bb4c84876554c08bf5276899a" title="LeftCourse::runTyokusen" alt="" coords="472,55,643,80"/>
-<area shape="rect" id="node9" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="740,5,791,31"/>
-<area shape="rect" id="node12" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="496,104,619,129"/>
+<area shape="rect" id="node2" href="../../db/d71/example___navigation_8cpp.html#af7f23982a821eb64e5a9742b95f90c02" title="run" alt="" coords="537,38,578,64"/>
+<area shape="rect" id="node4" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="295,189,345,214"/>
+<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="221,238,420,264"/>
+<area shape="rect" id="node9" href="../../da/d29/class_left_course.html#a921ff4bd9534f6aa7f54f66f1d291e30" title="LeftCourse::runTyokusen" alt="" coords="472,88,643,113"/>
+<area shape="rect" id="node10" href="../../da/d2d/class_navigation.html#a762c2306462b80ac1a19c3de524096ee" title="Navigation::calculateValue" alt="" coords="232,88,409,113"/>
+<area shape="rect" id="node11" href="../../da/d2d/class_navigation.html#a01cd413f91e734f7245ce153c94d49f8" title="Navigation::calculateAngle" alt="" coords="231,38,410,64"/>
+<area shape="rect" id="node12" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="216,288,424,313"/>
+<area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="740,38,791,64"/>
+<area shape="rect" id="node6" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="501,238,614,264"/>
+<area shape="rect" id="node7" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="691,262,840,288"/>
+<area shape="rect" id="node8" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="888,262,1039,288"/>
+<area shape="rect" id="node13" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="496,288,619,313"/>
 </map>
 </div>
 
@@ -584,26 +690,44 @@ SelfLocalization 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html">SelfLocalization.cpp</a> の <a class="el" href="../../d6/d47/_self_localization_8cpp_source.html#l00061">61</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/ddb/class_self_localization_a3b7b630ff7861c237c1aee94bc8a56bd_icgraph.png" border="0" usemap="#d4/ddb/class_self_localization_a3b7b630ff7861c237c1aee94bc8a56bd_icgraph" alt=""/></div>
 <map name="d4/ddb/class_self_localization_a3b7b630ff7861c237c1aee94bc8a56bd_icgraph" id="d4/ddb/class_self_localization_a3b7b630ff7861c237c1aee94bc8a56bd_icgraph">
-<area shape="rect" id="node2" href="../../d4/ddb/class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="214,80,377,105"/>
-<area shape="rect" id="node3" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="504,5,554,31"/>
-<area shape="rect" id="node4" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="429,153,629,179"/>
-<area shape="rect" id="node8" href="../../da/d2d/class_navigation.html#a24313ef9332e005e7d47beb0636b9ca6" title="Navigation::calculateValue" alt="" coords="440,55,618,80"/>
-<area shape="rect" id="node12" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="425,104,633,129"/>
-<area shape="rect" id="node5" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="710,153,823,179"/>
-<area shape="rect" id="node6" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="899,129,1049,155"/>
-<area shape="rect" id="node7" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1097,129,1247,155"/>
-<area shape="rect" id="node9" href="../../db/d71/example___navigation_8cpp.html#a5a28cec10844ce50571a7ce388fb2f92" title="run" alt="" coords="746,5,786,31"/>
-<area shape="rect" id="node11" href="../../da/d29/class_left_course.html#af963a96bb4c84876554c08bf5276899a" title="LeftCourse::runTyokusen" alt="" coords="681,55,851,80"/>
-<area shape="rect" id="node10" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="949,5,999,31"/>
-<area shape="rect" id="node13" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="705,104,827,129"/>
+<area shape="rect" id="node2" href="../../d4/ddb/class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="214,138,377,164"/>
+<area shape="rect" id="node3" href="../../db/d71/example___navigation_8cpp.html#af7f23982a821eb64e5a9742b95f90c02" title="run" alt="" coords="746,38,786,64"/>
+<area shape="rect" id="node5" href="../../d0/d72/example___self_localization_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="504,189,554,214"/>
+<area shape="rect" id="node6" href="../../da/d29/class_left_course.html#a91a5f2bd12a34ab71314836035672a5f" title="LeftCourse::runNormalCourse" alt="" coords="429,238,629,264"/>
+<area shape="rect" id="node10" href="../../da/d29/class_left_course.html#a921ff4bd9534f6aa7f54f66f1d291e30" title="LeftCourse::runTyokusen" alt="" coords="681,88,851,113"/>
+<area shape="rect" id="node11" href="../../da/d2d/class_navigation.html#a762c2306462b80ac1a19c3de524096ee" title="Navigation::calculateValue" alt="" coords="440,88,618,113"/>
+<area shape="rect" id="node12" href="../../da/d2d/class_navigation.html#a01cd413f91e734f7245ce153c94d49f8" title="Navigation::calculateAngle" alt="" coords="440,38,618,64"/>
+<area shape="rect" id="node13" href="../../df/df1/class_right_course.html#af1a8a3c303ad024eebd6e52b64fb74fd" title="RightCourse::runNormalCourse" alt="" coords="425,288,633,313"/>
+<area shape="rect" id="node4" href="../../db/d71/example___navigation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="949,38,999,64"/>
+<area shape="rect" id="node7" href="../../da/d29/class_left_course.html#a3838d120b4e756d909b94d35ea0216d2" title="LeftCourse::run" alt="" coords="710,238,823,264"/>
+<area shape="rect" id="node8" href="../../d0/df8/class_et_robocon2017.html#a9f298a925dbe362f6921b1ba84400709" title="EtRobocon2017::loop" alt="" coords="899,262,1049,288"/>
+<area shape="rect" id="node9" href="../../d0/df8/class_et_robocon2017.html#ab19b6f908ff9a8dd2593afb41ad55ca4" title="EtRobocon2017::start" alt="" coords="1097,262,1247,288"/>
+<area shape="rect" id="node14" href="../../df/df1/class_right_course.html#aaf5a4cb69dd8c846322892718c75222f" title="RightCourse::run" alt="" coords="705,288,827,313"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a47c7428cb256bec359853ef9b8c9476e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47c7428cb256bec359853ef9b8c9476e">&#9670;&nbsp;</a></span>current_angle_degree</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SelfLocalization::current_angle_degree</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d3/d3a/_self_localization_8h_source.html">SelfLocalization.h</a> の <a class="el" href="../../d3/d3a/_self_localization_8h_source.html#l00059">59</a> 行目に定義があります。</p>
 
 </div>
 </div>

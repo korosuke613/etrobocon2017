@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/apps/include/PuzzleCodeConverter.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="../../dir_716c0c37d4fad24b6b8f48e824f3bc1d.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PuzzleCodeConverter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d9a/include_2_puzzle_code_converter_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _INC_PUZZLE_CONVERTER</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _INC_PUZZLE_CONVERTER</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d0a/include_2_block_color_8h.html">BlockColor.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d10/class_puzzle_code_converter.html">PuzzleCodeConverter</a></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> mPuzzleCode;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::map&lt;std::string, int&gt; blockMap;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="../../d2/d10/class_puzzle_code_converter.html#a97c8f5ba29cc2315c2453f6cda2962a3">PuzzleCodeConverter</a>();</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../d2/d10/class_puzzle_code_converter.html#a97c8f5ba29cc2315c2453f6cda2962a3">PuzzleCodeConverter</a>(<span class="keywordtype">int</span> puzzleCode);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d2/d10/class_puzzle_code_converter.html#a9417dabaa8f755465752b8b64ccd1e45">~PuzzleCodeConverter</a>();</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d10/class_puzzle_code_converter.html#a7995a605635471edca3fe9a1e9f2cf75">resolvePositionCode</a>();</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d2/d10/class_puzzle_code_converter.html#ad672a672c1102de7b332914b1b98a3bb">getPosition</a>(<a class="code" href="../../d2/d3b/explorer_2_block_color_8h.html#aab797d2c5a77341e7ee17eac46d7d6d7">BlockColor</a> color);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d2/d10/class_puzzle_code_converter.html#a0e565f252dbfb1d76279abc52f6529d0">redToBlackPosition</a>(<span class="keywordtype">int</span> redNum);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d2/d10/class_puzzle_code_converter.html#ad8d6f18d9e45a428b5bfd4b9c336806f">yellowToBlackPosition</a>(<span class="keywordtype">int</span> yellowNum);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d2/d10/class_puzzle_code_converter.html#a10cf0041fd3b1417f7bbc4ef54da4a5d">blueToBlackPosition</a>(<span class="keywordtype">int</span> blueNum);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif //_INC_PUZZLE_CONVERTER</span></div><div class="ttc" id="class_puzzle_code_converter_html_a9417dabaa8f755465752b8b64ccd1e45"><div class="ttname"><a href="../../d2/d10/class_puzzle_code_converter.html#a9417dabaa8f755465752b8b64ccd1e45">PuzzleCodeConverter::~PuzzleCodeConverter</a></div><div class="ttdeci">~PuzzleCodeConverter()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8e/explorer_2_puzzle_code_converter_8cpp_source.html#l00016">PuzzleCodeConverter.cpp:16</a></div></div>
+<div class="ttc" id="class_puzzle_code_converter_html_a97c8f5ba29cc2315c2453f6cda2962a3"><div class="ttname"><a href="../../d2/d10/class_puzzle_code_converter.html#a97c8f5ba29cc2315c2453f6cda2962a3">PuzzleCodeConverter::PuzzleCodeConverter</a></div><div class="ttdeci">PuzzleCodeConverter()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8e/explorer_2_puzzle_code_converter_8cpp_source.html#l00006">PuzzleCodeConverter.cpp:6</a></div></div>
+<div class="ttc" id="class_puzzle_code_converter_html_a10cf0041fd3b1417f7bbc4ef54da4a5d"><div class="ttname"><a href="../../d2/d10/class_puzzle_code_converter.html#a10cf0041fd3b1417f7bbc4ef54da4a5d">PuzzleCodeConverter::blueToBlackPosition</a></div><div class="ttdeci">int blueToBlackPosition(int blueNum)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8e/explorer_2_puzzle_code_converter_8cpp_source.html#l00117">PuzzleCodeConverter.cpp:117</a></div></div>
+<div class="ttc" id="class_puzzle_code_converter_html"><div class="ttname"><a href="../../d2/d10/class_puzzle_code_converter.html">PuzzleCodeConverter</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d2f/explorer_2_puzzle_code_converter_8h_source.html#l00007">PuzzleCodeConverter.h:7</a></div></div>
+<div class="ttc" id="explorer_2_block_color_8h_html_aab797d2c5a77341e7ee17eac46d7d6d7"><div class="ttname"><a href="../../d2/d3b/explorer_2_block_color_8h.html#aab797d2c5a77341e7ee17eac46d7d6d7">BlockColor</a></div><div class="ttdeci">BlockColor</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3b/explorer_2_block_color_8h_source.html#l00005">BlockColor.h:5</a></div></div>
+<div class="ttc" id="class_puzzle_code_converter_html_a0e565f252dbfb1d76279abc52f6529d0"><div class="ttname"><a href="../../d2/d10/class_puzzle_code_converter.html#a0e565f252dbfb1d76279abc52f6529d0">PuzzleCodeConverter::redToBlackPosition</a></div><div class="ttdeci">int redToBlackPosition(int redNum)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8e/explorer_2_puzzle_code_converter_8cpp_source.html#l00087">PuzzleCodeConverter.cpp:87</a></div></div>
+<div class="ttc" id="class_puzzle_code_converter_html_ad672a672c1102de7b332914b1b98a3bb"><div class="ttname"><a href="../../d2/d10/class_puzzle_code_converter.html#ad672a672c1102de7b332914b1b98a3bb">PuzzleCodeConverter::getPosition</a></div><div class="ttdeci">int getPosition(BlockColor color)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8e/explorer_2_puzzle_code_converter_8cpp_source.html#l00054">PuzzleCodeConverter.cpp:54</a></div></div>
+<div class="ttc" id="class_puzzle_code_converter_html_ad8d6f18d9e45a428b5bfd4b9c336806f"><div class="ttname"><a href="../../d2/d10/class_puzzle_code_converter.html#ad8d6f18d9e45a428b5bfd4b9c336806f">PuzzleCodeConverter::yellowToBlackPosition</a></div><div class="ttdeci">int yellowToBlackPosition(int yellowNum)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8e/explorer_2_puzzle_code_converter_8cpp_source.html#l00102">PuzzleCodeConverter.cpp:102</a></div></div>
+<div class="ttc" id="class_puzzle_code_converter_html_a7995a605635471edca3fe9a1e9f2cf75"><div class="ttname"><a href="../../d2/d10/class_puzzle_code_converter.html#a7995a605635471edca3fe9a1e9f2cf75">PuzzleCodeConverter::resolvePositionCode</a></div><div class="ttdeci">void resolvePositionCode()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d8e/explorer_2_puzzle_code_converter_8cpp_source.html#l00022">PuzzleCodeConverter.cpp:22</a></div></div>
+<div class="ttc" id="include_2_block_color_8h_html"><div class="ttname"><a href="../../d4/d0a/include_2_block_color_8h.html">BlockColor.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

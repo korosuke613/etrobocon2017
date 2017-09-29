@@ -1,5 +1,5 @@
 <map id="PuzzleExplorer::getNearestBlockPosition" name="PuzzleExplorer::getNearestBlockPosition">
 <area shape="rect" id="node2" href="$dc/d8f/class_node.html#a8c66a94a046054cbe559682c6dcd3a96" title="Node::getHasBlock" alt="" coords="237,5,372,31"/>
-<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a7ab5c1db69585010087eb9c550c18521" title="Node::getNeighbor" alt="" coords="238,55,371,80"/>
+<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a5b9643a06cde6ed25f704511ee1c8fd4" title="Node::getNeighbor" alt="" coords="238,55,371,80"/>
 <area shape="rect" id="node4" href="$dc/d8f/class_node.html#a5922bd7936a4b2326e3821df3c6736d2" title="Node::getNum" alt="" coords="251,104,358,129"/>
 </map>

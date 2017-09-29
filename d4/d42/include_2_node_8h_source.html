@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/apps/include/Node.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="../../dir_716c0c37d4fad24b6b8f48e824f3bc1d.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Node.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d42/include_2_node_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _INC_NODE</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _INC_NODE</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d0a/include_2_block_color_8h.html">BlockColor.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include&lt;cstdlib&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/d8f/class_node.html">Node</a>{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="../../dc/d8f/class_node.html#ad7a34779cad45d997bfd6d3d8043c75f">Node</a>();</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="../../dc/d8f/class_node.html#aa0840c3cb5c7159be6d992adecd2097c">~Node</a>();</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d8f/class_node.html#a73d6aec2404e3f075155521a5a0bbba5">setNeighbor</a>(<a class="code" href="../../dc/d8f/class_node.html">Node</a>** nodes);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="../../dc/d8f/class_node.html">Node</a>** <a class="code" href="../../dc/d8f/class_node.html#a5b9643a06cde6ed25f704511ee1c8fd4">getNeighbor</a>();</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dc/d8f/class_node.html#a5922bd7936a4b2326e3821df3c6736d2">getNum</a>();</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d2/d3b/explorer_2_block_color_8h.html#aab797d2c5a77341e7ee17eac46d7d6d7">BlockColor</a> <a class="code" href="../../dc/d8f/class_node.html#a6ac165c974241b4631557912dd5a87de">getColor</a>();</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d8f/class_node.html#a6b928df3a2779650a721669b3f932dc7">setHasBlock</a>(<span class="keywordtype">bool</span> exists);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../dc/d8f/class_node.html#a8c66a94a046054cbe559682c6dcd3a96">getHasBlock</a>();</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d8f/class_node.html#a0855f6940db2abe5b9d2f9550bb66678">setPosition</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dc/d8f/class_node.html#a535896357ea40bc56fe4d6aed70b6361">getPositionX</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dc/d8f/class_node.html#a9a5a7aa1c1cade5e1c959115d8f56441">getPositionY</a>();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d8f/class_node.html#a94dcfdc17fefdecacc58d3fe3e9f8f73">setNum</a>(<span class="keywordtype">int</span> num);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d8f/class_node.html#a5bb0f6fdf6b77b66f6c123f4f6e82c4d">setColor</a>();</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> nodeNum;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../dc/d8f/class_node.html">Node</a>* neighbor[5];</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="../../d2/d3b/explorer_2_block_color_8h.html#aab797d2c5a77341e7ee17eac46d7d6d7">BlockColor</a> color;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> hasBlock;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> positionX;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> positionY;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif //INC_NODE</span></div><div class="ttc" id="class_node_html_a0855f6940db2abe5b9d2f9550bb66678"><div class="ttname"><a href="../../dc/d8f/class_node.html#a0855f6940db2abe5b9d2f9550bb66678">Node::setPosition</a></div><div class="ttdeci">void setPosition(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00085">Node.cpp:85</a></div></div>
+<div class="ttc" id="class_node_html_aa0840c3cb5c7159be6d992adecd2097c"><div class="ttname"><a href="../../dc/d8f/class_node.html#aa0840c3cb5c7159be6d992adecd2097c">Node::~Node</a></div><div class="ttdeci">~Node()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00018">Node.cpp:18</a></div></div>
+<div class="ttc" id="class_node_html"><div class="ttname"><a href="../../dc/d8f/class_node.html">Node</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d9a/explorer_2_node_8h_source.html#l00009">Node.h:9</a></div></div>
+<div class="ttc" id="class_node_html_a535896357ea40bc56fe4d6aed70b6361"><div class="ttname"><a href="../../dc/d8f/class_node.html#a535896357ea40bc56fe4d6aed70b6361">Node::getPositionX</a></div><div class="ttdeci">int getPositionX()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00091">Node.cpp:91</a></div></div>
+<div class="ttc" id="class_node_html_a5b9643a06cde6ed25f704511ee1c8fd4"><div class="ttname"><a href="../../dc/d8f/class_node.html#a5b9643a06cde6ed25f704511ee1c8fd4">Node::getNeighbor</a></div><div class="ttdeci">Node ** getNeighbor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00057">Node.cpp:57</a></div></div>
+<div class="ttc" id="class_node_html_a6b928df3a2779650a721669b3f932dc7"><div class="ttname"><a href="../../dc/d8f/class_node.html#a6b928df3a2779650a721669b3f932dc7">Node::setHasBlock</a></div><div class="ttdeci">void setHasBlock(bool exists)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00075">Node.cpp:75</a></div></div>
+<div class="ttc" id="explorer_2_block_color_8h_html_aab797d2c5a77341e7ee17eac46d7d6d7"><div class="ttname"><a href="../../d2/d3b/explorer_2_block_color_8h.html#aab797d2c5a77341e7ee17eac46d7d6d7">BlockColor</a></div><div class="ttdeci">BlockColor</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d3b/explorer_2_block_color_8h_source.html#l00005">BlockColor.h:5</a></div></div>
+<div class="ttc" id="class_node_html_a6ac165c974241b4631557912dd5a87de"><div class="ttname"><a href="../../dc/d8f/class_node.html#a6ac165c974241b4631557912dd5a87de">Node::getColor</a></div><div class="ttdeci">BlockColor getColor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00069">Node.cpp:69</a></div></div>
+<div class="ttc" id="class_node_html_a8c66a94a046054cbe559682c6dcd3a96"><div class="ttname"><a href="../../dc/d8f/class_node.html#a8c66a94a046054cbe559682c6dcd3a96">Node::getHasBlock</a></div><div class="ttdeci">bool getHasBlock()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00080">Node.cpp:80</a></div></div>
+<div class="ttc" id="class_node_html_a5bb0f6fdf6b77b66f6c123f4f6e82c4d"><div class="ttname"><a href="../../dc/d8f/class_node.html#a5bb0f6fdf6b77b66f6c123f4f6e82c4d">Node::setColor</a></div><div class="ttdeci">void setColor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00025">Node.cpp:25</a></div></div>
+<div class="ttc" id="class_node_html_a9a5a7aa1c1cade5e1c959115d8f56441"><div class="ttname"><a href="../../dc/d8f/class_node.html#a9a5a7aa1c1cade5e1c959115d8f56441">Node::getPositionY</a></div><div class="ttdeci">int getPositionY()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00096">Node.cpp:96</a></div></div>
+<div class="ttc" id="include_2_block_color_8h_html"><div class="ttname"><a href="../../d4/d0a/include_2_block_color_8h.html">BlockColor.h</a></div></div>
+<div class="ttc" id="class_node_html_a94dcfdc17fefdecacc58d3fe3e9f8f73"><div class="ttname"><a href="../../dc/d8f/class_node.html#a94dcfdc17fefdecacc58d3fe3e9f8f73">Node::setNum</a></div><div class="ttdeci">void setNum(int num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00020">Node.cpp:20</a></div></div>
+<div class="ttc" id="class_node_html_a73d6aec2404e3f075155521a5a0bbba5"><div class="ttname"><a href="../../dc/d8f/class_node.html#a73d6aec2404e3f075155521a5a0bbba5">Node::setNeighbor</a></div><div class="ttdeci">void setNeighbor(Node **nodes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00047">Node.cpp:47</a></div></div>
+<div class="ttc" id="class_node_html_a5922bd7936a4b2326e3821df3c6736d2"><div class="ttname"><a href="../../dc/d8f/class_node.html#a5922bd7936a4b2326e3821df3c6736d2">Node::getNum</a></div><div class="ttdeci">int getNum()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00063">Node.cpp:63</a></div></div>
+<div class="ttc" id="class_node_html_ad7a34779cad45d997bfd6d3d8043c75f"><div class="ttname"><a href="../../dc/d8f/class_node.html#ad7a34779cad45d997bfd6d3d8043c75f">Node::Node</a></div><div class="ttdeci">Node()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d46/explorer_2_node_8cpp_source.html#l00006">Node.cpp:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

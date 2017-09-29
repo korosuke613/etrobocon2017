@@ -1,5 +1,8 @@
 <map id="PuzzleExplorer::setMyPosition" name="PuzzleExplorer::setMyPosition">
-<area shape="rect" id="node2" href="$dc/d8f/class_node.html#a94dcfdc17fefdecacc58d3fe3e9f8f73" title="Node::setNum" alt="" coords="264,5,371,31"/>
-<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a5bb0f6fdf6b77b66f6c123f4f6e82c4d" title="Node::setColor" alt="" coords="263,55,373,80"/>
-<area shape="rect" id="node4" href="$dc/d8f/class_node.html#a0855f6940db2abe5b9d2f9550bb66678" title="Node::setPosition" alt="" coords="255,104,381,129"/>
+<area shape="rect" id="node2" href="$dc/d8f/class_node.html#a94dcfdc17fefdecacc58d3fe3e9f8f73" title="Node::setNum" alt="" coords="269,5,375,31"/>
+<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a5bb0f6fdf6b77b66f6c123f4f6e82c4d" title="Node::setColor" alt="" coords="267,55,377,80"/>
+<area shape="rect" id="node4" href="$dc/d8f/class_node.html#a0855f6940db2abe5b9d2f9550bb66678" title="Node::setPosition" alt="" coords="259,104,385,129"/>
+<area shape="rect" id="node5" href="$dc/d8f/class_node.html#a6b928df3a2779650a721669b3f932dc7" title="Node::setHasBlock" alt="" coords="255,153,389,179"/>
+<area shape="rect" id="node6" href="$d2/df8/class_block.html#ad8fbdf80726d6c288b41ee6eb67b7518" title="Block::setColor" alt="" coords="267,203,378,228"/>
+<area shape="rect" id="node7" href="$dc/d8f/class_node.html#a73d6aec2404e3f075155521a5a0bbba5" title="Node::setNeighbor" alt="" coords="256,252,388,277"/>
 </map>

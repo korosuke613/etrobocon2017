@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ETrobocon2017 - 片山研究所モデルベース開発推進事業部: str/apps/include/Parking.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ETrobocon2017 - 片山研究所モデルベース開発推進事業部
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li><li class="navelem"><a class="el" href="../../dir_4131bd60ddc99037b0d0dce7cfa47ed0.html">apps</a></li><li class="navelem"><a class="el" href="../../dir_716c0c37d4fad24b6b8f48e824f3bc1d.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Parking.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/daa/_parking_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __PARKING__</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define __PARKING__</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/dc1/_basic_walker_8h.html">BasicWalker.h</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/da8/_line_tracer_walker_8h.html">LineTracerWalker.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d4/daf/class_parking.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/daf/class_parking.html">Parking</a> {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/daf/class_parking.html#a1d6e7bfb5263ccb738804c4fedb43ad3">runParallel</a>();</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/daf/class_parking.html#a0c5268621717d6076f67ab1868d5cb97">runParpendicular</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/daf/class_parking.html#af58a518d70113bcb3139718e51b4829c">waitThreeTimes</a>();</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_parking_html"><div class="ttname"><a href="../../d4/daf/class_parking.html">Parking</a></div><div class="ttdoc">駐車クラス </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/daa/_parking_8h_source.html#l00015">Parking.h:15</a></div></div>
+<div class="ttc" id="class_parking_html_af58a518d70113bcb3139718e51b4829c"><div class="ttname"><a href="../../d4/daf/class_parking.html#af58a518d70113bcb3139718e51b4829c">Parking::waitThreeTimes</a></div><div class="ttdeci">void waitThreeTimes()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d34/_parking_8cpp_source.html#l00032">Parking.cpp:32</a></div></div>
+<div class="ttc" id="class_parking_html_a0c5268621717d6076f67ab1868d5cb97"><div class="ttname"><a href="../../d4/daf/class_parking.html#a0c5268621717d6076f67ab1868d5cb97">Parking::runParpendicular</a></div><div class="ttdeci">void runParpendicular()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d34/_parking_8cpp_source.html#l00023">Parking.cpp:23</a></div></div>
+<div class="ttc" id="_basic_walker_8h_html"><div class="ttname"><a href="../../da/dc1/_basic_walker_8h.html">BasicWalker.h</a></div></div>
+<div class="ttc" id="_line_tracer_walker_8h_html"><div class="ttname"><a href="../../d5/da8/_line_tracer_walker_8h.html">LineTracerWalker.h</a></div></div>
+<div class="ttc" id="class_parking_html_a1d6e7bfb5263ccb738804c4fedb43ad3"><div class="ttname"><a href="../../d4/daf/class_parking.html#a1d6e7bfb5263ccb738804c4fedb43ad3">Parking::runParallel</a></div><div class="ttdeci">void runParallel()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d34/_parking_8cpp_source.html#l00009">Parking.cpp:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

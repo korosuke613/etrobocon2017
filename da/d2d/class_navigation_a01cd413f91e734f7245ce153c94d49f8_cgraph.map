@@ -1,0 +1,6 @@
+<map id="Navigation::calculateAngle" name="Navigation::calculateAngle">
+<area shape="rect" id="node2" href="$d4/ddb/class_self_localization.html#a13a84e776674b978d4f23a528f621eda" title="SelfLocalization::update" alt="" coords="238,33,401,59"/>
+<area shape="rect" id="node5" href="$d4/ddb/class_self_localization.html#a8ea475599c77503b159c98779ade302b" title="SelfLocalization::calculate\l_current_angle" alt="" coords="232,83,407,121"/>
+<area shape="rect" id="node3" href="$d6/dc5/class_motor_angle.html#afde9e7ae516de013cfea7e5bf6a9db2a" title="MotorAngle::update" alt="" coords="466,5,604,31"/>
+<area shape="rect" id="node4" href="$d4/ddb/class_self_localization.html#a3b7b630ff7861c237c1aee94bc8a56bd" title="SelfLocalization::writing\l_current_coordinates" alt="" coords="455,55,615,93"/>
+</map>
