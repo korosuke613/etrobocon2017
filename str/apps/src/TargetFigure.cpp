@@ -12,37 +12,48 @@ TargetFigure::~TargetFigure()
 }
 
 // ブロックの初期位置設定
-void TargetFigure::set(int* positions)
+void TargetFigure::set(int8_t *positions)
 {
-	for(int i=0; i<5; i++){
-		initPositions[i] = positions[i];
-	}
+	initPositions = positions;
+	analyzer.set(initPositions);
+	
 }
 
 // 初期位置を評価し、目標とする図形を決定する
 void TargetFigure::evaluate()
 {
-	
-	if(getNumberInLeftSquare(initPosition) )
-	
-	for(int i=0; i<5; i++){
-		targets[i] = leftSquare[i];
+	// 左凹四角形にあるブロックの個数が3個以上である かつ 五角形にあるブロックが交換パターンである場合 または 左凹四角形にあるブロックの個数が2個以下である かつ 左凹四角形にあるブロックが交換パターンである かつ 五角形にあるブロックが交換パターンである場合
+	if((analyzer.getInLeftSquareCount() >= 3 && analyzer.hasExchangePatternOnPentagon() == true) || (analyzer.getInLeftSquareCount() <= 2 && analyzer.hasExchangePatternOnLeftSquare() == true && analyzer.hasExchangePatternOnPentagon() == true))
+	{
+		// 目標図形を右凹四角形とする
+		for(int i=0; i<5; i++)
+		{
+			targets[i] = rightSquare[i];
+		}
+	}else 
+	// 左凹四角形にあるブロックの個数が2個以下である かつ 左凹四角形にあるブロックが交換パターンでない かつ 半分より右側にあるブロックが2個以下である場合
+	if(analyzer.getInLeftSquareCount() <= 2 && analyzer.hasExchangePatternOnLeftSquare() == false && analyzer.getInRightSideCount() <= 2)
+	{
+		// 目標図形を左四角形とする
+		for(int i=0; i<5; i++)
+		{
+			targets[i] = leftSquare[i];
+		}
+	}else
+	{
+		// 目標図形を五角形とする
+		for(int i=0; i<5; i++)
+		{
+			targets[i] = pentagon[i];
+		}
 	}
 	
 }
 
-int TargetFigure::getNumberInLeftSquare()
+// 各色の目標とする位置番号を取得する
+int8_t TargetFigure::getTargetNum(BlockColor color)
 {
-	int num = 0;
-	
-	
-	
-	return 
-}
-
-int TargetFigure::getTargetNum(BlockColor color)
-{
-	int targetNum = 0;
+	int8_t targetNum = 0;
 	
 	switch(color)
 	{
