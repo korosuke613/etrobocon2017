@@ -17,7 +17,9 @@ enum struct RightStatus {
     CURVE_RIGHT,
     CURVE_LEFT,
     CURVE_LEFT_SHORT,
-    STOP
+    STOP,
+    SLOW,
+    CURVE_LEFT_SHORT_SLOW
 };
 
 /**
