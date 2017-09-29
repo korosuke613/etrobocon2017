@@ -16,8 +16,8 @@ void BasicWalker::reset ( void ) {
 
 void BasicWalker::spin ( bool rotationalDirection, int32_t angle ) {
     int8_t reverseValue = rotationalDirection == SPIN_RIGHT
-        ?  1
-        : -1;
+        ? -1
+        :  1;
 
 	reset () ;
 	while ( ( walker.get_count_R () * reverseValue ) < ( angle / 0.645 ) ) {	// 数値は角度から回転数への変換に必要な値

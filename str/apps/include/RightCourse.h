@@ -18,6 +18,7 @@
 #include "SelfLocalization.h"
 #include "Lifter.h"
 #include "BasicWalker.h"
+#include "Parking.h"
 
 using namespace ev3api;
 
@@ -51,6 +52,12 @@ public:
 	void runNormalCourse();
 	/** Shinkansenエリアの処理 */
 	void runShinkansen();
+    /**
+     * 直角駐車エリアの処理を行う。
+     * Parkingクラスに依存する
+     */
+    void runParpendicularParking();
+
 private:
 	LineTracerWalker lineTracer;
 	Lifter lifter;

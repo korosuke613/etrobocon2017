@@ -25,6 +25,7 @@ Block.o \
 Node.o \
 PuzzleCodeConverter.o \
 PuzzleExplorer.o \
+Parking.o \
 NormalCourse.o
 
 ifeq ($(side),right)
@@ -46,11 +47,10 @@ ifeq ($(side),left)
     Block.o \
     Node.o \
     PuzzleCodeConverter.o \
-    Parking.o\
-    PuzzleExplorer.o \
     TargetFigure.o\
     BoardAnalyzer.o\
-	Navigation.o \
+#   PuzzleExplorer.o \
+#    Navigation.o \
 
 endif
 
