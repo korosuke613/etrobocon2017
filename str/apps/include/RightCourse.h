@@ -29,6 +29,7 @@ enum struct ShinkansenStatus {
     FIRST_RAIL,
 	FIRST_LINE,
 	FIRST_RIGHT_ANGLE,
+	PRIZE,
     STOP
 };
 
@@ -45,9 +46,13 @@ public:
 	void runNormalCourse();
 	/** Shinkansenエリアの処理 */
 	void runShinkansen();
+	/** 色を見つけるまで走る処理 **/
+	void runColor();
 	/** 色検知の処理 **/
 	void colorDetection();
 private:
+	LineTracerWalker lineTracer;
+	Lifter lifter;
 	basicWalker basicwalker;
 	Walker walker;
 	ColorSensor colorSensor;
