@@ -79,8 +79,8 @@ void RightCourse::runShinkansen(){
                 }
                 break;
         	case ShinkansenStatus::PRIZE:
-        		basicWalker.backStraight(10, 230);
-        		basicWalker.spin(10, 1, 90);
+        		basicWalker.backStraight(230);
+        		basicWalker.spin(true, 90);
         		lifter.liftDown();
         		lifter.reset();
         		lifter.defaultSet(-10);
@@ -94,14 +94,14 @@ void RightCourse::runShinkansen(){
         		basicWalker.goStraight(10, 100);
         		lifter.changeDefault(40);
         		lifter.defaultSet(40);
-        		basicWalker.backStraight(10, 400);
-        		basicWalker.spin(10, -1, 90);
+        		basicWalker.backStraight(400);
+        		basicWalker.spin(false, 90);
         		basicWalker.goStraight(40, 800);
         		lifter.liftUp();
-        		basicWalker.spin(30, 1, 90);
+        		basicWalker.spin(true, 90);
 				basicWalker.goStraight(10, 180);
         		lifter.changeDefault(-10);
-        		basicWalker.backStraight(10, 200);
+        		basicWalker.backStraight(200);
         		shinkansen.spinBlack(30, -1);
         		lifter.liftDown();
         		lifter.reset();
@@ -147,4 +147,9 @@ void RightCourse::runNormalCourse(){
         
         tslp_tsk(4); // 4msec周期起動
     }
+}
+
+void RightCourse::runParpendicularParking(){
+    Parking parking;
+    parking.runParpendicular();
 }

@@ -14,6 +14,7 @@ Lifter.o \
 SelfLocalization.o \
 Emoter.o \
 NormalCourse.o \
+Parking.o \
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
@@ -34,10 +35,9 @@ ifeq ($(side),left)
     Block.o \
     Node.o \
     PuzzleCodeConverter.o \
-    Parking.o\
-    PuzzleExplorer.o \
     TargetFigure.o\
     BoardAnalyzer.o\
+#   PuzzleExplorer.o \
 #    Navigation.o \
 
 endif

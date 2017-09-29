@@ -163,6 +163,6 @@ void PuzzleField::testGame ( void ) {
 	runPuzzleField ( 15,  9, 11 ) ;
 	
 	basicWalker.goStraight ( 20, 640 ) ;
-	basicWalker.spin ( 10, basicWalker.SPIN_LEFT, 60 ) ;
+	basicWalker.spin ( basicWalker.SPIN_LEFT, 60 ) ;
 
 }

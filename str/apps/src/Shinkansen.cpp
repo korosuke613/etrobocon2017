@@ -76,10 +76,13 @@ void Shinkansen::runBackward(double speed, int32_t targetDistance){
 	walker.run(0, 0);
 }
 
-void Shinkansen::spinBlack(int8_t forward, int32_t reverseValue){
+void Shinkansen::spinBlack(int8_t forward, int32_t rotationalDirection){
 	int32_t leftReverseValue, rightReverseValue;
 	colorid_t lineColor = COLOR_NONE;
-	basicWalker.spin(forward, reverseValue, 45);
+	basicWalker.spin(rotationalDirection, 45);
+    int8_t reverseValue = rotationalDirection == basicWalker.SPIN_RIGHT
+        ? -1
+        :  1;
 	leftWheel.reset();
 	rightWheel.reset();
 	tslp_tsk(100);
@@ -123,7 +126,7 @@ void Shinkansen::colorDetection(){
 		circleColor = colorSensor.getColorNumber();
 		if(circleColor == COLOR_BLUE || circleColor == COLOR_GREEN || circleColor == COLOR_YELLOW || circleColor == COLOR_RED){
 			ev3_speaker_play_tone (NOTE_FS6, 100);
-			basicWalker.backStraight(10, 50);
+			basicWalker.backStraight(50);
 			lifter.changeDefault(60);
 			blockColor = colorSensor.getColorNumber();
 			lifter.changeDefault(15);
@@ -139,7 +142,7 @@ void Shinkansen::colorDetection(){
 				ev3_speaker_play_tone (NOTE_FS6, 100);
 			}else{
 				basicWalker.goStraight(10, 230 - 10 * count);
-				basicWalker.backStraight(10, 100);
+				basicWalker.backStraight(100);
 				ev3_speaker_play_tone (NOTE_FS6, 200);
 				
 			}

@@ -8,12 +8,20 @@
 
 #include "BasicWalker.h"
 #include "LineTracerWalker.h"
+#include "Walker.h"
+#include "ColorSensor.h"
 
 /*! @class Parking Parking.h "Parking.h"
  *  @brief 駐車クラス
  */
 class Parking {
 public:
+    /**
+     * コンストラクタ
+     * カラーセンサを初期化する。
+     */
+    Parking();
+
     /**
      * 縦列駐車を実行する。
      * 実行開始時にBasicWalkerクラスのインスタンスを生成し、
@@ -37,6 +45,7 @@ public:
     void waitThreeTimes();
 
 private:
+    ColorSensor colorSensor;
 };
 
 
