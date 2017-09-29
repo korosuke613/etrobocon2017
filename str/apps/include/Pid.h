@@ -23,11 +23,12 @@ public:
   void wrapper_of_constructor(double _p_gain,double _i_gain,double _d_gain,
     double _diff, double _integral,
     double _target,double _output);
-protected:
+
   /** PID制御の計算をする
   * @param light_value 現在の値 */
-  void calculate(double light_value);  
+  void calculate(double light_value); 
 
+ protected:
   /** PID計算値を取得する
   * @return 計算値 */
   double get_output();

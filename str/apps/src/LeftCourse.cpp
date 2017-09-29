@@ -24,13 +24,15 @@ void LeftCourse::run(){
     runTyokusen(-120.0, 400.0, false);
     */
   
-	  runNormalCourse();
-    msg_f("Finish NormalCourse", 3);
+	//runNormalCourse();
+    //msg_f("Finish NormalCourse", 3);
   
-	  // Puzzle
-	  PuzzleField puzzleField ;
+	// Puzzle
+	PuzzleField puzzleField ;
 	
-	  puzzleField.testGame () ;
+	//puzzleField.testRun () ;
+	
+	puzzleField.testGame () ;
   
   
 	  // Park

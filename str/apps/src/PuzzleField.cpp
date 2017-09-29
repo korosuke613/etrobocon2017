@@ -5,6 +5,7 @@ PuzzleField::PuzzleField ():
 	traceDistance ( 0 ) {
 	lineTracer.isLeftsideLine ( false ),
 	ev3_speaker_set_volume ( 5 ) ;
+	basicWalker.setPidWithoutTarget ( 2.0, 2.0, 0.1 ) ;
 }
 
 void PuzzleField::preparatePuzzle ( void ) {
@@ -31,7 +32,8 @@ void PuzzleField::runPuzzleField ( int8_t currentPosition, int8_t beforePosition
 }
 
 void PuzzleField::avoidBlock ( int8_t currentPosition, int8_t beforePosition, int8_t nextPosition ) {
-	basicWalker.backStraight ( 40, allconnectNumber[currentPosition][connectNumberManager[currentPosition][beforePosition]][DISTANCE] ) ;
+	basicWalker.backStraight ( allconnectNumber[currentPosition][connectNumberManager[currentPosition][beforePosition]][DISTANCE] ) ;
+	walker.run ( 0, 0 ) ;
 	runPuzzleFieldVectorChange ( currentPosition, beforePosition, nextPosition, 180 ) ;
 	ev3_speaker_play_tone ( NOTE_FS6, 75 ) ;
 	tslp_tsk ( 500 ) ;
@@ -86,50 +88,49 @@ void PuzzleField::runPuzzleFieldVectorChange ( int8_t currentPosition, int8_t be
 	msg_f ( msg, 8 ) ;
 	// 車体を動かして角度を合わせる
 	ev3_speaker_play_tone ( NOTE_FS5, 100 ) ;
-	basicWalker.spin ( 16, spinVector, spinDegree ) ;
+	basicWalker.spin ( spinVector, spinDegree ) ;
 	tslp_tsk ( 100 ) ;
 	// ラインをトレースする
 	ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 	msg_f ( "OK", 9 ) ;
 	if ( connectNumber < 4 && nextPosition != 0 ) {
-		/*
-		basicWalker.goStraight ( 30, nextDistance / 4 ) ;
-		modifiedSpinDegree = 0 ;
-		modifiedSpinVector = SPIN_LEFT ;
-		while ( colorSensor.getBrightness () > 80 ) {
-			tslp_tsk ( 50 ) ;
-			basicWalker.backStraight ( 36, nextDistance / 4 ) ;
-			tslp_tsk ( 50 ) ;
-			modifiedSpinVector *= -1 ;
-			modifiedSpinDegree += 5 ;
-			basicWalker.spin ( 30, modifiedSpinVector, modifiedSpinDegree ) ;
-			basicWalker.goStraight ( 30, nextDistance / 4 ) ;
-		}
-		basicWalker.goStraight ( 30, ( nextDistance / 4 ) * 3 ) ;
-		*/
 		tslp_tsk ( 100 ) ;
 		ev3_speaker_play_tone ( NOTE_FS6, 100 ) ;
 		distance.resetDistance ( walker.get_count_L (), walker.get_count_R () ) ;
-		while ( traceDistance < nextDistance || colorSensor.getColorNumber () == COLOR_RED || colorSensor.getColorNumber () == COLOR_BLUE || colorSensor.getColorNumber () == COLOR_GREEN || colorSensor.getColorNumber () == COLOR_YELLOW ) {
+		traceDistance = 0 ;
+		lineTracer.speedControl.setPid ( 2.0, 4.0, 0.1, 45.0 ) ;
+		lineTracer.turnControl.setPid ( 4.0, 1.0, 0.06, 45.0 ) ;
+		while ( traceDistance < nextDistance ) {
 			traceDistance = distance.getDistanceTotal ( walker.get_count_L (), walker.get_count_R () ) ;
-			lineTracer.speedControl.setPid ( 1.0, 0.8, 0.08, 60.0 ) ;
-			lineTracer.turnControl.setPid ( 2.8, 0.8, 0.06, 30.0 ) ;
 			color = colorSensor.getBrightness () ;
 			lineTracer.runLine ( walker.get_count_L (), walker.get_count_R (), color ) ;
-			walker.run( lineTracer.getForward (), lineTracer.getTurn () ) ;
+			walker.run ( lineTracer.getForward (), lineTracer.getTurn () ) ;
+			if ( nextDistance - 180 < traceDistance ) {
+				if ( colorSensor.getColorNumber () == COLOR_RED || colorSensor.getColorNumber () == COLOR_BLUE || colorSensor.getColorNumber () == COLOR_GREEN || colorSensor.getColorNumber () == COLOR_YELLOW ) {
+					basicWalker.reset () ;
+					basicWalker.goStraight ( 90, 140 ) ;
+					break ;
+				}
+			}
 			tslp_tsk ( 4 ) ;
 		}
-		basicWalker.goStraight ( 10, 60 ) ;
 		walker.run ( 0, 0 ) ;
 		walker.reset () ;
 		tslp_tsk ( 100 ) ;
 	} else {
-		basicWalker.goStraight ( 30, nextDistance ) ;
+		basicWalker.goStraight ( 60, nextDistance ) ;
+		walker.run ( 0, 0 ) ;
 	}
 	tslp_tsk ( 100 ) ;
 	ev3_speaker_play_tone ( NOTE_FS5, 100 ) ;
 	tslp_tsk ( 1000 ) ;
 }
+
+void PuzzleField::testRun ( void ) {
+	basicWalker.setPidWithoutTarget ( 2.0, 2.0, 0.1 ) ;
+	basicWalker.spin ( SPIN_LEFT, 90 ) ;
+	basicWalker.goStraight ( 160, 1000 ) ;
+} 
 
 void PuzzleField::testGame ( void ) {
 	runPuzzleField ( 10,  X,  1 ) ;
@@ -139,15 +140,14 @@ void PuzzleField::testGame ( void ) {
 	runPuzzleField (  6,  8,  0 ) ;
 	avoidBlock (  6,  0,  9 ) ;
 	runPuzzleField (  9,  6, 14 ) ;
-	runPuzzleField ( 14,  9,  0 ) ;
-	avoidBlock ( 14,  0,  8 ) ;
-	runPuzzleField (  8,  14,  2 ) ;
+	runPuzzleField ( 14,  9,  8 ) ;
+	runPuzzleField (  8, 14,  2 ) ;
 	runPuzzleField (  2,  8,  3 ) ;
 	runPuzzleField (  3,  2,  9 ) ;
 	runPuzzleField (  9,  3, 15 ) ;
 	runPuzzleField ( 15,  9, 11 ) ;
 	
 	basicWalker.goStraight ( 20, 640 ) ;
-	basicWalker.spin ( 10, SPIN_LEFT, 60 ) ;
+	basicWalker.spin ( SPIN_LEFT, 60 ) ;
 
 }
