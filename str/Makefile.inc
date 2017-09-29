@@ -26,8 +26,8 @@ Navigation.o \
 Block.o \
 Node.o \
 PuzzleCodeConverter.o \
-Parking.o
-# PuzzleExplorer.o \
+Parking.o\
+PuzzleExplorer.o \
 
 SRCLANG := c++
 

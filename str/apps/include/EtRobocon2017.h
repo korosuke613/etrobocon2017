@@ -6,6 +6,7 @@
 #ifndef __ETROBOCON2017__
 #define __ETROBOCON2017__
 
+#include "setting.h"
 #include "ev3api.h"
 #include "TouchSensor.h"
 #include "SonarAlert.h"

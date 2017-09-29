@@ -49,7 +49,7 @@ void EtRobocon2017::loop()
 {
 // Rコースを走らせるときは1, Lコースを走らせるときは0
 
-#if 0
+#if IS_RIGHT_COURSE
     rightCourse.run();
 #else
     leftCourse.setFirstCode( firstCode );
