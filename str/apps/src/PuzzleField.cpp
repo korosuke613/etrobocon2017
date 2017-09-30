@@ -148,7 +148,14 @@ void PuzzleField::runPuzzleFieldVectorChange ( int8_t currentPosition, int8_t be
 }
 
 void PuzzleField::runRoot ( void ) {
-	root = puzzleExplorer.getRoot (  )
+	int i = 0 ;
+	nearestPosition = puzzleExplorer.getNearestBlockPosition () ;
+	root = puzzleExplorer.getRoot ( puzzleExplorer.getMyPosition (), nearestPosition ) ;
+	runPuzzleField ( root[0], X, root[1] ) ;
+	for ( i = 1 ; i < ( sizeof ( root ) / sizeof ( int ) ) - 2 ; i++ ) {
+		runPuzzleField ( root[i], root[i - 1], root[i + 1] ) ;
+	}
+	avoidBlock ( root[i - 1], root[i], root[i + 1] ) ;
 }
 
 void PuzzleField::testRun ( void ) {
@@ -173,6 +180,6 @@ void PuzzleField::testGame ( void ) {
 	runPuzzleField ( 15,  9, 11 ) ;
 	
 	basicWalker.goStraight ( 20, 640 ) ;
-	basicWalker.spin ( 10, basicWalker.SPIN_LEFT, 60 ) ;
+	basicWalker.spin ( basicWalker.SPIN_LEFT, 60 ) ;
 
 }

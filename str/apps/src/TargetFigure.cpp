@@ -12,7 +12,7 @@ TargetFigure::~TargetFigure()
 }
 
 // ブロックの初期位置設定
-void TargetFigure::set(int8_t *positions)
+void TargetFigure::set(int *positions)
 {
 	initPositions = positions;
 	analyzer.set(initPositions);
@@ -51,9 +51,9 @@ void TargetFigure::evaluate()
 }
 
 // 各色の目標とする位置番号を取得する
-int8_t TargetFigure::getTargetNum(BlockColor color)
+int TargetFigure::getTargetNum(BlockColor color)
 {
-	int8_t targetNum = 0;
+	int targetNum = 0;
 	
 	switch(color)
 	{

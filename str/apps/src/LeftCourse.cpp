@@ -15,6 +15,27 @@ LeftCourse::LeftCourse():
 
 void LeftCourse::setFirstCode( int32_t code ) {
     firstCode = code;
+	codeConverter.setCode ( (int)firstCode ) ;
+	codeConverter.resolvePositionCode();
+	
+	int colorPosition[5] ;
+	colorPosition[0] = codeConverter.getPosition ( BlockColor::Black );
+	colorPosition[1] = codeConverter.redToBlackPosition (codeConverter.getPosition ( BlockColor::Red ));
+	colorPosition[2] = codeConverter.blueToBlackPosition (codeConverter.getPosition ( BlockColor::Blue ));
+	colorPosition[3] = codeConverter.yellowToBlackPosition (codeConverter.getPosition ( BlockColor::Yellow ));
+	colorPosition[4] = green ;
+	
+	targetFigure.set ( colorPosition ) ;
+	targetFigure.evaluate () ;
+	int targetAreaNum[5] ;
+	targetAreaNum[0] = targetFigure.getTargetNum ( BlockColor::Black ) ;	
+	targetAreaNum[1] = targetFigure.getTargetNum ( BlockColor::Red ) ;	
+	targetAreaNum[2] = targetFigure.getTargetNum ( BlockColor::Blue ) ;	
+	targetAreaNum[3] = targetFigure.getTargetNum ( BlockColor::Yellow ) ;	
+	targetAreaNum[4] = targetFigure.getTargetNum ( BlockColor::Green ) ;	
+	
+	explorer.init(colorPosition);
+	explorer.setTarget(targetAreaNum);
 }
 
 /**
@@ -119,7 +140,8 @@ void LeftCourse::runTyokusen(float _start_x, float _start_y, float _goal_x, floa
 void LeftCourse::runBlockRange(){
 	PuzzleField puzzleField ;
 	
-	puzzleField.testGame () ;
+	//puzzleField.testGame () ;
+	puzzleField.runRoot () ;
 }
 
 void LeftCourse::runParallelParking(){

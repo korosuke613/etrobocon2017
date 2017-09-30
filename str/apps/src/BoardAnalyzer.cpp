@@ -11,13 +11,13 @@ BoardAnalyzer::~BoardAnalyzer()
 }
 
 // ブロックの配置の入力
-void BoardAnalyzer::set(int8_t *initPositions)
+void BoardAnalyzer::set(int *initPositions)
 {
 	positions = initPositions;
 }
 
 // 左凹四角形中のブロックの個数
-int8_t BoardAnalyzer::getInLeftSquareCount()
+int BoardAnalyzer::getInLeftSquareCount()
 {
 	int leftSquareCount = 0;
 	
@@ -77,7 +77,7 @@ bool BoardAnalyzer::hasExchangePatternOnPentagon()
 }
 
 // 左凹四角形中のブロックの個数
-int8_t BoardAnalyzer::getInRightSideCount()
+int BoardAnalyzer::getInRightSideCount()
 {
 	int rightSideCount = 0;
 	

@@ -7,11 +7,6 @@ PuzzleCodeConverter::PuzzleCodeConverter()
 {
 }
 
-PuzzleCodeConverter::PuzzleCodeConverter(int puzzleCode)
-{
-	mPuzzleCode = puzzleCode;
-}
-
 //デストラクタ
 PuzzleCodeConverter::~PuzzleCodeConverter(){}
 
@@ -124,4 +119,8 @@ int PuzzleCodeConverter::blueToBlackPosition(int blueNum)
 	if(blueNum > 7)blackNum++;
 	
 	return blackNum;
+}
+
+void PuzzleCodeConverter::setCode ( int puzzleCode ) {
+	mPuzzleCode = puzzleCode ;
 }

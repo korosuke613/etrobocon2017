@@ -12,13 +12,13 @@ private:
 
 public:
 	PuzzleCodeConverter();
-	PuzzleCodeConverter(int puzzleCode);
 	~PuzzleCodeConverter();
 	void resolvePositionCode();
 	int getPosition(BlockColor color);
 	int redToBlackPosition(int redNum);
 	int yellowToBlackPosition(int yellowNum);
 	int blueToBlackPosition(int blueNum);
+	void setCode ( int puzzleCode ) ;
 };
 
 

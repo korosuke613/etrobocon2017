@@ -49,6 +49,10 @@ void PuzzleExplorer::setNodes()
 	}
 }
 
+int PuzzleExplorer::getMyPosition ( void ) {
+	return myPosition ;
+}
+
 // ブロック設定
 void PuzzleExplorer::setBlocks(int *blockPositions)
 {
@@ -189,4 +193,9 @@ int PuzzleExplorer::getCost(Node node1, Node node2)
 	int cost = (node1.getPositionX() - node2.getPositionX())*(node1.getPositionX() - node2.getPositionX()) + (node1.getPositionY() - node2.getPositionY())*(node1.getPositionY() - node2.getPositionY());
 	
 	return cost;
+}
+
+void PuzzleExplorer::setTarget(int* target)
+{
+	targetAreaNum = target;
 }

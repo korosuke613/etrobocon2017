@@ -13,19 +13,19 @@ Walker.o \
 Lifter.o \
 SelfLocalization.o \
 Emoter.o \
-LeftCourse.o \
-RightCourse.o \
-PuzzleField.o\
-BasicWalker.o \
-UserInterface.o \
-FirstCode.o \
-PuzzleLineTracer.o\
-Navigation.o \
-Block.o \
-Node.o \
-PuzzleCodeConverter.o \
-PuzzleExplorer.o \
 NormalCourse.o
+#	LeftCourse.o \
+#	RightCourse.o \
+#	PuzzleField.o\
+#	BasicWalker.o \
+#	UserInterface.o \
+#	FirstCode.o \
+#	PuzzleLineTracer.o\
+#	Navigation.o \
+	Block.o \
+#	Node.o \
+#	PuzzleCodeConverter.o \
+#	PuzzleExplorer.o \
 
 ifeq ($(side),right)
     APPL_CXXOBJS += RightNormalCourse.o \
@@ -50,7 +50,7 @@ ifeq ($(side),left)
     PuzzleExplorer.o \
     TargetFigure.o\
     BoardAnalyzer.o\
-	Navigation.o \
+	Navigation.o
 
 endif
 

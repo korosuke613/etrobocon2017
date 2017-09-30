@@ -24,9 +24,11 @@ public:
 	BlockColor getNodeColor(int num);
 	Node** getMyNeighbor();
 	void setMyPosition(int num);
+	int getMyPosition () ;
 	int getNearestBlockPosition();
 	int* getRoot(int startNode, int goalNode);
 	int getCost(Node node1, Node node2);
+	void setTarget(int* target);
 	
 private:
 	int myPosition;
@@ -68,6 +70,7 @@ private:
 		{7,4},
 		{9,4}
 	};
+	int* targetAreaNum ;
 	int root[16]={};
 	void setNodes();
 	void setBlocks(int *blockPositions);

@@ -16,6 +16,8 @@
 #include "PuzzleField.h"
 #include "Navigation.h"
 #include "Parking.h"
+#include "TargetFigure.h"
+#include "PuzzleCodeConverter.h"
 
 using namespace ev3api;
 
@@ -59,6 +61,10 @@ private:
     ColorSensor colorSensor;
     /** 自己位置推定 インスタンス 初期化*/
 	SelfLocalization sl;
+	TargetFigure targetFigure ;
+	PuzzleCodeConverter codeConverter ;
+	PuzzleExplorer explorer;
+	
 #if IS_SHORT_CUT
     Navigation navi;    	
 #endif
@@ -67,6 +73,7 @@ private:
      * ブロック並べに用いる。
      */
     int32_t firstCode;
+	const int green = 8 ;	// 緑の値はココ
 };
 
 #endif

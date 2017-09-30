@@ -13,9 +13,9 @@ void Parking::runParallel()
 	msg_f( "Do ParallelParking...", 0 );
 
 	basicWalker.goStraight( 30, 300 );
-	basicWalker.spin( 30, basicWalker.SPIN_LEFT, 90 );
+	basicWalker.spin( basicWalker.SPIN_LEFT, 90 );
 	basicWalker.goStraight( 30, 300 );
-	basicWalker.spin( 30, basicWalker.SPIN_RIGHT, 90 );
+	basicWalker.spin( basicWalker.SPIN_RIGHT, 90 );
 
     waitThreeTimes();
 }

@@ -15,6 +15,7 @@ class PuzzleField {
 public:
 	PuzzleField () ;
 	void preparatePuzzle ( void ) ;
+	void runRoot ( void ) ;
 	void testRun ( void ) ;
 	void testGame ( void ) ;
 
@@ -25,6 +26,7 @@ private:
 	LineTracerWalker lineTracer;
 	Distance distance;
 	PuzzleExplorer puzzleExplorer ;
+	int nearestPosition ;
 	int* root ;
 	static const int8_t X = -1 ;
 	static const int8_t PUZZLE_POSITION_CURRENT   = 16 ;
