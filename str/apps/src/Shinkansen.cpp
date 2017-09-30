@@ -15,7 +15,7 @@ Shinkansen::Shinkansen():
     colorSensor( PORT_3 ),
     leftWheel( PORT_C ),
     rightWheel( PORT_B ){
-
+    basicWalker.setPidWithoutTarget(2.0, 1.0, 0.1);
 }
 
 bool Shinkansen::checkPass(std::int16_t distance)
@@ -47,6 +47,7 @@ bool Shinkansen::checkPass(std::int16_t distance)
 void Shinkansen::runForward(double speed, int32_t targetDistance){
 	int32_t distance_total;
 	lineTracer.isLeftsideLine(false);
+	basicWalker.reset();
 	lineTracer.setForward(30);
 	distance.resetDistance(walker.get_count_L(), walker.get_count_R());
 	lineTracer.speedControl.setPid ( 2.0, 1.0, 0.024, speed );
@@ -63,6 +64,7 @@ void Shinkansen::runForward(double speed, int32_t targetDistance){
 void Shinkansen::runBackward(double speed, int32_t targetDistance){
 	int32_t distance_total;
 	lineTracer.isLeftsideLine(true);
+	basicWalker.reset();
 	lineTracer.setForward(-30);
 	distance.resetDistance(walker.get_count_L(), walker.get_count_R());
 	lineTracer.speedControl.setPid ( 2.0, 1.0, 0.024, speed );
@@ -85,7 +87,8 @@ void Shinkansen::spinBlack(int8_t forward, bool reverseValue){
 	}else{
 		value = -1;
 	}
-	basicWalker.spin(forward, reverseValue, 45);
+	basicWalker.reset();
+	basicWalker.spin(reverseValue, 45);
 	leftWheel.reset();
 	rightWheel.reset();
 	tslp_tsk(100);
@@ -129,22 +132,32 @@ void Shinkansen::colorDetection(){
 		circleColor = colorSensor.getColorNumber();
 		if(circleColor == COLOR_BLUE || circleColor == COLOR_GREEN || circleColor == COLOR_YELLOW || circleColor == COLOR_RED){
 			ev3_speaker_play_tone (NOTE_FS6, 100);
-			basicWalker.backStraight(10, 50);
+			basicWalker.reset();
+			basicWalker.backStraight(-50, 50);
+			walker.run(0, 0);
 			lifter.changeDefault(60);
 			blockColor = colorSensor.getColorNumber();
 			while(blockColor != COLOR_BLUE && blockColor != COLOR_GREEN && blockColor != COLOR_YELLOW && blockColor != COLOR_RED){
 				if(count > 10)break;
-				basicWalker.goStraight(10, 10);
+				basicWalker.reset();
+				basicWalker.goStraight(50, 10);
         		blockColor = colorSensor.getColorNumber();
 				count++;
         	}
+			walker.run(0, 0);
 			lifter.changeDefault(-60);
 			if(circleColor == blockColor){
-				basicWalker.goStraight(10, 50);
+				basicWalker.reset();
+				basicWalker.goStraight(50, 50);
+				walker.run(0, 0);
 				ev3_speaker_play_tone (NOTE_FS6, 100);
 			}else{
-				basicWalker.goStraight(10, 200 - 10 * count);
-				basicWalker.backStraight(10, 100);
+				basicWalker.reset();
+				basicWalker.goStraight(50, 200 - 10 * count);
+				walker.run(0, 0);
+				basicWalker.reset();
+				basicWalker.backStraight(-50, 100);
+				walker.run(0, 0);
 				ev3_speaker_play_tone (NOTE_FS6, 200);
 				
 			}

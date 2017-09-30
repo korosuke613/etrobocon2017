@@ -16,7 +16,7 @@ RightCourse::RightCourse():
  *Rコースの走行範囲の切り替えを行う
  */
 void RightCourse::run(){
-	runNormalCourse();
+	//runNormalCourse();
     runShinkansen();
 	//Park
 }
@@ -79,8 +79,8 @@ void RightCourse::runShinkansen(){
                 }
                 break;
         	case ShinkansenStatus::PRIZE:
-        		basicWalker.backStraight(10, 230);
-        		basicWalker.spin(10, basicWalker.SPIN_RIGHT, 90);
+        		basicWalker.backStraight(-10, 230);
+        		basicWalker.spin(basicWalker.SPIN_RIGHT, 90);
         		lifter.liftDown();
         		lifter.reset();
         		lifter.defaultSet(-10);
@@ -91,18 +91,30 @@ void RightCourse::runShinkansen(){
         			tslp_tsk(4);
         		}while(distance_shinkansen > 10);
         		walker.run(0, 0);
-        		basicWalker.goStraight(10, 100);
+        		basicWalker.reset();
+        		basicWalker.goStraight(50, 100);
+        		walker.run(0, 0);
         		lifter.changeDefault(40);
         		lifter.defaultSet(40);
-        		basicWalker.backStraight(10, 400);
-        		basicWalker.spin(10, basicWalker.SPIN_LEFT, 90);
-        		basicWalker.goStraight(40, 800);
+        		basicWalker.reset();
+        		basicWalker.backStraight(-50, 400);
+        		walker.run(0, 0);
+        		basicWalker.reset();
+        		basicWalker.spin(basicWalker.SPIN_LEFT, 90);
+        		basicWalker.reset();
+        		basicWalker.goStraight(80, 800);
+        		walker.run(0, 0);
         		lifter.liftUp();
-        		basicWalker.spin(30, basicWalker.SPIN_RIGHT, 90);
-				basicWalker.goStraight(10, 180);
+        		basicWalker.reset();
+        		basicWalker.spin(basicWalker.SPIN_RIGHT, 90);
+        		basicWalker.reset();
+				basicWalker.goStraight(50, 180);
+        		walker.run(0, 0);
         		lifter.changeDefault(-10);
-        		basicWalker.backStraight(10, 200);
-        		shinkansen.spinBlack(30, basicWalker.SPIN_LEFT);
+        		basicWalker.reset();
+        		basicWalker.backStraight(-80, 200);
+        		walker.run(0, 0);
+        		shinkansen.spinBlack(10, basicWalker.SPIN_LEFT);
         		lifter.liftDown();
         		lifter.changeDefault(0);
         		shinkansenStatus = ShinkansenStatus::STOP;

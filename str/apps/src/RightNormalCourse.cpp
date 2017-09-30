@@ -14,7 +14,7 @@ RightNormalCourse::RightNormalCourse(){
 bool RightNormalCourse::runNormalCourse(){
     switch(status){
         case RightStatus::STRAIGHT:
-            lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 150.0 );
+            lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 130.0 );
             lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.048, CENTER_BRIGHTNESS );
             break;
         
@@ -29,11 +29,11 @@ bool RightNormalCourse::runNormalCourse(){
             break;
 
         case RightStatus::CURVE_LEFT_SHORT: 
-            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 130.0 );
+            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 110.0 );
             lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, CENTER_BRIGHTNESS - 5.0 );
             break;
         case RightStatus::CURVE_LEFT_SHORT_SLOW: 
-            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 40.0 );
+            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 10.0 );
             lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, CENTER_BRIGHTNESS - 5.0 );
             break;
         case RightStatus::CURVE_LEFT: 
@@ -56,8 +56,8 @@ bool RightNormalCourse::statusCheck(int32_t countL, int32_t countR){
     else if(distanse_total < 9200)status = RightStatus::CURVE_LEFT_SHORT;
     else if(distanse_total < 10800)status = RightStatus::CURVE_LEFT;
     else if(distanse_total < 12800)status = RightStatus::CURVE_RIGHT;
-    else if(distanse_total < 15400)status = RightStatus::STRAIGHT;
-    else if(distanse_total < 17200)status = RightStatus::CURVE_LEFT_SHORT_SLOW;
+    else if(distanse_total < 15200)status = RightStatus::STRAIGHT;
+    else if(distanse_total < 17100)status = RightStatus::CURVE_LEFT;
     //else if(distanse_total < 17000)status = RightStatus::SLOW;
     
     else status = RightStatus::STOP;
