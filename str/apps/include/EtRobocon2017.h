@@ -48,8 +48,8 @@ private:
 #ifdef IS_RIGHT_COURSE
     RightCourse rightCourse;
 #else
-    LeftCourse leftCourse;  
     UserInterface ui;
+    LeftCourse leftCourse;  
 #endif  
 
 };

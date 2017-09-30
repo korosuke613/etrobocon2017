@@ -14,7 +14,7 @@ RightNormalCourse::RightNormalCourse(){
 bool RightNormalCourse::runNormalCourse(){
     switch(status){
         case RightStatus::STRAIGHT:
-            lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 150.0 );
+            lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 130.0 );
             lineTracerWalker.turnControl.setPid ( 2.0, 1.0, 0.048, CENTER_BRIGHTNESS );
             break;
         
@@ -24,12 +24,12 @@ bool RightNormalCourse::runNormalCourse(){
             break;
 
         case RightStatus::CURVE_RIGHT:
-            lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 150.0 );
+            lineTracerWalker.speedControl.setPid ( 2.0, 4.8, 0.024, 130.0 );
             lineTracerWalker.turnControl.setPid ( 4.0, 2.0, 0.09, CENTER_BRIGHTNESS );
             break;
 
         case RightStatus::CURVE_LEFT_SHORT: 
-            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 130.0 );
+            lineTracerWalker.speedControl.setPid ( 4.0, 0.8, 0.1, 110.0 );
             lineTracerWalker.turnControl.setPid ( 2.0, 0.5, 0.048, CENTER_BRIGHTNESS - 5.0 );
             break;
         case RightStatus::CURVE_LEFT_SHORT_SLOW: 

@@ -7,7 +7,7 @@
 
 LeftCourse::LeftCourse():
 #if IS_SHORT_CUT
-    navi(walker.get_count_L(), walker.get_count_R())
+    navi(walker.get_count_L(), walker.get_count_R()),
 #endif
     colorSensor( PORT_3 ), 
     sl(walker.get_count_L(), walker.get_count_R(), true){
@@ -21,20 +21,22 @@ void LeftCourse::setFirstCode( int32_t code ) {
  * Lコースの走行範囲の切り替えを行う
  */
 void LeftCourse::run(){
+    /*
     // Normal Area
-    /* ショートカットする場合は外す
+    //ショートカットする場合は外す
     //最初のまっすぐ
     runTyokusen(0.0, 0.0, -20.0, 1.0, true);
     //GATE2クリア
     runTyokusen(-20.0, 1.0, -80.0, 100.0, true);
+    runTyokusen(-80.0, 100.0, -130.0, 130.0, true);    
+    runTyokusen(-130.0, 130.0, -180.0, 100.0, true);
     //GATE1クリア
-    runTyokusen(-80.0, 100.0, -240.0, 101.0, true);
+    runTyokusen(-180.0, 100.0, -130.0, 130.0, true);
+    
     //GATE1まっすぐ
-    runTyokusen(-240.0, 101.0, -180.0, 100.0, false);
+    runTyokusen(-130.0, 130.0, -133.0, 600.0, false);
     //緑超え
-    runTyokusen(-180.0, 100.0, -160.0, 180.0, false);
     //最後の直線
-    runTyokusen(-141.0, 130.0, -160.0, 600.0, false);
     while(1){
         walker.run(10, 0);
         if(colorSensor.getBrightness() < 5)break;
@@ -53,13 +55,18 @@ void LeftCourse::run(){
 	// Park
     runParallelParking();
     msg_f("Finished ParallelParking", 3);
+    
 }
 
 void LeftCourse::runNormalCourse(){
+    char msg[32];
+
     LeftNormalCourse normalCourse;
     bool isNormalCourse;
     // NormalCourseを抜けるまでループする
     while ( 1 ) {
+        sprintf ( msg, "LightValue: %d", colorSensor.getBrightness());
+        msg_f ( msg, 4 ) ;
         sl.update(walker.get_count_L(), walker.get_count_R());
         if(normalCourse.statusCheck(walker.get_count_L(), walker.get_count_R())) ev3_speaker_play_tone (NOTE_FS6, 100);
         isNormalCourse = normalCourse.runNormalCourse(walker.get_count_L(), walker.get_count_R(), colorSensor.getBrightness());
