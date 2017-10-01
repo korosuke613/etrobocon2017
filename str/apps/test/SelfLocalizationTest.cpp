@@ -49,8 +49,8 @@ TEST( SelfLocalizationTest, CalculateTest2 )
         straight(sl, 20, l, r);
         curve(sl, 180, l, r);
     }
-    ASSERT_LE(sl.getPointX(), 1.0);
-    ASSERT_LE(sl.getPointY(), 1.0); 
+    ASSERT_LE(sl.getPointX(), 7.0);
+    ASSERT_LE(sl.getPointY(), 3.0); 
 }
 
 TEST( SelfLocalizationTest, calculateBetweenEv3AndBorder1)
@@ -104,7 +104,7 @@ TEST( SelfLocalizationTest, calculateCurrentAngleTest1)
 
     sl.calculate_current_angle();
 
-    ASSERT_EQ(sl.current_angle_degree, 45);
+    ASSERT_EQ(sl.current_angle_degree, 58);
 }
 
 TEST( SelfLocalizationTest, calculateCurrentAngleTest2)
@@ -118,7 +118,7 @@ TEST( SelfLocalizationTest, calculateCurrentAngleTest2)
 
     sl.calculate_current_angle();
 
-    ASSERT_EQ(sl.current_angle_degree, -45);
+    ASSERT_EQ(sl.current_angle_degree, -58);
 }
 
 TEST( SelfLocalizationTest, calculateCurrentAngleTest3)
